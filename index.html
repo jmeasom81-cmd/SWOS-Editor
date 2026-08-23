@@ -4,21 +4,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#07111f" />
-  <title>SWOS Editor</title>
+  <title>SWOS Editor v0.2</title>
   <style>
     :root{
       --bg:#050a12;--panel:#0d1828;--panel2:#132238;--line:#263d5c;
       --text:#f5f7fb;--muted:#9db0c8;--yellow:#f5d547;--green:#42d184;
-      --red:#ff6b6b;--shadow:0 10px 30px rgba(0,0,0,.35);
+      --red:#ff6b6b;--blue:#58a6ff;--shadow:0 10px 30px rgba(0,0,0,.35);
     }
     *{box-sizing:border-box}
     html,body{margin:0;min-height:100%;background:
       radial-gradient(circle at 50% -20%,#153660 0,transparent 45%),
       linear-gradient(#07111f,#050a12 55%);color:var(--text);
       font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-    button,input{font:inherit}
+    button,input,select{font:inherit}
     button{cursor:pointer}
-    .app{min-height:100vh;padding-bottom:90px}
+    .app{min-height:100vh;padding-bottom:94px}
     .topbar{position:sticky;top:0;z-index:20;background:rgba(7,17,31,.94);
       backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:14px 16px}
     .brand{font-weight:900;letter-spacing:.08em;color:var(--yellow);font-size:18px}
@@ -26,433 +26,180 @@
     main{max-width:760px;margin:0 auto;padding:16px}
     .hero{min-height:80vh;display:flex;flex-direction:column;justify-content:center;gap:18px}
     .eyebrow{font-size:11px;font-weight:900;color:var(--green);letter-spacing:.14em;text-transform:uppercase}
-    h1,h2,h3{margin:0}
-    h1{font-size:36px;letter-spacing:.03em}
-    h2{font-size:24px}
+    h1,h2,h3{margin:0} h1{font-size:36px;letter-spacing:.03em} h2{font-size:24px}
     h3{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
     p{line-height:1.5}
-    .card{background:linear-gradient(180deg,var(--panel2),var(--panel));
-      border:1px solid var(--line);border-radius:14px;padding:15px;box-shadow:var(--shadow)}
-    .btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);
-      min-height:48px;border-radius:11px;padding:11px 14px;font-weight:800}
-    .btn:active{transform:translateY(1px)}
-    .btn-primary{background:var(--yellow);color:#14190a;border-color:#fff3a4}
+    .card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);
+      border-radius:14px;padding:15px;box-shadow:var(--shadow)}
+    .btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);min-height:48px;
+      border-radius:11px;padding:11px 14px;font-weight:800}
+    .btn:active{transform:translateY(1px)} .btn-primary{background:var(--yellow);color:#14190a;border-color:#fff3a4}
     .btn-green{background:var(--green);color:#052012;border-color:#8effbc}
+    .btn-blue{background:#173b63;color:#dbeeff;border-color:#33689e}
     .btn-danger{border-color:#6e3138;background:#2a151a;color:#ffbec4}
     .btn:disabled{opacity:.45;cursor:not-allowed}
     .big{min-height:62px;font-size:17px;width:100%}
-    .row{display:flex;gap:9px;align-items:center}
-    .grow{flex:1}
-    .stack{display:grid;gap:10px}
-    .search{width:100%;height:48px;border-radius:11px;border:1px solid var(--line);
+    .row{display:flex;gap:9px;align-items:center}.grow{flex:1}.stack{display:grid;gap:10px}
+    .search,.field input,.field select{width:100%;height:50px;border-radius:11px;border:1px solid var(--line);
       background:#07111f;color:var(--text);padding:0 14px;outline:none}
-    .search:focus{border-color:var(--yellow)}
+    .search:focus,.field input:focus,.field select:focus{border-color:var(--yellow)}
     .chips{display:flex;gap:8px;overflow-x:auto;padding:2px 0 5px;scrollbar-width:none}
-    .chip{white-space:nowrap;border:1px solid var(--line);background:var(--panel);
-      color:var(--muted);border-radius:999px;padding:9px 13px;font-size:12px;font-weight:800}
+    .chip{white-space:nowrap;border:1px solid var(--line);background:var(--panel);color:var(--muted);
+      border-radius:999px;padding:9px 13px;font-size:12px;font-weight:800}
     .chip.active{background:var(--yellow);color:#111;border-color:#fff0a0}
-    .team{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;
-      text-align:left;background:var(--panel);border:1px solid var(--line);color:var(--text);
-      border-radius:12px;padding:14px}
-    .team-name{font-weight:900;font-size:16px}
-    .meta{font-size:12px;color:var(--muted);margin-top:3px}
-    .badge{background:var(--green);color:#041c0f;padding:5px 8px;border-radius:8px;
-      font-size:10px;font-weight:900}
-    .facts{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:12px 0 18px}
+    .team{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;text-align:left;
+      background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:12px;padding:14px}
+    .team-name{font-weight:900;font-size:16px}.meta{font-size:12px;color:var(--muted);margin-top:3px}
+    .badge{background:var(--green);color:#041c0f;padding:5px 8px;border-radius:8px;font-size:10px;font-weight:900}
+    .badge-blue{background:#2a5d91;color:#e3f2ff}.facts{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:12px 0 18px}
     .fact{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:11px}
     .fact small{display:block;color:var(--muted);text-transform:uppercase;font-size:9px;letter-spacing:.08em}
     .fact strong{display:block;margin-top:4px;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    .player{width:100%;display:flex;align-items:center;gap:11px;text-align:left;
-      background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:12px;padding:10px}
-    .player.edited{border-color:var(--green);box-shadow:0 0 0 1px rgba(66,209,132,.18)}
-    .shirt{width:42px;height:42px;display:grid;place-items:center;background:#172a45;
-      border:1px solid #365477;border-radius:9px;font-weight:900}
-    .player-main{min-width:0;flex:1}
-    .player-name{font-size:15px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    .notice{border:1px solid rgba(66,209,132,.55);background:rgba(66,209,132,.08);
-      border-radius:11px;padding:12px;font-size:13px;line-height:1.45}
-    .error{border-color:#7b343b;background:#2b1519;color:#ffd0d4}
-    .field label{font-size:11px;text-transform:uppercase;color:var(--muted);font-weight:800}
-    .field input{margin-top:7px;width:100%;height:54px;border-radius:11px;border:1px solid var(--line);
-      background:#07111f;color:var(--text);padding:0 13px;font-size:18px;font-weight:800;outline:none}
-    .field input:focus{border-color:var(--yellow)}
-    .counter{font-size:11px;color:var(--muted);margin-top:5px}
+    .player{width:100%;display:flex;align-items:center;gap:11px;text-align:left;background:var(--panel);color:var(--text);
+      border:1px solid var(--line);border-radius:12px;padding:10px}.player.edited{border-color:var(--green)}
+    .shirt{width:42px;height:42px;display:grid;place-items:center;background:#172a45;border:1px solid #365477;border-radius:9px;font-weight:900}
+    .player-main{min-width:0;flex:1}.player-name{font-size:15px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .notice{border:1px solid rgba(66,209,132,.55);background:rgba(66,209,132,.08);border-radius:11px;padding:12px;font-size:13px;line-height:1.45}
+    .error{border-color:#7b343b;background:#2b1519;color:#ffd0d4}.info{border-color:#345f86;background:#10243b}
+    .field label{font-size:11px;text-transform:uppercase;color:var(--muted);font-weight:800;display:block;margin-bottom:7px}
+    .counter{font-size:11px;color:var(--muted);margin-top:5px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .skills{display:grid;gap:10px}.skill{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:11px}
+    .skill-head{display:flex;justify-content:space-between;gap:10px;align-items:center}.skill strong{font-size:13px}
+    .skill-value{font-weight:900;color:var(--yellow);min-width:34px;text-align:right}
+    input[type=range]{width:100%;accent-color:var(--yellow);margin-top:8px}
+    .tiny{font-size:10px;color:var(--muted);line-height:1.4}
     .footerbar{position:fixed;left:0;right:0;bottom:0;z-index:25;border-top:1px solid var(--line);
       background:rgba(7,17,31,.96);backdrop-filter:blur(10px);padding:9px 10px calc(9px + env(safe-area-inset-bottom))}
-    .footerbar .inner{max-width:760px;margin:0 auto;display:flex;gap:8px}
-    .footerbar .btn{flex:1;min-width:0;padding-left:8px;padding-right:8px;font-size:12px}
-    .hidden{display:none!important}
-    details{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:12px}
-    summary{cursor:pointer;color:var(--muted);font-size:12px;font-weight:800}
-    code{color:#d9e9ff}
-    .about{font-size:12px;color:var(--muted)}
-    .section-gap{margin-top:18px}
-    .back{margin-bottom:14px}
-    .empty{text-align:center;color:var(--muted);padding:26px}
+    .footerbar .inner{max-width:760px;margin:0 auto;display:flex;gap:8px}.footerbar .btn{flex:1;min-width:0;padding-left:8px;padding-right:8px;font-size:12px}
+    .hidden{display:none!important} details{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:12px}
+    summary{cursor:pointer;color:var(--muted);font-size:12px;font-weight:800} code{color:#d9e9ff}.about{font-size:12px;color:var(--muted)}
+    .section-gap{margin-top:18px}.back{margin-bottom:14px}.empty{text-align:center;color:var(--muted);padding:26px}
+    .mode{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-top:6px}.modepill{font-size:10px;font-weight:900;border-radius:999px;padding:5px 8px;background:#1d334e;color:#cfe4ff;border:1px solid #355778}
+    .modepill.direct{background:#103823;color:#a8f0c4;border-color:#286c46}.actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+    @media(max-width:420px){.grid2{grid-template-columns:1fr}.facts{grid-template-columns:1fr 1fr}.footerbar .btn{font-size:11px}}
     @media(min-width:700px){main{padding:24px}.topbar{padding-left:24px;padding-right:24px}}
   </style>
 </head>
 <body>
 <div id="app" class="app">
   <div id="topbar" class="topbar hidden">
-    <div class="brand" id="brandHome">SWOS EDITOR</div>
+    <div class="brand" id="brandHome">SWOS EDITOR <span style="font-size:10px;color:var(--green)">v0.2</span></div>
     <div class="sub" id="fileMeta"></div>
+    <div class="mode" id="modeLine"></div>
   </div>
-
   <main id="main"></main>
-
-  <div id="footerbar" class="footerbar hidden">
-    <div class="inner">
-      <button class="btn btn-primary" id="exportBtn">Export file</button>
-      <button class="btn" id="backupBtn">Backup</button>
-      <button class="btn" id="undoBtn">Undo all</button>
-    </div>
-  </div>
+  <div id="footerbar" class="footerbar hidden"><div class="inner">
+    <button class="btn btn-primary" id="primarySaveBtn">Export file</button>
+    <button class="btn" id="backupBtn">Backup</button>
+    <button class="btn" id="undoBtn">Undo edits</button>
+  </div></div>
 </div>
-
 <input id="fileInput" type="file" class="hidden" />
-
 <script>
 (() => {
   "use strict";
-
-  const TEAM_RECORD_SIZE = 684;
-  const PLAYER_RECORD_SIZE = 38;
-  const PLAYERS_PER_TEAM = 16;
-  const HEADER_SIZE = 2;
-  const T = { name:5, nameLength:16, tactic:24, division:25, coach:36, coachLength:24, order:60, players:76 };
-  const P = { nationality:0, shirt:2, name:3, nameLength:23, position:26 };
-
-  const divisions = ["Premier","First","Second","Third","Non-League"];
-  const formations = ["4-4-2","5-4-1","4-5-1","5-3-2","3-5-2","4-3-3","4-2-4","3-4-3","Sweeper","5-2-3","Attack","Defend","User A","User B","User C","User D","User E","User F"];
-  const positions = [
-    ["Goalkeeper","GK"],["Right Back","RB"],["Left Back","LB"],["Defender","D"],
-    ["Right Midfield","RM"],["Left Midfield","LM"],["Midfielder","M"],["Attacker","A"]
+  const TEAM_RECORD_SIZE=684, PLAYER_RECORD_SIZE=38, PLAYERS_PER_TEAM=16, HEADER_SIZE=2;
+  const T={name:5,nameLength:19,tactic:24,division:25,coach:36,coachLength:24,order:60,players:76};
+  const P={nationality:0,shirt:2,name:3,nameLength:23,multi:26,unknown27:27,passing:28,shootHead:29,tackleControl:30,speedFinish:31,value:32};
+  const divisions=["Premier","First","Second","Third","Non-League"];
+  const formations=["4-4-2","5-4-1","4-5-1","5-3-2","3-5-2","4-3-3","4-2-4","3-4-3","Sweeper","5-2-3","Attack","Defend","User A","User B","User C","User D","User E","User F"];
+  const positions=[["Goalkeeper","GK"],["Right Back","RB"],["Left Back","LB"],["Defender","D"],["Right Wing","RW"],["Left Wing","LW"],["Midfielder","M"],["Attacker","A"]];
+  const appearances=["White skin / black hair","White skin / blonde hair","Black skin / black hair","Undefined / custom"];
+  const skillNames=["Passing","Shooting","Heading","Tackling","Control","Speed","Finishing"];
+  const values=["< £25k","£25k","£30k","£40k","£50k","£65k","£75k","£85k","£100k","£110k","£130k","£150k","£160k","£180k","£200k","£250k","£300k","£350k","£450k","£500k","£550k","£600k","£650k","£700k","£750k","£800k","£850k","£950k","£1m","£1.1m","£1.3m","£1.5m","£1.6m","£1.8m","£1.9m","£2m","£2.25m","£2.75m","£3m","£3.5m","£4.5m","£5m","£6m","£7m","£8m","£9m","£10m","£12m","£15m","> £15m"];
+  const nationalityNames=[
+    "Albania","Austria","Belgium","Bulgaria","Croatia","Cyprus","Czech Republic","Denmark","England","Estonia","Faroe Islands","Finland","France","Germany","Greece","Hungary",
+    "Iceland","Israel","Italy","Latvia","Lithuania","Luxembourg","Malta","Holland","Northern Ireland","Norway","Poland","Portugal","Romania","Russia","San Marino","Scotland",
+    "Slovenia","Sweden","Turkey","Ukraine","Wales","Serbia/Montenegro","Belarus","Slovakia","Spain","Armenia","Bosnia Herzegovina","Azerbaijan","Georgia","Switzerland","Republic of Ireland","FYR Macedonia",
+    "Turkmenistan","Liechtenstein","Moldova","Costa Rica","El Salvador","Guatemala","Honduras","Bahamas","Mexico","Panama","U.S.A.","Bahrain","Nicaragua","Bermuda","Jamaica","Trinidad & Tobago",
+    "Canada","Barbados","El Salvador (national)","St Vincent & Grenadines","Argentina","Bolivia","Brazil","Chile","Colombia","Ecuador","Paraguay","Suriname","Uruguay","Venezuela","Guyana","Peru",
+    "Algeria","South Africa","Botswana","Burkina Faso","Burundi","Lesotho","DR Congo (Zaire)","Zambia","Ghana","Senegal","Ivory Coast","Tunisia","Mali","Madagascar","Cameroon","Chad",
+    "Uganda","Liberia","Mozambique","Kenya","Sudan","Swaziland","Angola","Togo","Zimbabwe","Egypt","Tanzania","Nigeria","Ethiopia","Gabon","Sierra Leone","Benin",
+    "Congo","Guinea","Sri Lanka (legacy)","Morocco","Gambia","Malawi","Japan","Taiwan","India","Bangladesh","Brunei","Iraq","Jordan","Sri Lanka","Syria","South Korea",
+    "Iran","Vietnam","Malaysia","Saudi Arabia","Yemen","Kuwait","Laos","North Korea","Oman","Pakistan","Philippines","China","Singapore","Mauritius","Myanmar","Papua New Guinea",
+    "Thailand","Uzbekistan","Qatar","United Arab Emirates","Australia","New Zealand","Fiji","Solomon Islands","Custom"
   ];
 
-  let state = {
-    fileName:null, bytes:null, original:null, db:null,
-    view:"landing", teamIndex:null, playerIndex:null,
-    filter:"all", query:"", changed:new Set(), message:null
-  };
+  const directApiAvailable = typeof window.showOpenFilePicker === "function";
+  let state={fileName:null,bytes:null,openingOriginal:null,savedBaseline:null,fileHandle:null,direct:false,db:null,view:"landing",teamIndex:null,playerIndex:null,filter:"all",query:"",changed:new Set(),message:null};
+  const main=document.getElementById("main"),topbar=document.getElementById("topbar"),footerbar=document.getElementById("footerbar"),fileMeta=document.getElementById("fileMeta"),modeLine=document.getElementById("modeLine"),fileInput=document.getElementById("fileInput"),undoBtn=document.getElementById("undoBtn"),primarySaveBtn=document.getElementById("primarySaveBtn");
 
-  const main = document.getElementById("main");
-  const topbar = document.getElementById("topbar");
-  const footerbar = document.getElementById("footerbar");
-  const fileMeta = document.getElementById("fileMeta");
-  const fileInput = document.getElementById("fileInput");
-  const undoBtn = document.getElementById("undoBtn");
+  function esc(v=""){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));}
+  function hex(n){return "0x"+Number(n).toString(16).toUpperCase().padStart(2,"0")}
+  function readText(bytes,offset,length){let s="";for(let i=0;i<length;i++){const b=bytes[offset+i];if(!b)break;s+=String.fromCharCode(b)}return s.replace(/\s+$/,"")}
+  function divisionName(c){return divisions[c]??`Division ${c}`} function formationName(c){return formations[c]??`Unknown (${c})`}
+  function positionInfo(byte){return positions[(byte>>5)&7]??["Unknown","?"]} function appearanceInfo(byte){return appearances[(byte>>3)&3]??"Unknown"}
+  function nationalityName(code){return nationalityNames[code]??`Unknown code ${hex(code)}`}
 
-  function esc(v=""){
-    return String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+  function validate(bytes){if(bytes.length<2)throw new Error("This file is too small to be a SWOS TEAM database.");const dv=new DataView(bytes.buffer,bytes.byteOffset,bytes.byteLength);const count=dv.getUint16(0,false);if(count<1)throw new Error("The file header reports zero teams.");const expected=HEADER_SIZE+count*TEAM_RECORD_SIZE;if(bytes.length!==expected)throw new Error(`File size check failed. Header says ${count} teams, so expected ${expected.toLocaleString()} bytes, but found ${bytes.length.toLocaleString()}.`);return count}
+  function readRawSkills(b,o){return [b[o+P.passing]&15,b[o+P.shootHead]>>4,b[o+P.shootHead]&15,b[o+P.tackleControl]>>4,b[o+P.tackleControl]&15,b[o+P.speedFinish]>>4,b[o+P.speedFinish]&15]}
+  function parsePlayer(teamOffset,index){const o=teamOffset+T.players+index*PLAYER_RECORD_SIZE;const rawSkills=readRawSkills(state.bytes,o);return{index,offset:o,nationality:state.bytes[o+P.nationality],shirt:state.bytes[o+P.shirt],name:readText(state.bytes,o+P.name,P.nameLength),multi:state.bytes[o+P.multi],position:(state.bytes[o+P.multi]>>5)&7,appearance:(state.bytes[o+P.multi]>>3)&3,rawSkills,levels:rawSkills.map(v=>v&7),value:state.bytes[o+P.value]}}
+  function parseTeam(index){const o=HEADER_SIZE+index*TEAM_RECORD_SIZE,order=Array.from(state.bytes.slice(o+T.order,o+T.order+16)),players=[];for(let i=0;i<16;i++)players.push(parsePlayer(o,i));return{index,offset:o,name:readText(state.bytes,o+T.name,T.nameLength),coach:readText(state.bytes,o+T.coach,T.coachLength),tactic:state.bytes[o+T.tactic],division:state.bytes[o+T.division],order,players}}
+  function parseDb(){const count=validate(state.bytes),teams=[];for(let i=0;i<count;i++)teams.push(parseTeam(i));state.db={count,teams}}
+  function orderedPlayers(team){const out=[],seen=new Set();for(const idx of team.order){if(idx>=0&&idx<16&&!seen.has(idx)){out.push(team.players[idx]);seen.add(idx)}}for(const p of team.players)if(!seen.has(p.index))out.push(p);return out}
+  function refreshTeam(i){state.db.teams[i]=parseTeam(i)}
+
+  function writePlayer(p,form){const b=state.bytes,o=p.offset,name=form.name.toUpperCase();if(name.length>23)throw new Error("Player name is longer than 23 bytes.");if(/[^\x20-\x7E]/.test(name))throw new Error("Use plain ASCII characters only.");
+    b[o+P.nationality]=form.nationality;b[o+P.shirt]=form.shirt;b.fill(0,o+P.name,o+P.name+23);for(let i=0;i<name.length;i++)b[o+P.name+i]=name.charCodeAt(i);
+    b[o+P.multi]=(b[o+P.multi]&7)|((form.appearance&3)<<3)|((form.position&7)<<5);
+    const old=p.rawSkills, raw=form.levels.map((level,i)=>(old[i]&8)|(level&7));
+    b[o+P.passing]=(b[o+P.passing]&0xF0)|raw[0];b[o+P.shootHead]=(raw[1]<<4)|raw[2];b[o+P.tackleControl]=(raw[3]<<4)|raw[4];b[o+P.speedFinish]=(raw[5]<<4)|raw[6];b[o+P.value]=form.value;
   }
 
-  function readText(bytes, offset, length){
-    let s = "";
-    for(let i=0;i<length;i++){
-      const b = bytes[offset+i];
-      if(!b) break;
-      s += String.fromCharCode(b);
-    }
-    return s.replace(/\s+$/,"");
-  }
+  function bytesToBase64(bytes){let binary="",chunk=0x8000;for(let i=0;i<bytes.length;i+=chunk)binary+=String.fromCharCode(...bytes.subarray(i,Math.min(i+chunk,bytes.length)));return btoa(binary)}
+  function persistSafetyBackup(){try{localStorage.setItem(`swosOpeningBackup:${state.fileName}`,JSON.stringify({time:Date.now(),length:state.openingOriginal.length,data:bytesToBase64(state.openingOriginal)}));return true}catch(e){console.warn("Backup storage failed",e);return false}}
+  function byteEqual(a,b){if(a.length!==b.length)return false;for(let i=0;i<a.length;i++)if(a[i]!==b[i])return false;return true}
 
-  function divisionName(code){ return divisions[code] ?? `Division ${code}`; }
-  function formationName(code){ return formations[code] ?? `Unknown (${code})`; }
-  function positionInfo(byte){ return positions[(byte >> 5) & 7] ?? ["Unknown","?"]; }
+  function setChrome(show){topbar.classList.toggle("hidden",!show);footerbar.classList.toggle("hidden",!show);if(show){const edited=state.changed.size?` · ${state.changed.size} player${state.changed.size===1?'':'s'} edited`:"";fileMeta.textContent=`${state.fileName} · ${state.db.count} teams · ${state.bytes.length.toLocaleString()} bytes${edited}`;modeLine.innerHTML=state.direct?'<span class="modepill direct">DIRECT SAVE</span><span class="tiny">Save can overwrite the file you opened</span>':'<span class="modepill">EXPORT MODE</span><span class="tiny">Download then replace manually</span>';undoBtn.disabled=state.changed.size===0;primarySaveBtn.textContent=state.direct?"Save to SWOS":"Export file";primarySaveBtn.className=`btn ${state.direct?'btn-green':'btn-primary'}`}}
+  function render(){if(state.view==="landing"){setChrome(false);renderLanding();return}setChrome(true);if(state.view==="teams")renderTeams();if(state.view==="team")renderTeam();if(state.view==="player")renderPlayer()}
 
-  function validate(bytes){
-    if(bytes.length < 2) throw new Error("This file is too small to be a SWOS TEAM database.");
-    const dv = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
-    const count = dv.getUint16(0, false);
-    if(count < 1) throw new Error("The file header reports zero teams.");
-    const expected = HEADER_SIZE + count * TEAM_RECORD_SIZE;
-    if(bytes.length !== expected){
-      throw new Error(`File size check failed. Header says ${count} teams, so expected ${expected.toLocaleString()} bytes, but found ${bytes.length.toLocaleString()}.`);
-    }
-    return count;
-  }
+  function renderLanding(){main.innerHTML=`<section class="hero"><div><div class="eyebrow">Retro football data tool · v0.2</div><h1>SWOS Editor</h1><p style="color:var(--muted)">Edit real DOS Sensible World of Soccer <strong style="color:var(--text)">TEAM.*</strong> files on your phone.</p></div>
+    ${directApiAvailable?`<div class="card stack"><div><strong style="color:var(--green)">Fastest option</strong><div class="about" style="margin-top:5px">Open the TEAM file directly from your SWOS <code>GAME/DATA</code> folder. After editing, “Save to SWOS” writes back over that same file — no moving files.</div></div><button class="btn btn-green big" id="openDirect">Open TEAM file — direct save</button><div class="tiny">Chrome will ask permission before the app writes to the file. An opening backup is kept in memory and a safety copy is stored in this browser before the first overwrite.</div></div>`:`<div class="notice info">Your current browser has not exposed direct file-write access to this page. Export mode still works.</div>`}
+    <button class="btn btn-primary big" id="openExport">Open TEAM file — export mode</button>${state.message?`<div class="notice error">${esc(state.message)}</div>`:""}
+    <div class="card stack"><strong>New in v0.2</strong><span class="about">• Name, nationality, shirt number and position.</span><span class="about">• Player appearance/head type.</span><span class="about">• All seven SWOS abilities.</span><span class="about">• Player market value.</span><span class="about">• Direct save back to the original TEAM file where browser support allows it.</span></div>
+    <div class="about">SWOS abilities have eight actual levels. The files store them as 0–7 and 8–15; the app shows the true 0–7 level and preserves the hidden high-bit/transfer-filter flag automatically.</div><div class="about">Unofficial fan-made editor. Not affiliated with Sensible Software or Codemasters.</div></section>`;
+    if(directApiAvailable)document.getElementById("openDirect").onclick=openDirect;document.getElementById("openExport").onclick=()=>fileInput.click()}
 
-  function parsePlayer(teamOffset, index){
-    const offset = teamOffset + T.players + index * PLAYER_RECORD_SIZE;
-    return {
-      index, offset,
-      nationality: state.bytes[offset + P.nationality],
-      shirt: state.bytes[offset + P.shirt],
-      name: readText(state.bytes, offset + P.name, P.nameLength),
-      positionByte: state.bytes[offset + P.position]
-    };
-  }
+  async function openDirect(){try{const [handle]=await window.showOpenFilePicker({multiple:false});const file=await handle.getFile();await loadFile(file,handle,true)}catch(e){if(e&&e.name!=="AbortError"){state.message=`Direct open failed: ${e.message}. You can still use export mode.`;render()}}}
+  async function loadFile(file,handle,direct){const bytes=new Uint8Array(await file.arrayBuffer());state.bytes=bytes;state.openingOriginal=bytes.slice();state.savedBaseline=bytes.slice();state.fileName=file.name;state.fileHandle=handle||null;state.direct=!!direct;state.changed=new Set();state.filter="all";state.query="";parseDb();state.view="teams";state.message=`Loaded ${state.db.count} teams successfully${direct?' in direct-save mode':''}.`;render();window.scrollTo(0,0)}
 
-  function parseTeam(index){
-    const offset = HEADER_SIZE + index * TEAM_RECORD_SIZE;
-    const order = Array.from(state.bytes.slice(offset + T.order, offset + T.order + 16));
-    const players = [];
-    for(let i=0;i<PLAYERS_PER_TEAM;i++) players.push(parsePlayer(offset,i));
-    return {
-      index, offset,
-      name:readText(state.bytes,offset+T.name,T.nameLength),
-      coach:readText(state.bytes,offset+T.coach,T.coachLength),
-      tactic:state.bytes[offset+T.tactic],
-      division:state.bytes[offset+T.division],
-      order, players
-    };
-  }
+  function renderTeams(){const divCodes=[...new Set(state.db.teams.map(t=>t.division))].sort((a,b)=>a-b),q=state.query.trim().toLowerCase(),teams=state.db.teams.filter(t=>(state.filter==="all"||t.division===state.filter)&&t.name.toLowerCase().includes(q));const chip=(code,label)=>`<button class="chip ${state.filter===code?'active':''}" data-filter="${code}">${esc(label)}</button>`;
+    main.innerHTML=`${state.message?`<div class="notice section-gap">${esc(state.message)}</div>`:""}<div class="stack section-gap"><input class="search" id="teamSearch" placeholder="Search team name…" value="${esc(state.query)}"/><div class="chips">${chip("all",`All (${state.db.count})`)}${divCodes.map(d=>chip(String(d),`${divisionName(d)} (${state.db.teams.filter(t=>t.division===d).length})`)).join("")}</div></div>
+      <div class="stack section-gap">${teams.map(t=>{const edits=t.players.filter(p=>state.changed.has(`${t.index}:${p.index}`)).length;return`<button class="team" data-team="${t.index}"><span class="grow"><span class="team-name">${esc(t.name||"(unnamed)")}</span><span class="meta">${esc(divisionName(t.division))} · ${esc(formationName(t.tactic))}</span></span>${edits?`<span class="badge">${edits} EDITED</span>`:""}</button>`}).join("")||'<div class="empty">No teams match.</div>'}</div>
+      ${state.direct?`<div class="card section-gap"><h3>Direct-save mode</h3><p class="about">You opened the actual file through the browser file picker. When you press <strong style="color:var(--text)">Save to SWOS</strong>, this app will ask for confirmation and overwrite that same file in its current folder.</p><button class="btn btn-blue" id="exportCopy">Export a copy instead</button></div>`:""}
+      <details class="section-gap"><summary>Safety & backups</summary><div class="about section-gap">The opening file is kept untouched in memory. “Backup” downloads that opening copy. In direct-save mode, the opening bytes are also stored in this browser immediately before the first overwrite. Always close SWOS before writing its TEAM file.</div></details>`;
+    const search=document.getElementById("teamSearch");search.oninput=e=>{state.query=e.target.value;renderTeams();const x=document.getElementById("teamSearch");x.focus();x.setSelectionRange(x.value.length,x.value.length)};document.querySelectorAll("[data-filter]").forEach(b=>b.onclick=()=>{const v=b.dataset.filter;state.filter=v==="all"?"all":Number(v);render()});document.querySelectorAll("[data-team]").forEach(b=>b.onclick=()=>{state.teamIndex=Number(b.dataset.team);state.view="team";state.message=null;render();window.scrollTo(0,0)});if(state.direct)document.getElementById("exportCopy").onclick=exportCopy}
 
-  function parseDb(){
-    const count = validate(state.bytes);
-    const teams = [];
-    for(let i=0;i<count;i++) teams.push(parseTeam(i));
-    state.db = { count, teams };
-  }
+  function renderTeam(){const team=state.db.teams[state.teamIndex],players=orderedPlayers(team);main.innerHTML=`<button class="btn back" id="backTeams">← All teams</button><h2>${esc(team.name||"(unnamed)")}</h2><div class="facts"><div class="fact"><small>Division</small><strong>${esc(divisionName(team.division))}</strong></div><div class="fact"><small>Formation</small><strong>${esc(formationName(team.tactic))}</strong></div><div class="fact"><small>Coach</small><strong>${esc(team.coach||"—")}</strong></div><div class="fact"><small>Team record</small><strong>#${team.index+1}</strong></div></div><h3>Squad</h3><div class="stack section-gap">${players.map(p=>{const pos=positionInfo(p.multi),edited=state.changed.has(`${team.index}:${p.index}`);return`<button class="player ${edited?'edited':''}" data-player="${p.index}"><span class="shirt">${p.shirt}</span><span class="player-main"><span class="player-name">${esc(p.name||"(empty player)")}</span><span class="meta">${esc(pos[0])} · ${esc(nationalityName(p.nationality))} · ${values[p.value]||hex(p.value)}</span></span>${edited?'<span class="badge">EDITED</span>':''}</button>`}).join("")}</div>`;document.getElementById("backTeams").onclick=()=>{state.view="teams";state.message=null;render();window.scrollTo(0,0)};document.querySelectorAll("[data-player]").forEach(b=>b.onclick=()=>{state.playerIndex=Number(b.dataset.player);state.view="player";state.message=null;render();window.scrollTo(0,0)})}
 
-  function orderedPlayers(team){
-    const out=[], seen=new Set();
-    // SWOS PC order table is zero-based: values 0..15.
-    for(const idx of team.order){
-      if(idx >= 0 && idx < 16 && !seen.has(idx)){
-        out.push(team.players[idx]);
-        seen.add(idx);
-      }
-    }
-    for(const p of team.players){
-      if(!seen.has(p.index)) out.push(p);
-    }
-    return out;
-  }
+  function nationalityOptions(selected){return nationalityNames.map((name,i)=>`<option value="${i}" ${i===selected?'selected':''}>${name} (${hex(i)})</option>`).join("")}
+  function positionOptions(selected){return positions.map((p,i)=>`<option value="${i}" ${i===selected?'selected':''}>${p[0]} (${p[1]})</option>`).join("")}
+  function appearanceOptions(selected){return appearances.map((a,i)=>`<option value="${i}" ${i===selected?'selected':''}>${a}</option>`).join("")}
+  function valueOptions(selected){return values.map((v,i)=>`<option value="${i}" ${i===selected?'selected':''}>${v} (${hex(i)})</option>`).join("")}
 
-  function writeName(playerOffset, name){
-    if(name.length > P.nameLength) throw new Error("Player name is longer than 23 bytes.");
-    if(/[^\x20-\x7E]/.test(name)) throw new Error("Use plain ASCII characters only.");
-    const start = playerOffset + P.name;
-    state.bytes.fill(0,start,start+P.nameLength);
-    for(let i=0;i<name.length;i++) state.bytes[start+i] = name.charCodeAt(i);
-  }
+  function renderPlayer(){const team=state.db.teams[state.teamIndex],p=team.players[state.playerIndex],key=`${team.index}:${p.index}`,edited=state.changed.has(key);main.innerHTML=`<button class="btn back" id="backTeam">← ${esc(team.name)}</button><h2>Edit player</h2>
+    <div class="card section-gap stack"><div class="field"><label>Player name — max 23 ASCII characters</label><input id="nameInput" value="${esc(p.name)}" maxlength="40" autocomplete="off" spellcheck="false"/><div class="counter" id="counter">${p.name.length}/23</div></div>
+    <div class="grid2"><div class="field"><label>Nationality</label><select id="nationalityInput">${nationalityOptions(p.nationality)}</select></div><div class="field"><label>Shirt number</label><input id="shirtInput" type="number" min="0" max="99" value="${p.shirt}"/></div></div>
+    <div class="grid2"><div class="field"><label>Position</label><select id="positionInput">${positionOptions(p.position)}</select></div><div class="field"><label>Appearance</label><select id="appearanceInput">${appearanceOptions(p.appearance)}</select></div></div>
+    <div class="field"><label>Player value</label><select id="valueInput">${valueOptions(Math.min(p.value,49))}</select></div></div>
+    <div class="section-gap"><h3>Abilities · true SWOS level 0–7</h3><div class="skills section-gap">${skillNames.map((name,i)=>`<div class="skill"><div class="skill-head"><strong>${name}</strong><span class="skill-value" id="skillValue${i}">${p.levels[i]}</span></div><input type="range" min="0" max="7" step="1" value="${p.levels[i]}" data-skill="${i}"/><div class="tiny">Stored raw value now: ${p.rawSkills[i]}${p.rawSkills[i]>=8?' · transfer-filter flag is set':''}</div></div>`).join("")}</div></div>
+    <div class="notice section-gap">When you change an ability, the app changes only its real 0–7 level and preserves SWOS’s hidden 8–15 flag. Position and appearance share one byte; the three unknown low bits are preserved unchanged.</div>
+    <button class="btn btn-green big section-gap" id="savePlayer">Save player changes</button>${edited?'<div class="meta" style="text-align:center;margin-top:8px;color:var(--green)">This player already has an edit waiting to be saved/exported.</div>':''}
+    <details class="section-gap"><summary>Advanced / raw player record</summary><div class="about section-gap">Record offset: ${p.offset}<br>Nationality: ${hex(p.nationality)}<br>Multipurpose byte: ${hex(p.multi)}<br>Unknown byte 27: ${hex(state.bytes[p.offset+27])}<br>Raw skills: ${p.rawSkills.join(', ')}<br>Value byte: ${hex(p.value)}</div></details>`;
+    const name=document.getElementById("nameInput"),counter=document.getElementById("counter"),save=document.getElementById("savePlayer");document.querySelectorAll("[data-skill]").forEach(r=>r.oninput=()=>document.getElementById(`skillValue${r.dataset.skill}`).textContent=r.value);
+    function formValid(){const v=name.value.toUpperCase();if(name.value!==v)name.value=v;const bad=/[^\x20-\x7E]/.test(v),too=v.length>23,shirt=Number(document.getElementById("shirtInput").value),badShirt=!Number.isInteger(shirt)||shirt<0||shirt>99;counter.textContent=`${v.length}/23${bad?' · plain ASCII only':''}${too?' · TOO LONG':''}${badShirt?' · shirt 0–99':''}`;counter.style.color=(bad||too||badShirt)?'var(--red)':'var(--muted)';save.disabled=bad||too||badShirt}name.oninput=formValid;document.getElementById("shirtInput").oninput=formValid;formValid();
+    save.onclick=()=>{try{const levels=[...document.querySelectorAll("[data-skill]")].map(r=>Number(r.value));writePlayer(p,{name:name.value,nationality:Number(document.getElementById("nationalityInput").value),shirt:Number(document.getElementById("shirtInput").value),position:Number(document.getElementById("positionInput").value),appearance:Number(document.getElementById("appearanceInput").value),value:Number(document.getElementById("valueInput").value),levels});refreshTeam(team.index);state.changed.add(key);state.view="team";state.message=null;render();window.scrollTo(0,0)}catch(e){alert(e.message)}};document.getElementById("backTeam").onclick=()=>{state.view="team";state.message=null;render();window.scrollTo(0,0)}}
 
-  function refreshTeam(teamIndex){
-    state.db.teams[teamIndex] = parseTeam(teamIndex);
-  }
+  function download(bytes,name){const copy=bytes.slice(),blob=new Blob([copy],{type:"application/octet-stream"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+  function exportCopy(){if(!state.bytes)return;try{validate(state.bytes);if(state.bytes.length!==state.openingOriginal.length)throw new Error("Export blocked: file length changed.");download(state.bytes,state.fileName);state.message=`Exported ${state.fileName} as a copy.`;state.view="teams";render();window.scrollTo(0,0)}catch(e){alert(e.message)}}
+  async function saveDirect(){if(!state.fileHandle)return exportCopy();try{validate(state.bytes);if(state.bytes.length!==state.openingOriginal.length)throw new Error("Save blocked: file length changed.");if(!confirm(`Save changes directly over ${state.fileName} in its current folder?\n\nClose SWOS first. The app will keep an opening backup.`))return;const backed=persistSafetyBackup();if(state.fileHandle.requestPermission){const perm=await state.fileHandle.requestPermission({mode:"readwrite"});if(perm!=="granted")throw new Error("Write permission was not granted.")}
+      const writable=await state.fileHandle.createWritable();await writable.write(state.bytes);await writable.close();const checkFile=await state.fileHandle.getFile(),check=new Uint8Array(await checkFile.arrayBuffer());if(!byteEqual(check,state.bytes))throw new Error("The file was written but verification did not match. Restore from your backup before using SWOS.");state.savedBaseline=state.bytes.slice();state.changed=new Set();parseDb();state.view="teams";state.message=`Saved directly over ${state.fileName} and verified it byte-for-byte.${backed?' Opening backup stored in this browser.':''} Restart SWOS / Magic DOSBox to load the changes.`;render();window.scrollTo(0,0)}catch(e){alert(`Direct save failed: ${e.message}\n\nYour in-app edits are still here. You can use Export a copy instead.`)}}
 
-  function setChrome(show){
-    topbar.classList.toggle("hidden",!show);
-    footerbar.classList.toggle("hidden",!show);
-    if(show){
-      const edited = state.changed.size ? ` · ${state.changed.size} edited` : "";
-      fileMeta.textContent = `${state.fileName} · ${state.db.count} teams · ${state.bytes.length.toLocaleString()} bytes${edited}`;
-      undoBtn.disabled = state.changed.size === 0;
-    }
-  }
-
-  function render(){
-    if(state.view === "landing"){ setChrome(false); renderLanding(); return; }
-    setChrome(true);
-    if(state.view === "teams") renderTeams();
-    if(state.view === "team") renderTeam();
-    if(state.view === "player") renderPlayer();
-  }
-
-  function renderLanding(){
-    main.innerHTML = `
-      <section class="hero">
-        <div>
-          <div class="eyebrow">Retro football data tool</div>
-          <h1>SWOS Editor</h1>
-          <p style="color:var(--muted)">Open a DOS Sensible World of Soccer <strong style="color:var(--text)">TEAM.*</strong> database from your phone, browse the real teams and safely edit player names.</p>
-        </div>
-        <button class="btn btn-primary big" id="openFile">Open TEAM file</button>
-        ${state.message ? `<div class="notice error">${esc(state.message)}</div>` : ""}
-        <div class="card stack">
-          <strong>v0.1</strong>
-          <span class="about">• Real SWOS binary parsing — no demo data.</span>
-          <span class="about">• Team, division and squad browsing.</span>
-          <span class="about">• Player-name editing only.</span>
-          <span class="about">• Your game file stays on your device.</span>
-          <span class="about">• Unknown/reserved bytes are preserved exactly.</span>
-        </div>
-        <div class="about">Unofficial fan-made editor. Not affiliated with Sensible Software or Codemasters.</div>
-      </section>`;
-    document.getElementById("openFile").onclick = () => fileInput.click();
-  }
-
-  function renderTeams(){
-    const divCodes = [...new Set(state.db.teams.map(t=>t.division))].sort((a,b)=>a-b);
-    const q = state.query.trim().toLowerCase();
-    const teams = state.db.teams.filter(t =>
-      (state.filter === "all" || t.division === state.filter) &&
-      t.name.toLowerCase().includes(q)
-    );
-    const chip = (code,label) => `<button class="chip ${state.filter===code?'active':''}" data-filter="${code}">${esc(label)}</button>`;
-    main.innerHTML = `
-      ${state.message ? `<div class="notice section-gap">${esc(state.message)}</div>` : ""}
-      <div class="stack">
-        <input class="search" id="teamSearch" placeholder="Search team name…" value="${esc(state.query)}" />
-        <div class="chips">
-          ${chip("all",`All (${state.db.count})`)}
-          ${divCodes.map(d=>chip(String(d),`${divisionName(d)} (${state.db.teams.filter(t=>t.division===d).length})`)).join("")}
-        </div>
-      </div>
-      <div class="stack section-gap">
-        ${teams.map(t=>{
-          const edits=t.players.filter(p=>state.changed.has(`${t.index}:${p.index}`)).length;
-          return `<button class="team" data-team="${t.index}">
-            <span class="grow">
-              <span class="team-name">${esc(t.name || "(unnamed)")}</span>
-              <span class="meta">${esc(divisionName(t.division))} · ${esc(formationName(t.tactic))}</span>
-            </span>
-            ${edits?`<span class="badge">${edits} EDITED</span>`:""}
-          </button>`;
-        }).join("") || `<div class="empty">No teams match.</div>`}
-      </div>
-      <div class="card about section-gap">
-        <strong style="color:var(--green)">About this build</strong><br><br>
-        v0.1 edits player names only. Full player attributes, transfers, kits and team editing can be added later.
-      </div>`;
-
-    const search = document.getElementById("teamSearch");
-    search.oninput = e => { state.query=e.target.value; renderTeams(); document.getElementById("teamSearch").focus(); };
-    document.querySelectorAll("[data-filter]").forEach(b=>b.onclick=()=>{
-      const v=b.dataset.filter; state.filter=v==="all"?"all":Number(v); render();
-    });
-    document.querySelectorAll("[data-team]").forEach(b=>b.onclick=()=>{
-      state.teamIndex=Number(b.dataset.team); state.view="team"; state.message=null; render(); window.scrollTo(0,0);
-    });
-  }
-
-  function renderTeam(){
-    const team=state.db.teams[state.teamIndex];
-    const players=orderedPlayers(team);
-    main.innerHTML = `
-      <button class="btn back" id="backTeams">← All teams</button>
-      <h2>${esc(team.name || "(unnamed)")}</h2>
-      <div class="facts">
-        <div class="fact"><small>Division</small><strong>${esc(divisionName(team.division))}</strong></div>
-        <div class="fact"><small>Formation</small><strong>${esc(formationName(team.tactic))}</strong></div>
-        <div class="fact"><small>Coach</small><strong>${esc(team.coach || "—")}</strong></div>
-        <div class="fact"><small>Team record</small><strong>#${team.index+1}</strong></div>
-      </div>
-      <h3>Squad</h3>
-      <div class="stack section-gap">
-        ${players.map(p=>{
-          const pos=positionInfo(p.positionByte);
-          const edited=state.changed.has(`${team.index}:${p.index}`);
-          return `<button class="player ${edited?'edited':''}" data-player="${p.index}">
-            <span class="shirt">${p.shirt}</span>
-            <span class="player-main">
-              <span class="player-name">${esc(p.name || "(empty player)")}</span>
-              <span class="meta">${esc(pos[0])} · ${esc(pos[1])}</span>
-            </span>
-            ${edited?'<span class="badge">EDITED</span>':''}
-          </button>`;
-        }).join("")}
-      </div>`;
-    document.getElementById("backTeams").onclick=()=>{state.view="teams";state.message=null;render();window.scrollTo(0,0)};
-    document.querySelectorAll("[data-player]").forEach(b=>b.onclick=()=>{
-      state.playerIndex=Number(b.dataset.player);state.view="player";state.message=null;render();window.scrollTo(0,0)
-    });
-  }
-
-  function renderPlayer(){
-    const team=state.db.teams[state.teamIndex], p=team.players[state.playerIndex], pos=positionInfo(p.positionByte);
-    const key=`${team.index}:${p.index}`, edited=state.changed.has(key);
-    main.innerHTML = `
-      <button class="btn back" id="backTeam">← ${esc(team.name)}</button>
-      <h2>Edit player name</h2>
-      <div class="field section-gap">
-        <label>Player name — maximum 23 ASCII bytes</label>
-        <input id="nameInput" value="${esc(p.name)}" maxlength="40" autocomplete="off" spellcheck="false" />
-        <div class="counter" id="counter">${p.name.length}/23 bytes</div>
-      </div>
-      <div class="notice section-gap">Only these 23 player-name bytes will be rewritten. Every other byte in the SWOS file is left exactly as it was.</div>
-      <button class="btn btn-green big section-gap" id="saveName">Save name</button>
-      ${edited?'<div class="meta" style="text-align:center;margin-top:8px;color:var(--green)">This player has an edit waiting to be exported.</div>':''}
-      <details class="section-gap">
-        <summary>Advanced / raw data</summary>
-        <div class="about section-gap">
-          Player record offset: ${p.offset}<br>
-          Nationality byte: ${p.nationality}<br>
-          Shirt byte: ${p.shirt}<br>
-          Position/appearance byte: ${p.positionByte} → ${esc(pos[0])}<br>
-          These fields are read-only in v0.1.
-        </div>
-      </details>`;
-    const input=document.getElementById("nameInput"), save=document.getElementById("saveName"), counter=document.getElementById("counter");
-    function validateName(){
-      const v=input.value.toUpperCase();
-      if(input.value!==v) input.value=v;
-      const bad=/[^\x20-\x7E]/.test(v), too=v.length>23, same=v===p.name;
-      counter.textContent=`${v.length}/23 bytes${bad?" · plain ASCII only":""}${too?" · TOO LONG":""}`;
-      counter.style.color=(bad||too)?"var(--red)":"var(--muted)";
-      save.disabled=bad||too||same;
-    }
-    input.oninput=validateName; validateName();
-    save.onclick=()=>{
-      try{
-        const name=input.value.toUpperCase();
-        writeName(p.offset,name);
-        refreshTeam(team.index);
-        state.changed.add(key);
-        state.view="team";
-        state.message=null;
-        render();window.scrollTo(0,0);
-      }catch(e){alert(e.message)}
-    };
-    document.getElementById("backTeam").onclick=()=>{state.view="team";state.message=null;render();window.scrollTo(0,0)};
-  }
-
-  function download(bytes,name){
-    const copy=bytes.slice();
-    const blob=new Blob([copy],{type:"application/octet-stream"});
-    const url=URL.createObjectURL(blob);
-    const a=document.createElement("a");
-    a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();
-    setTimeout(()=>URL.revokeObjectURL(url),1000);
-  }
-
-  fileInput.onchange = async e => {
-    const f=e.target.files && e.target.files[0];
-    e.target.value="";
-    if(!f) return;
-    try{
-      const bytes=new Uint8Array(await f.arrayBuffer());
-      state.bytes=bytes;
-      state.original=bytes.slice();
-      state.fileName=f.name;
-      state.changed=new Set();
-      state.filter="all";state.query="";
-      parseDb();
-      state.view="teams";state.message=`Loaded ${state.db.count} teams successfully.`;
-      render();window.scrollTo(0,0);
-    }catch(err){
-      state={...state,bytes:null,original:null,db:null,view:"landing",message:err.message};
-      render();
-    }
-  };
-
+  fileInput.onchange=async e=>{const f=e.target.files&&e.target.files[0];e.target.value="";if(!f)return;try{await loadFile(f,null,false)}catch(err){state={...state,bytes:null,openingOriginal:null,savedBaseline:null,fileHandle:null,direct:false,db:null,view:"landing",message:err.message};render()}};
   document.getElementById("brandHome").onclick=()=>{state.view="teams";state.message=null;render();window.scrollTo(0,0)};
-  document.getElementById("exportBtn").onclick=()=>{
-    if(!state.bytes||!state.original) return;
-    try{
-      validate(state.bytes);
-      if(state.bytes.length!==state.original.length) throw new Error("Export blocked: file length changed.");
-      download(state.bytes,state.fileName);
-      state.view="teams";
-      state.message=`Exported ${state.fileName}. Put it back into SWOS GAME/DATA after keeping a backup, then fully restart SWOS / Magic DOSBox.`;
-      render();window.scrollTo(0,0);
-    }catch(e){alert(e.message)}
-  };
-  document.getElementById("backupBtn").onclick=()=>{
-    if(state.original) download(state.original,`${state.fileName}.original.bak`);
-  };
-  document.getElementById("undoBtn").onclick=()=>{
-    if(!state.original||state.changed.size===0) return;
-    if(!confirm("Undo every edit made since this file was opened?")) return;
-    state.bytes=state.original.slice();
-    state.changed=new Set();
-    parseDb();
-    state.view="teams";state.message="All edits were undone.";
-    render();window.scrollTo(0,0);
-  };
-
+  primarySaveBtn.onclick=()=>state.direct?saveDirect():exportCopy();
+  document.getElementById("backupBtn").onclick=()=>{if(state.openingOriginal)download(state.openingOriginal,`${state.fileName}.opening-backup`)};
+  undoBtn.onclick=()=>{if(!state.savedBaseline||state.changed.size===0)return;if(!confirm("Undo edits made since the last direct save (or since opening the file)?"))return;state.bytes=state.savedBaseline.slice();state.changed=new Set();parseDb();state.view="teams";state.message="Pending edits were undone.";render();window.scrollTo(0,0)};
   render();
 })();
 </script>
