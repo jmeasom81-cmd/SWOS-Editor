@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#07111f" />
+  <title>SWOS Editor</title>
+  <style>
+    :root{
+      --bg:#050a12;--panel:#0d1828;--panel2:#132238;--line:#263d5c;
+      --text:#f5f7fb;--muted:#9db0c8;--yellow:#f5d547;--green:#42d184;
+      --red:#ff6b6b;--shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;background:
+      radial-gradient(circle at 50% -20%,#153660 0,transparent 45%),
+      linear-gradient(#07111f,#050a12 55%);color:var(--text);
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    button,input{font:inherit}
+    button{cursor:pointer}
+    .app{min-height:100vh;padding-bottom:90px}
+    .topbar{position:sticky;top:0;z-index:20;background:rgba(7,17,31,.94);
+      backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:14px 16px}
+    .brand{font-weight:900;letter-spacing:.08em;color:var(--yellow);font-size:18px}
+    .sub{color:var(--muted);font-size:12px;margin-top:4px;line-height:1.35}
+    main{max-width:760px;margin:0 auto;padding:16px}
+    .hero{min-height:80vh;display:flex;flex-direction:column;justify-content:center;gap:18px}
+    .eyebrow{font-size:11px;font-weight:900;color:var(--green);letter-spacing:.14em;text-transform:uppercase}
+    h1,h2,h3{margin:0}
+    h1{font-size:36px;letter-spacing:.03em}
+    h2{font-size:24px}
+    h3{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+    p{line-height:1.5}
+    .card{background:linear-gradient(180deg,var(--panel2),var(--panel));
+      border:1px solid var(--line);border-radius:14px;padding:15px;box-shadow:var(--shadow)}
+    .btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);
+      min-height:48px;border-radius:11px;padding:11px 14px;font-weight:800}
+    .btn:active{transform:translateY(1px)}
+    .btn-primary{background:var(--yellow);color:#14190a;border-color:#fff3a4}
+    .btn-green{background:var(--green);color:#052012;border-color:#8effbc}
+    .btn-danger{border-color:#6e3138;background:#2a151a;color:#ffbec4}
+    .btn:disabled{opacity:.45;cursor:not-allowed}
+    .big{min-height:62px;font-size:17px;width:100%}
+    .row{display:flex;gap:9px;align-items:center}
+    .grow{flex:1}
+    .stack{display:grid;gap:10px}
+    .search{width:100%;height:48px;border-radius:11px;border:1px solid var(--line);
+      background:#07111f;color:var(--text);padding:0 14px;outline:none}
+    .search:focus{border-color:var(--yellow)}
+    .chips{display:flex;gap:8px;overflow-x:auto;padding:2px 0 5px;scrollbar-width:none}
+    .chip{white-space:nowrap;border:1px solid var(--line);background:var(--panel);
+      color:var(--muted);border-radius:999px;padding:9px 13px;font-size:12px;font-weight:800}
+    .chip.active{background:var(--yellow);color:#111;border-color:#fff0a0}
+    .team{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;
+      text-align:left;background:var(--panel);border:1px solid var(--line);color:var(--text);
+      border-radius:12px;padding:14px}
+    .team-name{font-weight:900;font-size:16px}
+    .meta{font-size:12px;color:var(--muted);margin-top:3px}
+    .badge{background:var(--green);color:#041c0f;padding:5px 8px;border-radius:8px;
+      font-size:10px;font-weight:900}
+    .facts{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:12px 0 18px}
+    .fact{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:11px}
+    .fact small{display:block;color:var(--muted);text-transform:uppercase;font-size:9px;letter-spacing:.08em}
+    .fact strong{display:block;margin-top:4px;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .player{width:100%;display:flex;align-items:center;gap:11px;text-align:left;
+      background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:12px;padding:10px}
+    .player.edited{border-color:var(--green);box-shadow:0 0 0 1px rgba(66,209,132,.18)}
+    .shirt{width:42px;height:42px;display:grid;place-items:center;background:#172a45;
+      border:1px solid #365477;border-radius:9px;font-weight:900}
+    .player-main{min-width:0;flex:1}
+    .player-name{font-size:15px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .notice{border:1px solid rgba(66,209,132,.55);background:rgba(66,209,132,.08);
+      border-radius:11px;padding:12px;font-size:13px;line-height:1.45}
+    .error{border-color:#7b343b;background:#2b1519;color:#ffd0d4}
+    .field label{font-size:11px;text-transform:uppercase;color:var(--muted);font-weight:800}
+    .field input{margin-top:7px;width:100%;height:54px;border-radius:11px;border:1px solid var(--line);
+      background:#07111f;color:var(--text);padding:0 13px;font-size:18px;font-weight:800;outline:none}
+    .field input:focus{border-color:var(--yellow)}
+    .counter{font-size:11px;color:var(--muted);margin-top:5px}
+    .footerbar{position:fixed;left:0;right:0;bottom:0;z-index:25;border-top:1px solid var(--line);
+      background:rgba(7,17,31,.96);backdrop-filter:blur(10px);padding:9px 10px calc(9px + env(safe-area-inset-bottom))}
+    .footerbar .inner{max-width:760px;margin:0 auto;display:flex;gap:8px}
+    .footerbar .btn{flex:1;min-width:0;padding-left:8px;padding-right:8px;font-size:12px}
+    .hidden{display:none!important}
+    details{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:12px}
+    summary{cursor:pointer;color:var(--muted);font-size:12px;font-weight:800}
+    code{color:#d9e9ff}
+    .about{font-size:12px;color:var(--muted)}
+    .section-gap{margin-top:18px}
+    .back{margin-bottom:14px}
+    .empty{text-align:center;color:var(--muted);padding:26px}
+    @media(min-width:700px){main{padding:24px}.topbar{padding-left:24px;padding-right:24px}}
+  </style>
+</head>
+<body>
+<div id="app" class="app">
+  <div id="topbar" class="topbar hidden">
+    <div class="brand" id="brandHome">SWOS EDITOR</div>
+    <div class="sub" id="fileMeta"></div>
+  </div>
+
+  <main id="main"></main>
+
+  <div id="footerbar" class="footerbar hidden">
+    <div class="inner">
+      <button class="btn btn-primary" id="exportBtn">Export file</button>
+      <button class="btn" id="backupBtn">Backup</button>
+      <button class="btn" id="undoBtn">Undo all</button>
+    </div>
+  </div>
+</div>
+
+<input id="fileInput" type="file" class="hidden" />
+
+<script>
+(() => {
+  "use strict";
+
+  const TEAM_RECORD_SIZE = 684;
+  const PLAYER_RECORD_SIZE = 38;
+  const PLAYERS_PER_TEAM = 16;
+  const HEADER_SIZE = 2;
+  const T = { name:5, nameLength:16, tactic:24, division:25, coach:36, coachLength:24, order:60, players:76 };
+  const P = { nationality:0, shirt:2, name:3, nameLength:23, position:26 };
+
+  const divisions = ["Premier","First","Second","Third","Non-League"];
+  const formations = ["4-4-2","5-4-1","4-5-1","5-3-2","3-5-2","4-3-3","4-2-4","3-4-3","Sweeper","5-2-3","Attack","Defend","User A","User B","User C","User D","User E","User F"];
+  const positions = [
+    ["Goalkeeper","GK"],["Right Back","RB"],["Left Back","LB"],["Defender","D"],
+    ["Right Midfield","RM"],["Left Midfield","LM"],["Midfielder","M"],["Attacker","A"]
+  ];
+
+  let state = {
+    fileName:null, bytes:null, original:null, db:null,
+    view:"landing", teamIndex:null, playerIndex:null,
+    filter:"all", query:"", changed:new Set(), message:null
+  };
+
+  const main = document.getElementById("main");
+  const topbar = document.getElementById("topbar");
+  const footerbar = document.getElementById("footerbar");
+  const fileMeta = document.getElementById("fileMeta");
+  const fileInput = document.getElementById("fileInput");
+  const undoBtn = document.getElementById("undoBtn");
+
+  function esc(v=""){
+    return String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+  }
+
+  function readText(bytes, offset, length){
+    let s = "";
+    for(let i=0;i<length;i++){
+      const b = bytes[offset+i];
+      if(!b) break;
+      s += String.fromCharCode(b);
+    }
+    return s.replace(/\s+$/,"");
+  }
+
+  function divisionName(code){ return divisions[code] ?? `Division ${code}`; }
+  function formationName(code){ return formations[code] ?? `Unknown (${code})`; }
+  function positionInfo(byte){ return positions[(byte >> 5) & 7] ?? ["Unknown","?"]; }
+
+  function validate(bytes){
+    if(bytes.length < 2) throw new Error("This file is too small to be a SWOS TEAM database.");
+    const dv = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
+    const count = dv.getUint16(0, false);
+    if(count < 1) throw new Error("The file header reports zero teams.");
+    const expected = HEADER_SIZE + count * TEAM_RECORD_SIZE;
+    if(bytes.length !== expected){
+      throw new Error(`File size check failed. Header says ${count} teams, so expected ${expected.toLocaleString()} bytes, but found ${bytes.length.toLocaleString()}.`);
+    }
+    return count;
+  }
+
+  function parsePlayer(teamOffset, index){
+    const offset = teamOffset + T.players + index * PLAYER_RECORD_SIZE;
+    return {
+      index, offset,
+      nationality: state.bytes[offset + P.nationality],
+      shirt: state.bytes[offset + P.shirt],
+      name: readText(state.bytes, offset + P.name, P.nameLength),
+      positionByte: state.bytes[offset + P.position]
+    };
+  }
+
+  function parseTeam(index){
+    const offset = HEADER_SIZE + index * TEAM_RECORD_SIZE;
+    const order = Array.from(state.bytes.slice(offset + T.order, offset + T.order + 16));
+    const players = [];
+    for(let i=0;i<PLAYERS_PER_TEAM;i++) players.push(parsePlayer(offset,i));
+    return {
+      index, offset,
+      name:readText(state.bytes,offset+T.name,T.nameLength),
+      coach:readText(state.bytes,offset+T.coach,T.coachLength),
+      tactic:state.bytes[offset+T.tactic],
+      division:state.bytes[offset+T.division],
+      order, players
+    };
+  }
+
+  function parseDb(){
+    const count = validate(state.bytes);
+    const teams = [];
+    for(let i=0;i<count;i++) teams.push(parseTeam(i));
+    state.db = { count, teams };
+  }
+
+  function orderedPlayers(team){
+    const out=[], seen=new Set();
+    // SWOS PC order table is zero-based: values 0..15.
+    for(const idx of team.order){
+      if(idx >= 0 && idx < 16 && !seen.has(idx)){
+        out.push(team.players[idx]);
+        seen.add(idx);
+      }
+    }
+    for(const p of team.players){
+      if(!seen.has(p.index)) out.push(p);
+    }
+    return out;
+  }
+
+  function writeName(playerOffset, name){
+    if(name.length > P.nameLength) throw new Error("Player name is longer than 23 bytes.");
+    if(/[^\x20-\x7E]/.test(name)) throw new Error("Use plain ASCII characters only.");
+    const start = playerOffset + P.name;
+    state.bytes.fill(0,start,start+P.nameLength);
+    for(let i=0;i<name.length;i++) state.bytes[start+i] = name.charCodeAt(i);
+  }
+
+  function refreshTeam(teamIndex){
+    state.db.teams[teamIndex] = parseTeam(teamIndex);
+  }
+
+  function setChrome(show){
+    topbar.classList.toggle("hidden",!show);
+    footerbar.classList.toggle("hidden",!show);
+    if(show){
+      const edited = state.changed.size ? ` · ${state.changed.size} edited` : "";
+      fileMeta.textContent = `${state.fileName} · ${state.db.count} teams · ${state.bytes.length.toLocaleString()} bytes${edited}`;
+      undoBtn.disabled = state.changed.size === 0;
+    }
+  }
+
+  function render(){
+    if(state.view === "landing"){ setChrome(false); renderLanding(); return; }
+    setChrome(true);
+    if(state.view === "teams") renderTeams();
+    if(state.view === "team") renderTeam();
+    if(state.view === "player") renderPlayer();
+  }
+
+  function renderLanding(){
+    main.innerHTML = `
+      <section class="hero">
+        <div>
+          <div class="eyebrow">Retro football data tool</div>
+          <h1>SWOS Editor</h1>
+          <p style="color:var(--muted)">Open a DOS Sensible World of Soccer <strong style="color:var(--text)">TEAM.*</strong> database from your phone, browse the real teams and safely edit player names.</p>
+        </div>
+        <button class="btn btn-primary big" id="openFile">Open TEAM file</button>
+        ${state.message ? `<div class="notice error">${esc(state.message)}</div>` : ""}
+        <div class="card stack">
+          <strong>v0.1</strong>
+          <span class="about">• Real SWOS binary parsing — no demo data.</span>
+          <span class="about">• Team, division and squad browsing.</span>
+          <span class="about">• Player-name editing only.</span>
+          <span class="about">• Your game file stays on your device.</span>
+          <span class="about">• Unknown/reserved bytes are preserved exactly.</span>
+        </div>
+        <div class="about">Unofficial fan-made editor. Not affiliated with Sensible Software or Codemasters.</div>
+      </section>`;
+    document.getElementById("openFile").onclick = () => fileInput.click();
+  }
+
+  function renderTeams(){
+    const divCodes = [...new Set(state.db.teams.map(t=>t.division))].sort((a,b)=>a-b);
+    const q = state.query.trim().toLowerCase();
+    const teams = state.db.teams.filter(t =>
+      (state.filter === "all" || t.division === state.filter) &&
+      t.name.toLowerCase().includes(q)
+    );
+    const chip = (code,label) => `<button class="chip ${state.filter===code?'active':''}" data-filter="${code}">${esc(label)}</button>`;
+    main.innerHTML = `
+      ${state.message ? `<div class="notice section-gap">${esc(state.message)}</div>` : ""}
+      <div class="stack">
+        <input class="search" id="teamSearch" placeholder="Search team name…" value="${esc(state.query)}" />
+        <div class="chips">
+          ${chip("all",`All (${state.db.count})`)}
+          ${divCodes.map(d=>chip(String(d),`${divisionName(d)} (${state.db.teams.filter(t=>t.division===d).length})`)).join("")}
+        </div>
+      </div>
+      <div class="stack section-gap">
+        ${teams.map(t=>{
+          const edits=t.players.filter(p=>state.changed.has(`${t.index}:${p.index}`)).length;
+          return `<button class="team" data-team="${t.index}">
+            <span class="grow">
+              <span class="team-name">${esc(t.name || "(unnamed)")}</span>
+              <span class="meta">${esc(divisionName(t.division))} · ${esc(formationName(t.tactic))}</span>
+            </span>
+            ${edits?`<span class="badge">${edits} EDITED</span>`:""}
+          </button>`;
+        }).join("") || `<div class="empty">No teams match.</div>`}
+      </div>
+      <div class="card about section-gap">
+        <strong style="color:var(--green)">About this build</strong><br><br>
+        v0.1 edits player names only. Full player attributes, transfers, kits and team editing can be added later.
+      </div>`;
+
+    const search = document.getElementById("teamSearch");
+    search.oninput = e => { state.query=e.target.value; renderTeams(); document.getElementById("teamSearch").focus(); };
+    document.querySelectorAll("[data-filter]").forEach(b=>b.onclick=()=>{
+      const v=b.dataset.filter; state.filter=v==="all"?"all":Number(v); render();
+    });
+    document.querySelectorAll("[data-team]").forEach(b=>b.onclick=()=>{
+      state.teamIndex=Number(b.dataset.team); state.view="team"; state.message=null; render(); window.scrollTo(0,0);
+    });
+  }
+
+  function renderTeam(){
+    const team=state.db.teams[state.teamIndex];
+    const players=orderedPlayers(team);
+    main.innerHTML = `
+      <button class="btn back" id="backTeams">← All teams</button>
+      <h2>${esc(team.name || "(unnamed)")}</h2>
+      <div class="facts">
+        <div class="fact"><small>Division</small><strong>${esc(divisionName(team.division))}</strong></div>
+        <div class="fact"><small>Formation</small><strong>${esc(formationName(team.tactic))}</strong></div>
+        <div class="fact"><small>Coach</small><strong>${esc(team.coach || "—")}</strong></div>
+        <div class="fact"><small>Team record</small><strong>#${team.index+1}</strong></div>
+      </div>
+      <h3>Squad</h3>
+      <div class="stack section-gap">
+        ${players.map(p=>{
+          const pos=positionInfo(p.positionByte);
+          const edited=state.changed.has(`${team.index}:${p.index}`);
+          return `<button class="player ${edited?'edited':''}" data-player="${p.index}">
+            <span class="shirt">${p.shirt}</span>
+            <span class="player-main">
+              <span class="player-name">${esc(p.name || "(empty player)")}</span>
+              <span class="meta">${esc(pos[0])} · ${esc(pos[1])}</span>
+            </span>
+            ${edited?'<span class="badge">EDITED</span>':''}
+          </button>`;
+        }).join("")}
+      </div>`;
+    document.getElementById("backTeams").onclick=()=>{state.view="teams";state.message=null;render();window.scrollTo(0,0)};
+    document.querySelectorAll("[data-player]").forEach(b=>b.onclick=()=>{
+      state.playerIndex=Number(b.dataset.player);state.view="player";state.message=null;render();window.scrollTo(0,0)
+    });
+  }
+
+  function renderPlayer(){
+    const team=state.db.teams[state.teamIndex], p=team.players[state.playerIndex], pos=positionInfo(p.positionByte);
+    const key=`${team.index}:${p.index}`, edited=state.changed.has(key);
+    main.innerHTML = `
+      <button class="btn back" id="backTeam">← ${esc(team.name)}</button>
+      <h2>Edit player name</h2>
+      <div class="field section-gap">
+        <label>Player name — maximum 23 ASCII bytes</label>
+        <input id="nameInput" value="${esc(p.name)}" maxlength="40" autocomplete="off" spellcheck="false" />
+        <div class="counter" id="counter">${p.name.length}/23 bytes</div>
+      </div>
+      <div class="notice section-gap">Only these 23 player-name bytes will be rewritten. Every other byte in the SWOS file is left exactly as it was.</div>
+      <button class="btn btn-green big section-gap" id="saveName">Save name</button>
+      ${edited?'<div class="meta" style="text-align:center;margin-top:8px;color:var(--green)">This player has an edit waiting to be exported.</div>':''}
+      <details class="section-gap">
+        <summary>Advanced / raw data</summary>
+        <div class="about section-gap">
+          Player record offset: ${p.offset}<br>
+          Nationality byte: ${p.nationality}<br>
+          Shirt byte: ${p.shirt}<br>
+          Position/appearance byte: ${p.positionByte} → ${esc(pos[0])}<br>
+          These fields are read-only in v0.1.
+        </div>
+      </details>`;
+    const input=document.getElementById("nameInput"), save=document.getElementById("saveName"), counter=document.getElementById("counter");
+    function validateName(){
+      const v=input.value.toUpperCase();
+      if(input.value!==v) input.value=v;
+      const bad=/[^\x20-\x7E]/.test(v), too=v.length>23, same=v===p.name;
+      counter.textContent=`${v.length}/23 bytes${bad?" · plain ASCII only":""}${too?" · TOO LONG":""}`;
+      counter.style.color=(bad||too)?"var(--red)":"var(--muted)";
+      save.disabled=bad||too||same;
+    }
+    input.oninput=validateName; validateName();
+    save.onclick=()=>{
+      try{
+        const name=input.value.toUpperCase();
+        writeName(p.offset,name);
+        refreshTeam(team.index);
+        state.changed.add(key);
+        state.view="team";
+        state.message=null;
+        render();window.scrollTo(0,0);
+      }catch(e){alert(e.message)}
+    };
+    document.getElementById("backTeam").onclick=()=>{state.view="team";state.message=null;render();window.scrollTo(0,0)};
+  }
+
+  function download(bytes,name){
+    const copy=bytes.slice();
+    const blob=new Blob([copy],{type:"application/octet-stream"});
+    const url=URL.createObjectURL(blob);
+    const a=document.createElement("a");
+    a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();
+    setTimeout(()=>URL.revokeObjectURL(url),1000);
+  }
+
+  fileInput.onchange = async e => {
+    const f=e.target.files && e.target.files[0];
+    e.target.value="";
+    if(!f) return;
+    try{
+      const bytes=new Uint8Array(await f.arrayBuffer());
+      state.bytes=bytes;
+      state.original=bytes.slice();
+      state.fileName=f.name;
+      state.changed=new Set();
+      state.filter="all";state.query="";
+      parseDb();
+      state.view="teams";state.message=`Loaded ${state.db.count} teams successfully.`;
+      render();window.scrollTo(0,0);
+    }catch(err){
+      state={...state,bytes:null,original:null,db:null,view:"landing",message:err.message};
+      render();
+    }
+  };
+
+  document.getElementById("brandHome").onclick=()=>{state.view="teams";state.message=null;render();window.scrollTo(0,0)};
+  document.getElementById("exportBtn").onclick=()=>{
+    if(!state.bytes||!state.original) return;
+    try{
+      validate(state.bytes);
+      if(state.bytes.length!==state.original.length) throw new Error("Export blocked: file length changed.");
+      download(state.bytes,state.fileName);
+      state.view="teams";
+      state.message=`Exported ${state.fileName}. Put it back into SWOS GAME/DATA after keeping a backup, then fully restart SWOS / Magic DOSBox.`;
+      render();window.scrollTo(0,0);
+    }catch(e){alert(e.message)}
+  };
+  document.getElementById("backupBtn").onclick=()=>{
+    if(state.original) download(state.original,`${state.fileName}.original.bak`);
+  };
+  document.getElementById("undoBtn").onclick=()=>{
+    if(!state.original||state.changed.size===0) return;
+    if(!confirm("Undo every edit made since this file was opened?")) return;
+    state.bytes=state.original.slice();
+    state.changed=new Set();
+    parseDb();
+    state.view="teams";state.message="All edits were undone.";
+    render();window.scrollTo(0,0);
+  };
+
+  render();
+})();
+</script>
+</body>
+</html>
