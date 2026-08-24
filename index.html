@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#07111f" />
-  <title>SWOS Editor v0.4</title>
+  <title>SWOS Editor v0.5</title>
   <style>
     :root{
       --bg:#050a12;--panel:#0d1828;--panel2:#132238;--line:#263d5c;
@@ -83,7 +83,7 @@
 <body>
 <div id="app" class="app">
   <div id="topbar" class="topbar hidden">
-    <div class="brand" id="brandHome">SWOS EDITOR <span style="font-size:10px;color:var(--green)">v0.4</span></div>
+    <div class="brand" id="brandHome">SWOS EDITOR <span style="font-size:10px;color:var(--green)">v0.5</span></div>
     <div class="sub" id="fileMeta"></div>
     <div class="mode" id="modeLine"></div>
   </div>
@@ -123,6 +123,8 @@
   ];
 
   const directApiAvailable = typeof window.showOpenFilePicker === "function";
+  const saveAsApiAvailable = typeof window.showSaveFilePicker === "function";
+  const directoryApiAvailable = typeof window.showDirectoryPicker === "function";
   let state={fileName:null,bytes:null,openingOriginal:null,savedBaseline:null,fileHandle:null,direct:false,kind:null,db:null,career:null,view:"landing",teamIndex:null,playerIndex:null,careerPlayerIndex:null,filter:"all",query:"",changed:new Set(),message:null};
   const main=document.getElementById("main"),topbar=document.getElementById("topbar"),footerbar=document.getElementById("footerbar"),fileMeta=document.getElementById("fileMeta"),modeLine=document.getElementById("modeLine"),fileInput=document.getElementById("fileInput"),undoBtn=document.getElementById("undoBtn"),primarySaveBtn=document.getElementById("primarySaveBtn");
 
@@ -163,10 +165,11 @@
   function setChrome(show){topbar.classList.toggle("hidden",!show);footerbar.classList.toggle("hidden",!show);if(show){let details="";if(state.kind==="team"){const edited=state.changed.size?` · ${state.changed.size} player${state.changed.size===1?'':'s'} edited`:"";details=`${state.db.count} teams${edited}`}else{details=`Career · ${state.career.club}${state.changed.size?' · edited':''}`}fileMeta.textContent=`${state.fileName} · ${details} · ${state.bytes.length.toLocaleString()} bytes`;modeLine.innerHTML=state.direct?'<span class="modepill direct">DIRECT SAVE</span><span class="tiny">Save can overwrite the file you opened</span>':'<span class="modepill">EXPORT MODE</span><span class="tiny">Download then replace manually</span>';undoBtn.disabled=state.changed.size===0;primarySaveBtn.textContent=state.direct?"Save to SWOS":"Export file";primarySaveBtn.className=`btn ${state.direct?'btn-green':'btn-primary'}`}}
   function render(){if(state.view==="landing"){setChrome(false);renderLanding();return}setChrome(true);if(state.view==="teams")renderTeams();if(state.view==="team")renderTeam();if(state.view==="player")renderPlayer();if(state.view==="career")renderCareer();if(state.view==="careerPlayer")renderCareerPlayer()}
 
-  function renderLanding(){main.innerHTML=`<section class="hero"><div><div class="eyebrow">Retro football data tool · v0.4</div><h1>SWOS Editor</h1><p style="color:var(--muted)">Edit real DOS Sensible World of Soccer <strong style="color:var(--text)">TEAM.*</strong> databases and <strong style="color:var(--text)">.CAR</strong> career saves on your phone.</p></div>
+  function renderLanding(){main.innerHTML=`<section class="hero"><div><div class="eyebrow">Retro football data tool · v0.5</div><h1>SWOS Editor</h1><p style="color:var(--muted)">Edit real DOS Sensible World of Soccer <strong style="color:var(--text)">TEAM.*</strong> databases and <strong style="color:var(--text)">.CAR</strong> career saves on your phone.</p></div>
     ${directApiAvailable?`<div class="card stack"><div><strong style="color:var(--green)">Fastest option</strong><div class="about" style="margin-top:5px">Open the actual SWOS file from its folder. After editing, “Save to SWOS” writes back over that same file — no moving files.</div></div><button class="btn btn-green big" id="openDirect">Open SWOS file — direct save</button><div class="tiny">Use a TEAM.* file from <code>GAME/DATA</code>, or a .CAR career save from the main <code>GAME</code> folder. Chrome asks permission before writing.</div></div>`:`<div class="notice info">Your current browser has not exposed direct file-write access to this page. Export mode still works.</div>`}
     <button class="btn btn-primary big" id="openExport">Open SWOS file — export mode</button>${state.message?`<div class="notice error">${esc(state.message)}</div>`:""}
-    <div class="card stack"><strong>New in v0.4 — Career Squad Editor</strong><span class="about">• Reads the active squad directly from a .CAR save.</span><span class="about">• Separates Starting XI, five substitutes and reserves using the career's real squad-order table.</span><span class="about">• Tap a career player to edit name, nationality, shirt number, position, appearance, abilities and value.</span><span class="about">• Changes apply to that career only — the master TEAM database is untouched.</span><span class="about">• Bank-balance editing remains available and verified.</span></div>
+    <div class="card stack"><strong>New in v0.5 — Career Rename</strong><span class="about">• Rename / Save As a .CAR career directly from the Career screen.</span><span class="about">• Uses a DOS-safe 1–8 character filename and adds .CAR automatically.</span><span class="about">• The original career is deliberately kept as a safety copy.</span><span class="about">• After a successful direct rename, the newly named career becomes the active file for future saves.</span></div>
+    <div class="card stack"><strong>Career Squad Editor</strong><span class="about">Edit the active Starting XI, substitutes and reserves stored inside the career, plus the verified bank balance.</span></div>
     <div class="card stack"><strong>Database Editor</strong><span class="about">Player name, nationality, shirt number, position, appearance, seven abilities and market value remain available for TEAM.* files.</span></div>
     <div class="about">Career squad editing uses the active player-order table and the 38-byte player records found in your verified DOS career save. Unused/deleted player slots are not shown.</div><div class="about">Unofficial fan-made editor. Not affiliated with Sensible Software or Codemasters.</div></section>`;
     if(directApiAvailable)document.getElementById("openDirect").onclick=openDirect;document.getElementById("openExport").onclick=()=>fileInput.click()}
@@ -185,9 +188,47 @@
   function renderTeam(){const team=state.db.teams[state.teamIndex],players=orderedPlayers(team);main.innerHTML=`<button class="btn back" id="backTeams">← All teams</button><h2>${esc(team.name||"(unnamed)")}</h2><div class="facts"><div class="fact"><small>Division</small><strong>${esc(divisionName(team.division))}</strong></div><div class="fact"><small>Formation</small><strong>${esc(formationName(team.tactic))}</strong></div><div class="fact"><small>Coach</small><strong>${esc(team.coach||"—")}</strong></div><div class="fact"><small>Team record</small><strong>#${team.index+1}</strong></div></div><h3>Squad</h3><div class="stack section-gap">${players.map(p=>{const pos=positionInfo(p.multi),edited=state.changed.has(`${team.index}:${p.index}`);return`<button class="player ${edited?'edited':''}" data-player="${p.index}"><span class="shirt">${p.shirt}</span><span class="player-main"><span class="player-name">${esc(p.name||"(empty player)")}</span><span class="meta">${esc(pos[0])} · ${esc(nationalityName(p.nationality))} · ${values[p.value]||hex(p.value)}</span></span>${edited?'<span class="badge">EDITED</span>':''}</button>`}).join("")}</div>`;document.getElementById("backTeams").onclick=()=>{state.view="teams";state.message=null;render();window.scrollTo(0,0)};document.querySelectorAll("[data-player]").forEach(b=>b.onclick=()=>{state.playerIndex=Number(b.dataset.player);state.view="player";state.message=null;render();window.scrollTo(0,0)})}
 
   function money(v){const sign=v<0?"-":"";return `${sign}£${Math.abs(v).toLocaleString("en-GB")}`}
+  function careerBaseName(name){return String(name||"CAREER").replace(/\.car$/i,"").toUpperCase().slice(0,8)}
+  function cleanCareerBaseName(value){return String(value||"").toUpperCase().replace(/[^A-Z0-9_-]/g,"").slice(0,8)}
+  function validCareerBaseName(value){return /^[A-Z0-9_-]{1,8}$/.test(value)}
+  async function writeAndVerifyHandle(handle,bytes){
+    if(handle.requestPermission){const perm=await handle.requestPermission({mode:"readwrite"});if(perm!=="granted")throw new Error("Write permission was not granted.")}
+    const writable=await handle.createWritable();await writable.write(bytes);await writable.close();
+    const f=await handle.getFile(),check=new Uint8Array(await f.arrayBuffer());if(!byteEqual(check,bytes))throw new Error("The renamed career was written, but verification did not match. Keep your original career and do not use the new file.");
+    return f;
+  }
+  async function renameCareerFile(requestedBase){
+    if(state.kind!=="career"||!state.bytes)return;
+    const base=cleanCareerBaseName(requestedBase),newName=`${base}.CAR`,oldName=state.fileName;
+    if(!validCareerBaseName(base))return alert("Use 1–8 letters, numbers, hyphens or underscores for the career filename.");
+    if(newName.toUpperCase()===String(oldName||"").toUpperCase())return alert("Choose a different career filename.");
+    try{
+      validateCareer(state.bytes);if(state.bytes.length!==state.openingOriginal.length)throw new Error("Rename blocked: file length changed.");
+      let newHandle=null;
+      if(saveAsApiAvailable){
+        const opts={id:"swos-career-rename",suggestedName:newName,types:[{description:"SWOS career save",accept:{"application/octet-stream":[".car"]}}]};
+        if(state.fileHandle)opts.startIn=state.fileHandle;
+        newHandle=await window.showSaveFilePicker(opts);
+      }else if(directoryApiAvailable){
+        const dir=await window.showDirectoryPicker({id:"swos-career-folder",mode:"readwrite"});
+        let exists=false;try{await dir.getFileHandle(newName);exists=true}catch(e){if(e.name!=="NotFoundError")throw e}
+        if(exists&&!confirm(`${newName} already exists in that folder. Overwrite it?`))return;
+        newHandle=await dir.getFileHandle(newName,{create:true});
+      }else{
+        download(state.bytes,newName);state.message=`Created ${newName} as a download. Your browser did not offer direct Save As access, so move it into the SWOS GAME folder manually. ${oldName} was not changed.`;render();window.scrollTo(0,0);return;
+      }
+      if(!/\.car$/i.test(newHandle.name))throw new Error("The new filename must end in .CAR.");
+      const chosenBase=newHandle.name.replace(/\.car$/i,"").toUpperCase();if(!validCareerBaseName(chosenBase))throw new Error("SWOS career filenames should use 1–8 letters, numbers, hyphens or underscores before .CAR.");
+      if(state.fileHandle&&state.fileHandle.isSameEntry&&await state.fileHandle.isSameEntry(newHandle))throw new Error("That is the same file you already opened. Choose a different filename.");
+      const written=await writeAndVerifyHandle(newHandle,state.bytes);
+      persistSafetyBackup();state.fileHandle=newHandle;state.fileName=written.name;state.direct=true;state.savedBaseline=state.bytes.slice();state.changed=new Set();parseCareer();
+      state.message=`Career renamed safely: ${oldName} → ${state.fileName}. The old file was kept as a backup. ${state.fileName} is now the active career for future direct saves.`;render();window.scrollTo(0,0);
+    }catch(e){if(e&&e.name==="AbortError")return;alert(`Career rename failed: ${e.message}\n\nYour original career has not been removed.`)}
+  }
   function careerPlayerRow(p,role){const pos=positionInfo(p.multi),edited=state.changed.has(`career:player:${p.index}`);return`<button class="player ${edited?'edited':''}" data-career-player="${p.index}"><span class="shirt">${p.shirt}</span><span class="player-main"><span class="player-name">${esc(p.name||"(empty player)")}</span><span class="meta">${esc(role)} · ${esc(pos[0])} · ${esc(nationalityName(p.nationality))} · ${values[p.value]||hex(p.value)}</span></span>${edited?'<span class="badge">EDITED</span>':''}</button>`}
   function renderCareer(){const c=state.career,starters=c.squad.slice(0,11),subs=c.squad.slice(11,16),reserves=c.squad.slice(16);main.innerHTML=`${state.message?`<div class="notice section-gap">${esc(state.message)}</div>`:""}<h2>${esc(c.club)}</h2><div class="facts"><div class="fact"><small>Manager</small><strong>${esc(c.manager)}</strong></div><div class="fact"><small>Active squad</small><strong>${c.squad.length} players</strong></div><div class="fact"><small>Current bank</small><strong>${esc(money(c.currentBalance))}</strong></div><div class="fact"><small>Previous season</small><strong>${esc(money(c.previousBalance))}</strong></div></div>
     <div class="card stack"><h3>Bank balance · verified</h3><div class="field"><label>Current balance (£)</label><input id="balanceInput" type="number" step="1" min="-2147483648" max="2147483647" value="${c.currentBalance}"/><div class="counter">Stored as a signed 32-bit value at verified career offset <code>0xD5DC</code>.</div></div><button class="btn btn-green big" id="saveBalance">Apply balance change</button></div>
+    <div class="card stack section-gap"><h3>Rename career file</h3><div class="field"><label>New filename — 1–8 DOS-safe characters</label><div class="row"><input id="careerRenameInput" maxlength="8" value="${esc(careerBaseName(state.fileName))}" autocomplete="off" spellcheck="false"/><strong style="white-space:nowrap">.CAR</strong></div><div class="counter" id="careerRenameCounter">Original ${esc(state.fileName)} will be kept as a safety copy.</div></div><button class="btn btn-blue big" id="renameCareerBtn">Rename Career</button><div class="tiny">Career files only. TEAM.* filenames are never changed. On supported browsers this creates the new .CAR in the folder you choose and switches the editor to that new file.</div></div>
     <div class="section-gap"><h3>My career squad</h3><div class="notice info section-gap">These are the players stored inside this career. Editing them changes this save only — it does not alter the master TEAM database.</div>
       <div class="section-gap"><h3 style="color:var(--yellow)">Starting XI · ${starters.length}</h3><div class="stack section-gap">${starters.map(p=>careerPlayerRow(p,"Starting XI")).join("")||'<div class="empty">No starting players found.</div>'}</div></div>
       <div class="section-gap"><h3 style="color:var(--yellow)">Substitutes · ${subs.length}</h3><div class="stack section-gap">${subs.map(p=>careerPlayerRow(p,"Substitute")).join("")||'<div class="empty">No substitutes found.</div>'}</div></div>
@@ -195,8 +236,9 @@
     </div>
     <div class="card stack section-gap"><h3>Finance information · read only</h3><div class="facts" style="margin:0"><div class="fact"><small>Previous balance</small><strong>${esc(money(c.previousBalance))}</strong></div><div class="fact"><small>Competition + TV</small><strong>${esc(money(c.competitionBonus))}</strong></div><div class="fact"><small>Sponsorship</small><strong>${esc(money(c.sponsorship))}</strong></div><div class="fact"><small>Current balance</small><strong>${esc(money(c.currentBalance))}</strong></div></div></div>
     ${state.direct?`<div class="card section-gap"><h3>Direct-save mode</h3><p class="about">After applying money or player changes, press <strong style="color:var(--text)">Save to SWOS</strong> below. The app overwrites this same .CAR file and verifies the write byte-for-byte.</p><button class="btn btn-blue" id="exportCopy">Export a copy instead</button></div>`:""}
-    <details class="section-gap"><summary>Career squad format & safety</summary><div class="about section-gap">Active squad order begins at <code>0xDB60</code>.<br>Career player records begin at <code>0xDBCC</code> and use the same 38-byte player structure as the TEAM database.<br>The first 11 ordered players are the Starting XI, the next 5 are substitutes, and remaining ordered players are reserves.<br><br>Unused/deleted record slots are deliberately hidden rather than edited.</div></details>`;
+    <details class="section-gap"><summary>Career squad format & safety</summary><div class="about section-gap">Active squad order begins at <code>0xDB60</code>.<br>Career player records begin at <code>0xDBCC</code> and use the same 38-byte player structure as the TEAM database.<br>The first 11 ordered players are the Starting XI, the next 5 are substitutes, and remaining ordered players are reserves.<br><br>Unused/deleted record slots are deliberately hidden rather than edited.<br><br>Rename Career never deletes the old .CAR automatically. This is intentional so a known-good copy survives if SWOS dislikes a renamed save.</div></details>`;
     const input=document.getElementById("balanceInput"),btn=document.getElementById("saveBalance");function valid(){const n=Number(input.value);const ok=Number.isInteger(n)&&n>=-2147483648&&n<=2147483647;btn.disabled=!ok}input.oninput=valid;valid();btn.onclick=()=>{const n=Number(input.value);if(!Number.isInteger(n)||n<-2147483648||n>2147483647)return;setI32(C.currentBalance,n);parseCareer();state.changed.add("career:balance");state.message=`Bank balance changed in memory to ${money(n)}. Press ${state.direct?"Save to SWOS":"Export file"} to write it.`;render();window.scrollTo(0,0)};
+    const renameInput=document.getElementById("careerRenameInput"),renameBtn=document.getElementById("renameCareerBtn"),renameCounter=document.getElementById("careerRenameCounter");function renameValid(){const cleaned=cleanCareerBaseName(renameInput.value);if(renameInput.value!==cleaned)renameInput.value=cleaned;const ok=validCareerBaseName(cleaned),same=`${cleaned}.CAR`.toUpperCase()===String(state.fileName||"").toUpperCase();renameBtn.disabled=!ok||same;renameCounter.textContent=!ok?"Use 1–8 letters, numbers, hyphens or underscores.":same?"Enter a different filename.":`Will create ${cleaned}.CAR and keep ${state.fileName} as a backup.`;renameCounter.style.color=!ok?'var(--red)':'var(--muted)'}renameInput.oninput=renameValid;renameValid();renameBtn.onclick=()=>renameCareerFile(renameInput.value);
     document.querySelectorAll("[data-career-player]").forEach(b=>b.onclick=()=>{state.careerPlayerIndex=Number(b.dataset.careerPlayer);state.view="careerPlayer";state.message=null;render();window.scrollTo(0,0)});if(state.direct)document.getElementById("exportCopy").onclick=exportCopy}
 
   function nationalityOptions(selected){return nationalityNames.map((name,i)=>`<option value="${i}" ${i===selected?'selected':''}>${name} (${hex(i)})</option>`).join("")}
