@@ -1,0 +1,1010 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#07111f" />
+  <title>SWOS Studio v1.8</title>
+  <style>
+    :root{
+      --bg:#050a12;--panel:#0d1828;--panel2:#132238;--line:#263d5c;
+      --text:#f5f7fb;--muted:#9db0c8;--yellow:#f5d547;--green:#42d184;
+      --red:#ff6b6b;--blue:#58a6ff;--shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;background:
+      radial-gradient(circle at 50% -20%,#153660 0,transparent 45%),
+      linear-gradient(#07111f,#050a12 55%);color:var(--text);
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    button,input,select{font:inherit}
+    button{cursor:pointer}
+    .app{min-height:100vh;padding-bottom:94px}
+    .topbar{position:sticky;top:0;z-index:20;background:rgba(7,17,31,.94);
+      backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:14px 16px}
+    .brand{font-weight:900;letter-spacing:.08em;color:var(--yellow);font-size:18px}
+    .sub{color:var(--muted);font-size:12px;margin-top:4px;line-height:1.35}
+    main{max-width:760px;margin:0 auto;padding:16px}
+    .hero{min-height:80vh;display:flex;flex-direction:column;justify-content:center;gap:18px}
+    .eyebrow{font-size:11px;font-weight:900;color:var(--green);letter-spacing:.14em;text-transform:uppercase}
+    h1,h2,h3{margin:0} h1{font-size:36px;letter-spacing:.03em} h2{font-size:24px}
+    h3{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+    p{line-height:1.5}
+    .card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);
+      border-radius:14px;padding:15px;box-shadow:var(--shadow)}
+    .btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);min-height:48px;
+      border-radius:11px;padding:11px 14px;font-weight:800}
+    .btn:active{transform:translateY(1px)} .btn-primary{background:var(--yellow);color:#14190a;border-color:#fff3a4}
+    .btn-green{background:var(--green);color:#052012;border-color:#8effbc}
+    .btn-blue{background:#173b63;color:#dbeeff;border-color:#33689e}
+    .btn-danger{border-color:#6e3138;background:#2a151a;color:#ffbec4}
+    .btn:disabled{opacity:.45;cursor:not-allowed}
+    .big{min-height:62px;font-size:17px;width:100%}
+    .row{display:flex;gap:9px;align-items:center}.grow{flex:1}.stack{display:grid;gap:10px}
+    .search,.field input,.field select{width:100%;height:50px;border-radius:11px;border:1px solid var(--line);
+      background:#07111f;color:var(--text);padding:0 14px;outline:none}
+    .search:focus,.field input:focus,.field select:focus{border-color:var(--yellow)}
+    .chips{display:flex;gap:8px;overflow-x:auto;padding:2px 0 5px;scrollbar-width:none}
+    .chip{white-space:nowrap;border:1px solid var(--line);background:var(--panel);color:var(--muted);
+      border-radius:999px;padding:9px 13px;font-size:12px;font-weight:800}
+    .chip.active{background:var(--yellow);color:#111;border-color:#fff0a0}
+    .team{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;text-align:left;
+      background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:12px;padding:14px}
+    .team-name{font-weight:900;font-size:16px}.meta{font-size:12px;color:var(--muted);margin-top:3px}
+    .badge{background:var(--green);color:#041c0f;padding:5px 8px;border-radius:8px;font-size:10px;font-weight:900}
+    .badge-blue{background:#2a5d91;color:#e3f2ff}.facts{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:12px 0 18px}
+    .fact{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:11px}
+    .fact small{display:block;color:var(--muted);text-transform:uppercase;font-size:9px;letter-spacing:.08em}
+    .fact strong{display:block;margin-top:4px;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .player{width:100%;display:flex;align-items:center;gap:11px;text-align:left;background:var(--panel);color:var(--text);
+      border:1px solid var(--line);border-radius:12px;padding:10px}.player.edited{border-color:var(--green)}
+    .shirt{width:42px;height:42px;display:grid;place-items:center;background:#172a45;border:1px solid #365477;border-radius:9px;font-weight:900}
+    .player-main{min-width:0;flex:1}.player-name{font-size:15px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .notice{border:1px solid rgba(66,209,132,.55);background:rgba(66,209,132,.08);border-radius:11px;padding:12px;font-size:13px;line-height:1.45}
+    .error{border-color:#7b343b;background:#2b1519;color:#ffd0d4}.info{border-color:#345f86;background:#10243b}
+    .field label{font-size:11px;text-transform:uppercase;color:var(--muted);font-weight:800;display:block;margin-bottom:7px}
+    .counter{font-size:11px;color:var(--muted);margin-top:5px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .skills{display:grid;gap:10px}.skill{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:11px}
+    .skill-head{display:flex;justify-content:space-between;gap:10px;align-items:center}.skill strong{font-size:13px}
+    .skill-value{font-weight:900;color:var(--yellow);min-width:34px;text-align:right}
+    input[type=range]{width:100%;accent-color:var(--yellow);margin-top:8px}
+    .tiny{font-size:10px;color:var(--muted);line-height:1.4}
+    .footerbar{position:fixed;left:0;right:0;bottom:0;z-index:25;border-top:1px solid var(--line);
+      background:rgba(7,17,31,.96);backdrop-filter:blur(10px);padding:9px 10px calc(9px + env(safe-area-inset-bottom))}
+    .footerbar .inner{max-width:760px;margin:0 auto;display:flex;gap:8px}.footerbar .btn{flex:1;min-width:0;padding-left:8px;padding-right:8px;font-size:12px}
+    .hidden{display:none!important} details{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:12px}
+    summary{cursor:pointer;color:var(--muted);font-size:12px;font-weight:800} code{color:#d9e9ff}.about{font-size:12px;color:var(--muted)}
+    .section-gap{margin-top:18px}.back{margin-bottom:14px}.empty{text-align:center;color:var(--muted);padding:26px}
+    .kit-preview{display:grid;place-items:center;gap:5px;min-height:150px;background:#07111f;border:1px solid var(--line);border-radius:12px;padding:12px}
+    .kit-shirt{width:92px;height:68px;border-radius:16px 16px 10px 10px;border:2px solid rgba(255,255,255,.16);clip-path:polygon(17% 0,34% 9%,66% 9%,83% 0,100% 19%,85% 36%,78% 27%,78% 100%,22% 100%,22% 27%,15% 36%,0 19%)}
+    .kit-shorts{width:57px;height:32px;border:2px solid rgba(255,255,255,.16);clip-path:polygon(0 0,100% 0,91% 100%,55% 100%,50% 72%,45% 100%,9% 100%)}
+    .kit-socks{display:flex;gap:10px}.kit-sock{width:18px;height:35px;border:2px solid rgba(255,255,255,.16);border-radius:2px 2px 7px 7px}
+    .order-row{display:flex;align-items:center;gap:9px;background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:9px}
+    .order-no{width:35px;height:35px;display:grid;place-items:center;border-radius:8px;background:#172a45;font-weight:900}
+    .role-badge{font-size:9px;font-weight:900;border-radius:999px;padding:4px 7px;background:#213a59;color:#dbeaff;white-space:nowrap}
+    .move-buttons{display:flex;gap:5px}.move-buttons .btn{min-height:36px;padding:5px 9px}
+    .split-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+    .source-card{border:1px solid #31527a;background:#0b1b31;border-radius:12px;padding:12px}
+    .good{color:var(--green)}.warn{color:var(--yellow)}.bad{color:var(--red)}
+    .source-player{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:11px;padding:10px}
+
+    .mode{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-top:6px}.modepill{font-size:10px;font-weight:900;border-radius:999px;padding:5px 8px;background:#1d334e;color:#cfe4ff;border:1px solid #355778}
+    .modepill.direct{background:#103823;color:#a8f0c4;border-color:#286c46}.actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+    @media(max-width:420px){.grid2{grid-template-columns:1fr}.facts{grid-template-columns:1fr 1fr}.footerbar .btn{font-size:11px}}
+    @media(min-width:700px){main{padding:24px}.topbar{padding-left:24px;padding-right:24px}}
+  
+    .studio-hero h1{font-size:clamp(34px,8vw,56px);margin-bottom:8px}
+    .studio-lead{font-size:17px;line-height:1.55;color:var(--muted);max-width:720px}
+    .simple-pill{display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border:1px solid rgba(83,210,124,.35);border-radius:999px;background:rgba(83,210,124,.08);color:var(--green);font-weight:800;font-size:12px}
+    .studio-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+    .studio-tile{appearance:none;text-align:left;border:1px solid var(--line);border-radius:18px;padding:18px 15px;background:linear-gradient(180deg,rgba(28,47,73,.96),rgba(18,32,51,.96));color:var(--text);min-height:142px;box-shadow:0 10px 30px rgba(0,0,0,.16)}
+    .studio-tile:active{transform:translateY(1px)}
+    .studio-tile .ico{font-size:30px;display:block;margin-bottom:10px}
+    .studio-tile strong{display:block;font-size:16px;margin-bottom:6px}
+    .studio-tile span:last-child{display:block;color:var(--muted);font-size:12px;line-height:1.35}
+    .studio-tile.play{grid-column:1/-1;background:linear-gradient(135deg,rgba(24,143,84,.94),rgba(11,98,76,.94));border-color:rgba(112,240,160,.45);min-height:104px}
+    .studio-tile.play strong{font-size:21px}
+    .studio-trust{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+    .studio-trust div{border:1px solid var(--line);border-radius:13px;padding:10px;background:rgba(255,255,255,.025);text-align:center}
+    .studio-trust strong{display:block;font-size:12px}
+    .studio-trust span{font-size:10px;color:var(--muted)}
+    .simple-section-title{font-size:13px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin:22px 0 10px}
+    .simple-option{width:100%;display:flex;align-items:center;gap:13px;text-align:left;padding:15px;border:1px solid var(--line);border-radius:15px;background:var(--panel);color:var(--text)}
+    .simple-option .ico{font-size:24px;width:34px;text-align:center}
+    .simple-option .grow strong{display:block}
+    .simple-option .grow span{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+    .toggle-status{display:inline-flex;padding:5px 9px;border-radius:999px;font-size:11px;font-weight:900}
+    .toggle-status.on{background:rgba(83,210,124,.14);color:var(--green);border:1px solid rgba(83,210,124,.35)}
+    .toggle-status.off{background:rgba(255,190,66,.10);color:var(--yellow);border:1px solid rgba(255,190,66,.28)}
+    .money-presets{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+    .friendly-card{border:1px solid var(--line);background:var(--panel);border-radius:18px;padding:17px}
+    .friendly-card h3{margin-top:0}
+    .advanced-link{width:100%;margin-top:18px;background:transparent;border:1px dashed var(--line);color:var(--muted);border-radius:14px;padding:12px;font-weight:800}
+    @media(min-width:720px){.studio-grid{grid-template-columns:repeat(3,1fr)}.studio-tile.play{grid-column:1/-1}}
+
+  
+    .setup-banner{border:1px solid var(--line);border-radius:18px;padding:15px;background:rgba(255,255,255,.025);margin-top:15px}
+    .setup-banner.ready{border-color:rgba(83,210,124,.35);background:rgba(83,210,124,.06)}
+    .setup-banner.warn{border-color:rgba(255,190,66,.30);background:rgba(255,190,66,.05)}
+    .setup-head{display:flex;align-items:center;gap:11px}
+    .setup-dot{width:12px;height:12px;border-radius:999px;background:var(--yellow);box-shadow:0 0 0 4px rgba(255,190,66,.08)}
+    .setup-banner.ready .setup-dot{background:var(--green);box-shadow:0 0 0 4px rgba(83,210,124,.08)}
+    .setup-head .grow strong{display:block}
+    .setup-head .grow span{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+    .library-card{width:100%;display:flex;align-items:center;gap:13px;text-align:left;padding:15px;border:1px solid var(--line);border-radius:16px;background:var(--panel);color:var(--text)}
+    .library-card .ico{font-size:24px;width:36px;text-align:center}
+    .library-card .grow{min-width:0}
+    .library-card .grow strong{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .library-card .grow span{display:block;color:var(--muted);font-size:12px;margin-top:4px;line-height:1.35}
+    .setup-checks{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}
+    .setup-check{border:1px solid var(--line);border-radius:12px;padding:10px;background:rgba(255,255,255,.02)}
+    .setup-check strong{display:block;font-size:12px}
+    .setup-check span{display:block;color:var(--muted);font-size:10px;margin-top:3px}
+    .setup-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:12px}
+
+  
+    .backup-hero{border:1px solid rgba(83,210,124,.32);background:linear-gradient(135deg,rgba(83,210,124,.08),rgba(255,255,255,.02));border-radius:18px;padding:16px}
+    .backup-hero.unprotected{border-color:rgba(255,190,66,.30);background:linear-gradient(135deg,rgba(255,190,66,.06),rgba(255,255,255,.02))}
+    .backup-stat{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}
+    .backup-stat>div{border:1px solid var(--line);border-radius:12px;padding:10px;background:rgba(255,255,255,.025)}
+    .backup-stat strong{display:block;font-size:13px}
+    .backup-stat span{display:block;color:var(--muted);font-size:10px;margin-top:3px}
+    .restore-item{border:1px solid var(--line);border-radius:15px;padding:13px;background:var(--panel)}
+    .restore-item .title{font-weight:800}
+    .restore-item .meta{color:var(--muted);font-size:11px;margin-top:4px}
+    .restore-item .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:11px}
+    .progress-wrap{border:1px solid var(--line);border-radius:14px;padding:13px;background:rgba(255,255,255,.025)}
+    .progress-line{height:8px;border-radius:999px;background:rgba(255,255,255,.07);overflow:hidden;margin-top:9px}
+    .progress-line span{display:block;height:100%;background:var(--green);transition:width .2s ease}
+    .danger-note{border:1px solid rgba(255,92,92,.32);border-radius:14px;padding:12px;background:rgba(255,92,92,.06)}
+
+  
+    .time-card{border:1px solid var(--line);border-radius:17px;padding:15px;background:var(--panel)}
+    .time-card .when{font-size:14px;font-weight:900}
+    .time-card .what{font-size:18px;font-weight:900;margin-top:3px}
+    .time-card .note{font-size:11px;color:var(--muted);margin-top:5px}
+    .time-actions{display:grid;grid-template-columns:1fr auto;gap:9px;margin-top:13px}
+    .time-actions .go{min-height:50px}
+    .safety-details{margin-top:12px;border:1px dashed var(--line);border-radius:14px;padding:11px;color:var(--muted)}
+    .safety-details summary{cursor:pointer;font-weight:800;color:var(--muted)}
+
+  
+    .play-hero{border:1px solid rgba(83,210,124,.36);border-radius:20px;padding:18px;background:linear-gradient(135deg,rgba(30,150,90,.12),rgba(255,255,255,.02))}
+    .play-button{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;min-height:76px;border-radius:18px;background:var(--green);color:#07150d;text-decoration:none;font-size:23px;font-weight:1000;border:1px solid rgba(255,255,255,.22);box-shadow:0 14px 30px rgba(0,0,0,.18)}
+    .play-button:active{transform:translateY(1px)}
+    .profile-card{border:1px solid var(--line);border-radius:16px;padding:14px;background:var(--panel)}
+    .profile-card strong{display:block}
+    .profile-card span{display:block;color:var(--muted);font-size:12px;margin-top:4px}
+    .profile-list{display:grid;gap:9px}
+    .profile-choice{width:100%;display:flex;gap:11px;align-items:center;text-align:left;border:1px solid var(--line);border-radius:14px;padding:13px;background:var(--panel);color:var(--text)}
+    .profile-choice .grow{min-width:0}
+    .profile-choice strong{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .profile-choice span{display:block;color:var(--muted);font-size:11px;margin-top:3px}
+    .launch-status{display:inline-flex;align-items:center;gap:7px;padding:6px 10px;border-radius:999px;border:1px solid rgba(83,210,124,.32);background:rgba(83,210,124,.07);font-weight:900;font-size:11px;color:var(--green)}
+
+  </style>
+</head>
+<body>
+<div id="app" class="app">
+  <div id="topbar" class="topbar hidden">
+    <div class="brand" id="brandHome">SWOS STUDIO <span style="font-size:10px;color:var(--green)">v1.8</span></div>
+    <div class="sub" id="fileMeta"></div>
+    <div class="mode" id="modeLine"></div>
+  </div>
+  <main id="main"></main>
+  <div id="footerbar" class="footerbar hidden"><div class="inner">
+    <button class="btn btn-primary" id="primarySaveBtn">Export file</button>
+    <button class="btn" id="backupBtn">Backup</button>
+    <button class="btn" id="undoBtn">Undo edits</button>
+  </div></div>
+</div>
+<input id="fileInput" type="file" class="hidden" />
+<script>
+(() => {
+  "use strict";
+  const TEAM_RECORD_SIZE=684, PLAYER_RECORD_SIZE=38, PLAYERS_PER_TEAM=16, HEADER_SIZE=2, POOL_RECORD_SIZE=58, POOL_COUNT=900, POOL_FILE_SIZE=52200;
+  const CAREER_FILE_SIZE=149189;
+  const EXE_ENDLESS_ORIGINAL=Uint8Array.from([0x66,0x83,0x3D,0x50,0x6B,0x01,0x00,0x13]);
+  const EXE_ENDLESS_PATCHED=Uint8Array.from([0x66,0x83,0x3D,0x50,0x6B,0x01,0x00,0xFE]);
+  const EXE_ENDLESS_MATCHES=8;
+  const C={club:7,clubLength:16,manager:38,managerLength:24,careerSeasonCounter:0xD5C4,currentBalance:0xD5DC,previousBalance:0xD5E0,competitionBonus:0xD600,sponsorship:0xD5F8,transferCounter:0xD880,playerCount:0xE08C,squadOrder:0xDB60,currentTeam:0xDB80,careerPlayers:0xDBCC,careerPlayerSlots:32};
+  const T={name:5,nameLength:19,tactic:24,division:25,homeKit:26,awayKit:31,coach:36,coachLength:24,order:60,players:76};
+  const P={nationality:0,shirt:2,name:3,nameLength:23,multi:26,unknown27:27,passing:28,shootHead:29,tackleControl:30,speedFinish:31,value:32};
+  const divisions=["Premier","First","Second","Third","Non-League"];
+  const formations=["4-4-2","5-4-1","4-5-1","5-3-2","3-5-2","4-3-3","4-2-4","3-4-3","Sweeper","5-2-3","Attack","Defend","User A","User B","User C","User D","User E","User F"];
+  const positions=[["Goalkeeper","GK"],["Right Back","RB"],["Left Back","LB"],["Defender","D"],["Right Wing","RW"],["Left Wing","LW"],["Midfielder","M"],["Attacker","A"]];
+  const appearances=["White skin / black hair","White skin / blonde hair","Black skin / black hair","Undefined / custom"];
+  const kitStyles=["Plain","Colored sleeves","Vertical stripes","Horizontal stripes"];
+  const kitColors=[
+    {name:"Grey",css:"#b4b4b4"},{name:"White",css:"#ffffff"},{name:"Black",css:"#000000"},
+    {name:"Orange",css:"#fc6c00"},{name:"Red",css:"#fc0000"},{name:"Blue",css:"#0000fc"},
+    {name:"Brown",css:"#6c0024"},{name:"Light blue",css:"#9090fc"},{name:"Green",css:"#249000"},
+    {name:"Yellow",css:"#fcfc00"}
+  ];
+  const skillNames=["Passing","Shooting","Heading","Tackling","Control","Speed","Finishing"];
+  const values=["< £25k","£25k","£30k","£40k","£50k","£65k","£75k","£85k","£100k","£110k","£130k","£150k","£160k","£180k","£200k","£250k","£300k","£350k","£450k","£500k","£550k","£600k","£650k","£700k","£750k","£800k","£850k","£950k","£1m","£1.1m","£1.3m","£1.5m","£1.6m","£1.8m","£1.9m","£2m","£2.25m","£2.75m","£3m","£3.5m","£4.5m","£5m","£6m","£7m","£8m","£9m","£10m","£12m","£15m","> £15m"];
+  const nationalityNames=[
+    "Albania","Austria","Belgium","Bulgaria","Croatia","Cyprus","Czech Republic","Denmark","England","Estonia","Faroe Islands","Finland","France","Germany","Greece","Hungary",
+    "Iceland","Israel","Italy","Latvia","Lithuania","Luxembourg","Malta","Holland","Northern Ireland","Norway","Poland","Portugal","Romania","Russia","San Marino","Scotland",
+    "Slovenia","Sweden","Turkey","Ukraine","Wales","Serbia/Montenegro","Belarus","Slovakia","Spain","Armenia","Bosnia Herzegovina","Azerbaijan","Georgia","Switzerland","Republic of Ireland","FYR Macedonia",
+    "Turkmenistan","Liechtenstein","Moldova","Costa Rica","El Salvador","Guatemala","Honduras","Bahamas","Mexico","Panama","U.S.A.","Bahrain","Nicaragua","Bermuda","Jamaica","Trinidad & Tobago",
+    "Canada","Barbados","El Salvador (national)","St Vincent & Grenadines","Argentina","Bolivia","Brazil","Chile","Colombia","Ecuador","Paraguay","Suriname","Uruguay","Venezuela","Guyana","Peru",
+    "Algeria","South Africa","Botswana","Burkina Faso","Burundi","Lesotho","DR Congo (Zaire)","Zambia","Ghana","Senegal","Ivory Coast","Tunisia","Mali","Madagascar","Cameroon","Chad",
+    "Uganda","Liberia","Mozambique","Kenya","Sudan","Swaziland","Angola","Togo","Zimbabwe","Egypt","Tanzania","Nigeria","Ethiopia","Gabon","Sierra Leone","Benin",
+    "Congo","Guinea","Sri Lanka (legacy)","Morocco","Gambia","Malawi","Japan","Taiwan","India","Bangladesh","Brunei","Iraq","Jordan","Sri Lanka","Syria","South Korea",
+    "Iran","Vietnam","Malaysia","Saudi Arabia","Yemen","Kuwait","Laos","North Korea","Oman","Pakistan","Philippines","China","Singapore","Mauritius","Myanmar","Papua New Guinea",
+    "Thailand","Uzbekistan","Qatar","United Arab Emirates","Australia","New Zealand","Fiji","Solomon Islands","Custom"
+  ];
+
+  const directApiAvailable = typeof window.showOpenFilePicker === "function";
+  const saveAsApiAvailable = typeof window.showSaveFilePicker === "function";
+  const directoryApiAvailable = typeof window.showDirectoryPicker === "function";
+  let state={fileName:null,bytes:null,openingOriginal:null,savedBaseline:null,fileHandle:null,direct:false,kind:null,db:null,career:null,pool:null,poolSource:null,exe:null,simplePurpose:null,libraryItems:[],magicProfiles:[],magicQuery:"",view:"landing",teamIndex:null,playerIndex:null,careerPlayerIndex:null,poolIndex:null,sourceTeamIndex:null,sourcePlayerIndex:null,filter:"all",query:"",playerQuery:"",poolQuery:"",sourceQuery:"",playerClipboard:null,changed:new Set(),message:null};
+  const main=document.getElementById("main"),topbar=document.getElementById("topbar"),footerbar=document.getElementById("footerbar"),fileMeta=document.getElementById("fileMeta"),modeLine=document.getElementById("modeLine"),fileInput=document.getElementById("fileInput"),undoBtn=document.getElementById("undoBtn"),primarySaveBtn=document.getElementById("primarySaveBtn");
+
+  const setup={checked:false,handle:null,info:null,permission:"unknown",remembered:false,error:null,loading:false};
+  const launcher={checked:false,profile:null,error:null};
+  const MAGIC_PROFILE_KEY="magic-dosbox-profile";
+  const backup={checked:false,master:null,points:[],loading:false,progress:"",done:0,total:0,error:null};
+  const BACKUP_ROOT_NAME="SWOS_STUDIO_BACKUPS",MASTER_NAME="MASTER",POINTS_NAME="RESTORE_POINTS",BACKUP_META=".swosstudio.json",APP_VERSION="1.8";
+  const SWOS_HANDLE_DB="swos-studio",SWOS_HANDLE_STORE="handles",SWOS_HANDLE_KEY="game-folder";
+
+  function openHandleDb(){return new Promise((resolve,reject)=>{try{const req=indexedDB.open(SWOS_HANDLE_DB,1);req.onupgradeneeded=()=>{if(!req.result.objectStoreNames.contains(SWOS_HANDLE_STORE))req.result.createObjectStore(SWOS_HANDLE_STORE)};req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error)}catch(e){reject(e)}})}
+  async function handleStoreGet(){try{const db=await openHandleDb();return await new Promise((resolve,reject)=>{const tx=db.transaction(SWOS_HANDLE_STORE,"readonly"),r=tx.objectStore(SWOS_HANDLE_STORE).get(SWOS_HANDLE_KEY);r.onsuccess=()=>resolve(r.result||null);r.onerror=()=>reject(r.error)})}catch(e){return null}}
+  async function handleStoreSet(handle){try{const db=await openHandleDb();await new Promise((resolve,reject)=>{const tx=db.transaction(SWOS_HANDLE_STORE,"readwrite");tx.objectStore(SWOS_HANDLE_STORE).put(handle,SWOS_HANDLE_KEY);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error)});return true}catch(e){return false}}
+  async function handleStoreDelete(){try{const db=await openHandleDb();await new Promise((resolve,reject)=>{const tx=db.transaction(SWOS_HANDLE_STORE,"readwrite");tx.objectStore(SWOS_HANDLE_STORE).delete(SWOS_HANDLE_KEY);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error)})}catch(e){}}
+
+  async function appStoreGet(key){try{const db=await openHandleDb();return await new Promise((resolve,reject)=>{const tx=db.transaction(SWOS_HANDLE_STORE,"readonly"),r=tx.objectStore(SWOS_HANDLE_STORE).get(key);r.onsuccess=()=>resolve(r.result??null);r.onerror=()=>reject(r.error)})}catch(e){return null}}
+  async function appStoreSet(key,value){try{const db=await openHandleDb();await new Promise((resolve,reject)=>{const tx=db.transaction(SWOS_HANDLE_STORE,"readwrite");tx.objectStore(SWOS_HANDLE_STORE).put(value,key);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error)});return true}catch(e){return false}}
+  async function appStoreDelete(key){try{const db=await openHandleDb();await new Promise((resolve,reject)=>{const tx=db.transaction(SWOS_HANDLE_STORE,"readwrite");tx.objectStore(SWOS_HANDLE_STORE).delete(key);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error)});return true}catch(e){return false}}
+  async function loadLauncherProfile(){launcher.profile=await appStoreGet(MAGIC_PROFILE_KEY);launcher.checked=true}
+  async function saveLauncherProfile(profile){launcher.profile=profile;launcher.checked=true;await appStoreSet(MAGIC_PROFILE_KEY,profile)}
+  async function forgetLauncherProfile(){launcher.profile=null;launcher.checked=true;await appStoreDelete(MAGIC_PROFILE_KEY)}
+  function magicIntent(profile){
+    if(!profile?.gameId)return"intent://#Intent;package=bruenor.magicbox;end";
+    const pkg=profile.packageName||"bruenor.magicbox";
+    const component=`${pkg}/${pkg}.uiGameStarterActivity`;
+    return`intent://#Intent;package=${pkg};component=${component};S.intent_msg1=${encodeURIComponent(String(profile.gameId))};end`
+  }
+  function magicAppIntent(packageName="bruenor.magicbox"){return`intent://#Intent;package=${packageName};end`}
+  function parseMagicCollection(xmlText){
+    const doc=new DOMParser().parseFromString(xmlText,"application/xml");
+    if(doc.querySelector("parsererror"))throw new Error("That file could not be read as Magic DOSBox collection.xml.");
+    const games=[...doc.querySelectorAll("game")].map((g,i)=>{
+      const title=(g.querySelector("title")?.textContent||g.getAttribute("title")||`Game ${i+1}`).trim();
+      const id=(g.querySelector("id")?.textContent||g.getAttribute("id")||"").trim();
+      return{title,gameId:id}
+    }).filter(x=>x.gameId);
+    if(!games.length)throw new Error("No Magic DOSBox game profiles with IDs were found in that XML file.");
+    return games.sort((a,b)=>{const as=/swos|sensible world/i.test(a.title)?0:1,bs=/swos|sensible world/i.test(b.title)?0:1;return as-bs||a.title.localeCompare(b.title)})
+  }
+  async function chooseMagicCollection(){
+    try{
+      let file;
+      if(window.showOpenFilePicker){
+        const [h]=await window.showOpenFilePicker({multiple:false,id:"magic-dosbox-collection",types:[{description:"Magic DOSBox collection.xml",accept:{"text/xml":[".xml"],"application/xml":[".xml"]}}]});
+        file=await h.getFile()
+      }else{
+        file=await new Promise((resolve,reject)=>{const i=document.createElement("input");i.type="file";i.accept=".xml,text/xml,application/xml";i.onchange=()=>i.files?.[0]?resolve(i.files[0]):reject(new Error("No file selected"));i.click()})
+      }
+      state.magicProfiles=parseMagicCollection(await file.text());state.magicQuery="";launcher.error=null;renderPlayCentre();window.scrollTo(0,0)
+    }catch(e){if(e?.name!=="AbortError"){launcher.error=e.message;renderPlayCentre()}}
+  }
+
+  function fmtBytes(n){n=Number(n)||0;if(n<1024)return`${n} B`;if(n<1048576)return`${(n/1024).toFixed(n<10240?1:0)} KB`;if(n<1073741824)return`${(n/1048576).toFixed(n<10485760?1:0)} MB`;return`${(n/1073741824).toFixed(1)} GB`}
+  function fmtDate(iso){try{return new Date(iso).toLocaleString()}catch(e){return iso||"Unknown"}}
+
+  function pointDate(point){
+    if(point?.meta?.createdAt){const d=new Date(point.meta.createdAt);if(!Number.isNaN(d.getTime()))return d}
+    const m=String(point?.name||"").match(/^(\d{4})(\d{2})(\d{2})_(\d{2})(\d{2})(\d{2})/);
+    if(m)return new Date(Number(m[1]),Number(m[2])-1,Number(m[3]),Number(m[4]),Number(m[5]),Number(m[6]));
+    return null
+  }
+  function friendlySaved(point){
+    const d=pointDate(point);if(!d)return"Saved previously";
+    const date=d.toLocaleDateString("en-GB",{day:"numeric",month:"numeric",year:"numeric"});
+    const time=d.toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit"});
+    return`Saved ${date} at ${time}`
+  }
+  function cleanLegacyLabel(point){
+    const label=String(point?.meta?.label||"").trim();if(label&&label!==point.name)return label;
+    let s=String(point?.name||"").replace(/^\d{8}_\d{6}_?/,"").replace(/_/g," ").trim();
+    if(!s)return"Saved point";
+    s=s.replace(/^before restoring /i,"Safety backup before restore · ");
+    return s.charAt(0).toUpperCase()+s.slice(1)
+  }
+  function restoreSubject(point){
+    const explicit=String(point?.meta?.contextLabel||"").trim();if(explicit)return explicit;
+    const career=String(point?.meta?.careerClub||"").trim();if(career)return`${career} career`;
+    return"SWOS setup"
+  }
+  function isAutomaticPoint(point){return point?.meta?.type==="automatic-pre-restore"||/^before restoring /i.test(String(point?.meta?.label||""))||/_Before_restoring_/i.test(String(point?.name||""))}
+  function safePointName(label){const clean=(label||"Restore point").trim().replace(/[^\w\- ]+/g,"").replace(/\s+/g,"_").slice(0,36)||"Restore_point";const d=new Date(),pad=n=>String(n).padStart(2,"0");return`${d.getFullYear()}${pad(d.getMonth()+1)}${pad(d.getDate())}_${pad(d.getHours())}${pad(d.getMinutes())}${pad(d.getSeconds())}_${clean}`}
+  async function tryDir(parent,name){try{return await parent.getDirectoryHandle(name)}catch(e){return null}}
+  async function tryFile(parent,name){try{return await parent.getFileHandle(name)}catch(e){return null}}
+  async function entryKind(parent,name){try{for await(const [n,h] of parent.entries())if(n===name)return h.kind;return null}catch(e){return null}}
+  async function removeIfExists(parent,name){try{const kind=await entryKind(parent,name);if(kind)await parent.removeEntry(name,{recursive:kind==="directory"});return true}catch(e){return false}}
+  async function ensureCleanDirectory(parent,name){const kind=await entryKind(parent,name);if(kind&&kind!=="directory")await parent.removeEntry(name);return await parent.getDirectoryHandle(name,{create:true})}
+  async function ensureCleanFile(parent,name){const kind=await entryKind(parent,name);if(kind&&kind!=="file")await parent.removeEntry(name,{recursive:true});return await parent.getFileHandle(name,{create:true})}
+  async function readSnapshotMeta(dir){try{const h=await dir.getFileHandle(BACKUP_META),f=await h.getFile();return JSON.parse(await f.text())}catch(e){return null}}
+  async function writeSnapshotMeta(dir,meta){const h=await dir.getFileHandle(BACKUP_META,{create:true}),w=await h.createWritable();await w.write(JSON.stringify(meta,null,2));await w.close()}
+  async function collectSnapshotFiles(dir,prefix=[],root=true){
+    const files=[];
+    for await(const [name,h] of dir.entries()){
+      if(root&&name===BACKUP_ROOT_NAME)continue;
+      if(name===BACKUP_META)continue;
+      if(h.kind==="file"){const f=await h.getFile();files.push({parts:[...prefix,name],file:f,size:f.size})}
+      else files.push(...await collectSnapshotFiles(h,[...prefix,name],false));
+    }
+    return files
+  }
+
+  async function collectManagedFiles(){
+    if(!setup.info)setup.info=await scanGameFolder(setup.handle);
+    const files=[];
+    // Careers in GAME.
+    for(const entry of setup.info.careers){const f=await entry.handle.getFile();files.push({parts:[entry.name],file:f,size:f.size,group:"Careers"})}
+    // All SWOS executables currently present in GAME, including original and enhanced copies.
+    for(const entry of setup.info.exes){const f=await entry.handle.getFile();files.push({parts:[entry.name],file:f,size:f.size,group:"Game enhancements"})}
+    // TEAM.* databases in GAME/DATA.
+    for(const entry of setup.info.teamFiles){const f=await entry.handle.getFile();files.push({parts:["DATA",entry.name],file:f,size:f.size,group:"Teams & kits"})}
+    // POOLPLYR.DAT if present.
+    if(setup.info.pool){const f=await setup.info.pool.handle.getFile();files.push({parts:["DATA",setup.info.pool.name],file:f,size:f.size,group:"Transfer market"})}
+    return files
+  }
+  function managedFileSummary(files){
+    const counts={};
+    let bytes=0;
+    for(const f of files){counts[f.group]=(counts[f.group]||0)+1;bytes+=f.size}
+    return{counts,bytes,fileCount:files.length}
+  }
+  async function ensurePath(root,parts){let d=root;for(const p of parts){const kind=await entryKind(d,p);if(kind&&kind!=="directory")await d.removeEntry(p);d=await d.getDirectoryHandle(p,{create:true})}return d}
+  function setBackupProgress(message,done=backup.done,total=backup.total){
+    backup.progress=message;backup.done=done;backup.total=total;
+    const t=document.getElementById("backupProgressText"),b=document.getElementById("backupProgressBar");
+    if(t)t.textContent=message;
+    if(b)b.style.width=total?`${Math.min(100,Math.round(done/total*100))}%`:"8%";
+  }
+  async function copyFileList(files,dest,onProgress){
+    let done=0;
+    for(const item of files){
+      const dirs=item.parts.slice(0,-1),name=item.parts[item.parts.length-1],targetDir=await ensurePath(dest,dirs),fh=await ensureCleanFile(targetDir,name),w=await fh.createWritable();
+      await w.write(item.file);await w.close();done++;
+      if(onProgress)onProgress(done,files.length,item.parts.join("/"));
+      if(done%8===0)await new Promise(r=>setTimeout(r,0));
+    }
+  }
+  async function clearDirectoryExcept(dir,exceptNames=[]){
+    const keep=new Set(exceptNames);
+    const names=[];for await(const [name] of dir.entries())if(!keep.has(name))names.push(name);
+    for(const name of names){await dir.removeEntry(name,{recursive:true})}
+  }
+  async function getBackupRoot(create=false){if(!setup.handle)return null;try{const kind=await entryKind(setup.handle,BACKUP_ROOT_NAME);if(kind&&kind!=="directory"){if(!create)return null;await setup.handle.removeEntry(BACKUP_ROOT_NAME)}return await setup.handle.getDirectoryHandle(BACKUP_ROOT_NAME,{create})}catch(e){return null}}
+  async function loadBackupStatus(){
+    backup.error=null;backup.master=null;backup.points=[];backup.checked=true;
+    if(!setup.handle||setup.permission!=="granted")return;
+    try{
+      const root=await getBackupRoot(false);if(!root)return;
+      const master=await tryDir(root,MASTER_NAME);
+      if(master){const meta=await readSnapshotMeta(master);if(meta&&meta.type==="master"&&Number(meta.fileCount)>0&&meta.createdAt)backup.master={handle:master,meta};}
+      const pointsDir=await tryDir(root,POINTS_NAME);
+      if(pointsDir){
+        const arr=[];
+        for await(const [name,h] of pointsDir.entries())if(h.kind==="directory"){const meta=await readSnapshotMeta(h);arr.push({name,handle:h,meta:meta||{label:name,createdAt:""}})}
+        arr.sort((a,b)=>String(b.meta.createdAt||b.name).localeCompare(String(a.meta.createdAt||a.name)));backup.points=arr;
+      }
+    }catch(e){backup.error=e.message}
+  }
+  async function createSnapshot(targetDir,label,type){
+    setBackupProgress("Finding the SWOS files Studio can change…",0,0);
+    if(!setup.info)setup.info=await scanGameFolder(setup.handle);
+    const files=await collectManagedFiles(),summary=managedFileSummary(files);
+    if(!files.length)throw new Error("No Studio-managed SWOS files were found to protect.");
+    backup.total=files.length;backup.done=0;
+    await copyFileList(files,targetDir,(done,total,path)=>{backup.done=done;setBackupProgress(`Protecting ${path}`,done,total)});
+    const contextLabel=state.kind==="career"&&state.career?.club?`${state.career.club} career`:"SWOS setup";
+    const meta={type,label,createdAt:new Date().toISOString(),fileCount:summary.fileCount,bytes:summary.bytes,groups:summary.counts,scope:"studio-managed-files",contextLabel,careerClub:state.kind==="career"?(state.career?.club||null):null,careerFile:state.kind==="career"?(state.fileName||null):null,sourceFolder:setup.info?.folderName||setup.handle.name,appVersion:APP_VERSION};
+    await writeSnapshotMeta(targetDir,meta);return meta
+  }
+  async function createMasterBackup(){
+    if(!await ensureGameFolder())return;
+    const replacing=!!backup.master;
+    if(replacing&&!confirm("Replace your current Master Version with SWOS exactly as it is now?\n\nYour existing Master Version will be replaced."))return;
+    if(!replacing&&!confirm("Create your protected Master Version now?\n\nSWOS Studio will protect the files it can actually change: careers, TEAM databases, transfer-market data and SWOS executables. Large game assets are left alone, so the backup should be much faster."))return;
+    backup.loading=true;backup.error=null;backup.progress="Preparing Master Version…";renderSafetyCentre();
+    try{
+      const root=await getBackupRoot(true);
+      if(!root)throw new Error("Could not create the SWOS Studio backup area.");
+      await removeIfExists(root,MASTER_NAME);
+      const master=await root.getDirectoryHandle(MASTER_NAME,{create:true});
+      await createSnapshot(master,"Master Version","master");
+      await loadBackupStatus();state.message="Master Version created successfully.";
+    }catch(e){backup.error=e.message}
+    finally{backup.loading=false;backup.progress="";backup.done=0;backup.total=0;renderSafetyCentre();window.scrollTo(0,0)}
+  }
+  async function createRestorePoint(label="Manual restore point",quiet=false){
+    if(!await ensureGameFolder())return null;
+    backup.loading=true;backup.error=null;if(!quiet){backup.progress="Preparing restore point…";renderSafetyCentre()}
+    try{
+      const root=await getBackupRoot(true);if(!root)throw new Error("Could not create the SWOS Studio backup area.");const points=await ensureCleanDirectory(root,POINTS_NAME),name=safePointName(label);await removeIfExists(points,name);const dest=await points.getDirectoryHandle(name,{create:true}),meta=await createSnapshot(dest,label,"restore-point");
+      await loadBackupStatus();return{name,handle:dest,meta}
+    }catch(e){backup.error=e.message;return null}
+    finally{backup.loading=false;backup.progress="";backup.done=0;backup.total=0;if(!quiet&&state.view==="safety")renderSafetyCentre()}
+  }
+  async function restoreSnapshot(snapshot,label){
+    if(!snapshot)return;
+    if(!confirm(`Restore "${label}"?\n\nSWOS Studio will first create an automatic safety checkpoint of the important editable SWOS files as they are right now. It will then restore those protected files from this saved version.`))return;
+    if(!await ensureGameFolder())return;
+    backup.loading=true;backup.error=null;backup.progress="Creating a safety checkpoint first…";renderSafetyCentre();
+    try{
+      const emergencyLabel=`Before restoring ${label}`;
+      const root=await getBackupRoot(true);if(!root)throw new Error("Could not access the SWOS Studio backup area.");const points=await ensureCleanDirectory(root,POINTS_NAME),emName=safePointName(emergencyLabel);await removeIfExists(points,emName);const em=await points.getDirectoryHandle(emName,{create:true});
+      await createSnapshot(em,emergencyLabel,"automatic-pre-restore");
+      setBackupProgress("Reading saved version…",0,0);
+      const files=await collectSnapshotFiles(snapshot,[],false);backup.total=files.length;backup.done=0;
+      setBackupProgress("Restoring protected SWOS files…",0,files.length);
+      await copyFileList(files,setup.handle,(done,total,path)=>{backup.done=done;setBackupProgress(`Restoring ${path}`,done,total)});
+      setup.info=await scanGameFolder(setup.handle);await loadBackupStatus();state.message=`Restored ${label}. Only Studio-managed SWOS files were changed; the rest of the game installation was left alone. An automatic pre-restore checkpoint was also created.`;
+    }catch(e){backup.error=e.message}
+    finally{backup.loading=false;backup.progress="";backup.done=0;backup.total=0;renderSafetyCentre();window.scrollTo(0,0)}
+  }
+  async function deleteRestorePoint(name){
+    if(!confirm("Delete this restore point? This does not change your current SWOS game."))return;
+    try{const root=await getBackupRoot(false),points=await tryDir(root,POINTS_NAME);if(points)await points.removeEntry(name,{recursive:true});await loadBackupStatus();renderSafetyCentre()}catch(e){alert(e.message)}
+  }
+
+  async function getPermission(handle,request=false){if(!handle)return"denied";try{let p=handle.queryPermission?await handle.queryPermission({mode:"readwrite"}):"granted";if(p!=="granted"&&request&&handle.requestPermission)p=await handle.requestPermission({mode:"readwrite"});return p}catch(e){return"denied"}}
+  async function entriesOf(dir){const items=[];for await(const [name,handle] of dir.entries())items.push({name,handle});return items}
+  function ciFind(items,name,kind=null){return items.find(x=>x.name.toLowerCase()===name.toLowerCase()&&(!kind||x.handle.kind===kind))}
+  async function scanGameFolder(handle){
+    const root=await entriesOf(handle),files=root.filter(x=>x.handle.kind==="file"),dirs=root.filter(x=>x.handle.kind==="directory");
+    const careers=files.filter(x=>x.name.toLowerCase().endsWith(".car")).sort((a,b)=>a.name.localeCompare(b.name));
+    const exes=files.filter(x=>x.name.toLowerCase().endsWith(".exe")&&x.name.toLowerCase().startsWith("sws")).sort((a,b)=>a.name.localeCompare(b.name));
+    const dataEntry=ciFind(dirs,"DATA","directory");
+    let teamFiles=[],pool=null;
+    if(dataEntry){
+      const dataItems=await entriesOf(dataEntry.handle);
+      teamFiles=dataItems.filter(x=>x.handle.kind==="file"&&/^team\./i.test(x.name)).sort((a,b)=>a.name.localeCompare(b.name));
+      pool=dataItems.find(x=>x.handle.kind==="file"&&x.name.toLowerCase()==="poolplyr.dat")||null;
+    }
+    const preferredExe=exes.find(x=>x.name.toLowerCase()==="swsend.exe")||exes.find(x=>x.name.toLowerCase()==="swsengpp.exe")||exes[0]||null;
+    const looksValid=!!dataEntry&&exes.length>0;
+    return{folderName:handle.name,root,careers,exes,preferredExe,dataHandle:dataEntry?.handle||null,teamFiles,pool,looksValid}
+  }
+  async function refreshSetup(request=false){
+    if(setup.loading)return false;setup.loading=true;setup.error=null;
+    try{
+      if(!setup.handle){setup.handle=await handleStoreGet();setup.remembered=!!setup.handle}
+      if(!setup.handle){setup.permission="missing";setup.info=null;setup.checked=true;return false}
+      setup.permission=await getPermission(setup.handle,request);
+      if(setup.permission==="granted"){setup.info=await scanGameFolder(setup.handle);if(!setup.info.looksValid)setup.error="That folder does not look like the main SWOS GAME folder.";setup.remembered=true}
+      else setup.info=null;
+      setup.checked=true;if(setup.permission==="granted"&&setup.info?.looksValid)await loadBackupStatus();return setup.permission==="granted"&&!!setup.info?.looksValid
+    }catch(e){setup.error=e.message;setup.checked=true;return false}
+    finally{setup.loading=false}
+  }
+  async function chooseGameFolder(){
+    if(!directoryApiAvailable){alert("This browser cannot remember a whole SWOS folder. Use Chrome on Android, or continue with the individual file picker.");return false}
+    try{
+      const handle=await window.showDirectoryPicker({id:"swos-studio-game-folder",mode:"readwrite"});
+      const p=await getPermission(handle,true);if(p!=="granted")throw new Error("Folder access was not granted.");
+      const info=await scanGameFolder(handle);if(!info.looksValid)throw new Error("This does not look like the main SWOS GAME folder. Choose the folder that contains the SWOS EXE and the DATA folder.");
+      setup.handle=handle;setup.info=info;setup.permission="granted";setup.remembered=true;setup.checked=true;setup.error=null;
+      await handleStoreSet(handle);await loadBackupStatus();return true
+    }catch(e){if(e?.name!=="AbortError")alert(e.message);return false}
+  }
+  async function ensureGameFolder(){
+    if(!setup.checked)await refreshSetup(false);
+    if(setup.handle&&setup.permission!=="granted")await refreshSetup(true);
+    if(setup.handle&&setup.permission==="granted"&&setup.info?.looksValid)return true;
+    return await chooseGameFolder()
+  }
+  async function forgetGameFolder(){await handleStoreDelete();setup.handle=null;setup.info=null;setup.permission="missing";setup.remembered=false;setup.checked=true;setup.error=null;backup.checked=false;backup.master=null;backup.points=[]}
+  function setupBannerHtml(){
+    if(!directoryApiAvailable)return`<div class="setup-banner warn"><div class="setup-head"><span class="setup-dot"></span><span class="grow"><strong>Simple folder setup unavailable in this browser</strong><span>Use Chrome for the best SWOS Studio experience.</span></span></div></div>`;
+    if(setup.permission==="granted"&&setup.info?.looksValid)return`<div class="setup-banner ready"><div class="setup-head"><span class="setup-dot"></span><span class="grow"><strong>SWOS connected</strong><span>${esc(setup.info.folderName)} · ${setup.info.careers.length} career${setup.info.careers.length===1?"":"s"} · ${setup.info.teamFiles.length} TEAM database${setup.info.teamFiles.length===1?"":"s"} · ${backup.master?"🛡 Master protected":"Master backup not created"}</span></span><button class="btn" id="openSetup">Setup</button></div></div>`;
+    if(setup.remembered)return`<div class="setup-banner warn"><div class="setup-head"><span class="setup-dot"></span><span class="grow"><strong>SWOS location remembered</strong><span>Tap reconnect once and Studio will use your GAME folder again.</span></span><button class="btn btn-green" id="reconnectSetup">Reconnect</button></div></div>`;
+    return`<div class="setup-banner warn"><div class="setup-head"><span class="setup-dot"></span><span class="grow"><strong>Set up SWOS once</strong><span>Choose your main GAME folder. After that, Career, Kits and Game Enhancements can go straight to the right files.</span></span><button class="btn btn-green" id="startSetup">Set up</button></div></div>`
+  }
+
+  function esc(v=""){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));}
+  function hex(n){return "0x"+Number(n).toString(16).toUpperCase().padStart(2,"0")}
+  function readText(bytes,offset,length){let s="";for(let i=0;i<length;i++){const b=bytes[offset+i];if(!b)break;s+=String.fromCharCode(b)}return s.replace(/\s+$/,"")}
+  function divisionName(c){return divisions[c]??`Division ${c}`} function formationName(c){return formations[c]??`Unknown (${c})`}
+  function positionInfo(byte){return positions[(byte>>5)&7]??["Unknown","?"]} function appearanceInfo(byte){return appearances[(byte>>3)&3]??"Unknown"}
+  function nationalityName(code){return nationalityNames[code]??`Unknown code ${hex(code)}`}
+
+  function validateTeam(bytes){if(bytes.length<2)throw new Error("This file is too small to be a SWOS TEAM database.");const dv=new DataView(bytes.buffer,bytes.byteOffset,bytes.byteLength);const count=dv.getUint16(0,false);if(count<1)throw new Error("The file header reports zero teams.");const expected=HEADER_SIZE+count*TEAM_RECORD_SIZE;if(bytes.length!==expected)throw new Error(`File size check failed. Header says ${count} teams, so expected ${expected.toLocaleString()} bytes, but found ${bytes.length.toLocaleString()}.`);return count}
+  function validatePool(bytes){if(bytes.length!==POOL_FILE_SIZE)throw new Error(`POOLPLYR.DAT size check failed. Expected ${POOL_COUNT} records × ${POOL_RECORD_SIZE} bytes = ${POOL_FILE_SIZE.toLocaleString()} bytes, but found ${bytes.length.toLocaleString()}.`);for(let i=0;i<POOL_COUNT;i++){const o=i*POOL_RECORD_SIZE;if(bytes[o+19]!==0)throw new Error(`Pool record ${i+1} has an unexpected separator byte.`)}return true}
+  function validateCareer(bytes){if(bytes.length!==CAREER_FILE_SIZE)throw new Error(`Career file size check failed. This verified DOS SWOS career format is ${CAREER_FILE_SIZE.toLocaleString()} bytes; this file is ${bytes.length.toLocaleString()} bytes.`);const club=readText(bytes,C.club,C.clubLength),manager=readText(bytes,C.manager,C.managerLength);if(!club||!manager)throw new Error("This does not look like a supported SWOS career save.");return true}
+  function findPattern(bytes,pattern){const hits=[];outer:for(let i=0;i<=bytes.length-pattern.length;i++){for(let j=0;j<pattern.length;j++)if(bytes[i+j]!==pattern[j])continue outer;hits.push(i)}return hits}
+  function analyseExe(bytes){if(bytes.length<100000)throw new Error("This EXE is too small to look like the supported DOS SWOS executable.");const original=findPattern(bytes,EXE_ENDLESS_ORIGINAL),patched=findPattern(bytes,EXE_ENDLESS_PATCHED),total=original.length+patched.length;let status="unsupported";if(total===EXE_ENDLESS_MATCHES&&original.length===EXE_ENDLESS_MATCHES)status="normal";else if(total===EXE_ENDLESS_MATCHES&&patched.length===EXE_ENDLESS_MATCHES)status="endless";else if(total===EXE_ENDLESS_MATCHES)status="mixed";return{original,patched,total,status}}
+  function validateExe(bytes){const a=analyseExe(bytes);if(a.total!==EXE_ENDLESS_MATCHES)throw new Error(`This EXE does not match the verified SWOS endless-career signature. Expected ${EXE_ENDLESS_MATCHES} recognised comparison sites; found ${a.total}.`);return a}
+  function parseExe(){state.exe=analyseExe(state.bytes)}
+  function getI32(offset){return new DataView(state.bytes.buffer,state.bytes.byteOffset,state.bytes.byteLength).getInt32(offset,true)}
+  function setI32(offset,value){new DataView(state.bytes.buffer,state.bytes.byteOffset,state.bytes.byteLength).setInt32(offset,value,true)}
+  function parseCareerPlayer(index){return parsePlayerAt(C.careerPlayers+index*PLAYER_RECORD_SIZE,index)}
+  function parseCareer(){validateCareer(state.bytes);const players=[];for(let i=0;i<C.careerPlayerSlots;i++)players.push(parseCareerPlayer(i));const rawOrder=Array.from(state.bytes.slice(C.squadOrder,C.squadOrder+32)),squadOrder=[],seen=new Set();for(const idx of rawOrder){if(idx===255)break;if(idx>=0&&idx<C.careerPlayerSlots&&!seen.has(idx)){squadOrder.push(idx);seen.add(idx)}}state.career={club:readText(state.bytes,C.club,C.clubLength),manager:readText(state.bytes,C.manager,C.managerLength),careerSeasonCounter:state.bytes[C.careerSeasonCounter],currentBalance:getI32(C.currentBalance),previousBalance:getI32(C.previousBalance),competitionBonus:getI32(C.competitionBonus),sponsorship:getI32(C.sponsorship),transferCounter:state.bytes[C.transferCounter],playerCount:state.bytes[C.playerCount],embeddedClub:readText(state.bytes,C.currentTeam+T.name,T.nameLength),rawOrder,squadOrder,players,squad:squadOrder.map(i=>players[i])}}
+  function validateCurrent(){if(state.kind==="career")return validateCareer(state.bytes);if(state.kind==="pool")return validatePool(state.bytes);if(state.kind==="exe")return validateExe(state.bytes);return validateTeam(state.bytes)}
+  function parseCurrent(){if(state.kind==="career")parseCareer();else if(state.kind==="pool")parsePool();else if(state.kind==="exe")parseExe();else parseDb()}
+  function readRawSkills(b,o){return [b[o+P.passing]&15,b[o+P.shootHead]>>4,b[o+P.shootHead]&15,b[o+P.tackleControl]>>4,b[o+P.tackleControl]&15,b[o+P.speedFinish]>>4,b[o+P.speedFinish]&15]}
+  function parsePlayerAt(o,index){const rawSkills=readRawSkills(state.bytes,o);return{index,offset:o,nationality:state.bytes[o+P.nationality],shirt:state.bytes[o+P.shirt],name:readText(state.bytes,o+P.name,P.nameLength),multi:state.bytes[o+P.multi],position:(state.bytes[o+P.multi]>>5)&7,appearance:(state.bytes[o+P.multi]>>3)&3,rawSkills,levels:rawSkills.map(v=>v&7),value:state.bytes[o+P.value]}}
+  function parsePlayer(teamOffset,index){return parsePlayerAt(teamOffset+T.players+index*PLAYER_RECORD_SIZE,index)}
+  function parsePoolRecord(index){const o=index*POOL_RECORD_SIZE,player=parsePlayerAt(o+20,index);return{index,offset:o,teamNation:state.bytes[o],teamNumber:state.bytes[o+1],sourcePlayer:state.bytes[o+2],teamName:readText(state.bytes,o+3,16),separator:state.bytes[o+19],player}}
+  function parsePool(){validatePool(state.bytes);const records=[];for(let i=0;i<POOL_COUNT;i++)records.push(parsePoolRecord(i));state.pool={count:POOL_COUNT,records}}
+  function readRawSkillsFrom(bytes,o){return[bytes[o+P.passing]>>4,bytes[o+P.shootHead]>>4,bytes[o+P.shootHead]&15,bytes[o+P.tackleControl]>>4,bytes[o+P.tackleControl]&15,bytes[o+P.speedFinish]>>4,bytes[o+P.speedFinish]&15]}
+  function parsePlayerFromBytes(bytes,o,index){const rawSkills=readRawSkillsFrom(bytes,o);return{index,offset:o,nationality:bytes[o+P.nationality],shirt:bytes[o+P.shirt],name:readText(bytes,o+P.name,P.nameLength),multi:bytes[o+P.multi],position:(bytes[o+P.multi]>>5)&7,appearance:(bytes[o+P.multi]>>3)&3,rawSkills,levels:rawSkills.map(v=>v&7),value:bytes[o+P.value]}}
+  function parseTeamFileBytes(bytes,fileName){validateTeam(bytes);const count=(bytes[0]<<8)|bytes[1],teams=[];for(let index=0;index<count;index++){const o=HEADER_SIZE+index*TEAM_RECORD_SIZE,players=[];for(let i=0;i<16;i++)players.push(parsePlayerFromBytes(bytes,o+T.players+i*PLAYER_RECORD_SIZE,i));teams.push({index,offset:o,nation:bytes[o],teamNumber:bytes[o+1],name:readText(bytes,o+T.name,T.nameLength),division:bytes[o+T.division],players})}return{fileName,bytes,count,teams}}
+  function fixedTextBytes(value,length){const out=new Uint8Array(length),v=String(value||"").toUpperCase();for(let i=0;i<Math.min(v.length,length);i++)out[i]=v.charCodeAt(i);return out}
+  function replacePoolFromSource(poolIndex,team,player){const r=state.pool.records[poolIndex],o=r.offset;state.bytes[o]=team.nation;state.bytes[o+1]=team.teamNumber;state.bytes[o+2]=player.index;state.bytes.set(fixedTextBytes(team.name,16),o+3);state.bytes[o+19]=0;state.bytes.set(state.poolSource.bytes.slice(player.offset,player.offset+PLAYER_RECORD_SIZE),o+20);refreshPool(poolIndex);state.changed.add(`pool:${poolIndex}`)}
+  function sourcePoolStats(){if(!state.poolSource)return{linked:0,exact:0,stale:0};const map=new Map(state.poolSource.teams.map(t=>[`${t.nation}:${t.teamNumber}`,t]));let linked=0,exact=0,stale=0;for(const r of state.pool.records){const t=map.get(`${r.teamNation}:${r.teamNumber}`);if(!t||r.sourcePlayer>15)continue;linked++;const p=t.players[r.sourcePlayer],sameName=r.teamName===t.name,samePlayer=byteEqual(state.bytes.slice(r.offset+20,r.offset+58),state.poolSource.bytes.slice(p.offset,p.offset+PLAYER_RECORD_SIZE));if(sameName&&samePlayer)exact++;else stale++}return{linked,exact,stale}}
+  function syncSourceTeamToPool(){if(!state.poolSource)throw new Error("Load a TEAM.* source file first.");const map=new Map(state.poolSource.teams.map(t=>[`${t.nation}:${t.teamNumber}`,t]));let updated=0,linked=0;for(const r of state.pool.records){const t=map.get(`${r.teamNation}:${r.teamNumber}`);if(!t||r.sourcePlayer>15)continue;linked++;const p=t.players[r.sourcePlayer],sameName=r.teamName===t.name,samePlayer=byteEqual(state.bytes.slice(r.offset+20,r.offset+58),state.poolSource.bytes.slice(p.offset,p.offset+PLAYER_RECORD_SIZE));if(!sameName||!samePlayer){replacePoolFromSource(r.index,t,p);updated++}}return{linked,updated}}
+  function refreshPool(i){state.pool.records[i]=parsePoolRecord(i)}
+
+  function parseKit(o){return{type:state.bytes[o],shirt1:state.bytes[o+1],shirt2:state.bytes[o+2],shorts:state.bytes[o+3],socks:state.bytes[o+4]}}
+  function parseTeam(index){const o=HEADER_SIZE+index*TEAM_RECORD_SIZE,order=Array.from(state.bytes.slice(o+T.order,o+T.order+16)),players=[];for(let i=0;i<16;i++)players.push(parsePlayer(o,i));return{index,offset:o,name:readText(state.bytes,o+T.name,T.nameLength),coach:readText(state.bytes,o+T.coach,T.coachLength),tactic:state.bytes[o+T.tactic],division:state.bytes[o+T.division],homeKit:parseKit(o+T.homeKit),awayKit:parseKit(o+T.awayKit),order,players}}
+  function parseDb(){const count=validateTeam(state.bytes),teams=[];for(let i=0;i<count;i++)teams.push(parseTeam(i));state.db={count,teams}}
+  function orderedPlayers(team){const out=[],seen=new Set();for(const idx of team.order){if(idx>=0&&idx<16&&!seen.has(idx)){out.push(team.players[idx]);seen.add(idx)}}for(const p of team.players)if(!seen.has(p.index))out.push(p);return out}
+  function refreshTeam(i){state.db.teams[i]=parseTeam(i)}
+  function writeFixedText(offset,length,value,label){const v=String(value||"").toUpperCase();if(v.length>length)throw new Error(`${label} is longer than ${length} bytes.`);if(/[^\x20-\x7E]/.test(v))throw new Error(`${label} must use plain ASCII characters only.`);state.bytes.fill(0,offset,offset+length);for(let i=0;i<v.length;i++)state.bytes[offset+i]=v.charCodeAt(i)}
+  function writeTeamDetails(team,form){const o=team.offset;writeFixedText(o+T.name,T.nameLength,form.name,"Team name");writeFixedText(o+T.coach,T.coachLength,form.coach,"Coach name");state.bytes[o+T.division]=form.division;state.bytes[o+T.tactic]=form.tactic;refreshTeam(team.index)}
+  function validKitValue(v,max){return Number.isInteger(v)&&v>=0&&v<=max}
+  function writeKit(team,which,kit){if(!validKitValue(kit.type,3)||![kit.shirt1,kit.shirt2,kit.shorts,kit.socks].every(v=>validKitValue(v,9)))throw new Error("Kit values are outside the supported SWOS range.");const o=team.offset+(which==="home"?T.homeKit:T.awayKit);state.bytes[o]=kit.type;state.bytes[o+1]=kit.shirt1;state.bytes[o+2]=kit.shirt2;state.bytes[o+3]=kit.shorts;state.bytes[o+4]=kit.socks;refreshTeam(team.index)}
+  function normalisedTeamOrder(team){const out=[],seen=new Set();for(const x of team.order){if(x>=0&&x<16&&!seen.has(x)){out.push(x);seen.add(x)}}for(let i=0;i<16;i++)if(!seen.has(i))out.push(i);return out}
+  function writeTeamOrder(team,order){if(order.length!==16||new Set(order).size!==16||order.some(v=>v<0||v>15))throw new Error("Invalid 16-player squad order.");for(let i=0;i<16;i++)state.bytes[team.offset+T.order+i]=order[i];refreshTeam(team.index)}
+  function moveTeamOrder(team,from,to){const order=normalisedTeamOrder(team);if(from<0||to<0||from>=order.length||to>=order.length)return;const [x]=order.splice(from,1);order.splice(to,0,x);writeTeamOrder(team,order);state.changed.add(`order:${team.index}`)}
+  function swapDatabasePlayers(srcTeamIdx,srcPlayerIdx,dstTeamIdx,dstPlayerIdx){if(srcTeamIdx===dstTeamIdx)throw new Error("Choose a different destination club. Use Squad Order to rearrange players within one club.");const st=state.db.teams[srcTeamIdx],dt=state.db.teams[dstTeamIdx],sp=st.players[srcPlayerIdx],dp=dt.players[dstPlayerIdx],a=state.bytes.slice(sp.offset,sp.offset+PLAYER_RECORD_SIZE),b=state.bytes.slice(dp.offset,dp.offset+PLAYER_RECORD_SIZE);state.bytes.set(b,sp.offset);state.bytes.set(a,dp.offset);refreshTeam(srcTeamIdx);refreshTeam(dstTeamIdx);state.changed.add(`${srcTeamIdx}:${srcPlayerIdx}`);state.changed.add(`${dstTeamIdx}:${dstPlayerIdx}`)}
+  function writeCareerOrder(order){const active=state.career.squadOrder.length;if(order.length!==active||new Set(order).size!==active)throw new Error("Invalid career squad order.");for(let i=0;i<active;i++)state.bytes[C.squadOrder+i]=order[i];parseCareer();state.changed.add("career:order")}
+  function moveCareerOrder(from,to){const order=state.career.squadOrder.slice();if(from<0||to<0||from>=order.length||to>=order.length)return;const [x]=order.splice(from,1);order.splice(to,0,x);writeCareerOrder(order)}
+  function moveTeamToRole(team,from,role){const order=normalisedTeamOrder(team);if(from<0||from>=order.length)return;const [x]=order.splice(from,1);let target=role==="xi"?Math.min(10,order.length):Math.min(15,order.length);order.splice(target,0,x);writeTeamOrder(team,order);state.changed.add(`order:${team.index}`)}
+  function moveCareerToRole(from,role){const order=state.career.squadOrder.slice();if(from<0||from>=order.length)return;const [x]=order.splice(from,1);if(role==="xi")order.splice(Math.min(10,order.length),0,x);else if(role==="sub")order.splice(Math.min(15,order.length),0,x);else order.push(x);writeCareerOrder(order)}
+  function copyKnownPlayerData(p,sourceLabel,kind){state.playerClipboard={kind,sourceLabel,bytes:state.bytes.slice(p.offset,p.offset+33)}}
+  function pasteKnownPlayerData(p,expectedKind){const c=state.playerClipboard;if(!c||c.kind!==expectedKind)throw new Error(`Copy a ${expectedKind==="team"?"database":"career"} player first.`);state.bytes.set(c.bytes,p.offset)}
+  function restorePlayerSlot(p){if(!state.savedBaseline)throw new Error("No saved baseline is available.");state.bytes.set(state.savedBaseline.slice(p.offset,p.offset+PLAYER_RECORD_SIZE),p.offset)}
+  function applySkillPreset(level){document.querySelectorAll("[data-skill]").forEach(r=>{r.value=String(level);const label=document.getElementById(`skillValue${r.dataset.skill}`);if(label)label.textContent=String(level)})}
+  function auditDatabase(){const structural=[],advisory=[];for(const t of state.db.teams){
+      if(!t.name.trim())structural.push(`Team #${t.index+1}: blank team name`);
+      if(t.division>4)structural.push(`${t.name||`Team #${t.index+1}`}: division byte ${t.division} is outside 0–4`);
+      if(t.tactic>17)structural.push(`${t.name||`Team #${t.index+1}`}: tactic byte ${t.tactic} is outside 0–17`);
+      for(const [label,k] of [["home",t.homeKit],["away",t.awayKit]])if(k.type>3||[k.shirt1,k.shirt2,k.shorts,k.socks].some(v=>v>9))structural.push(`${t.name}: ${label} kit has an out-of-range code`);
+      const ord=t.order;if(ord.length!==16||new Set(ord).size!==16||ord.some(v=>v<0||v>15))structural.push(`${t.name}: squad-order table is not a valid 0–15 permutation`);
+      const shirts=new Map();for(const p of t.players){
+        if(!p.name.trim())advisory.push(`${t.name}: player slot ${p.index+1} has a blank name`);
+        if(p.nationality>152)structural.push(`${t.name} / ${p.name}: nationality ${p.nationality} is outside known range`);
+        if(p.value>49)structural.push(`${t.name} / ${p.name}: value byte ${p.value} is outside 0–49`);
+        if(!shirts.has(p.shirt))shirts.set(p.shirt,[]);shirts.get(p.shirt).push(p.name||`slot ${p.index+1}`);
+      }
+      for(const [shirt,names] of shirts)if(shirt!==0&&names.length>1)advisory.push(`${t.name}: shirt ${shirt} is used by ${names.join(" / ")}`);
+    }return{structural,advisory}}
+
+  function writePlayer(p,form){const b=state.bytes,o=p.offset,name=form.name.toUpperCase();if(name.length>23)throw new Error("Player name is longer than 23 bytes.");if(/[^\x20-\x7E]/.test(name))throw new Error("Use plain ASCII characters only.");
+    b[o+P.nationality]=form.nationality;b[o+P.shirt]=form.shirt;b.fill(0,o+P.name,o+P.name+23);for(let i=0;i<name.length;i++)b[o+P.name+i]=name.charCodeAt(i);
+    b[o+P.multi]=(b[o+P.multi]&7)|((form.appearance&3)<<3)|((form.position&7)<<5);
+    const old=p.rawSkills, raw=form.levels.map((level,i)=>(old[i]&8)|(level&7));
+    b[o+P.passing]=(b[o+P.passing]&0xF0)|raw[0];b[o+P.shootHead]=(raw[1]<<4)|raw[2];b[o+P.tackleControl]=(raw[3]<<4)|raw[4];b[o+P.speedFinish]=(raw[5]<<4)|raw[6];b[o+P.value]=form.value;
+  }
+
+  function bytesToBase64(bytes){let binary="",chunk=0x8000;for(let i=0;i<bytes.length;i+=chunk)binary+=String.fromCharCode(...bytes.subarray(i,Math.min(i+chunk,bytes.length)));return btoa(binary)}
+  function persistSafetyBackup(){try{localStorage.setItem(`swosOpeningBackup:${state.fileName}`,JSON.stringify({time:Date.now(),length:state.openingOriginal.length,data:bytesToBase64(state.openingOriginal)}));return true}catch(e){console.warn("Backup storage failed",e);return false}}
+  function byteEqual(a,b){if(a.length!==b.length)return false;for(let i=0;i<a.length;i++)if(a[i]!==b[i])return false;return true}
+
+  function kitColourOptions(selected){return kitColors.map((c,i)=>`<option value="${i}" ${i===selected?'selected':''}>${i} · ${esc(c.name)}</option>`).join("")}
+  function kitStyleOptions(selected){return kitStyles.map((s,i)=>`<option value="${i}" ${i===selected?'selected':''}>${i} · ${esc(s)}</option>`).join("")}
+  function kitShirtBackground(k){const a=kitColors[k.shirt1]?.css||"#777",b=kitColors[k.shirt2]?.css||"#333";if(k.type===1)return`linear-gradient(90deg,${b} 0 22%,${a} 22% 78%,${b} 78% 100%)`;if(k.type===2)return`repeating-linear-gradient(90deg,${a} 0 15px,${b} 15px 30px)`;if(k.type===3)return`repeating-linear-gradient(0deg,${a} 0 13px,${b} 13px 26px)`;return a}
+  function kitPreview(k,label=""){const sh=kitColors[k.shorts]?.css||"#777",so=kitColors[k.socks]?.css||"#777";return`<div class="kit-preview">${label?`<strong>${esc(label)}</strong>`:""}<div class="kit-shirt" style="background:${kitShirtBackground(k)}"></div><div class="kit-shorts" style="background:${sh}"></div><div class="kit-socks"><div class="kit-sock" style="background:${so}"></div><div class="kit-sock" style="background:${so}"></div></div><div class="tiny">${esc(kitStyles[k.type]||`Style ${k.type}`)} · shirt ${k.shirt1}/${k.shirt2} · shorts ${k.shorts} · socks ${k.socks}</div></div>`}
+  function kitEditorBlock(prefix,label,k){return`<div class="card stack"><h3>${esc(label)}</h3><div id="${prefix}Preview">${kitPreview(k)}</div><div class="field"><label>Shirt style</label><select id="${prefix}Type">${kitStyleOptions(k.type)}</select></div><div class="grid2"><div class="field"><label>Main shirt colour</label><select id="${prefix}Shirt1">${kitColourOptions(k.shirt1)}</select></div><div class="field"><label>Second shirt colour</label><select id="${prefix}Shirt2">${kitColourOptions(k.shirt2)}</select></div></div><div class="grid2"><div class="field"><label>Shorts</label><select id="${prefix}Shorts">${kitColourOptions(k.shorts)}</select></div><div class="field"><label>Socks</label><select id="${prefix}Socks">${kitColourOptions(k.socks)}</select></div></div></div>`}
+  function readKitForm(prefix){return{type:Number(document.getElementById(`${prefix}Type`).value),shirt1:Number(document.getElementById(`${prefix}Shirt1`).value),shirt2:Number(document.getElementById(`${prefix}Shirt2`).value),shorts:Number(document.getElementById(`${prefix}Shorts`).value),socks:Number(document.getElementById(`${prefix}Socks`).value)}}
+  function wireKitPreview(prefix){["Type","Shirt1","Shirt2","Shorts","Socks"].forEach(s=>document.getElementById(`${prefix}${s}`).onchange=()=>{document.getElementById(`${prefix}Preview`).innerHTML=kitPreview(readKitForm(prefix))})}
+  function squadRole(i){return i<11?"XI":i<16?"SUB":"RES"}
+  function setChrome(show){topbar.classList.toggle("hidden",!show);footerbar.classList.toggle("hidden",!show);if(show){if(state.simplePurpose){const friendly=state.kind==="career"?`My Career · ${state.career?.club||""}`:state.kind==="team"?(state.simplePurpose==="kits"?"Kits":"Players & Teams"):state.kind==="exe"?"Game Enhancements":"SWOS Studio";fileMeta.textContent=friendly;modeLine.innerHTML='<span class="modepill direct">SIMPLE MODE</span><span class="tiny">SWOS Studio handles the technical details</span>';undoBtn.disabled=state.changed.size===0;primarySaveBtn.textContent=state.kind==="exe"?"Save enhanced game":"Save changes";primarySaveBtn.className="btn btn-green";return}let details="";if(state.kind==="team"){const edited=state.changed.size?` · ${state.changed.size} pending edit${state.changed.size===1?'':'s'}`:"";details=`${state.db.count} teams${edited}`}else if(state.kind==="pool"){details=`Foreign transfer pool · ${state.pool.count} players${state.changed.size?' · edited':''}`}else if(state.kind==="exe"){details=`SWOS EXE · ${state.exe?.status==="endless"?"ENDLESS PATCH":state.exe?.status==="normal"?"20-SEASON LIMIT":state.exe?.status==="mixed"?"PARTIAL PATCH":"UNSUPPORTED"}${state.changed.size?' · edited':''}`}else{details=`Career · ${state.career.club}${state.changed.size?' · edited':''}`}fileMeta.textContent=`${state.fileName} · ${details} · ${state.bytes.length.toLocaleString()} bytes`;if(state.kind==="exe"){modeLine.innerHTML='<span class="modepill direct">SAFE COPY MODE</span><span class="tiny">The app never overwrites the EXE automatically</span>';primarySaveBtn.textContent="Save EXE copy";primarySaveBtn.className="btn btn-green"}else{modeLine.innerHTML=state.direct?'<span class="modepill direct">DIRECT SAVE</span><span class="tiny">Save can overwrite the file you opened</span>':'<span class="modepill">EXPORT MODE</span><span class="tiny">Download then replace manually</span>';primarySaveBtn.textContent=state.direct?"Save to SWOS":"Export file";primarySaveBtn.className=`btn ${state.direct?'btn-green':'btn-primary'}`}undoBtn.disabled=state.changed.size===0}}
+  function render(){if(state.view==="landing"){setChrome(false);renderLanding();return}if(state.view==="setup"){setChrome(false);renderSetupCentre();return}if(state.view==="careerLibrary"){setChrome(false);renderCareerLibrary();return}if(state.view==="databaseLibrary"){setChrome(false);renderDatabaseLibrary();return}if(state.view==="advancedHome"){setChrome(false);renderAdvancedHome();return}if(state.view==="safety"){setChrome(false);renderSafetyCentre();return}if(state.view==="play"){setChrome(false);renderPlayCentre();return}setChrome(true);if(state.view==="teams")renderTeams();if(state.view==="team")renderTeam();if(state.view==="player")renderPlayer();if(state.view==="teamOrder")renderTeamOrder();if(state.view==="transfer")renderTransfer();if(state.view==="playerSearch")renderPlayerSearch();if(state.view==="audit")renderAudit();if(state.view==="career")renderCareer();if(state.view==="careerPlayer")renderCareerPlayer();if(state.view==="careerOrder")renderCareerOrder();if(state.view==="pool")renderPool();if(state.view==="poolPlayer")renderPoolPlayer();if(state.view==="poolSource")renderPoolSource();if(state.view==="exe")renderExe()}
+
+  async function openSimple(kind,purpose){
+    state.simplePurpose=purpose;
+    if(directoryApiAvailable){
+      const ok=await ensureGameFolder();
+      if(ok){
+        setup.info=await scanGameFolder(setup.handle);
+        if(kind==="career"){state.view="careerLibrary";state.message=null;render();loadCareerLibraryDetails();window.scrollTo(0,0);return}
+        if(kind==="team"){state.view="databaseLibrary";state.message=null;render();loadDatabaseLibraryDetails();window.scrollTo(0,0);return}
+        if(kind==="exe"){
+          const entry=setup.info.preferredExe;
+          if(entry){const file=await entry.handle.getFile();await loadFile(file,entry.handle,false,"exe");return}
+        }
+      }
+    }
+    if(directApiAvailable)openDirect(kind);else fileInput.click()
+  }
+  function renderLanding(){main.innerHTML=`<section class="hero studio-hero"><div class="simple-pill">✓ Simple Mode</div><h1>SWOS Studio</h1><p class="studio-lead">Make Sensible World of Soccer your own. Choose what you want to change — SWOS Studio takes care of the files, codes and technical work underneath.</p>${setupBannerHtml()}
+    <div class="studio-grid">
+      <button class="studio-tile" id="simpleCareer"><span class="ico">🏆</span><strong>My Career</strong><span>Money, squad, transfers and career options.</span></button>
+      <button class="studio-tile" id="simplePlayers"><span class="ico">👤</span><strong>Players & Teams</strong><span>Edit players, squads, managers and formations.</span></button>
+      <button class="studio-tile" id="simpleKits"><span class="ico">👕</span><strong>Kits</strong><span>Choose a club and redesign home or away kits.</span></button>
+      <button class="studio-tile" id="simpleEnhancements"><span class="ico">✨</span><strong>Game Enhancements</strong><span>Turn supported SWOS upgrades on or off.</span></button>
+      <button class="studio-tile" id="simpleSafety"><span class="ico">🕒</span><strong>Time Machine</strong><span>${backup.master?"Master Version protected · create or restore checkpoints.":"Save points and go back in time if you need to."}</span></button>
+      <button class="studio-tile" id="simpleUpdates"><span class="ico">🌍</span><strong>Update SWOS</strong><span>Real-world squad updates are part of the Career+ roadmap.</span></button>
+      <button class="studio-tile play" id="simplePlay"><span class="ico">▶️</span><strong>PLAY SWOS</strong><span>${launcher.profile?`Ready · ${esc(launcher.profile.title||"Magic DOSBox")}`:"Connect Magic DOSBox once, then launch your game directly."}</span></button>
+    </div>
+    <div class="studio-trust"><div><strong>Safe changes</strong><span>Verified before saving</span></div><div><strong>Easy restore</strong><span>Protection being built in</span></div><div><strong>No hex editing</strong><span>Technical detail stays hidden</span></div></div>
+    ${state.message?`<div class="notice error section-gap">${esc(state.message)}</div>`:""}
+    <button class="advanced-link" id="advancedHome">Advanced Tools</button>
+    <div class="about section-gap">Unofficial fan-made SWOS project. Not affiliated with Sensible Software or Codemasters.</div>
+  </section>`;
+    const startSetup=document.getElementById("startSetup"),reconnectSetup=document.getElementById("reconnectSetup"),openSetup=document.getElementById("openSetup");
+    if(startSetup)startSetup.onclick=async()=>{if(await chooseGameFolder()){state.view="setup";render();window.scrollTo(0,0)}};
+    if(reconnectSetup)reconnectSetup.onclick=async()=>{if(await refreshSetup(true)){render();window.scrollTo(0,0)}};
+    if(openSetup)openSetup.onclick=()=>{state.view="setup";render();window.scrollTo(0,0)};
+    document.getElementById("simpleCareer").onclick=()=>openSimple("career","career");
+    document.getElementById("simplePlayers").onclick=()=>openSimple("team","players");
+    document.getElementById("simpleKits").onclick=()=>openSimple("team","kits");
+    document.getElementById("simpleEnhancements").onclick=()=>openSimple("exe","enhancements");
+    document.getElementById("simpleSafety").onclick=async()=>{if(directoryApiAvailable)await ensureGameFolder();state.view="safety";render();window.scrollTo(0,0)};
+    document.getElementById("simpleUpdates").onclick=()=>alert("Real-world squad updating is saved on the SWOS Career+ roadmap. We will build the safe foundations first.");
+    document.getElementById("simplePlay").onclick=()=>{state.view="play";render();window.scrollTo(0,0)};
+    document.getElementById("advancedHome").onclick=()=>{state.simplePurpose=null;state.view="advancedHome";render();window.scrollTo(0,0)}
+  }
+
+
+  function renderSetupCentre(){
+    const info=setup.info,connected=setup.permission==="granted"&&info?.looksValid;
+    main.innerHTML=`<section class="hero"><button class="btn back" id="setupBack">← SWOS Studio</button><div class="simple-pill">⚙️ One-time setup</div><h1>Connect your SWOS game</h1><p class="studio-lead">Choose the main <strong style="color:var(--text)">GAME</strong> folder once. SWOS Studio then knows where careers, databases and game enhancements live — you should not have to browse through Downloads every time.</p>
+      ${connected?`<div class="setup-banner ready section-gap"><div class="setup-head"><span class="setup-dot"></span><span class="grow"><strong>${esc(info.folderName)} is connected</strong><span>SWOS Studio can use this folder directly.</span></span></div><div class="setup-checks"><div class="setup-check"><strong>✅ ${info.careers.length} career${info.careers.length===1?"":"s"}</strong><span>Found in GAME</span></div><div class="setup-check"><strong>✅ ${info.exes.length} SWOS EXE${info.exes.length===1?"":"s"}</strong><span>Game enhancements</span></div><div class="setup-check"><strong>✅ ${info.teamFiles.length} TEAM database${info.teamFiles.length===1?"":"s"}</strong><span>Found in GAME/DATA</span></div><div class="setup-check"><strong>${info.pool?"✅":"○"} Foreign market</strong><span>${info.pool?"POOLPLYR.DAT found":"Not found"}</span></div><div class="setup-check"><strong>${launcher.profile?"✅":"○"} Play SWOS</strong><span>${launcher.profile?esc(launcher.profile.title||"Magic DOSBox connected"):"Magic DOSBox profile not linked yet"}</span></div></div></div>`:`<div class="setup-banner warn section-gap"><div class="setup-head"><span class="setup-dot"></span><span class="grow"><strong>${setup.remembered?"Reconnect your saved SWOS folder":"SWOS is not connected yet"}</strong><span>${setup.error?esc(setup.error):setup.remembered?"Your GAME-folder location is still remembered. Chrome just needs permission to use it again.":"Select the GAME folder that contains your SWOS executable and DATA folder."}</span></span></div></div>`}
+      <div class="friendly-card section-gap"><h3>What you select</h3><p class="about">Only select the main <strong>GAME</strong> folder. Studio finds the rest underneath it automatically — including the DATA folder and your .CAR careers.</p></div>
+      <div class="setup-actions"><button class="btn btn-green" id="chooseSetup">${connected?"Change SWOS folder":"Choose SWOS GAME folder"}</button>${setup.remembered&&!connected?'<button class="btn btn-blue" id="reconnectHere">Reconnect</button>':""}${connected?'<button class="btn" id="refreshSetup">Refresh</button><button class="btn" id="forgetSetup">Forget setup</button>':""}</div>
+      ${connected?`<div class="notice info section-gap"><strong>Ready.</strong> From now on, tapping <strong>My Career</strong> will show your careers inside SWOS Studio instead of dropping you into Android Downloads. Players, Kits and Game Enhancements also start from the correct SWOS location.</div>${backup.master?`<div class="notice section-gap"><strong>🛡 Master Version protected.</strong> Your whole SWOS GAME folder has a trusted recovery copy.</div>`:`<div class="notice info section-gap"><strong>Next recommended step:</strong> open Restore & Safety and create your Master Version.</div>`}`:""}
+    </section>`;
+    document.getElementById("setupBack").onclick=()=>{state.view="landing";render();window.scrollTo(0,0)};
+    document.getElementById("chooseSetup").onclick=async()=>{if(await chooseGameFolder()){render();window.scrollTo(0,0)}};
+    const reconnect=document.getElementById("reconnectHere");if(reconnect)reconnect.onclick=async()=>{await refreshSetup(true);render();window.scrollTo(0,0)};
+    const refresh=document.getElementById("refreshSetup");if(refresh)refresh.onclick=async()=>{setup.info=await scanGameFolder(setup.handle);await loadBackupStatus();render();window.scrollTo(0,0)};
+    const forget=document.getElementById("forgetSetup");if(forget)forget.onclick=async()=>{if(!confirm("Forget the saved SWOS folder location? No SWOS files will be deleted."))return;await forgetGameFolder();render();window.scrollTo(0,0)}
+  }
+
+  async function careerSummary(entry){
+    try{const f=await entry.handle.getFile(),b=new Uint8Array(await f.arrayBuffer());if(b.length!==CAREER_FILE_SIZE)return{name:entry.name,valid:false,reason:"Unsupported career size",handle:entry.handle};return{name:entry.name,valid:true,club:readText(b,C.club,C.clubLength),manager:readText(b,C.manager,C.managerLength),handle:entry.handle,modified:f.lastModified}}
+    catch(e){return{name:entry.name,valid:false,reason:e.message,handle:entry.handle}}
+  }
+  async function loadCareerLibraryDetails(){
+    if(!setup.info)return;state.libraryItems=await Promise.all(setup.info.careers.map(careerSummary));if(state.view==="careerLibrary")renderCareerLibrary()
+  }
+  function renderCareerLibrary(){
+    const items=state.libraryItems.length?state.libraryItems:setup.info?.careers?.map(x=>({name:x.name,handle:x.handle,loading:true}))||[];
+    main.innerHTML=`<section class="hero"><button class="btn back" id="careerLibBack">← SWOS Studio</button><div class="simple-pill">🏆 My Career</div><h1>Choose your career</h1><p class="studio-lead">These are the career saves in your connected SWOS GAME folder. Tap one and Studio opens it directly.</p>
+      <div class="stack section-gap">${items.length?items.map((x,i)=>`<button class="library-card" data-careerlib="${i}" ${x.valid===false?"disabled":""}><span class="ico">🏆</span><span class="grow"><strong>${x.loading?esc(x.name):x.valid?esc(x.club||x.name):esc(x.name)}</strong><span>${x.loading?"Reading career…":x.valid?`${esc(x.manager||"Manager")} · ${esc(x.name)}`:`Could not read: ${esc(x.reason||"unsupported")}`}</span></span><span>›</span></button>`).join(""):'<div class="empty">No .CAR careers were found in this GAME folder.</div>'}</div>
+      <div class="setup-actions"><button class="btn btn-blue" id="careerLibRefresh">Refresh careers</button><button class="btn" id="careerLibSetup">Change setup</button></div>
+    </section>`;
+    document.getElementById("careerLibBack").onclick=()=>{state.view="landing";render();window.scrollTo(0,0)};
+    document.getElementById("careerLibRefresh").onclick=async()=>{setup.info=await scanGameFolder(setup.handle);state.libraryItems=[];renderCareerLibrary();await loadCareerLibraryDetails()};
+    document.getElementById("careerLibSetup").onclick=()=>{state.view="setup";render();window.scrollTo(0,0)};
+    document.querySelectorAll("[data-careerlib]").forEach(b=>b.onclick=async()=>{const item=state.libraryItems[Number(b.dataset.careerlib)]||items[Number(b.dataset.careerlib)];if(!item?.handle)return;try{const file=await item.handle.getFile();state.simplePurpose="career";await loadFile(file,item.handle,true,"career")}catch(e){alert(`Could not open this career: ${e.message}`)}})
+  }
+
+  async function databaseSummary(entry){
+    try{const f=await entry.handle.getFile(),b=new Uint8Array(await f.arrayBuffer()),count=validateTeam(b);const sample=[];for(let i=0;i<Math.min(3,count);i++){const o=HEADER_SIZE+i*TEAM_RECORD_SIZE,n=readText(b,o+T.name,T.nameLength);if(n)sample.push(n)}return{name:entry.name,valid:true,count,sample,handle:entry.handle,modified:f.lastModified}}
+    catch(e){return{name:entry.name,valid:false,reason:e.message,handle:entry.handle}}
+  }
+  async function loadDatabaseLibraryDetails(){
+    if(!setup.info)return;state.libraryItems=await Promise.all(setup.info.teamFiles.map(databaseSummary));if(state.view==="databaseLibrary")renderDatabaseLibrary()
+  }
+  function renderDatabaseLibrary(){
+    const kits=state.simplePurpose==="kits",items=state.libraryItems.length?state.libraryItems:setup.info?.teamFiles?.map(x=>({name:x.name,handle:x.handle,loading:true}))||[];
+    main.innerHTML=`<section class="hero"><button class="btn back" id="dbLibBack">← SWOS Studio</button><div class="simple-pill">${kits?"👕 Kits":"👤 Players & Teams"}</div><h1>${kits?"Choose your team database":"Choose a team database"}</h1><p class="studio-lead">Studio found these SWOS team databases inside GAME/DATA. The club examples help you recognise the one you want without browsing Android folders.</p>
+      <div class="stack section-gap">${items.length?items.map((x,i)=>`<button class="library-card" data-dblib="${i}" ${x.valid===false?"disabled":""}><span class="ico">${kits?"👕":"⚽"}</span><span class="grow"><strong>${x.loading?esc(x.name):x.valid?`${x.count} teams`:esc(x.name)}</strong><span>${x.loading?"Reading database…":x.valid?`${esc(x.sample.join(" · ")||x.name)} · ${esc(x.name)}`:`Could not read: ${esc(x.reason||"unsupported")}`}</span></span><span>›</span></button>`).join(""):'<div class="empty">No TEAM.* files were found in GAME/DATA.</div>'}</div>
+      <div class="setup-actions"><button class="btn btn-blue" id="dbLibRefresh">Refresh databases</button><button class="btn" id="dbLibSetup">Change setup</button></div>
+    </section>`;
+    document.getElementById("dbLibBack").onclick=()=>{state.view="landing";render();window.scrollTo(0,0)};
+    document.getElementById("dbLibRefresh").onclick=async()=>{setup.info=await scanGameFolder(setup.handle);state.libraryItems=[];renderDatabaseLibrary();await loadDatabaseLibraryDetails()};
+    document.getElementById("dbLibSetup").onclick=()=>{state.view="setup";render();window.scrollTo(0,0)};
+    document.querySelectorAll("[data-dblib]").forEach(b=>b.onclick=async()=>{const item=state.libraryItems[Number(b.dataset.dblib)]||items[Number(b.dataset.dblib)];if(!item?.handle)return;try{const file=await item.handle.getFile();await loadFile(file,item.handle,true,"team")}catch(e){alert(`Could not open this database: ${e.message}`)}})
+  }
+
+  function renderSafetyCentre(){
+    const connected=setup.permission==="granted"&&setup.info?.looksValid,master=backup.master,all=backup.points||[],points=all.filter(p=>!isAutomaticPoint(p)),autos=all.filter(isAutomaticPoint);
+    main.innerHTML=`<section class="hero"><button class="btn back" id="safetyBack">← SWOS Studio</button><div class="simple-pill">🕒 Time Machine</div><h1>Go back in time</h1><p class="studio-lead">Save where you are now. If you change something and don't like it, come back here and go back to an earlier point.</p>
+      ${!connected?`<div class="setup-banner warn section-gap"><div class="setup-head"><span class="setup-dot"></span><span class="grow"><strong>${setup.remembered?"Reconnect SWOS":"Connect SWOS first"}</strong><span>${setup.remembered?"Your GAME folder is remembered. Chrome just needs permission to use it again.":"Studio needs access to your GAME folder first."}</span></span><button class="btn btn-green" id="safetyConnect">${setup.remembered?"Reconnect":"Connect"}</button></div></div>`:""}
+      ${connected&&master?`<div class="backup-hero section-gap"><h3 style="margin:0">⭐ Master Version</h3><p class="about">Your trusted safe version of SWOS.</p><div class="when"><strong>${friendlySaved({meta:master.meta})}</strong></div><div class="setup-actions"><button class="btn btn-green" id="masterCreate">Update safe version</button><button class="btn btn-blue" id="masterRestore">Go back to Master Version</button></div></div>`:""}
+      ${connected&&!master?`<div class="backup-hero unprotected section-gap"><h3 style="margin:0">⭐ Create your safe version</h3><p class="about">Keep one trusted version you can always return to.</p><button class="btn btn-green big section-gap" id="masterCreate">Create Master Version</button></div>`:""}
+      ${backup.loading?`<div class="progress-wrap section-gap"><strong>Saving your SWOS point…</strong><div class="about" id="backupProgressText">${esc(backup.progress||"Working…")}</div><div class="progress-line"><span id="backupProgressBar" style="width:${backup.total?Math.round(backup.done/backup.total*100):8}%"></span></div></div>`:""}
+      ${backup.error?`<div class="notice error section-gap"><strong>That didn't finish.</strong> ${esc(backup.error)}</div>`:""}
+      ${connected&&!backup.loading?`<div class="friendly-card section-gap"><h3>💾 Save where I am now</h3><p class="about">Create a point you can return to later.</p><button class="btn btn-blue big" id="createPoint">Save this point</button></div>`:""}
+      ${connected?`<div class="section-gap"><div class="row"><h3 class="grow">Earlier points</h3><span class="badge">${points.length}</span></div><div class="stack">${points.length?points.map((p,i)=>`<div class="time-card"><div class="what">${esc(restoreSubject(p))}</div><div class="when">${esc(friendlySaved(p))}</div>${cleanLegacyLabel(p)&&cleanLegacyLabel(p)!=="Saved point"?`<div class="note">${esc(cleanLegacyLabel(p))}</div>`:""}<div class="time-actions"><button class="btn btn-blue go" data-restorepoint="${i}">Go back to this point</button><button class="btn" data-deletepoint="${i}">Delete</button></div></div>`).join(""):'<div class="empty">No earlier points yet.</div>'}</div></div>`:""}
+      ${autos.length?`<details class="safety-details"><summary>Safety backups (${autos.length})</summary><div class="stack section-gap">${autos.map((p,i)=>`<div class="restore-item"><div class="title">Automatic safety backup</div><div class="meta">${esc(friendlySaved(p))}</div><div class="actions"><button class="btn btn-blue" data-restoreauto="${i}">Go back</button><button class="btn" data-deleteauto="${i}">Delete</button></div></div>`).join("")}</div></details>`:""}
+      <div class="tiny section-gap">SWOS Studio automatically keeps a safety copy before a restore. Those technical backups stay hidden unless you need them.</div>
+    </section>`;
+    document.getElementById("safetyBack").onclick=()=>{state.view="landing";render();window.scrollTo(0,0)};
+    const connect=document.getElementById("safetyConnect");if(connect)connect.onclick=async()=>{const ok=setup.remembered?await refreshSetup(true):await chooseGameFolder();if(ok){await loadBackupStatus();renderSafetyCentre();window.scrollTo(0,0)}};
+    const create=document.getElementById("masterCreate");if(create)create.onclick=createMasterBackup;
+    const restore=document.getElementById("masterRestore");if(restore)restore.onclick=()=>restoreSnapshot(master.handle,"Master Version");
+    const point=document.getElementById("createPoint");if(point)point.onclick=async()=>{const defaultName=state.kind==="career"&&state.career?.club?`${state.career.club} career`:"Saved point";const label=(prompt("Optional note for this point:",defaultName)||"").trim();if(!label)return;const made=await createRestorePoint(label,false);if(made){await loadBackupStatus();renderSafetyCentre();window.scrollTo(0,0)}};
+    document.querySelectorAll("[data-restorepoint]").forEach(b=>b.onclick=()=>{const p=points[Number(b.dataset.restorepoint)];if(p)restoreSnapshot(p.handle,`${restoreSubject(p)} · ${friendlySaved(p)}`)});
+    document.querySelectorAll("[data-deletepoint]").forEach(b=>b.onclick=()=>{const p=points[Number(b.dataset.deletepoint)];if(p)deleteRestorePoint(p.name)});
+    document.querySelectorAll("[data-restoreauto]").forEach(b=>b.onclick=()=>{const p=autos[Number(b.dataset.restoreauto)];if(p)restoreSnapshot(p.handle,"automatic safety backup")});
+    document.querySelectorAll("[data-deleteauto]").forEach(b=>b.onclick=()=>{const p=autos[Number(b.dataset.deleteauto)];if(p)deleteRestorePoint(p.name)});
+  }
+
+  function renderPlayCentre(){
+    const profile=launcher.profile,q=state.magicQuery.trim().toLowerCase(),profiles=state.magicProfiles.filter(p=>!q||p.title.toLowerCase().includes(q)||p.gameId.includes(q));
+    main.innerHTML=`<section class="hero"><button class="btn back" id="playBack">← SWOS Studio</button><div class="simple-pill">▶ Play</div><h1>${profile?"Ready to play":"Connect Magic DOSBox"}</h1>
+      ${profile?`<div class="play-hero section-gap"><div class="launch-status">✓ Magic DOSBox connected</div><h2 style="margin-bottom:5px">${esc(profile.title||"SWOS")}</h2><p class="about">Tap once and Studio will ask Android to open this exact Magic DOSBox game profile.</p><a class="play-button section-gap" id="playNow" href="${esc(magicIntent(profile))}"><span>▶</span><span>PLAY SWOS</span></a><div class="tiny section-gap">Direct profile launching is now ready for testing on your phone. Magic DOSBox documents the profile ID as <code>intent_msg1</code>.</div></div>
+        <div class="friendly-card section-gap"><h3>Magic DOSBox setup</h3><div class="profile-card"><strong>${esc(profile.title||"SWOS")}</strong><span>Connected game profile</span></div><div class="setup-actions"><button class="btn btn-blue" id="changeMagic">Change game profile</button><a class="btn" href="${esc(magicAppIntent(profile.packageName||"bruenor.magicbox"))}">Open Magic DOSBox only</a></div><details class="safety-details"><summary>Technical details</summary><div class="tiny section-gap">Game ID: <code>${esc(profile.gameId)}</code><br>Package: <code>${esc(profile.packageName||"bruenor.magicbox")}</code></div></details></div>`
+      :`<p class="studio-lead">This is a one-time setup. Studio needs to know which game in Magic DOSBox is your SWOS profile. Once linked, the home-screen PLAY SWOS button can launch it directly.</p>
+        <div class="friendly-card section-gap"><h3>Best option: connect Magic DOSBox</h3><p class="about">Magic DOSBox stores each game profile with an ID in <strong>collection.xml</strong>. Choose that file once and Studio will list your Magic DOSBox games so you can simply tap SWOS.</p><button class="btn btn-green big" id="chooseCollection">Choose Magic DOSBox collection.xml</button><div class="tiny section-gap">Depending on where Magic DOSBox stores its settings, Android may or may not allow Chrome to browse to this file. If not, use the manual game-ID option below.</div></div>
+        <div class="friendly-card section-gap"><h3>Alternative</h3><p class="about">If Android hides collection.xml, enter the Magic DOSBox game ID once. Studio will remember it.</p><button class="btn btn-blue big" id="manualMagic">Enter game ID manually</button></div>`}
+      ${launcher.error?`<div class="notice error section-gap"><strong>Magic DOSBox setup:</strong> ${esc(launcher.error)}</div>`:""}
+      ${!profile&&state.magicProfiles.length?`<div class="section-gap"><h3>Choose your SWOS profile</h3><input class="search" id="magicSearch" placeholder="Search Magic DOSBox games…" value="${esc(state.magicQuery)}"/><div class="profile-list section-gap">${profiles.map((p,i)=>`<button class="profile-choice" data-magicprofile="${state.magicProfiles.indexOf(p)}"><span>🎮</span><span class="grow"><strong>${esc(p.title)}</strong><span>${/swos|sensible world/i.test(p.title)?"Looks like SWOS":"Magic DOSBox game"}</span></span><span>›</span></button>`).join("")||'<div class="empty">No matching profiles.</div>'}</div></div>`:""}
+      ${!profile?`<div class="notice info section-gap"><strong>Why this should work:</strong> Magic DOSBox's developer documents direct game launching through <code>uiGameStarterActivity</code> with the profile ID passed as <code>intent_msg1</code>. Chrome supports Android intent links when the user taps them. We still need to verify that Magic DOSBox exposes this activity to Chrome on your phone.</div>`:""}
+    </section>`;
+    document.getElementById("playBack").onclick=()=>{state.view="landing";render();window.scrollTo(0,0)};
+    const choose=document.getElementById("chooseCollection");if(choose)choose.onclick=chooseMagicCollection;
+    const manual=document.getElementById("manualMagic");if(manual)manual.onclick=async()=>{const id=(prompt("Enter the Magic DOSBox game ID for your SWOS profile:","")||"").trim();if(!id)return;const title=(prompt("What should Studio call this game?","SWOS")||"SWOS").trim()||"SWOS";await saveLauncherProfile({title,gameId:id,packageName:"bruenor.magicbox",source:"manual"});renderPlayCentre();window.scrollTo(0,0)};
+    const change=document.getElementById("changeMagic");if(change)change.onclick=async()=>{if(!confirm("Change the Magic DOSBox game linked to PLAY SWOS?"))return;await forgetLauncherProfile();state.magicProfiles=[];state.magicQuery="";renderPlayCentre();window.scrollTo(0,0)};
+    const search=document.getElementById("magicSearch");if(search)search.oninput=e=>{state.magicQuery=e.target.value;renderPlayCentre();const s=document.getElementById("magicSearch");s?.focus();s?.setSelectionRange(s.value.length,s.value.length)};
+    document.querySelectorAll("[data-magicprofile]").forEach(b=>b.onclick=async()=>{const p=state.magicProfiles[Number(b.dataset.magicprofile)];if(!p)return;await saveLauncherProfile({...p,packageName:"bruenor.magicbox",source:"collection.xml"});renderPlayCentre();window.scrollTo(0,0)})
+  }
+
+  function renderAdvancedHome(){main.innerHTML=`<section class="hero"><div><div class="eyebrow">SWOS made simple · v1.8</div><h1>SWOS Editor</h1><p style="color:var(--muted)">Edit real DOS Sensible World of Soccer <strong style="color:var(--text)">TEAM.*</strong> databases, <strong style="color:var(--text)">.CAR</strong> careers, <strong style="color:var(--text)">POOLPLYR.DAT</strong> and now the <strong style="color:var(--text)">SWOS executable</strong> on your phone.</p></div>
+    <div class="card stack"><strong style="color:var(--yellow)">Use the correct SWOS folder</strong><div class="grid2"><div class="notice info"><strong>CAREERS + EXE</strong><br><span class="about">Main <code>GAME</code> folder</span></div><div class="notice info"><strong>TEAM.* + POOLPLYR.DAT</strong><br><span class="about"><code>GAME/DATA</code> folder</span></div></div><div class="tiny">The editor now uses separate Android file pickers for careers and databases. Chrome can remember a different last-used folder for each picker, so after the first selection you should normally land back in the right place.</div></div>
+    ${directApiAvailable?`<div class="card stack"><strong style="color:var(--green)">Direct save</strong><button class="btn btn-green big" id="openCareerDirect">Open Career (.CAR) from GAME</button><button class="btn btn-green big" id="openExeDirect">Open SWOS EXE from GAME</button><button class="btn btn-blue big" id="openTeamDirect">Open TEAM database from GAME/DATA</button><button class="btn btn-blue big" id="openPoolDirect">Open POOLPLYR.DAT from GAME/DATA</button><div class="tiny">After editing, “Save to SWOS” overwrites the file you opened in place. Close SWOS before saving.</div></div>`:`<div class="notice info">Your current browser has not exposed direct file-write access to this page. Export mode still works.</div>`}
+    <button class="btn btn-primary big" id="openExport">Open any supported file — export mode</button>${state.message?`<div class="notice error">${esc(state.message)}</div>`:""}
+    <div class="card stack"><strong>New in v1.8 — PLAY SWOS setup</strong><span class="about">• Link one Magic DOSBox game profile to SWOS Studio.</span><span class="about">• Import Magic DOSBox collection.xml and choose SWOS from a friendly game list.</span><span class="about">• Manual profile-ID fallback if Android hides the Magic DOSBox settings file.</span><span class="about">• PLAY SWOS uses Magic DOSBox’s documented <code>intent_msg1</code> profile ID.</span><span class="about">• Profile choice is remembered in the browser.</span></div><div class="card stack"><strong>New in v1.7.4 — Simple Time Machine</strong><span class="about">• Friendly saved date/time instead of internal folder names.</span><span class="about">• Main action is “Go back to this point”.</span><span class="about">• Automatic safety backups are hidden unless needed.</span><span class="about">• New points remember the current career name when available.</span></div><div class="card stack"><strong>New in v1.7.3 — One-tap reconnect</strong><span class="about">• Tapping Restore & Safety now uses that tap to reconnect the remembered GAME folder automatically.</span><span class="about">• If Chrome has suspended folder permission, Studio asks only for permission again — not for the user to find the folder again.</span><span class="about">• The Safety page no longer misleadingly says setup has been lost when the location is still remembered.</span></div><div class="card stack"><strong>New in v1.7.2 — Smart Backup</strong><span class="about">• Stops copying thousands of untouched game assets.</span><span class="about">• Protects all careers, TEAM.* databases, POOLPLYR.DAT and SWOS executables.</span><span class="about">• Restore now changes only those protected files rather than clearing/rebuilding the whole GAME folder.</span><span class="about">• Future editable assets such as chants and pitches can be added to the protected set as those features are built.</span></div><div class="card stack"><strong>New in v1.7.1 — Backup recovery fix</strong><span class="about">• Repairs incomplete Master folders left by an interrupted first backup.</span><span class="about">• Handles Android file/folder type collisions safely.</span><span class="about">• A Master is only shown as protected after metadata confirms a successful snapshot.</span></div><div class="card stack"><strong>New in v1.7 — Master Backup & Restore Points</strong><span class="about">• Protect the entire connected GAME folder.</span><span class="about">• Keep one trusted Master Version and update it whenever you choose.</span><span class="about">• Create named restore points at any stage of a career or modding journey.</span><span class="about">• Restoring first creates an automatic emergency checkpoint of the current game.</span><span class="about">• Backup folders are excluded from snapshots so they never copy themselves.</span></div><div class="card stack"><strong>New in v1.6 — One-time SWOS setup</strong><span class="about">• Select the main GAME folder once.</span><span class="about">• Chrome can remember the folder handle between visits.</span><span class="about">• My Career now lists .CAR saves inside Studio.</span><span class="about">• Players / Kits list TEAM databases from GAME/DATA.</span><span class="about">• Game Enhancements automatically opens the preferred SWOS EXE.</span></div><div class="card stack"><strong>EXE Tools / Endless Career</strong><span class="about">• Opens your real <code>SWSENGPP.EXE</code> from the main GAME folder.</span><span class="about">• Detects all 8 verified 20-season comparison sites.</span><span class="about">• Enables or restores the endless-career patch without hex editing.</span><span class="about">• Saves a separate <code>SWSEND.EXE</code> copy rather than automatically overwriting the original.</span><span class="about">• The patched EXE has already launched successfully with your TRANS2 career.</span></div><div class="card stack"><strong>Unlimited transfers + squad capacity</strong><span class="about">• FF at 0xD880 is verified in-game: you can keep making transfers beyond the normal chairman limit.</span><span class="about">• Career squad size is read from verified offset 0xE08C.</span><span class="about">• Unlimited transfers do not mean an unlimited squad.</span></div><div class="card stack"><strong>Connected transfer tools</strong><span class="about">• Load a TEAM.* file alongside POOLPLYR.DAT.</span><span class="about">• See which pool entries are linked to that database and whether they are current.</span><span class="about">• Sync every linked pool player from the TEAM file in one tap.</span><span class="about">• Replace any pool slot with a player selected from the TEAM database, including correct origin references.</span></div><div class="card stack"><strong>Foreign transfer market</strong><span class="about">• Opens your real GAME/DATA/POOLPLYR.DAT.</span><span class="about">• Reads all 900 transfer-pool records.</span><span class="about">• Search by player or origin club.</span><span class="about">• Edit the transfer-market player’s nationality, number, position, appearance, abilities and value.</span><span class="about">• Direct-save back over POOLPLYR.DAT after byte-for-byte verification.</span></div><div class="card stack"><strong>Safer power tools</strong><span class="about">• Database integrity audit before you save.</span><span class="about">• Copy a player’s known football data and paste it into another slot.</span><span class="about">• Quick ability presets while editing.</span><span class="about">• Restore one player slot from the last saved version.</span><span class="about">• Faster XI / SUB / RES role controls.</span></div><div class="card stack"><strong>Squads, transfers & kits</strong><span class="about">• Reorder a club’s starting XI and substitutes.</span><span class="about">• Safely swap players between clubs without changing team sizes.</span><span class="about">• Edit home and away kit style/colours with a live preview.</span><span class="about">• Reorder XI, substitutes and reserves inside a career.</span><span class="about">• Search every player in the opened TEAM database.</span></div><div class="card stack"><strong>Folder-aware workflow</strong><span class="about">• Career picker remembers the main GAME folder.</span><span class="about">• TEAM picker remembers GAME/DATA separately.</span><span class="about">• Rename Career uses the career picker identity, helping Android return to GAME.</span></div>
+    <div class="card stack"><strong>Team Editor</strong><span class="about">Edit team name, coach/manager, division and formation as well as the full player editor.</span></div>
+    <div class="card stack"><strong>Career tools</strong><span class="about">Verified bank balance, career squad editing and Career Rename / Save As remain available.</span></div>
+    <div class="about">Unofficial fan-made editor. Not affiliated with Sensible Software or Codemasters.</div></section>`;
+    if(directApiAvailable){document.getElementById("openCareerDirect").onclick=()=>{state.simplePurpose=null;openDirect("career")};document.getElementById("openExeDirect").onclick=()=>{state.simplePurpose=null;openDirect("exe")};document.getElementById("openTeamDirect").onclick=()=>{state.simplePurpose=null;openDirect("team")};document.getElementById("openPoolDirect").onclick=()=>{state.simplePurpose=null;openDirect("pool")}}document.getElementById("openExport").onclick=()=>{state.simplePurpose=null;fileInput.click()} }
+
+  async function openDirect(expectedKind){try{
+    const options={multiple:false,id:expectedKind==="career"?"swos-career-game":expectedKind==="exe"?"swos-exe-game":expectedKind==="pool"?"swos-pool-data":"swos-team-data"};
+    if(expectedKind==="career")options.types=[{description:"SWOS career save",accept:{"application/octet-stream":[".car"]}}];if(expectedKind==="exe")options.types=[{description:"SWOS DOS executable",accept:{"application/octet-stream":[".exe"]}}];if(expectedKind==="pool")options.types=[{description:"SWOS foreign transfer pool",accept:{"application/octet-stream":[".dat"]}}];
+    const [handle]=await window.showOpenFilePicker(options),file=await handle.getFile();
+    if(expectedKind==="career"&&!file.name.toLowerCase().endsWith(".car"))throw new Error("Choose a .CAR career save from the main SWOS GAME folder.");
+    if(expectedKind==="exe"&&!file.name.toLowerCase().endsWith(".exe"))throw new Error("Choose SWSENGPP.EXE (or a previously patched SWOS EXE) from the main SWOS GAME folder.");
+    if(expectedKind==="team"&&(file.name.toLowerCase().endsWith(".car")||file.name.toLowerCase().endsWith(".exe")||file.name.toLowerCase()==="poolplyr.dat"))throw new Error("Choose a TEAM.* database from SWOS GAME/DATA.");if(expectedKind==="pool"&&file.name.toLowerCase()!=="poolplyr.dat")throw new Error("Choose POOLPLYR.DAT from SWOS GAME/DATA.");
+    await loadFile(file,handle,expectedKind==="exe"?false:true,expectedKind)
+  }catch(e){if(e&&e.name!=="AbortError"){state.message=`Direct open failed: ${e.message}`;render()}}}
+
+  async function loadFile(file,handle,direct,expectedKind=null){const bytes=new Uint8Array(await file.arrayBuffer());state.bytes=bytes;state.openingOriginal=bytes.slice();state.savedBaseline=bytes.slice();state.fileName=file.name;state.fileHandle=handle||null;state.direct=!!direct;state.changed=new Set();state.filter="all";state.query="";state.playerQuery="";state.poolQuery="";state.sourceQuery="";state.playerClipboard=null;state.db=null;state.career=null;state.pool=null;state.poolSource=null;state.exe=null;
+    const lower=file.name.toLowerCase();if(lower.endsWith(".exe")){state.kind="exe";parseExe();state.direct=false;state.view="exe";state.message=state.simplePurpose==="enhancements"?"Game enhancements are ready.":`Loaded SWOS executable in safe-copy mode. The original file will not be overwritten automatically.`;}else if(lower.endsWith(".car")){validateCareer(bytes);state.kind="career";parseCareer();state.view="career";state.message=state.simplePurpose==="career"?`Career loaded successfully.`:`Loaded career successfully${direct?' in direct-save mode':''}.`;}else if(lower==="poolplyr.dat"||bytes.length===POOL_FILE_SIZE){validatePool(bytes);state.kind="pool";parsePool();state.view="pool";state.message=`Loaded all ${POOL_COUNT} foreign-transfer pool entries${direct?' in direct-save mode':''}.`;}else{try{validateTeam(bytes);state.kind="team";parseDb();state.view="teams";state.message=state.simplePurpose==="kits"?`Choose the club whose kit you want to change.`:state.simplePurpose==="players"?`Choose a team or find a player.`:`Loaded ${state.db.count} teams successfully${direct?' in direct-save mode':''}.`;}catch(teamErr){try{validateCareer(bytes);state.kind="career";parseCareer();state.view="career";state.message=`Loaded career successfully${direct?' in direct-save mode':''}.`;}catch(carErr){try{validatePool(bytes);state.kind="pool";parsePool();state.view="pool";state.message=`Loaded all ${POOL_COUNT} foreign-transfer pool entries${direct?' in direct-save mode':''}.`;}catch(poolErr){throw new Error(`Unsupported SWOS file. TEAM check: ${teamErr.message} Career check: ${carErr.message} Pool check: ${poolErr.message}`)}}}}render();window.scrollTo(0,0)}
+
+  async function loadPoolSourceTeam(){try{let file;if(directApiAvailable){const [h]=await window.showOpenFilePicker({multiple:false,id:"swos-pool-source-team"});file=await h.getFile()}else{file=await new Promise((resolve,reject)=>{const i=document.createElement("input");i.type="file";i.onchange=()=>i.files[0]?resolve(i.files[0]):reject(new Error("No file chosen"));i.click()})}const bytes=new Uint8Array(await file.arrayBuffer());state.poolSource=parseTeamFileBytes(bytes,file.name);state.sourceQuery="";const s=sourcePoolStats();state.message=`Loaded ${file.name}: ${state.poolSource.count} teams. ${s.linked} pool entries reference this TEAM file; ${s.stale} currently differ.`;render()}catch(e){if(e&&e.name!=="AbortError")alert(`Could not load TEAM source: ${e.message}`)}}
+  function renderPool(){const q=state.poolQuery.trim().toLowerCase(),posFilter=state.filter;const matching=state.pool.records.filter(r=>(!q||r.player.name.toLowerCase().includes(q)||r.teamName.toLowerCase().includes(q))&&(posFilter==="all"||r.player.position===posFilter));const shown=matching.slice(0,250),stats=sourcePoolStats();const chip=(code,label)=>`<button class="chip ${state.filter===code?'active':''}" data-poolfilter="${code}">${esc(label)}</button>`;main.innerHTML=`${state.message?`<div class="notice section-gap">${esc(state.message)}</div>`:""}<div class="notice info section-gap"><strong>FOREIGN TRANSFER MARKET:</strong> <code>POOLPLYR.DAT</code> belongs in <code>GAME/DATA</code>. Changes are visible in existing careers when SWOS reads the foreign-market list.</div>
+    <div class="facts section-gap"><div class="fact"><small>Pool entries</small><strong>${state.pool.count}</strong></div><div class="fact"><small>Record size</small><strong>${POOL_RECORD_SIZE} bytes</strong></div><div class="fact"><small>Matches</small><strong>${matching.length}</strong></div><div class="fact"><small>Pending edits</small><strong>${state.changed.size}</strong></div></div>
+    <div class="source-card stack section-gap"><div class="row"><div class="grow"><strong>TEAM database link</strong><div class="about">${state.poolSource?`${esc(state.poolSource.fileName)} · ${state.poolSource.count} teams`:"Load a TEAM.* file to connect database players to the foreign transfer pool."}</div></div><button class="btn btn-blue" id="loadSource">${state.poolSource?"Change TEAM file":"Load TEAM file"}</button></div>${state.poolSource?`<div class="facts"><div class="fact"><small>Linked pool entries</small><strong>${stats.linked}</strong></div><div class="fact"><small>Exact matches</small><strong class="good">${stats.exact}</strong></div><div class="fact"><small>Different</small><strong class="${stats.stale?'warn':'good'}">${stats.stale}</strong></div><div class="fact"><small>Source teams</small><strong>${state.poolSource.count}</strong></div></div><div class="split-actions"><button class="btn btn-green" id="syncSource" ${stats.stale===0?"disabled":""}>Sync ${stats.stale} changed entries</button><button class="btn btn-blue" id="browseSource">Browse TEAM players</button></div><div class="tiny">Sync updates only pool entries whose nation + team number + source-player slot already point at this TEAM file. It does not create or remove pool entries.</div>`:""}</div>
+    <input class="search section-gap" id="poolSearch" placeholder="Search player or origin club…" value="${esc(state.poolQuery)}"/><div class="chips section-gap">${chip("all","All")}${positions.map((p,i)=>chip(String(i),p[1])).join("")}</div><div class="stack section-gap">${shown.map(r=>{const p=r.player,edited=state.changed.has(`pool:${r.index}`);return`<button class="player ${edited?'edited':''}" data-pool="${r.index}"><span class="shirt">${p.shirt}</span><span class="player-main"><span class="player-name">${esc(p.name||"(empty player)")}</span><span class="meta">#${r.index+1} · ${esc(positionInfo(p.multi)[1])} · ${esc(r.teamName||"(unknown club)")} · ${values[p.value]||hex(p.value)}</span></span>${edited?'<span class="badge">EDITED</span>':''}</button>`}).join("")||'<div class="empty">No transfer-pool players match.</div>'}</div>${matching.length>250?`<div class="tiny section-gap">Showing the first 250 of ${matching.length} matches. Search or filter to narrow the list.</div>`:""}${state.direct?`<div class="card section-gap"><h3>Direct-save mode</h3><p class="about">Save to SWOS overwrites the same POOLPLYR.DAT you opened in GAME/DATA and verifies the write byte-for-byte.</p><button class="btn btn-blue" id="exportPoolCopy">Export a copy instead</button></div>`:""}`;
+    document.getElementById("loadSource").onclick=loadPoolSourceTeam;if(state.poolSource){document.getElementById("browseSource").onclick=()=>{state.poolIndex=null;state.view="poolSource";state.message=null;render();window.scrollTo(0,0)};document.getElementById("syncSource").onclick=()=>{try{if(!confirm(`Sync all pool entries already linked to ${state.poolSource.fileName}?\\n\\n${stats.stale} entries currently differ. This will refresh their club name and complete 38-byte player record from the TEAM file.`))return;const r=syncSourceTeamToPool();state.message=`TEAM → Pool sync complete: ${r.updated} of ${r.linked} linked entries updated. Press ${state.direct?"Save to SWOS":"Export file"} to write POOLPLYR.DAT.`;render()}catch(e){alert(e.message)}}}
+    const s=document.getElementById("poolSearch");s.oninput=e=>{state.poolQuery=e.target.value;renderPool();const x=document.getElementById("poolSearch");x.focus();x.setSelectionRange(x.value.length,x.value.length)};document.querySelectorAll("[data-poolfilter]").forEach(b=>b.onclick=()=>{const v=b.dataset.poolfilter;state.filter=v==="all"?"all":Number(v);render()});document.querySelectorAll("[data-pool]").forEach(b=>b.onclick=()=>{state.poolIndex=Number(b.dataset.pool);state.view="poolPlayer";state.message=null;render();window.scrollTo(0,0)});if(state.direct)document.getElementById("exportPoolCopy").onclick=exportCopy
+  }
+
+  function renderPoolSource(){if(!state.poolSource){state.view="pool";render();return}const q=state.sourceQuery.trim().toLowerCase(),all=state.poolSource.teams.flatMap(t=>t.players.map(p=>({t,p}))),matches=!q?all:all.filter(x=>x.p.name.toLowerCase().includes(q)||x.t.name.toLowerCase().includes(q)),shown=matches.slice(0,250),target=state.poolIndex!==null?state.pool.records[state.poolIndex]:null;main.innerHTML=`<button class="btn back" id="backPool">← Transfer pool</button><h2>TEAM → Foreign Market</h2><div class="notice info section-gap"><strong>${esc(state.poolSource.fileName)}</strong> · ${state.poolSource.count} teams · ${state.poolSource.count*16} player slots.<br>${target?`You are replacing <strong>pool entry #${target.index+1}: ${esc(target.player.name)}</strong>.`:"Choose a source player, then choose which pool entry to replace."}</div><input class="search section-gap" id="sourceSearch" placeholder="Search source player or club…" value="${esc(state.sourceQuery)}"/><div class="stack section-gap">${shown.map(x=>`<button class="source-player" data-source-team="${x.t.index}" data-source-player="${x.p.index}"><span class="shirt">${x.p.shirt}</span><span class="grow"><strong>${esc(x.p.name||"(empty player)")}</strong><div class="meta">${esc(x.t.name)} · ${esc(positionInfo(x.p.multi)[1])} · ${values[x.p.value]||hex(x.p.value)} · origin ${x.t.nation}/${x.t.teamNumber}/${x.p.index}</div></span></button>`).join("")||'<div class="empty">No source player matches.</div>'}</div>${matches.length>250?`<div class="tiny section-gap">Showing first 250 of ${matches.length}; narrow the search.</div>`:""}`;
+    document.getElementById("backPool").onclick=()=>{state.view="pool";state.message=null;render();window.scrollTo(0,0)};const s=document.getElementById("sourceSearch");s.oninput=e=>{state.sourceQuery=e.target.value;renderPoolSource();const x=document.getElementById("sourceSearch");x.focus();x.setSelectionRange(x.value.length,x.value.length)};document.querySelectorAll("[data-source-player]").forEach(b=>b.onclick=()=>{const ti=Number(b.dataset.sourceTeam),pi=Number(b.dataset.sourcePlayer),t=state.poolSource.teams[ti],p=t.players[pi];state.sourceTeamIndex=ti;state.sourcePlayerIndex=pi;if(state.poolIndex===null){const raw=prompt(`Replace which POOLPLYR.DAT entry with ${p.name}?\\nEnter a number from 1 to ${POOL_COUNT}.`,"1");if(raw===null)return;const n=Number(raw);if(!Number.isInteger(n)||n<1||n>POOL_COUNT){alert("Enter a pool entry from 1 to 900.");return}state.poolIndex=n-1}const old=state.pool.records[state.poolIndex];if(!confirm(`Replace pool entry #${old.index+1}\\n${old.player.name} · ${old.teamName}\\n\\nwith\\n${p.name} · ${t.name}?\\n\\nThe origin nation/team/player-slot references and the full 38-byte player record will all be updated.`))return;replacePoolFromSource(state.poolIndex,t,p);state.message=`Pool entry #${state.poolIndex+1} replaced with ${p.name} from ${t.name}. Press ${state.direct?"Save to SWOS":"Export file"} to write POOLPLYR.DAT.`;state.view="pool";render();window.scrollTo(0,0)})
+  }
+
+  function renderPoolPlayer(){const r=state.pool.records[state.poolIndex],p=r.player,key=`pool:${r.index}`,edited=state.changed.has(key);const skills=p.levels.map((v,i)=>`<div class="skill"><div class="skill-head"><strong>${skillNames[i]}</strong><span class="skill-value" id="skillValue${i}">${v}</span></div><input type="range" min="0" max="7" step="1" value="${v}" data-skill="${i}"/></div>`).join("");
+    main.innerHTML=`<button class="btn back" id="backPool">← Transfer pool</button><h2>${esc(p.name||"(empty player)")}</h2><div class="notice info section-gap"><strong>POOL ENTRY #${r.index+1}</strong><br>Origin: ${esc(r.teamName||"(unknown club)")} · country code ${r.teamNation} (${esc(nationalityName(r.teamNation))}) · team #${r.teamNumber} · source player slot ${r.sourcePlayer}.<br><span class="tiny">Those provenance fields are shown read-only for now. This screen edits the embedded 38-byte SWOS player snapshot used by the transfer pool.</span></div>
+    <div class="card stack section-gap"><h3>Player ${edited?'· EDITED':''}</h3><div class="field"><label>Name · max 23 ASCII characters</label><input id="playerName" maxlength="23" value="${esc(p.name)}"/><div class="counter" id="nameCount"></div></div><div class="grid2"><div class="field"><label>Nationality</label><select id="nationalityInput">${nationalityOptions(p.nationality)}</select></div><div class="field"><label>Shirt number</label><input id="shirtInput" type="number" min="0" max="255" value="${p.shirt}"/></div></div><div class="grid2"><div class="field"><label>Position</label><select id="positionInput">${positionOptions(p.position)}</select></div><div class="field"><label>Appearance</label><select id="appearanceInput">${appearanceOptions(p.appearance)}</select></div></div><div class="field"><label>Transfer value</label><select id="valueInput">${valueOptions(p.value)}</select></div></div>
+    <div class="section-gap"><h3>Abilities · true SWOS level 0–7</h3><div class="split-actions section-gap"><button class="btn" id="preset7">All 7</button><button class="btn" id="preset4">All 4</button></div><button class="btn" style="width:100%;margin-top:9px" id="preset0">All 0</button><div class="skills section-gap">${skills}</div><div class="tiny section-gap">The editor preserves the high flag bit in each packed ability nibble.</div></div>
+    <button class="btn btn-green big section-gap" id="savePoolPlayer">Apply transfer-pool player changes</button>${state.poolSource?`<button class="btn btn-blue big section-gap" id="replaceFromTeam">Replace this entry from TEAM database</button>`:""}<button class="btn big section-gap" id="restorePoolPlayer">Restore this pool entry</button>`;
+    const name=document.getElementById("playerName"),count=document.getElementById("nameCount"),save=document.getElementById("savePoolPlayer");function check(){if(name.value!==name.value.toUpperCase())name.value=name.value.toUpperCase();const bad=/[^\x20-\x7E]/.test(name.value)||name.value.length>23;count.textContent=`${name.value.length}/23${bad?' · ASCII ONLY':''}`;count.style.color=bad?'var(--red)':'var(--muted)';save.disabled=bad}name.oninput=check;check();document.querySelectorAll("[data-skill]").forEach(x=>x.oninput=()=>document.getElementById(`skillValue${x.dataset.skill}`).textContent=x.value);document.getElementById("preset7").onclick=()=>applySkillPreset(7);document.getElementById("preset4").onclick=()=>applySkillPreset(4);document.getElementById("preset0").onclick=()=>applySkillPreset(0);
+    save.onclick=()=>{try{const levels=[...document.querySelectorAll("[data-skill]")].map(x=>Number(x.value));writePlayer(p,{name:name.value,nationality:Number(document.getElementById("nationalityInput").value),shirt:Number(document.getElementById("shirtInput").value),position:Number(document.getElementById("positionInput").value),appearance:Number(document.getElementById("appearanceInput").value),value:Number(document.getElementById("valueInput").value),levels});refreshPool(r.index);state.changed.add(key);state.view="pool";state.message=`Updated transfer-pool entry #${r.index+1}. Press ${state.direct?"Save to SWOS":"Export file"} to write POOLPLYR.DAT.`;render();window.scrollTo(0,0)}catch(e){alert(e.message)}};
+    if(state.poolSource)document.getElementById("replaceFromTeam").onclick=()=>{state.sourceQuery="";state.view="poolSource";render();window.scrollTo(0,0)};document.getElementById("restorePoolPlayer").onclick=()=>{try{if(!confirm("Restore this complete 58-byte pool entry to its state at the last save/open?"))return;state.bytes.set(state.savedBaseline.slice(r.offset,r.offset+POOL_RECORD_SIZE),r.offset);refreshPool(r.index);state.changed.delete(key);state.view="pool";state.message=`Restored transfer-pool entry #${r.index+1}.`;render();window.scrollTo(0,0)}catch(e){alert(e.message)}};document.getElementById("backPool").onclick=()=>{state.view="pool";state.message=null;render();window.scrollTo(0,0)}
+  }
+
+
+  function renderSimpleTeams(){const q=state.query.trim().toLowerCase(),teams=state.db.teams.filter(t=>t.name.toLowerCase().includes(q)),kits=state.simplePurpose==="kits";main.innerHTML=`${state.message?`<div class="notice section-gap">${esc(state.message)}</div>`:""}<button class="btn back" id="simpleTeamsHome">← SWOS Studio</button><h2>${kits?"Choose a club":"Players & Teams"}</h2><p class="about">${kits?"Pick the club whose kit you want to change.":"Choose a team, or search directly for a player."}</p>${!kits?`<button class="btn btn-blue big section-gap" id="simpleFindPlayer">Find a player</button>`:""}<div class="stack section-gap"><input class="search" id="simpleTeamSearch" placeholder="Search club…" value="${esc(state.query)}"/></div><div class="stack section-gap">${teams.map(t=>`<button class="team" data-simpleteam="${t.index}"><span class="grow"><span class="team-name">${esc(t.name||"(unnamed)")}</span><span class="meta">${esc(divisionName(t.division))}</span></span><span>›</span></button>`).join("")||'<div class="empty">No teams match.</div>'}</div><button class="advanced-link" id="teamAdvanced">Open Advanced Database Tools</button>`;
+    document.getElementById("simpleTeamsHome").onclick=()=>{state.view="landing";render();window.scrollTo(0,0)};
+    if(!kits)document.getElementById("simpleFindPlayer").onclick=()=>{state.view="playerSearch";state.message=null;render();window.scrollTo(0,0)};
+    const s=document.getElementById("simpleTeamSearch");s.oninput=e=>{state.query=e.target.value;renderSimpleTeams();const x=document.getElementById("simpleTeamSearch");x.focus();x.setSelectionRange(x.value.length,x.value.length)};
+    document.querySelectorAll("[data-simpleteam]").forEach(b=>b.onclick=()=>{state.teamIndex=Number(b.dataset.simpleteam);state.view="team";state.message=null;render();window.scrollTo(0,0)});
+    document.getElementById("teamAdvanced").onclick=()=>{state.simplePurpose=null;state.view="teams";render();window.scrollTo(0,0)}
+  }
+
+  function renderTeams(){if(state.simplePurpose==="kits"||state.simplePurpose==="players"){renderSimpleTeams();return}const divCodes=[...new Set(state.db.teams.map(t=>t.division))].sort((a,b)=>a-b),q=state.query.trim().toLowerCase(),teams=state.db.teams.filter(t=>(state.filter==="all"||t.division===state.filter)&&t.name.toLowerCase().includes(q));const chip=(code,label)=>`<button class="chip ${state.filter===code?'active':''}" data-filter="${code}">${esc(label)}</button>`;
+    main.innerHTML=`${state.message?`<div class="notice section-gap">${esc(state.message)}</div>`:""}<div class="notice info section-gap"><strong>DATABASE LOCATION:</strong> Keep TEAM.* files in <code>GAME/DATA</code>. ${state.direct?"You opened this file in direct-save mode, so Save to SWOS writes back to the same place.":"Exported database files must be returned to GAME/DATA."}</div><div class="split-actions section-gap"><button class="btn btn-blue" id="findPlayers">Find player</button><button class="btn btn-blue" id="auditDb">Database audit</button></div><button class="btn section-gap" style="width:100%" id="clearTeamSearch">Clear team search</button><div class="stack section-gap"><input class="search" id="teamSearch" placeholder="Search team name…" value="${esc(state.query)}"/><div class="chips">${chip("all",`All (${state.db.count})`)}${divCodes.map(d=>chip(String(d),`${divisionName(d)} (${state.db.teams.filter(t=>t.division===d).length})`)).join("")}</div></div>
+      <div class="stack section-gap">${teams.map(t=>{const playerEdits=t.players.filter(p=>state.changed.has(`${t.index}:${p.index}`)).length,teamEdit=state.changed.has(`teammeta:${t.index}`),label=teamEdit&&playerEdits?`${playerEdits+1} EDITS`:teamEdit?"TEAM EDITED":playerEdits?`${playerEdits} EDITED`:"";return`<button class="team" data-team="${t.index}"><span class="grow"><span class="team-name">${esc(t.name||"(unnamed)")}</span><span class="meta">${esc(divisionName(t.division))} · ${esc(formationName(t.tactic))}</span></span>${label?`<span class="badge">${label}</span>`:""}</button>`}).join("")||'<div class="empty">No teams match.</div>'}</div>
+      ${state.direct?`<div class="card section-gap"><h3>Direct-save mode</h3><p class="about">You opened the actual file through the browser file picker. When you press <strong style="color:var(--text)">Save to SWOS</strong>, this app will ask for confirmation and overwrite that same file in its current folder.</p><button class="btn btn-blue" id="exportCopy">Export a copy instead</button></div>`:""}
+      <details class="section-gap"><summary>Safety & backups</summary><div class="about section-gap">The opening file is kept untouched in memory. “Backup” downloads that opening copy. In direct-save mode, the opening bytes are also stored in this browser immediately before the first overwrite. Always close SWOS before writing its file.</div></details>`;
+    document.getElementById("findPlayers").onclick=()=>{state.view="playerSearch";state.message=null;render();window.scrollTo(0,0)};document.getElementById("auditDb").onclick=()=>{state.view="audit";state.message=null;render();window.scrollTo(0,0)};document.getElementById("clearTeamSearch").onclick=()=>{state.query="";render()};const search=document.getElementById("teamSearch");search.oninput=e=>{state.query=e.target.value;renderTeams();const x=document.getElementById("teamSearch");x.focus();x.setSelectionRange(x.value.length,x.value.length)};document.querySelectorAll("[data-filter]").forEach(b=>b.onclick=()=>{const v=b.dataset.filter;state.filter=v==="all"?"all":Number(v);render()});document.querySelectorAll("[data-team]").forEach(b=>b.onclick=()=>{state.teamIndex=Number(b.dataset.team);state.view="team";state.message=null;render();window.scrollTo(0,0)});if(state.direct)document.getElementById("exportCopy").onclick=exportCopy}
+
+  function renderAudit(){const a=auditDatabase(),ok=a.structural.length===0;main.innerHTML=`<button class="btn back" id="backTeams">← Teams</button><h2>Database audit</h2><div class="notice ${ok?'':'error'} section-gap"><strong>${ok?'STRUCTURE CHECK PASSED':'STRUCTURAL WARNINGS FOUND'}</strong><br>${ok?'No invalid team, kit, value, nationality or squad-order codes were found by the editor’s current checks.':'Review the structural warnings before saving to SWOS.'}</div><div class="facts section-gap"><div class="fact"><small>Teams</small><strong>${state.db.count}</strong></div><div class="fact"><small>Player slots</small><strong>${state.db.count*16}</strong></div><div class="fact"><small>Structural</small><strong>${a.structural.length}</strong></div><div class="fact"><small>Advisory</small><strong>${a.advisory.length}</strong></div></div><div class="card stack section-gap"><h3>Structural checks</h3>${a.structural.length?a.structural.slice(0,100).map(x=>`<div class="notice error">${esc(x)}</div>`).join(""):'<div class="notice">No structural warnings.</div>'}</div><div class="card stack section-gap"><h3>Advisory checks</h3><div class="tiny">These do not necessarily mean the database is broken. Duplicate shirt numbers and blank reserve slots can be intentional in some edits.</div>${a.advisory.length?a.advisory.slice(0,100).map(x=>`<div class="notice info">${esc(x)}</div>`).join(""):'<div class="notice">No advisory warnings.</div>'}</div>${a.structural.length>100||a.advisory.length>100?'<div class="tiny section-gap">Only the first 100 items in each section are shown.</div>':''}`;document.getElementById("backTeams").onclick=()=>{state.view="teams";state.message=null;render();window.scrollTo(0,0)}}
+
+
+  function renderSimpleKits(team){const kitEdited=state.changed.has(`kit:${team.index}`);main.innerHTML=`${state.message?`<div class="notice section-gap">${esc(state.message)}</div>`:""}<button class="btn back" id="simpleKitBack">← Choose another club</button><div class="simple-pill">👕 Kit Designer</div><h2>${esc(team.name)}</h2><p class="about">Change the colours and shirt style, preview them, then press Apply. SWOS Studio keeps the rest of the team data untouched.</p><div class="section-gap"><div class="grid2">${kitEditorBlock("home","Home kit",team.homeKit)}${kitEditorBlock("away","Away kit",team.awayKit)}</div><button class="btn btn-green big section-gap" id="simpleSaveKits">Apply kit changes</button>${kitEdited?'<div class="notice section-gap"><strong>Kit changes ready.</strong> Press Save changes at the bottom of the screen to write them to SWOS.</div>':""}</div><button class="advanced-link" id="kitAdvanced">Advanced Team Tools</button>`;
+    document.getElementById("simpleKitBack").onclick=()=>{state.view="teams";state.message=null;render();window.scrollTo(0,0)};
+    wireKitPreview("home");wireKitPreview("away");
+    document.getElementById("simpleSaveKits").onclick=()=>{try{writeKit(team,"home",readKitForm("home"));writeKit(state.db.teams[team.index],"away",readKitForm("away"));state.changed.add(`kit:${team.index}`);state.message=`${state.db.teams[team.index].name} kit changes are ready to save.`;render();window.scrollTo(0,0)}catch(e){alert(e.message)}};
+    document.getElementById("kitAdvanced").onclick=()=>{state.simplePurpose=null;state.view="team";render();window.scrollTo(0,0)}
+  }
+
+  function renderSimplePlayersTeam(team){const players=orderedPlayers(team);main.innerHTML=`${state.message?`<div class="notice section-gap">${esc(state.message)}</div>`:""}<button class="btn back" id="simplePlayerTeamBack">← All teams</button><div class="simple-pill">👤 Players & Teams</div><h2>${esc(team.name||"(unnamed)")}</h2><div class="facts"><div class="fact"><small>Manager</small><strong>${esc(team.coach||"—")}</strong></div><div class="fact"><small>Division</small><strong>${esc(divisionName(team.division))}</strong></div><div class="fact"><small>Formation</small><strong>${esc(formationName(team.tactic))}</strong></div></div><div class="row section-gap"><h3 class="grow">Squad</h3><button class="btn btn-blue" id="simpleOrder">Change order</button></div><div class="stack section-gap">${players.map((p,i)=>{const pos=positionInfo(p.multi),edited=state.changed.has(`${team.index}:${p.index}`);return`<button class="player ${edited?'edited':''}" data-simpleplayer="${p.index}"><span class="shirt">${p.shirt}</span><span class="player-main"><span class="player-name">${esc(p.name||"(empty player)")}</span><span class="meta">${squadRole(i)} · ${esc(pos[0])} · ${values[p.value]||hex(p.value)}</span></span>${edited?'<span class="badge">EDITED</span>':''}</button>`}).join("")}</div><div class="split-actions section-gap"><button class="btn btn-blue" id="fromPlayersToKits">Change kit</button><button class="btn" id="teamFullAdvanced">Advanced team settings</button></div>`;
+    document.getElementById("simplePlayerTeamBack").onclick=()=>{state.view="teams";state.message=null;render();window.scrollTo(0,0)};
+    document.getElementById("simpleOrder").onclick=()=>{state.view="teamOrder";state.message=null;render();window.scrollTo(0,0)};
+    document.querySelectorAll("[data-simpleplayer]").forEach(b=>b.onclick=()=>{state.playerIndex=Number(b.dataset.simpleplayer);state.view="player";state.message=null;render();window.scrollTo(0,0)});
+    document.getElementById("fromPlayersToKits").onclick=()=>{state.simplePurpose="kits";state.view="team";render();window.scrollTo(0,0)};
+    document.getElementById("teamFullAdvanced").onclick=()=>{state.simplePurpose=null;state.view="team";render();window.scrollTo(0,0)}
+  }
+
+  function renderTeam(){const team=state.db.teams[state.teamIndex];if(state.simplePurpose==="kits"){renderSimpleKits(team);return}if(state.simplePurpose==="players"){renderSimplePlayersTeam(team);return}const players=orderedPlayers(team),teamEdited=state.changed.has(`teammeta:${team.index}`),kitEdited=state.changed.has(`kit:${team.index}`),orderEdited=state.changed.has(`order:${team.index}`);const divOptions=divisions.map((d,i)=>`<option value="${i}" ${team.division===i?'selected':''}>${esc(d)}</option>`).join("")+(team.division>=divisions.length?`<option value="${team.division}" selected>Unknown (${team.division})</option>`:""),formationOptions=formations.map((f,i)=>`<option value="${i}" ${team.tactic===i?'selected':''}>${esc(f)}</option>`).join("")+(team.tactic>=formations.length?`<option value="${team.tactic}" selected>Unknown (${team.tactic})</option>`:"");
+    main.innerHTML=`<button class="btn back" id="backTeams">← All teams</button><h2>${esc(team.name||"(unnamed)")}</h2>
+    <div class="notice info section-gap"><strong>TEAM.* lives in GAME/DATA.</strong> The editor keeps every byte it does not intentionally change.</div>
+    <div class="card stack section-gap"><h3>Team details ${teamEdited?'· EDITED':''}</h3>
+      <div class="field"><label>Team name — max ${T.nameLength} ASCII characters</label><input id="teamNameInput" value="${esc(team.name)}" maxlength="${T.nameLength}" autocomplete="off" spellcheck="false"/><div class="counter" id="teamNameCounter"></div></div>
+      <div class="field"><label>Coach / manager — max ${T.coachLength} ASCII characters</label><input id="coachInput" value="${esc(team.coach)}" maxlength="${T.coachLength}" autocomplete="off" spellcheck="false"/><div class="counter" id="coachCounter"></div></div>
+      <div class="grid2"><div class="field"><label>Division</label><select id="divisionInput">${divOptions}</select></div><div class="field"><label>Formation</label><select id="formationInput">${formationOptions}</select></div></div>
+      <button class="btn btn-green big" id="saveTeamDetails">Apply team details</button>
+    </div>
+    <div class="section-gap"><h3>Kits ${kitEdited?'· EDITED':''}</h3><div class="grid2 section-gap">${kitEditorBlock("home","Home kit",team.homeKit)}${kitEditorBlock("away","Away kit",team.awayKit)}</div><button class="btn btn-green big section-gap" id="saveKits">Apply kit changes</button><div class="tiny section-gap">SWOS stores four shirt styles and ten kit colours directly in each team record. The preview is approximate; the game remains the final visual reference.</div></div>
+    <div class="facts section-gap"><div class="fact"><small>Division</small><strong>${esc(divisionName(team.division))}</strong></div><div class="fact"><small>Formation</small><strong>${esc(formationName(team.tactic))}</strong></div><div class="fact"><small>Coach</small><strong>${esc(team.coach||"—")}</strong></div><div class="fact"><small>Team record</small><strong>#${team.index+1}</strong></div></div>
+    <div class="row section-gap"><h3 class="grow">Squad ${orderEdited?'· ORDER EDITED':''}</h3><button class="btn btn-blue" id="manageOrder">Manage order</button></div>
+    <div class="stack section-gap">${players.map((p,i)=>{const pos=positionInfo(p.multi),edited=state.changed.has(`${team.index}:${p.index}`);return`<button class="player ${edited?'edited':''}" data-player="${p.index}"><span class="shirt">${p.shirt}</span><span class="player-main"><span class="player-name">${esc(p.name||"(empty player)")}</span><span class="meta">${squadRole(i)} · ${esc(pos[0])} · ${esc(nationalityName(p.nationality))} · ${values[p.value]||hex(p.value)}</span></span>${edited?'<span class="badge">EDITED</span>':''}</button>`}).join("")}</div>`;
+    document.getElementById("backTeams").onclick=()=>{state.view="teams";state.message=null;render();window.scrollTo(0,0)};
+    document.getElementById("manageOrder").onclick=()=>{state.view="teamOrder";state.message=null;render();window.scrollTo(0,0)};
+    document.querySelectorAll("[data-player]").forEach(b=>b.onclick=()=>{state.playerIndex=Number(b.dataset.player);state.view="player";state.message=null;render();window.scrollTo(0,0)});
+    const tn=document.getElementById("teamNameInput"),coach=document.getElementById("coachInput"),tnc=document.getElementById("teamNameCounter"),cc=document.getElementById("coachCounter"),save=document.getElementById("saveTeamDetails");
+    function check(){if(tn.value!==tn.value.toUpperCase())tn.value=tn.value.toUpperCase();if(coach.value!==coach.value.toUpperCase())coach.value=coach.value.toUpperCase();const badTeam=/[^\x20-\x7E]/.test(tn.value)||!tn.value.trim()||tn.value.length>T.nameLength,badCoach=/[^\x20-\x7E]/.test(coach.value)||coach.value.length>T.coachLength;tnc.textContent=`${tn.value.length}/${T.nameLength}${badTeam?' · CHECK NAME':''}`;cc.textContent=`${coach.value.length}/${T.coachLength}${badCoach?' · ASCII ONLY':''}`;tnc.style.color=badTeam?'var(--red)':'var(--muted)';cc.style.color=badCoach?'var(--red)':'var(--muted)';save.disabled=badTeam||badCoach}
+    tn.oninput=check;coach.oninput=check;check();
+    save.onclick=()=>{try{writeTeamDetails(team,{name:tn.value,coach:coach.value,division:Number(document.getElementById("divisionInput").value),tactic:Number(document.getElementById("formationInput").value)});state.changed.add(`teammeta:${team.index}`);state.message=`Updated team details for ${tn.value}. Press ${state.direct?"Save to SWOS":"Export file"} to write them.`;state.view="team";render();window.scrollTo(0,0)}catch(e){alert(e.message)}};
+    wireKitPreview("home");wireKitPreview("away");document.getElementById("saveKits").onclick=()=>{try{writeKit(team,"home",readKitForm("home"));writeKit(state.db.teams[team.index],"away",readKitForm("away"));state.changed.add(`kit:${team.index}`);state.message=`Kit changes applied to ${state.db.teams[team.index].name}. Press ${state.direct?"Save to SWOS":"Export file"} to write them.`;render();window.scrollTo(0,0)}catch(e){alert(e.message)}}
+  }
+
+  function renderTeamOrder(){const team=state.db.teams[state.teamIndex],order=normalisedTeamOrder(team),rows=order.map((slot,i)=>{const p=team.players[slot],pos=positionInfo(p.multi);return`<div class="order-row"><div class="order-no">${i+1}</div><div class="grow"><strong>${esc(p.name||"(empty player)")}</strong><div class="meta"><span class="role-badge">${squadRole(i)}</span> · ${esc(pos[1])} · shirt ${p.shirt}</div></div><div class="move-buttons"><select class="btn" data-trole="${i}" aria-label="Move role"><option value="">Role…</option><option value="xi">XI</option><option value="sub">SUB</option></select><button class="btn" data-up="${i}" ${i===0?'disabled':''}>↑</button><button class="btn" data-down="${i}" ${i===15?'disabled':''}>↓</button></div></div>`}).join("");
+    main.innerHTML=`<button class="btn back" id="backTeam">← ${esc(team.name)}</button><h2>Squad order</h2><div class="notice info section-gap">Positions <strong>1–11</strong> are the starting XI. Positions <strong>12–16</strong> are substitutes. These controls change only SWOS’s 16-byte squad-order table; player records are not rewritten.</div><div class="stack section-gap">${rows}</div>`;
+    document.getElementById("backTeam").onclick=()=>{state.view="team";state.message=null;render();window.scrollTo(0,0)};
+    document.querySelectorAll("[data-up]").forEach(b=>b.onclick=()=>{const i=Number(b.dataset.up);moveTeamOrder(state.db.teams[state.teamIndex],i,i-1);render()});
+    document.querySelectorAll("[data-down]").forEach(b=>b.onclick=()=>{const i=Number(b.dataset.down);moveTeamOrder(state.db.teams[state.teamIndex],i,i+1);render()});document.querySelectorAll("[data-trole]").forEach(s=>s.onchange=()=>{if(!s.value)return;moveTeamToRole(state.db.teams[state.teamIndex],Number(s.dataset.trole),s.value);render()})
+  }
+
+  function renderTransfer(){const srcTeam=state.db.teams[state.teamIndex],src=srcTeam.players[state.playerIndex],teams=state.db.teams.filter(t=>t.index!==srcTeam.index);const teamOpts=teams.map((t,i)=>`<option value="${t.index}" ${i===0?'selected':''}>${esc(t.name)} · ${esc(divisionName(t.division))}</option>`).join("");
+    main.innerHTML=`<button class="btn back" id="backPlayer">← ${esc(src.name)}</button><h2>Transfer / swap</h2><div class="notice info section-gap"><strong>Safe transfer mode:</strong> SWOS TEAM records contain exactly 16 player slots. This tool swaps the complete 38-byte player records between two different clubs, keeping both squads at 16 players and preserving the database size.</div><div class="card stack section-gap"><h3>Leaving</h3><strong>${esc(src.name)}</strong><span class="about">${esc(srcTeam.name)} · shirt ${src.shirt} · ${esc(positionInfo(src.multi)[0])}</span></div><div class="card stack section-gap"><h3>Destination club</h3><div class="field"><label>Club</label><select id="destTeam">${teamOpts}</select></div><div class="field"><label>Player coming back in the swap</label><select id="destPlayer"></select></div><button class="btn btn-green big" id="doSwap">Swap players</button></div><div class="tiny section-gap">A true one-way transfer needs a known empty-slot strategy. Until that is proven against this database format, swap mode is deliberately the safe default.</div>`;
+    const dt=document.getElementById("destTeam"),dp=document.getElementById("destPlayer");function loadPlayers(){const team=state.db.teams[Number(dt.value)],ordered=orderedPlayers(team);dp.innerHTML=ordered.map(p=>`<option value="${p.index}">${esc(p.name||"(empty player)")} · ${esc(positionInfo(p.multi)[1])} · ${values[p.value]||hex(p.value)}</option>`).join("")}dt.onchange=loadPlayers;loadPlayers();
+    document.getElementById("backPlayer").onclick=()=>{state.view="player";state.message=null;render();window.scrollTo(0,0)};
+    document.getElementById("doSwap").onclick=()=>{try{const dstTeamIdx=Number(dt.value),dstPlayerIdx=Number(dp.value),dst=state.db.teams[dstTeamIdx].players[dstPlayerIdx];if(!confirm(`Swap ${src.name} (${srcTeam.name}) with ${dst.name} (${state.db.teams[dstTeamIdx].name})?`))return;swapDatabasePlayers(srcTeam.index,src.index,dstTeamIdx,dstPlayerIdx);state.view="team";state.teamIndex=srcTeam.index;state.message=`Swapped ${src.name} with ${dst.name}. Both clubs still contain 16 player records.`;render();window.scrollTo(0,0)}catch(e){alert(e.message)}}
+  }
+
+  function renderPlayerSearch(){const q=state.playerQuery.trim().toLowerCase(),results=q.length<2?[]:state.db.teams.flatMap(t=>t.players.map(p=>({t,p}))).filter(x=>x.p.name.toLowerCase().includes(q)).slice(0,150);main.innerHTML=`<button class="btn back" id="backTeams">← Teams</button><h2>Find player</h2><div class="notice info section-gap">Search every one of the ${state.db.count*16} player slots in the opened TEAM database.</div><input class="search section-gap" id="playerSearchInput" placeholder="e.g. VARDY, RONALDO, MESSI…" value="${esc(state.playerQuery)}"/><div class="stack section-gap">${q.length<2?'<div class="empty">Type at least two characters.</div>':results.map(x=>`<button class="player" data-findteam="${x.t.index}" data-findplayer="${x.p.index}"><span class="shirt">${x.p.shirt}</span><span class="player-main"><span class="player-name">${esc(x.p.name||"(empty player)")}</span><span class="meta">${esc(x.t.name)} · ${esc(positionInfo(x.p.multi)[1])} · ${values[x.p.value]||hex(x.p.value)}</span></span></button>`).join("")||'<div class="empty">No player matches.</div>'}</div>${results.length===150?'<div class="tiny">Showing first 150 matches — make the search more specific.</div>':''}`;
+    document.getElementById("backTeams").onclick=()=>{state.view="teams";state.message=null;render();window.scrollTo(0,0)};const input=document.getElementById("playerSearchInput");input.oninput=e=>{state.playerQuery=e.target.value;renderPlayerSearch();const x=document.getElementById("playerSearchInput");x.focus();x.setSelectionRange(x.value.length,x.value.length)};document.querySelectorAll("[data-findplayer]").forEach(b=>b.onclick=()=>{state.teamIndex=Number(b.dataset.findteam);state.playerIndex=Number(b.dataset.findplayer);state.view="player";state.message=null;render();window.scrollTo(0,0)})
+  }
+
+  function money(v){const sign=v<0?"-":"";return `${sign}£${Math.abs(v).toLocaleString("en-GB")}`}
+  function careerBaseName(name){return String(name||"CAREER").replace(/\.car$/i,"").toUpperCase().slice(0,8)}
+  function cleanCareerBaseName(value){return String(value||"").toUpperCase().replace(/[^A-Z0-9_-]/g,"").slice(0,8)}
+  function validCareerBaseName(value){return /^[A-Z0-9_-]{1,8}$/.test(value)}
+  async function writeAndVerifyHandle(handle,bytes){
+    if(handle.requestPermission){const perm=await handle.requestPermission({mode:"readwrite"});if(perm!=="granted")throw new Error("Write permission was not granted.")}
+    const writable=await handle.createWritable();await writable.write(bytes);await writable.close();
+    const f=await handle.getFile(),check=new Uint8Array(await f.arrayBuffer());if(!byteEqual(check,bytes))throw new Error("The renamed career was written, but verification did not match. Keep your original career and do not use the new file.");
+    return f;
+  }
+  async function renameCareerFile(requestedBase){
+    if(state.kind!=="career"||!state.bytes)return;
+    const base=cleanCareerBaseName(requestedBase),newName=`${base}.CAR`,oldName=state.fileName;
+    if(!validCareerBaseName(base))return alert("Use 1–8 letters, numbers, hyphens or underscores for the career filename.");
+    if(newName.toUpperCase()===String(oldName||"").toUpperCase())return alert("Choose a different career filename.");
+    try{
+      validateCareer(state.bytes);if(state.bytes.length!==state.openingOriginal.length)throw new Error("Rename blocked: file length changed.");
+      let newHandle=null;
+      if(saveAsApiAvailable){
+        const opts={id:"swos-career-game",suggestedName:newName,types:[{description:"SWOS career save",accept:{"application/octet-stream":[".car"]}}]};
+        if(state.fileHandle)opts.startIn=state.fileHandle;
+        newHandle=await window.showSaveFilePicker(opts);
+      }else if(directoryApiAvailable){
+        const dir=await window.showDirectoryPicker({id:"swos-career-game",mode:"readwrite"});
+        let exists=false;try{await dir.getFileHandle(newName);exists=true}catch(e){if(e.name!=="NotFoundError")throw e}
+        if(exists&&!confirm(`${newName} already exists in that folder. Overwrite it?`))return;
+        newHandle=await dir.getFileHandle(newName,{create:true});
+      }else{
+        download(state.bytes,newName);state.message=`Created ${newName} as a download. Your browser did not offer direct Save As access, so move it into the SWOS GAME folder manually. ${oldName} was not changed.`;render();window.scrollTo(0,0);return;
+      }
+      if(!/\.car$/i.test(newHandle.name))throw new Error("The new filename must end in .CAR.");
+      const chosenBase=newHandle.name.replace(/\.car$/i,"").toUpperCase();if(!validCareerBaseName(chosenBase))throw new Error("SWOS career filenames should use 1–8 letters, numbers, hyphens or underscores before .CAR.");
+      if(state.fileHandle&&state.fileHandle.isSameEntry&&await state.fileHandle.isSameEntry(newHandle))throw new Error("That is the same file you already opened. Choose a different filename.");
+      const written=await writeAndVerifyHandle(newHandle,state.bytes);
+      persistSafetyBackup();state.fileHandle=newHandle;state.fileName=written.name;state.direct=true;state.savedBaseline=state.bytes.slice();state.changed=new Set();parseCareer();
+      state.message=`Career renamed safely: ${oldName} → ${state.fileName}. Keep the new .CAR in the main SWOS GAME folder so it appears in Load Old Competition. The old file was kept as a backup. ${state.fileName} is now the active career for future direct saves.`;render();window.scrollTo(0,0);
+    }catch(e){if(e&&e.name==="AbortError")return;alert(`Career rename failed: ${e.message}\n\nYour original career has not been removed.`)}
+  }
+  function careerPlayerRow(p,role){const pos=positionInfo(p.multi),edited=state.changed.has(`career:player:${p.index}`);return`<button class="player ${edited?'edited':''}" data-career-player="${p.index}"><span class="shirt">${p.shirt}</span><span class="player-main"><span class="player-name">${esc(p.name||"(empty player)")}</span><span class="meta">${esc(role)} · ${esc(pos[0])} · ${esc(nationalityName(p.nationality))} · ${values[p.value]||hex(p.value)}</span></span>${edited?'<span class="badge">EDITED</span>':''}</button>`}
+
+  function exeStatusLabel(a){return a.status==="normal"?"NORMAL · 20-SEASON LIMIT":a.status==="endless"?"ENDLESS PATCH ENABLED":a.status==="mixed"?"PARTIAL / MIXED PATCH":"UNSUPPORTED"}
+  function patchExeEndless(enable){const a=analyseExe(state.bytes);if(a.total!==EXE_ENDLESS_MATCHES)throw new Error(`Patch blocked: expected ${EXE_ENDLESS_MATCHES} recognised sites, found ${a.total}.`);const hits=enable?a.original:a.patched;if(hits.length===0)return 0;for(const o of hits)state.bytes[o+7]=enable?0xFE:0x13;parseExe();if(state.exe.total!==EXE_ENDLESS_MATCHES)throw new Error("Post-patch verification failed.");if(enable&&state.exe.patched.length!==EXE_ENDLESS_MATCHES)throw new Error("Endless patch verification failed.");if(!enable&&state.exe.original.length!==EXE_ENDLESS_MATCHES)throw new Error("Restore verification failed.");state.changed.add("exe:endless");return hits.length}
+  async function saveExeCopy(){if(!state.bytes||state.kind!=="exe")return;try{validateExe(state.bytes);const suggested=state.exe.status==="endless"?"SWSEND.EXE":"SWSORIG.EXE";if(saveAsApiAvailable){const handle=await window.showSaveFilePicker({id:"swos-exe-output-game",suggestedName:suggested,types:[{description:"SWOS DOS executable",accept:{"application/octet-stream":[".exe"]}}]});const writable=await handle.createWritable();await writable.write(state.bytes);await writable.close();const f=await handle.getFile(),check=new Uint8Array(await f.arrayBuffer());if(!byteEqual(check,state.bytes))throw new Error("The saved EXE did not verify byte-for-byte.");state.message=`Saved and verified ${f.name}. Put/run it from the main GAME folder. Your originally opened EXE was not overwritten.`}else{download(state.bytes,suggested);state.message=`Downloaded ${suggested}. Move it into the main GAME folder beside SWSENGPP.EXE.`}state.savedBaseline=state.bytes.slice();state.changed=new Set();parseExe();render();window.scrollTo(0,0)}catch(e){if(e&&e.name!=="AbortError")alert(`Could not save EXE copy: ${e.message}`)}}
+
+  function renderSimpleEnhancements(){const a=state.exe||analyseExe(state.bytes),supported=a.total===EXE_ENDLESS_MATCHES,on=a.status==="endless";main.innerHTML=`${state.message?`<div class="notice section-gap">${esc(state.message)}</div>`:""}<button class="btn back" id="simpleEnhanceHome">← SWOS Studio</button><div class="simple-pill">✨ Game Enhancements</div><h2>Enhance SWOS</h2><p class="about">Turn supported improvements on or off. The technical patching stays hidden unless you open Advanced Tools.</p>
+    <div class="friendly-card section-gap"><div class="row"><div class="grow"><h3 style="margin:0">♾️ Endless career</h3><p class="about" style="margin-bottom:0">Remove SWOS’s normal 20-season stopping point.</p></div><span class="toggle-status ${on?"on":"off"}">${on?"ON":"OFF"}</span></div>${supported?`<button class="btn ${on?"btn-blue":"btn-green"} big section-gap" id="simpleEndlessToggle">${on?"Turn off":"Turn on"}</button><div class="tiny section-gap">The enhanced game has already launched successfully with your SWOS build. Playing beyond Season 20 is still awaiting a full long-term test.</div>`:`<div class="notice error section-gap"><strong>This SWOS version is not recognised for the endless-career enhancement.</strong> Nothing will be changed.</div>`}</div>
+    <div class="friendly-card section-gap"><h3>More enhancements</h3><p class="about">Club chants, pitch design, extra competitions and other Career+ upgrades are saved on the roadmap. They will appear here as they become safe and verified.</p></div>
+    ${supported?'<button class="btn btn-green big section-gap" id="simpleEnhanceSave">Save enhanced game</button>':""}<button class="advanced-link" id="exeAdvanced">Advanced EXE Tools</button>`;
+    document.getElementById("simpleEnhanceHome").onclick=()=>{state.view="landing";render();window.scrollTo(0,0)};
+    if(supported){document.getElementById("simpleEndlessToggle").onclick=()=>{try{const n=patchExeEndless(!on);state.message=on?"Endless career turned off.":"Endless career turned on.";render();window.scrollTo(0,0)}catch(e){alert(e.message)}};document.getElementById("simpleEnhanceSave").onclick=saveExeCopy}
+    document.getElementById("exeAdvanced").onclick=()=>{state.simplePurpose=null;state.view="exe";render();window.scrollTo(0,0)}
+  }
+
+  function renderExe(){if(state.simplePurpose==="enhancements"){renderSimpleEnhancements();return}const a=state.exe||analyseExe(state.bytes),all=[...a.original.map(x=>({o:x,t:"13"})),...a.patched.map(x=>({o:x,t:"FE"}))].sort((x,y)=>x.o-y.o),supported=a.total===EXE_ENDLESS_MATCHES;main.innerHTML=`${state.message?`<div class="notice section-gap">${esc(state.message)}</div>`:""}<div class="notice info section-gap"><strong>EXE LOCATION:</strong> the SWOS executable belongs in the main <code>GAME</code> folder. This screen uses <strong>safe-copy mode</strong>: it will create a separate EXE rather than automatically overwrite the file you opened.</div><h2>EXE Tools</h2><div class="facts"><div class="fact"><small>Status</small><strong class="${a.status==="endless"?"good":a.status==="normal"?"warn":a.status==="mixed"?"warn":"bad"}">${exeStatusLabel(a)}</strong></div><div class="fact"><small>Recognised sites</small><strong>${a.total} / ${EXE_ENDLESS_MATCHES}</strong></div><div class="fact"><small>Original · 13</small><strong>${a.original.length}</strong></div><div class="fact"><small>Patched · FE</small><strong>${a.patched.length}</strong></div></div>${supported?`<div class="card stack"><h3>Endless career patch</h3><div class="notice info"><strong>Verified against your executable:</strong> your original <code>SWSENGPP.EXE</code> contained exactly 8 copies of the comparison ending <code>13</code>. We changed those 8 bytes to <code>FE</code>, created <code>SWSEND.EXE</code>, and that patched game successfully launched and loaded your TRANS2 career.</div>${a.status==="normal"?`<button class="btn btn-green big" id="enableEndless">Enable endless career · 8 bytes</button>`:a.status==="endless"?`<button class="btn btn-blue big" id="restoreCareerLimit">Restore original 20-season comparisons</button>`:`<div class="split-actions"><button class="btn btn-green" id="enableEndless">Complete endless patch</button><button class="btn btn-blue" id="restoreCareerLimit">Restore all 8 sites</button></div>`}<div class="tiny">Patch pattern: <code>66 83 3D 50 6B 01 00 13</code> → <code>66 83 3D 50 6B 01 00 FE</code>. This is still only <strong>launch/load verified</strong>; continuing beyond season 20 has not yet been observed in your career.</div></div><button class="btn btn-primary big section-gap" id="saveExeCopy">Save safe EXE copy</button>`:`<div class="notice error section-gap"><strong>Patch disabled.</strong> This EXE does not contain the exact 8-site signature we verified in your SWOS 16/17 executable. The app will not guess or patch unknown code.</div>`}<details class="section-gap"><summary>Show recognised patch offsets</summary><div class="about section-gap">${all.length?all.map(x=>`<code>0x${x.o.toString(16).toUpperCase()}</code> · current final byte <strong>${x.t}</strong>`).join("<br>"):"No verified sites found."}</div></details><div class="card stack section-gap"><h3>What this does — and does not prove</h3><span class="about">• Changes only the 8 verified comparison bytes.</span><span class="about">• Does not edit your .CAR save or reset the Management Record counter.</span><span class="about">• Your patched EXE already runs normally with TRANS2.CAR.</span><span class="about">• True “Season 21+” remains pending until a career actually crosses the normal 20-season boundary.</span></div>`;
+    if(supported){const enable=document.getElementById("enableEndless"),restore=document.getElementById("restoreCareerLimit");if(enable)enable.onclick=()=>{if(!confirm(`Enable the endless-career EXE patch?\n\nThe app will change only the recognised comparison sites from 13 to FE. It will not overwrite your original EXE automatically.`))return;try{const n=patchExeEndless(true);state.message=`Endless-career patch applied in memory at ${n} site${n===1?"":"s"}. Press Save EXE copy to create SWSEND.EXE.`;render();window.scrollTo(0,0)}catch(e){alert(e.message)}};if(restore)restore.onclick=()=>{if(!confirm(`Restore the original 20-season comparison values?\n\nAll recognised FE sites will return to 13.`))return;try{const n=patchExeEndless(false);state.message=`Restored ${n} patched site${n===1?"":"s"} to the original comparison value. Save a copy if you want this restored EXE.`;render();window.scrollTo(0,0)}catch(e){alert(e.message)}};document.getElementById("saveExeCopy").onclick=saveExeCopy}
+  }
+
+
+  function renderSimpleCareer(){const c=state.career,unlimited=c.transferCounter===255,full=c.playerCount>=30;main.innerHTML=`${state.message?`<div class="notice section-gap">${esc(state.message)}</div>`:""}<button class="btn back" id="simpleCareerHome">← SWOS Studio</button><div class="simple-pill">🏆 My Career</div><h2>${esc(c.club)}</h2><p class="about">Manager: ${esc(c.manager)}</p><div class="facts"><div class="fact"><small>Bank balance</small><strong>${esc(money(c.currentBalance))}</strong></div><div class="fact"><small>Squad</small><strong>${c.playerCount} players</strong></div><div class="fact"><small>Transfers</small><strong>${unlimited?"Unlimited":"Normal"}</strong></div></div>
+    <div class="friendly-card section-gap"><h3>💰 Bank balance</h3><p class="about">Give yourself the budget you want. This changes only your current career balance.</p><div class="money-presets"><button class="btn" data-money="5000000">£5m</button><button class="btn" data-money="25000000">£25m</button><button class="btn" data-money="50000000">£50m</button><button class="btn" data-money="100000000">£100m</button></div><div class="field section-gap"><label>Custom amount (£)</label><input id="simpleMoney" type="number" step="1" value="${c.currentBalance}"/></div><button class="btn btn-green big" id="applySimpleMoney">Apply balance</button></div>
+    <div class="friendly-card section-gap"><div class="row"><div class="grow"><h3 style="margin:0">🔄 Unlimited transfers</h3><p class="about" style="margin-bottom:0">Buy as many times as you like during the career.</p></div><span class="toggle-status ${unlimited?"on":"off"}">${unlimited?"ON":"OFF"}</span></div><button class="btn ${unlimited?"btn-blue":"btn-green"} big section-gap" id="simpleTransferToggle">${unlimited?"Turn off":"Turn on"}</button>${full?'<div class="notice error section-gap"><strong>Your squad is very full.</strong> Unlimited transfers do not remove SWOS’s separate squad-size limit. Sell or part-exchange players when needed.</div>':`<div class="tiny section-gap">Current squad: ${c.playerCount} players.</div>`}</div>
+    <button class="simple-option section-gap" id="simpleCareerSquad"><span class="ico">👥</span><span class="grow"><strong>Manage my squad</strong><span>Change XI, substitutes and reserves.</span></span><span>›</span></button>
+    <button class="simple-option section-gap" id="simpleCareerPlayers"><span class="ico">✏️</span><span class="grow"><strong>Edit career players</strong><span>Choose a player from your current squad.</span></span><span>›</span></button>
+    <button class="advanced-link" id="careerAdvanced">Advanced Career Tools</button>`;
+    document.getElementById("simpleCareerHome").onclick=()=>{state.view="landing";render();window.scrollTo(0,0)};
+    document.querySelectorAll("[data-money]").forEach(b=>b.onclick=()=>{document.getElementById("simpleMoney").value=b.dataset.money});
+    document.getElementById("applySimpleMoney").onclick=()=>{const n=Number(document.getElementById("simpleMoney").value);if(!Number.isInteger(n)||n<-2147483648||n>2147483647){alert("Choose a whole-number balance.");return}setI32(C.currentBalance,n);parseCareer();state.changed.add("career:balance");state.message=`Bank balance set to ${money(n)}. Press Save changes when you are ready.`;render();window.scrollTo(0,0)};
+    document.getElementById("simpleTransferToggle").onclick=()=>{state.bytes[C.transferCounter]=unlimited?0:255;parseCareer();state.changed.add("career:transfers");state.message=unlimited?"Unlimited transfers turned off.":"Unlimited transfers turned on.";render();window.scrollTo(0,0)};
+    document.getElementById("simpleCareerSquad").onclick=()=>{state.view="careerOrder";state.message=null;render();window.scrollTo(0,0)};
+    document.getElementById("simpleCareerPlayers").onclick=()=>{state.view="careerOrder";state.message="Choose a player below, then use the career player editor from the squad list.";render();window.scrollTo(0,0)};
+    document.getElementById("careerAdvanced").onclick=()=>{state.simplePurpose=null;state.view="career";render();window.scrollTo(0,0)}
+  }
+
+  function renderCareer(){if(state.simplePurpose==="career"){renderSimpleCareer();return}const c=state.career,starters=c.squad.slice(0,11),subs=c.squad.slice(11,16),reserves=c.squad.slice(16);main.innerHTML=`${state.message?`<div class="notice section-gap">${esc(state.message)}</div>`:""}<div class="notice info section-gap"><strong>CAREER LOCATION:</strong> .CAR files belong in the main <code>GAME</code> folder — not GAME/DATA. ${state.direct?"You opened this career directly, so Save to SWOS writes back to the same file.":"If you export or rename a career, save it into GAME so SWOS can see it."}</div><h2>${esc(c.club)}</h2><div class="facts"><div class="fact"><small>Manager</small><strong>${esc(c.manager)}</strong></div><div class="fact"><small>Active squad</small><strong>${c.squad.length} players</strong></div><div class="fact"><small>Current bank</small><strong>${esc(money(c.currentBalance))}</strong></div><div class="fact"><small>Previous season</small><strong>${esc(money(c.previousBalance))}</strong></div></div>
+    <div class="card stack"><h3>Bank balance · verified</h3><div class="field"><label>Current balance (£)</label><input id="balanceInput" type="number" step="1" min="-2147483648" max="2147483647" value="${c.currentBalance}"/><div class="counter">Stored as a signed 32-bit value at verified career offset <code>0xD5DC</code>.</div></div><button class="btn btn-green big" id="saveBalance">Apply balance change</button></div>
+    <div class="card stack"><h3>Career transfers · verified</h3><div class="facts" style="margin:0"><div class="fact"><small>Transfer mode</small><strong>${c.transferCounter===255?"UNLIMITED · FF":`Counter ${c.transferCounter}`}</strong></div><div class="fact"><small>Offset</small><strong>0xD880</strong></div></div><div class="notice info"><strong>Verified in your SWOS 16/17 career:</strong> normal saves changed 0 → 1 → 2 after successive purchases, and setting this byte to <strong>FF</strong> allowed repeated purchases beyond the chairman's normal limit.</div><div class="split-actions"><button class="btn btn-blue" id="resetTransfers">Normal · reset to 0</button><button class="btn btn-green" id="unlimitedTransfers" ${c.transferCounter===255?"disabled":""}>Unlimited · FF</button></div><div class="tiny">This removes the season transfer-count restriction. It does not remove SWOS's separate squad-size limit.</div></div>
+    <div class="card stack"><h3>Squad capacity</h3><div class="facts" style="margin:0"><div class="fact"><small>Players in career</small><strong>${c.playerCount}</strong></div><div class="fact"><small>Active order</small><strong>${c.squad.length}</strong></div><div class="fact"><small>Physical slots</small><strong>${C.careerPlayerSlots}</strong></div><div class="fact"><small>Free file slots</small><strong>${Math.max(0,C.careerPlayerSlots-c.playerCount)}</strong></div></div>${c.playerCount>=30?`<div class="notice error"><strong>SQUAD VERY FULL.</strong> SWOS may require a sale or part-exchange before another purchase. Unlimited transfers do not safely create unlimited player slots.</div>`:c.playerCount>=28?`<div class="notice info"><strong>Squad approaching capacity.</strong> Consider selling or part-exchanging players rather than only adding more.</div>`:`<div class="notice"><strong>Squad capacity looks healthy.</strong> Direct purchases can increase this count; part-exchange normally keeps it stable.</div>`}<div class="tiny">Offset <code>0xE08C</code> is verified from TRANS0 / TRANS1 / TRANS2: the value moved 25 → 26 → 27 as one player was added each time. The career structure contains 32 player slots; community reports suggest the playable game may enforce a practical limit around 30.</div></div>
+    <div class="card stack"><h3>Career season/history counter · read only</h3><div class="facts" style="margin:0"><div class="fact"><small>Counter</small><strong>${c.careerSeasonCounter}</strong></div><div class="fact"><small>Offset</small><strong>0xD5C4</strong></div></div><div class="notice info"><strong>Verified from your YEARTEST:</strong> resetting this byte to 0 made SWOS show the current 1996/97 record but removed backwards access to earlier season records, while the overall career totals remained.</div><div class="notice"><strong>v1.4 no longer edits this byte.</strong> Use EXE Tools for the endless-career experiment so the .CAR season/history counter is left intact.</div></div>
+    <div class="card stack section-gap"><h3>Rename career file</h3><div class="field"><label>New filename — 1–8 DOS-safe characters</label><div class="row"><input id="careerRenameInput" maxlength="8" value="${esc(careerBaseName(state.fileName))}" autocomplete="off" spellcheck="false"/><strong style="white-space:nowrap">.CAR</strong></div><div class="counter" id="careerRenameCounter">Original ${esc(state.fileName)} will be kept as a safety copy.</div></div><button class="btn btn-blue big" id="renameCareerBtn">Rename Career</button><div class="tiny">Career files only. TEAM.* filenames are never changed. Save the new .CAR in the main SWOS GAME folder. The career picker is shared with Open Career so Android should normally remember that location.</div></div>
+    <div class="section-gap"><div class="row"><h3 class="grow">My career squad</h3><button class="btn btn-blue" id="manageCareerOrder">Manage order</button></div><div class="notice info section-gap">These are the players stored inside this career. Editing them changes this save only — it does not alter the master TEAM database.</div>
+      <div class="section-gap"><h3 style="color:var(--yellow)">Starting XI · ${starters.length}</h3><div class="stack section-gap">${starters.map(p=>careerPlayerRow(p,"Starting XI")).join("")||'<div class="empty">No starting players found.</div>'}</div></div>
+      <div class="section-gap"><h3 style="color:var(--yellow)">Substitutes · ${subs.length}</h3><div class="stack section-gap">${subs.map(p=>careerPlayerRow(p,"Substitute")).join("")||'<div class="empty">No substitutes found.</div>'}</div></div>
+      <div class="section-gap"><h3 style="color:var(--yellow)">Reserves · ${reserves.length}</h3><div class="stack section-gap">${reserves.map(p=>careerPlayerRow(p,"Reserve")).join("")||'<div class="empty">No reserves found.</div>'}</div></div>
+    </div>
+    <div class="card stack section-gap"><h3>Finance information · read only</h3><div class="facts" style="margin:0"><div class="fact"><small>Previous balance</small><strong>${esc(money(c.previousBalance))}</strong></div><div class="fact"><small>Competition + TV</small><strong>${esc(money(c.competitionBonus))}</strong></div><div class="fact"><small>Sponsorship</small><strong>${esc(money(c.sponsorship))}</strong></div><div class="fact"><small>Current balance</small><strong>${esc(money(c.currentBalance))}</strong></div></div></div>
+    ${state.direct?`<div class="card section-gap"><h3>Direct-save mode</h3><p class="about">After applying money or player changes, press <strong style="color:var(--text)">Save to SWOS</strong> below. The app overwrites this same .CAR file and verifies the write byte-for-byte.</p><button class="btn btn-blue" id="exportCopy">Export a copy instead</button></div>`:""}
+    <details class="section-gap"><summary>Career squad format & safety</summary><div class="about section-gap">Career season/history counter is <code>0xD5C4</code>. Your YEARTEST confirmed that resetting it removes backwards access to previous season records, so v1.4 leaves it read-only and uses the EXE route for endless-career testing.<br>Career transfer-control byte is <code>0xD880</code>; controlled saves showed 0, 1 and 2 after successive purchases, and FF is now verified as unlimited transfers in this build.<br>Career squad-size byte is <code>0xE08C</code>; controlled saves showed 25, 26 and 27 as players were added.<br>Active squad order begins at <code>0xDB60</code>.<br>Career player records begin at <code>0xDBCC</code> and use the same 38-byte player structure as the TEAM database.<br>The first 11 ordered players are the Starting XI, the next 5 are substitutes, and remaining ordered players are reserves.<br><br>Unused/deleted record slots are deliberately hidden rather than edited.<br><br>Rename Career never deletes the old .CAR automatically. This is intentional so a known-good copy survives if SWOS dislikes a renamed save.</div></details>`;
+    const input=document.getElementById("balanceInput"),btn=document.getElementById("saveBalance");function valid(){const n=Number(input.value);const ok=Number.isInteger(n)&&n>=-2147483648&&n<=2147483647;btn.disabled=!ok}input.oninput=valid;valid();btn.onclick=()=>{const n=Number(input.value);if(!Number.isInteger(n)||n<-2147483648||n>2147483647)return;setI32(C.currentBalance,n);parseCareer();state.changed.add("career:balance");state.message=`Bank balance changed in memory to ${money(n)}. Press ${state.direct?"Save to SWOS":"Export file"} to write it.`;render();window.scrollTo(0,0)};
+    document.getElementById("resetTransfers").onclick=()=>{if(!confirm(`Return transfer control to normal by setting 0xD880 to 0?\n\nOnly this one byte will change.`))return;state.bytes[C.transferCounter]=0;parseCareer();state.changed.add("career:transfers");state.message=`Transfer counter reset to 0. Press ${state.direct?"Save to SWOS":"Export file"} to write it.`;render();window.scrollTo(0,0)};
+    document.getElementById("unlimitedTransfers").onclick=()=>{if(!confirm(`Enable verified unlimited transfers by setting 0xD880 to FF?\n\nThis removes the normal purchase-count restriction, but the squad-size limit still applies.`))return;state.bytes[C.transferCounter]=255;parseCareer();state.changed.add("career:transfers");state.message=`Unlimited transfers enabled. Keep an eye on squad capacity and use sales or part-exchange when the squad is full. Press ${state.direct?"Save to SWOS":"Export file"} to write it.`;render();window.scrollTo(0,0)};
+    const renameInput=document.getElementById("careerRenameInput"),renameBtn=document.getElementById("renameCareerBtn"),renameCounter=document.getElementById("careerRenameCounter");function renameValid(){const cleaned=cleanCareerBaseName(renameInput.value);if(renameInput.value!==cleaned)renameInput.value=cleaned;const ok=validCareerBaseName(cleaned),same=`${cleaned}.CAR`.toUpperCase()===String(state.fileName||"").toUpperCase();renameBtn.disabled=!ok||same;renameCounter.textContent=!ok?"Use 1–8 letters, numbers, hyphens or underscores.":same?"Enter a different filename.":`Will create ${cleaned}.CAR and keep ${state.fileName} as a backup.`;renameCounter.style.color=!ok?'var(--red)':'var(--muted)'}renameInput.oninput=renameValid;renameValid();renameBtn.onclick=()=>renameCareerFile(renameInput.value);
+    document.getElementById("manageCareerOrder").onclick=()=>{state.view="careerOrder";state.message=null;render();window.scrollTo(0,0)};document.querySelectorAll("[data-career-player]").forEach(b=>b.onclick=()=>{state.careerPlayerIndex=Number(b.dataset.careerPlayer);state.view="careerPlayer";state.message=null;render();window.scrollTo(0,0)});if(state.direct)document.getElementById("exportCopy").onclick=exportCopy}
+
+  function renderCareerOrder(){const c=state.career,rows=c.squadOrder.map((slot,i)=>{const p=c.players[slot],role=squadRole(i);return`<div class="order-row"><div class="order-no">${i+1}</div><div class="grow"><strong>${esc(p.name||"(empty player)")}</strong><div class="meta"><span class="role-badge">${role}</span> · ${esc(positionInfo(p.multi)[1])} · shirt ${p.shirt}</div></div><div class="move-buttons"><select class="btn" data-crole="${i}" aria-label="Move role"><option value="">Role…</option><option value="xi">XI</option><option value="sub">SUB</option><option value="res">RES</option></select><button class="btn" data-cup="${i}" ${i===0?'disabled':''}>↑</button><button class="btn" data-cdown="${i}" ${i===c.squadOrder.length-1?'disabled':''}>↓</button></div></div>`}).join("");
+    main.innerHTML=`<button class="btn back" id="backCareer">← ${esc(c.club)} career</button><h2>Career squad order</h2><div class="notice info section-gap">Move players across the boundaries to change their role: <strong>1–11 = starting XI</strong>, <strong>12–16 = substitutes</strong>, <strong>17+ = reserves</strong>. Only the career squad-order bytes are changed.</div><div class="stack section-gap">${rows}</div>`;
+    document.getElementById("backCareer").onclick=()=>{state.view="career";state.message=null;render();window.scrollTo(0,0)};document.querySelectorAll("[data-cup]").forEach(b=>b.onclick=()=>{const i=Number(b.dataset.cup);moveCareerOrder(i,i-1);render()});document.querySelectorAll("[data-cdown]").forEach(b=>b.onclick=()=>{const i=Number(b.dataset.cdown);moveCareerOrder(i,i+1);render()});document.querySelectorAll("[data-crole]").forEach(s=>s.onchange=()=>{if(!s.value)return;moveCareerToRole(Number(s.dataset.crole),s.value);render()})
+  }
+
+  function nationalityOptions(selected){return nationalityNames.map((name,i)=>`<option value="${i}" ${i===selected?'selected':''}>${name} (${hex(i)})</option>`).join("")}
+  function positionOptions(selected){return positions.map((p,i)=>`<option value="${i}" ${i===selected?'selected':''}>${p[0]} (${p[1]})</option>`).join("")}
+  function appearanceOptions(selected){return appearances.map((a,i)=>`<option value="${i}" ${i===selected?'selected':''}>${a}</option>`).join("")}
+  function valueOptions(selected){return values.map((v,i)=>`<option value="${i}" ${i===selected?'selected':''}>${v} (${hex(i)})</option>`).join("")}
+
+  function renderPlayer(){const team=state.db.teams[state.teamIndex],p=team.players[state.playerIndex],key=`${team.index}:${p.index}`,edited=state.changed.has(key);main.innerHTML=`<button class="btn back" id="backTeam">← ${esc(team.name)}</button><h2>Edit player</h2>
+    <div class="card section-gap stack"><div class="field"><label>Player name — max 23 ASCII characters</label><input id="nameInput" value="${esc(p.name)}" maxlength="40" autocomplete="off" spellcheck="false"/><div class="counter" id="counter">${p.name.length}/23</div></div>
+    <div class="grid2"><div class="field"><label>Nationality</label><select id="nationalityInput">${nationalityOptions(p.nationality)}</select></div><div class="field"><label>Shirt number</label><input id="shirtInput" type="number" min="0" max="99" value="${p.shirt}"/></div></div>
+    <div class="grid2"><div class="field"><label>Position</label><select id="positionInput">${positionOptions(p.position)}</select></div><div class="field"><label>Appearance</label><select id="appearanceInput">${appearanceOptions(p.appearance)}</select></div></div>
+    <div class="field"><label>Player value</label><select id="valueInput">${valueOptions(Math.min(p.value,49))}</select></div></div>
+    <div class="section-gap"><div class="row"><h3 class="grow">Abilities · true SWOS level 0–7</h3></div><div class="split-actions section-gap"><button class="btn" id="preset7">All 7</button><button class="btn" id="preset4">All 4</button></div><button class="btn" style="width:100%;margin-top:9px" id="preset0">All 0</button><div class="skills section-gap">${skillNames.map((name,i)=>`<div class="skill"><div class="skill-head"><strong>${name}</strong><span class="skill-value" id="skillValue${i}">${p.levels[i]}</span></div><input type="range" min="0" max="7" step="1" value="${p.levels[i]}" data-skill="${i}"/><div class="tiny">Stored raw value now: ${p.rawSkills[i]}${p.rawSkills[i]>=8?' · transfer-filter flag is set':''}</div></div>`).join("")}</div></div>
+    <div class="notice section-gap">When you change an ability, the app changes only its real 0–7 level and preserves SWOS’s hidden 8–15 flag. Position and appearance share one byte; the three unknown low bits are preserved unchanged.</div>
+    <button class="btn btn-green big section-gap" id="savePlayer">Save player changes</button><div class="split-actions section-gap"><button class="btn btn-blue" id="copyPlayer">Copy player data</button><button class="btn btn-blue" id="pastePlayer" ${state.playerClipboard&&state.playerClipboard.kind==="team"?"":"disabled"}>Paste / replace</button></div><button class="btn big section-gap" id="restorePlayer">Restore this slot</button><button class="btn btn-blue big section-gap" id="transferPlayer">Transfer / swap with another club</button>${edited?'<div class="meta" style="text-align:center;margin-top:8px;color:var(--green)">This player already has an edit waiting to be saved/exported.</div>':''}
+    <details class="section-gap"><summary>Advanced / raw player record</summary><div class="about section-gap">Record offset: ${p.offset}<br>Nationality: ${hex(p.nationality)}<br>Multipurpose byte: ${hex(p.multi)}<br>Unknown byte 27: ${hex(state.bytes[p.offset+27])}<br>Raw skills: ${p.rawSkills.join(', ')}<br>Value byte: ${hex(p.value)}</div></details>`;
+    const name=document.getElementById("nameInput"),counter=document.getElementById("counter"),save=document.getElementById("savePlayer");document.querySelectorAll("[data-skill]").forEach(r=>r.oninput=()=>document.getElementById(`skillValue${r.dataset.skill}`).textContent=r.value);document.getElementById("preset7").onclick=()=>applySkillPreset(7);document.getElementById("preset4").onclick=()=>applySkillPreset(4);document.getElementById("preset0").onclick=()=>applySkillPreset(0);
+    function formValid(){const v=name.value.toUpperCase();if(name.value!==v)name.value=v;const bad=/[^\x20-\x7E]/.test(v),too=v.length>23,shirt=Number(document.getElementById("shirtInput").value),badShirt=!Number.isInteger(shirt)||shirt<0||shirt>99;counter.textContent=`${v.length}/23${bad?' · plain ASCII only':''}${too?' · TOO LONG':''}${badShirt?' · shirt 0–99':''}`;counter.style.color=(bad||too||badShirt)?'var(--red)':'var(--muted)';save.disabled=bad||too||badShirt}name.oninput=formValid;document.getElementById("shirtInput").oninput=formValid;formValid();
+    save.onclick=()=>{try{const levels=[...document.querySelectorAll("[data-skill]")].map(r=>Number(r.value));writePlayer(p,{name:name.value,nationality:Number(document.getElementById("nationalityInput").value),shirt:Number(document.getElementById("shirtInput").value),position:Number(document.getElementById("positionInput").value),appearance:Number(document.getElementById("appearanceInput").value),value:Number(document.getElementById("valueInput").value),levels});refreshTeam(team.index);state.changed.add(key);state.view="team";state.message=null;render();window.scrollTo(0,0)}catch(e){alert(e.message)}};document.getElementById("copyPlayer").onclick=()=>{copyKnownPlayerData(p,`${p.name} · ${team.name}`,"team");state.message=`Copied known player data from ${p.name}. Open another database player and use Paste / replace.`;render()};document.getElementById("pastePlayer").onclick=()=>{try{if(!confirm(`Replace the known football data in this slot (${p.name}) with ${state.playerClipboard?.sourceLabel||"the copied player"}?\n\nThe final 5 unknown/reserved bytes in this slot are preserved.`))return;pasteKnownPlayerData(p,"team");refreshTeam(team.index);state.changed.add(key);state.message=`Replaced ${p.name} with copied player data from ${state.playerClipboard.sourceLabel}.`;state.view="team";render();window.scrollTo(0,0)}catch(e){alert(e.message)}};document.getElementById("restorePlayer").onclick=()=>{try{if(!confirm(`Restore this player slot to its state at the last save/open?`))return;restorePlayerSlot(p);refreshTeam(team.index);state.changed.delete(key);state.message="Player slot restored from the last saved baseline.";state.view="team";render();window.scrollTo(0,0)}catch(e){alert(e.message)}};document.getElementById("transferPlayer").onclick=()=>{state.view="transfer";state.message=null;render();window.scrollTo(0,0)};document.getElementById("backTeam").onclick=()=>{state.view="team";state.message=null;render();window.scrollTo(0,0)}}
+
+  function renderCareerPlayer(){const p=state.career.players[state.careerPlayerIndex],orderPos=state.career.squadOrder.indexOf(p.index),role=orderPos<0?"Unused":orderPos<11?"Starting XI":orderPos<16?"Substitute":"Reserve",key=`career:player:${p.index}`,edited=state.changed.has(key);main.innerHTML=`<button class="btn back" id="backCareer">← ${esc(state.career.club)} career</button><h2>Edit career player</h2>
+    <div class="notice info section-gap"><strong>${esc(role)}</strong> · This edits the copy of the player stored inside this career only.</div>
+    <div class="card section-gap stack"><div class="field"><label>Player name — max 23 ASCII characters</label><input id="nameInput" value="${esc(p.name)}" maxlength="40" autocomplete="off" spellcheck="false"/><div class="counter" id="counter">${p.name.length}/23</div></div>
+    <div class="grid2"><div class="field"><label>Nationality</label><select id="nationalityInput">${nationalityOptions(p.nationality)}</select></div><div class="field"><label>Shirt number</label><input id="shirtInput" type="number" min="0" max="99" value="${p.shirt}"/></div></div>
+    <div class="grid2"><div class="field"><label>Position</label><select id="positionInput">${positionOptions(p.position)}</select></div><div class="field"><label>Appearance</label><select id="appearanceInput">${appearanceOptions(p.appearance)}</select></div></div>
+    <div class="field"><label>Player value</label><select id="valueInput">${valueOptions(Math.min(p.value,49))}</select></div></div>
+    <div class="section-gap"><div class="row"><h3 class="grow">Abilities · true SWOS level 0–7</h3></div><div class="split-actions section-gap"><button class="btn" id="preset7">All 7</button><button class="btn" id="preset4">All 4</button></div><button class="btn" style="width:100%;margin-top:9px" id="preset0">All 0</button><div class="skills section-gap">${skillNames.map((name,i)=>`<div class="skill"><div class="skill-head"><strong>${name}</strong><span class="skill-value" id="skillValue${i}">${p.levels[i]}</span></div><input type="range" min="0" max="7" step="1" value="${p.levels[i]}" data-skill="${i}"/><div class="tiny">Stored raw value now: ${p.rawSkills[i]}${p.rawSkills[i]>=8?' · transfer-filter flag is set':''}</div></div>`).join("")}</div></div>
+    <div class="notice section-gap">The editor preserves SWOS's hidden skill flag and unknown bits exactly as it does for database players.</div>
+    <button class="btn btn-green big section-gap" id="savePlayer">Apply career player changes</button><div class="split-actions section-gap"><button class="btn btn-blue" id="copyPlayer">Copy player data</button><button class="btn btn-blue" id="pastePlayer" ${state.playerClipboard&&state.playerClipboard.kind==="career"?"":"disabled"}>Paste / replace</button></div><button class="btn big section-gap" id="restorePlayer">Restore this career slot</button>${edited?'<div class="meta" style="text-align:center;margin-top:8px;color:var(--green)">This career player already has an edit waiting to be saved/exported.</div>':''}
+    <details class="section-gap"><summary>Advanced / raw career player record</summary><div class="about section-gap">Career slot: ${p.index}<br>Record offset: <code>0x${p.offset.toString(16).toUpperCase()}</code><br>Nationality: ${hex(p.nationality)}<br>Multipurpose byte: ${hex(p.multi)}<br>Unknown byte 27: ${hex(state.bytes[p.offset+27])}<br>Raw skills: ${p.rawSkills.join(', ')}<br>Value byte: ${hex(p.value)}</div></details>`;
+    const name=document.getElementById("nameInput"),counter=document.getElementById("counter"),save=document.getElementById("savePlayer");document.querySelectorAll("[data-skill]").forEach(r=>r.oninput=()=>document.getElementById(`skillValue${r.dataset.skill}`).textContent=r.value);document.getElementById("preset7").onclick=()=>applySkillPreset(7);document.getElementById("preset4").onclick=()=>applySkillPreset(4);document.getElementById("preset0").onclick=()=>applySkillPreset(0);
+    function formValid(){const v=name.value.toUpperCase();if(name.value!==v)name.value=v;const bad=/[^\x20-\x7E]/.test(v),too=v.length>23,shirt=Number(document.getElementById("shirtInput").value),badShirt=!Number.isInteger(shirt)||shirt<0||shirt>99;counter.textContent=`${v.length}/23${bad?' · plain ASCII only':''}${too?' · TOO LONG':''}${badShirt?' · shirt 0–99':''}`;counter.style.color=(bad||too||badShirt)?'var(--red)':'var(--muted)';save.disabled=bad||too||badShirt}name.oninput=formValid;document.getElementById("shirtInput").oninput=formValid;formValid();
+    save.onclick=()=>{try{const levels=[...document.querySelectorAll("[data-skill]")].map(r=>Number(r.value));writePlayer(p,{name:name.value,nationality:Number(document.getElementById("nationalityInput").value),shirt:Number(document.getElementById("shirtInput").value),position:Number(document.getElementById("positionInput").value),appearance:Number(document.getElementById("appearanceInput").value),value:Number(document.getElementById("valueInput").value),levels});state.changed.add(key);parseCareer();state.view="career";state.message=`Updated ${name.value.toUpperCase()} inside this career. Press ${state.direct?"Save to SWOS":"Export file"} to write it.`;render();window.scrollTo(0,0)}catch(e){alert(e.message)}};document.getElementById("copyPlayer").onclick=()=>{copyKnownPlayerData(p,`${p.name} · ${state.career.club} career`,"career");state.message=`Copied known career-player data from ${p.name}. Open another career player and use Paste / replace.`;render()};document.getElementById("pastePlayer").onclick=()=>{try{if(!confirm(`Replace the known football data in this career slot (${p.name}) with ${state.playerClipboard?.sourceLabel||"the copied player"}?\n\nCareer-only trailing bytes in the destination slot are preserved.`))return;pasteKnownPlayerData(p,"career");state.changed.add(key);parseCareer();state.message=`Career player data replaced from ${state.playerClipboard.sourceLabel}.`;state.view="career";render();window.scrollTo(0,0)}catch(e){alert(e.message)}};document.getElementById("restorePlayer").onclick=()=>{try{if(!confirm("Restore this career player slot to its state at the last save/open?"))return;restorePlayerSlot(p);state.changed.delete(key);parseCareer();state.message="Career player slot restored from the last saved baseline.";state.view="career";render();window.scrollTo(0,0)}catch(e){alert(e.message)}};document.getElementById("backCareer").onclick=()=>{state.view="career";state.message=null;render();window.scrollTo(0,0)}}
+
+  function download(bytes,name){const copy=bytes.slice(),blob=new Blob([copy],{type:"application/octet-stream"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+  function exportCopy(){if(!state.bytes)return;try{validateCurrent();if(state.bytes.length!==state.openingOriginal.length)throw new Error("Export blocked: file length changed.");download(state.bytes,state.fileName);state.message=`Exported ${state.fileName} as a copy.`;state.view=state.kind==="career"?"career":state.kind==="pool"?"pool":state.kind==="exe"?"exe":"teams";render();window.scrollTo(0,0)}catch(e){alert(e.message)}}
+  async function saveDirect(){if(state.kind==="exe")return saveExeCopy();if(!state.fileHandle)return exportCopy();try{validateCurrent();if(state.bytes.length!==state.openingOriginal.length)throw new Error("Save blocked: file length changed.");const folderHint=state.kind==="career"?"Career files should be in the main GAME folder.":state.kind==="pool"?"POOLPLYR.DAT should be in GAME/DATA.":state.kind==="exe"?"SWOS EXE files should be in the main GAME folder.":"TEAM.* files should be in GAME/DATA.";if(!confirm(`Save changes directly over ${state.fileName} in its current folder?\n\n${folderHint}\nClose SWOS first. The app will keep an opening backup.`))return;const backed=persistSafetyBackup();if(state.fileHandle.requestPermission){const perm=await state.fileHandle.requestPermission({mode:"readwrite"});if(perm!=="granted")throw new Error("Write permission was not granted.")}
+      const writable=await state.fileHandle.createWritable();await writable.write(state.bytes);await writable.close();const checkFile=await state.fileHandle.getFile(),check=new Uint8Array(await checkFile.arrayBuffer());if(!byteEqual(check,state.bytes))throw new Error("The file was written but verification did not match. Restore from your backup before using SWOS.");state.savedBaseline=state.bytes.slice();state.changed=new Set();parseCurrent();state.view=state.kind==="career"?"career":state.kind==="pool"?"pool":state.kind==="exe"?"exe":"teams";state.message=`Saved directly over ${state.fileName} and verified it byte-for-byte.${backed?' Opening backup stored in this browser.':''} Restart SWOS / Magic DOSBox to load the changes.`;render();window.scrollTo(0,0)}catch(e){alert(`Direct save failed: ${e.message}\n\nYour in-app edits are still here. You can use Export a copy instead.`)}}
+
+  fileInput.onchange=async e=>{const f=e.target.files&&e.target.files[0];e.target.value="";if(!f)return;try{await loadFile(f,null,false)}catch(err){state={...state,bytes:null,openingOriginal:null,savedBaseline:null,fileHandle:null,direct:false,kind:null,db:null,career:null,pool:null,poolSource:null,exe:null,view:"landing",message:err.message};render()}};
+  document.getElementById("brandHome").onclick=()=>{if(state.simplePurpose){state.view="landing"}else if(!state.kind){state.view="landing"}else{state.view=state.kind==="career"?"career":state.kind==="pool"?"pool":state.kind==="exe"?"exe":"teams"}state.message=null;render();window.scrollTo(0,0)};
+  primarySaveBtn.onclick=()=>state.kind==="exe"?saveExeCopy():state.direct?saveDirect():exportCopy();
+  document.getElementById("backupBtn").onclick=()=>{if(state.openingOriginal)download(state.openingOriginal,`${state.fileName}.opening-backup`)};
+  undoBtn.onclick=()=>{if(!state.savedBaseline||state.changed.size===0)return;if(!confirm("Undo edits made since the last direct save (or since opening the file)?"))return;state.bytes=state.savedBaseline.slice();state.changed=new Set();parseCurrent();state.view=state.kind==="career"?"career":state.kind==="pool"?"pool":state.kind==="exe"?"exe":"teams";state.message="Pending edits were undone.";render();window.scrollTo(0,0)};
+  render();
+  (async()=>{await Promise.all([refreshSetup(false),loadLauncherProfile()]);if(state.view==="landing")render()})();
+})();
+</script>
+</body>
+</html>
