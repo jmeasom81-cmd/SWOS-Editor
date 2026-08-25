@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#07111f" />
-  <title>SWOS Studio v1.9.2</title>
+  <title>SWOS Studio v1.9.3</title>
   <style>
     :root{
       --bg:#050a12;--panel:#0d1828;--panel2:#132238;--line:#263d5c;
@@ -73,6 +73,13 @@
     .footerbar .inner{max-width:760px;margin:0 auto;display:flex;gap:8px}.footerbar .btn{flex:1;min-width:0;padding-left:8px;padding-right:8px;font-size:12px}
     .hidden{display:none!important} details{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:12px}
     summary{cursor:pointer;color:var(--muted);font-size:12px;font-weight:800} code{color:#d9e9ff}.about{font-size:12px;color:var(--muted)}
+    .load-progress{margin-top:14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px}
+    .load-progress-head{display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:12px}
+    .load-progress-head strong{color:var(--text)}
+    .load-progress-head span{color:var(--muted);white-space:nowrap}
+    .load-track{height:9px;background:#07111f;border:1px solid var(--line);border-radius:999px;overflow:hidden;margin-top:9px}
+    .load-fill{height:100%;width:0;background:var(--yellow);transition:width .18s ease}
+    .load-note{font-size:11px;color:var(--muted);margin-top:7px;line-height:1.35}
     .section-gap{margin-top:18px}.back{margin-bottom:14px}.empty{text-align:center;color:var(--muted);padding:26px}
     .kit-preview{display:grid;place-items:center;gap:5px;min-height:150px;background:#07111f;border:1px solid var(--line);border-radius:12px;padding:12px}
     .kit-shirt{width:92px;height:68px;border-radius:16px 16px 10px 10px;border:2px solid rgba(255,255,255,.16);clip-path:polygon(17% 0,34% 9%,66% 9%,83% 0,100% 19%,85% 36%,78% 27%,78% 100%,22% 100%,22% 27%,15% 36%,0 19%)}
@@ -195,7 +202,7 @@
 <body>
 <div id="app" class="app">
   <div id="topbar" class="topbar hidden">
-    <div class="brand" id="brandHome">SWOS STUDIO <span style="font-size:10px;color:var(--green)">v1.9.2</span></div>
+    <div class="brand" id="brandHome">SWOS STUDIO <span style="font-size:10px;color:var(--green)">v1.9.3</span></div>
     <div class="sub" id="fileMeta"></div>
     <div class="mode" id="modeLine"></div>
   </div>
@@ -248,6 +255,64 @@
   const saveAsApiAvailable = typeof window.showSaveFilePicker === "function";
   const directoryApiAvailable = typeof window.showDirectoryPicker === "function";
   let state={fileName:null,bytes:null,openingOriginal:null,savedBaseline:null,fileHandle:null,direct:false,kind:null,db:null,career:null,pool:null,poolSource:null,exe:null,simplePurpose:null,libraryItems:[],magicProfiles:[],magicQuery:"",view:"landing",teamIndex:null,playerIndex:null,careerPlayerIndex:null,poolIndex:null,sourceTeamIndex:null,sourcePlayerIndex:null,filter:"all",query:"",playerQuery:"",poolQuery:"",sourceQuery:"",playerClipboard:null,changed:new Set(),message:null};
+  const libraryProgress={kind:null,total:0,done:0,label:"",active:false};
+
+  function beginLibraryProgress(kind,total,label){
+    libraryProgress.kind=kind;
+    libraryProgress.total=Math.max(0,total||0);
+    libraryProgress.done=0;
+    libraryProgress.label=label||"Loading";
+    libraryProgress.active=true;
+    updateLibraryProgress()
+  }
+  function stepLibraryProgress(kind){
+    if(!libraryProgress.active||libraryProgress.kind!==kind)return;
+    libraryProgress.done=Math.min(libraryProgress.total,libraryProgress.done+1);
+    updateLibraryProgress()
+  }
+  function endLibraryProgress(kind){
+    if(libraryProgress.kind!==kind)return;
+    libraryProgress.done=libraryProgress.total;
+    updateLibraryProgress();
+    setTimeout(()=>{
+      if(libraryProgress.kind===kind){
+        libraryProgress.active=false;
+        updateLibraryProgress()
+      }
+    },500)
+  }
+  function progressMarkup(kind){
+    if(!libraryProgress.active||libraryProgress.kind!==kind||!libraryProgress.total)return"";
+    const pct=Math.max(1,Math.min(100,Math.round(libraryProgress.done/libraryProgress.total*100)));
+    const left=Math.max(0,libraryProgress.total-libraryProgress.done);
+    return `<div class="load-progress" data-progress-kind="${kind}" aria-live="polite">
+      <div class="load-progress-head"><strong>${esc(libraryProgress.label)}</strong><span>${libraryProgress.done} / ${libraryProgress.total}</span></div>
+      <div class="load-track"><div class="load-fill" style="width:${pct}%"></div></div>
+      <div class="load-note">${left?`Still working — ${left} remaining. This can take a little while on Android.`:"Finishing up…"}</div>
+    </div>`
+  }
+  function updateLibraryProgress(){
+    const kind=libraryProgress.kind;
+    if(!kind)return;
+    const box=document.querySelector(`[data-progress-kind="${kind}"]`);
+    if(!libraryProgress.active){
+      if(box)box.remove();
+      return
+    }
+    if(!box){
+      if(state.view==="careerLibrary"&&kind==="career")renderCareerLibrary();
+      if(state.view==="databaseLibrary"&&kind==="database")renderDatabaseLibrary();
+      return
+    }
+    const pct=Math.max(1,Math.min(100,Math.round(libraryProgress.done/libraryProgress.total*100)));
+    const fill=box.querySelector(".load-fill");
+    const count=box.querySelector(".load-progress-head span");
+    const note=box.querySelector(".load-note");
+    if(fill)fill.style.width=`${pct}%`;
+    if(count)count.textContent=`${libraryProgress.done} / ${libraryProgress.total}`;
+    const left=Math.max(0,libraryProgress.total-libraryProgress.done);
+    if(note)note.textContent=left?`Still working — ${left} remaining. This can take a little while on Android.`:"Finishing up…"
+  }
   const main=document.getElementById("main"),topbar=document.getElementById("topbar"),footerbar=document.getElementById("footerbar"),fileMeta=document.getElementById("fileMeta"),modeLine=document.getElementById("modeLine"),fileInput=document.getElementById("fileInput"),undoBtn=document.getElementById("undoBtn"),primarySaveBtn=document.getElementById("primarySaveBtn");
 
   const setup={checked:false,handle:null,info:null,permission:"unknown",remembered:false,error:null,loading:false};
@@ -256,7 +321,7 @@
   const CAREER_LIBRARY_CACHE="career-library-cache-v1";
   const DATABASE_LIBRARY_CACHE="database-library-cache-v1";
   const backup={checked:false,master:null,points:[],loading:false,progress:"",done:0,total:0,error:null};
-  const BACKUP_ROOT_NAME="SWOS_STUDIO_BACKUPS",MASTER_NAME="MASTER",POINTS_NAME="RESTORE_POINTS",BACKUP_META=".swosstudio.json",APP_VERSION="1.9.2";
+  const BACKUP_ROOT_NAME="SWOS_STUDIO_BACKUPS",MASTER_NAME="MASTER",POINTS_NAME="RESTORE_POINTS",BACKUP_META=".swosstudio.json",APP_VERSION="1.9.3";
   const SWOS_HANDLE_DB="swos-studio",SWOS_HANDLE_STORE="handles",SWOS_HANDLE_KEY="game-folder";
 
   function openHandleDb(){return new Promise((resolve,reject)=>{try{const req=indexedDB.open(SWOS_HANDLE_DB,1);req.onupgradeneeded=()=>{if(!req.result.objectStoreNames.contains(SWOS_HANDLE_STORE))req.result.createObjectStore(SWOS_HANDLE_STORE)};req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error)}catch(e){reject(e)}})}
@@ -743,16 +808,23 @@
   }
   async function loadCareerLibraryDetails(){
     if(!setup.info)return;
-    const items=await Promise.all(setup.info.careers.map(careerSummary));
+    const entries=setup.info.careers||[];
+    beginLibraryProgress("career",entries.length,"Reading your careers…");
+    const items=new Array(entries.length);
+    await Promise.all(entries.map(async(entry,i)=>{
+      items[i]=await careerSummary(entry);
+      stepLibraryProgress("career")
+    }));
     state.libraryItems=items;
     await saveLibraryCache(CAREER_LIBRARY_CACHE,items);
-    if(state.view==="careerLibrary")renderCareerLibrary()
+    if(state.view==="careerLibrary")renderCareerLibrary();
+    endLibraryProgress("career")
   }
   function renderCareerLibrary(){
     const items=state.libraryItems.length?state.libraryItems:setup.info?.careers?.map(x=>({name:x.name,handle:x.handle,loading:true}))||[];
     const valid=items.filter(x=>x.loading||x.valid!==false).sort((a,b)=>String(a.club||a.name).localeCompare(String(b.club||b.name)));
     const unreadable=items.filter(x=>x.valid===false).sort((a,b)=>a.name.localeCompare(b.name));
-    main.innerHTML=`<section class="hero"><button class="btn back" id="careerLibBack">← SWOS Studio</button><div class="simple-pill">🏆 My Career</div><h1>Choose your career</h1><p class="studio-lead">Just choose the club you want to manage.</p>${setup.permission==="granted"&&setup.info?.looksValid?"":`<div class="notice info section-gap"><strong>Your careers are ready to view.</strong> Chrome may ask you to reconnect to the SWOS GAME folder only when you open or change a career.</div>`}
+    main.innerHTML=`<section class="hero"><button class="btn back" id="careerLibBack">← SWOS Studio</button><div class="simple-pill">🏆 My Career</div><h1>Choose your career</h1><p class="studio-lead">Just choose the club you want to manage.</p>${setup.permission==="granted"&&setup.info?.looksValid?"":`<div class="notice info section-gap"><strong>Your careers are ready to view.</strong> Chrome may ask you to reconnect to the SWOS GAME folder only when you open or change a career.</div>`}${progressMarkup("career")}
       <div class="stack section-gap">${valid.length?valid.map(x=>`<button class="career-simple" data-careerfile="${esc(x.name)}"><span class="ico">🏆</span><span class="grow"><strong>${x.loading?esc(x.name):`${esc(x.club||"Career")} career`}</strong><span>${x.loading?"Reading career…":`${esc(x.manager||"Manager")} · ${money(x.balance)} · ${x.players} players`}</span>${!x.loading?`<span class="subtle-tech">Saved ${new Date(x.modified).toLocaleDateString("en-GB")} at ${new Date(x.modified).toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit"})}</span>`:""}</span><span>›</span></button>`).join(""):'<div class="empty">No readable careers were found.</div>'}</div>
       ${unreadable.length?`<details class="safety-details section-gap"><summary>Other / old career files (${unreadable.length})</summary><div class="tiny section-gap">${unreadable.map(x=>`<code>${esc(x.name)}</code> · ${esc(x.reason||"unsupported format")}`).join("<br>")}</div></details>`:""}
       <details class="safety-details section-gap"><summary>Technical file names</summary><div class="tiny section-gap">${valid.filter(x=>!x.loading).map(x=>`${esc(x.club||"Career")} · <code>${esc(x.name)}</code>`).join("<br>")||"No readable career files."}</div></details>
@@ -795,17 +867,24 @@
   }
   async function loadDatabaseLibraryDetails(){
     if(!setup.info)return;
-    const items=await Promise.all(setup.info.teamFiles.map(databaseSummary));
+    const entries=setup.info.teamFiles||[];
+    beginLibraryProgress("database",entries.length,"Reading SWOS countries…");
+    const items=new Array(entries.length);
+    await Promise.all(entries.map(async(entry,i)=>{
+      items[i]=await databaseSummary(entry);
+      stepLibraryProgress("database")
+    }));
     state.libraryItems=items;
     await saveLibraryCache(DATABASE_LIBRARY_CACHE,items);
-    if(state.view==="databaseLibrary")renderDatabaseLibrary()
+    if(state.view==="databaseLibrary")renderDatabaseLibrary();
+    endLibraryProgress("database")
   }
 
   function renderDatabaseLibrary(){
     const kits=state.simplePurpose==="kits",items=state.libraryItems.length?state.libraryItems:setup.info?.teamFiles?.map(x=>({name:x.name,handle:x.handle,loading:true}))||[];
     const valid=items.filter(x=>x.loading||x.valid!==false).sort((a,b)=>String(a.countryName||a.name).localeCompare(String(b.countryName||b.name)));
     const unreadable=items.filter(x=>x.valid===false).sort((a,b)=>a.name.localeCompare(b.name));
-    main.innerHTML=`<section class="hero"><button class="btn back" id="dbLibBack">← SWOS Studio</button><div class="simple-pill">${kits?"👕 Kits":"👤 Players & Teams"}</div><h1>Choose a country</h1><p class="studio-lead">${kits?"Choose the country, then the club whose kit you want to change.":"Choose the country whose clubs and players you want to edit."}</p>${setup.permission==="granted"&&setup.info?.looksValid?"":`<div class="notice info section-gap"><strong>Your country list is ready.</strong> Chrome may ask you to reconnect to the SWOS GAME folder only when you open a country.</div>`}
+    main.innerHTML=`<section class="hero"><button class="btn back" id="dbLibBack">← SWOS Studio</button><div class="simple-pill">${kits?"👕 Kits":"👤 Players & Teams"}</div><h1>Choose a country</h1><p class="studio-lead">${kits?"Choose the country, then the club whose kit you want to change.":"Choose the country whose clubs and players you want to edit."}</p>${setup.permission==="granted"&&setup.info?.looksValid?"":`<div class="notice info section-gap"><strong>Your country list is ready.</strong> Chrome may ask you to reconnect to the SWOS GAME folder only when you open a country.</div>`}${progressMarkup("database")}
       <div class="stack section-gap">${valid.length?valid.map(x=>`<button class="country-card" data-dbfile="${esc(x.name)}"><span class="flag">${x.loading?"…":esc(countryInitials(x.countryName))}</span><span class="grow"><strong>${x.loading?esc(x.name):esc(x.countryName)}</strong><span>${x.loading?"Reading database…":`${x.count} teams · ${esc(x.sample.slice(0,2).join(" · "))}`}</span></span><span>›</span></button>`).join(""):'<div class="empty">No readable SWOS team databases were found.</div>'}</div>
       ${unreadable.length?`<details class="safety-details section-gap"><summary>Other / unsupported database files (${unreadable.length})</summary><div class="tiny section-gap">${unreadable.map(x=>`<code>${esc(x.name)}</code> · ${esc(x.reason||"unsupported format")}`).join("<br>")}</div></details>`:""}
       <details class="safety-details section-gap"><summary>Technical file names</summary><div class="tiny section-gap">${valid.filter(x=>!x.loading).map(x=>`${esc(x.countryName)} · <code>${esc(x.name)}</code>`).join("<br>")||"No readable databases."}</div></details>
@@ -851,11 +930,11 @@
     document.getElementById("playBack").onclick=()=>{state.view="landing";render();window.scrollTo(0,0)}
   }
 
-  function renderAdvancedHome(){main.innerHTML=`<section class="hero"><div><div class="eyebrow">SWOS made simple · v1.9.2</div><h1>SWOS Editor</h1><p style="color:var(--muted)">Edit real DOS Sensible World of Soccer <strong style="color:var(--text)">TEAM.*</strong> databases, <strong style="color:var(--text)">.CAR</strong> careers, <strong style="color:var(--text)">POOLPLYR.DAT</strong> and now the <strong style="color:var(--text)">SWOS executable</strong> on your phone.</p></div>
+  function renderAdvancedHome(){main.innerHTML=`<section class="hero"><div><div class="eyebrow">SWOS made simple · v1.9.3</div><h1>SWOS Editor</h1><p style="color:var(--muted)">Edit real DOS Sensible World of Soccer <strong style="color:var(--text)">TEAM.*</strong> databases, <strong style="color:var(--text)">.CAR</strong> careers, <strong style="color:var(--text)">POOLPLYR.DAT</strong> and now the <strong style="color:var(--text)">SWOS executable</strong> on your phone.</p></div>
     <div class="card stack"><strong style="color:var(--yellow)">Use the correct SWOS folder</strong><div class="grid2"><div class="notice info"><strong>CAREERS + EXE</strong><br><span class="about">Main <code>GAME</code> folder</span></div><div class="notice info"><strong>TEAM.* + POOLPLYR.DAT</strong><br><span class="about"><code>GAME/DATA</code> folder</span></div></div><div class="tiny">The editor now uses separate Android file pickers for careers and databases. Chrome can remember a different last-used folder for each picker, so after the first selection you should normally land back in the right place.</div></div>
     ${directApiAvailable?`<div class="card stack"><strong style="color:var(--green)">Direct save</strong><button class="btn btn-green big" id="openCareerDirect">Open Career (.CAR) from GAME</button><button class="btn btn-green big" id="openExeDirect">Open SWOS EXE from GAME</button><button class="btn btn-blue big" id="openTeamDirect">Open TEAM database from GAME/DATA</button><button class="btn btn-blue big" id="openPoolDirect">Open POOLPLYR.DAT from GAME/DATA</button><div class="tiny">After editing, “Save to SWOS” overwrites the file you opened in place. Close SWOS before saving.</div></div>`:`<div class="notice info">Your current browser has not exposed direct file-write access to this page. Export mode still works.</div>`}
     <button class="btn btn-primary big" id="openExport">Open any supported file — export mode</button>${state.message?`<div class="notice error">${esc(state.message)}</div>`:""}
-    <div class="card stack"><strong>New in v1.9.2 — Instant libraries</strong><span class="about">• Career and country lists are cached after the first successful scan, so they can appear immediately on later visits.</span><span class="about">• Studio no longer forces the Android folder picker before showing My Career / Players & Teams.</span><span class="about">• TEAM summaries read only the header and first two team records instead of loading all 79 databases in full.</span><span class="about">• Career summaries read only the portion of each .CAR needed for club, manager, money and squad size.</span><span class="about">• Reconnection is deferred until the user actually opens a career or country.</span></div><div class="card stack"><strong>New in v1.9.1 — TEAM library bug fix</strong><span class="about">• Fixes the missing country-identification code that incorrectly marked every TEAM.* database unsupported.</span><span class="about">• Old / incompatible career files are hidden from the main career list.</span></div><div class="card stack"><strong>New in v1.9 — Friendly libraries</strong><span class="about">• My Career now shows club, manager, money, squad size and saved time.</span><span class="about">• Players & Teams / Kits identify TEAM databases by country.</span><span class="about">• Technical file names are hidden under optional details.</span><span class="about">• The known-broken Chrome direct-launch button is removed while the Android bridge is developed.</span></div><div class="card stack"><strong>New in v1.8 — PLAY SWOS setup</strong><span class="about">• Link one Magic DOSBox game profile to SWOS Studio.</span><span class="about">• Import Magic DOSBox collection.xml and choose SWOS from a friendly game list.</span><span class="about">• Manual profile-ID fallback if Android hides the Magic DOSBox settings file.</span><span class="about">• PLAY SWOS uses Magic DOSBox’s documented <code>intent_msg1</code> profile ID.</span><span class="about">• Profile choice is remembered in the browser.</span></div><div class="card stack"><strong>New in v1.7.4 — Simple Time Machine</strong><span class="about">• Friendly saved date/time instead of internal folder names.</span><span class="about">• Main action is “Go back to this point”.</span><span class="about">• Automatic safety backups are hidden unless needed.</span><span class="about">• New points remember the current career name when available.</span></div><div class="card stack"><strong>New in v1.7.3 — One-tap reconnect</strong><span class="about">• Tapping Restore & Safety now uses that tap to reconnect the remembered GAME folder automatically.</span><span class="about">• If Chrome has suspended folder permission, Studio asks only for permission again — not for the user to find the folder again.</span><span class="about">• The Safety page no longer misleadingly says setup has been lost when the location is still remembered.</span></div><div class="card stack"><strong>New in v1.7.2 — Smart Backup</strong><span class="about">• Stops copying thousands of untouched game assets.</span><span class="about">• Protects all careers, TEAM.* databases, POOLPLYR.DAT and SWOS executables.</span><span class="about">• Restore now changes only those protected files rather than clearing/rebuilding the whole GAME folder.</span><span class="about">• Future editable assets such as chants and pitches can be added to the protected set as those features are built.</span></div><div class="card stack"><strong>New in v1.7.1 — Backup recovery fix</strong><span class="about">• Repairs incomplete Master folders left by an interrupted first backup.</span><span class="about">• Handles Android file/folder type collisions safely.</span><span class="about">• A Master is only shown as protected after metadata confirms a successful snapshot.</span></div><div class="card stack"><strong>New in v1.7 — Master Backup & Restore Points</strong><span class="about">• Protect the entire connected GAME folder.</span><span class="about">• Keep one trusted Master Version and update it whenever you choose.</span><span class="about">• Create named restore points at any stage of a career or modding journey.</span><span class="about">• Restoring first creates an automatic emergency checkpoint of the current game.</span><span class="about">• Backup folders are excluded from snapshots so they never copy themselves.</span></div><div class="card stack"><strong>New in v1.6 — One-time SWOS setup</strong><span class="about">• Select the main GAME folder once.</span><span class="about">• Chrome can remember the folder handle between visits.</span><span class="about">• My Career now lists .CAR saves inside Studio.</span><span class="about">• Players / Kits list TEAM databases from GAME/DATA.</span><span class="about">• Game Enhancements automatically opens the preferred SWOS EXE.</span></div><div class="card stack"><strong>EXE Tools / Endless Career</strong><span class="about">• Opens your real <code>SWSENGPP.EXE</code> from the main GAME folder.</span><span class="about">• Detects all 8 verified 20-season comparison sites.</span><span class="about">• Enables or restores the endless-career patch without hex editing.</span><span class="about">• Saves a separate <code>SWSEND.EXE</code> copy rather than automatically overwriting the original.</span><span class="about">• The patched EXE has already launched successfully with your TRANS2 career.</span></div><div class="card stack"><strong>Unlimited transfers + squad capacity</strong><span class="about">• FF at 0xD880 is verified in-game: you can keep making transfers beyond the normal chairman limit.</span><span class="about">• Career squad size is read from verified offset 0xE08C.</span><span class="about">• Unlimited transfers do not mean an unlimited squad.</span></div><div class="card stack"><strong>Connected transfer tools</strong><span class="about">• Load a TEAM.* file alongside POOLPLYR.DAT.</span><span class="about">• See which pool entries are linked to that database and whether they are current.</span><span class="about">• Sync every linked pool player from the TEAM file in one tap.</span><span class="about">• Replace any pool slot with a player selected from the TEAM database, including correct origin references.</span></div><div class="card stack"><strong>Foreign transfer market</strong><span class="about">• Opens your real GAME/DATA/POOLPLYR.DAT.</span><span class="about">• Reads all 900 transfer-pool records.</span><span class="about">• Search by player or origin club.</span><span class="about">• Edit the transfer-market player’s nationality, number, position, appearance, abilities and value.</span><span class="about">• Direct-save back over POOLPLYR.DAT after byte-for-byte verification.</span></div><div class="card stack"><strong>Safer power tools</strong><span class="about">• Database integrity audit before you save.</span><span class="about">• Copy a player’s known football data and paste it into another slot.</span><span class="about">• Quick ability presets while editing.</span><span class="about">• Restore one player slot from the last saved version.</span><span class="about">• Faster XI / SUB / RES role controls.</span></div><div class="card stack"><strong>Squads, transfers & kits</strong><span class="about">• Reorder a club’s starting XI and substitutes.</span><span class="about">• Safely swap players between clubs without changing team sizes.</span><span class="about">• Edit home and away kit style/colours with a live preview.</span><span class="about">• Reorder XI, substitutes and reserves inside a career.</span><span class="about">• Search every player in the opened TEAM database.</span></div><div class="card stack"><strong>Folder-aware workflow</strong><span class="about">• Career picker remembers the main GAME folder.</span><span class="about">• TEAM picker remembers GAME/DATA separately.</span><span class="about">• Rename Career uses the career picker identity, helping Android return to GAME.</span></div>
+    <div class="card stack"><strong>New in v1.9.3 — Loading feedback</strong><span class="about">• Slow scans now show a live progress bar and count instead of looking frozen.</span><span class="about">• Studio explicitly says it is still working on Android.</span><span class="about">• Progress appears in Careers and Players & Teams / Kits.</span></div><div class="card stack"><strong>New in v1.9.2 — Instant libraries</strong><span class="about">• Career and country lists are cached after the first successful scan, so they can appear immediately on later visits.</span><span class="about">• Studio no longer forces the Android folder picker before showing My Career / Players & Teams.</span><span class="about">• TEAM summaries read only the header and first two team records instead of loading all 79 databases in full.</span><span class="about">• Career summaries read only the portion of each .CAR needed for club, manager, money and squad size.</span><span class="about">• Reconnection is deferred until the user actually opens a career or country.</span></div><div class="card stack"><strong>New in v1.9.1 — TEAM library bug fix</strong><span class="about">• Fixes the missing country-identification code that incorrectly marked every TEAM.* database unsupported.</span><span class="about">• Old / incompatible career files are hidden from the main career list.</span></div><div class="card stack"><strong>New in v1.9 — Friendly libraries</strong><span class="about">• My Career now shows club, manager, money, squad size and saved time.</span><span class="about">• Players & Teams / Kits identify TEAM databases by country.</span><span class="about">• Technical file names are hidden under optional details.</span><span class="about">• The known-broken Chrome direct-launch button is removed while the Android bridge is developed.</span></div><div class="card stack"><strong>New in v1.8 — PLAY SWOS setup</strong><span class="about">• Link one Magic DOSBox game profile to SWOS Studio.</span><span class="about">• Import Magic DOSBox collection.xml and choose SWOS from a friendly game list.</span><span class="about">• Manual profile-ID fallback if Android hides the Magic DOSBox settings file.</span><span class="about">• PLAY SWOS uses Magic DOSBox’s documented <code>intent_msg1</code> profile ID.</span><span class="about">• Profile choice is remembered in the browser.</span></div><div class="card stack"><strong>New in v1.7.4 — Simple Time Machine</strong><span class="about">• Friendly saved date/time instead of internal folder names.</span><span class="about">• Main action is “Go back to this point”.</span><span class="about">• Automatic safety backups are hidden unless needed.</span><span class="about">• New points remember the current career name when available.</span></div><div class="card stack"><strong>New in v1.7.3 — One-tap reconnect</strong><span class="about">• Tapping Restore & Safety now uses that tap to reconnect the remembered GAME folder automatically.</span><span class="about">• If Chrome has suspended folder permission, Studio asks only for permission again — not for the user to find the folder again.</span><span class="about">• The Safety page no longer misleadingly says setup has been lost when the location is still remembered.</span></div><div class="card stack"><strong>New in v1.7.2 — Smart Backup</strong><span class="about">• Stops copying thousands of untouched game assets.</span><span class="about">• Protects all careers, TEAM.* databases, POOLPLYR.DAT and SWOS executables.</span><span class="about">• Restore now changes only those protected files rather than clearing/rebuilding the whole GAME folder.</span><span class="about">• Future editable assets such as chants and pitches can be added to the protected set as those features are built.</span></div><div class="card stack"><strong>New in v1.7.1 — Backup recovery fix</strong><span class="about">• Repairs incomplete Master folders left by an interrupted first backup.</span><span class="about">• Handles Android file/folder type collisions safely.</span><span class="about">• A Master is only shown as protected after metadata confirms a successful snapshot.</span></div><div class="card stack"><strong>New in v1.7 — Master Backup & Restore Points</strong><span class="about">• Protect the entire connected GAME folder.</span><span class="about">• Keep one trusted Master Version and update it whenever you choose.</span><span class="about">• Create named restore points at any stage of a career or modding journey.</span><span class="about">• Restoring first creates an automatic emergency checkpoint of the current game.</span><span class="about">• Backup folders are excluded from snapshots so they never copy themselves.</span></div><div class="card stack"><strong>New in v1.6 — One-time SWOS setup</strong><span class="about">• Select the main GAME folder once.</span><span class="about">• Chrome can remember the folder handle between visits.</span><span class="about">• My Career now lists .CAR saves inside Studio.</span><span class="about">• Players / Kits list TEAM databases from GAME/DATA.</span><span class="about">• Game Enhancements automatically opens the preferred SWOS EXE.</span></div><div class="card stack"><strong>EXE Tools / Endless Career</strong><span class="about">• Opens your real <code>SWSENGPP.EXE</code> from the main GAME folder.</span><span class="about">• Detects all 8 verified 20-season comparison sites.</span><span class="about">• Enables or restores the endless-career patch without hex editing.</span><span class="about">• Saves a separate <code>SWSEND.EXE</code> copy rather than automatically overwriting the original.</span><span class="about">• The patched EXE has already launched successfully with your TRANS2 career.</span></div><div class="card stack"><strong>Unlimited transfers + squad capacity</strong><span class="about">• FF at 0xD880 is verified in-game: you can keep making transfers beyond the normal chairman limit.</span><span class="about">• Career squad size is read from verified offset 0xE08C.</span><span class="about">• Unlimited transfers do not mean an unlimited squad.</span></div><div class="card stack"><strong>Connected transfer tools</strong><span class="about">• Load a TEAM.* file alongside POOLPLYR.DAT.</span><span class="about">• See which pool entries are linked to that database and whether they are current.</span><span class="about">• Sync every linked pool player from the TEAM file in one tap.</span><span class="about">• Replace any pool slot with a player selected from the TEAM database, including correct origin references.</span></div><div class="card stack"><strong>Foreign transfer market</strong><span class="about">• Opens your real GAME/DATA/POOLPLYR.DAT.</span><span class="about">• Reads all 900 transfer-pool records.</span><span class="about">• Search by player or origin club.</span><span class="about">• Edit the transfer-market player’s nationality, number, position, appearance, abilities and value.</span><span class="about">• Direct-save back over POOLPLYR.DAT after byte-for-byte verification.</span></div><div class="card stack"><strong>Safer power tools</strong><span class="about">• Database integrity audit before you save.</span><span class="about">• Copy a player’s known football data and paste it into another slot.</span><span class="about">• Quick ability presets while editing.</span><span class="about">• Restore one player slot from the last saved version.</span><span class="about">• Faster XI / SUB / RES role controls.</span></div><div class="card stack"><strong>Squads, transfers & kits</strong><span class="about">• Reorder a club’s starting XI and substitutes.</span><span class="about">• Safely swap players between clubs without changing team sizes.</span><span class="about">• Edit home and away kit style/colours with a live preview.</span><span class="about">• Reorder XI, substitutes and reserves inside a career.</span><span class="about">• Search every player in the opened TEAM database.</span></div><div class="card stack"><strong>Folder-aware workflow</strong><span class="about">• Career picker remembers the main GAME folder.</span><span class="about">• TEAM picker remembers GAME/DATA separately.</span><span class="about">• Rename Career uses the career picker identity, helping Android return to GAME.</span></div>
     <div class="card stack"><strong>Team Editor</strong><span class="about">Edit team name, coach/manager, division and formation as well as the full player editor.</span></div>
     <div class="card stack"><strong>Career tools</strong><span class="about">Verified bank balance, career squad editing and Career Rename / Save As remain available.</span></div>
     <div class="about">Unofficial fan-made editor. Not affiliated with Sensible Software or Codemasters.</div></section>`;
