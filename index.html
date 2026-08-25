@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#07111f" />
-  <title>SWOS Studio v1.7</title>
+  <title>SWOS Studio v1.7.1</title>
   <style>
     :root{
       --bg:#050a12;--panel:#0d1828;--panel2:#132238;--line:#263d5c;
@@ -162,7 +162,7 @@
 <body>
 <div id="app" class="app">
   <div id="topbar" class="topbar hidden">
-    <div class="brand" id="brandHome">SWOS STUDIO <span style="font-size:10px;color:var(--green)">v1.7</span></div>
+    <div class="brand" id="brandHome">SWOS STUDIO <span style="font-size:10px;color:var(--green)">v1.7.1</span></div>
     <div class="sub" id="fileMeta"></div>
     <div class="mode" id="modeLine"></div>
   </div>
@@ -219,7 +219,7 @@
 
   const setup={checked:false,handle:null,info:null,permission:"unknown",remembered:false,error:null,loading:false};
   const backup={checked:false,master:null,points:[],loading:false,progress:"",done:0,total:0,error:null};
-  const BACKUP_ROOT_NAME="SWOS_STUDIO_BACKUPS",MASTER_NAME="MASTER",POINTS_NAME="RESTORE_POINTS",BACKUP_META=".swosstudio.json",APP_VERSION="1.7";
+  const BACKUP_ROOT_NAME="SWOS_STUDIO_BACKUPS",MASTER_NAME="MASTER",POINTS_NAME="RESTORE_POINTS",BACKUP_META=".swosstudio.json",APP_VERSION="1.7.1";
   const SWOS_HANDLE_DB="swos-studio",SWOS_HANDLE_STORE="handles",SWOS_HANDLE_KEY="game-folder";
 
   function openHandleDb(){return new Promise((resolve,reject)=>{try{const req=indexedDB.open(SWOS_HANDLE_DB,1);req.onupgradeneeded=()=>{if(!req.result.objectStoreNames.contains(SWOS_HANDLE_STORE))req.result.createObjectStore(SWOS_HANDLE_STORE)};req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error)}catch(e){reject(e)}})}
@@ -232,6 +232,10 @@
   function safePointName(label){const clean=(label||"Restore point").trim().replace(/[^\w\- ]+/g,"").replace(/\s+/g,"_").slice(0,36)||"Restore_point";const d=new Date(),pad=n=>String(n).padStart(2,"0");return`${d.getFullYear()}${pad(d.getMonth()+1)}${pad(d.getDate())}_${pad(d.getHours())}${pad(d.getMinutes())}${pad(d.getSeconds())}_${clean}`}
   async function tryDir(parent,name){try{return await parent.getDirectoryHandle(name)}catch(e){return null}}
   async function tryFile(parent,name){try{return await parent.getFileHandle(name)}catch(e){return null}}
+  async function entryKind(parent,name){try{for await(const [n,h] of parent.entries())if(n===name)return h.kind;return null}catch(e){return null}}
+  async function removeIfExists(parent,name){try{const kind=await entryKind(parent,name);if(kind)await parent.removeEntry(name,{recursive:kind==="directory"});return true}catch(e){return false}}
+  async function ensureCleanDirectory(parent,name){const kind=await entryKind(parent,name);if(kind&&kind!=="directory")await parent.removeEntry(name);return await parent.getDirectoryHandle(name,{create:true})}
+  async function ensureCleanFile(parent,name){const kind=await entryKind(parent,name);if(kind&&kind!=="file")await parent.removeEntry(name,{recursive:true});return await parent.getFileHandle(name,{create:true})}
   async function readSnapshotMeta(dir){try{const h=await dir.getFileHandle(BACKUP_META),f=await h.getFile();return JSON.parse(await f.text())}catch(e){return null}}
   async function writeSnapshotMeta(dir,meta){const h=await dir.getFileHandle(BACKUP_META,{create:true}),w=await h.createWritable();await w.write(JSON.stringify(meta,null,2));await w.close()}
   async function collectSnapshotFiles(dir,prefix=[],root=true){
@@ -244,7 +248,7 @@
     }
     return files
   }
-  async function ensurePath(root,parts){let d=root;for(const p of parts)d=await d.getDirectoryHandle(p,{create:true});return d}
+  async function ensurePath(root,parts){let d=root;for(const p of parts){const kind=await entryKind(d,p);if(kind&&kind!=="directory")await d.removeEntry(p);d=await d.getDirectoryHandle(p,{create:true})}return d}
   function setBackupProgress(message,done=backup.done,total=backup.total){
     backup.progress=message;backup.done=done;backup.total=total;
     const t=document.getElementById("backupProgressText"),b=document.getElementById("backupProgressBar");
@@ -254,7 +258,7 @@
   async function copyFileList(files,dest,onProgress){
     let done=0;
     for(const item of files){
-      const dirs=item.parts.slice(0,-1),name=item.parts[item.parts.length-1],targetDir=await ensurePath(dest,dirs),fh=await targetDir.getFileHandle(name,{create:true}),w=await fh.createWritable();
+      const dirs=item.parts.slice(0,-1),name=item.parts[item.parts.length-1],targetDir=await ensurePath(dest,dirs),fh=await ensureCleanFile(targetDir,name),w=await fh.createWritable();
       await w.write(item.file);await w.close();done++;
       if(onProgress)onProgress(done,files.length,item.parts.join("/"));
       if(done%8===0)await new Promise(r=>setTimeout(r,0));
@@ -265,14 +269,14 @@
     const names=[];for await(const [name] of dir.entries())if(!keep.has(name))names.push(name);
     for(const name of names){await dir.removeEntry(name,{recursive:true})}
   }
-  async function getBackupRoot(create=false){if(!setup.handle)return null;try{return await setup.handle.getDirectoryHandle(BACKUP_ROOT_NAME,{create})}catch(e){return null}}
+  async function getBackupRoot(create=false){if(!setup.handle)return null;try{const kind=await entryKind(setup.handle,BACKUP_ROOT_NAME);if(kind&&kind!=="directory"){if(!create)return null;await setup.handle.removeEntry(BACKUP_ROOT_NAME)}return await setup.handle.getDirectoryHandle(BACKUP_ROOT_NAME,{create})}catch(e){return null}}
   async function loadBackupStatus(){
     backup.error=null;backup.master=null;backup.points=[];backup.checked=true;
     if(!setup.handle||setup.permission!=="granted")return;
     try{
       const root=await getBackupRoot(false);if(!root)return;
       const master=await tryDir(root,MASTER_NAME);
-      if(master){const meta=await readSnapshotMeta(master);backup.master={handle:master,meta:meta||{label:"Master Version"}}}
+      if(master){const meta=await readSnapshotMeta(master);if(meta&&meta.type==="master"&&Number(meta.fileCount)>0&&meta.createdAt)backup.master={handle:master,meta};}
       const pointsDir=await tryDir(root,POINTS_NAME);
       if(pointsDir){
         const arr=[];
@@ -297,7 +301,8 @@
     backup.loading=true;backup.error=null;backup.progress="Preparing Master Version…";renderSafetyCentre();
     try{
       const root=await getBackupRoot(true);
-      if(await tryDir(root,MASTER_NAME))await root.removeEntry(MASTER_NAME,{recursive:true});
+      if(!root)throw new Error("Could not create the SWOS Studio backup area.");
+      await removeIfExists(root,MASTER_NAME);
       const master=await root.getDirectoryHandle(MASTER_NAME,{create:true});
       await createSnapshot(master,"Master Version","master");
       await loadBackupStatus();state.message="Master Version created successfully.";
@@ -308,7 +313,7 @@
     if(!await ensureGameFolder())return null;
     backup.loading=true;backup.error=null;if(!quiet){backup.progress="Preparing restore point…";renderSafetyCentre()}
     try{
-      const root=await getBackupRoot(true),points=await root.getDirectoryHandle(POINTS_NAME,{create:true}),name=safePointName(label),dest=await points.getDirectoryHandle(name,{create:true}),meta=await createSnapshot(dest,label,"restore-point");
+      const root=await getBackupRoot(true);if(!root)throw new Error("Could not create the SWOS Studio backup area.");const points=await ensureCleanDirectory(root,POINTS_NAME),name=safePointName(label);await removeIfExists(points,name);const dest=await points.getDirectoryHandle(name,{create:true}),meta=await createSnapshot(dest,label,"restore-point");
       await loadBackupStatus();return{name,handle:dest,meta}
     }catch(e){backup.error=e.message;return null}
     finally{backup.loading=false;backup.progress="";backup.done=0;backup.total=0;if(!quiet&&state.view==="safety")renderSafetyCentre()}
@@ -320,7 +325,7 @@
     backup.loading=true;backup.error=null;backup.progress="Creating a safety checkpoint first…";renderSafetyCentre();
     try{
       const emergencyLabel=`Before restoring ${label}`;
-      const root=await getBackupRoot(true),points=await root.getDirectoryHandle(POINTS_NAME,{create:true}),emName=safePointName(emergencyLabel),em=await points.getDirectoryHandle(emName,{create:true});
+      const root=await getBackupRoot(true);if(!root)throw new Error("Could not access the SWOS Studio backup area.");const points=await ensureCleanDirectory(root,POINTS_NAME),emName=safePointName(emergencyLabel);await removeIfExists(points,emName);const em=await points.getDirectoryHandle(emName,{create:true});
       await createSnapshot(em,emergencyLabel,"automatic-pre-restore");
       setBackupProgress("Reading saved version…",0,0);
       const files=await collectSnapshotFiles(snapshot,[],false);backup.total=files.length;backup.done=0;
@@ -587,7 +592,7 @@
       ${!connected?`<div class="setup-banner warn section-gap"><div class="setup-head"><span class="setup-dot"></span><span class="grow"><strong>Connect SWOS first</strong><span>Studio needs access to your GAME folder before it can protect it.</span></span><button class="btn btn-green" id="safetyConnect">Connect</button></div></div>`:""}
       ${connected?`<div class="backup-hero ${master?"":"unprotected"} section-gap"><div class="row"><div class="grow"><h3 style="margin:0">${master?"⭐ Master Version protected":"⭐ Create your Master Version"}</h3><p class="about" style="margin-bottom:0">${master?"This is your trusted whole-game version. You can update it whenever your SWOS setup reaches a point you really like.":"Studio will make a complete protected copy of your GAME folder — careers, databases, executable and game files."}</p></div></div>${master?`<div class="backup-stat"><div><strong>${fmtDate(master.meta.createdAt)}</strong><span>Master created / updated</span></div><div><strong>${master.meta.fileCount??"—"} files · ${fmtBytes(master.meta.bytes)}</strong><span>Protected snapshot</span></div></div>`:""}<div class="setup-actions"><button class="btn btn-green" id="masterCreate">${master?"Update Master Version":"Create Master Version"}</button>${master?'<button class="btn btn-blue" id="masterRestore">Restore Master Version</button>':""}</div></div>`:""}
       ${backup.loading?`<div class="progress-wrap section-gap"><strong>SWOS Studio is protecting your files</strong><div class="about" id="backupProgressText">${esc(backup.progress||"Working…")}</div><div class="progress-line"><span id="backupProgressBar" style="width:${backup.total?Math.round(backup.done/backup.total*100):8}%"></span></div><div class="tiny">${backup.total?`${backup.done} of ${backup.total} files`:"Please keep Chrome open until this finishes."}</div></div>`:""}
-      ${backup.error?`<div class="notice error section-gap"><strong>Backup action did not finish:</strong> ${esc(backup.error)}</div>`:""}
+      ${backup.error?`<div class="notice error section-gap"><strong>Backup action did not finish:</strong> ${esc(backup.error)}<div class="tiny section-gap">v1.7.1 can automatically repair incomplete backup folders from an interrupted first attempt. You do not need to delete or move any SWOS files yourself.</div></div>`:""}
       ${connected&&!backup.loading?`<div class="friendly-card section-gap"><h3>🕒 Create a restore point</h3><p class="about">Save where you are right now before making a big change — for example “Before squad update” or “Start of Season 8”.</p><button class="btn btn-blue big" id="createPoint">Create restore point</button></div>`:""}
       ${connected?`<div class="section-gap"><div class="row"><h3 class="grow">Restore points</h3><span class="badge">${points.length}</span></div><div class="stack">${points.length?points.slice(0,12).map((p,i)=>`<div class="restore-item"><div class="title">${esc(p.meta.label||p.name)}</div><div class="meta">${p.meta.createdAt?fmtDate(p.meta.createdAt):esc(p.name)}${p.meta.fileCount!=null?` · ${p.meta.fileCount} files · ${fmtBytes(p.meta.bytes)}`:""}</div><div class="actions"><button class="btn btn-blue" data-restorepoint="${i}">Restore</button><button class="btn" data-deletepoint="${i}">Delete</button></div></div>`).join(""):'<div class="empty">No restore points yet.</div>'}</div></div>`:""}
       ${master?`<div class="danger-note section-gap"><strong>Safe restore behaviour</strong><div class="about">Before Studio restores a Master Version or restore point, it automatically saves the game exactly as it is now. That gives you a way back even if you change your mind after restoring.</div></div>`:""}
@@ -612,11 +617,11 @@
     document.getElementById("testMagic").onclick=()=>{window.location.href="intent://#Intent;package=bruenor.magicbox;end"}
   }
 
-  function renderAdvancedHome(){main.innerHTML=`<section class="hero"><div><div class="eyebrow">SWOS made simple · v1.7</div><h1>SWOS Editor</h1><p style="color:var(--muted)">Edit real DOS Sensible World of Soccer <strong style="color:var(--text)">TEAM.*</strong> databases, <strong style="color:var(--text)">.CAR</strong> careers, <strong style="color:var(--text)">POOLPLYR.DAT</strong> and now the <strong style="color:var(--text)">SWOS executable</strong> on your phone.</p></div>
+  function renderAdvancedHome(){main.innerHTML=`<section class="hero"><div><div class="eyebrow">SWOS made simple · v1.7.1</div><h1>SWOS Editor</h1><p style="color:var(--muted)">Edit real DOS Sensible World of Soccer <strong style="color:var(--text)">TEAM.*</strong> databases, <strong style="color:var(--text)">.CAR</strong> careers, <strong style="color:var(--text)">POOLPLYR.DAT</strong> and now the <strong style="color:var(--text)">SWOS executable</strong> on your phone.</p></div>
     <div class="card stack"><strong style="color:var(--yellow)">Use the correct SWOS folder</strong><div class="grid2"><div class="notice info"><strong>CAREERS + EXE</strong><br><span class="about">Main <code>GAME</code> folder</span></div><div class="notice info"><strong>TEAM.* + POOLPLYR.DAT</strong><br><span class="about"><code>GAME/DATA</code> folder</span></div></div><div class="tiny">The editor now uses separate Android file pickers for careers and databases. Chrome can remember a different last-used folder for each picker, so after the first selection you should normally land back in the right place.</div></div>
     ${directApiAvailable?`<div class="card stack"><strong style="color:var(--green)">Direct save</strong><button class="btn btn-green big" id="openCareerDirect">Open Career (.CAR) from GAME</button><button class="btn btn-green big" id="openExeDirect">Open SWOS EXE from GAME</button><button class="btn btn-blue big" id="openTeamDirect">Open TEAM database from GAME/DATA</button><button class="btn btn-blue big" id="openPoolDirect">Open POOLPLYR.DAT from GAME/DATA</button><div class="tiny">After editing, “Save to SWOS” overwrites the file you opened in place. Close SWOS before saving.</div></div>`:`<div class="notice info">Your current browser has not exposed direct file-write access to this page. Export mode still works.</div>`}
     <button class="btn btn-primary big" id="openExport">Open any supported file — export mode</button>${state.message?`<div class="notice error">${esc(state.message)}</div>`:""}
-    <div class="card stack"><strong>New in v1.7 — Master Backup & Restore Points</strong><span class="about">• Protect the entire connected GAME folder.</span><span class="about">• Keep one trusted Master Version and update it whenever you choose.</span><span class="about">• Create named restore points at any stage of a career or modding journey.</span><span class="about">• Restoring first creates an automatic emergency checkpoint of the current game.</span><span class="about">• Backup folders are excluded from snapshots so they never copy themselves.</span></div><div class="card stack"><strong>New in v1.6 — One-time SWOS setup</strong><span class="about">• Select the main GAME folder once.</span><span class="about">• Chrome can remember the folder handle between visits.</span><span class="about">• My Career now lists .CAR saves inside Studio.</span><span class="about">• Players / Kits list TEAM databases from GAME/DATA.</span><span class="about">• Game Enhancements automatically opens the preferred SWOS EXE.</span></div><div class="card stack"><strong>EXE Tools / Endless Career</strong><span class="about">• Opens your real <code>SWSENGPP.EXE</code> from the main GAME folder.</span><span class="about">• Detects all 8 verified 20-season comparison sites.</span><span class="about">• Enables or restores the endless-career patch without hex editing.</span><span class="about">• Saves a separate <code>SWSEND.EXE</code> copy rather than automatically overwriting the original.</span><span class="about">• The patched EXE has already launched successfully with your TRANS2 career.</span></div><div class="card stack"><strong>Unlimited transfers + squad capacity</strong><span class="about">• FF at 0xD880 is verified in-game: you can keep making transfers beyond the normal chairman limit.</span><span class="about">• Career squad size is read from verified offset 0xE08C.</span><span class="about">• Unlimited transfers do not mean an unlimited squad.</span></div><div class="card stack"><strong>Connected transfer tools</strong><span class="about">• Load a TEAM.* file alongside POOLPLYR.DAT.</span><span class="about">• See which pool entries are linked to that database and whether they are current.</span><span class="about">• Sync every linked pool player from the TEAM file in one tap.</span><span class="about">• Replace any pool slot with a player selected from the TEAM database, including correct origin references.</span></div><div class="card stack"><strong>Foreign transfer market</strong><span class="about">• Opens your real GAME/DATA/POOLPLYR.DAT.</span><span class="about">• Reads all 900 transfer-pool records.</span><span class="about">• Search by player or origin club.</span><span class="about">• Edit the transfer-market player’s nationality, number, position, appearance, abilities and value.</span><span class="about">• Direct-save back over POOLPLYR.DAT after byte-for-byte verification.</span></div><div class="card stack"><strong>Safer power tools</strong><span class="about">• Database integrity audit before you save.</span><span class="about">• Copy a player’s known football data and paste it into another slot.</span><span class="about">• Quick ability presets while editing.</span><span class="about">• Restore one player slot from the last saved version.</span><span class="about">• Faster XI / SUB / RES role controls.</span></div><div class="card stack"><strong>Squads, transfers & kits</strong><span class="about">• Reorder a club’s starting XI and substitutes.</span><span class="about">• Safely swap players between clubs without changing team sizes.</span><span class="about">• Edit home and away kit style/colours with a live preview.</span><span class="about">• Reorder XI, substitutes and reserves inside a career.</span><span class="about">• Search every player in the opened TEAM database.</span></div><div class="card stack"><strong>Folder-aware workflow</strong><span class="about">• Career picker remembers the main GAME folder.</span><span class="about">• TEAM picker remembers GAME/DATA separately.</span><span class="about">• Rename Career uses the career picker identity, helping Android return to GAME.</span></div>
+    <div class="card stack"><strong>New in v1.7.1 — Backup recovery fix</strong><span class="about">• Repairs incomplete Master folders left by an interrupted first backup.</span><span class="about">• Handles Android file/folder type collisions safely.</span><span class="about">• A Master is only shown as protected after metadata confirms a successful snapshot.</span></div><div class="card stack"><strong>New in v1.7 — Master Backup & Restore Points</strong><span class="about">• Protect the entire connected GAME folder.</span><span class="about">• Keep one trusted Master Version and update it whenever you choose.</span><span class="about">• Create named restore points at any stage of a career or modding journey.</span><span class="about">• Restoring first creates an automatic emergency checkpoint of the current game.</span><span class="about">• Backup folders are excluded from snapshots so they never copy themselves.</span></div><div class="card stack"><strong>New in v1.6 — One-time SWOS setup</strong><span class="about">• Select the main GAME folder once.</span><span class="about">• Chrome can remember the folder handle between visits.</span><span class="about">• My Career now lists .CAR saves inside Studio.</span><span class="about">• Players / Kits list TEAM databases from GAME/DATA.</span><span class="about">• Game Enhancements automatically opens the preferred SWOS EXE.</span></div><div class="card stack"><strong>EXE Tools / Endless Career</strong><span class="about">• Opens your real <code>SWSENGPP.EXE</code> from the main GAME folder.</span><span class="about">• Detects all 8 verified 20-season comparison sites.</span><span class="about">• Enables or restores the endless-career patch without hex editing.</span><span class="about">• Saves a separate <code>SWSEND.EXE</code> copy rather than automatically overwriting the original.</span><span class="about">• The patched EXE has already launched successfully with your TRANS2 career.</span></div><div class="card stack"><strong>Unlimited transfers + squad capacity</strong><span class="about">• FF at 0xD880 is verified in-game: you can keep making transfers beyond the normal chairman limit.</span><span class="about">• Career squad size is read from verified offset 0xE08C.</span><span class="about">• Unlimited transfers do not mean an unlimited squad.</span></div><div class="card stack"><strong>Connected transfer tools</strong><span class="about">• Load a TEAM.* file alongside POOLPLYR.DAT.</span><span class="about">• See which pool entries are linked to that database and whether they are current.</span><span class="about">• Sync every linked pool player from the TEAM file in one tap.</span><span class="about">• Replace any pool slot with a player selected from the TEAM database, including correct origin references.</span></div><div class="card stack"><strong>Foreign transfer market</strong><span class="about">• Opens your real GAME/DATA/POOLPLYR.DAT.</span><span class="about">• Reads all 900 transfer-pool records.</span><span class="about">• Search by player or origin club.</span><span class="about">• Edit the transfer-market player’s nationality, number, position, appearance, abilities and value.</span><span class="about">• Direct-save back over POOLPLYR.DAT after byte-for-byte verification.</span></div><div class="card stack"><strong>Safer power tools</strong><span class="about">• Database integrity audit before you save.</span><span class="about">• Copy a player’s known football data and paste it into another slot.</span><span class="about">• Quick ability presets while editing.</span><span class="about">• Restore one player slot from the last saved version.</span><span class="about">• Faster XI / SUB / RES role controls.</span></div><div class="card stack"><strong>Squads, transfers & kits</strong><span class="about">• Reorder a club’s starting XI and substitutes.</span><span class="about">• Safely swap players between clubs without changing team sizes.</span><span class="about">• Edit home and away kit style/colours with a live preview.</span><span class="about">• Reorder XI, substitutes and reserves inside a career.</span><span class="about">• Search every player in the opened TEAM database.</span></div><div class="card stack"><strong>Folder-aware workflow</strong><span class="about">• Career picker remembers the main GAME folder.</span><span class="about">• TEAM picker remembers GAME/DATA separately.</span><span class="about">• Rename Career uses the career picker identity, helping Android return to GAME.</span></div>
     <div class="card stack"><strong>Team Editor</strong><span class="about">Edit team name, coach/manager, division and formation as well as the full player editor.</span></div>
     <div class="card stack"><strong>Career tools</strong><span class="about">Verified bank balance, career squad editing and Career Rename / Save As remain available.</span></div>
     <div class="about">Unofficial fan-made editor. Not affiliated with Sensible Software or Codemasters.</div></section>`;
