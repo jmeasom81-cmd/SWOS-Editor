@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#07111f" />
-  <title>SWOS Studio v1.18.0</title>
+  <title>SWOS Studio v1.19.0</title>
   <style>
     :root{
       --bg:#050a12;--panel:#0d1828;--panel2:#132238;--line:#263d5c;
@@ -73,6 +73,18 @@
     .footerbar .inner{max-width:760px;margin:0 auto;display:flex;gap:8px}.footerbar .btn{flex:1;min-width:0;padding-left:8px;padding-right:8px;font-size:12px}
     .hidden{display:none!important} details{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:12px}
     summary{cursor:pointer;color:var(--muted);font-size:12px;font-weight:800} code{color:#d9e9ff}.about{font-size:12px;color:var(--muted)}
+    .dev-card{border:1px solid var(--line);background:var(--panel);border-radius:13px;padding:13px}
+    .dev-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+    .dev-head strong{font-size:14px}.dev-head span{display:block;color:var(--muted);font-size:10px;margin-top:3px}
+    .skill-delta{display:inline-block;border-radius:999px;padding:4px 7px;font-size:9px;font-weight:900}
+    .skill-delta.up{color:var(--green);border:1px solid rgba(66,209,132,.5)}
+    .skill-delta.down{color:var(--red);border:1px solid rgba(255,107,107,.5)}
+    .skill-delta.same{color:var(--muted);border:1px solid var(--line)}
+    .dev-skills{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:10px}
+    .dev-skill{border:1px solid var(--line);background:#091421;border-radius:9px;padding:8px}
+    .dev-skill small{display:block;color:var(--muted);font-size:8px;text-transform:uppercase}
+    .dev-skill strong{display:block;font-size:11px;margin-top:3px}
+    .potential-pill{display:inline-block;border-radius:999px;border:1px solid var(--line);padding:4px 7px;font-size:9px;font-weight:900;color:var(--yellow)}
     .watch-card{border:1px solid rgba(88,166,255,.5);background:rgba(88,166,255,.06);border-radius:13px;padding:14px}
     .watch-good{border-color:rgba(66,209,132,.52);background:rgba(66,209,132,.06)}
     .watch-alert{border-color:rgba(245,213,71,.55);background:rgba(245,213,71,.07)}
@@ -275,7 +287,7 @@
 <body>
 <div id="app" class="app">
   <div id="topbar" class="topbar hidden">
-    <div class="brand" id="brandHome">SWOS STUDIO <span style="font-size:10px;color:var(--green)">v1.18.0</span></div>
+    <div class="brand" id="brandHome">SWOS STUDIO <span style="font-size:10px;color:var(--green)">v1.19.0</span></div>
     <div class="sub" id="fileMeta"></div>
     <div class="mode" id="modeLine"></div>
   </div>
@@ -397,7 +409,7 @@
   const CAREER_LIBRARY_CACHE="career-library-cache-v1";
   const DATABASE_LIBRARY_CACHE="database-library-cache-v1";
   const backup={checked:false,master:null,points:[],loading:false,progress:"",done:0,total:0,error:null};
-  const BACKUP_ROOT_NAME="SWOS_STUDIO_BACKUPS",MASTER_NAME="MASTER",POINTS_NAME="RESTORE_POINTS",BACKUP_META=".swosstudio.json",APP_VERSION="1.18.0";
+  const BACKUP_ROOT_NAME="SWOS_STUDIO_BACKUPS",MASTER_NAME="MASTER",POINTS_NAME="RESTORE_POINTS",BACKUP_META=".swosstudio.json",APP_VERSION="1.19.0";
   const SWOS_HANDLE_DB="swos-studio",SWOS_HANDLE_STORE="handles",SWOS_HANDLE_KEY="game-folder";
 
   function openHandleDb(){return new Promise((resolve,reject)=>{try{const req=indexedDB.open(SWOS_HANDLE_DB,1);req.onupgradeneeded=()=>{if(!req.result.objectStoreNames.contains(SWOS_HANDLE_STORE))req.result.createObjectStore(SWOS_HANDLE_STORE)};req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error)}catch(e){reject(e)}})}
@@ -437,6 +449,78 @@
   const TRANSFER_TYPES=["Buy","Loan in","Sell","Loan out"];
   function defaultTransferCentre(){return{windowLabel:"Transfer window",windowOpen:true,deadlineDay:false,targets:[],worldMoves:[]}}
   function defaultSquadWatch(){return{baseline:null,lastConfirmed:0}}
+  const DEV_POTENTIAL=["Unknown","Low","Medium","High","Elite"];
+  const DEV_FOCUS=["Balanced","Passing","Shooting","Heading","Tackling","Control","Speed","Finishing"];
+  const DEV_ROLES=["First team","Rotation","Prospect","Veteran","Loan candidate","Transfer listed"];
+  function defaultDevelopment(){return{baseline:null,lastConfirmed:0,profiles:{}}}
+  function normalizeDevelopmentPlayer(p){
+    return{
+      name:String(p?.name||"").trim().slice(0,40),
+      shirt:Number(p?.shirt||0),
+      position:Number(p?.position||0),
+      value:Number(p?.value||0),
+      levels:Array.isArray(p?.levels)?p.levels.slice(0,7).map(v=>Math.max(0,Math.min(7,Number(v)||0))):[0,0,0,0,0,0,0]
+    }
+  }
+  function normalizeDevelopment(d){
+    const src=d||{},base=src.baseline,profiles={};
+    if(src.profiles&&typeof src.profiles==="object"){
+      for(const [key,p] of Object.entries(src.profiles)){
+        profiles[key]={
+          age:String(p?.age||"").slice(0,3),
+          potential:DEV_POTENTIAL.includes(p?.potential)?p.potential:"Unknown",
+          focus:DEV_FOCUS.includes(p?.focus)?p.focus:"Balanced",
+          role:DEV_ROLES.includes(p?.role)?p.role:"Rotation",
+          note:String(p?.note||"").slice(0,300)
+        }
+      }
+    }
+    return{
+      baseline:base&&Array.isArray(base.players)?{
+        time:Number(base.time||Date.now()),
+        players:base.players.map(normalizeDevelopmentPlayer)
+      }:null,
+      lastConfirmed:Number(src.lastConfirmed||0),
+      profiles
+    }
+  }
+  function developmentKey(name){return watchName(name)}
+  function currentDevelopmentSnapshot(){
+    const c=state.career;
+    return{
+      time:Date.now(),
+      players:c.squadOrder.map(slot=>{
+        const p=c.players[slot];
+        return normalizeDevelopmentPlayer({
+          name:p?.name||"",
+          shirt:p?.shirt||0,
+          position:p?.position||0,
+          value:p?.value||0,
+          levels:p?.levels||[]
+        })
+      }).filter(p=>p.name)
+    }
+  }
+  function compareDevelopment(base,current){
+    if(!base)return[];
+    const oldMap=new Map((base.players||[]).map(p=>[developmentKey(p.name),p]));
+    const changes=[];
+    for(const now of current.players||[]){
+      const old=oldMap.get(developmentKey(now.name));
+      if(!old)continue;
+      const deltas=now.levels.map((v,i)=>v-(old.levels[i]||0));
+      const skillDelta=deltas.reduce((a,b)=>a+b,0);
+      const valueDelta=Number(now.value||0)-Number(old.value||0);
+      if(skillDelta!==0||valueDelta!==0){
+        changes.push({name:now.name,old,now,deltas,skillDelta,valueDelta})
+      }
+    }
+    return changes
+  }
+  function developmentPendingCount(data){
+    if(!data?.development?.baseline)return 0;
+    return compareDevelopment(data.development.baseline,currentDevelopmentSnapshot()).length
+  }
   function normalizeWatchPlayer(p){
     return{
       name:String(p?.name||"").trim().slice(0,40),
@@ -530,19 +614,21 @@
   }
   async function getCareerPlus(fileName){
     const saved=await appStoreGet(careerPlusKey(fileName));
-    const base=saved||{version:3,seasonLabel:"",objective:"",timeline:[],transfer:defaultTransferCentre(),squadWatch:defaultSquadWatch()};
+    const base=saved||{version:4,seasonLabel:"",objective:"",timeline:[],transfer:defaultTransferCentre(),squadWatch:defaultSquadWatch(),development:defaultDevelopment()};
     base.transfer=normalizeTransferCentre(base.transfer);
     base.squadWatch=normalizeSquadWatch(base.squadWatch);
+    base.development=normalizeDevelopment(base.development);
     return base
   }
   async function setCareerPlus(fileName,data){
     const clean={
-      version:3,
+      version:4,
       seasonLabel:String(data?.seasonLabel||"").slice(0,40),
       objective:String(data?.objective||"").slice(0,160),
       timeline:Array.isArray(data?.timeline)?data.timeline.slice(0,100):[],
       transfer:normalizeTransferCentre(data?.transfer),
-      squadWatch:normalizeSquadWatch(data?.squadWatch)
+      squadWatch:normalizeSquadWatch(data?.squadWatch),
+      development:normalizeDevelopment(data?.development)
     };
     await appStoreSet(careerPlusKey(fileName),clean);
     return clean
@@ -668,6 +754,59 @@
     data.squadWatch={baseline:currentSquadWatchSnapshot(),lastConfirmed:Date.now()};
     await setCareerPlus(state.fileName,data)
   }
+  async function startDevelopmentWatch(){
+    const data=await getCareerPlus(state.fileName);
+    data.development.baseline=currentDevelopmentSnapshot();
+    data.development.lastConfirmed=Date.now();
+    await setCareerPlus(state.fileName,data)
+  }
+  async function resetDevelopmentBaseline(){
+    const data=await getCareerPlus(state.fileName);
+    data.development.baseline=currentDevelopmentSnapshot();
+    data.development.lastConfirmed=Date.now();
+    await setCareerPlus(state.fileName,data)
+  }
+  async function saveDevelopmentProfile(playerName,profile){
+    const data=await getCareerPlus(state.fileName),key=developmentKey(playerName);
+    data.development.profiles[key]={
+      age:String(profile.age||"").trim().slice(0,3),
+      potential:DEV_POTENTIAL.includes(profile.potential)?profile.potential:"Unknown",
+      focus:DEV_FOCUS.includes(profile.focus)?profile.focus:"Balanced",
+      role:DEV_ROLES.includes(profile.role)?profile.role:"Rotation",
+      note:String(profile.note||"").trim().slice(0,300)
+    };
+    await setCareerPlus(state.fileName,data)
+  }
+  async function confirmDevelopmentChanges(){
+    const data=await getCareerPlus(state.fileName),current=currentDevelopmentSnapshot(),base=data.development?.baseline;
+    if(!base)return false;
+    const changes=compareDevelopment(base,current);
+    if(!changes.length)return false;
+    data.timeline.unshift({
+      id:`dev-${Date.now()}-${Math.random().toString(36).slice(2,7)}`,
+      type:"development",
+      time:Date.now(),
+      seasonLabel:data.seasonLabel||"",
+      title:`Player development: ${changes.length} changed`,
+      data:{
+        players:changes.map(x=>({
+          name:x.name,
+          skillDelta:x.skillDelta,
+          valueDelta:x.valueDelta,
+          deltas:x.deltas,
+          oldLevels:x.old.levels,
+          newLevels:x.now.levels,
+          oldValue:x.old.value,
+          newValue:x.now.value
+        }))
+      }
+    });
+    data.development.baseline=current;
+    data.development.lastConfirmed=Date.now();
+    await setCareerPlus(state.fileName,data);
+    return true
+  }
+
   async function confirmSquadWatchChanges(){
     const data=await getCareerPlus(state.fileName),current=currentSquadWatchSnapshot(),base=data.squadWatch?.baseline;
     if(!base)return false;
@@ -1115,7 +1254,7 @@
   function wireKitPreview(prefix){["Type","Shirt1","Shirt2","Shorts","Socks"].forEach(s=>document.getElementById(`${prefix}${s}`).onchange=()=>{document.getElementById(`${prefix}Preview`).innerHTML=kitPreview(readKitForm(prefix))})}
   function squadRole(i){return i<11?"XI":i<16?"SUB":"RES"}
   function setChrome(show){topbar.classList.toggle("hidden",!show);footerbar.classList.toggle("hidden",!show);if(show){if(state.simplePurpose){const friendly=state.kind==="career"?`My Career · ${state.career?.club||""}`:state.kind==="team"?(state.simplePurpose==="kits"?"Kits":"Players & Teams"):state.kind==="exe"?"Game Enhancements":"SWOS Studio";fileMeta.textContent=friendly;modeLine.innerHTML='<span class="modepill direct">SIMPLE MODE</span><span class="tiny">SWOS Studio handles the technical details</span>';undoBtn.disabled=state.changed.size===0;primarySaveBtn.textContent=state.kind==="exe"?"Save enhanced game":state.view==="careerKit"?"Save this career":state.kind==="career"?"Save career changes":state.kind==="team"?"Save database changes":"Save changes";primarySaveBtn.className="btn btn-green";return}let details="";if(state.kind==="team"){const edited=state.changed.size?` · ${state.changed.size} pending edit${state.changed.size===1?'':'s'}`:"";details=`${state.db.count} teams${edited}`}else if(state.kind==="pool"){details=`Foreign transfer pool · ${state.pool.count} players${state.changed.size?' · edited':''}`}else if(state.kind==="exe"){details=`SWOS EXE · ${state.exe?.status==="endless"?"ENDLESS PATCH":state.exe?.status==="normal"?"20-SEASON LIMIT":state.exe?.status==="mixed"?"PARTIAL PATCH":"UNSUPPORTED"}${state.changed.size?' · edited':''}`}else{details=`Career · ${state.career.club}${state.changed.size?' · edited':''}`}fileMeta.textContent=`${state.fileName} · ${details} · ${state.bytes.length.toLocaleString()} bytes`;if(state.kind==="exe"){modeLine.innerHTML='<span class="modepill direct">SAFE COPY MODE</span><span class="tiny">The app never overwrites the EXE automatically</span>';primarySaveBtn.textContent="Save EXE copy";primarySaveBtn.className="btn btn-green"}else{modeLine.innerHTML=state.direct?'<span class="modepill direct">DIRECT SAVE</span><span class="tiny">Save can overwrite the file you opened</span>':'<span class="modepill">EXPORT MODE</span><span class="tiny">Download then replace manually</span>';primarySaveBtn.textContent=state.direct?"Save to SWOS":"Export file";primarySaveBtn.className=`btn ${state.direct?'btn-green':'btn-primary'}`}undoBtn.disabled=state.changed.size===0}}
-  function render(){if(state.view==="landing"){setChrome(false);renderLanding();return}if(state.view==="setup"){setChrome(false);renderSetupCentre();return}if(state.view==="careerLibrary"){setChrome(false);renderCareerLibrary();return}if(state.view==="databaseLibrary"){setChrome(false);renderDatabaseLibrary();return}if(state.view==="advancedHome"){setChrome(false);renderAdvancedHome();return}if(state.view==="safety"){setChrome(false);renderSafetyCentre();return}if(state.view==="play"){setChrome(false);renderPlayCentre();return}setChrome(true);if(state.view==="teams")renderTeams();if(state.view==="team")renderTeam();if(state.view==="player")renderPlayer();if(state.view==="teamOrder")renderTeamOrder();if(state.view==="transfer")renderTransfer();if(state.view==="playerSearch")renderPlayerSearch();if(state.view==="audit")renderAudit();if(state.view==="career")renderCareer();if(state.view==="careerPlus")renderCareerPlus().catch(e=>{console.error(e);alert(`Career+ could not load: ${e.message}`)});if(state.view==="careerTransfers")renderCareerTransfers().catch(e=>{console.error(e);alert(`Transfer Centre could not load: ${e.message}`)});if(state.view==="careerSquadWatch")renderCareerSquadWatch().catch(e=>{console.error(e);alert(`Squad Watch could not load: ${e.message}`)});if(state.view==="careerCopy")renderCareerCopy();if(state.view==="careerKit")renderCareerKit();if(state.view==="careerFormation")renderCareerFormation();if(state.view==="careerPlayers")renderCareerPlayers();if(state.view==="careerPlayer")renderCareerPlayer();if(state.view==="careerOrder")renderCareerOrder();if(state.view==="pool")renderPool();if(state.view==="poolPlayer")renderPoolPlayer();if(state.view==="poolSource")renderPoolSource();if(state.view==="exe")renderExe()}
+  function render(){if(state.view==="landing"){setChrome(false);renderLanding();return}if(state.view==="setup"){setChrome(false);renderSetupCentre();return}if(state.view==="careerLibrary"){setChrome(false);renderCareerLibrary();return}if(state.view==="databaseLibrary"){setChrome(false);renderDatabaseLibrary();return}if(state.view==="advancedHome"){setChrome(false);renderAdvancedHome();return}if(state.view==="safety"){setChrome(false);renderSafetyCentre();return}if(state.view==="play"){setChrome(false);renderPlayCentre();return}setChrome(true);if(state.view==="teams")renderTeams();if(state.view==="team")renderTeam();if(state.view==="player")renderPlayer();if(state.view==="teamOrder")renderTeamOrder();if(state.view==="transfer")renderTransfer();if(state.view==="playerSearch")renderPlayerSearch();if(state.view==="audit")renderAudit();if(state.view==="career")renderCareer();if(state.view==="careerPlus")renderCareerPlus().catch(e=>{console.error(e);alert(`Career+ could not load: ${e.message}`)});if(state.view==="careerTransfers")renderCareerTransfers().catch(e=>{console.error(e);alert(`Transfer Centre could not load: ${e.message}`)});if(state.view==="careerSquadWatch")renderCareerSquadWatch().catch(e=>{console.error(e);alert(`Squad Watch could not load: ${e.message}`)});if(state.view==="careerDevelopment")renderCareerDevelopment().catch(e=>{console.error(e);alert(`Player Development could not load: ${e.message}`)});if(state.view==="careerCopy")renderCareerCopy();if(state.view==="careerKit")renderCareerKit();if(state.view==="careerFormation")renderCareerFormation();if(state.view==="careerPlayers")renderCareerPlayers();if(state.view==="careerPlayer")renderCareerPlayer();if(state.view==="careerOrder")renderCareerOrder();if(state.view==="pool")renderPool();if(state.view==="poolPlayer")renderPoolPlayer();if(state.view==="poolSource")renderPoolSource();if(state.view==="exe")renderExe()}
 
   async function openSimple(kind,purpose){
     state.simplePurpose=purpose;
@@ -1508,11 +1647,11 @@
     document.getElementById("savePlayNow").onclick=launchThroughBridge
   }
 
-  function renderAdvancedHome(){main.innerHTML=`<section class="hero"><div><div class="eyebrow">SWOS made simple · v1.18.0</div><h1>SWOS Editor</h1><p style="color:var(--muted)">Edit real DOS Sensible World of Soccer <strong style="color:var(--text)">TEAM.*</strong> databases, <strong style="color:var(--text)">.CAR</strong> careers, <strong style="color:var(--text)">POOLPLYR.DAT</strong> and now the <strong style="color:var(--text)">SWOS executable</strong> on your phone.</p></div>
+  function renderAdvancedHome(){main.innerHTML=`<section class="hero"><div><div class="eyebrow">SWOS made simple · v1.19.0</div><h1>SWOS Editor</h1><p style="color:var(--muted)">Edit real DOS Sensible World of Soccer <strong style="color:var(--text)">TEAM.*</strong> databases, <strong style="color:var(--text)">.CAR</strong> careers, <strong style="color:var(--text)">POOLPLYR.DAT</strong> and now the <strong style="color:var(--text)">SWOS executable</strong> on your phone.</p></div>
     <div class="card stack"><strong style="color:var(--yellow)">Use the correct SWOS folder</strong><div class="grid2"><div class="notice info"><strong>CAREERS + EXE</strong><br><span class="about">Main <code>GAME</code> folder</span></div><div class="notice info"><strong>TEAM.* + POOLPLYR.DAT</strong><br><span class="about"><code>GAME/DATA</code> folder</span></div></div><div class="tiny">The editor now uses separate Android file pickers for careers and databases. Chrome can remember a different last-used folder for each picker, so after the first selection you should normally land back in the right place.</div></div>
     ${directApiAvailable?`<div class="card stack"><strong style="color:var(--green)">Direct save</strong><button class="btn btn-green big" id="openCareerDirect">Open Career (.CAR) from GAME</button><button class="btn btn-green big" id="openExeDirect">Open SWOS EXE from GAME</button><button class="btn btn-blue big" id="openTeamDirect">Open TEAM database from GAME/DATA</button><button class="btn btn-blue big" id="openPoolDirect">Open POOLPLYR.DAT from GAME/DATA</button><div class="tiny">After editing, “Save to SWOS” overwrites the file you opened in place. Close SWOS before saving.</div></div>`:`<div class="notice info">Your current browser has not exposed direct file-write access to this page. Export mode still works.</div>`}
     <button class="btn btn-primary big" id="openExport">Open any supported file — export mode</button>${state.message?`<div class="notice error">${esc(state.message)}</div>`:""}
-    <div class="card stack"><strong>New in v1.18.0 — Career+ Squad Watch</strong><span class="about">• Studio can now compare the actual player list inside your current .CAR against a saved baseline.</span><span class="about">• Detects likely arrivals and departures after you play SWOS and reopen the career.</span><span class="about">• You review changes before Career+ records anything; false positives such as a renamed player can simply become the new baseline.</span><span class="about">• Confirmed changes become Career+ timeline events.</span><span class="about">• Matching Buy / Loan-in targets can automatically become Signed; matching Sell / Loan-out plans can become Completed.</span><span class="about">• Bank movement is shown only as context and is never assumed to be a transfer fee.</span></div><div class="card stack"><strong>New in v1.17.0 — Career+ Transfer Centre</strong><span class="about">• Added a real Transfer Centre inside Career+.</span><span class="about">• Set an open/closed transfer window and switch on Deadline Day mode.</span><span class="about">• Build a target list with club, move type, priority, asking price, offer, negotiation notes and status.</span><span class="about">• Track stages from Watching → Bid made → Negotiating → Agreed → Signed.</span><span class="about">• Added World Transfer News so you can log AI/other-club moves you see in SWOS.</span><span class="about">• This foundation is companion-only and deliberately does not pretend it can yet move players automatically inside SWOS.</span></div><div class="card stack"><strong>New in v1.16.0 — Career+ begins</strong><span class="about">• Added the first real Career+ companion layer for each career.</span><span class="about">• Set a season label and personal objective.</span><span class="about">• Capture snapshots of money, squad size, formation, transfers and starting XI.</span><span class="about">• Add career notes and build a persistent timeline/story around the save.</span><span class="about">• Career+ data is deliberately separate from risky unknown SWOS offsets; only explicit editor controls modify the .CAR file.</span><span class="about">• Added Career+ shortcuts from My Career and the Active Career dashboard.</span></div><div class="card stack"><strong>New in v1.15.0 — Safe Career Copies</strong><span class="about">• My Career can now create another playable .CAR directly in the correct SWOS GAME folder.</span><span class="about">• The original career is never deleted or overwritten.</span><span class="about">• Choose Create copy & use it to branch the career and immediately make the copy your Active Career.</span><span class="about">• Studio refuses to overwrite an existing career filename.</span><span class="about">• Added a Quick Copy shortcut to the Active Career dashboard.</span></div><div class="card stack"><strong>New in v1.14.0 — Career Quick Undo</strong><span class="about">• Studio now keeps the previous .CAR before each Simple Mode career save.</span><span class="about">• My Career gets a one-tap Undo last Studio change control.</span><span class="about">• Undo writes the previous career back and verifies it byte-for-byte.</span><span class="about">• Active Career shows the latest Studio change so you can remember what you just altered while switching between the game and Studio.</span><span class="about">• Up to 10 recent career changes are retained locally on this device; Time Machine remains the stronger full-game safety system.</span></div><div class="card stack"><strong>New in v1.13.0 — Quick Career</strong><span class="about">• Active Career now has one-tap shortcuts for Money, Transfers, Kit, Formation, Players and XI/Subs.</span><span class="about">• Added a career-only formation editor using SWOS’s known formation values.</span><span class="about">• Active Career now remembers and shows the saved formation.</span><span class="about">• Designed for rapid switching between SWOS and Studio: change one thing, save, jump back to the game.</span></div><div class="card stack"><strong>New in v1.12.0 — Active Career + Save & Play</strong><span class="about">• Studio remembers the last career you opened as your Active Career.</span><span class="about">• Home screen can jump straight back into that career.</span><span class="about">• My Career now has a prominent SAVE & PLAY SWOS button.</span><span class="about">• Restored one-time Magic DOSBox profile setup: import collection.xml or enter the profile ID manually.</span><span class="about">• Added the real swosstudio:// launcher-bridge link ready for the Android companion.</span><span class="about">• Automatic .CAR continuation is clearly marked as the next milestone, not falsely claimed as working.</span></div><div class="card stack"><strong>New in v1.11.0 — Beginner-friendly career editing</strong><span class="about">• Added a proper searchable My Career player list.</span><span class="about">• Career players now clearly say THIS CAREER ONLY.</span><span class="about">• Key Simple Mode actions now save and verify in one tap instead of Apply → Save.</span><span class="about">• Database kits now use one clear Save kit to SWOS action.</span><span class="about">• Career money, unlimited transfers, career kits and career players save directly when opened through the connected GAME folder.</span></div><div class="card stack"><strong>New in v1.10.0 — Database vs Career</strong><span class="about">• Simple Mode now clearly labels whether you are changing the SWOS Database or one existing career.</span><span class="about">• Database screens say NEW CAREERS; My Career says THIS CAREER ONLY.</span><span class="about">• Added a career-specific home/away kit designer using the kit stored inside the .CAR save.</span><span class="about">• Career kit editing is ready for its first in-game verification.</span></div><div class="card stack"><strong>New in v1.9.3 — Loading feedback</strong><span class="about">• Slow scans now show a live progress bar and count instead of looking frozen.</span><span class="about">• Studio explicitly says it is still working on Android.</span><span class="about">• Progress appears in Careers and Players & Teams / Kits.</span></div><div class="card stack"><strong>New in v1.9.2 — Instant libraries</strong><span class="about">• Career and country lists are cached after the first successful scan, so they can appear immediately on later visits.</span><span class="about">• Studio no longer forces the Android folder picker before showing My Career / Players & Teams.</span><span class="about">• TEAM summaries read only the header and first two team records instead of loading all 79 databases in full.</span><span class="about">• Career summaries read only the portion of each .CAR needed for club, manager, money and squad size.</span><span class="about">• Reconnection is deferred until the user actually opens a career or country.</span></div><div class="card stack"><strong>New in v1.9.1 — TEAM library bug fix</strong><span class="about">• Fixes the missing country-identification code that incorrectly marked every TEAM.* database unsupported.</span><span class="about">• Old / incompatible career files are hidden from the main career list.</span></div><div class="card stack"><strong>New in v1.9 — Friendly libraries</strong><span class="about">• My Career now shows club, manager, money, squad size and saved time.</span><span class="about">• Players & Teams / Kits identify TEAM databases by country.</span><span class="about">• Technical file names are hidden under optional details.</span><span class="about">• The known-broken Chrome direct-launch button is removed while the Android bridge is developed.</span></div><div class="card stack"><strong>New in v1.8 — PLAY SWOS setup</strong><span class="about">• Link one Magic DOSBox game profile to SWOS Studio.</span><span class="about">• Import Magic DOSBox collection.xml and choose SWOS from a friendly game list.</span><span class="about">• Manual profile-ID fallback if Android hides the Magic DOSBox settings file.</span><span class="about">• PLAY SWOS uses Magic DOSBox’s documented <code>intent_msg1</code> profile ID.</span><span class="about">• Profile choice is remembered in the browser.</span></div><div class="card stack"><strong>New in v1.7.4 — Simple Time Machine</strong><span class="about">• Friendly saved date/time instead of internal folder names.</span><span class="about">• Main action is “Go back to this point”.</span><span class="about">• Automatic safety backups are hidden unless needed.</span><span class="about">• New points remember the current career name when available.</span></div><div class="card stack"><strong>New in v1.7.3 — One-tap reconnect</strong><span class="about">• Tapping Restore & Safety now uses that tap to reconnect the remembered GAME folder automatically.</span><span class="about">• If Chrome has suspended folder permission, Studio asks only for permission again — not for the user to find the folder again.</span><span class="about">• The Safety page no longer misleadingly says setup has been lost when the location is still remembered.</span></div><div class="card stack"><strong>New in v1.7.2 — Smart Backup</strong><span class="about">• Stops copying thousands of untouched game assets.</span><span class="about">• Protects all careers, TEAM.* databases, POOLPLYR.DAT and SWOS executables.</span><span class="about">• Restore now changes only those protected files rather than clearing/rebuilding the whole GAME folder.</span><span class="about">• Future editable assets such as chants and pitches can be added to the protected set as those features are built.</span></div><div class="card stack"><strong>New in v1.7.1 — Backup recovery fix</strong><span class="about">• Repairs incomplete Master folders left by an interrupted first backup.</span><span class="about">• Handles Android file/folder type collisions safely.</span><span class="about">• A Master is only shown as protected after metadata confirms a successful snapshot.</span></div><div class="card stack"><strong>New in v1.7 — Master Backup & Restore Points</strong><span class="about">• Protect the entire connected GAME folder.</span><span class="about">• Keep one trusted Master Version and update it whenever you choose.</span><span class="about">• Create named restore points at any stage of a career or modding journey.</span><span class="about">• Restoring first creates an automatic emergency checkpoint of the current game.</span><span class="about">• Backup folders are excluded from snapshots so they never copy themselves.</span></div><div class="card stack"><strong>New in v1.6 — One-time SWOS setup</strong><span class="about">• Select the main GAME folder once.</span><span class="about">• Chrome can remember the folder handle between visits.</span><span class="about">• My Career now lists .CAR saves inside Studio.</span><span class="about">• Players / Kits list TEAM databases from GAME/DATA.</span><span class="about">• Game Enhancements automatically opens the preferred SWOS EXE.</span></div><div class="card stack"><strong>EXE Tools / Endless Career</strong><span class="about">• Opens your real <code>SWSENGPP.EXE</code> from the main GAME folder.</span><span class="about">• Detects all 8 verified 20-season comparison sites.</span><span class="about">• Enables or restores the endless-career patch without hex editing.</span><span class="about">• Saves a separate <code>SWSEND.EXE</code> copy rather than automatically overwriting the original.</span><span class="about">• The patched EXE has already launched successfully with your TRANS2 career.</span></div><div class="card stack"><strong>Unlimited transfers + squad capacity</strong><span class="about">• FF at 0xD880 is verified in-game: you can keep making transfers beyond the normal chairman limit.</span><span class="about">• Career squad size is read from verified offset 0xE08C.</span><span class="about">• Unlimited transfers do not mean an unlimited squad.</span></div><div class="card stack"><strong>Connected transfer tools</strong><span class="about">• Load a TEAM.* file alongside POOLPLYR.DAT.</span><span class="about">• See which pool entries are linked to that database and whether they are current.</span><span class="about">• Sync every linked pool player from the TEAM file in one tap.</span><span class="about">• Replace any pool slot with a player selected from the TEAM database, including correct origin references.</span></div><div class="card stack"><strong>Foreign transfer market</strong><span class="about">• Opens your real GAME/DATA/POOLPLYR.DAT.</span><span class="about">• Reads all 900 transfer-pool records.</span><span class="about">• Search by player or origin club.</span><span class="about">• Edit the transfer-market player’s nationality, number, position, appearance, abilities and value.</span><span class="about">• Direct-save back over POOLPLYR.DAT after byte-for-byte verification.</span></div><div class="card stack"><strong>Safer power tools</strong><span class="about">• Database integrity audit before you save.</span><span class="about">• Copy a player’s known football data and paste it into another slot.</span><span class="about">• Quick ability presets while editing.</span><span class="about">• Restore one player slot from the last saved version.</span><span class="about">• Faster XI / SUB / RES role controls.</span></div><div class="card stack"><strong>Squads, transfers & kits</strong><span class="about">• Reorder a club’s starting XI and substitutes.</span><span class="about">• Safely swap players between clubs without changing team sizes.</span><span class="about">• Edit home and away kit style/colours with a live preview.</span><span class="about">• Reorder XI, substitutes and reserves inside a career.</span><span class="about">• Search every player in the opened TEAM database.</span></div><div class="card stack"><strong>Folder-aware workflow</strong><span class="about">• Career picker remembers the main GAME folder.</span><span class="about">• TEAM picker remembers GAME/DATA separately.</span><span class="about">• Rename Career uses the career picker identity, helping Android return to GAME.</span></div>
+    <div class="card stack"><strong>New in v1.19.0 — Career+ Player Development</strong><span class="about">• Added a Player Development hub for every player in the current career squad.</span><span class="about">• Reads the real seven SWOS abilities and player value directly from the .CAR.</span><span class="about">• Create a baseline and detect later ability/value changes automatically.</span><span class="about">• Confirmed development changes become Career+ timeline events.</span><span class="about">• Add Career+-only age, potential, training focus, squad role and development notes for each player.</span><span class="about">• Career+ companion fields do not pretend to exist in SWOS and do not alter the .CAR.</span><span class="about">• Foundation is now ready for a reviewed end-of-season growth/decline engine rather than blind automatic editing.</span></div><div class="card stack"><strong>New in v1.18.0 — Career+ Squad Watch</strong><span class="about">• Studio can now compare the actual player list inside your current .CAR against a saved baseline.</span><span class="about">• Detects likely arrivals and departures after you play SWOS and reopen the career.</span><span class="about">• You review changes before Career+ records anything; false positives such as a renamed player can simply become the new baseline.</span><span class="about">• Confirmed changes become Career+ timeline events.</span><span class="about">• Matching Buy / Loan-in targets can automatically become Signed; matching Sell / Loan-out plans can become Completed.</span><span class="about">• Bank movement is shown only as context and is never assumed to be a transfer fee.</span></div><div class="card stack"><strong>New in v1.17.0 — Career+ Transfer Centre</strong><span class="about">• Added a real Transfer Centre inside Career+.</span><span class="about">• Set an open/closed transfer window and switch on Deadline Day mode.</span><span class="about">• Build a target list with club, move type, priority, asking price, offer, negotiation notes and status.</span><span class="about">• Track stages from Watching → Bid made → Negotiating → Agreed → Signed.</span><span class="about">• Added World Transfer News so you can log AI/other-club moves you see in SWOS.</span><span class="about">• This foundation is companion-only and deliberately does not pretend it can yet move players automatically inside SWOS.</span></div><div class="card stack"><strong>New in v1.16.0 — Career+ begins</strong><span class="about">• Added the first real Career+ companion layer for each career.</span><span class="about">• Set a season label and personal objective.</span><span class="about">• Capture snapshots of money, squad size, formation, transfers and starting XI.</span><span class="about">• Add career notes and build a persistent timeline/story around the save.</span><span class="about">• Career+ data is deliberately separate from risky unknown SWOS offsets; only explicit editor controls modify the .CAR file.</span><span class="about">• Added Career+ shortcuts from My Career and the Active Career dashboard.</span></div><div class="card stack"><strong>New in v1.15.0 — Safe Career Copies</strong><span class="about">• My Career can now create another playable .CAR directly in the correct SWOS GAME folder.</span><span class="about">• The original career is never deleted or overwritten.</span><span class="about">• Choose Create copy & use it to branch the career and immediately make the copy your Active Career.</span><span class="about">• Studio refuses to overwrite an existing career filename.</span><span class="about">• Added a Quick Copy shortcut to the Active Career dashboard.</span></div><div class="card stack"><strong>New in v1.14.0 — Career Quick Undo</strong><span class="about">• Studio now keeps the previous .CAR before each Simple Mode career save.</span><span class="about">• My Career gets a one-tap Undo last Studio change control.</span><span class="about">• Undo writes the previous career back and verifies it byte-for-byte.</span><span class="about">• Active Career shows the latest Studio change so you can remember what you just altered while switching between the game and Studio.</span><span class="about">• Up to 10 recent career changes are retained locally on this device; Time Machine remains the stronger full-game safety system.</span></div><div class="card stack"><strong>New in v1.13.0 — Quick Career</strong><span class="about">• Active Career now has one-tap shortcuts for Money, Transfers, Kit, Formation, Players and XI/Subs.</span><span class="about">• Added a career-only formation editor using SWOS’s known formation values.</span><span class="about">• Active Career now remembers and shows the saved formation.</span><span class="about">• Designed for rapid switching between SWOS and Studio: change one thing, save, jump back to the game.</span></div><div class="card stack"><strong>New in v1.12.0 — Active Career + Save & Play</strong><span class="about">• Studio remembers the last career you opened as your Active Career.</span><span class="about">• Home screen can jump straight back into that career.</span><span class="about">• My Career now has a prominent SAVE & PLAY SWOS button.</span><span class="about">• Restored one-time Magic DOSBox profile setup: import collection.xml or enter the profile ID manually.</span><span class="about">• Added the real swosstudio:// launcher-bridge link ready for the Android companion.</span><span class="about">• Automatic .CAR continuation is clearly marked as the next milestone, not falsely claimed as working.</span></div><div class="card stack"><strong>New in v1.11.0 — Beginner-friendly career editing</strong><span class="about">• Added a proper searchable My Career player list.</span><span class="about">• Career players now clearly say THIS CAREER ONLY.</span><span class="about">• Key Simple Mode actions now save and verify in one tap instead of Apply → Save.</span><span class="about">• Database kits now use one clear Save kit to SWOS action.</span><span class="about">• Career money, unlimited transfers, career kits and career players save directly when opened through the connected GAME folder.</span></div><div class="card stack"><strong>New in v1.10.0 — Database vs Career</strong><span class="about">• Simple Mode now clearly labels whether you are changing the SWOS Database or one existing career.</span><span class="about">• Database screens say NEW CAREERS; My Career says THIS CAREER ONLY.</span><span class="about">• Added a career-specific home/away kit designer using the kit stored inside the .CAR save.</span><span class="about">• Career kit editing is ready for its first in-game verification.</span></div><div class="card stack"><strong>New in v1.9.3 — Loading feedback</strong><span class="about">• Slow scans now show a live progress bar and count instead of looking frozen.</span><span class="about">• Studio explicitly says it is still working on Android.</span><span class="about">• Progress appears in Careers and Players & Teams / Kits.</span></div><div class="card stack"><strong>New in v1.9.2 — Instant libraries</strong><span class="about">• Career and country lists are cached after the first successful scan, so they can appear immediately on later visits.</span><span class="about">• Studio no longer forces the Android folder picker before showing My Career / Players & Teams.</span><span class="about">• TEAM summaries read only the header and first two team records instead of loading all 79 databases in full.</span><span class="about">• Career summaries read only the portion of each .CAR needed for club, manager, money and squad size.</span><span class="about">• Reconnection is deferred until the user actually opens a career or country.</span></div><div class="card stack"><strong>New in v1.9.1 — TEAM library bug fix</strong><span class="about">• Fixes the missing country-identification code that incorrectly marked every TEAM.* database unsupported.</span><span class="about">• Old / incompatible career files are hidden from the main career list.</span></div><div class="card stack"><strong>New in v1.9 — Friendly libraries</strong><span class="about">• My Career now shows club, manager, money, squad size and saved time.</span><span class="about">• Players & Teams / Kits identify TEAM databases by country.</span><span class="about">• Technical file names are hidden under optional details.</span><span class="about">• The known-broken Chrome direct-launch button is removed while the Android bridge is developed.</span></div><div class="card stack"><strong>New in v1.8 — PLAY SWOS setup</strong><span class="about">• Link one Magic DOSBox game profile to SWOS Studio.</span><span class="about">• Import Magic DOSBox collection.xml and choose SWOS from a friendly game list.</span><span class="about">• Manual profile-ID fallback if Android hides the Magic DOSBox settings file.</span><span class="about">• PLAY SWOS uses Magic DOSBox’s documented <code>intent_msg1</code> profile ID.</span><span class="about">• Profile choice is remembered in the browser.</span></div><div class="card stack"><strong>New in v1.7.4 — Simple Time Machine</strong><span class="about">• Friendly saved date/time instead of internal folder names.</span><span class="about">• Main action is “Go back to this point”.</span><span class="about">• Automatic safety backups are hidden unless needed.</span><span class="about">• New points remember the current career name when available.</span></div><div class="card stack"><strong>New in v1.7.3 — One-tap reconnect</strong><span class="about">• Tapping Restore & Safety now uses that tap to reconnect the remembered GAME folder automatically.</span><span class="about">• If Chrome has suspended folder permission, Studio asks only for permission again — not for the user to find the folder again.</span><span class="about">• The Safety page no longer misleadingly says setup has been lost when the location is still remembered.</span></div><div class="card stack"><strong>New in v1.7.2 — Smart Backup</strong><span class="about">• Stops copying thousands of untouched game assets.</span><span class="about">• Protects all careers, TEAM.* databases, POOLPLYR.DAT and SWOS executables.</span><span class="about">• Restore now changes only those protected files rather than clearing/rebuilding the whole GAME folder.</span><span class="about">• Future editable assets such as chants and pitches can be added to the protected set as those features are built.</span></div><div class="card stack"><strong>New in v1.7.1 — Backup recovery fix</strong><span class="about">• Repairs incomplete Master folders left by an interrupted first backup.</span><span class="about">• Handles Android file/folder type collisions safely.</span><span class="about">• A Master is only shown as protected after metadata confirms a successful snapshot.</span></div><div class="card stack"><strong>New in v1.7 — Master Backup & Restore Points</strong><span class="about">• Protect the entire connected GAME folder.</span><span class="about">• Keep one trusted Master Version and update it whenever you choose.</span><span class="about">• Create named restore points at any stage of a career or modding journey.</span><span class="about">• Restoring first creates an automatic emergency checkpoint of the current game.</span><span class="about">• Backup folders are excluded from snapshots so they never copy themselves.</span></div><div class="card stack"><strong>New in v1.6 — One-time SWOS setup</strong><span class="about">• Select the main GAME folder once.</span><span class="about">• Chrome can remember the folder handle between visits.</span><span class="about">• My Career now lists .CAR saves inside Studio.</span><span class="about">• Players / Kits list TEAM databases from GAME/DATA.</span><span class="about">• Game Enhancements automatically opens the preferred SWOS EXE.</span></div><div class="card stack"><strong>EXE Tools / Endless Career</strong><span class="about">• Opens your real <code>SWSENGPP.EXE</code> from the main GAME folder.</span><span class="about">• Detects all 8 verified 20-season comparison sites.</span><span class="about">• Enables or restores the endless-career patch without hex editing.</span><span class="about">• Saves a separate <code>SWSEND.EXE</code> copy rather than automatically overwriting the original.</span><span class="about">• The patched EXE has already launched successfully with your TRANS2 career.</span></div><div class="card stack"><strong>Unlimited transfers + squad capacity</strong><span class="about">• FF at 0xD880 is verified in-game: you can keep making transfers beyond the normal chairman limit.</span><span class="about">• Career squad size is read from verified offset 0xE08C.</span><span class="about">• Unlimited transfers do not mean an unlimited squad.</span></div><div class="card stack"><strong>Connected transfer tools</strong><span class="about">• Load a TEAM.* file alongside POOLPLYR.DAT.</span><span class="about">• See which pool entries are linked to that database and whether they are current.</span><span class="about">• Sync every linked pool player from the TEAM file in one tap.</span><span class="about">• Replace any pool slot with a player selected from the TEAM database, including correct origin references.</span></div><div class="card stack"><strong>Foreign transfer market</strong><span class="about">• Opens your real GAME/DATA/POOLPLYR.DAT.</span><span class="about">• Reads all 900 transfer-pool records.</span><span class="about">• Search by player or origin club.</span><span class="about">• Edit the transfer-market player’s nationality, number, position, appearance, abilities and value.</span><span class="about">• Direct-save back over POOLPLYR.DAT after byte-for-byte verification.</span></div><div class="card stack"><strong>Safer power tools</strong><span class="about">• Database integrity audit before you save.</span><span class="about">• Copy a player’s known football data and paste it into another slot.</span><span class="about">• Quick ability presets while editing.</span><span class="about">• Restore one player slot from the last saved version.</span><span class="about">• Faster XI / SUB / RES role controls.</span></div><div class="card stack"><strong>Squads, transfers & kits</strong><span class="about">• Reorder a club’s starting XI and substitutes.</span><span class="about">• Safely swap players between clubs without changing team sizes.</span><span class="about">• Edit home and away kit style/colours with a live preview.</span><span class="about">• Reorder XI, substitutes and reserves inside a career.</span><span class="about">• Search every player in the opened TEAM database.</span></div><div class="card stack"><strong>Folder-aware workflow</strong><span class="about">• Career picker remembers the main GAME folder.</span><span class="about">• TEAM picker remembers GAME/DATA separately.</span><span class="about">• Rename Career uses the career picker identity, helping Android return to GAME.</span></div>
     <div class="card stack"><strong>Team Editor</strong><span class="about">Edit team name, coach/manager, division and formation as well as the full player editor.</span></div>
     <div class="card stack"><strong>Career tools</strong><span class="about">Verified bank balance, career squad editing and Career Rename / Save As remain available.</span></div>
     <div class="about">Unofficial fan-made editor. Not affiliated with Sensible Software or Codemasters.</div></section>`;
@@ -1817,6 +1956,62 @@
     document.querySelectorAll("[data-career-player]").forEach(b=>b.onclick=()=>{state.careerPlayerIndex=Number(b.dataset.careerPlayer);state.view="careerPlayer";state.message=null;render();window.scrollTo(0,0)})
   }
 
+  async function renderCareerDevelopment(){
+    const c=state.career,data=await getCareerPlus(state.fileName),dev=data.development||defaultDevelopment(),current=currentDevelopmentSnapshot();
+    const changes=dev.baseline?compareDevelopment(dev.baseline,current):[];
+    const changedNames=new Set(changes.map(x=>developmentKey(x.name)));
+    main.innerHTML=`<button class="btn back" id="developmentBack">← Career+ Hub</button>
+      <div class="simple-pill">📈 Career+ Development</div>
+      <h1>Player Development</h1>
+      <div class="careerplus-hero"><span class="scope-kicker">CAREER+ PLAYER LAYER</span><strong>Track each player beyond what original SWOS remembers.</strong><div class="tiny section-gap">SWOS abilities and values shown here are read from the actual .CAR. Age, potential, role and training focus are Career+ companion information only. Studio will never pretend those fields exist in the SWOS player record.</div></div>
+
+      ${!dev.baseline?`<div class="watch-card watch-good section-gap"><h3>Start development tracking</h3><p class="about">Capture every current player’s seven SWOS abilities and value as the starting point. Future changes can then be detected and added to your Career+ history.</p><button class="btn btn-green big section-gap" id="startDevelopment">Start tracking now</button></div>`:
+        changes.length?`<div class="watch-card watch-alert section-gap"><h3>📈 ${changes.length} player change${changes.length===1?"":"s"} detected</h3><p class="about">These changes are in the actual career player records compared with your Career+ baseline.</p>
+          <div class="stack section-gap">${changes.map(x=>`<div class="dev-card"><div class="dev-head"><div><strong>${esc(x.name)}</strong><span>${x.valueDelta===0?"Value unchanged":`Value byte ${x.valueDelta>0?"+":""}${x.valueDelta}`}</span></div><span class="skill-delta ${x.skillDelta>0?"up":x.skillDelta<0?"down":"same"}">${x.skillDelta>0?"+":""}${x.skillDelta} skill pts</span></div><div class="dev-skills">${skillNames.map((s,i)=>`<div class="dev-skill"><small>${esc(s)}</small><strong>${x.old.levels[i]} → ${x.now.levels[i]} ${x.deltas[i]===0?"":`(${x.deltas[i]>0?"+":""}${x.deltas[i]})`}</strong></div>`).join("")}</div></div>`).join("")}</div>
+          <button class="btn btn-green big section-gap" id="confirmDevelopment">Confirm & add development event</button>
+          <button class="btn big section-gap" id="ignoreDevelopment">Use current abilities as new baseline</button>
+        </div>`:
+        `<div class="watch-card watch-good section-gap"><h3>✓ Development baseline is current</h3><p class="about">No ability or value changes are waiting to be recorded.</p><button class="btn section-gap" id="refreshDevelopment">Refresh baseline</button></div>`}
+
+      <div class="friendly-card section-gap"><h3>My squad development plans</h3><p class="about">Career+ profiles stay attached by player name. They help us build future training, contracts, potential and regen systems.</p>
+        <div class="stack section-gap">${current.players.map((p,idx)=>{
+          const key=developmentKey(p.name),profile=dev.profiles[key]||{age:"",potential:"Unknown",focus:"Balanced",role:"Rotation",note:""};
+          const total=p.levels.reduce((a,b)=>a+b,0);
+          return `<div class="dev-card">
+            <div class="dev-head"><div><strong>${esc(p.name)}</strong><span>${esc(positionInfo((p.position<<5))[0])} · shirt ${p.shirt||"?"} · SWOS skill total ${total}/49</span></div>${changedNames.has(key)?'<span class="status-pill warn">CHANGED</span>':`<span class="potential-pill">${esc(profile.potential)}</span>`}</div>
+            <div class="grid2 section-gap"><div class="field"><label>Career+ age</label><input data-dev-age="${idx}" maxlength="3" inputmode="numeric" value="${esc(profile.age)}" placeholder="e.g. 22"/></div><div class="field"><label>Potential</label><select data-dev-potential="${idx}">${DEV_POTENTIAL.map(x=>`<option ${x===profile.potential?"selected":""}>${esc(x)}</option>`).join("")}</select></div></div>
+            <div class="grid2 section-gap"><div class="field"><label>Training focus</label><select data-dev-focus="${idx}">${DEV_FOCUS.map(x=>`<option ${x===profile.focus?"selected":""}>${esc(x)}</option>`).join("")}</select></div><div class="field"><label>Squad role</label><select data-dev-role="${idx}">${DEV_ROLES.map(x=>`<option ${x===profile.role?"selected":""}>${esc(x)}</option>`).join("")}</select></div></div>
+            <div class="field section-gap"><label>Development note</label><input data-dev-note="${idx}" maxlength="300" value="${esc(profile.note)}" placeholder="Breakthrough season, needs more pace, future captain…"/></div>
+            <button class="btn btn-blue section-gap" data-dev-save="${idx}">Save Career+ player profile</button>
+          </div>`
+        }).join("")}</div>
+      </div>
+
+      <div class="notice info section-gap"><strong>Important:</strong> Career+ age and potential do not alter SWOS by themselves. The next stage can use these plans to propose end-of-season growth/decline, but you will review changes before Studio writes any known SWOS ability bytes.</div>`;
+
+    document.getElementById("developmentBack").onclick=()=>{state.view="careerPlus";state.message=null;render();window.scrollTo(0,0)};
+    const start=document.getElementById("startDevelopment");
+    if(start)start.onclick=async()=>{await startDevelopmentWatch();state.message="Player Development baseline created.";await renderCareerDevelopment();window.scrollTo(0,0)};
+    const confirmBtn=document.getElementById("confirmDevelopment");
+    if(confirmBtn)confirmBtn.onclick=async()=>{const ok=await confirmDevelopmentChanges();if(!ok){alert("No player changes are waiting.");return}state.message="Player development changes added to Career+ history.";await renderCareerDevelopment();window.scrollTo(0,0)};
+    const ignore=document.getElementById("ignoreDevelopment");
+    if(ignore)ignore.onclick=async()=>{if(!confirm("Use the current player abilities and values as the new baseline without creating a history event?"))return;await resetDevelopmentBaseline();state.message="Development baseline updated.";await renderCareerDevelopment();window.scrollTo(0,0)};
+    const refresh=document.getElementById("refreshDevelopment");
+    if(refresh)refresh.onclick=async()=>{await resetDevelopmentBaseline();state.message="Development baseline refreshed.";await renderCareerDevelopment()};
+    document.querySelectorAll("[data-dev-save]").forEach(b=>b.onclick=async()=>{
+      const i=Number(b.dataset.devSave),p=current.players[i];if(!p)return;
+      await saveDevelopmentProfile(p.name,{
+        age:document.querySelector(`[data-dev-age="${i}"]`)?.value||"",
+        potential:document.querySelector(`[data-dev-potential="${i}"]`)?.value||"Unknown",
+        focus:document.querySelector(`[data-dev-focus="${i}"]`)?.value||"Balanced",
+        role:document.querySelector(`[data-dev-role="${i}"]`)?.value||"Rotation",
+        note:document.querySelector(`[data-dev-note="${i}"]`)?.value||""
+      });
+      state.message=`Career+ profile saved for ${p.name}.`;
+      await renderCareerDevelopment()
+    })
+  }
+
   async function renderCareerSquadWatch(){
     const c=state.career,data=await getCareerPlus(state.fileName),watch=data.squadWatch||defaultSquadWatch(),current=currentSquadWatchSnapshot();
     const diff=watch.baseline?compareSquadWatch(watch.baseline,current):null;
@@ -2006,7 +2201,7 @@
 
   async function renderCareerPlus(){
     const c=state.career,data=await getCareerPlus(state.fileName),snap=careerPlusSnapshotData();
-    const timeline=data.timeline||[],watchPending=squadWatchPendingCount(data);
+    const timeline=data.timeline||[],watchPending=squadWatchPendingCount(data),devPending=developmentPendingCount(data);
     main.innerHTML=`${state.message?`<div class="notice section-gap">${esc(state.message)}</div>`:""}<button class="btn back" id="careerPlusBack">← ${esc(c.club)} career</button>
       <div class="simple-pill">⭐ Career+</div>
       <h1>Career+ Hub</h1>
@@ -2022,6 +2217,8 @@
       </div>
 
       <button class="simple-option section-gap" id="careerPlusSquadWatch"><span class="ico">👀</span><span class="grow"><strong>Squad Watch${watchPending?` · ${watchPending} detected`:""}</strong><span>${data.squadWatch?.baseline?(watchPending?"Review players who have arrived or left since your baseline.":"Watching your actual SWOS career squad for arrivals and departures."):"Start automatic squad-change detection for this career."}</span></span><span>›</span></button>
+
+      <button class="simple-option section-gap" id="careerPlusDevelopment"><span class="ico">📈</span><span class="grow"><strong>Player Development${devPending?` · ${devPending} changed`:""}</strong><span>${data.development?.baseline?(devPending?"Review ability/value changes detected in the actual career.":"Track potential, age, training focus and SWOS player changes."):"Create a development baseline for your squad."}</span></span><span>›</span></button>
 
       <div class="friendly-card section-gap"><h3>Season setup</h3>
         <div class="field section-gap"><label>Season label</label><input id="careerPlusSeason" maxlength="40" placeholder="e.g. 2002/03 or Season 7" value="${esc(data.seasonLabel||"")}"/></div>
@@ -2049,6 +2246,10 @@
             const d=item.data||{},ins=Array.isArray(d.arrivals)?d.arrivals:[],outs=Array.isArray(d.departures)?d.departures:[];
             return `<div class="timeline-item"><span class="type">Squad Watch</span><strong>${esc(item.title||"Squad change")}</strong><p>${ins.length?`<strong>In:</strong> ${esc(ins.join(", "))}`:""}${ins.length&&outs.length?"<br>":""}${outs.length?`<strong>Out:</strong> ${esc(outs.join(", "))}`:""}<br><br>Squad: ${Number(d.beforeCount||0)} → ${Number(d.afterCount||0)}</p><div class="timeline-meta">${new Date(item.time).toLocaleString("en-GB")}${item.seasonLabel?` · ${esc(item.seasonLabel)}`:""}</div><button class="btn section-gap" data-careerplus-delete="${esc(item.id)}">Delete</button></div>`
           }
+          if(item.type==="development"){
+            const d=item.data||{},players=Array.isArray(d.players)?d.players:[];
+            return `<div class="timeline-item"><span class="type">Player Development</span><strong>${esc(item.title||"Development update")}</strong><p>${players.map(p=>`${esc(p.name)}: ${p.skillDelta>0?"+":""}${Number(p.skillDelta||0)} skill pts${Number(p.valueDelta||0)!==0?`, value byte ${Number(p.valueDelta)>0?"+":""}${Number(p.valueDelta)}`:""}`).join("<br>")}</p><div class="timeline-meta">${new Date(item.time).toLocaleString("en-GB")}${item.seasonLabel?` · ${esc(item.seasonLabel)}`:""}</div><button class="btn section-gap" data-careerplus-delete="${esc(item.id)}">Delete</button></div>`
+          }
           return `<div class="timeline-item note"><span class="type">Career note</span><strong>${esc(item.title||"Note")}</strong><p>${esc(item.note||"")}</p><div class="timeline-meta">${new Date(item.time).toLocaleString("en-GB")}${item.seasonLabel?` · ${esc(item.seasonLabel)}`:""}</div><button class="btn section-gap" data-careerplus-delete="${esc(item.id)}">Delete</button></div>`
         }).join(""):'<div class="empty">No Career+ history yet. Capture your first snapshot or add a note.</div>'}</div>
       </div>
@@ -2056,7 +2257,7 @@
       <div class="friendly-card section-gap"><h3>Where Career+ goes next</h3>
         <div class="careerplus-grid section-gap">
           <button class="simple-option" id="careerPlusTransfers"><span class="ico">🔄</span><span class="grow"><strong>Transfer Centre</strong><span>Plan targets, track bids, manage a transfer window and record world transfers.</span></span><span>›</span></button>
-          <div class="future-card"><strong>📈 Player Development</strong><span>Next: track growth, decline, milestones and eventually potential/regens.</span></div>
+          <div class="future-card"><strong>🌱 Youth & Regens</strong><span>Next generation players, academy intake and long-term career renewal.</span></div>
           <div class="future-card"><strong>💼 Contracts & Wages</strong><span>Deals, wages, free agents, Bosman and loans.</span></div>
           <div class="future-card"><strong>📰 Career News</strong><span>Generated stories, season reviews, records and awards.</span></div>
         </div>
@@ -2064,6 +2265,7 @@
 
     document.getElementById("careerPlusBack").onclick=()=>{state.view="career";state.message=null;render();window.scrollTo(0,0)};
     document.getElementById("careerPlusSquadWatch").onclick=()=>{state.view="careerSquadWatch";state.message=null;render();window.scrollTo(0,0)};
+    document.getElementById("careerPlusDevelopment").onclick=()=>{state.view="careerDevelopment";state.message=null;render();window.scrollTo(0,0)};
     document.getElementById("careerPlusTransfers").onclick=()=>{state.view="careerTransfers";state.message=null;render();window.scrollTo(0,0)};
     document.getElementById("careerPlusSaveSettings").onclick=async()=>{
       await saveCareerPlusSettings(document.getElementById("careerPlusSeason").value,document.getElementById("careerPlusObjective").value);
