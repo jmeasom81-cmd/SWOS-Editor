@@ -7,6 +7,7 @@ const readJson=(path)=>{
 
 const manifest=readJson('football-db/manifest.json');
 const packs=readJson('football-db/research-packs.json');
+const identities=readJson('football-db/identities.json');
 const model=readJson('football-db/squad-model.json');
 const schema=readJson('football-db/schema-v1.json');
 const checks=[];
@@ -18,8 +19,9 @@ const check=(id,label,condition,detail)=>{
 
 check('manifest-schema','Manifest schema',manifest.schemaVersion===1,`schemaVersion ${manifest.schemaVersion}; required 1`);
 check('manifest-id','Database identity',manifest.databaseId==='england-modern',`databaseId ${manifest.databaseId}; required england-modern`);
-check('manifest-season','Season alignment',manifest.season===packs.season&&manifest.season===model.season,`Manifest ${manifest.season}, packs ${packs.season}, model ${model.season}`);
+check('manifest-season','Season alignment',manifest.season===packs.season&&manifest.season===identities.season&&manifest.season===model.season,`Manifest ${manifest.season}, packs ${packs.season}, identities ${identities.season}, model ${model.season}`);
 check('resource-pack','Research-pack resource',manifest.resources?.researchPacks==='football-db/research-packs.json',`Research-pack resource: ${manifest.resources?.researchPacks||'missing'}`);
+check('resource-identities','Verified-identity resource',manifest.resources?.verifiedIdentities==='football-db/identities.json',`Verified-identity resource: ${manifest.resources?.verifiedIdentities||'missing'}`);
 check('resource-model','Squad-model resource',manifest.resources?.squadModel==='football-db/squad-model.json',`Squad-model resource: ${manifest.resources?.squadModel||'missing'}`);
 check('resource-schema','Club-schema resource',manifest.resources?.clubRecordSchema==='football-db/schema-v1.json',`Club-schema resource: ${manifest.resources?.clubRecordSchema||'missing'}`);
 check('schema-shape','Club schema shape',schema.type==='object'&&schema.properties?.squad?.properties?.swos16PlayerIds?.minItems===16&&schema.properties?.squad?.properties?.swos16PlayerIds?.maxItems===16,'Installed SWOS player IDs constrained to exactly 16');
@@ -45,10 +47,44 @@ for(const club of clubs){
   }
 }
 
+const identityClubs=Object.entries(identities.clubs||{});
+const identityRows=[];
+for(const [clubId,rows] of identityClubs){
+  check(`identity-club-${clubId}`,`${clubId} identity list`,Array.isArray(rows)&&rows.length>0,`${clubId}: ${Array.isArray(rows)?rows.length:'invalid'} verified identity rows`);
+  const seen=new Set();
+  for(const row of rows||[]){
+    const name=String(row?.footballName||'').trim();
+    const key=name.toLocaleLowerCase('en');
+    check(`identity-name-${clubId}:${key}`,`${clubId} identity name`,!!name,`${clubId}: footballName must not be blank`);
+    check(`identity-unique-${clubId}:${key}`,`${name||clubId} uniqueness`,!seen.has(key),`${clubId}: duplicate footballName ${name}`);seen.add(key);
+    check(`identity-group-${clubId}:${key}`,`${name} broad role`,['Goalkeeper','Defender','Midfielder','Forward'].includes(row?.group),`${clubId}:${name} role ${row?.group}; required Goalkeeper/Defender/Midfielder/Forward`);
+    check(`identity-nationality-${clubId}:${key}`,`${name} nationality`,!!String(row?.nationality||'').trim(),`${clubId}:${name} nationality must not be blank`);
+    check(`identity-shirt-${clubId}:${key}`,`${name} shirt number`,row?.shirt==null||(Number.isInteger(row.shirt)&&row.shirt>=1&&row.shirt<=99),`${clubId}:${name} shirt ${row?.shirt}; allowed null or 1-99`);
+    check(`identity-source-${clubId}:${key}`,`${name} source`,!!String(row?.source||'').trim(),`${clubId}:${name} source must not be blank`);
+    identityRows.push({clubId,...row});
+  }
+}
+
+const u21Rows=[];
+for(const [clubId,rows] of Object.entries(identities.u21Candidates||{})){
+  check(`u21-club-${clubId}`,`${clubId} U21 list`,Array.isArray(rows)&&rows.length>0,`${clubId}: U21 candidate list must contain rows`);
+  for(const row of rows||[]){
+    const name=String(row?.footballName||'').trim();
+    check(`u21-name-${clubId}:${name}`,`${name||clubId} U21 identity`,!!name&&row?.registration==='U21 candidate',`${clubId}:${name} must be marked U21 candidate`);
+    check(`u21-group-${clubId}:${name}`,`${name} U21 broad role`,['Goalkeeper','Defender','Midfielder','Forward'].includes(row?.group),`${clubId}:${name} role ${row?.group}`);
+    u21Rows.push({clubId,...row});
+  }
+}
+
 check('pack-count','Research pack club count',packs.packCount===clubs.length,`Declared ${packs.packCount}; actual ${clubs.length}`);
 check('player-count','Research pack player count',packs.playerCount===playerRows.length,`Declared ${packs.playerCount}; actual ${playerRows.length}`);
 check('manifest-pack-count','Manifest research club count',manifest.coverage?.premierLeague?.researchPackClubs===clubs.length,`Manifest ${manifest.coverage?.premierLeague?.researchPackClubs}; actual ${clubs.length}`);
 check('manifest-player-count','Manifest research player count',manifest.coverage?.premierLeague?.researchPackPlayers===playerRows.length,`Manifest ${manifest.coverage?.premierLeague?.researchPackPlayers}; actual ${playerRows.length}`);
+check('identity-count','Verified identity club count',identities.clubCount===identityClubs.length,`Declared ${identities.clubCount}; actual ${identityClubs.length}`);
+check('identity-player-count','Verified identity player count',identities.playerCount===identityRows.length,`Declared ${identities.playerCount}; actual ${identityRows.length}`);
+check('identity-manifest-count','Manifest identity club count',manifest.coverage?.premierLeague?.identityReadyClubs===identityClubs.length,`Manifest ${manifest.coverage?.premierLeague?.identityReadyClubs}; actual ${identityClubs.length}`);
+check('identity-manifest-players','Manifest identity player count',manifest.coverage?.premierLeague?.identityPlayers===identityRows.length,`Manifest ${manifest.coverage?.premierLeague?.identityPlayers}; actual ${identityRows.length}`);
+check('u21-count','U21 candidate count',identities.u21PlayerCount===u21Rows.length&&manifest.coverage?.premierLeague?.u21Candidates===u21Rows.length,`Feed ${identities.u21PlayerCount}; manifest ${manifest.coverage?.premierLeague?.u21Candidates}; actual ${u21Rows.length}`);
 check('england-target','England structure target',manifest.coverage?.englandClubs?.target===92&&manifest.coverage?.englandClubs?.mapped===92,`England structure ${manifest.coverage?.englandClubs?.mapped}/${manifest.coverage?.englandClubs?.target}; required 92/92`);
 
 const result={
@@ -58,11 +94,12 @@ const result={
   databaseVersion:manifest.version,
   season:manifest.season,
   validatedAt:new Date().toISOString(),
-  totals:{clubs:clubs.length,players:playerRows.length,checks:checks.length},
+  totals:{clubs:clubs.length,players:playerRows.length,identityClubs:identityClubs.length,identityPlayers:identityRows.length,u21Candidates:u21Rows.length,checks:checks.length},
   guarantees:{
     exactCurrentPackSize:16,
     swosPositionRange:'0-7',
     manifestCountsMatch:true,
+    identityFeedValidated:true,
     clubSchemaRequires16:true,
     careerAutoUpdate:false,
     teamWriteEnabled:false,
@@ -71,4 +108,4 @@ const result={
   checks
 };
 fs.writeFileSync('football-db/validation.json',JSON.stringify(result,null,2)+'\n','utf8');
-console.log(`Football database validation PASS · ${clubs.length} packs · ${playerRows.length} players · ${checks.length} checks`);
+console.log(`Football database validation PASS · ${clubs.length} packs / ${playerRows.length} researched players · ${identityClubs.length} identity clubs / ${identityRows.length} senior identities · ${checks.length} checks`);
