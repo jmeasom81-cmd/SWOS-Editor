@@ -16,30 +16,30 @@ const check=(id,label,condition,detail)=>{
   if(!pass)throw new Error(`Football database validation failed [${id}]: ${detail}`);
 };
 
-check('manifest-schema','Manifest schema',manifest.schemaVersion===1,`Expected schemaVersion 1; found ${manifest.schemaVersion}`);
-check('manifest-id','Database identity',manifest.databaseId==='england-modern',`Expected england-modern; found ${manifest.databaseId}`);
+check('manifest-schema','Manifest schema',manifest.schemaVersion===1,`schemaVersion ${manifest.schemaVersion}; required 1`);
+check('manifest-id','Database identity',manifest.databaseId==='england-modern',`databaseId ${manifest.databaseId}; required england-modern`);
 check('manifest-season','Season alignment',manifest.season===packs.season&&manifest.season===model.season,`Manifest ${manifest.season}, packs ${packs.season}, model ${model.season}`);
-check('resource-pack','Research-pack resource',manifest.resources?.researchPacks==='football-db/research-packs.json','Manifest must point to football-db/research-packs.json');
-check('resource-model','Squad-model resource',manifest.resources?.squadModel==='football-db/squad-model.json','Manifest must point to football-db/squad-model.json');
-check('resource-schema','Club-schema resource',manifest.resources?.clubRecordSchema==='football-db/schema-v1.json','Manifest must point to football-db/schema-v1.json');
-check('schema-shape','Club schema shape',schema.type==='object'&&schema.properties?.squad?.properties?.swos16PlayerIds?.minItems===16&&schema.properties?.squad?.properties?.swos16PlayerIds?.maxItems===16,'Club schema must require exactly 16 SWOS player IDs');
-check('model-capacity','TEAM capacity',model.layers?.installedSwos16?.capacity===16,`Expected Installed SWOS capacity 16; found ${model.layers?.installedSwos16?.capacity}`);
-check('career-boundary','Career isolation',model.careerRules?.existingCareerAutoUpdate===false&&model.careerRules?.realWorldDatabaseInjection===false,'Existing careers must remain isolated from real-world database updates');
-check('write-lock','Binary write lock',model.writeSafety?.teamWriteEnabled===false&&model.writeSafety?.careerWriteEnabled===false&&manifest.installation?.teamWriteReady===false&&manifest.installation?.careerWriteReady===false,'TEAM.* and .CAR writes must remain locked in this foundation release');
+check('resource-pack','Research-pack resource',manifest.resources?.researchPacks==='football-db/research-packs.json',`Research-pack resource: ${manifest.resources?.researchPacks||'missing'}`);
+check('resource-model','Squad-model resource',manifest.resources?.squadModel==='football-db/squad-model.json',`Squad-model resource: ${manifest.resources?.squadModel||'missing'}`);
+check('resource-schema','Club-schema resource',manifest.resources?.clubRecordSchema==='football-db/schema-v1.json',`Club-schema resource: ${manifest.resources?.clubRecordSchema||'missing'}`);
+check('schema-shape','Club schema shape',schema.type==='object'&&schema.properties?.squad?.properties?.swos16PlayerIds?.minItems===16&&schema.properties?.squad?.properties?.swos16PlayerIds?.maxItems===16,'Installed SWOS player IDs constrained to exactly 16');
+check('model-capacity','TEAM capacity',model.layers?.installedSwos16?.capacity===16,`Installed SWOS capacity ${model.layers?.installedSwos16?.capacity}; required 16`);
+check('career-boundary','Career isolation',model.careerRules?.existingCareerAutoUpdate===false&&model.careerRules?.realWorldDatabaseInjection===false,'Existing-career auto-update and real-world database injection are both blocked');
+check('write-lock','Binary write lock',model.writeSafety?.teamWriteEnabled===false&&model.writeSafety?.careerWriteEnabled===false&&manifest.installation?.teamWriteReady===false&&manifest.installation?.careerWriteReady===false,'TEAM.* and .CAR writes remain locked in this foundation release');
 
 const clubs=Object.values(packs.clubs||{});
 const playerRows=[];
 for(const club of clubs){
   const entries=Object.entries(club.players||{});
-  check(`pack-${club.clubId}-identity`,`${club.label||club.clubId} identity`,!!club.clubId&&entries.length>0,`${club.label||'Club'} must have a stable clubId and player rows`);
-  check(`pack-${club.clubId}-size`,`${club.label||club.clubId} pack size`,entries.length===16,`${club.label||club.clubId} currently requires exactly 16 researched players; found ${entries.length}`);
+  check(`pack-${club.clubId}-identity`,`${club.label||club.clubId} identity`,!!club.clubId&&entries.length>0,`${club.label||'Club'} stable clubId ${club.clubId||'missing'}; ${entries.length} player rows`);
+  check(`pack-${club.clubId}-size`,`${club.label||club.clubId} pack size`,entries.length===16,`${club.label||club.clubId}: ${entries.length} researched players; required 16 for the current pack format`);
   for(const [name,p] of entries){
     const prefix=`${club.clubId}:${name}`;
-    check(`position-${prefix}`,`${name} position`,Number.isInteger(p.position)&&p.position>=0&&p.position<=7,`${prefix} has invalid SWOS position ${p.position}`);
-    check(`age-${prefix}`,`${name} age`,Number.isFinite(Number(p.age))&&Number(p.age)>=15&&Number(p.age)<=50,`${prefix} has invalid age ${p.age}`);
-    check(`value-${prefix}`,`${name} market value`,Number.isFinite(Number(p.marketValueM))&&Number(p.marketValueM)>=0,`${prefix} has invalid marketValueM ${p.marketValueM}`);
+    check(`position-${prefix}`,`${name} position`,Number.isInteger(p.position)&&p.position>=0&&p.position<=7,`${prefix} SWOS position ${p.position}; allowed range 0-7`);
+    check(`age-${prefix}`,`${name} age`,Number.isFinite(Number(p.age))&&Number(p.age)>=15&&Number(p.age)<=50,`${prefix} age ${p.age}; allowed range 15-50`);
+    check(`value-${prefix}`,`${name} market value`,Number.isFinite(Number(p.marketValueM))&&Number(p.marketValueM)>=0,`${prefix} marketValueM ${p.marketValueM}; must be finite and non-negative`);
     for(const key of ['minutes','goals','assists']){
-      if(p[key]!=null)check(`${key}-${prefix}`,`${name} ${key}`,Number.isFinite(Number(p[key]))&&Number(p[key])>=0,`${prefix} has invalid ${key} ${p[key]}`);
+      if(p[key]!=null)check(`${key}-${prefix}`,`${name} ${key}`,Number.isFinite(Number(p[key]))&&Number(p[key])>=0,`${prefix} ${key} ${p[key]}; must be finite and non-negative`);
     }
     playerRows.push({clubId:club.clubId,name,...p});
   }
@@ -49,7 +49,7 @@ check('pack-count','Research pack club count',packs.packCount===clubs.length,`De
 check('player-count','Research pack player count',packs.playerCount===playerRows.length,`Declared ${packs.playerCount}; actual ${playerRows.length}`);
 check('manifest-pack-count','Manifest research club count',manifest.coverage?.premierLeague?.researchPackClubs===clubs.length,`Manifest ${manifest.coverage?.premierLeague?.researchPackClubs}; actual ${clubs.length}`);
 check('manifest-player-count','Manifest research player count',manifest.coverage?.premierLeague?.researchPackPlayers===playerRows.length,`Manifest ${manifest.coverage?.premierLeague?.researchPackPlayers}; actual ${playerRows.length}`);
-check('england-target','England structure target',manifest.coverage?.englandClubs?.target===92&&manifest.coverage?.englandClubs?.mapped===92,`Expected 92/92 mapped; found ${manifest.coverage?.englandClubs?.mapped}/${manifest.coverage?.englandClubs?.target}`);
+check('england-target','England structure target',manifest.coverage?.englandClubs?.target===92&&manifest.coverage?.englandClubs?.mapped===92,`England structure ${manifest.coverage?.englandClubs?.mapped}/${manifest.coverage?.englandClubs?.target}; required 92/92`);
 
 const result={
   schemaVersion:1,
