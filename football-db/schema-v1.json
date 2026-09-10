@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://swos-studio.app/football-db/schema-v1.json",
+  "title": "SWOS Studio Football Database Club Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["clubId", "footballName", "swosName", "season", "competition", "squad"],
+  "properties": {
+    "clubId": {"type": "string", "minLength": 1},
+    "footballName": {"type": "string", "minLength": 1},
+    "swosName": {"type": "string", "minLength": 1},
+    "season": {"type": "string", "minLength": 1},
+    "competition": {"type": "string", "minLength": 1},
+    "teamSlot": {"type": ["integer", "null"], "minimum": 0},
+    "manager": {"type": ["string", "null"]},
+    "formation": {"type": ["string", "null"]},
+    "kits": {"type": "array", "items": {"type": "object"}},
+    "players": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["playerId", "footballName", "swosName", "positions"],
+        "properties": {
+          "playerId": {"type": "string", "minLength": 1},
+          "footballName": {"type": "string", "minLength": 1},
+          "swosName": {"type": "string", "minLength": 1},
+          "dateOfBirth": {"type": ["string", "null"]},
+          "age": {"type": ["integer", "null"], "minimum": 15, "maximum": 60},
+          "nationality": {"type": ["string", "null"]},
+          "shirtNumber": {"type": ["integer", "null"], "minimum": 1, "maximum": 99},
+          "positions": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+          "swosPosition": {"type": ["string", "null"]},
+          "marketValue": {"type": ["number", "null"], "minimum": 0},
+          "swosValue": {"type": ["number", "null"], "minimum": 0},
+          "abilities": {
+            "type": ["object", "null"],
+            "additionalProperties": {"type": ["number", "null"]}
+          },
+          "appearance": {"type": ["object", "null"]},
+          "evidence": {
+            "type": ["object", "null"],
+            "properties": {
+              "confidence": {"type": ["string", "null"], "enum": ["high", "medium", "low", null]},
+              "sources": {"type": "array", "items": {"type": "string"}}
+            }
+          }
+        }
+      }
+    },
+    "squad": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fullModernPlayerIds", "swos16PlayerIds", "squadPoolPlayerIds"],
+      "properties": {
+        "fullModernPlayerIds": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+        "swos16PlayerIds": {"type": "array", "minItems": 16, "maxItems": 16, "uniqueItems": true, "items": {"type": "string"}},
+        "squadPoolPlayerIds": {"type": "array", "uniqueItems": true, "items": {"type": "string"}}
+      }
+    },
+    "provenance": {"type": "object"}
+  }
+}
