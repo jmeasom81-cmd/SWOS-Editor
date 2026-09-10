@@ -1,0 +1,57 @@
+{
+  "modelVersion": "1.0",
+  "season": "2026/27",
+  "purpose": "Keep the complete real-world club squad separate from SWOS's fixed 16-player TEAM record while retaining every verified player for future selection and career tools.",
+  "layers": {
+    "fullModernSquad": {
+      "label": "Full Modern Squad",
+      "storage": "football-database",
+      "capacity": "uncapped-by-team-file",
+      "description": "All verified first-team/senior players retained by SWOS Studio. This is the authoritative club roster and is not limited to 16 players."
+    },
+    "installedSwos16": {
+      "label": "Installed SWOS 16",
+      "storage": "TEAM.*",
+      "capacity": 16,
+      "description": "Exactly 16 players selected from the full modern squad for the physical SWOS TEAM record.",
+      "builderRules": {
+        "minimumGoalkeepers": 2,
+        "minimumDefenders": 4,
+        "minimumMidfielders": 4,
+        "minimumForwards": 2,
+        "defaultComposition": {
+          "goalkeepers": 2,
+          "defenders": 5,
+          "midfielders": 5,
+          "forwards": 4
+        }
+      }
+    },
+    "clubSquadPool": {
+      "label": "Club Squad Pool",
+      "storage": "football-database",
+      "capacity": "derived",
+      "description": "Every full-squad player not currently selected in the Installed SWOS 16. Players remain available to the Studio instead of being discarded."
+    }
+  },
+  "invariants": [
+    "installedSwos16 must contain exactly 16 unique stable player IDs before a TEAM.* installation can be enabled",
+    "every installedSwos16 player must exist in fullModernSquad",
+    "clubSquadPool is fullModernSquad minus installedSwos16",
+    "a player cannot be present in both installedSwos16 and clubSquadPool",
+    "stable player identity is retained when a player moves between layers"
+  ],
+  "careerRules": {
+    "existingCareerAutoUpdate": false,
+    "realWorldDatabaseInjection": false,
+    "careerReserveImportStatus": "under-construction",
+    "notes": "An established career is its own fictional universe. Real-world football database updates must never be pushed into an existing .CAR automatically."
+  },
+  "writeSafety": {
+    "teamWriteEnabled": false,
+    "careerWriteEnabled": false,
+    "requiresBackup": true,
+    "requiresPreWriteValidation": true,
+    "requiresPostWriteVerification": true
+  }
+}
