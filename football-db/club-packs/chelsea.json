@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "snapshot": "2026-09-10",
+  "clubId": "chelsea",
+  "label": "Chelsea",
+  "kind": "Current squad + June 2026 values + 2025/26 PL output",
+  "source": "Chelsea FC 2026/27 squad numbers + Premier League submitted squad 03/09/2026 + Transfermarkt values updated 01-03/06/2026 + FBref 2025/26 Premier League",
+  "selection": {
+    "players": 16,
+    "goalkeepers": 2,
+    "defenders": 5,
+    "midfielders": 5,
+    "forwards": 4
+  },
+  "players": {
+    "Damian Martinez": {"age":34,"marketValueM":12,"position":0},
+    "Teddy Sharman-Lowe": {"age":23,"marketValueM":0.5,"position":0},
+    "Reece James": {"age":26,"marketValueM":60,"position":1,"minutes":1963,"goals":2,"assists":4},
+    "Malo Gusto": {"age":23,"marketValueM":35,"position":1,"minutes":2261,"goals":2,"assists":3},
+    "Wesley Fofana": {"age":25,"marketValueM":28,"position":3,"minutes":1722,"goals":0,"assists":1},
+    "Levi Colwill": {"age":23,"marketValueM":50,"position":3,"minutes":225,"goals":0,"assists":0},
+    "Maxence Lacroix": {"age":26,"marketValueM":50,"position":3},
+    "Moises Caicedo": {"age":24,"marketValueM":100,"position":6,"minutes":2795,"goals":3,"assists":1},
+    "Romeo Lavia": {"age":22,"marketValueM":22,"position":6,"minutes":382,"goals":0,"assists":0},
+    "Jordan Henderson": {"age":36,"marketValueM":1.2,"position":6},
+    "Cole Palmer": {"age":24,"marketValueM":100,"position":6,"minutes":1955,"goals":10,"assists":1},
+    "Morgan Rogers": {"age":24,"marketValueM":90,"position":6},
+    "Pedro Neto": {"age":26,"marketValueM":60,"position":4,"minutes":2631,"goals":5,"assists":6},
+    "Jamie Gittens": {"age":22,"marketValueM":30,"position":5,"minutes":495,"goals":0,"assists":2},
+    "Joao Pedro": {"age":24,"marketValueM":80,"position":7,"minutes":2661,"goals":15,"assists":5},
+    "Emmanuel Emegha": {"age":23,"marketValueM":25,"position":7}
+  },
+  "evidenceNotes": [
+    "Summer 2026 arrivals retain their latest available market value but do not inherit prior-club 2025/26 output as Chelsea output.",
+    "Damian Martinez follows the current Studio identity key for Damián Emiliano Martinez; preferred display-name normalisation remains a separate identity task.",
+    "The pack is research data only and does not enable TEAM.* or .CAR writes."
+  ]
+}
