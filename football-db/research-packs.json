@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "snapshot": "2026-09-09",
+  "packCount": 5,
+  "playerCount": 80,
+  "positionCodes": {"0":"GK","1":"RB","2":"LB","3":"D","4":"RW/RM","5":"LW/LM","6":"M","7":"A"},
+  "clubs": {
+    "arsenal": {
+      "clubId": "arsenal",
+      "label": "Arsenal",
+      "kind": "Stats + values pilot",
+      "source": "FBref 2025/26 PL + Transfermarkt 03/06/2026 + UEFA 2026/27",
+      "players": {
+        "David Raya":{"age":30,"minutes":3330,"goals":0,"assists":0,"marketValueM":30,"position":0},
+        "Kepa Arrizabalaga":{"age":31,"minutes":90,"goals":0,"assists":0,"marketValueM":5,"position":0},
+        "William Saliba":{"age":25,"minutes":2614,"goals":1,"assists":0,"marketValueM":100,"position":3},
+        "Gabriel Magalhaes":{"age":28,"minutes":2751,"goals":3,"assists":4,"marketValueM":75,"position":3},
+        "Jurrien Timber":{"age":25,"minutes":2454,"goals":3,"assists":5,"marketValueM":70,"position":1},
+        "Riccardo Calafiori":{"age":24,"minutes":1699,"goals":1,"assists":2,"marketValueM":55,"position":2},
+        "Piero Hincapie":{"age":24,"minutes":1792,"goals":1,"assists":2,"marketValueM":50,"position":3},
+        "Cristhian Mosquera":{"age":22,"minutes":994,"goals":0,"assists":0,"marketValueM":40,"position":3},
+        "Declan Rice":{"age":27,"minutes":3094,"goals":4,"assists":5,"marketValueM":120,"position":6},
+        "Martin Zubimendi":{"age":27,"minutes":2992,"goals":5,"assists":1,"marketValueM":75,"position":6},
+        "Martin Odegaard":{"age":27,"minutes":1369,"goals":1,"assists":6,"marketValueM":65,"position":6},
+        "Eberechi Eze":{"age":28,"minutes":1812,"goals":7,"assists":2,"marketValueM":65,"position":6},
+        "Noni Madueke":{"age":24,"minutes":1211,"goals":3,"assists":1,"marketValueM":50,"position":4},
+        "Mikel Merino":{"age":30,"minutes":1036,"goals":4,"assists":3,"marketValueM":25,"position":6},
+        "Bukayo Saka":{"age":24,"minutes":2222,"goals":7,"assists":5,"marketValueM":110,"position":4},
+        "Viktor Gyokeres":{"age":28,"minutes":2224,"goals":14,"assists":1,"marketValueM":65,"position":7}
+      }
+    },
+    "liverpool": {
+      "clubId": "liverpool",
+      "label": "Liverpool",
+      "kind": "Current values + PL output",
+      "source": "Liverpool FC PL squad 03/09/2026 + UEFA 2026/27 + Transfermarkt 26/27 + FBref 2025/26 PL",
+      "players": {
+        "Alisson Becker":{"age":33,"marketValueM":15,"position":0},
+        "Giorgi Mamardashvili":{"age":25,"marketValueM":28,"position":0},
+        "Virgil van Dijk":{"age":35,"marketValueM":15,"position":3,"minutes":3420,"goals":6,"assists":0},
+        "Milos Kerkez":{"age":22,"marketValueM":35,"position":2,"minutes":2257,"goals":2,"assists":1},
+        "Jeremie Frimpong":{"age":25,"marketValueM":35,"position":1},
+        "Joe Gomez":{"age":29,"marketValueM":13,"position":3},
+        "Jeremy Jacquet":{"age":21,"marketValueM":55,"position":3},
+        "Florian Wirtz":{"age":23,"marketValueM":100,"position":6,"minutes":2378,"goals":5,"assists":3},
+        "Dominik Szoboszlai":{"age":25,"marketValueM":100,"position":6,"minutes":3231,"goals":6,"assists":7},
+        "Alexis Mac Allister":{"age":27,"marketValueM":70,"position":6,"minutes":2658,"goals":2,"assists":4},
+        "Ryan Gravenberch":{"age":24,"marketValueM":80,"position":6,"minutes":2992,"goals":5,"assists":3},
+        "Victor Munoz":{"age":23,"marketValueM":30,"position":5},
+        "Alexander Isak":{"age":26,"marketValueM":85,"position":7},
+        "Cody Gakpo":{"age":27,"marketValueM":60,"position":5,"minutes":2737,"goals":7,"assists":5},
+        "Hugo Ekitike":{"age":24,"marketValueM":80,"position":7},
+        "Federico Chiesa":{"age":28,"marketValueM":13,"position":4}
+      }
+    },
+    "aston-villa": {
+      "clubId": "aston-villa",
+      "label": "Aston Villa",
+      "kind": "Current squad + values + returning-player output",
+      "source": "UEFA 2026/27 current squad + Transfermarkt 2026 values + FBref 2025/26 Aston Villa output where available",
+      "players": {
+        "Zion Suzuki":{"age":24,"marketValueM":20,"position":0},
+        "Marco Bizot":{"age":35,"marketValueM":1.5,"position":0,"minutes":1169,"goals":0,"assists":0},
+        "Matty Cash":{"age":29,"marketValueM":22,"position":1,"minutes":4013,"goals":3,"assists":4},
+        "Pau Torres":{"age":29,"marketValueM":20,"position":3,"minutes":2964,"goals":0},
+        "Ian Maatsen":{"age":24,"marketValueM":30,"position":2},
+        "Aaron Wan-Bissaka":{"age":28,"marketValueM":15,"position":1},
+        "Matteo Ruggeri":{"age":24,"marketValueM":28,"position":2},
+        "Boubacar Kamara":{"age":26,"marketValueM":40,"position":6},
+        "John McGinn":{"age":31,"marketValueM":13,"position":6,"minutes":3006,"goals":10},
+        "Leon Goretzka":{"age":31,"marketValueM":12,"position":6},
+        "Joao Gomes":{"age":25,"marketValueM":40,"position":6},
+        "Lamare Bogarde":{"age":22,"marketValueM":18,"position":6},
+        "Emiliano Buendia":{"age":29,"marketValueM":16,"position":5,"minutes":2875,"goals":11},
+        "Nicolas Jackson":{"age":25,"marketValueM":40,"position":7},
+        "Alejandro Garnacho":{"age":22,"marketValueM":28,"position":5},
+        "Tammy Abraham":{"age":28,"marketValueM":18,"position":7}
+      }
+    },
+    "man-city": {
+      "clubId": "man-city",
+      "label": "Manchester City",
+      "kind": "Current squad + values + PL output",
+      "source": "UEFA 2026/27 current squad + Transfermarkt 2026 values + FBref 2025/26 Premier League output where available",
+      "players": {
+        "Gianluigi Donnarumma":{"age":27,"marketValueM":45,"position":0,"minutes":3060,"goals":0,"assists":0},
+        "Geronimo Rulli":{"age":34,"marketValueM":6,"position":0},
+        "Ruben Dias":{"age":29,"marketValueM":55,"position":3,"minutes":2141,"goals":2,"assists":0},
+        "Marc Guehi":{"age":26,"marketValueM":70,"position":3},
+        "Rayan Ait-Nouri":{"age":25,"marketValueM":40,"position":2},
+        "Josko Gvardiol":{"age":24,"marketValueM":70,"position":3},
+        "Rico Lewis":{"age":21,"marketValueM":28,"position":1},
+        "Elliot Anderson":{"age":23,"marketValueM":110,"position":6},
+        "Enzo Fernandez":{"age":25,"marketValueM":90,"position":6},
+        "Rayan Cherki":{"age":23,"marketValueM":90,"position":6,"minutes":1786,"goals":4,"assists":12},
+        "Phil Foden":{"age":26,"marketValueM":70,"position":6,"minutes":2086,"goals":7,"assists":5},
+        "Matheus Nunes":{"age":28,"marketValueM":50,"position":1,"minutes":2862,"goals":1,"assists":5},
+        "Jeremy Doku":{"age":24,"marketValueM":75,"position":5},
+        "Iliman Ndiaye":{"age":26,"marketValueM":55,"position":4},
+        "Antoine Semenyo":{"age":26,"marketValueM":80,"position":4},
+        "Erling Haaland":{"age":26,"marketValueM":220,"position":7,"minutes":2953,"goals":27,"assists":8}
+      }
+    },
+    "man-utd": {
+      "clubId": "man-utd",
+      "label": "Manchester United",
+      "kind": "Current squad + values + PL output",
+      "source": "UEFA 2026/27 current squad + Transfermarkt 2026 values + FBref 2025/26 Premier League output where available",
+      "players": {
+        "Senne Lammens":{"age":24,"marketValueM":35,"position":0,"minutes":2880,"goals":0,"assists":0},
+        "Karl Darlow":{"age":35,"marketValueM":0.2,"position":0},
+        "Diogo Dalot":{"age":27,"marketValueM":30,"position":1,"minutes":2614,"goals":1,"assists":3},
+        "Matthijs de Ligt":{"age":27,"marketValueM":30,"position":3},
+        "Lisandro Martinez":{"age":28,"marketValueM":45,"position":3},
+        "Patrick Dorgu":{"age":21,"marketValueM":35,"position":2},
+        "Noussair Mazraoui":{"age":28,"marketValueM":18,"position":1},
+        "Bruno Fernandes":{"age":32,"marketValueM":35,"position":6,"minutes":3063,"goals":9,"assists":21},
+        "Youri Tielemans":{"age":29,"marketValueM":40,"position":6},
+        "Andrey Santos":{"age":22,"marketValueM":40,"position":6},
+        "Carlos Baleba":{"age":22,"marketValueM":55,"position":6},
+        "Manuel Ugarte":{"age":25,"marketValueM":25,"position":6},
+        "Bryan Mbeumo":{"age":27,"marketValueM":75,"position":4,"minutes":2609,"goals":11,"assists":3},
+        "Matheus Cunha":{"age":27,"marketValueM":75,"position":7,"minutes":2494,"goals":10,"assists":2},
+        "Benjamin Sesko":{"age":23,"marketValueM":75,"position":7},
+        "Amad Diallo":{"age":24,"marketValueM":45,"position":4,"minutes":2341,"goals":2,"assists":3}
+      }
+    }
+  },
+  "safety": {
+    "teamWriteReady": false,
+    "careerWriteReady": false,
+    "note": "These are evidence/research packs only. Publishing them independently does not enable TEAM.* or .CAR writes."
+  }
+}
