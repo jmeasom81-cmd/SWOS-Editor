@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "databaseId": "england-modern",
+  "version": "2026.27-foundation.1",
+  "season": "2026/27",
+  "publishedAt": "2026-09-10",
+  "minimumStudioVersion": "1.35.0",
+  "status": "foundation",
+  "coverage": {
+    "englandClubs": {
+      "target": 92,
+      "mapped": 92
+    },
+    "premierLeague": {
+      "clubs": 20,
+      "officialSeniorRegistrations": 462,
+      "identityReadyClubs": 10,
+      "researchPackClubs": 5
+    }
+  },
+  "installation": {
+    "teamWriteReady": false,
+    "careerWriteReady": false
+  },
+  "dataModel": {
+    "stableClubIds": true,
+    "stablePlayerIds": true,
+    "fullModernSquad": true,
+    "installedSwos16": true,
+    "clubSquadPool": true,
+    "immutablePublishedVersions": true
+  },
+  "notes": [
+    "This manifest is the first separately published football-data channel for SWOS Studio.",
+    "It reports current data coverage and safety state; it does not yet install the 92-club rebuild into TEAM.* files.",
+    "Existing career files are never automatically updated from the real-world database."
+  ]
+}
