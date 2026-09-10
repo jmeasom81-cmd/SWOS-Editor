@@ -1,15 +1,16 @@
 {
   "schemaVersion": 1,
   "databaseId": "england-modern",
-  "version": "2026.27-foundation.4",
+  "version": "2026.27-foundation.5",
   "season": "2026/27",
   "publishedAt": "2026-09-10",
-  "minimumStudioVersion": "1.37.0",
+  "minimumStudioVersion": "1.39.0",
   "status": "foundation",
   "resources": {
     "clubRecordSchema": "football-db/schema-v1.json",
     "squadModel": "football-db/squad-model.json",
     "researchPacks": "football-db/research-packs.json",
+    "verifiedIdentities": "football-db/identities.json",
     "validationReport": "football-db/validation.json"
   },
   "coverage": {
@@ -21,6 +22,8 @@
       "clubs": 20,
       "officialSeniorRegistrations": 462,
       "identityReadyClubs": 10,
+      "identityPlayers": 215,
+      "u21Candidates": 19,
       "researchPackClubs": 5,
       "researchPackPlayers": 80
     }
@@ -39,14 +42,16 @@
     "publishedClubRecordSchema": true,
     "publishedSquadModel": true,
     "publishedResearchPacks": true,
+    "publishedVerifiedIdentities": true,
     "automaticBuildValidation": true
   },
   "notes": [
     "The football database is versioned independently from SWOS Studio.",
     "The published squad model separates Full Modern Squad, Installed SWOS 16 and Club Squad Pool.",
     "The first five existing 16-player research packs are published outside the main app bundle as an independent data resource.",
+    "The ten identity-ready Premier League clubs are now published through a separate verified identity feed, including current shirt/role/nationality evidence and separately held U21 candidates.",
     "The live Research Pack loader can consume the independent feed with an embedded safety fallback.",
-    "Every preview build now validates manifest totals, pack sizes, SWOS positions, core player fields, schema constraints, career isolation and binary-write locks before publication.",
+    "Every preview build validates manifest totals, pack sizes, identity coverage, SWOS positions, core player fields, schema constraints, career isolation and binary-write locks before publication.",
     "TEAM.* installation remains disabled until the full dataset and write safety gate are ready.",
     "Existing career files are never automatically updated from the real-world database."
   ]
