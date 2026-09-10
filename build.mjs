@@ -4,6 +4,7 @@ import fs from 'node:fs';
 const steps=[
   'publish-identities.mjs',
   'validate-football-db.mjs',
+  'publish-coverage.mjs',
   'patch-v133.mjs',
   'patch-v1331.mjs',
   'patch-v134.mjs',
@@ -17,7 +18,8 @@ const steps=[
   'patch-v140.mjs',
   'patch-v141.mjs',
   'patch-v142.mjs',
-  'patch-v143.mjs'
+  'patch-v143.mjs',
+  'patch-v144.mjs'
 ];
 
 for(const step of steps){
