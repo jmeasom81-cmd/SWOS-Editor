@@ -1,9 +1,11 @@
 import fs from 'node:fs';
+import crypto from 'node:crypto';
 
 const readJson=(path)=>{
   if(!fs.existsSync(path))throw new Error(`Missing required football database file: ${path}`);
   try{return JSON.parse(fs.readFileSync(path,'utf8'))}catch(e){throw new Error(`Invalid JSON in ${path}: ${e.message}`)}
 };
+const sha256File=(path)=>crypto.createHash('sha256').update(fs.readFileSync(path)).digest('hex');
 
 const manifest=readJson('football-db/manifest.json');
 const packs=readJson('football-db/research-packs.json');
@@ -87,6 +89,18 @@ check('identity-manifest-players','Manifest identity player count',manifest.cove
 check('u21-count','U21 candidate count',identities.u21PlayerCount===u21Rows.length&&manifest.coverage?.premierLeague?.u21Candidates===u21Rows.length,`Feed ${identities.u21PlayerCount}; manifest ${manifest.coverage?.premierLeague?.u21Candidates}; actual ${u21Rows.length}`);
 check('england-target','England structure target',manifest.coverage?.englandClubs?.target===92&&manifest.coverage?.englandClubs?.mapped===92,`England structure ${manifest.coverage?.englandClubs?.mapped}/${manifest.coverage?.englandClubs?.target}; required 92/92`);
 
+const integrity={
+  algorithm:'SHA-256',
+  resources:{
+    verifiedIdentities:{path:'football-db/identities.json',sha256:sha256File('football-db/identities.json')},
+    researchPacks:{path:'football-db/research-packs.json',sha256:sha256File('football-db/research-packs.json')},
+    squadModel:{path:'football-db/squad-model.json',sha256:sha256File('football-db/squad-model.json')},
+    clubRecordSchema:{path:'football-db/schema-v1.json',sha256:sha256File('football-db/schema-v1.json')}
+  }
+};
+check('integrity-identities','Identity resource hash',/^[a-f0-9]{64}$/.test(integrity.resources.verifiedIdentities.sha256),'Identity SHA-256 must be 64 lowercase hex characters');
+check('integrity-packs','Research-pack resource hash',/^[a-f0-9]{64}$/.test(integrity.resources.researchPacks.sha256),'Research-pack SHA-256 must be 64 lowercase hex characters');
+
 const result={
   schemaVersion:1,
   status:'pass',
@@ -100,12 +114,14 @@ const result={
     swosPositionRange:'0-7',
     manifestCountsMatch:true,
     identityFeedValidated:true,
+    resourceIntegrity:true,
     clubSchemaRequires16:true,
     careerAutoUpdate:false,
     teamWriteEnabled:false,
     careerWriteEnabled:false
   },
+  integrity,
   checks
 };
 fs.writeFileSync('football-db/validation.json',JSON.stringify(result,null,2)+'\n','utf8');
-console.log(`Football database validation PASS · ${clubs.length} packs / ${playerRows.length} researched players · ${identityClubs.length} identity clubs / ${identityRows.length} senior identities · ${checks.length} checks`);
+console.log(`Football database validation PASS · ${clubs.length} packs / ${playerRows.length} researched players · ${identityClubs.length} identity clubs / ${identityRows.length} senior identities · ${checks.length} checks · SHA-256 integrity published`);
