@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "snapshot": "2026-09-11",
+  "clubId": "everton",
+  "label": "Everton",
+  "kind": "Current post-window squad + May/June 2026 values + 2025/26 PL output",
+  "source": "Premier League submitted squad 03/09/2026 + Transfermarkt values updated 28/05-03/06/2026 + FBref 2025/26 Premier League",
+  "selection": {
+    "players": 16,
+    "goalkeepers": 2,
+    "defenders": 5,
+    "midfielders": 5,
+    "forwards": 4
+  },
+  "players": {
+    "Jordan Pickford": {"age":32,"marketValueM":13,"position":0,"minutes":3420,"goals":0,"assists":0},
+    "Mark Travers": {"age":27,"marketValueM":3,"position":0},
+    "Jarrad Branthwaite": {"age":24,"marketValueM":40,"position":3,"minutes":680},
+    "James Tarkowski": {"age":33,"marketValueM":5,"position":3,"minutes":3330,"goals":2,"assists":3},
+    "Vitalii Mykolenko": {"age":27,"marketValueM":25,"position":2,"minutes":2958,"goals":0,"assists":1},
+    "Jake O'Brien": {"age":25,"marketValueM":18,"position":1,"minutes":3120,"goals":1,"assists":1},
+    "Ainsley Maitland-Niles": {"age":29,"marketValueM":10,"position":1},
+    "James Garner": {"age":25,"marketValueM":45,"position":6,"minutes":3413,"goals":2,"assists":7},
+    "Kiernan Dewsbury-Hall": {"age":28,"marketValueM":35,"position":6,"minutes":2626,"goals":8,"assists":4},
+    "Hayden Hackney": {"age":24,"marketValueM":32,"position":6},
+    "Christian Norgaard": {"age":32,"marketValueM":5,"position":6},
+    "Carlos Alcaraz": {"age":23,"marketValueM":15,"position":6},
+    "Jack Grealish": {"age":31,"marketValueM":20,"position":5},
+    "Brennan Johnson": {"age":25,"marketValueM":30,"position":4},
+    "Tyrique George": {"age":20,"marketValueM":20,"position":5},
+    "Thierno Barry": {"age":23,"marketValueM":30,"position":7}
+  },
+  "evidenceNotes": [
+    "Selection is based on Everton's official post-window Premier League squad submitted on 3 September 2026, with a balanced SWOS 16 of 2 GK / 5 DEF / 5 MID / 4 FWD.",
+    "Summer 2026 arrivals retain their latest available May/June 2026 market value but do not inherit prior-club 2025/26 output as Everton output.",
+    "Ainsley Maitland-Niles, Brennan Johnson, Hayden Hackney and Christian Norgaard are treated as current Everton identities with no prior-club 2025/26 statistics attached.",
+    "The pack is research data only and does not enable TEAM.* or .CAR writes."
+  ]
+}
