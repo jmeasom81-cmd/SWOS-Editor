@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "watford",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "FootballSquads Watford 2026/27 current Championship roster, checked after the summer window",
+  "players": [
+    {"footballName":"Federico Ravaglia","group":"Goalkeeper","nationality":"Italy","shirt":1,"source":"FootballSquads Watford 2026/27 current roster · #1 Federico Ravaglia G"},
+    {"footballName":"Sam Walker","group":"Goalkeeper","nationality":"England","shirt":24,"source":"FootballSquads Watford 2026/27 current roster · #24 Sam Walker G"},
+    {"footballName":"Jeremy Ngakia","group":"Defender","nationality":"England","shirt":2,"source":"FootballSquads Watford 2026/27 current roster · #2 Jeremy Ngakia D"},
+    {"footballName":"Soumaila Coulibaly","group":"Defender","nationality":"France","shirt":3,"source":"FootballSquads Watford 2026/27 current roster · #3 Soumaïla Coulibaly D","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Kevin Keben","group":"Defender","nationality":"Cameroon","shirt":4,"source":"FootballSquads Watford 2026/27 current roster · #4 Kévin Keben D","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Mattie Pollock","group":"Defender","nationality":"England","shirt":6,"source":"FootballSquads Watford 2026/27 current roster · #6 Mattie Pollock D"},
+    {"footballName":"Marc Bola","group":"Defender","nationality":"England","shirt":16,"source":"FootballSquads Watford 2026/27 current roster · #16 Marc Bola D"},
+    {"footballName":"Omar Traore","group":"Defender","nationality":"Germany","shirt":23,"source":"FootballSquads Watford 2026/27 current roster · #23 Omar Traoré D","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Hector Kyprianou","group":"Midfielder","nationality":"Cyprus","shirt":5,"source":"FootballSquads Watford 2026/27 current roster · #5 Hector Kyprianou M"},
+    {"footballName":"Edoardo Bove","group":"Midfielder","nationality":"Italy","shirt":8,"source":"FootballSquads Watford 2026/27 current roster · #8 Edoardo Bove M"},
+    {"footballName":"Martin Payero","group":"Midfielder","nationality":"Argentina","shirt":22,"source":"FootballSquads Watford 2026/27 current roster · #22 Martín Payero M","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Edo Kayembe","group":"Midfielder","nationality":"DR Congo","shirt":39,"source":"FootballSquads Watford 2026/27 current roster · #39 Edo Kayembe M"},
+    {"footballName":"Jack Grieves","group":"Midfielder","nationality":"England","shirt":43,"source":"FootballSquads Watford 2026/27 current roster · #43 Jack Grieves M"},
+    {"footballName":"Othmane Maamma","group":"Forward","nationality":"Morocco","shirt":7,"source":"FootballSquads Watford 2026/27 current roster · #7 Othmane Maamma F"},
+    {"footballName":"Luca Kjerrumgaard","group":"Forward","nationality":"Denmark","shirt":9,"source":"FootballSquads Watford 2026/27 current roster · #9 Luca Kjerrumgaard F"},
+    {"footballName":"Rocco Vata","group":"Forward","nationality":"Ireland","shirt":11,"source":"FootballSquads Watford 2026/27 current roster · #11 Rocco Vata F"}
+  ]
+}
