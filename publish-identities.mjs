@@ -1,8 +1,12 @@
 import fs from 'node:fs';
+import path from 'node:path';
 
 const SOURCE='index.html';
 const OUT='football-db/identities.json';
+const MANIFEST='football-db/manifest.json';
+const PACK_DIR='football-db/identity-packs';
 if(!fs.existsSync(SOURCE)) throw new Error('Identity publisher failed: index.html is missing.');
+if(!fs.existsSync(MANIFEST)) throw new Error('Identity publisher failed: manifest.json is missing.');
 const html=fs.readFileSync(SOURCE,'utf8');
 
 function extractJson(startMarker,endMarker,label){
@@ -17,23 +21,51 @@ function extractJson(startMarker,endMarker,label){
 
 const clubs=extractJson('const PL_2627_VERIFIED_IDENTITIES=',';\n  const PL_2627_U21_CANDIDATES=','verified identities');
 const u21Candidates=extractJson('const PL_2627_U21_CANDIDATES=',';\n  function identityReadyClubIds','U21 candidates');
+const published=[];
+let snapshot='2026-09-09';
+
+if(fs.existsSync(PACK_DIR)){
+  for(const file of fs.readdirSync(PACK_DIR).filter(f=>f.endsWith('.json')).sort()){
+    const pack=JSON.parse(fs.readFileSync(path.join(PACK_DIR,file),'utf8'));
+    if(pack.schemaVersion!==1)throw new Error(`${file}: identity-pack schemaVersion must be 1.`);
+    if(pack.season!=='2026/27')throw new Error(`${file}: identity-pack season must be 2026/27.`);
+    for(const [clubId,rows] of Object.entries(pack.clubs||{})){
+      if(!Array.isArray(rows)||!rows.length)throw new Error(`${file}:${clubId} must contain identity rows.`);
+      const seen=new Set();
+      for(const row of rows){
+        const name=String(row?.footballName||'').trim();
+        const key=name.toLocaleLowerCase('en');
+        if(!name||seen.has(key))throw new Error(`${file}:${clubId} blank or duplicate footballName ${name}.`);
+        seen.add(key);
+        if(!['Goalkeeper','Defender','Midfielder','Forward'].includes(row.group))throw new Error(`${file}:${clubId}:${name} invalid broad role ${row.group}.`);
+        if(!String(row.nationality||'').trim())throw new Error(`${file}:${clubId}:${name} nationality is required.`);
+        if(row.shirt!=null&&(!Number.isInteger(row.shirt)||row.shirt<1||row.shirt>99))throw new Error(`${file}:${clubId}:${name} shirt must be null or 1-99.`);
+        if(!String(row.source||'').trim())throw new Error(`${file}:${clubId}:${name} source is required.`);
+      }
+      clubs[clubId]=rows;
+      published.push({clubId,file,players:rows.length});
+    }
+    if(pack.snapshot&&pack.snapshot>snapshot)snapshot=pack.snapshot;
+  }
+}
+
 const clubIds=Object.keys(clubs);
 const playerCount=Object.values(clubs).reduce((n,rows)=>n+(Array.isArray(rows)?rows.length:0),0);
 const u21PlayerCount=Object.values(u21Candidates).reduce((n,rows)=>n+(Array.isArray(rows)?rows.length:0),0);
-
 const out={
   schemaVersion:1,
   season:'2026/27',
-  snapshot:'2026-09-09',
-  status:'identity-ready-foundation',
+  snapshot,
+  status:clubIds.length===20?'premier-league-identity-complete':'identity-ready-foundation',
   clubCount:clubIds.length,
   playerCount,
   u21ClubCount:Object.keys(u21Candidates).length,
   u21PlayerCount,
   clubs,
   u21Candidates,
+  generation:{mode:'embedded-base-plus-identity-packs',identityPackFiles:[...new Set(published.map(x=>x.file))],publishedClubIds:published.map(x=>x.clubId)},
   safety:{
-    source:'Existing verified SWOS Studio identity layer',
+    source:'Verified SWOS Studio identity layer + incremental identity packs',
     teamWriteReady:false,
     careerWriteReady:false,
     note:'Identity publication changes football-data lookup only. It does not enable TEAM.* or .CAR writes.'
@@ -41,4 +73,24 @@ const out={
 };
 fs.mkdirSync('football-db',{recursive:true});
 fs.writeFileSync(OUT,JSON.stringify(out,null,2)+'\n','utf8');
-console.log(`Published identity feed · ${clubIds.length} clubs · ${playerCount} verified senior identities · ${u21PlayerCount} U21 candidates`);
+
+const manifest=JSON.parse(fs.readFileSync(MANIFEST,'utf8'));
+manifest.publishedAt=snapshot;
+manifest.coverage=manifest.coverage||{};
+manifest.coverage.premierLeague=manifest.coverage.premierLeague||{};
+manifest.coverage.premierLeague.identityReadyClubs=clubIds.length;
+manifest.coverage.premierLeague.identityPlayers=playerCount;
+manifest.coverage.premierLeague.u21Candidates=u21PlayerCount;
+manifest.dataModel=manifest.dataModel||{};
+manifest.dataModel.incrementalIdentityPacks=true;
+manifest.notes=Array.isArray(manifest.notes)?manifest.notes:[];
+manifest.notes=manifest.notes.filter(x=>!String(x).startsWith('Incremental identity publisher merged '));
+if(published.length)manifest.notes.push(`Incremental identity publisher merged ${published.map(x=>x.clubId).join(', ')}; ${clubIds.length} Premier League clubs / ${playerCount} senior identities now published.`);
+fs.writeFileSync(MANIFEST,JSON.stringify(manifest,null,2)+'\n','utf8');
+
+if(fs.existsSync('dist')){
+  fs.mkdirSync('dist/football-db',{recursive:true});
+  fs.copyFileSync(OUT,'dist/football-db/identities.json');
+  fs.copyFileSync(MANIFEST,'dist/football-db/manifest.json');
+}
+console.log(`Published identity feed · ${clubIds.length} clubs · ${playerCount} verified senior identities · ${u21PlayerCount} U21 candidates · ${published.length} incremental clubs`);
