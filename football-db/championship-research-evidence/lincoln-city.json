@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "lincoln-city",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "Lincoln City 2026/27 current Championship roster cross-checked with FootballSquads and current Transfermarkt squad/player records. Summer arrivals and loanees are verified separately where the latest valuation page still reflects a previous club.",
+  "players": {
+    "George Wickens": {"age":24,"marketValueM":1,"position":0,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/lincoln.htm","https://www.transfermarkt.com/lincoln-city/kader/verein/1198/saison_id/2026"]},
+    "Jamie Pardington": {"age":26,"marketValueM":0.075,"position":0,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/lincoln.htm","https://www.transfermarkt.com/lincoln-city/kader/verein/1198/saison_id/2026"]},
+    "Tendayi Darikwa": {"age":34,"marketValueM":0.2,"position":1,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/lincoln.htm","https://www.transfermarkt.com/tendayi-darikwa/marktwertverlauf/spieler/158700"]},
+    "Andrei Coubis": {"age":22,"marketValueM":1.2,"position":3,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/lincoln.htm","https://www.transfermarkt.com/andrei-coubis/profil/spieler/692349"],"notes":"ASCII football name retained to match the published SWOS Studio identity record for Andrei Coubiș. FootballSquads supplies current Lincoln roster truth; the €1.2m value is the latest published Transfermarkt valuation before the summer move."},
+    "Ryley Towler": {"age":24,"marketValueM":0.6,"position":3,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/lincoln.htm","https://www.transfermarkt.co.uk/ryley-towler/profil/spieler/801422"]},
+    "Sonny Bradley": {"age":34,"marketValueM":0.175,"position":3,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/lincoln.htm","https://www.transfermarkt.com/sonny-bradley/profil/spieler/127794"]},
+    "Callum Elder": {"age":31,"marketValueM":0.4,"position":2,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/lincoln.htm","https://www.transfermarkt.co.uk/callum-elder/profil/spieler/271997"]},
+    "Adam Reach": {"age":33,"marketValueM":0.35,"position":5,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/lincoln.htm","https://www.transfermarkt.co.uk/adam-reach/profil/spieler/163530"],"notes":"FootballSquads lists Reach in midfield; Transfermarkt lists left-back with left-midfield as an alternate role. SWOS LW/LM code 5 preserves the selected midfield identity role."},
+    "Tom Bayliss": {"age":27,"marketValueM":0.55,"position":6,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/lincoln.htm","https://www.transfermarkt.co.uk/tom-bayliss/profil/spieler/425799/"]},
+    "Conor McGrandles": {"age":30,"marketValueM":0.4,"position":6,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/lincoln.htm","https://www.transfermarkt.co.uk/conor-mcgrandles/profil/spieler/203127"]},
+    "Dominic Jefferies": {"age":24,"marketValueM":0.25,"position":4,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/lincoln.htm","https://www.transfermarkt.co/dom-jefferies/profil/spieler/712422"],"notes":"Transfermarkt lists right midfield as the primary role, mapped to SWOS RW/RM code 4."},
+    "Ivan Varfolomeyev": {"age":22,"marketValueM":0.7,"position":6,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/lincoln.htm","https://www.transfermarkt.co.uk/ivan-varfolomeev/profil/spieler/779244"],"notes":"Published SWOS Studio identity spelling retained. Defensive midfield maps to SWOS midfield code 6."},
+    "Reeco Hackett-Fairchild": {"age":28,"marketValueM":0.55,"position":4,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/lincoln.htm","https://www.transfermarkt.co.uk/reeco-hackett/profil/spieler/459843"],"notes":"Transfermarkt uses Reeco Hackett while the published identity retains full football name Reeco Hackett-Fairchild. Primary right-wing role maps to SWOS RW/RM code 4."},
+    "Mason Melia": {"age":18,"marketValueM":1,"position":7,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/lincoln.htm","https://www.tottenhamhotspur.com/news/1081608/lincoln-loan-for-melia","https://www.transfermarkt.co.uk/mason-melia/profil/spieler/1005766"],"notes":"Tottenham confirms the 2026/27 season-long Lincoln loan; the €1m value is the latest published Transfermarkt valuation."},
+    "Mikkel Ladefoged": {"age":23,"marketValueM":0.8,"position":7,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/lincoln.htm","https://www.transfermarkt.co.uk/mikkel-ladefoged/profil/spieler/806994"],"notes":"FootballSquads supplies current Lincoln roster truth; latest published Transfermarkt valuation is €800k from June 2026 before the move."},
+    "Rob Street": {"age":24,"marketValueM":0.45,"position":7,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/lincoln.htm","https://www.transfermarkt.co.uk/rob-street/profil/spieler/703474"]}
+  }
+}
