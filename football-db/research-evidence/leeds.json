@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "leeds",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "Leeds United official 2026/27 squad confirmation plus latest available Transfermarkt age, role and market-value evidence",
+  "players": {
+    "James Trafford": {"age":23,"marketValueM":25,"position":0,"sources":["Leeds United official 2026/27 squad numbers · #1 GK","Transfermarkt Leeds 26/27 current squad/value · GK · €25m"]},
+    "Michael Zetterer": {"age":31,"marketValueM":4,"position":0,"sources":["Leeds United summer 2026 transfer roundup confirms Michael Zetterer arrival","Transfermarkt latest available profile/value · GK · €4m"],"notes":"Latest available value evidence predates the summer move and is retained as a market-value input, not a transfer fee."},
+    "Jayden Bogle": {"age":26,"marketValueM":15,"position":1,"sources":["Leeds United official 2026/27 squad numbers · #2","Transfermarkt Leeds profile/value · RB · €15m"]},
+    "Gabriel Gudmundsson": {"age":27,"marketValueM":20,"position":2,"sources":["Leeds United official 2026/27 squad numbers · #3","Transfermarkt Leeds profile/value · LB · €20m"]},
+    "Tarik Muharemovic": {"age":23,"marketValueM":25,"position":3,"sources":["Leeds United official 2026/27 squad numbers · #5","Transfermarkt latest available Tarik Muharemović profile/value · CB · €25m"],"notes":"Identity feed uses ASCII spelling Tarik Muharemovic."},
+    "Joe Rodon": {"age":28,"marketValueM":18,"position":3,"sources":["Leeds United official 2026/27 squad numbers · #6","Transfermarkt Leeds profile/value · CB · €18m"]},
+    "Jaka Bijol": {"age":27,"marketValueM":20,"position":3,"sources":["Leeds United official 2026/27 squad numbers · #15","Transfermarkt Leeds profile/value · CB · €20m"]},
+    "Ethan Ampadu": {"age":25,"marketValueM":30,"position":6,"sources":["Leeds United official 2026/27 squad numbers · #4 captain","Transfermarkt Leeds profile/value · DM · €30m"]},
+    "Sean Longstaff": {"age":28,"marketValueM":15,"position":6,"sources":["Leeds United official 2026/27 squad numbers · #8","Transfermarkt Leeds profile/value · CM · €15m"]},
+    "Brenden Aaronson": {"age":25,"marketValueM":22,"position":6,"sources":["Leeds United official 2026/27 squad numbers · #11","Transfermarkt Leeds profile/value · AM · €22m"]},
+    "Anton Stach": {"age":27,"marketValueM":28,"position":6,"sources":["Leeds United official 2026/27 squad numbers · #18","Transfermarkt Leeds profile/value · DM · €28m"]},
+    "Ao Tanaka": {"age":28,"marketValueM":13,"position":6,"sources":["Leeds United official 2026/27 squad numbers · #22","Transfermarkt Leeds profile/value · CM · €13m"],"notes":"Age updated for 10 September 2026 birthday."},
+    "Dominic Calvert-Lewin": {"age":29,"marketValueM":22,"position":7,"sources":["Leeds United official 2026/27 squad numbers · #9","Transfermarkt Leeds profile/value · CF · €22m"]},
+    "Harry Wilson": {"age":29,"marketValueM":25,"position":4,"sources":["Leeds United official 2026/27 squad numbers · #10","Transfermarkt Leeds profile/value · RW · €25m"]},
+    "Lukas Nmecha": {"age":27,"marketValueM":10,"position":7,"sources":["Leeds United official 2026/27 squad numbers · #14","Transfermarkt Leeds profile/value · CF · €10m"]},
+    "Noah Okafor": {"age":26,"marketValueM":25,"position":5,"sources":["Leeds United official 2026/27 squad numbers · #19","Transfermarkt Leeds profile/value · LW · €25m"]}
+  }
+}
