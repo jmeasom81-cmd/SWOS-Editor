@@ -35,24 +35,70 @@ const steps=[
   'patch-v152.mjs',
   'patch-v153.mjs',
   'patch-v154.mjs',
+
   'promote-research-evidence.mjs',
   'validate-football-db.mjs',
   'publish-coverage.mjs',
   'publish-research-queue.mjs',
   'publish-research-intake.mjs',
   'patch-v155.mjs',
+
   'promote-research-evidence.mjs',
   'validate-football-db.mjs',
   'publish-coverage.mjs',
   'publish-research-queue.mjs',
   'publish-research-intake.mjs',
   'patch-v156.mjs',
+
   'promote-research-evidence.mjs',
   'validate-football-db.mjs',
   'publish-coverage.mjs',
   'publish-research-queue.mjs',
   'publish-research-intake.mjs',
-  'patch-v157.mjs'
+  'patch-v157.mjs',
+
+  'promote-research-evidence.mjs',
+  'validate-football-db.mjs',
+  'publish-coverage.mjs',
+  'publish-research-queue.mjs',
+  'publish-research-intake.mjs',
+
+  'promote-research-evidence.mjs',
+  'validate-football-db.mjs',
+  'publish-coverage.mjs',
+  'publish-research-queue.mjs',
+  'publish-research-intake.mjs',
+
+  'promote-research-evidence.mjs',
+  'validate-football-db.mjs',
+  'publish-coverage.mjs',
+  'publish-research-queue.mjs',
+  'publish-research-intake.mjs',
+
+  'promote-research-evidence.mjs',
+  'validate-football-db.mjs',
+  'publish-coverage.mjs',
+  'publish-research-queue.mjs',
+  'publish-research-intake.mjs',
+
+  'promote-research-evidence.mjs',
+  'validate-football-db.mjs',
+  'publish-coverage.mjs',
+  'publish-research-queue.mjs',
+  'publish-research-intake.mjs',
+
+  'promote-research-evidence.mjs',
+  'validate-football-db.mjs',
+  'publish-coverage.mjs',
+  'publish-research-queue.mjs',
+  'publish-research-intake.mjs',
+
+  'promote-research-evidence.mjs',
+  'validate-football-db.mjs',
+  'publish-coverage.mjs',
+  'publish-research-queue.mjs',
+  'publish-research-intake.mjs',
+  'patch-v158.mjs'
 ];
 
 for(const step of steps){
