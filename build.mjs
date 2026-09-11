@@ -34,7 +34,13 @@ const steps=[
   'patch-v151.mjs',
   'patch-v152.mjs',
   'patch-v153.mjs',
-  'patch-v154.mjs'
+  'patch-v154.mjs',
+  'promote-research-evidence.mjs',
+  'validate-football-db.mjs',
+  'publish-coverage.mjs',
+  'publish-research-queue.mjs',
+  'publish-research-intake.mjs',
+  'patch-v155.mjs'
 ];
 
 for(const step of steps){
