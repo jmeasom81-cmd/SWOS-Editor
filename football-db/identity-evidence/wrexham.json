@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "wrexham",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "FootballSquads Wrexham 2026/27 current Championship roster, checked after the summer window",
+  "players": [
+    {"footballName":"Danny Ward","group":"Goalkeeper","nationality":"Wales","shirt":21,"source":"FootballSquads Wrexham 2026/27 current roster · #21 Danny Ward G"},
+    {"footballName":"Anthony Patterson","group":"Goalkeeper","nationality":"England","shirt":22,"source":"FootballSquads Wrexham 2026/27 current roster · #22 Anthony Patterson G"},
+    {"footballName":"Callum Doyle","group":"Defender","nationality":"England","shirt":2,"source":"FootballSquads Wrexham 2026/27 current roster · #2 Callum Doyle D"},
+    {"footballName":"Jacques Ekomie","group":"Defender","nationality":"Gabon","shirt":3,"source":"FootballSquads Wrexham 2026/27 current roster · #3 Jacques Ekomié D","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Max Cleworth","group":"Defender","nationality":"England","shirt":4,"source":"FootballSquads Wrexham 2026/27 current roster · #4 Max Cleworth D"},
+    {"footballName":"Dominic Hyam","group":"Defender","nationality":"Scotland","shirt":5,"source":"FootballSquads Wrexham 2026/27 current roster · #5 Dominic Hyam D"},
+    {"footballName":"Joe Worrall","group":"Defender","nationality":"England","shirt":6,"source":"FootballSquads Wrexham 2026/27 current roster · #6 Joe Worrall D"},
+    {"footballName":"Issa Kabore","group":"Defender","nationality":"Burkina Faso","shirt":12,"source":"FootballSquads Wrexham 2026/27 current roster · #12 Issa Kaboré D","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Ben Whiteman","group":"Midfielder","nationality":"England","shirt":8,"source":"FootballSquads Wrexham 2026/27 current roster · #8 Ben Whiteman M"},
+    {"footballName":"Josh Windass","group":"Midfielder","nationality":"England","shirt":10,"source":"FootballSquads Wrexham 2026/27 current roster · #10 Josh Windass M"},
+    {"footballName":"George Thomason","group":"Midfielder","nationality":"England","shirt":14,"source":"FootballSquads Wrexham 2026/27 current roster · #14 George Thomason M"},
+    {"footballName":"George Dobson","group":"Midfielder","nationality":"England","shirt":15,"source":"FootballSquads Wrexham 2026/27 current roster · #15 George Dobson M"},
+    {"footballName":"Callum O'Hare","group":"Midfielder","nationality":"England","shirt":17,"source":"FootballSquads Wrexham 2026/27 current roster · #17 Callum O'Hare M"},
+    {"footballName":"Bailey-Tye Cadamarteri","group":"Forward","nationality":"England","shirt":11,"source":"FootballSquads Wrexham 2026/27 current roster · #11 Bailey-Tye Cadamarteri F"},
+    {"footballName":"Kieffer Moore","group":"Forward","nationality":"Wales","shirt":19,"source":"FootballSquads Wrexham 2026/27 current roster · #19 Kieffer Moore F"},
+    {"footballName":"Sam Smith","group":"Forward","nationality":"England","shirt":28,"source":"FootballSquads Wrexham 2026/27 current roster · #28 Sam Smith F"}
+  ]
+}
