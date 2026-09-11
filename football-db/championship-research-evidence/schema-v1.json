@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "swos-studio://football-db/championship-research-evidence/schema-v1",
+  "title": "SWOS Studio Championship Research Evidence v1",
+  "type": "object",
+  "required": ["schemaVersion", "season", "clubId", "snapshot", "sourceSummary", "players"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "season": {"const": "2026/27"},
+    "clubId": {"type": "string", "minLength": 1},
+    "snapshot": {"type": "string", "pattern": "^2026-[0-9]{2}-[0-9]{2}$"},
+    "sourceSummary": {"type": "string", "minLength": 1},
+    "players": {
+      "type": "object",
+      "minProperties": 16,
+      "maxProperties": 16,
+      "additionalProperties": {
+        "type": "object",
+        "required": ["age", "marketValueM", "position", "sources"],
+        "properties": {
+          "age": {"type": "number", "minimum": 15, "maximum": 50},
+          "marketValueM": {"type": "number", "minimum": 0},
+          "position": {"type": "integer", "minimum": 0, "maximum": 7},
+          "minutes": {"type": "number", "minimum": 0},
+          "goals": {"type": "number", "minimum": 0},
+          "assists": {"type": "number", "minimum": 0},
+          "sources": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1},
+          "notes": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false,
+  "x-swos-policy": {
+    "exactly16IdentityMatchedPlayers": true,
+    "requiredEvidence": ["age", "marketValueM", "position", "sources"],
+    "optionalPerformanceEvidence": ["minutes", "goals", "assists"],
+    "noFabricatedValues": true,
+    "autoPromotion": false,
+    "binaryWritesRemainLocked": true
+  }
+}
