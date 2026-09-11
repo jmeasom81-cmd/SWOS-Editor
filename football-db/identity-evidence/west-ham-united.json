@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "west-ham-united",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "FootballSquads West Ham United 2026/27 current Championship roster, checked after the summer window",
+  "players": [
+    {"footballName":"Mads Hermansen","group":"Goalkeeper","nationality":"Denmark","shirt":1,"source":"FootballSquads West Ham United 2026/27 current roster · #1 Mads Hermansen G"},
+    {"footballName":"Alphonse Areola","group":"Goalkeeper","nationality":"France","shirt":23,"source":"FootballSquads West Ham United 2026/27 current roster · #23 Alphonse Areola G"},
+    {"footballName":"Kyle Walker-Peters","group":"Defender","nationality":"England","shirt":2,"source":"FootballSquads West Ham United 2026/27 current roster · #2 Kyle Walker-Peters D"},
+    {"footballName":"Max Kilman","group":"Defender","nationality":"England","shirt":3,"source":"FootballSquads West Ham United 2026/27 current roster · #3 Max Kilman D"},
+    {"footballName":"El Hadji Malick Diouf","group":"Defender","nationality":"Senegal","shirt":12,"source":"FootballSquads West Ham United 2026/27 current roster · #12 El Hadji Malick Diouf D"},
+    {"footballName":"Konstantinos Mavropanos","group":"Defender","nationality":"Greece","shirt":15,"source":"FootballSquads West Ham United 2026/27 current roster · #15 Konstantinos Mavropanos D"},
+    {"footballName":"Jean-Clair Todibo","group":"Defender","nationality":"France","shirt":25,"source":"FootballSquads West Ham United 2026/27 current roster · #25 Jean-Clair Todibo D"},
+    {"footballName":"Aaron Wan-Bissaka","group":"Defender","nationality":"DR Congo","shirt":29,"source":"FootballSquads West Ham United 2026/27 current roster · #29 Aaron Wan-Bissaka D"},
+    {"footballName":"Edson Alvarez","group":"Midfielder","nationality":"Mexico","shirt":4,"source":"FootballSquads West Ham United 2026/27 current roster · #4 Edson Álvarez M","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"James Ward-Prowse","group":"Midfielder","nationality":"England","shirt":8,"source":"FootballSquads West Ham United 2026/27 current roster · #8 James Ward-Prowse M"},
+    {"footballName":"Mohamadou Kante","group":"Midfielder","nationality":"France","shirt":17,"source":"FootballSquads West Ham United 2026/27 current roster · #17 Mohamadou Kanté M","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Maxwel Cornet","group":"Midfielder","nationality":"Ivory Coast","shirt":22,"source":"FootballSquads West Ham United 2026/27 current roster · #22 Maxwel Cornet M"},
+    {"footballName":"Soungoutou Magassa","group":"Midfielder","nationality":"France","shirt":27,"source":"FootballSquads West Ham United 2026/27 current roster · #27 Soungoutou Magassa M"},
+    {"footballName":"Valentin Castellanos","group":"Forward","nationality":"Argentina","shirt":11,"source":"FootballSquads West Ham United 2026/27 current roster · #11 Valentin Castellanos F"},
+    {"footballName":"Pablo","group":"Forward","nationality":"Brazil","shirt":19,"source":"FootballSquads West Ham United 2026/27 current roster · #19 Pablo F"},
+    {"footballName":"Jarrod Bowen","group":"Forward","nationality":"England","shirt":20,"source":"FootballSquads West Ham United 2026/27 current roster · #20 Jarrod Bowen F"}
+  ]
+}
