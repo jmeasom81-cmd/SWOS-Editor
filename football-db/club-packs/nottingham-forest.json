@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "snapshot": "2026-09-11",
+  "clubId": "nottingham-forest",
+  "label": "Nottingham Forest",
+  "kind": "Post-window squad identity + June 2026 values",
+  "source": "Premier League submitted squad 03/09/2026 + Nottingham Forest first-team updates + Transfermarkt values updated 03/06/2026",
+  "selection": {
+    "players": 16,
+    "goalkeepers": 2,
+    "defenders": 5,
+    "midfielders": 5,
+    "forwards": 4
+  },
+  "players": {
+    "Matz Sels": {"age":34,"marketValueM":3.5,"position":0},
+    "John Victor": {"age":30,"marketValueM":5,"position":0},
+    "Murillo": {"age":24,"marketValueM":50,"position":3},
+    "Nikola Milenkovic": {"age":28,"marketValueM":28,"position":3},
+    "Neco Williams": {"age":25,"marketValueM":28,"position":2},
+    "Ola Aina": {"age":29,"marketValueM":18,"position":1},
+    "Nicolo Savona": {"age":23,"marketValueM":15,"position":1},
+    "Morgan Gibbs-White": {"age":26,"marketValueM":70,"position":6,"goals":15,"assists":4},
+    "Ibrahim Sangare": {"age":28,"marketValueM":20,"position":6},
+    "Nicolas Dominguez": {"age":28,"marketValueM":15,"position":6},
+    "Ryan Yates": {"age":28,"marketValueM":7,"position":6},
+    "James McAtee": {"age":23,"marketValueM":18,"position":6},
+    "Callum Hudson-Odoi": {"age":25,"marketValueM":30,"position":5},
+    "Dan Ndoye": {"age":25,"marketValueM":32,"position":4},
+    "Igor Jesus": {"age":25,"marketValueM":25,"position":7},
+    "Chris Wood": {"age":34,"marketValueM":5,"position":7}
+  },
+  "evidenceNotes": [
+    "Selection is anchored to Nottingham Forest's official post-window Premier League squad published on 3 September 2026.",
+    "The SWOS 16 uses a balanced 2 GK / 5 DEF / 5 MID / 4 FWD structure while retaining the highest-confidence current first-team identities.",
+    "June 2026 Transfermarkt values are used as value evidence rather than transfer fees. Morgan Gibbs-White's 15-goal, four-assist 2025/26 league output is retained from the club's official 2026/27 FPL launch article.",
+    "Nottingham Forest confirmed Chris Wood moved to shirt 9 and Igor Jesus to shirt 11 for 2026/27; shirt numbers remain identity metadata rather than rating evidence.",
+    "The pack is research data only and does not enable TEAM.* or .CAR writes."
+  ]
+}
