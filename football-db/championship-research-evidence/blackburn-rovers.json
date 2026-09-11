@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "blackburn-rovers",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "Blackburn Rovers 2026/27 squad and role cross-check from FootballSquads/FBref with current Transfermarkt values; FootballTransfers ETV is used only where Transfermarkt has no published value or for the newly transferred Jayden Fevrier.",
+  "players": {
+    "Aynsley Pears": {"age":28,"marketValueM":1,"position":0,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/blackbrn.htm","https://fbref.com/en/squads/e090f40b/2026-2027/Blackburn-Rovers-Stats","https://www.transfermarkt.com/blackburn-rovers/startseite/verein/164/saison_id/2026"]},
+    "Felix Goddard": {"age":22,"marketValueM":0.3,"position":0,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/blackbrn.htm","https://www.footballtransfers.com/us/players/felix-goddard"],"notes":"Transfermarkt currently lists no market value; FootballTransfers' 1 Aug 2026 ETV supplies the sourced valuation used here."},
+    "Ryan Alebiosu": {"age":24,"marketValueM":1.5,"position":1,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/blackbrn.htm","https://fbref.com/en/squads/e090f40b/Blackburn-Rovers","https://www.transfermarkt.com/blackburn-rovers/startseite/verein/164/saison_id/2026"]},
+    "Harry Pickering": {"age":27,"marketValueM":2,"position":2,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/blackbrn.htm","https://www.transfermarkt.com/blackburn-rovers/startseite/verein/164/saison_id/2026"]},
+    "Yuri Ribeiro": {"age":29,"marketValueM":0.8,"position":2,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/blackbrn.htm","https://www.transfermarkt.com/blackburn-rovers/startseite/verein/164/saison_id/2026"]},
+    "Tom Atcheson": {"age":19,"marketValueM":0.8,"position":3,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/blackbrn.htm","https://fbref.com/en/squads/e090f40b/Blackburn-Rovers","https://www.transfermarkt.com/blackburn-rovers/startseite/verein/164/saison_id/2026"]},
+    "Sean McLoughlin": {"age":29,"marketValueM":0.75,"position":3,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/blackbrn.htm","https://fbref.com/en/squads/e090f40b/Blackburn-Rovers","https://www.transfermarkt.com/blackburn-rovers/startseite/verein/164/saison_id/2026"]},
+    "Lewis Miller": {"age":26,"marketValueM":1.2,"position":1,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/blackbrn.htm","https://www.transfermarkt.com/blackburn-rovers/startseite/verein/164/saison_id/2026"]},
+    "Todd Cantwell": {"age":28,"marketValueM":2.5,"position":6,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/blackbrn.htm","https://fbref.com/en/squads/e090f40b/Blackburn-Rovers","https://www.transfermarkt.com/blackburn/marktwertanalyse/verein/164/sort/vertrag_bis"]},
+    "Jayden Fevrier": {"age":23,"marketValueM":0.4,"position":4,"sources":["https://theanalyst.com/players/5317/jayden-fevrier","https://www.footballtransfers.com/en/players/jayden-fevrier/transfer-history"],"notes":"Right-sided midfielder/attacker mapped to SWOS RW/RM (4); FootballTransfers ETV last updated 1 Sep 2026."},
+    "Dion De Neve": {"age":25,"marketValueM":0.8,"position":5,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/blackbrn.htm","https://www.transfermarkt.com/blackburn-rovers/kadernaechstesaison/verein/164/saison_id/2026"]},
+    "Adam Forshaw": {"age":34,"marketValueM":0.15,"position":6,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/blackbrn.htm","https://www.transfermarkt.com/blackburn-rovers/startseite/verein/164/sort/marketValueRaw"]},
+    "Augustus Kargbo": {"age":27,"marketValueM":1,"position":7,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/blackbrn.htm","https://www.transfermarkt.com/blackburn-rovers/marktwertbeimdebuet/verein/164"]},
+    "Andri Gudjohnsen": {"age":24,"marketValueM":2.8,"position":7,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/blackbrn.htm","https://fbref.com/en/squads/e090f40b/Blackburn-Rovers","https://www.transfermarkt.com/blackburn-rovers/teuersteelf/verein/164"],"notes":"ASCII football name retained to match the published SWOS Studio identity record for Andri Guðjohnsen."},
+    "Oladapo Afolayan": {"age":29,"marketValueM":1.3,"position":4,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/blackbrn.htm","https://fbref.com/en/squads/e090f40b/Blackburn-Rovers","https://www.transfermarkt.com/blackburn-rovers/startseite/verein/164/sort/name"]},
+    "Yuki Ohashi": {"age":30,"marketValueM":1.7,"position":7,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/blackbrn.htm","https://www.transfermarkt.com/blackburn-rovers/startseite/verein/164/sort/marketValueRaw"]}
+  }
+}
