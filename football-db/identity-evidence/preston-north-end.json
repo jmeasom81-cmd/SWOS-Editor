@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "preston-north-end",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "FootballSquads Preston North End 2026/27 current Championship roster, cross-checked against Preston North End first-team match and team pages",
+  "players": [
+    {"footballName":"Daniel Iversen","group":"Goalkeeper","nationality":"Denmark","shirt":1,"source":"FootballSquads Preston North End 2026/27 current roster · #1 G; Preston North End first-team match pages confirm current involvement"},
+    {"footballName":"Lee Nicholls","group":"Goalkeeper","nationality":"England","shirt":21,"source":"FootballSquads Preston North End 2026/27 current roster · #21 G"},
+    {"footballName":"Pol Valentin","group":"Defender","nationality":"Spain","shirt":2,"source":"FootballSquads Preston North End 2026/27 current roster · #2 Pol Valentín D","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Andrija Vukcevic","group":"Defender","nationality":"Montenegro","shirt":3,"source":"FootballSquads Preston North End 2026/27 current roster · #3 Andrija Vukčević D; Preston North End match pages confirm current first-team use","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Harry Clarke","group":"Defender","nationality":"England","shirt":4,"source":"FootballSquads Preston North End 2026/27 current roster · #4 D"},
+    {"footballName":"Liam Lindsay","group":"Defender","nationality":"Scotland","shirt":6,"source":"FootballSquads Preston North End 2026/27 current roster · #6 D; Preston North End first-team match pages confirm current involvement"},
+    {"footballName":"Jordan Storey","group":"Defender","nationality":"England","shirt":14,"source":"FootballSquads Preston North End 2026/27 current roster · #14 D; Preston North End first-team match pages confirm current involvement"},
+    {"footballName":"Alfie Devine","group":"Midfielder","nationality":"England","shirt":7,"source":"FootballSquads Preston North End 2026/27 current roster · #7 M; Preston North End first-team match pages confirm current involvement"},
+    {"footballName":"Ali McCann","group":"Midfielder","nationality":"Northern Ireland","shirt":8,"source":"FootballSquads Preston North End 2026/27 current roster · #8 M; Preston North End first-team match pages confirm current involvement"},
+    {"footballName":"Thierry Small","group":"Midfielder","nationality":"England","shirt":11,"source":"FootballSquads Preston North End 2026/27 current roster · #11 M; Preston North End first-team match pages confirm current involvement"},
+    {"footballName":"Jordan Thompson","group":"Midfielder","nationality":"Northern Ireland","shirt":15,"source":"FootballSquads Preston North End 2026/27 current roster · #15 M; Preston North End first-team match pages confirm current involvement"},
+    {"footballName":"Liam Gibbs","group":"Midfielder","nationality":"England","shirt":20,"source":"FootballSquads Preston North End 2026/27 current roster · #20 M"},
+    {"footballName":"Andy Moran","group":"Midfielder","nationality":"Ireland","shirt":23,"source":"FootballSquads Preston North End 2026/27 current roster · #23 M; Preston North End first-team match pages list Andrew Moran in current first-team use"},
+    {"footballName":"Jusef Erabi","group":"Forward","nationality":"Sweden","shirt":9,"source":"FootballSquads Preston North End 2026/27 current roster · #9 F"},
+    {"footballName":"Callum Lang","group":"Forward","nationality":"England","shirt":10,"source":"FootballSquads Preston North End 2026/27 current roster · #10 F"},
+    {"footballName":"Stanley Mills","group":"Forward","nationality":"England","shirt":17,"source":"FootballSquads Preston North End 2026/27 current roster · #17 F"}
+  ]
+}
