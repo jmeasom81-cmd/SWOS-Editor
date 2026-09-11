@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "southampton",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "Southampton FC official 2026/27 men's squad numbers cross-checked against FootballSquads current Championship positions and nationalities",
+  "players": [
+    {"footballName":"Daniel Peretz","group":"Goalkeeper","nationality":"Israel","shirt":1,"source":"Southampton FC official 2026/27 squad numbers · #1 Daniel Peretz; FootballSquads Southampton 2026/27 · goalkeeper"},
+    {"footballName":"George Long","group":"Goalkeeper","nationality":"England","shirt":25,"source":"Southampton FC official 2026/27 squad numbers · #25 George Long; FootballSquads Southampton 2026/27 · goalkeeper"},
+    {"footballName":"Mads Roerslev","group":"Defender","nationality":"Denmark","shirt":2,"source":"Southampton FC official 2026/27 squad numbers · #2 Mads Roerslev; FootballSquads Southampton 2026/27 · defender"},
+    {"footballName":"Ryan Manning","group":"Defender","nationality":"Ireland","shirt":3,"source":"Southampton FC official 2026/27 squad numbers · #3 Ryan Manning; FootballSquads Southampton 2026/27 · defender"},
+    {"footballName":"Jack Stephens","group":"Defender","nationality":"England","shirt":5,"source":"Southampton FC official 2026/27 squad numbers · #5 Jack Stephens; FootballSquads Southampton 2026/27 · defender"},
+    {"footballName":"Nathan Wood","group":"Defender","nationality":"England","shirt":15,"source":"Southampton FC official 2026/27 squad numbers · #15 Nathan Wood; FootballSquads Southampton 2026/27 · defender"},
+    {"footballName":"Joshua Quarshie","group":"Defender","nationality":"Germany","shirt":17,"source":"Southampton FC official 2026/27 squad numbers · #17 Joshua Quarshie; FootballSquads Southampton 2026/27 · defender"},
+    {"footballName":"Welington","group":"Defender","nationality":"Brazil","shirt":34,"source":"Southampton FC official 2026/27 squad numbers · #34 Welington; FootballSquads Southampton 2026/27 · defender"},
+    {"footballName":"Flynn Downes","group":"Midfielder","nationality":"England","shirt":4,"source":"Southampton FC official 2026/27 squad numbers · #4 Flynn Downes; FootballSquads Southampton 2026/27 · midfielder"},
+    {"footballName":"Leo Scienza","group":"Midfielder","nationality":"Brazil","shirt":7,"source":"Southampton FC official 2026/27 squad numbers · #7 Leo Scienza; FootballSquads Southampton 2026/27 · Léo Scienza M","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Caspar Jander","group":"Midfielder","nationality":"Germany","shirt":8,"source":"Southampton FC official 2026/27 squad numbers · #8 Caspar Jander; FootballSquads Southampton 2026/27 · midfielder"},
+    {"footballName":"Finn Azaz","group":"Midfielder","nationality":"Ireland","shirt":10,"source":"Southampton FC official 2026/27 squad numbers · #10 Finn Azaz; FootballSquads Southampton 2026/27 · midfielder"},
+    {"footballName":"Tom Fellows","group":"Midfielder","nationality":"England","shirt":18,"source":"Southampton FC official 2026/27 squad numbers · #18 Tom Fellows; FootballSquads Southampton 2026/27 · midfielder"},
+    {"footballName":"Cyle Larin","group":"Forward","nationality":"Canada","shirt":9,"source":"Southampton FC official 2026/27 squad numbers · #9 Cyle Larin; FootballSquads Southampton 2026/27 · forward"},
+    {"footballName":"Lewis Dobbin","group":"Forward","nationality":"England","shirt":11,"source":"Southampton FC official 2026/27 squad numbers · #11 Lewis Dobbin; FootballSquads Southampton 2026/27 · forward"},
+    {"footballName":"Divin Mubama","group":"Forward","nationality":"England","shirt":28,"source":"Southampton FC official 2026/27 squad numbers · #28 Divin Mubama; FootballSquads Southampton 2026/27 · forward"}
+  ]
+}
