@@ -3,7 +3,6 @@ import fs from 'node:fs';
 
 const steps=[
   'publish-identities.mjs',
-  'publish-club-packs.mjs',
   'validate-football-db.mjs',
   'publish-coverage.mjs',
   'patch-v133.mjs',
@@ -22,6 +21,9 @@ const steps=[
   'patch-v143.mjs',
   'patch-v144.mjs',
   'patch-v145.mjs',
+  'publish-club-packs.mjs',
+  'validate-football-db.mjs',
+  'publish-coverage.mjs',
   'patch-v146.mjs'
 ];
 
