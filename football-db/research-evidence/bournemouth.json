@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "bournemouth",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "Transfermarkt AFC Bournemouth detailed squad 2026/27 cross-checked against current 2026/27 squad/value listing",
+  "players": {
+    "Djordje Petrovic": {"age":26,"marketValueM":28,"position":0,"sources":["Transfermarkt AFC Bournemouth detailed squad 2026/27"]},
+    "Michele Di Gregorio": {"age":29,"marketValueM":10,"position":0,"sources":["Current AFC Bournemouth 2026/27 squad/value listing"]},
+    "Julian Araujo": {"age":24,"marketValueM":8,"position":1,"sources":["Transfermarkt AFC Bournemouth detailed squad 2026/27 · Right-Back"]},
+    "Adrien Truffert": {"age":24,"marketValueM":30,"position":2,"sources":["Transfermarkt AFC Bournemouth detailed squad 2026/27 · Left-Back"]},
+    "James Hill": {"age":24,"marketValueM":23,"position":3,"sources":["Current AFC Bournemouth 2026/27 squad/value listing · Centre-Back"]},
+    "Antonio Silva": {"age":22,"marketValueM":25,"position":3,"sources":["Current AFC Bournemouth 2026/27 squad/value listing · Centre-Back"]},
+    "Bafode Diakite": {"age":25,"marketValueM":25,"position":3,"sources":["Transfermarkt AFC Bournemouth detailed squad 2026/27 · Centre-Back"]},
+    "Lewis Cook": {"age":29,"marketValueM":11,"position":6,"sources":["Transfermarkt AFC Bournemouth detailed squad 2026/27 · Central Midfield"]},
+    "David Brooks": {"age":29,"marketValueM":12,"position":4,"sources":["Transfermarkt AFC Bournemouth detailed squad 2026/27 · Right Winger"]},
+    "Alex Scott": {"age":22,"marketValueM":50,"position":6,"sources":["Transfermarkt AFC Bournemouth detailed squad 2026/27 · Central Midfield"]},
+    "Tyler Adams": {"age":27,"marketValueM":25,"position":6,"sources":["Transfermarkt AFC Bournemouth detailed squad 2026/27 · Defensive Midfield"]},
+    "Marcus Tavernier": {"age":27,"marketValueM":25,"position":6,"sources":["Transfermarkt AFC Bournemouth detailed squad 2026/27 · Attacking Midfield"]},
+    "Evanilson": {"age":26,"marketValueM":35,"position":7,"sources":["Transfermarkt AFC Bournemouth detailed squad 2026/27 · Centre-Forward"]},
+    "Ben Doak": {"age":20,"marketValueM":15,"position":4,"sources":["Transfermarkt AFC Bournemouth detailed squad 2026/27 · Ben Gannon-Doak · Right Winger"],"notes":"Identity feed uses the shorter football name Ben Doak; source lists Ben Gannon-Doak."},
+    "Justin Kluivert": {"age":27,"marketValueM":25,"position":6,"sources":["Transfermarkt AFC Bournemouth detailed squad 2026/27 · Attacking Midfield"]},
+    "Amine Adli": {"age":26,"marketValueM":20,"position":5,"sources":["Transfermarkt AFC Bournemouth detailed squad 2026/27 · Left Winger"]}
+  }
+}
