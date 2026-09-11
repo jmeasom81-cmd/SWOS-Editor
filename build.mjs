@@ -23,7 +23,7 @@ const steps=[
 
   'promote-identity-evidence.mjs','publish-identities.mjs','validate-england-identity-expansion.mjs','publish-coverage.mjs','publish-identity-expansion-queue.mjs','publish-identity-evidence-intake.mjs',
   'promote-identity-evidence.mjs','publish-identities.mjs','validate-england-identity-expansion.mjs','publish-coverage.mjs','publish-identity-expansion-queue.mjs','publish-identity-evidence-intake.mjs',
-  'promote-identity-evidence.mjs','publish-identities.mjs','validate-england-identity-expansion.mjs','publish-coverage.mjs','publish-identity-expansion-queue.mjs','publish-identity-evidence-intake.mjs',
+  'promote-identity-evidence.mjs','publish-identities.mjs','validate-england-identity-expansion.mjs','publish-coverage.mjs','publish-identity-evidence-intake.mjs','publish-identity-expansion-queue.mjs',
   'promote-identity-evidence.mjs','publish-identities.mjs','validate-england-identity-expansion.mjs','publish-coverage.mjs','publish-identity-expansion-queue.mjs','publish-identity-evidence-intake.mjs',
   'promote-identity-evidence.mjs','publish-identities.mjs','validate-england-identity-expansion.mjs','publish-coverage.mjs','publish-identity-expansion-queue.mjs','publish-identity-evidence-intake.mjs',
   'publish-football-db-dist.mjs','validate-football-db-dist.mjs','patch-v160.mjs',
@@ -48,7 +48,9 @@ const steps=[
 
   'complete-championship-identities.mjs','publish-football-db-dist.mjs','validate-football-db-dist.mjs','patch-v167.mjs',
 
-  'publish-championship-research-queue.mjs','validate-championship-research-evidence-source.mjs','publish-championship-research-intake.mjs','publish-football-db-dist.mjs','validate-football-db-dist.mjs','patch-v168.mjs'
+  'publish-championship-research-queue.mjs','validate-championship-research-evidence-source.mjs','publish-championship-research-intake.mjs','publish-football-db-dist.mjs','validate-football-db-dist.mjs','patch-v168.mjs',
+
+  'validate-england-research-expansion.mjs','publish-football-db-dist.mjs','validate-football-db-dist.mjs','patch-v169.mjs'
 ];
 
 for(const step of steps){if(!fs.existsSync(step))throw new Error(`SWOS build runner: missing ${step}`);console.log(`\n▶ ${step}`);execFileSync(process.execPath,[step],{stdio:'inherit'});}
