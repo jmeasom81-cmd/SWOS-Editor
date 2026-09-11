@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "cardiff-city",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "FootballSquads Cardiff City 2026/27 current roster plus current-season FBref activity cross-check for Alex Robertson and Ollie Tanner",
+  "players": [
+    {"footballName":"Nathan Trott","group":"Goalkeeper","nationality":"England","shirt":1,"source":"FootballSquads Cardiff City 2026/27 current roster · #1 G + FBref 2026/27 starter"},
+    {"footballName":"Matthew Turner","group":"Goalkeeper","nationality":"Wales","shirt":41,"source":"FootballSquads Cardiff City 2026/27 current roster · #41 G"},
+    {"footballName":"William Fish","group":"Defender","nationality":"England","shirt":2,"source":"FootballSquads Cardiff City 2026/27 current roster · #2 D"},
+    {"footballName":"Joel Bagan","group":"Defender","nationality":"Ireland","shirt":3,"source":"FootballSquads Cardiff City 2026/27 current roster · #3 D + FBref 2026/27 starter"},
+    {"footballName":"Gabriel Osho","group":"Defender","nationality":"Nigeria","shirt":4,"source":"FootballSquads Cardiff City 2026/27 current roster · #4 D + FBref 2026/27 activity"},
+    {"footballName":"Krystian Bielik","group":"Defender","nationality":"Poland","shirt":5,"source":"FootballSquads Cardiff City 2026/27 current roster · #5 D"},
+    {"footballName":"Perry Ng","group":"Defender","nationality":"Singapore","shirt":38,"source":"FootballSquads Cardiff City 2026/27 current roster · #38 D + FBref 2026/27 starter"},
+    {"footballName":"Ronan Kpakio","group":"Defender","nationality":"Wales","shirt":44,"source":"FootballSquads Cardiff City 2026/27 current roster · #44 D"},
+    {"footballName":"Jack Moylan","group":"Midfielder","nationality":"Ireland","shirt":8,"source":"FootballSquads Cardiff City 2026/27 current roster · #8 M + FBref 2026/27 starter"},
+    {"footballName":"Rubin Colwill","group":"Midfielder","nationality":"Wales","shirt":10,"source":"FootballSquads Cardiff City 2026/27 current roster · #10 M"},
+    {"footballName":"Alex Robertson","group":"Midfielder","nationality":"Australia","shirt":null,"source":"FBref Cardiff City 2026/27 current roster and match logs · MF/DM active first-team player"},
+    {"footballName":"Ollie Tanner","group":"Midfielder","nationality":"England","shirt":null,"source":"FBref Cardiff City 2026/27 current roster and match logs · MF/AM active first-team player"},
+    {"footballName":"Cian Ashford","group":"Midfielder","nationality":"Wales","shirt":45,"source":"FootballSquads Cardiff City 2026/27 current roster · #45 M + FBref 2026/27 activity"},
+    {"footballName":"Yousef Salech","group":"Forward","nationality":"Denmark","shirt":9,"source":"FootballSquads Cardiff City 2026/27 current roster · #9 F + FBref 2026/27 starter"},
+    {"footballName":"Isaak Davies","group":"Forward","nationality":"Wales","shirt":39,"source":"FootballSquads Cardiff City 2026/27 current roster · #39 F"},
+    {"footballName":"Callum Robinson","group":"Forward","nationality":"Ireland","shirt":47,"source":"FootballSquads Cardiff City 2026/27 current roster · #47 F"}
+  ]
+}
