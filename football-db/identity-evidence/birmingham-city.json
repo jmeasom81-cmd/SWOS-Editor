@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "birmingham-city",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "Current Birmingham City 2026/27 first-team squad cross-check using FootballSquads, Birmingham City Watch and FBref current-season roster evidence",
+  "players": [
+    {"footballName":"James Beadle","group":"Goalkeeper","nationality":"England","shirt":1,"source":"FootballSquads Birmingham City 2026/27 + current Birmingham roster cross-check"},
+    {"footballName":"Ryan Allsop","group":"Goalkeeper","nationality":"England","shirt":21,"source":"FootballSquads Birmingham City 2026/27 + current Birmingham roster cross-check"},
+    {"footballName":"Ethan Laird","group":"Defender","nationality":"England","shirt":2,"source":"FootballSquads Birmingham City 2026/27 + FBref 2026/27 roster"},
+    {"footballName":"Christoph Klarer","group":"Defender","nationality":"Austria","shirt":4,"source":"FootballSquads Birmingham City 2026/27 + FBref 2026/27 roster"},
+    {"footballName":"Phil Neumann","group":"Defender","nationality":"Germany","shirt":5,"source":"FootballSquads Birmingham City 2026/27 + FBref 2026/27 roster"},
+    {"footballName":"Alex Cochrane","group":"Defender","nationality":"England","shirt":20,"source":"FootballSquads Birmingham City 2026/27 + FBref 2026/27 roster"},
+    {"footballName":"Bright Osayi-Samuel","group":"Defender","nationality":"Nigeria","shirt":26,"source":"FootballSquads Birmingham City 2026/27 + FBref 2026/27 roster"},
+    {"footballName":"Paik Seung-Ho","group":"Midfielder","nationality":"South Korea","shirt":8,"source":"FootballSquads Birmingham City 2026/27 + FBref 2026/27 roster"},
+    {"footballName":"Jhon Solis","group":"Midfielder","nationality":"Colombia","shirt":14,"source":"FootballSquads Birmingham City 2026/27 + FBref 2026/27 roster","notes":"ASCII football name used for compatibility with the published database."},
+    {"footballName":"Patrick Roberts","group":"Midfielder","nationality":"England","shirt":16,"source":"FootballSquads Birmingham City 2026/27 + FBref 2026/27 roster"},
+    {"footballName":"Tomoki Iwata","group":"Midfielder","nationality":"Japan","shirt":24,"source":"FootballSquads Birmingham City 2026/27 + FBref 2026/27 roster"},
+    {"footballName":"Kanya Fujimoto","group":"Midfielder","nationality":"Japan","shirt":27,"source":"FootballSquads Birmingham City 2026/27 + Birmingham City Watch current squad"},
+    {"footballName":"Carlos Vicente","group":"Forward","nationality":"Spain","shirt":7,"source":"FootballSquads Birmingham City 2026/27 + Birmingham City Watch current squad"},
+    {"footballName":"August Priske","group":"Forward","nationality":"Denmark","shirt":9,"source":"FootballSquads Birmingham City 2026/27 + FBref 2026/27 roster"},
+    {"footballName":"Jay Stansfield","group":"Forward","nationality":"England","shirt":28,"source":"FootballSquads Birmingham City 2026/27 + Birmingham City Watch current squad"},
+    {"footballName":"Luis Vazquez","group":"Forward","nationality":"Argentina","shirt":32,"source":"FootballSquads Birmingham City 2026/27 + FBref 2026/27 roster","notes":"ASCII football name used for compatibility with the published database."}
+  ]
+}
