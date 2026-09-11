@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "queens-park-rangers",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "FootballSquads Queens Park Rangers 2026/27 current Championship roster, cross-checked against QPR 26/27 goalkeeper personalisation",
+  "players": [
+    {"footballName":"Pierce Charles","group":"Goalkeeper","nationality":"Northern Ireland","shirt":1,"source":"FootballSquads QPR 2026/27 current roster · #1 Pierce Charles G; QPR Official Store 26/27 goalkeeper personalisation lists CHARLES 1"},
+    {"footballName":"Calum Ward","group":"Goalkeeper","nationality":"England","shirt":13,"source":"FootballSquads QPR 2026/27 current roster · #13 Calum Ward G; QPR Official Store 26/27 goalkeeper personalisation lists WARD 13"},
+    {"footballName":"Kealey Adamson","group":"Defender","nationality":"Australia","shirt":2,"source":"FootballSquads QPR 2026/27 current roster · #2 Kealey Adamson D"},
+    {"footballName":"Jimmy Dunne","group":"Defender","nationality":"Ireland","shirt":3,"source":"FootballSquads QPR 2026/27 current roster · #3 Jimmy Dunne D"},
+    {"footballName":"Liam Morrison","group":"Defender","nationality":"Scotland","shirt":4,"source":"FootballSquads QPR 2026/27 current roster · #4 Liam Morrison D"},
+    {"footballName":"Ronnie Edwards","group":"Defender","nationality":"England","shirt":5,"source":"FootballSquads QPR 2026/27 current roster · #5 Ronnie Edwards D"},
+    {"footballName":"Jake Clarke-Salter","group":"Defender","nationality":"England","shirt":6,"source":"FootballSquads QPR 2026/27 current roster · #6 Jake Clarke-Salter D"},
+    {"footballName":"Boy Kemper","group":"Defender","nationality":"Netherlands","shirt":12,"source":"FootballSquads QPR 2026/27 current roster · #12 Boy Kemper D"},
+    {"footballName":"Karamoko Dembele","group":"Midfielder","nationality":"England","shirt":7,"source":"FootballSquads QPR 2026/27 current roster · #7 Karamoko Dembélé M","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Ilias Chair","group":"Midfielder","nationality":"Morocco","shirt":10,"source":"FootballSquads QPR 2026/27 current roster · #10 Ilias Chair M"},
+    {"footballName":"Paul Smyth","group":"Midfielder","nationality":"Northern Ireland","shirt":11,"source":"FootballSquads QPR 2026/27 current roster · #11 Paul Smyth M"},
+    {"footballName":"Kwame Poku","group":"Midfielder","nationality":"Ghana","shirt":17,"source":"FootballSquads QPR 2026/27 current roster · #17 Kwame Poku M"},
+    {"footballName":"Glen Kamara","group":"Midfielder","nationality":"Finland","shirt":18,"source":"FootballSquads QPR 2026/27 current roster · #18 Glen Kamara M"},
+    {"footballName":"Koki Saito","group":"Forward","nationality":"Japan","shirt":14,"source":"FootballSquads QPR 2026/27 current roster · #14 Koki Saito F"},
+    {"footballName":"Alfie Lloyd","group":"Forward","nationality":"England","shirt":15,"source":"FootballSquads QPR 2026/27 current roster · #15 Alfie Lloyd F"},
+    {"footballName":"Richard Kone","group":"Forward","nationality":"Ivory Coast","shirt":22,"source":"FootballSquads QPR 2026/27 current roster · #22 Richard Koné F","notes":"ASCII football name retained for SWOS database compatibility."}
+  ]
+}
