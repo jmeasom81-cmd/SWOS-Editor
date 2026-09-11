@@ -10,6 +10,13 @@
         {"footballName":"Honest Ahanor","shirt":21,"group":"Defender","nationality":"Italy","source":"Crystal Palace current 2026/27 squad + post-window transfer evidence"}
       ],
       "note": "Daniel Munoz is no longer in the current Crystal Palace squad; Honest Ahanor joined on deadline day and is present in the current squad."
+    },
+    "bolton-wanderers": {
+      "remove": ["Joel Randall"],
+      "add": [
+        {"footballName":"Luca Stephenson","shirt":27,"group":"Defender","nationality":"England","source":"Bolton Wanderers official 2026/27 signing/current squad evidence + FootballSquads post-window roster"}
+      ],
+      "note": "Joel Randall moved to Chesterfield on a season-long loan on 2 September 2026. Luca Stephenson is a current Bolton first-team player, signed permanently in July 2026; his primary role is right-back with additional midfield experience. The replacement preserves an exact 16-player current selection and the minimum role balance."
     }
   },
   "safety": {"teamWriteReady":false,"careerWriteReady":false}
