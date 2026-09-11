@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "brighton",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "Brighton official 2026/27 squad numbers + UEFA current squad + Transfermarkt June 2026 player values/roles, with latest pre-transfer values retained for summer arrivals where necessary",
+  "players": {
+    "Bart Verbruggen": {"age":24,"marketValueM":40,"position":0,"sources":["Transfermarkt Bart Verbruggen · €40m · updated 03/06/2026","UEFA Brighton 2026/27 squad · goalkeeper"]},
+    "Jason Steele": {"age":36,"marketValueM":0.5,"position":0,"sources":["Transfermarkt Jason Steele · €0.5m · updated 03/06/2026","Brighton official 2026/27 squad numbers"]},
+    "Pascal Struijk": {"age":27,"marketValueM":22,"position":3,"sources":["Transfermarkt Pascal Struijk · €22m · updated 03/06/2026 · Centre-Back","Brighton official 2026/27 squad numbers"]},
+    "Lewis Dunk": {"age":34,"marketValueM":3.5,"position":3,"sources":["Transfermarkt Lewis Dunk · €3.5m · updated 03/06/2026 · Centre-Back"]},
+    "Jaouen Hadjam": {"age":23,"marketValueM":7,"position":2,"sources":["Transfermarkt Jaouen Hadjam · €7m · updated 02/06/2026 · Left-Back","Brighton official 2026/27 squad numbers"]},
+    "Olivier Boscagli": {"age":28,"marketValueM":15,"position":3,"sources":["Transfermarkt Olivier Boscagli · €15m · updated 03/06/2026 · Centre-Back"]},
+    "Ferdi Kadioglu": {"age":26,"marketValueM":35,"position":2,"sources":["Transfermarkt Ferdi Kadioglu · €35m · updated 03/06/2026 · Left-Back"]},
+    "Kaoru Mitoma": {"age":29,"marketValueM":22,"position":5,"sources":["Transfermarkt Kaoru Mitoma · €22m · updated 03/06/2026 · Left Winger"]},
+    "Jack Hinshelwood": {"age":21,"marketValueM":28,"position":6,"sources":["Transfermarkt Jack Hinshelwood · €28m · updated 03/06/2026 · Defensive Midfield"]},
+    "Pascal Gross": {"age":35,"marketValueM":2.5,"position":6,"sources":["Transfermarkt Pascal Gross · €2.5m · updated 03/06/2026 · Central Midfield"]},
+    "Carlos Baleba": {"age":22,"marketValueM":55,"position":6,"sources":["Transfermarkt Carlos Baleba · €55m · updated 03/06/2026 · Defensive Midfield"]},
+    "Matt O'Riley": {"age":25,"marketValueM":18,"position":6,"sources":["Transfermarkt Matt O'Riley · €18m · updated 03/06/2026 · Central Midfield"]},
+    "Stefanos Tzimas": {"age":20,"marketValueM":18,"position":7,"sources":["Transfermarkt Stefanos Tzimas · €18m · updated 03/06/2026 · Centre-Forward"]},
+    "Georginio Rutter": {"age":24,"marketValueM":30,"position":7,"sources":["Transfermarkt Georginio Rutter · €30m · updated 03/06/2026 · Centre-Forward"]},
+    "Yankuba Minteh": {"age":22,"marketValueM":45,"position":4,"sources":["Transfermarkt Yankuba Minteh · €45m · updated 03/06/2026 · Right Winger"]},
+    "Promise David": {"age":25,"marketValueM":17,"position":7,"sources":["Transfermarkt Promise David · €17m · updated 04/06/2026 · Centre-Forward","Brighton official/UEFA current 2026/27 squad evidence"],"notes":"Value is the latest June 2026 evidence from Union SG before the summer move; it is not a transfer fee."}
+  }
+}
