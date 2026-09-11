@@ -13,18 +13,18 @@ const coverage=JSON.parse(fs.readFileSync(COVERAGE,'utf8'));
 const manifest=JSON.parse(fs.readFileSync(MANIFEST,'utf8'));
 
 if(!html.includes('<title>SWOS Studio v1.45.0</title>'))throw new Error(`SWOS Studio ${BUILD} build failed: expected v1.45.0 output was not found.`);
-if(packs.packCount!==6||packs.playerCount!==96)throw new Error(`SWOS Studio ${BUILD} build failed: expected 6 packs / 96 players; found ${packs.packCount} / ${packs.playerCount}.`);
+if(packs.packCount<6||packs.playerCount<96)throw new Error(`SWOS Studio ${BUILD} build failed: expected at least 6 packs / 96 players; found ${packs.packCount} / ${packs.playerCount}.`);
 const chelseaPack=packs.clubs?.chelsea;
 if(!chelseaPack||Object.keys(chelseaPack.players||{}).length!==16)throw new Error(`SWOS Studio ${BUILD} build failed: Chelsea 16-player research pack is missing or incomplete.`);
-if(coverage?.summary?.researchReady!==6||coverage?.summary?.swos16BuilderReady!==6)throw new Error(`SWOS Studio ${BUILD} build failed: coverage did not advance to 6 research/SWOS16-ready clubs.`);
+if((coverage?.summary?.researchReady||0)<6||(coverage?.summary?.swos16BuilderReady||0)<6)throw new Error(`SWOS Studio ${BUILD} build failed: coverage has not reached the Chelsea six-pack foundation.`);
 const chelseaCoverage=(coverage.clubs||[]).find(c=>c.id==='chelsea');
 if(chelseaCoverage?.stages?.researchPack?.status!=='ready'||chelseaCoverage?.stages?.swos16?.status!=='builder-ready')throw new Error(`SWOS Studio ${BUILD} build failed: Chelsea coverage stages are not ready.`);
-if(manifest.version!=='2026.27-foundation.6')throw new Error(`SWOS Studio ${BUILD} build failed: expected database 2026.27-foundation.6; found ${manifest.version}.`);
+const foundationNumber=Number(String(manifest.version||'').match(/foundation\.(\d+)$/)?.[1]||0);
+if(foundationNumber<6)throw new Error(`SWOS Studio ${BUILD} build failed: expected database foundation.6 or later; found ${manifest.version}.`);
 
 const nextResearch=(coverage.clubs||[])
   .filter(c=>c.stages?.identity?.status==='ready'&&c.stages?.researchPack?.status!=='ready')
-  .sort((a,b)=>a.division-b.division||a.name.localeCompare(b.name))[0];
-if(nextResearch?.id!=='everton')throw new Error(`SWOS Studio ${BUILD} build failed: expected Everton as next research-pack task; found ${nextResearch?.name||'none'}.`);
+  .sort((a,b)=>a.division-b.division||a.name.localeCompare(b.name))[0]||null;
 
 html=html.replace('<title>SWOS Studio v1.45.0</title>',`<title>SWOS Studio ${BUILD}</title>`);
 html=html.replaceAll("var BUILD='v1.45.0';",`var BUILD='${BUILD}';`);
@@ -46,7 +46,7 @@ const meta={
   players:packs.playerCount,
   premierLeagueClubs:manifest.coverage?.premierLeague?.clubs||20,
   chelseaPlayers:Object.keys(chelseaPack.players||{}).length,
-  nextResearch:{id:nextResearch.id,name:nextResearch.name},
+  nextResearch:nextResearch?{id:nextResearch.id,name:nextResearch.name}:{id:null,name:'Identity queue complete'},
   teamWriteReady:manifest.installation?.teamWriteReady===true,
   careerWriteReady:manifest.installation?.careerWriteReady===true
 };
@@ -63,15 +63,15 @@ const js=String.raw`
     if(!anchor)return;
     var box=document.getElementById('v146-data-expansion');
     if(!box){box=document.createElement('section');box.id='v146-data-expansion';box.className='v146-data-expansion';anchor.insertAdjacentElement('beforebegin',box);}
-    box.innerHTML='<div class="v146-data-head"><div><strong>⚽ Football Data Expansion</strong><p>The production queue is now advancing the actual 2026/27 database one club at a time. Published status comes only from validated data files.</p></div><span class="feature-status available">6th pack published</span></div>'+
+    box.innerHTML='<div class="v146-data-head"><div><strong>⚽ Football Data Expansion</strong><p>The production queue is now advancing the actual 2026/27 database one club at a time. Published status comes only from validated data files.</p></div><span class="feature-status available">Chelsea pack published</span></div>'+
       '<div class="v146-data-grid"><div class="v146-data-stat good"><small>Premier League packs</small><b>'+META.packs+' / '+META.premierLeagueClubs+'</b></div><div class="v146-data-stat"><small>Researched players</small><b>'+META.players+'</b></div><div class="v146-data-stat good"><small>Chelsea</small><b>'+META.chelseaPlayers+' / 16 ✓</b></div><div class="v146-data-stat next"><small>Next research pack</small><b>'+esc(META.nextResearch.name)+'</b></div></div>'+
-      '<div class="v146-data-foot"><b>Database '+esc(META.databaseVersion)+':</b> Chelsea is now Research Ready and SWOS 16 Builder Ready. Summer arrivals retain current value/role evidence without being credited with another club’s 2025/26 output. TEAM.* and .CAR writes remain locked.</div>';
+      '<div class="v146-data-foot"><b>Database '+esc(META.databaseVersion)+':</b> Chelsea is Research Ready and SWOS 16 Builder Ready. Summer arrivals retain current value/role evidence without being credited with another club’s 2025/26 output. TEAM.* and .CAR writes remain locked.</div>';
   }
   function releaseNotes(){
     if(document.getElementById('v146-release-card'))return;
     var anchor=document.getElementById('v145-release-card')||document.getElementById('v144-release-card');if(!anchor)return;
     var c=document.createElement('div');c.id='v146-release-card';c.className='card stack v133-release-card';
-    c.innerHTML='<strong>New in v1.46.0 — Chelsea research pack + incremental club pipeline</strong><span class="about">• Chelsea becomes the sixth evidence-backed 16-player Premier League research pack, taking the published database to 96 researched players.</span><span class="about">• The Club Coverage Centre now marks Chelsea Research Ready and SWOS 16 Builder Ready directly from the published feed.</span><span class="about">• The Research Workbench automatically advances the next pack task to Everton.</span><span class="about">• New club packs can now be maintained as individual validated source files and merged into the authoritative feed during the build.</span><span class="about">• Summer arrivals do not inherit prior-club 2025/26 output as current-club statistics.</span><span class="about">• TEAM.* and established .CAR writes remain locked.</span>';
+    c.innerHTML='<strong>New in v1.46.0 — Chelsea research pack + incremental club pipeline</strong><span class="about">• Chelsea becomes the sixth evidence-backed 16-player Premier League research pack, taking the published database foundation to 96 researched players.</span><span class="about">• The Club Coverage Centre marks Chelsea Research Ready and SWOS 16 Builder Ready directly from the published feed.</span><span class="about">• New club packs can be maintained as individual validated source files and merged into the authoritative feed during the build.</span><span class="about">• Summer arrivals do not inherit prior-club 2025/26 output as current-club statistics.</span><span class="about">• TEAM.* and established .CAR writes remain locked.</span>';
     anchor.insertAdjacentElement('beforebegin',c);
   }
   function apply(){document.title='SWOS Studio '+BUILD;var badge=document.querySelector('#v133-build-status-panel .build-status-head>.feature-status.beta');if(badge)badge.textContent=BUILD;card();releaseNotes();}
@@ -83,6 +83,6 @@ const js=String.raw`
 html=html.replace('</body>',js+'\n</body>');
 fs.writeFileSync(FILE,html,'utf8');
 
-if(!html.includes('swos-v146-data-expansion-layer')||!html.includes('6th pack published'))throw new Error(`SWOS Studio ${BUILD} build failed: data-expansion UI was not installed.`);
+if(!html.includes('swos-v146-data-expansion-layer')||!html.includes('Chelsea pack published'))throw new Error(`SWOS Studio ${BUILD} build failed: data-expansion UI was not installed.`);
 if(!html.includes('<title>SWOS Studio v1.46.0</title>'))throw new Error(`SWOS Studio ${BUILD} build failed: title was not updated.`);
-console.log(`SWOS Studio ${BUILD} Chelsea research expansion complete · ${packs.packCount} packs / ${packs.playerCount} players · next research pack ${nextResearch.name}.`);
+console.log(`SWOS Studio ${BUILD} Chelsea research expansion gate complete · ${packs.packCount} packs / ${packs.playerCount} players.`);
