@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "coventry",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "Current Coventry City 2026/27 Premier League squad/value evidence cross-checked against current player profiles",
+  "players": {
+    "Carl Rushworth": {"age":25,"marketValueM":16,"position":0,"sources":["MatchChase Coventry Premier League 26/27 current squad · GK · €16m"]},
+    "Ben Wilson": {"age":34,"marketValueM":0.3,"position":0,"sources":["MatchChase Coventry Premier League 26/27 current squad · GK · €0.3m"]},
+    "Aurele Amenda": {"age":23,"marketValueM":10,"position":3,"sources":["MatchChase Coventry Premier League 26/27 current squad · Aurèle Amenda · CB · €10m"],"notes":"Identity feed uses ASCII spelling Aurele Amenda."},
+    "Jay Dasilva": {"age":28,"marketValueM":9,"position":2,"sources":["Current Coventry 2026/27 squad/value evidence · Left-Back · €9m"]},
+    "Joel Latibeaudiere": {"age":26,"marketValueM":3,"position":3,"sources":["Current Coventry 2026/27 squad/value evidence · Centre-Back · €3m"]},
+    "Ethan Pinnock": {"age":33,"marketValueM":3,"position":3,"sources":["Current Coventry 2026/27 squad/value evidence · Centre-Back · €3m"]},
+    "Bobby Thomas": {"age":25,"marketValueM":16,"position":3,"sources":["MatchChase Coventry Premier League 26/27 current squad · CB · €16m"]},
+    "Matt Grimes": {"age":31,"marketValueM":5,"position":6,"sources":["Current Coventry 2026/27 profile · Midfielder · €5m"]},
+    "Gustavo Hamer": {"age":29,"marketValueM":14,"position":6,"sources":["MatchChase Coventry Premier League 26/27 current squad · CM · €14m"]},
+    "Frank Onyeka": {"age":28,"marketValueM":8,"position":6,"sources":["MatchChase Coventry Premier League 26/27 current squad · CM · €8m"]},
+    "Jack Rudoni": {"age":25,"marketValueM":20,"position":6,"sources":["MatchChase Coventry Premier League 26/27 current squad · AM · €20m"]},
+    "Tatsuhiro Sakamoto": {"age":29,"marketValueM":4.5,"position":4,"sources":["MatchChase Coventry Premier League 26/27 current squad · RW · €4.5m"]},
+    "Taiwo Awoniyi": {"age":29,"marketValueM":8,"position":7,"sources":["MatchChase Coventry Premier League 26/27 current squad · ST · €8m"]},
+    "Ephron Mason-Clark": {"age":27,"marketValueM":16,"position":5,"sources":["MatchChase Coventry Premier League 26/27 current squad · LW · €16m"]},
+    "Brandon Thomas-Asante": {"age":27,"marketValueM":16,"position":7,"sources":["MatchChase Coventry Premier League 26/27 current squad · ST · €16m"]},
+    "Haji Wright": {"age":28,"marketValueM":16,"position":7,"sources":["MatchChase Coventry Premier League 26/27 current squad · ST · €16m"]}
+  }
+}
