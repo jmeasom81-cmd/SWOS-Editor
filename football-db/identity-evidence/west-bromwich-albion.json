@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "west-bromwich-albion",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "West Bromwich Albion official 2026/27 first-team squad page, cross-checked against the current Championship squad index and club player profiles",
+  "players": [
+    {"footballName":"Max O'Leary","group":"Goalkeeper","nationality":"Ireland","shirt":1,"source":"West Bromwich Albion official 2026/27 squad page · #1 Max O'Leary; club profile lists Republic of Ireland"},
+    {"footballName":"Matt Ingram","group":"Goalkeeper","nationality":"England","shirt":13,"source":"West Bromwich Albion official 2026/27 squad page · Matt Ingram goalkeeper; current 2026/27 squad index · #13"},
+    {"footballName":"Chris Mepham","group":"Defender","nationality":"Wales","shirt":2,"source":"West Bromwich Albion official 2026/27 squad page · #2 Chris Mepham D"},
+    {"footballName":"Nat Phillips","group":"Defender","nationality":"England","shirt":3,"source":"West Bromwich Albion official 2026/27 squad page · #3 Nat Phillips D"},
+    {"footballName":"Callum Styles","group":"Defender","nationality":"Hungary","shirt":4,"source":"West Bromwich Albion official 2026/27 squad page · #4 Callum Styles D; club international coverage confirms Hungary"},
+    {"footballName":"Krystian Bielik","group":"Defender","nationality":"Poland","shirt":5,"source":"West Bromwich Albion official 2026/27 squad page · #5 Krystian Bielik D"},
+    {"footballName":"George Campbell","group":"Defender","nationality":"USA","shirt":6,"source":"West Bromwich Albion official 2026/27 squad page · #6 George Campbell D; club profile lists USA"},
+    {"footballName":"Alfie Gilchrist","group":"Defender","nationality":"England","shirt":14,"source":"West Bromwich Albion official 2026/27 squad page · #14 Alfie Gilchrist D"},
+    {"footballName":"Felix Horn Myhre","group":"Midfielder","nationality":"Norway","shirt":7,"source":"West Bromwich Albion official 2026/27 squad page · Felix Horn Myhre M; current 2026/27 squad index · #7"},
+    {"footballName":"Jayson Molumby","group":"Midfielder","nationality":"Ireland","shirt":8,"source":"West Bromwich Albion official 2026/27 squad page · #8 Jayson Molumby M; club international coverage confirms Ireland"},
+    {"footballName":"Ousmane Diakite","group":"Midfielder","nationality":"Mali","shirt":17,"source":"West Bromwich Albion official 2026/27 squad page · #17 Ousmane Diakité M; club profile lists Mali","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Isaac Price","group":"Midfielder","nationality":"Northern Ireland","shirt":21,"source":"West Bromwich Albion official 2026/27 squad page · #21 Isaac Price M; club international coverage confirms Northern Ireland"},
+    {"footballName":"Alex Mowatt","group":"Midfielder","nationality":"England","shirt":27,"source":"West Bromwich Albion official 2026/27 squad page · #27 Alex Mowatt M"},
+    {"footballName":"Mikey Johnston","group":"Forward","nationality":"Ireland","shirt":11,"source":"West Bromwich Albion official 2026/27 squad page · #11 Mikey Johnston attacker; club international coverage confirms Ireland"},
+    {"footballName":"Aune Heggebo","group":"Forward","nationality":"Norway","shirt":19,"source":"West Bromwich Albion official 2026/27 squad page · #19 Aune Heggebø attacker; club signing profile confirms Norwegian","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Tammer Bany","group":"Forward","nationality":"Jordan","shirt":26,"source":"West Bromwich Albion official 2026/27 squad page · #26 Tammer Bany attacker; club profile lists Jordan"}
+  ]
+}
