@@ -24,12 +24,14 @@ const steps=[
   'publish-club-packs.mjs',
   'validate-football-db.mjs',
   'publish-coverage.mjs',
+  'publish-research-queue.mjs',
   'patch-v146.mjs',
   'patch-v147.mjs',
   'patch-v148.mjs',
   'patch-v149.mjs',
   'patch-v150.mjs',
-  'patch-v151.mjs'
+  'patch-v151.mjs',
+  'patch-v152.mjs'
 ];
 
 for(const step of steps){
