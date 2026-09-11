@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "swos-studio://football-db/identity-evidence/schema-v1",
+  "title": "SWOS Studio Championship Identity Evidence v1",
+  "type": "object",
+  "required": ["schemaVersion", "season", "clubId", "snapshot", "sourceSummary", "players"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "season": {"const": "2026/27"},
+    "clubId": {"type": "string", "minLength": 1},
+    "snapshot": {"type": "string", "pattern": "^2026-[0-9]{2}-[0-9]{2}$"},
+    "sourceSummary": {"type": "string", "minLength": 1},
+    "players": {
+      "type": "array",
+      "minItems": 16,
+      "maxItems": 16,
+      "items": {
+        "type": "object",
+        "required": ["footballName", "group", "nationality", "source"],
+        "properties": {
+          "footballName": {"type": "string", "minLength": 1},
+          "group": {"enum": ["Goalkeeper", "Defender", "Midfielder", "Forward"]},
+          "nationality": {"type": "string", "minLength": 1},
+          "shirt": {"type": ["integer", "null"], "minimum": 1, "maximum": 99},
+          "source": {"type": "string", "minLength": 1},
+          "notes": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false,
+  "x-swos-policy": {
+    "exactly16CurrentSeniorIdentities": true,
+    "uniqueFootballNames": true,
+    "minimumRoleMix": {"Goalkeeper": 2, "Defender": 4, "Midfielder": 4, "Forward": 2},
+    "sourceRequiredPerPlayer": true,
+    "noFabricatedIdentities": true,
+    "autoPromotion": false,
+    "binaryWritesRemainLocked": true
+  }
+}
