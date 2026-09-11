@@ -1,0 +1,25 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+
+const read=p=>{if(!fs.existsSync(p))throw new Error(`England identity validation: missing ${p}.`);return JSON.parse(fs.readFileSync(p,'utf8'))};
+const sha=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const manifest=read('football-db/manifest.json'),identities=read('football-db/identities.json'),packs=read('football-db/research-packs.json'),model=read('football-db/squad-model.json'),schema=read('football-db/schema-v1.json');
+const checks=[];const check=(id,condition,detail)=>{checks.push({id,pass:!!condition,detail});if(!condition)throw new Error(`England identity validation failed [${id}]: ${detail}`)};
+const identityEntries=Object.entries(identities.clubs||{}),identityPlayers=identityEntries.reduce((n,[,rows])=>n+(rows?.length||0),0),packEntries=Object.entries(packs.clubs||{}),packPlayers=packEntries.reduce((n,[,c])=>n+Object.keys(c.players||{}).length,0);
+check('season',manifest.season==='2026/27'&&identities.season==='2026/27'&&packs.season==='2026/27','season must remain 2026/27');
+check('pl-identity-foundation',identities.divisionCoverage?.premierLeague?.clubs===20&&identities.divisionCoverage?.premierLeague?.players===375,'Premier League identity foundation must remain 20 clubs / 375 players');
+check('championship-identity',identities.divisionCoverage?.championship?.clubs===1&&identities.divisionCoverage?.championship?.players===16,'v1.59 expects exactly Birmingham City as the first Championship 16-player identity pack');
+check('england-identity-count',identities.clubCount===21&&identityEntries.length===21&&identities.playerCount===391&&identityPlayers===391,'England identity total must be 21 clubs / 391 players');
+check('manifest-england-identity',manifest.coverage?.englandClubs?.identityReadyClubs===21&&manifest.coverage?.englandClubs?.identityPlayers===391,'manifest England identity totals must be 21 / 391');
+check('manifest-pl-identity',manifest.coverage?.premierLeague?.identityReadyClubs===20&&manifest.coverage?.premierLeague?.identityPlayers===375,'manifest PL identity totals must remain 20 / 375');
+check('manifest-championship-identity',manifest.coverage?.championship?.identityReadyClubs===1&&manifest.coverage?.championship?.identityPlayers===16,'manifest Championship identity totals must be 1 / 16');
+check('research-foundation',packs.packCount===20&&packEntries.length===20&&packs.playerCount===320&&packPlayers===320,'Premier League research foundation must remain 20 packs / 320 players');
+check('write-lock',manifest.installation?.teamWriteReady===false&&manifest.installation?.careerWriteReady===false&&model.writeSafety?.teamWriteEnabled===false&&model.writeSafety?.careerWriteEnabled===false,'TEAM.* and .CAR writes must remain locked');
+check('schema-16',schema.properties?.squad?.properties?.swos16PlayerIds?.minItems===16&&schema.properties?.squad?.properties?.swos16PlayerIds?.maxItems===16,'installed SWOS squad capacity remains exactly 16');
+const birmingham=identities.clubs?.['birmingham-city']||[];check('birmingham-16',birmingham.length===16,'Birmingham identity pack must contain exactly 16 selected players');
+const unique=new Set(birmingham.map(p=>String(p.footballName||'').trim().toLowerCase()));check('birmingham-unique',unique.size===16,'Birmingham football names must be unique');
+for(const p of birmingham){check(`birmingham-source:${p.footballName}`,!!String(p.source||'').trim(),`${p.footballName} source is required`);check(`birmingham-role:${p.footballName}`,['Goalkeeper','Defender','Midfielder','Forward'].includes(p.group),`${p.footballName} role ${p.group} invalid`);}
+const integrity={algorithm:'SHA-256',resources:{verifiedIdentities:{path:'football-db/identities.json',sha256:sha('football-db/identities.json')},researchPacks:{path:'football-db/research-packs.json',sha256:sha('football-db/research-packs.json')},squadModel:{path:'football-db/squad-model.json',sha256:sha('football-db/squad-model.json')},clubRecordSchema:{path:'football-db/schema-v1.json',sha256:sha('football-db/schema-v1.json')}}};
+const result={schemaVersion:1,status:'pass',databaseId:manifest.databaseId,databaseVersion:manifest.version,season:manifest.season,validatedAt:new Date().toISOString(),scope:'England multi-division identity expansion with Premier League research foundation',totals:{clubs:packs.packCount,players:packs.playerCount,identityClubs:identities.clubCount,identityPlayers:identities.playerCount,u21Candidates:identities.u21PlayerCount,checks:checks.length},guarantees:{premierLeagueIdentityComplete:true,premierLeagueResearchComplete:true,championshipIdentityExpansion:true,birminghamIdentityPublished:true,resourceIntegrity:true,careerAutoUpdate:false,teamWriteEnabled:false,careerWriteEnabled:false},integrity,checks};
+fs.writeFileSync('football-db/validation.json',JSON.stringify(result,null,2)+'\n','utf8');
+console.log(`England identity expansion validation PASS · ${identities.clubCount}/92 identity clubs · Championship ${identities.divisionCoverage.championship.clubs}/24 · PL research ${packs.packCount}/20 · ${checks.length} checks`);
