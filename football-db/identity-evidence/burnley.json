@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "burnley",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "FootballSquads Burnley 2026/27 current Championship roster, cross-checked after the summer window",
+  "players": [
+    {"footballName":"Max Weiss","group":"Goalkeeper","nationality":"Germany","shirt":1,"source":"FootballSquads Burnley 2026/27 current roster · #1 Max Weiß G","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Gregoire Coudert","group":"Goalkeeper","nationality":"France","shirt":37,"source":"FootballSquads Burnley 2026/27 current roster · #37 Grégoire Coudert G","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Kyle Walker","group":"Defender","nationality":"England","shirt":2,"source":"FootballSquads Burnley 2026/27 current roster · #2 D"},
+    {"footballName":"Max Alleyne","group":"Defender","nationality":"England","shirt":3,"source":"FootballSquads Burnley 2026/27 current roster · #3 D"},
+    {"footballName":"Bashir Humphreys","group":"Defender","nationality":"England","shirt":6,"source":"FootballSquads Burnley 2026/27 current roster · #6 D"},
+    {"footballName":"Igor","group":"Defender","nationality":"Brazil","shirt":44,"source":"FootballSquads Burnley 2026/27 current roster · #44 D"},
+    {"footballName":"Reo Hatate","group":"Midfielder","nationality":"Japan","shirt":5,"source":"FootballSquads Burnley 2026/27 current roster · #5 M"},
+    {"footballName":"Ugo Raghouber","group":"Midfielder","nationality":"France","shirt":8,"source":"FootballSquads Burnley 2026/27 current roster · #8 M"},
+    {"footballName":"Hannibal Mejbri","group":"Midfielder","nationality":"Tunisia","shirt":28,"source":"FootballSquads Burnley 2026/27 current roster · #28 M"},
+    {"footballName":"Josh Laurent","group":"Midfielder","nationality":"England","shirt":29,"source":"FootballSquads Burnley 2026/27 current roster · #29 M"},
+    {"footballName":"Mike Tresor","group":"Midfielder","nationality":"Belgium","shirt":31,"source":"FootballSquads Burnley 2026/27 current roster · #31 Mike Trésor M","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Jacob Bruun Larsen","group":"Forward","nationality":"Denmark","shirt":7,"source":"FootballSquads Burnley 2026/27 current roster · #7 F"},
+    {"footballName":"Marcus Edwards","group":"Forward","nationality":"England","shirt":10,"source":"FootballSquads Burnley 2026/27 current roster · #10 F"},
+    {"footballName":"Zeki Amdouni","group":"Forward","nationality":"Switzerland","shirt":11,"source":"FootballSquads Burnley 2026/27 current roster · #11 F"},
+    {"footballName":"Armando Broja","group":"Forward","nationality":"Albania","shirt":27,"source":"FootballSquads Burnley 2026/27 current roster · #27 F"},
+    {"footballName":"Jaydon Banel","group":"Forward","nationality":"Netherlands","shirt":34,"source":"FootballSquads Burnley 2026/27 current roster · #34 F"}
+  ]
+}
