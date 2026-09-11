@@ -11,6 +11,7 @@ const promoted=[];
 
 for(const club of intake.clubs||[]){
   if(!club.promotionReady)continue;
+  if(promoted.length)break;
   if(club.readyPlayers!==16||club.players?.length!==16)throw new Error(`Research promotion: ${club.clubName} claims ready without 16 complete players.`);
   const players={};
   const sources=new Set();
@@ -44,7 +45,7 @@ packs.packCount=clubRows.length;
 packs.playerCount=clubRows.reduce((n,c)=>n+Object.keys(c.players||{}).length,0);
 packs.snapshot='2026-09-11';
 packs.generation=packs.generation||{};
-packs.generation.evidencePromotedClubIds=promoted;
+packs.generation.evidencePromotedClubIds=[...(packs.generation.evidencePromotedClubIds||[]),...promoted].filter((v,i,a)=>a.indexOf(v)===i);
 fs.writeFileSync(PACKS,JSON.stringify(packs,null,2)+'\n','utf8');
 
 manifest.version=`2026.27-foundation.${packs.packCount}`;
