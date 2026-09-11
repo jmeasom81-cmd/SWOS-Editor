@@ -22,7 +22,8 @@ const optional=[
   'identity-intake.json',
   'championship-research-queue.json',
   'championship-research-intake.json',
-  'championship-research-evidence/schema-v1.json'
+  'championship-research-evidence/schema-v1.json',
+  'research-expansion-validation.json'
 ];
 const sha=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
 fs.mkdirSync(DIST,{recursive:true});
