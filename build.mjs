@@ -33,7 +33,8 @@ const steps=[
   'patch-v150.mjs',
   'patch-v151.mjs',
   'patch-v152.mjs',
-  'patch-v153.mjs'
+  'patch-v153.mjs',
+  'patch-v154.mjs'
 ];
 
 for(const step of steps){
