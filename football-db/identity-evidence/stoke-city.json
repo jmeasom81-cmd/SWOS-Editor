@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "stoke-city",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "FootballSquads Stoke City 2026/27 current Championship roster, checked after the summer window",
+  "players": [
+    {"footballName":"Viktor Johansson","group":"Goalkeeper","nationality":"Sweden","shirt":1,"source":"FootballSquads Stoke City 2026/27 current roster · #1 Viktor Johansson G"},
+    {"footballName":"Josh Griffiths","group":"Goalkeeper","nationality":"England","shirt":24,"source":"FootballSquads Stoke City 2026/27 current roster · #24 Josh Griffiths G"},
+    {"footballName":"Aaron Cresswell","group":"Defender","nationality":"England","shirt":3,"source":"FootballSquads Stoke City 2026/27 current roster · #3 Aaron Cresswell D"},
+    {"footballName":"Luke Graham","group":"Defender","nationality":"Scotland","shirt":5,"source":"FootballSquads Stoke City 2026/27 current roster · #5 Luke Graham D"},
+    {"footballName":"Ben Wilmot","group":"Defender","nationality":"England","shirt":16,"source":"FootballSquads Stoke City 2026/27 current roster · #16 Ben Wilmot D"},
+    {"footballName":"Eric Bocat","group":"Defender","nationality":"France","shirt":17,"source":"FootballSquads Stoke City 2026/27 current roster · #17 Eric Bocat D"},
+    {"footballName":"Bosun Lawal","group":"Defender","nationality":"Ireland","shirt":18,"source":"FootballSquads Stoke City 2026/27 current roster · #18 Bosun Lawal D"},
+    {"footballName":"Junior Tchamadeu","group":"Defender","nationality":"Cameroon","shirt":22,"source":"FootballSquads Stoke City 2026/27 current roster · #22 Junior Tchamadeu D"},
+    {"footballName":"Ben Pearson","group":"Midfielder","nationality":"England","shirt":4,"source":"FootballSquads Stoke City 2026/27 current roster · #4 Ben Pearson M"},
+    {"footballName":"Svante Ingelsson","group":"Midfielder","nationality":"Sweden","shirt":6,"source":"FootballSquads Stoke City 2026/27 current roster · #6 Svante Ingelsson M"},
+    {"footballName":"Ethan Galbraith","group":"Midfielder","nationality":"Northern Ireland","shirt":8,"source":"FootballSquads Stoke City 2026/27 current roster · #8 Ethan Galbraith M"},
+    {"footballName":"Bae Jun-Ho","group":"Midfielder","nationality":"South Korea","shirt":10,"source":"FootballSquads Stoke City 2026/27 current roster · #10 Bae Jun-Ho M"},
+    {"footballName":"Tatsuki Seko","group":"Midfielder","nationality":"Japan","shirt":12,"source":"FootballSquads Stoke City 2026/27 current roster · #12 Tatsuki Seko M"},
+    {"footballName":"Sorba Thomas","group":"Forward","nationality":"Wales","shirt":7,"source":"FootballSquads Stoke City 2026/27 current roster · #7 Sorba Thomas F"},
+    {"footballName":"Robert Bozenik","group":"Forward","nationality":"Slovakia","shirt":9,"source":"FootballSquads Stoke City 2026/27 current roster · #9 Róbert Boženík F","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Lamine Cisse","group":"Forward","nationality":"France","shirt":11,"source":"FootballSquads Stoke City 2026/27 current roster · #11 Lamine Cissé F","notes":"ASCII football name retained for SWOS database compatibility."}
+  ]
+}
