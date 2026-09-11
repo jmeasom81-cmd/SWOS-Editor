@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "snapshot": "2026-09-11",
+  "clubId": "tottenham",
+  "label": "Tottenham Hotspur",
+  "kind": "Post-window senior squad + June 2026 market-value evidence",
+  "source": "Premier League submitted squad 03/09/2026 + Tottenham submitted squad numbers + Transfermarkt values updated 03/06/2026",
+  "selection": {
+    "players": 16,
+    "goalkeepers": 2,
+    "defenders": 5,
+    "midfielders": 5,
+    "forwards": 4
+  },
+  "players": {
+    "Antonin Kinsky": {"age":23,"marketValueM":15,"position":0},
+    "Martin Dubravka": {"age":37,"marketValueM":0.5,"position":0},
+    "Pedro Porro": {"age":26,"marketValueM":35,"position":1},
+    "Destiny Udogie": {"age":23,"marketValueM":30,"position":2},
+    "Andrew Robertson": {"age":32,"marketValueM":7,"position":2},
+    "Micky van de Ven": {"age":25,"marketValueM":50,"position":3},
+    "Jan Paul van Hecke": {"age":26,"marketValueM":45,"position":3},
+    "Sandro Tonali": {"age":26,"marketValueM":80,"position":6},
+    "Conor Gallagher": {"age":26,"marketValueM":32,"position":6},
+    "Xavi Simons": {"age":23,"marketValueM":40,"position":6},
+    "James Maddison": {"age":29,"marketValueM":20,"position":6},
+    "Rodrigo Bentancur": {"age":29,"marketValueM":20,"position":6},
+    "Mohammed Kudus": {"age":26,"marketValueM":50,"position":4},
+    "Savio": {"age":22,"marketValueM":35,"position":5},
+    "Omar Marmoush": {"age":27,"marketValueM":50,"position":7},
+    "Dominic Solanke": {"age":28,"marketValueM":28,"position":7}
+  },
+  "evidenceNotes": [
+    "Selection is anchored to Tottenham Hotspur's official 25-player Premier League squad submitted after the summer transfer window on 3 September 2026.",
+    "The SWOS 16 uses a balanced 2 GK / 5 DEF / 5 MID / 4 FWD structure and keeps exact SWOS role positions separate from broader football roles.",
+    "June 2026 Transfermarkt values are used as value evidence rather than transfer fees. Summer 2026 arrivals do not inherit their former club's 2025/26 output as Tottenham output.",
+    "This is the tenth and final research pack within the current ten-club verified identity foundation.",
+    "The pack is research data only and does not enable TEAM.* or .CAR writes."
+  ]
+}
