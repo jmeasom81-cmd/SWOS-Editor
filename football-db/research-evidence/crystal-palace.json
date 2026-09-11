@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "crystal-palace",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "Crystal Palace current 2026/27 squad/value table cross-checked against post-window transfer reporting",
+  "players": {
+    "Dean Henderson": {"age":29,"marketValueM":28,"position":0,"sources":["MatchChase Crystal Palace Premier League 26/27 current squad · GK · €28m"]},
+    "Walter Benitez": {"age":33,"marketValueM":4,"position":0,"sources":["MatchChase Crystal Palace Premier League 26/27 current squad · GK · €4m"]},
+    "Honest Ahanor": {"age":18,"marketValueM":30,"position":3,"sources":["MatchChase Crystal Palace Premier League 26/27 current squad · CB · €30m","Post-window Crystal Palace transfer reporting confirms arrival"]},
+    "Tyrick Mitchell": {"age":27,"marketValueM":25,"position":2,"sources":["MatchChase Crystal Palace Premier League 26/27 current squad · LB · €25m"]},
+    "Axel Disasi": {"age":28,"marketValueM":15,"position":3,"sources":["MatchChase Crystal Palace Premier League 26/27 current squad · CB · €15m"]},
+    "Chris Richards": {"age":26,"marketValueM":28,"position":3,"sources":["MatchChase Crystal Palace Premier League 26/27 current squad · CB · €28m"]},
+    "Ben Chilwell": {"age":29,"marketValueM":10,"position":2,"sources":["MatchChase Crystal Palace Premier League 26/27 current squad · LB · €10m"]},
+    "Jefferson Lerma": {"age":31,"marketValueM":6,"position":6,"sources":["MatchChase Crystal Palace Premier League 26/27 current squad · DM · €6m"]},
+    "Yeremy Pino": {"age":23,"marketValueM":30,"position":5,"sources":["MatchChase Crystal Palace Premier League 26/27 current squad · LW · €30m"]},
+    "Daichi Kamada": {"age":30,"marketValueM":10,"position":6,"sources":["MatchChase Crystal Palace Premier League 26/27 current squad · CM · €10m"]},
+    "Adam Wharton": {"age":22,"marketValueM":70,"position":6,"sources":["MatchChase Crystal Palace Premier League 26/27 current squad · DM · €70m"]},
+    "Quinten Timber": {"age":25,"marketValueM":25,"position":6,"sources":["MatchChase Crystal Palace Premier League 26/27 current squad · CM · €25m"]},
+    "Ismaila Sarr": {"age":28,"marketValueM":45,"position":4,"sources":["MatchChase Crystal Palace Premier League 26/27 current squad · RW · €45m"]},
+    "Eddie Nketiah": {"age":27,"marketValueM":10,"position":7,"sources":["MatchChase Crystal Palace Premier League 26/27 current squad · ST · €10m"]},
+    "Jean-Philippe Mateta": {"age":29,"marketValueM":30,"position":7,"sources":["MatchChase Crystal Palace Premier League 26/27 current squad · ST · €30m"]},
+    "Jorgen Strand Larsen": {"age":26,"marketValueM":40,"position":7,"sources":["MatchChase Crystal Palace Premier League 26/27 current squad · Jørgen Strand Larsen · ST · €40m"],"notes":"Identity feed uses ASCII spelling Jorgen Strand Larsen."}
+  }
+}
