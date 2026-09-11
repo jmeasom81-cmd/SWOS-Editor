@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "wolverhampton-wanderers",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "Wolverhampton Wanderers official current 2026/27 first-team roster cross-checked against FootballSquads Championship positions and nationalities",
+  "players": [
+    {"footballName":"Jose Sa","group":"Goalkeeper","nationality":"Portugal","shirt":1,"source":"Wolves official 2026/27 first-team roster · #1 Jose Sa; club profile lists Portuguese","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Joao Virginia","group":"Goalkeeper","nationality":"Portugal","shirt":13,"source":"Wolves official 2026/27 first-team roster · #13 Joao Virginia; club signing announcement identifies Portuguese goalkeeper","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Kieran Trippier","group":"Defender","nationality":"England","shirt":2,"source":"Wolves official 2026/27 first-team roster · #2 Kieran Trippier; FootballSquads current roster · England D"},
+    {"footballName":"Hugo Bueno","group":"Defender","nationality":"Spain","shirt":3,"source":"Wolves official 2026/27 first-team roster · #3 Hugo Bueno; FootballSquads current roster · Spain D"},
+    {"footballName":"Santiago Bueno","group":"Defender","nationality":"Uruguay","shirt":4,"source":"Wolves official 2026/27 first-team roster · #4 Santiago Bueno; FootballSquads current roster · Uruguay D"},
+    {"footballName":"Ghislain Konan","group":"Defender","nationality":"Ivory Coast","shirt":33,"source":"Wolves official 2026/27 first-team roster · #33 Ghislain Konan; FootballSquads current roster · Ivory Coast D"},
+    {"footballName":"Nasser Djiga","group":"Defender","nationality":"Burkina Faso","shirt":34,"source":"Wolves official 2026/27 first-team roster · #34 Nasser Djiga; FootballSquads current roster · Burkina Faso D"},
+    {"footballName":"Ladislav Krejci","group":"Defender","nationality":"Czech Republic","shirt":37,"source":"Wolves official 2026/27 first-team roster · #37 Ladislav Krejčí; FootballSquads current roster · Czech Republic D","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Marshall Munetsi","group":"Midfielder","nationality":"Zimbabwe","shirt":5,"source":"Wolves official 2026/27 first-team roster · #5 Marshall Munetsi; FootballSquads current roster · Zimbabwe M"},
+    {"footballName":"Andre","group":"Midfielder","nationality":"Brazil","shirt":7,"source":"Wolves official 2026/27 first-team roster · #7 André; FootballSquads current roster · Brazil M","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Jordan James","group":"Midfielder","nationality":"Wales","shirt":8,"source":"Wolves official 2026/27 first-team roster · #8 Jordan James; FootballSquads current roster · Wales M"},
+    {"footballName":"Jean-Ricner Bellegarde","group":"Midfielder","nationality":"Haiti","shirt":27,"source":"Wolves official 2026/27 first-team roster · #27 Jean-Ricner Bellegarde; FootballSquads current roster · Haiti M"},
+    {"footballName":"Fer Lopez","group":"Midfielder","nationality":"Spain","shirt":28,"source":"Wolves official 2026/27 first-team roster · #28 Fer López; FootballSquads current roster · Spain M","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Raul Jimenez","group":"Forward","nationality":"Mexico","shirt":9,"source":"Wolves official 2026/27 first-team roster · #9 Raul Jimenez; FootballSquads current roster · Mexico F","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Adam Armstrong","group":"Forward","nationality":"England","shirt":10,"source":"Wolves official 2026/27 first-team roster · #10 Adam Armstrong; FootballSquads current roster · England F"},
+    {"footballName":"Enso Gonzalez","group":"Forward","nationality":"Paraguay","shirt":30,"source":"Wolves official 2026/27 first-team roster · #30 Enso González; FootballSquads current roster · Paraguay F","notes":"ASCII football name retained for SWOS database compatibility."}
+  ]
+}
