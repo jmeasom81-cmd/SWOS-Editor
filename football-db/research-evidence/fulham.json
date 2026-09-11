@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "fulham",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "Current Fulham 2026/27 Premier League squad/value evidence",
+  "players": {
+    "Bernd Leno": {"age":34,"marketValueM":6,"position":0,"sources":["MatchChase Fulham Premier League 26/27 current squad · GK · €6m"]},
+    "Benjamin Lecomte": {"age":35,"marketValueM":0.8,"position":0,"sources":["MatchChase Fulham Premier League 26/27 current squad · GK · €0.8m"]},
+    "Kenny Tete": {"age":30,"marketValueM":8,"position":1,"sources":["Current Fulham 2026/27 squad/value evidence · RB · €8m"]},
+    "Calvin Bassey": {"age":26,"marketValueM":28,"position":3,"sources":["MatchChase Fulham Premier League 26/27 current squad · CB · €28m"]},
+    "Joachim Andersen": {"age":30,"marketValueM":20,"position":3,"sources":["Current Fulham 2026/27 squad/value evidence · CB · €20m"]},
+    "Timothy Castagne": {"age":30,"marketValueM":8,"position":1,"sources":["Current Fulham 2026/27 squad/value evidence · RB · €8m"]},
+    "Antonee Robinson": {"age":29,"marketValueM":22,"position":2,"sources":["Current Fulham 2026/27 squad/value evidence · LB · €22m"]},
+    "Oscar Bobb": {"age":23,"marketValueM":28,"position":4,"sources":["MatchChase Fulham Premier League 26/27 current squad · RW · €28m"]},
+    "Hugo Larsson": {"age":22,"marketValueM":28,"position":6,"sources":["Current Fulham 2026/27 squad/value evidence · CM/DM · €28m","Current Fulham player profile confirms midfield role"]},
+    "Sander Berge": {"age":28,"marketValueM":25,"position":6,"sources":["Current Fulham 2026/27 squad/value evidence · DM · €25m"]},
+    "Emile Smith Rowe": {"age":26,"marketValueM":20,"position":6,"sources":["MatchChase Fulham Premier League 26/27 current squad · AM · €20m"]},
+    "Alex Iwobi": {"age":30,"marketValueM":20,"position":5,"sources":["MatchChase Fulham Premier League 26/27 current squad · LW · €20m"]},
+    "Gonzalo Garcia": {"age":22,"marketValueM":30,"position":7,"sources":["MatchChase Fulham Premier League 26/27 current squad · Gonzalo García · ST · €30m"],"notes":"Identity feed uses ASCII spelling Gonzalo Garcia."},
+    "Rodrigo Muniz": {"age":25,"marketValueM":20,"position":7,"sources":["MatchChase Fulham Premier League 26/27 current squad · ST · €20m"]},
+    "Kevin": {"age":23,"marketValueM":25,"position":5,"sources":["MatchChase Fulham Premier League 26/27 current squad · LW · €25m"]},
+    "Jonah Kusi-Asare": {"age":19,"marketValueM":3,"position":7,"sources":["MatchChase Fulham Premier League 26/27 current squad · ST · €3m"]}
+  }
+}
