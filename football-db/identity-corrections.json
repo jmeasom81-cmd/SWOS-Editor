@@ -26,6 +26,13 @@
         {"footballName":"Amario Cozier-Duberry","shirt":11,"group":"Forward","nationality":"England","source":"FootballSquads Middlesbrough 2026/27 post-window current roster + Brighton confirmation of season-long Middlesbrough loan"}
       ],
       "note": "Post-window roster audit found Seny Dieng at Atromitos, Finley Munroe on loan at Blackpool and Morgan Whittaker at Colorado Rapids. Radek Vitek, Ashley Phillips and Amario Cozier-Duberry replace them one-for-one by broad role, preserving an exact current 16 and the minimum role balance."
+    },
+    "millwall": {
+      "remove": ["Femi Azeez"],
+      "add": [
+        {"footballName":"Lyndon Dykes","shirt":13,"group":"Forward","nationality":"Scotland","source":"Millwall current 2026/27 squad + FootballSquads post-window roster + Brighton confirmation of Femi Azeez transfer"}
+      ],
+      "note": "Femi Azeez completed a permanent transfer from Millwall to Brighton on 2 September 2026. Lyndon Dykes, signed by Millwall in August and active in the current first team, replaces him one-for-one in the selected forward group so the current identity pack remains exactly 16 players."
     }
   },
   "safety": {"teamWriteReady":false,"careerWriteReady":false}
