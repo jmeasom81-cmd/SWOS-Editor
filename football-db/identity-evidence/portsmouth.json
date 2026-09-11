@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "portsmouth",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "FootballSquads Portsmouth 2026/27 current Championship roster, cross-checked against Portsmouth FC post-window squad updates",
+  "players": [
+    {"footballName":"Nicolas Schmid","group":"Goalkeeper","nationality":"Austria","shirt":1,"source":"FootballSquads Portsmouth 2026/27 current roster · #1 G"},
+    {"footballName":"Ben Killip","group":"Goalkeeper","nationality":"England","shirt":30,"source":"FootballSquads Portsmouth 2026/27 current roster · #30 G; Portsmouth FC confirms current first-team contract"},
+    {"footballName":"Benjamin Arthur","group":"Defender","nationality":"England","shirt":2,"source":"FootballSquads Portsmouth 2026/27 current roster · #2 D; Portsmouth FC announced Arthur arrival from Brentford"},
+    {"footballName":"Connor Ogilvie","group":"Defender","nationality":"England","shirt":3,"source":"FootballSquads Portsmouth 2026/27 current roster · #3 D"},
+    {"footballName":"Regan Poole","group":"Defender","nationality":"Wales","shirt":5,"source":"FootballSquads Portsmouth 2026/27 current roster · #5 D"},
+    {"footballName":"Conor Shaughnessy","group":"Defender","nationality":"Ireland","shirt":6,"source":"FootballSquads Portsmouth 2026/27 current roster · #6 D"},
+    {"footballName":"Zak Swanson","group":"Defender","nationality":"England","shirt":22,"source":"FootballSquads Portsmouth 2026/27 current roster · #22 D"},
+    {"footballName":"Marlon Pack","group":"Midfielder","nationality":"England","shirt":7,"source":"FootballSquads Portsmouth 2026/27 current roster · #7 M"},
+    {"footballName":"John Swift","group":"Midfielder","nationality":"England","shirt":8,"source":"FootballSquads Portsmouth 2026/27 current roster · #8 M"},
+    {"footballName":"Adrian Segecic","group":"Midfielder","nationality":"Croatia","shirt":10,"source":"FootballSquads Portsmouth 2026/27 current roster · #10 Adrian Segečić M","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Rocco Robert Shein","group":"Midfielder","nationality":"Estonia","shirt":19,"source":"FootballSquads Portsmouth 2026/27 current roster · #19 M; Portsmouth FC announced current first-team arrival"},
+    {"footballName":"Josh Murphy","group":"Midfielder","nationality":"England","shirt":23,"source":"FootballSquads Portsmouth 2026/27 current roster · #23 M"},
+    {"footballName":"Colby Bishop","group":"Forward","nationality":"England","shirt":9,"source":"FootballSquads Portsmouth 2026/27 current roster · #9 F"},
+    {"footballName":"Abu Kamara","group":"Forward","nationality":"England","shirt":11,"source":"FootballSquads Portsmouth 2026/27 current roster · #11 F; Portsmouth FC confirms Kamara return"},
+    {"footballName":"Franco Umeh-Chibueze","group":"Forward","nationality":"Ireland","shirt":15,"source":"FootballSquads Portsmouth 2026/27 current roster · #15 F"},
+    {"footballName":"Thomas Waddingham","group":"Forward","nationality":"Australia","shirt":20,"source":"FootballSquads Portsmouth 2026/27 current roster · #20 F"}
+  ]
+}
