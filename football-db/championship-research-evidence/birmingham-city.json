@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "birmingham-city",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "Birmingham City 2026/27 squad, age and position cross-check from FootballSquads/FBref, with current Transfermarkt market values; exact names are matched to the published SWOS Studio Birmingham identity 16.",
+  "players": {
+    "James Beadle": {"age":22,"marketValueM":6,"position":0,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/birmin.htm","https://fbref.com/en/squads/ec79b7c2/2026-2027/Birmingham-City-Stats","https://www.transfermarkt.com/birmingham-city/startseite/verein/337/saison_id/2025"]},
+    "Ryan Allsop": {"age":34,"marketValueM":0.6,"position":0,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/birmin.htm","https://www.transfermarkt.com/ryan-allsop/profil/spieler/111073"]},
+    "Ethan Laird": {"age":25,"marketValueM":2.5,"position":1,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/birmin.htm","https://www.transfermarkt.com/birmingham-city/kader/verein/337/saison_id/2026"]},
+    "Christoph Klarer": {"age":26,"marketValueM":7,"position":3,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/birmin.htm","https://fbref.com/en/squads/ec79b7c2/2026-2027/Birmingham-City-Stats","https://www.transfermarkt.com/birmingham-city/kader/verein/337/saison_id/2026"]},
+    "Phil Neumann": {"age":29,"marketValueM":2.5,"position":3,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/birmin.htm","https://fbref.com/en/squads/ec79b7c2/2026-2027/Birmingham-City-Stats","https://www.transfermarkt.com/birmingham-city/kader/verein/337/saison_id/2026"]},
+    "Alex Cochrane": {"age":26,"marketValueM":2.5,"position":2,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/birmin.htm","https://fbref.com/en/squads/ec79b7c2/2026-2027/Birmingham-City-Stats","https://www.transfermarkt.com/birmingham-city/kader/verein/337/saison_id/2026"]},
+    "Bright Osayi-Samuel": {"age":28,"marketValueM":4,"position":1,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/birmin.htm","https://fbref.com/en/squads/ec79b7c2/2026-2027/Birmingham-City-Stats","https://www.transfermarkt.com/birmingham-city/kader/verein/337/saison_id/2026"]},
+    "Paik Seung-Ho": {"age":29,"marketValueM":2,"position":6,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/birmin.htm","https://www.transfermarkt.com/birmingham-city/kader/verein/337/saison_id/2026"]},
+    "Jhon Solis": {"age":21,"marketValueM":4.5,"position":6,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/birmin.htm","https://www.transfermarkt.com/birmingham-city/kader/verein/337/saison_id/2026"],"notes":"ASCII football name retained to match the published SWOS Studio identity record for Jhon Solís."},
+    "Patrick Roberts": {"age":29,"marketValueM":4,"position":4,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/birmin.htm","https://www.transfermarkt.com/birmingham-city/kader/verein/337/saison_id/2026"]},
+    "Tomoki Iwata": {"age":29,"marketValueM":2,"position":6,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/birmin.htm","https://fbref.com/en/squads/ec79b7c2/2026-2027/Birmingham-City-Stats","https://www.transfermarkt.com/birmingham-city/kader/verein/337/saison_id/2026"]},
+    "Kanya Fujimoto": {"age":27,"marketValueM":2,"position":6,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/birmin.htm","https://www.transfermarkt.com/birmingham-city/kader/verein/337/saison_id/2026"]},
+    "Carlos Vicente": {"age":27,"marketValueM":7,"position":4,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/birmin.htm","https://www.transfermarkt.com/birmingham-city/kader/verein/337/saison_id/2026"]},
+    "August Priske": {"age":22,"marketValueM":7,"position":7,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/birmin.htm","https://fbref.com/en/squads/ec79b7c2/2026-2027/Birmingham-City-Stats","https://www.transfermarkt.com/birmingham-city/kader/verein/337/saison_id/2026"]},
+    "Jay Stansfield": {"age":23,"marketValueM":18,"position":7,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/birmin.htm","https://fbref.com/en/squads/ec79b7c2/2026-2027/Birmingham-City-Stats","https://www.transfermarkt.com/birmingham-city/kader/verein/337/saison_id/2026"]},
+    "Luis Vazquez": {"age":25,"marketValueM":2.5,"position":7,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/birmin.htm","https://fbref.com/en/players/22810a82/Luis-Vazquez","https://www.transfermarkt.com/luis-vazquez/marktwertverlauf/spieler/844516"],"notes":"ASCII football name retained to match the published SWOS Studio identity record for Luis Vázquez."}
+  }
+}
