@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "swos-studio-research-evidence-v1",
+  "title": "SWOS Studio Research Evidence v1",
+  "type": "object",
+  "required": ["schemaVersion", "season", "clubId", "players"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "season": {"const": "2026/27"},
+    "clubId": {"type": "string", "minLength": 1},
+    "snapshot": {"type": "string"},
+    "sourceSummary": {"type": "string"},
+    "players": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "age": {"type": "number", "minimum": 15, "maximum": 50},
+          "marketValueM": {"type": "number", "minimum": 0},
+          "position": {"type": "integer", "minimum": 0, "maximum": 7},
+          "minutes": {"type": "number", "minimum": 0},
+          "goals": {"type": "number", "minimum": 0},
+          "assists": {"type": "number", "minimum": 0},
+          "sources": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1},
+          "notes": {"type": "string"}
+        },
+        "required": ["sources"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
