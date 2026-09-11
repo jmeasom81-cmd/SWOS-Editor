@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "hull",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "Current Hull City 2026/27 Premier League squad/value evidence cross-checked with current player profiles",
+  "players": {
+    "Jack Butland": {"age":33,"marketValueM":1.5,"position":0,"sources":["MatchChase Hull City Premier League 26/27 current squad · GK · €1.5m"]},
+    "Konstantinos Tzolakis": {"age":23,"marketValueM":18,"position":0,"sources":["MatchChase Hull City Premier League 26/27 current squad · GK · €18m"]},
+    "Semi Ajayi": {"age":32,"marketValueM":0.7,"position":3,"sources":["Current Hull City 2026/27 squad/value evidence · CB · €0.7m"],"notes":"Role/current-club status cross-checked against live Hull player profile."},
+    "John Egan": {"age":33,"marketValueM":1,"position":3,"sources":["Current Hull City 2026/27 squad/value evidence · CB · €1m"]},
+    "Paddy McNair": {"age":31,"marketValueM":1.5,"position":3,"sources":["MatchChase Hull City Premier League 26/27 current squad · CB · €1.5m"]},
+    "Nobel Mendy": {"age":22,"marketValueM":7.5,"position":3,"sources":["MatchChase Hull City Premier League 26/27 current squad · CB · €7.5m"]},
+    "Ryan Giles": {"age":26,"marketValueM":12,"position":2,"sources":["Current Hull City 2026/27 squad/value evidence · LB · €12m"]},
+    "Hidemasa Morita": {"age":31,"marketValueM":8,"position":6,"sources":["Current Hull City 2026/27 squad/value evidence · CM · €8m","Current player profile confirms Hull City midfield role"]},
+    "Lucas Gourna-Douath": {"age":23,"marketValueM":6,"position":6,"sources":["Current Hull City 2026/27 squad/value evidence · DM · €6m"]},
+    "Abdulkadir Omur": {"age":27,"marketValueM":1.5,"position":4,"sources":["Current Hull City 2026/27 squad/value evidence · RM/RW · €1.5m"]},
+    "Regan Slater": {"age":26,"marketValueM":5.5,"position":6,"sources":["Current Hull City 2026/27 squad/value evidence · DM/CM · €5.5m"]},
+    "Tim Iroegbunam": {"age":23,"marketValueM":18,"position":6,"sources":["Current Hull City 2026/27 squad/value evidence · CM · €18m"]},
+    "Mohamed-Ali Cho": {"age":22,"marketValueM":15,"position":4,"sources":["Current Hull City 2026/27 squad/value evidence · RW · €15m"]},
+    "Joe Gelhardt": {"age":24,"marketValueM":14,"position":7,"sources":["Current Hull City 2026/27 squad/value evidence · ST · €14m"]},
+    "Oli McBurnie": {"age":30,"marketValueM":5,"position":7,"sources":["Current Hull City 2026/27 squad/value evidence · ST · €5m"]},
+    "Sorba Thomas": {"age":27,"marketValueM":14,"position":5,"sources":["Current Hull City 2026/27 squad/value evidence · LW · €14m"]}
+  }
+}
