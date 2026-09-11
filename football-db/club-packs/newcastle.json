@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "snapshot": "2026-09-11",
+  "clubId": "newcastle",
+  "label": "Newcastle United",
+  "kind": "Current post-window squad + May/June 2026 values + 2025/26 PL output",
+  "source": "Newcastle United current first-team squad + club summer-signing review 02/09/2026 + Premier League current squad + Transfermarkt values updated 26/05-03/06/2026 + FBref 2025/26 Premier League",
+  "selection": {
+    "players": 16,
+    "goalkeepers": 2,
+    "defenders": 5,
+    "midfielders": 5,
+    "forwards": 4
+  },
+  "players": {
+    "Nick Pope": {"age":34,"marketValueM":5,"position":0,"minutes":2416,"goals":0,"assists":0},
+    "Ewen Jaouen": {"age":20,"marketValueM":12,"position":0},
+    "Tino Livramento": {"age":23,"marketValueM":45,"position":1,"minutes":1328,"goals":0,"assists":1},
+    "Lewis Hall": {"age":22,"marketValueM":40,"position":2,"minutes":2181,"goals":1,"assists":1},
+    "Sven Botman": {"age":26,"marketValueM":35,"position":3,"minutes":1835,"goals":1,"assists":1},
+    "Malick Thiaw": {"age":25,"marketValueM":45,"position":3,"minutes":2965,"goals":4,"assists":0},
+    "Amar Dedic": {"age":24,"marketValueM":16,"position":1},
+    "Nico Gonzalez": {"age":24,"marketValueM":40,"position":6},
+    "Aladji Bamba": {"age":20,"marketValueM":18,"position":6},
+    "Joelinton": {"age":30,"marketValueM":25,"position":6,"minutes":1951,"goals":2,"assists":1},
+    "Jacob Ramsey": {"age":25,"marketValueM":35,"position":6,"minutes":1450,"goals":2,"assists":3},
+    "Lewis Miley": {"age":20,"marketValueM":25,"position":6,"minutes":1496,"goals":1,"assists":4},
+    "Harvey Barnes": {"age":28,"marketValueM":32,"position":5,"minutes":1966,"goals":7,"assists":1},
+    "Yoane Wissa": {"age":30,"marketValueM":25,"position":7,"minutes":531,"goals":1,"assists":1},
+    "Anthony Elanga": {"age":24,"marketValueM":32,"position":4,"minutes":1319,"goals":0,"assists":1},
+    "Matias Fernandez-Pardo": {"age":21,"marketValueM":35,"position":7}
+  },
+  "evidenceNotes": [
+    "Selection follows Newcastle United's current first-team page after a heavily refreshed summer 2026 window, not the older pre-window squad snapshot.",
+    "Summer 2026 arrivals Ewen Jaouen, Amar Dedic, Nico Gonzalez, Aladji Bamba and Matias Fernandez-Pardo retain their latest available market-value evidence but do not inherit prior-club 2025/26 output as Newcastle output.",
+    "Players who remained at Newcastle retain 2025/26 Premier League minutes/goals/assists where verified by FBref.",
+    "The pack is research data only and does not enable TEAM.* or .CAR writes."
+  ]
+}
