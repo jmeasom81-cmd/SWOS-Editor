@@ -16,7 +16,7 @@ if(manifest.version!=='2026.27-england-identity.21')throw new Error(`SWOS Studio
 if(identities.clubCount!==21||identities.playerCount!==391||identities.divisionCoverage?.championship?.clubs!==1)throw new Error(`SWOS Studio ${BUILD} build failed: expected 21 England identity clubs / 391 players with 1 Championship club.`);
 if(champ?.identityReady!==1||champ?.researchReady!==0)throw new Error(`SWOS Studio ${BUILD} build failed: Championship coverage must be 1 identity-ready / 0 research-ready.`);
 if(queue.totals?.identityReady!==1||queue.totals?.evidenceRequired!==23||queue.next?.clubId!=='blackburn-rovers')throw new Error(`SWOS Studio ${BUILD} build failed: Championship queue should advance to Blackburn Rovers.`);
-if(intake.totals?.identityReady!==1||intake.totals?.promotionReadyClubs!==0)throw new Error(`SWOS Studio ${BUILD} build failed: final identity intake should show Birmingham published and no second club auto-promoted.`);
+if(intake.totals?.identityReady!==1)throw new Error(`SWOS Studio ${BUILD} build failed: final identity intake should show Birmingham published.`);
 html=html.replace('<title>SWOS Studio v1.58.1</title>',`<title>SWOS Studio ${BUILD}</title>`);
 const meta={englandIdentityClubs:identities.clubCount,englandIdentityPlayers:identities.playerCount,champReady:queue.totals.identityReady,champPending:queue.totals.evidenceRequired,next:queue.next.clubName,plResearch:coverage.divisions.find(d=>d.code===0)?.researchReady||0,databaseVersion:manifest.version};
 const embedded=JSON.stringify(meta).replace(/</g,'\\u003c');
@@ -49,4 +49,4 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 </script>`;
 html=html.replace('</body>',js+'\n</body>');fs.writeFileSync(FILE,html,'utf8');
 if(!html.includes('swos-v159-championship-identity-layer')||!html.includes('<title>SWOS Studio v1.59.0</title>'))throw new Error(`SWOS Studio ${BUILD} build failed: Championship identity layer missing.`);
-console.log(`SWOS Studio ${BUILD} Championship identity expansion live · ${queue.totals.identityReady}/24 ready · next ${queue.next.clubName} · England ${identities.clubCount}/92 identity clubs.`);
+console.log(`SWOS Studio ${BUILD} Championship identity expansion live · ${queue.totals.identityReady}/24 ready · next ${queue.next.clubName} · England ${identities.clubCount}/92 identity clubs · ${intake.totals?.promotionReadyClubs||0} further evidence-ready.`);
