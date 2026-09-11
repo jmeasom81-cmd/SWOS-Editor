@@ -17,6 +17,15 @@
         {"footballName":"Luca Stephenson","shirt":27,"group":"Defender","nationality":"England","source":"Bolton Wanderers official 2026/27 signing/current squad evidence + FootballSquads post-window roster"}
       ],
       "note": "Joel Randall moved to Chesterfield on a season-long loan on 2 September 2026. Luca Stephenson is a current Bolton first-team player, signed permanently in July 2026; his primary role is right-back with additional midfield experience. The replacement preserves an exact 16-player current selection and the minimum role balance."
+    },
+    "middlesbrough": {
+      "remove": ["Seny Dieng","Finley Munroe","Morgan Whittaker"],
+      "add": [
+        {"footballName":"Radek Vitek","shirt":1,"group":"Goalkeeper","nationality":"Czech Republic","source":"FootballSquads Middlesbrough 2026/27 post-window current roster · #1 G"},
+        {"footballName":"Ashley Phillips","shirt":4,"group":"Defender","nationality":"England","source":"FootballSquads Middlesbrough 2026/27 post-window current roster + Tottenham confirmation of permanent Middlesbrough transfer"},
+        {"footballName":"Amario Cozier-Duberry","shirt":11,"group":"Forward","nationality":"England","source":"FootballSquads Middlesbrough 2026/27 post-window current roster + Brighton confirmation of season-long Middlesbrough loan"}
+      ],
+      "note": "Post-window roster audit found Seny Dieng at Atromitos, Finley Munroe on loan at Blackpool and Morgan Whittaker at Colorado Rapids. Radek Vitek, Ashley Phillips and Amario Cozier-Duberry replace them one-for-one by broad role, preserving an exact current 16 and the minimum role balance."
     }
   },
   "safety": {"teamWriteReady":false,"careerWriteReady":false}
