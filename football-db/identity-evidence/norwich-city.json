@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "norwich-city",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "FootballSquads Norwich City 2026/27 current Championship roster, cross-checked after the summer window",
+  "players": [
+    {"footballName":"Vladan Kovacevic","group":"Goalkeeper","nationality":"Bosnia and Herzegovina","shirt":1,"source":"FootballSquads Norwich City 2026/27 current roster · #1 Vladan Kovačević G","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Daniel Grimshaw","group":"Goalkeeper","nationality":"England","shirt":32,"source":"FootballSquads Norwich City 2026/27 current roster · #32 G"},
+    {"footballName":"Jack Stacey","group":"Defender","nationality":"England","shirt":3,"source":"FootballSquads Norwich City 2026/27 current roster · #3 D"},
+    {"footballName":"Harry Darling","group":"Defender","nationality":"England","shirt":6,"source":"FootballSquads Norwich City 2026/27 current roster · #6 D"},
+    {"footballName":"Lucien Mahovo","group":"Defender","nationality":"England","shirt":12,"source":"FootballSquads Norwich City 2026/27 current roster · #12 D"},
+    {"footballName":"Darlin Yongwa","group":"Defender","nationality":"Cameroon","shirt":13,"source":"FootballSquads Norwich City 2026/27 current roster · #13 D"},
+    {"footballName":"Ben Chrisene","group":"Defender","nationality":"England","shirt":14,"source":"FootballSquads Norwich City 2026/27 current roster · #14 D"},
+    {"footballName":"Pelle Mattsson","group":"Midfielder","nationality":"Denmark","shirt":7,"source":"FootballSquads Norwich City 2026/27 current roster · #7 M"},
+    {"footballName":"Andre Brooks","group":"Midfielder","nationality":"Jamaica","shirt":11,"source":"FootballSquads Norwich City 2026/27 current roster · #11 M"},
+    {"footballName":"Jacob Wright","group":"Midfielder","nationality":"England","shirt":16,"source":"FootballSquads Norwich City 2026/27 current roster · #16 M"},
+    {"footballName":"Forson Amankwah","group":"Midfielder","nationality":"Ghana","shirt":18,"source":"FootballSquads Norwich City 2026/27 current roster · #18 M"},
+    {"footballName":"Papa Amadou Diallo","group":"Midfielder","nationality":"Senegal","shirt":19,"source":"FootballSquads Norwich City 2026/27 current roster · #19 M"},
+    {"footballName":"Ante Crnac","group":"Forward","nationality":"Croatia","shirt":17,"source":"FootballSquads Norwich City 2026/27 current roster · #17 F"},
+    {"footballName":"Mohamed Toure","group":"Forward","nationality":"Australia","shirt":21,"source":"FootballSquads Norwich City 2026/27 current roster · #21 Mohamed Touré F","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Jovon Makama","group":"Forward","nationality":"England","shirt":24,"source":"FootballSquads Norwich City 2026/27 current roster · #24 F"},
+    {"footballName":"Mathias Kvistgaarden","group":"Forward","nationality":"Denmark","shirt":30,"source":"FootballSquads Norwich City 2026/27 current roster · #30 F"}
+  ]
+}
