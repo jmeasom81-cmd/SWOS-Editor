@@ -81,7 +81,8 @@ for(const queued of queue.queue||[]){
   });
 }
 const promotionReady=clubs.filter(c=>c.promotionReady);
-const next=clubs.find(c=>!c.promotionReady)||null;
+const next=clubs[0]||null;
+const nextEvidenceRequired=clubs.find(c=>!c.promotionReady)||null;
 const out={
   schemaVersion:1,
   season:queue.season,
@@ -104,6 +105,7 @@ const out={
     promotionReadyClubs:promotionReady.length
   },
   next:next?{clubId:next.clubId,clubName:next.clubName,status:next.status}:null,
+  nextEvidenceRequired:nextEvidenceRequired?{clubId:nextEvidenceRequired.clubId,clubName:nextEvidenceRequired.clubName,status:nextEvidenceRequired.status}:null,
   promotionReadyClubIds:promotionReady.map(c=>c.clubId),
   clubs
 };
