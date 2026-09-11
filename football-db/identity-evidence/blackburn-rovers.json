@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "blackburn-rovers",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "FootballSquads Blackburn Rovers 2026/27 current Championship roster, cross-checked after the summer window",
+  "players": [
+    {"footballName":"Aynsley Pears","group":"Goalkeeper","nationality":"England","shirt":1,"source":"FootballSquads Blackburn Rovers 2026/27 current roster · #1 GK"},
+    {"footballName":"Felix Goddard","group":"Goalkeeper","nationality":"England","shirt":37,"source":"FootballSquads Blackburn Rovers 2026/27 current roster · #37 GK"},
+    {"footballName":"Ryan Alebiosu","group":"Defender","nationality":"Nigeria","shirt":2,"source":"FootballSquads Blackburn Rovers 2026/27 current roster · #2 D"},
+    {"footballName":"Harry Pickering","group":"Defender","nationality":"England","shirt":3,"source":"FootballSquads Blackburn Rovers 2026/27 current roster · #3 D"},
+    {"footballName":"Yuri Ribeiro","group":"Defender","nationality":"Portugal","shirt":4,"source":"FootballSquads Blackburn Rovers 2026/27 current roster · #4 D"},
+    {"footballName":"Tom Atcheson","group":"Defender","nationality":"Northern Ireland","shirt":6,"source":"FootballSquads Blackburn Rovers 2026/27 current roster · #6 D"},
+    {"footballName":"Sean McLoughlin","group":"Defender","nationality":"Ireland","shirt":15,"source":"FootballSquads Blackburn Rovers 2026/27 current roster · #15 D"},
+    {"footballName":"Lewis Miller","group":"Defender","nationality":"Australia","shirt":33,"source":"FootballSquads Blackburn Rovers 2026/27 current roster · #33 D"},
+    {"footballName":"Todd Cantwell","group":"Midfielder","nationality":"England","shirt":10,"source":"FootballSquads Blackburn Rovers 2026/27 current roster · #10 M"},
+    {"footballName":"Jayden Fevrier","group":"Midfielder","nationality":"England","shirt":11,"source":"FootballSquads Blackburn Rovers 2026/27 current roster · #11 M"},
+    {"footballName":"Dion De Neve","group":"Midfielder","nationality":"Belgium","shirt":14,"source":"FootballSquads Blackburn Rovers 2026/27 current roster · #14 M"},
+    {"footballName":"Adam Forshaw","group":"Midfielder","nationality":"England","shirt":28,"source":"FootballSquads Blackburn Rovers 2026/27 current roster · #28 M"},
+    {"footballName":"Augustus Kargbo","group":"Forward","nationality":"Sierra Leone","shirt":7,"source":"FootballSquads Blackburn Rovers 2026/27 current roster · #7 F"},
+    {"footballName":"Andri Gudjohnsen","group":"Forward","nationality":"Iceland","shirt":9,"source":"FootballSquads Blackburn Rovers 2026/27 current roster · #9 Andri Guðjohnsen F","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Oladapo Afolayan","group":"Forward","nationality":"England","shirt":21,"source":"FootballSquads Blackburn Rovers 2026/27 current roster · #21 F"},
+    {"footballName":"Yuki Ohashi","group":"Forward","nationality":"Japan","shirt":23,"source":"FootballSquads Blackburn Rovers 2026/27 current roster · #23 F"}
+  ]
+}
