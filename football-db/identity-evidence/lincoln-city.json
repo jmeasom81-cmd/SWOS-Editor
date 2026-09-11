@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "lincoln-city",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "FootballSquads Lincoln City 2026/27 current Championship roster, cross-checked after the summer window",
+  "players": [
+    {"footballName":"George Wickens","group":"Goalkeeper","nationality":"England","shirt":1,"source":"FootballSquads Lincoln City 2026/27 current roster · #1 G"},
+    {"footballName":"Jamie Pardington","group":"Goalkeeper","nationality":"England","shirt":21,"source":"FootballSquads Lincoln City 2026/27 current roster · #21 G"},
+    {"footballName":"Tendayi Darikwa","group":"Defender","nationality":"Zimbabwe","shirt":2,"source":"FootballSquads Lincoln City 2026/27 current roster · #2 D"},
+    {"footballName":"Andrei Coubis","group":"Defender","nationality":"Romania","shirt":4,"source":"FootballSquads Lincoln City 2026/27 current roster · #4 Andrei Coubiș D","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Ryley Towler","group":"Defender","nationality":"England","shirt":6,"source":"FootballSquads Lincoln City 2026/27 current roster · #6 D"},
+    {"footballName":"Sonny Bradley","group":"Defender","nationality":"England","shirt":15,"source":"FootballSquads Lincoln City 2026/27 current roster · #15 D"},
+    {"footballName":"Callum Elder","group":"Defender","nationality":"Australia","shirt":20,"source":"FootballSquads Lincoln City 2026/27 current roster · #20 D"},
+    {"footballName":"Adam Reach","group":"Midfielder","nationality":"England","shirt":3,"source":"FootballSquads Lincoln City 2026/27 current roster · #3 M"},
+    {"footballName":"Tom Bayliss","group":"Midfielder","nationality":"England","shirt":8,"source":"FootballSquads Lincoln City 2026/27 current roster · #8 M"},
+    {"footballName":"Conor McGrandles","group":"Midfielder","nationality":"Scotland","shirt":14,"source":"FootballSquads Lincoln City 2026/27 current roster · #14 M"},
+    {"footballName":"Dominic Jefferies","group":"Midfielder","nationality":"Wales","shirt":16,"source":"FootballSquads Lincoln City 2026/27 current roster · #16 M"},
+    {"footballName":"Ivan Varfolomeyev","group":"Midfielder","nationality":"Ukraine","shirt":24,"source":"FootballSquads Lincoln City 2026/27 current roster · #24 M"},
+    {"footballName":"Reeco Hackett-Fairchild","group":"Forward","nationality":"Saint Lucia","shirt":7,"source":"FootballSquads Lincoln City 2026/27 current roster · #7 F"},
+    {"footballName":"Mason Melia","group":"Forward","nationality":"Ireland","shirt":10,"source":"FootballSquads Lincoln City 2026/27 current roster · #10 F"},
+    {"footballName":"Mikkel Ladefoged","group":"Forward","nationality":"Denmark","shirt":11,"source":"FootballSquads Lincoln City 2026/27 current roster · #11 F"},
+    {"footballName":"Rob Street","group":"Forward","nationality":"England","shirt":17,"source":"FootballSquads Lincoln City 2026/27 current roster · #17 F"}
+  ]
+}
