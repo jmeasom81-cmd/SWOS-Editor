@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "derby-county",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "FootballSquads Derby County 2026/27 current Championship roster, cross-checked after the summer window",
+  "players": [
+    {"footballName":"Jacob Widell Zetterstrom","group":"Goalkeeper","nationality":"Sweden","shirt":1,"source":"FootballSquads Derby County 2026/27 current roster · #1 Jacob Widell Zetterström G","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Richard O'Donnell","group":"Goalkeeper","nationality":"England","shirt":12,"source":"FootballSquads Derby County 2026/27 current roster · #12 G"},
+    {"footballName":"Derry John Murkin","group":"Defender","nationality":"England","shirt":2,"source":"FootballSquads Derby County 2026/27 current roster · #2 D"},
+    {"footballName":"Craig Forsyth","group":"Defender","nationality":"Scotland","shirt":3,"source":"FootballSquads Derby County 2026/27 current roster · #3 D"},
+    {"footballName":"Matthew Clarke","group":"Defender","nationality":"England","shirt":5,"source":"FootballSquads Derby County 2026/27 current roster · #5 D"},
+    {"footballName":"Sondre Langas","group":"Defender","nationality":"Norway","shirt":6,"source":"FootballSquads Derby County 2026/27 current roster · #6 Sondre Langås D","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Charlie Taylor","group":"Defender","nationality":"England","shirt":18,"source":"FootballSquads Derby County 2026/27 current roster · #18 D"},
+    {"footballName":"David Ozoh","group":"Midfielder","nationality":"England","shirt":4,"source":"FootballSquads Derby County 2026/27 current roster · #4 M"},
+    {"footballName":"Bobby Clark","group":"Midfielder","nationality":"England","shirt":8,"source":"FootballSquads Derby County 2026/27 current roster · #8 M"},
+    {"footballName":"Sammie Szmodics","group":"Midfielder","nationality":"Ireland","shirt":11,"source":"FootballSquads Derby County 2026/27 current roster · #11 M"},
+    {"footballName":"Kenzo Goudmijn","group":"Midfielder","nationality":"Netherlands","shirt":17,"source":"FootballSquads Derby County 2026/27 current roster · #17 M"},
+    {"footballName":"Alex Mowatt","group":"Midfielder","nationality":"England","shirt":20,"source":"FootballSquads Derby County 2026/27 current roster · #20 M"},
+    {"footballName":"Patrick Agyemang","group":"Forward","nationality":"United States","shirt":7,"source":"FootballSquads Derby County 2026/27 current roster · #7 F"},
+    {"footballName":"Carlton Morris","group":"Forward","nationality":"England","shirt":9,"source":"FootballSquads Derby County 2026/27 current roster · #9 F"},
+    {"footballName":"Rhian Brewster","group":"Forward","nationality":"England","shirt":10,"source":"FootballSquads Derby County 2026/27 current roster · #10 F"},
+    {"footballName":"Filip Bilbija","group":"Forward","nationality":"Germany","shirt":13,"source":"FootballSquads Derby County 2026/27 current roster · #13 F"}
+  ]
+}
