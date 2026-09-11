@@ -27,7 +27,8 @@ const steps=[
   'patch-v146.mjs',
   'patch-v147.mjs',
   'patch-v148.mjs',
-  'patch-v149.mjs'
+  'patch-v149.mjs',
+  'patch-v150.mjs'
 ];
 
 for(const step of steps){
