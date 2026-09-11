@@ -26,7 +26,8 @@ const steps=[
   'publish-coverage.mjs',
   'patch-v146.mjs',
   'patch-v147.mjs',
-  'patch-v148.mjs'
+  'patch-v148.mjs',
+  'patch-v149.mjs'
 ];
 
 for(const step of steps){
