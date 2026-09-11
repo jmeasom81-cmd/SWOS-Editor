@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "bolton-wanderers",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "FootballSquads Bolton Wanderers 2026/27 current Championship roster, cross-checked after the summer window",
+  "players": [
+    {"footballName":"Jack Bonham","group":"Goalkeeper","nationality":"Ireland","shirt":1,"source":"FootballSquads Bolton Wanderers 2026/27 current roster · #1 G"},
+    {"footballName":"Gavin Bazunu","group":"Goalkeeper","nationality":"Ireland","shirt":31,"source":"FootballSquads Bolton Wanderers 2026/27 current roster · #31 G"},
+    {"footballName":"Chris Forino-Joseph","group":"Defender","nationality":"Saint Lucia","shirt":3,"source":"FootballSquads Bolton Wanderers 2026/27 current roster · #3 D"},
+    {"footballName":"Ben Davies","group":"Defender","nationality":"England","shirt":6,"source":"FootballSquads Bolton Wanderers 2026/27 current roster · #6 D"},
+    {"footballName":"Akin Famewo","group":"Defender","nationality":"England","shirt":14,"source":"FootballSquads Bolton Wanderers 2026/27 current roster · #14 D"},
+    {"footballName":"Eoin Toal","group":"Defender","nationality":"Northern Ireland","shirt":18,"source":"FootballSquads Bolton Wanderers 2026/27 current roster · #18 D"},
+    {"footballName":"Gaizka Larrazabal","group":"Defender","nationality":"Spain","shirt":22,"source":"FootballSquads Bolton Wanderers 2026/27 current roster · #22 D"},
+    {"footballName":"Xavier Simons","group":"Midfielder","nationality":"England","shirt":4,"source":"FootballSquads Bolton Wanderers 2026/27 current roster · #4 M"},
+    {"footballName":"Josh Sheehan","group":"Midfielder","nationality":"Wales","shirt":8,"source":"FootballSquads Bolton Wanderers 2026/27 current roster · #8 M"},
+    {"footballName":"David Watson","group":"Midfielder","nationality":"Scotland","shirt":12,"source":"FootballSquads Bolton Wanderers 2026/27 current roster · #12 M"},
+    {"footballName":"Joel Randall","group":"Midfielder","nationality":"England","shirt":17,"source":"FootballSquads Bolton Wanderers 2026/27 current roster · #17 M"},
+    {"footballName":"Ethan Erhahon","group":"Midfielder","nationality":"Scotland","shirt":21,"source":"FootballSquads Bolton Wanderers 2026/27 current roster · #21 M"},
+    {"footballName":"Kyliane Dong","group":"Forward","nationality":"France","shirt":7,"source":"FootballSquads Bolton Wanderers 2026/27 current roster · #7 F"},
+    {"footballName":"Sam Dalby","group":"Forward","nationality":"England","shirt":10,"source":"FootballSquads Bolton Wanderers 2026/27 current roster · #10 F"},
+    {"footballName":"Thierry Gale","group":"Forward","nationality":"Barbados","shirt":11,"source":"FootballSquads Bolton Wanderers 2026/27 current roster · #11 F"},
+    {"footballName":"Ruben Rodrigues","group":"Forward","nationality":"Portugal","shirt":20,"source":"FootballSquads Bolton Wanderers 2026/27 current roster · #20 Rúben Rodrigues F","notes":"ASCII football name retained for SWOS database compatibility."}
+  ]
+}
