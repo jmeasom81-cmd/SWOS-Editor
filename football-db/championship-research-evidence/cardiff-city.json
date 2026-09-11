@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "cardiff-city",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "Cardiff City 2026/27 current squad and role cross-check using FootballSquads, current Cardiff/FBref activity and Transfermarkt player/squad records. Transfermarkt supplies the latest published market values for the selected identity 16; Jack Moylan uses a current 1 September 2026 FootballTransfers ETV because a current Transfermarkt valuation was not surfaced.",
+  "players": {
+    "Nathan Trott": {"age":27,"marketValueM":1.5,"position":0,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/cardiff.htm","https://www.transfermarkt.co.uk/nathan-trott/profil/spieler/431422"]},
+    "Matthew Turner": {"age":24,"marketValueM":0.05,"position":0,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/cardiff.htm","https://www.transfermarkt.com/cardiff-city/startseite/verein/603/saison_id/2026"]},
+    "William Fish": {"age":23,"marketValueM":0.8,"position":3,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/cardiff.htm","https://www.transfermarkt.com/cardiff-city/startseite/verein/603/saison_id/2026"],"notes":"Transfermarkt displays Will Fish; published SWOS Studio identity name remains William Fish."},
+    "Joel Bagan": {"age":25,"marketValueM":1,"position":2,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/cardiff.htm","https://www.transfermarkt.com/cardiff-city/marktwertanalyse/verein/603/sort/vertrag_bis"],"notes":"Age is calculated from 3 September 2001 at the 11 September 2026 snapshot; some earlier crawls still display 24."},
+    "Gabriel Osho": {"age":28,"marketValueM":1.2,"position":3,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/cardiff.htm","https://www.transfermarkt.co.uk/gabriel-osho/profil/spieler/364409"]},
+    "Krystian Bielik": {"age":28,"marketValueM":2.2,"position":3,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/cardiff.htm","https://www.transfermarkt.com/cardiff-city/startseite/verein/603/saison_id/2026"]},
+    "Perry Ng": {"age":30,"marketValueM":1.2,"position":1,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/cardiff.htm","https://www.transfermarkt.co.uk/perry-ng/profil/spieler/322677"]},
+    "Ronan Kpakio": {"age":19,"marketValueM":1.2,"position":1,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/cardiff.htm","https://www.transfermarkt.co.uk/ronan-kpakio/profil/spieler/1005855"]},
+    "Jack Moylan": {"age":25,"marketValueM":0.7,"position":6,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/cardiff.htm","https://www.footballtransfers.com/en/players/jack-moylan"],"notes":"Current FootballTransfers ETV last updated 1 September 2026; attacking/central midfield maps to SWOS midfield code 6."},
+    "Rubin Colwill": {"age":24,"marketValueM":2,"position":6,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/cardiff.htm","https://www.transfermarkt.co.uk/rubin-colwill/profil/spieler/626474"],"notes":"Attacking midfield maps to SWOS midfield code 6."},
+    "Alex Robertson": {"age":23,"marketValueM":1.5,"position":6,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/cardiff.htm","https://www.transfermarkt.co.uk/alex-robertson/profil/spieler/609887"]},
+    "Ollie Tanner": {"age":24,"marketValueM":1.2,"position":4,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/cardiff.htm","https://www.transfermarkt.com/cardiff-city/marktwertanalyse/verein/603"],"notes":"Current roster lists Tanner as a forward/right winger; mapped to SWOS RW/RM code 4."},
+    "Cian Ashford": {"age":21,"marketValueM":1.5,"position":4,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/cardiff.htm","https://www.transfermarkt.com/cardiff-city/marktwertanalyse/verein/603"],"notes":"Right winger mapped to SWOS RW/RM code 4."},
+    "Yousef Salech": {"age":24,"marketValueM":3.8,"position":7,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/cardiff.htm","https://www.transfermarkt.com/cardiff-city/marktwertanalyse/verein/603"]},
+    "Isaak Davies": {"age":24,"marketValueM":1,"position":5,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/cardiff.htm","https://www.transfermarkt.co.uk/cardiff-city/startseite/verein/603"],"notes":"Primary current valuation listing is left winger, mapped to SWOS LW/LM code 5."},
+    "Callum Robinson": {"age":31,"marketValueM":0.7,"position":7,"sources":["https://footballsquads.co.uk/eng/2026-2027/flcham/cardiff.htm","https://www.transfermarkt.com/cardiff-city/marktwertanalyse/verein/603"]}
+  }
+}
