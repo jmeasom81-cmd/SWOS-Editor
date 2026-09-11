@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "bristol-city",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "FootballSquads Bristol City 2026/27 current Championship roster, cross-checked after the summer window",
+  "players": [
+    {"footballName":"Sam Tickle","group":"Goalkeeper","nationality":"England","shirt":1,"source":"FootballSquads Bristol City 2026/27 current roster · #1 G"},
+    {"footballName":"Bradley Collins","group":"Goalkeeper","nationality":"England","shirt":40,"source":"FootballSquads Bristol City 2026/27 current roster · #40 G"},
+    {"footballName":"Lisav Eissat","group":"Defender","nationality":"Romania","shirt":2,"source":"FootballSquads Bristol City 2026/27 current roster · #2 D"},
+    {"footballName":"Cameron Pring","group":"Defender","nationality":"England","shirt":3,"source":"FootballSquads Bristol City 2026/27 current roster · #3 D"},
+    {"footballName":"Rob Atkinson","group":"Defender","nationality":"England","shirt":5,"source":"FootballSquads Bristol City 2026/27 current roster · #5 D"},
+    {"footballName":"Luke McNally","group":"Defender","nationality":"Ireland","shirt":15,"source":"FootballSquads Bristol City 2026/27 current roster · #15 D"},
+    {"footballName":"Rob Dickie","group":"Defender","nationality":"England","shirt":16,"source":"FootballSquads Bristol City 2026/27 current roster · #16 D"},
+    {"footballName":"Adam Randell","group":"Midfielder","nationality":"England","shirt":4,"source":"FootballSquads Bristol City 2026/27 current roster · #4 M"},
+    {"footballName":"Joe Williams","group":"Midfielder","nationality":"England","shirt":8,"source":"FootballSquads Bristol City 2026/27 current roster · #8 M"},
+    {"footballName":"Jason Knight","group":"Midfielder","nationality":"Ireland","shirt":12,"source":"FootballSquads Bristol City 2026/27 current roster · #12 M"},
+    {"footballName":"Tomi Horvat","group":"Midfielder","nationality":"Slovenia","shirt":14,"source":"FootballSquads Bristol City 2026/27 current roster · #14 M"},
+    {"footballName":"Sam Greenwood","group":"Midfielder","nationality":"England","shirt":20,"source":"FootballSquads Bristol City 2026/27 current roster · #20 M"},
+    {"footballName":"Yu Hirakawa","group":"Forward","nationality":"Japan","shirt":7,"source":"FootballSquads Bristol City 2026/27 current roster · #7 F"},
+    {"footballName":"Lorent Tolaj","group":"Forward","nationality":"Switzerland","shirt":9,"source":"FootballSquads Bristol City 2026/27 current roster · #9 F"},
+    {"footballName":"Scott Twine","group":"Forward","nationality":"England","shirt":10,"source":"FootballSquads Bristol City 2026/27 current roster · #10 F"},
+    {"footballName":"Sam Bell","group":"Forward","nationality":"England","shirt":11,"source":"FootballSquads Bristol City 2026/27 current roster · #11 F"}
+  ]
+}
