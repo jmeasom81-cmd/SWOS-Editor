@@ -18,6 +18,7 @@ const steps=[
   'promote-research-evidence.mjs','validate-football-db.mjs','publish-coverage.mjs','publish-research-queue.mjs','publish-research-intake.mjs',
   'patch-v158.mjs','publish-football-db-dist.mjs','validate-football-db-dist.mjs','patch-v1581.mjs',
 
+  'validate-identity-evidence-source.mjs',
   'publish-identity-expansion-queue.mjs','publish-identity-evidence-intake.mjs','promote-identity-evidence.mjs','publish-identities.mjs','validate-england-identity-expansion.mjs','publish-coverage.mjs','publish-identity-expansion-queue.mjs','publish-identity-evidence-intake.mjs','publish-football-db-dist.mjs','validate-football-db-dist.mjs','patch-v159.mjs',
 
   'promote-identity-evidence.mjs','publish-identities.mjs','validate-england-identity-expansion.mjs','publish-coverage.mjs','publish-identity-expansion-queue.mjs','publish-identity-evidence-intake.mjs',
