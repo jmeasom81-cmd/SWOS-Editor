@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "bolton-wanderers",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "Bolton Wanderers 2026/27 post-window squad cross-check using FootballSquads and official club evidence, with Transfermarkt current/latest published market values. Joel Randall is excluded after his 2 September season-long loan to Chesterfield and Luca Stephenson is included through the auditable identity correction layer.",
+  "players": {
+    "Jack Bonham": {"age":32,"marketValueM":0.225,"position":0,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/bolton.htm","https://www.transfermarkt.com/bolton-wanderers/marktwertanalyse/verein/355"]},
+    "Gavin Bazunu": {"age":24,"marketValueM":8,"position":0,"sources":["https://www.bwfc.co.uk/news/bazunu-signs-wanderers","https://www.transfermarkt.com/gavin-bazunu/profil/spieler/585550"]},
+    "Chris Forino-Joseph": {"age":26,"marketValueM":0.35,"position":3,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/bolton.htm","https://www.transfermarkt.com/bolton/marktwertanalyse/verein/355/sort/vertrag_bis"]},
+    "Ben Davies": {"age":31,"marketValueM":0.8,"position":3,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/bolton.htm","https://www.transfermarkt.com/bolton-wanderers/marktwertanalyse/verein/355"]},
+    "Akin Famewo": {"age":27,"marketValueM":0.8,"position":3,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/bolton.htm","https://www.transfermarkt.com/akin-famewo/profil/spieler/425713"]},
+    "Eoin Toal": {"age":27,"marketValueM":0.8,"position":3,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/bolton.htm","https://www.transfermarkt.com/eoin-toal/marktwertverlauf/spieler/412607"]},
+    "Gaizka Larrazabal": {"age":28,"marketValueM":4,"position":1,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/bolton.htm","https://www.transfermarkt.com/gaizka-larrazabal/profil/spieler/439465"],"notes":"FootballSquads supplies the post-window Bolton roster evidence; Transfermarkt supplies the latest published €4m valuation and identifies right-back as the primary position."},
+    "Luca Stephenson": {"age":22,"marketValueM":1,"position":1,"sources":["https://www.bwfc.co.uk/news/luca-whos-landed","https://www.transfermarkt.com/luca-stephenson/profil/spieler/734424"],"notes":"Added through the auditable Bolton identity correction after Joel Randall's season-long loan to Chesterfield. Primary position is right-back, with defensive/central midfield also documented."},
+    "Xavier Simons": {"age":23,"marketValueM":0.8,"position":6,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/bolton.htm","https://www.transfermarkt.com/bolton-wanderers/kadernaechstesaison/verein/355/saison_id/2026"]},
+    "Josh Sheehan": {"age":31,"marketValueM":0.4,"position":6,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/bolton.htm","https://www.transfermarkt.com/bolton-wanderers/marktwertanalyse/verein/355"]},
+    "David Watson": {"age":21,"marketValueM":2,"position":6,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/bolton.htm","https://www.transfermarkt.com/bolton-wanderers/kadernaechstesaison/verein/355/saison_id/2026"]},
+    "Ethan Erhahon": {"age":25,"marketValueM":0.75,"position":6,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/bolton.htm","https://www.transfermarkt.com/bolton-wanderers/marktwertanalyse/verein/355"]},
+    "Kyliane Dong": {"age":21,"marketValueM":0.9,"position":5,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/bolton.htm","https://www.transfermarkt.com/kyliane-dong/profil/spieler/982863"],"notes":"Primary position is left winger, mapped to SWOS LW/LM code 5."},
+    "Sam Dalby": {"age":26,"marketValueM":1,"position":7,"sources":["https://www.bwfc.co.uk/player/262","https://www.transfermarkt.co.uk/sam-dalby/profil/spieler/470128"]},
+    "Thierry Gale": {"age":24,"marketValueM":0.55,"position":5,"sources":["https://theanalyst.com/players/6392/thierry-gale","https://www.transfermarkt.com/thierry-gale/profil/spieler/576125"],"notes":"Left winger mapped to SWOS LW/LM code 5."},
+    "Ruben Rodrigues": {"age":30,"marketValueM":0.45,"position":6,"sources":["https://www.bwfc.co.uk/news/ruben-rolls","https://www.transfermarkt.com/ruben-rodrigues/profil/spieler/531674"],"notes":"ASCII football name retained to match the published SWOS Studio identity record for Rúben Rodrigues; attacking midfield maps to SWOS midfield code 6."}
+  }
+}
