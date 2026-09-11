@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "sunderland",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "Current Sunderland 2026/27 squad cross-check plus latest available Transfermarkt age, role and market-value evidence",
+  "players": {
+    "Robin Roefs": {"age":23,"marketValueM":28,"position":0,"sources":["Transfermarkt Sunderland 26/27 profile/value · GK · €28m"]},
+    "Simon Moore": {"age":36,"marketValueM":0.075,"position":0,"sources":["Transfermarkt Sunderland 26/27 profile/value · GK · €75k"]},
+    "Omar Alderete": {"age":29,"marketValueM":13,"position":3,"sources":["Transfermarkt Sunderland 26/27 profile/value · CB · €13m"]},
+    "Dan Ballard": {"age":26,"marketValueM":20,"position":3,"sources":["Transfermarkt Sunderland 26/27 profile/value · CB · €20m"]},
+    "Kevin Danso": {"age":27,"marketValueM":20,"position":3,"sources":["Current Sunderland 2026/27 squad confirms Kevin Danso","Transfermarkt latest available Kevin Danso profile/value · CB · €20m"],"notes":"Latest available valuation predates the 2026 Sunderland loan and is retained as market-value evidence, not a transfer fee."},
+    "Trai Hume": {"age":24,"marketValueM":22,"position":1,"sources":["Transfermarkt Sunderland 26/27 profile/value · RB · €22m"]},
+    "Reinildo": {"age":32,"marketValueM":4,"position":2,"sources":["Transfermarkt Sunderland 26/27 Reinildo Mandava profile/value · LB · €4m"],"notes":"Identity feed uses short football name Reinildo."},
+    "Nilson Angulo": {"age":23,"marketValueM":17,"position":5,"sources":["Transfermarkt Sunderland 26/27 profile/value · LW · €17m"]},
+    "Alan Browne": {"age":31,"marketValueM":2,"position":6,"sources":["Transfermarkt Sunderland 26/27 profile/value · CM · €2m"]},
+    "Habib Diarra": {"age":22,"marketValueM":35,"position":6,"sources":["Transfermarkt Sunderland 26/27 profile/value · CM · €35m"]},
+    "Noah Sadiki": {"age":21,"marketValueM":35,"position":6,"sources":["Transfermarkt Sunderland 26/27 profile/value · CM · €35m"]},
+    "Granit Xhaka": {"age":33,"marketValueM":8,"position":6,"sources":["Transfermarkt Sunderland 26/27 profile/value · DM · €8m"]},
+    "Brian Brobbey": {"age":24,"marketValueM":30,"position":7,"sources":["Transfermarkt Sunderland 26/27 profile/value · CF · €30m"]},
+    "Malick Fofana": {"age":21,"marketValueM":30,"position":5,"sources":["Current Sunderland 2026/27 squad confirms Malick Fofana after summer transfer","Transfermarkt latest available Malick Fofana profile/value · LW · €30m"],"notes":"Latest available valuation predates the Sunderland move and is retained as market-value evidence, not the reported transfer fee."},
+    "Wilson Isidor": {"age":26,"marketValueM":18,"position":7,"sources":["Transfermarkt Sunderland 26/27 profile/value · CF · €18m"],"notes":"Age updated after 27 August 2026 birthday."},
+    "Chemsdine Talbi": {"age":21,"marketValueM":25,"position":4,"sources":["Transfermarkt Sunderland 26/27 profile/value · RW · €25m","Current September 2026 Sunderland match reporting confirms active first-team status"]}
+  }
+}
