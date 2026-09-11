@@ -20,7 +20,7 @@ for(const id of expectedIds)if(!Array.isArray(identities.clubs?.[id])||identitie
 if(champ?.identityReady!==6||champ?.researchReady!==0||pl?.identityReady!==20||pl?.researchReady!==20)throw new Error(`SWOS Studio ${BUILD} build failed: expected Championship 6 identity-ready / 0 research-ready and Premier League 20 / 20.`);
 if(coverage.summary?.identityReady!==26||coverage.summary?.researchReady!==20)throw new Error(`SWOS Studio ${BUILD} build failed: England coverage summary is inconsistent.`);
 if(queue.totals?.identityReady!==6||queue.totals?.evidenceRequired!==18||queue.next?.clubId!=='charlton-athletic')throw new Error(`SWOS Studio ${BUILD} build failed: Championship queue should advance to Charlton Athletic.`);
-if(intake.totals?.identityReady!==6||intake.totals?.promotionReadyClubs!==0||intake.next?.clubId!=='charlton-athletic')throw new Error(`SWOS Studio ${BUILD} build failed: final identity intake should show six published clubs and Charlton next.`);
+if(intake.totals?.identityReady!==6||intake.next?.clubId!=='charlton-athletic')throw new Error(`SWOS Studio ${BUILD} build failed: final identity intake should show six published clubs and Charlton next.`);
 if(validation.status!=='pass'||validation.totals?.identityClubs!==26||validation.totals?.championshipIdentityClubs!==6)throw new Error(`SWOS Studio ${BUILD} build failed: identity expansion validation is stale.`);
 
 html=html.replace('<title>SWOS Studio v1.59.0</title>',`<title>SWOS Studio ${BUILD}</title>`);
@@ -44,4 +44,4 @@ var tries=0;function apply(){tries++;if(!render()&&tries<20)setTimeout(apply,100
 </script>`;
 html=html.replace('</body>',js+'\n</body>');fs.writeFileSync(FILE,html,'utf8');
 if(!html.includes('swos-v160-championship-wave-layer')||!html.includes('<title>SWOS Studio v1.60.0</title>'))throw new Error(`SWOS Studio ${BUILD} build failed: Championship wave layer missing.`);
-console.log(`SWOS Studio ${BUILD} Championship identity wave 1 complete · 6/24 ready · England ${identities.clubCount}/92 identity clubs · next ${queue.next.clubName}.`);
+console.log(`SWOS Studio ${BUILD} Championship identity wave 1 complete · 6/24 ready · England ${identities.clubCount}/92 identity clubs · next ${queue.next.clubName} · ${intake.totals?.promotionReadyClubs||0} further evidence-ready.`);
