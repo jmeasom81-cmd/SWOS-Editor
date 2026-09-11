@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "ipswich",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "Current Ipswich Town 2026/27 squad/value evidence plus official club confirmation for deadline-day Zian Flemming",
+  "players": {
+    "Alex Palmer": {"age":30,"marketValueM":1,"position":0,"sources":["MatchChase Ipswich Premier League 26/27 current squad · GK · €1m"]},
+    "Kjell Scherpen": {"age":26,"marketValueM":8,"position":0,"sources":["MatchChase Ipswich Premier League 26/27 current squad · GK · €8m"]},
+    "Darnell Furlong": {"age":30,"marketValueM":2.5,"position":1,"sources":["MatchChase Ipswich Premier League 26/27 current squad · RB · €2.5m"]},
+    "Leif Davis": {"age":26,"marketValueM":20,"position":2,"sources":["MatchChase Ipswich Premier League 26/27 current squad · LB · €20m"]},
+    "Cedric Kipre": {"age":29,"marketValueM":2,"position":3,"sources":["MatchChase Ipswich Premier League 26/27 current squad · Cédric Kipré · CB · €2m"],"notes":"Identity feed uses ASCII spelling Cedric Kipre."},
+    "Issa Diop": {"age":29,"marketValueM":8,"position":3,"sources":["MatchChase Ipswich Premier League 26/27 current squad · CB · €8m"]},
+    "Dara O'Shea": {"age":27,"marketValueM":16,"position":3,"sources":["MatchChase Ipswich Premier League 26/27 current squad · CB · €16m"]},
+    "Azor Matusiwa": {"age":28,"marketValueM":12,"position":6,"sources":["MatchChase Ipswich Premier League 26/27 current squad · DM · €12m"]},
+    "Julio Enciso": {"age":22,"marketValueM":25,"position":6,"sources":["MatchChase Ipswich Premier League 26/27 current squad · AM · €25m"]},
+    "Florentino": {"age":27,"marketValueM":16,"position":6,"sources":["MatchChase Ipswich Premier League 26/27 current squad · DM · €16m"]},
+    "Sasa Lukic": {"age":30,"marketValueM":10,"position":6,"sources":["MatchChase Ipswich Premier League 26/27 current squad · Saša Lukić · CM · €10m"],"notes":"Identity feed uses ASCII spelling Sasa Lukic."},
+    "Exequiel Palacios": {"age":27,"marketValueM":25,"position":6,"sources":["Current Ipswich 2026/27 squad/value evidence · CM · €25m"]},
+    "Abdul Fatawu": {"age":22,"marketValueM":20,"position":4,"sources":["Current Ipswich 2026/27 squad/value evidence · RW · €20m","Ipswich current squad confirms number 7 forward"]},
+    "Zian Flemming": {"age":28,"marketValueM":12.6,"position":7,"sources":["Ipswich Town official signing 01/09/2026 confirms striker and number 9","Current Zian Flemming player profile · Ipswich Town · €12.6m"]},
+    "Emersonn": {"age":22,"marketValueM":8,"position":7,"sources":["Transfermarkt Emersonn June 2026 value · Centre-Forward · €8m","Ipswich current squad confirms number 19 forward"],"notes":"Latest June 2026 market-value evidence is retained after the summer move; it is not the transfer fee."},
+    "Daizen Maeda": {"age":28,"marketValueM":13,"position":5,"sources":["Current Ipswich 2026/27 squad/value evidence · LW · €13m"]}
+  }
+}
