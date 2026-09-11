@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "charlton-athletic",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "Charlton Athletic 2026/27 current roster and roles cross-checked against FootballSquads and current Transfermarkt squad records. Transfermarkt values are used where published; Tiernan Brooks, Nathaniel Chalobah, Karlan Grant and Millenic Alli use current September/August 2026 player-value sources where Transfermarkt is blank or predates their current Charlton situation.",
+  "players": {
+    "Thomas Kaminski": {"age":33,"marketValueM":1,"position":0,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/charlton.htm","https://www.transfermarkt.co.uk/charlton-athletic/startseite/verein/358/saison_id/2026"]},
+    "Tiernan Brooks": {"age":23,"marketValueM":0.079,"position":0,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/charlton.htm","https://www.sofascore.com/football/player/tiernan-brooks/1131881"],"notes":"Transfermarkt currently exposes no valuation. Sofascore supplies the current player value and agrees with the 17 June 2003 birth date used by FootballSquads."},
+    "Kayne Ramsay": {"age":25,"marketValueM":1,"position":1,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/charlton.htm","https://www.transfermarkt.co.uk/charlton-athletic/kader/verein/358"]},
+    "Josh Edwards": {"age":26,"marketValueM":0.6,"position":2,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/charlton.htm","https://www.transfermarkt.co.uk/charlton-athletic/kader/verein/358"]},
+    "Reece Burke": {"age":30,"marketValueM":1,"position":3,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/charlton.htm","https://www.transfermarkt.com/charlton-athletic/kader/verein/358/saison_id/2026/plus/1"],"notes":"Age is calculated from 2 September 1996 at the 11 September 2026 snapshot; older valuation crawls may still display 29."},
+    "Lloyd Jones": {"age":30,"marketValueM":1.2,"position":3,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/charlton.htm","https://www.transfermarkt.com/charlton-athletic/kader/verein/358/saison_id/2026/plus/1"]},
+    "Billy Koumetio": {"age":23,"marketValueM":0.4,"position":3,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/charlton.htm","https://www.transfermarkt.co.uk/charlton-athletic/kader/verein/358"]},
+    "Conor Coventry": {"age":26,"marketValueM":2,"position":6,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/charlton.htm","https://www.transfermarkt.co.uk/charlton-athletic/kader/verein/358"]},
+    "Harvey Knibbs": {"age":27,"marketValueM":1.5,"position":6,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/charlton.htm","https://www.transfermarkt.co.uk/charlton-athletic/kader/verein/358"],"notes":"Attacking midfield maps to SWOS midfield code 6."},
+    "Greg Docherty": {"age":30,"marketValueM":0.8,"position":6,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/charlton.htm","https://www.transfermarkt.co.uk/charlton-athletic/kader/verein/358"],"notes":"Age is calculated from 10 September 1996 at the 11 September 2026 snapshot; older crawls may still show 29."},
+    "Sonny Carey": {"age":25,"marketValueM":4,"position":6,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/charlton.htm","https://www.transfermarkt.com/charlton-athletic/startseite/verein/358/saison_id/2026"],"notes":"Attacking midfield maps to SWOS midfield code 6."},
+    "Nathaniel Chalobah": {"age":31,"marketValueM":0.5,"position":6,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/charlton.htm","https://www.playmakerstats.com/player/nathaniel-chalobah/142933"],"notes":"Current 2026/27 player profile supplies a €500k value; defensive midfield maps to SWOS midfield code 6."},
+    "Tyreece Campbell": {"age":22,"marketValueM":1.5,"position":5,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/charlton.htm","https://www.transfermarkt.co.uk/charlton-athletic/kader/verein/358"],"notes":"Left winger mapped to SWOS LW/LM code 5."},
+    "Karlan Grant": {"age":28,"marketValueM":1.2,"position":5,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/charlton.htm","https://www.footballtransfers.com/en/players/karlan-grant/transfer-history","https://www.fotmob.com/en-GB/players/586467/karlan-grant"],"notes":"Current Charlton sources show a July 2026 move and September 2026 €1.2m value. Current primary role is left wing, mapped to SWOS LW/LM code 5."},
+    "Miles Leaburn": {"age":22,"marketValueM":0.8,"position":7,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/charlton.htm","https://www.transfermarkt.com/miles-leaburn/marktwertverlauf/spieler/874064"]},
+    "Millenic Alli": {"age":26,"marketValueM":1.2,"position":5,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/charlton.htm","https://www.rte.ie/sport/soccer/2026/0726/1585161-ireland-international-allu-joins-charlton-athletic/","https://www.fotmob.com/en-GB/players/1119806/millenic-alli"],"notes":"Current September 2026 Charlton value used; left winger mapped to SWOS LW/LM code 5."}
+  }
+}
