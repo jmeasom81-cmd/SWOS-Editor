@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "middlesbrough",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "FootballSquads Middlesbrough 2026/27 current Championship roster, cross-checked after the summer window",
+  "players": [
+    {"footballName":"Seny Dieng","group":"Goalkeeper","nationality":"Senegal","shirt":21,"source":"FootballSquads Middlesbrough 2026/27 current roster · #21 G"},
+    {"footballName":"Sol Brynn","group":"Goalkeeper","nationality":"England","shirt":31,"source":"FootballSquads Middlesbrough 2026/27 current roster · #31 G"},
+    {"footballName":"Callum Brittain","group":"Defender","nationality":"England","shirt":2,"source":"FootballSquads Middlesbrough 2026/27 current roster · #2 D"},
+    {"footballName":"Alfie Jones","group":"Defender","nationality":"Canada","shirt":5,"source":"FootballSquads Middlesbrough 2026/27 current roster · #5 D"},
+    {"footballName":"Luke Ayling","group":"Defender","nationality":"England","shirt":12,"source":"FootballSquads Middlesbrough 2026/27 current roster · #12 D"},
+    {"footballName":"Finley Munroe","group":"Defender","nationality":"England","shirt":15,"source":"FootballSquads Middlesbrough 2026/27 current roster · #15 D"},
+    {"footballName":"Max Arfsten","group":"Defender","nationality":"United States","shirt":17,"source":"FootballSquads Middlesbrough 2026/27 current roster · #17 D"},
+    {"footballName":"Sebastian Berhalter","group":"Midfielder","nationality":"United States","shirt":6,"source":"FootballSquads Middlesbrough 2026/27 current roster · #6 M"},
+    {"footballName":"Riley McGree","group":"Midfielder","nationality":"Australia","shirt":8,"source":"FootballSquads Middlesbrough 2026/27 current roster · #8 M"},
+    {"footballName":"Aidan Morris","group":"Midfielder","nationality":"United States","shirt":10,"source":"FootballSquads Middlesbrough 2026/27 current roster · #10 M"},
+    {"footballName":"Myles Peart-Harris","group":"Midfielder","nationality":"England","shirt":14,"source":"FootballSquads Middlesbrough 2026/27 current roster · #14 M"},
+    {"footballName":"Jeremy Sarmiento","group":"Midfielder","nationality":"Ecuador","shirt":16,"source":"FootballSquads Middlesbrough 2026/27 current roster · #16 M"},
+    {"footballName":"Will Lankshear","group":"Forward","nationality":"England","shirt":7,"source":"FootballSquads Middlesbrough 2026/27 current roster · #7 F"},
+    {"footballName":"Tommy Conway","group":"Forward","nationality":"Scotland","shirt":9,"source":"FootballSquads Middlesbrough 2026/27 current roster · #9 F"},
+    {"footballName":"Morgan Whittaker","group":"Forward","nationality":"England","shirt":11,"source":"FootballSquads Middlesbrough 2026/27 current roster · #11 F"},
+    {"footballName":"David Strelec","group":"Forward","nationality":"Slovakia","shirt":13,"source":"FootballSquads Middlesbrough 2026/27 current roster · #13 F"}
+  ]
+}
