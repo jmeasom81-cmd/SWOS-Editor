@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "brentford",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "Transfermarkt Brentford detailed squad 2026/27 cross-checked with current 2026/27 squad/value listing and Brentford official squad evidence",
+  "players": {
+    "Caoimhin Kelleher": {"age":27,"marketValueM":28,"position":0,"sources":["Transfermarkt Brentford detailed squad 2026/27 · Goalkeeper"]},
+    "Hakon Valdimarsson": {"age":24,"marketValueM":2.5,"position":0,"sources":["Transfermarkt Brentford detailed squad 2026/27 · Goalkeeper"]},
+    "Aaron Hickey": {"age":24,"marketValueM":16,"position":1,"sources":["Transfermarkt Brentford detailed squad 2026/27 · Right-Back"]},
+    "Rico Henry": {"age":29,"marketValueM":13,"position":2,"sources":["Transfermarkt Brentford detailed squad 2026/27 · Left-Back"]},
+    "Sepp van den Berg": {"age":24,"marketValueM":32,"position":3,"sources":["Transfermarkt Brentford detailed squad 2026/27 · Centre-Back"]},
+    "Kristoffer Ajer": {"age":28,"marketValueM":18,"position":3,"sources":["Transfermarkt Brentford detailed squad 2026/27 · Centre-Back"]},
+    "Nathan Collins": {"age":25,"marketValueM":30,"position":3,"sources":["Transfermarkt Brentford detailed squad 2026/27 · Centre-Back"]},
+    "Yehor Yarmoliuk": {"age":22,"marketValueM":32,"position":6,"sources":["Transfermarkt Brentford detailed squad 2026/27 · Yegor Yarmolyuk · Central Midfield"],"notes":"Identity feed transliteration Yehor Yarmoliuk matched to source Yegor Yarmolyuk."},
+    "Mathias Jensen": {"age":30,"marketValueM":10,"position":6,"sources":["Transfermarkt Brentford detailed squad 2026/27 · Central Midfield"]},
+    "Fabio Carvalho": {"age":24,"marketValueM":8,"position":6,"sources":["Current Brentford 2026/27 squad/value listing · Attacking Midfield"]},
+    "Mamadou Sangare": {"age":24,"marketValueM":40,"position":6,"sources":["Current Brentford 2026/27 squad/value listing · Central Midfield"],"notes":"Cross-checked against Brentford official 2026/27 squad evidence after summer arrival."},
+    "Mikkel Damsgaard": {"age":26,"marketValueM":30,"position":6,"sources":["Transfermarkt Brentford detailed squad 2026/27 · Attacking Midfield"]},
+    "Igor Thiago": {"age":25,"marketValueM":65,"position":7,"sources":["Transfermarkt Brentford detailed squad 2026/27 · Centre-Forward"]},
+    "Dango Ouattara": {"age":24,"marketValueM":35,"position":4,"sources":["Transfermarkt Brentford detailed squad 2026/27 · Right Winger"]},
+    "Callum Wilson": {"age":34,"marketValueM":4,"position":7,"sources":["Transfermarkt Callum Wilson player profile 2026/27 · Brentford · Centre-Forward"]},
+    "Keane Lewis-Potter": {"age":25,"marketValueM":25,"position":5,"sources":["Transfermarkt Brentford detailed squad 2026/27 · Left Midfield"]}
+  }
+}
