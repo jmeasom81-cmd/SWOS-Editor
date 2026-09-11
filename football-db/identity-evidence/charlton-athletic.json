@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "charlton-athletic",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "FootballSquads Charlton Athletic 2026/27 current Championship roster, cross-checked after the summer window",
+  "players": [
+    {"footballName":"Thomas Kaminski","group":"Goalkeeper","nationality":"Belgium","shirt":1,"source":"FootballSquads Charlton Athletic 2026/27 current roster · #1 G"},
+    {"footballName":"Tiernan Brooks","group":"Goalkeeper","nationality":"Ireland","shirt":21,"source":"FootballSquads Charlton Athletic 2026/27 current roster · #21 G"},
+    {"footballName":"Kayne Ramsay","group":"Defender","nationality":"England","shirt":2,"source":"FootballSquads Charlton Athletic 2026/27 current roster · #2 D"},
+    {"footballName":"Josh Edwards","group":"Defender","nationality":"Scotland","shirt":3,"source":"FootballSquads Charlton Athletic 2026/27 current roster · #3 D"},
+    {"footballName":"Reece Burke","group":"Defender","nationality":"England","shirt":4,"source":"FootballSquads Charlton Athletic 2026/27 current roster · #4 D"},
+    {"footballName":"Lloyd Jones","group":"Defender","nationality":"England","shirt":5,"source":"FootballSquads Charlton Athletic 2026/27 current roster · #5 D"},
+    {"footballName":"Billy Koumetio","group":"Defender","nationality":"France","shirt":12,"source":"FootballSquads Charlton Athletic 2026/27 current roster · #12 D"},
+    {"footballName":"Conor Coventry","group":"Midfielder","nationality":"Ireland","shirt":6,"source":"FootballSquads Charlton Athletic 2026/27 current roster · #6 M"},
+    {"footballName":"Harvey Knibbs","group":"Midfielder","nationality":"England","shirt":8,"source":"FootballSquads Charlton Athletic 2026/27 current roster · #8 M"},
+    {"footballName":"Greg Docherty","group":"Midfielder","nationality":"Scotland","shirt":10,"source":"FootballSquads Charlton Athletic 2026/27 current roster · #10 M"},
+    {"footballName":"Sonny Carey","group":"Midfielder","nationality":"England","shirt":14,"source":"FootballSquads Charlton Athletic 2026/27 current roster · #14 M"},
+    {"footballName":"Nathaniel Chalobah","group":"Midfielder","nationality":"England","shirt":15,"source":"FootballSquads Charlton Athletic 2026/27 current roster · #15 M"},
+    {"footballName":"Tyreece Campbell","group":"Forward","nationality":"Jamaica","shirt":7,"source":"FootballSquads Charlton Athletic 2026/27 current roster · #7 F"},
+    {"footballName":"Karlan Grant","group":"Forward","nationality":"England","shirt":9,"source":"FootballSquads Charlton Athletic 2026/27 current roster · #9 F"},
+    {"footballName":"Miles Leaburn","group":"Forward","nationality":"England","shirt":11,"source":"FootballSquads Charlton Athletic 2026/27 current roster · #11 F"},
+    {"footballName":"Millenic Alli","group":"Forward","nationality":"Ireland","shirt":19,"source":"FootballSquads Charlton Athletic 2026/27 current roster · #19 F"}
+  ]
+}
