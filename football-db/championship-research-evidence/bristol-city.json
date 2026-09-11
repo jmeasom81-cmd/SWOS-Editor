@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "bristol-city",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "Bristol City 2026/27 post-window squad cross-check using FootballSquads and current FBref roster evidence, with Transfermarkt current/latest published market values and position data.",
+  "players": {
+    "Sam Tickle": {"age":24,"marketValueM":1.2,"position":0,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/bristolc.htm","https://www.transfermarkt.com/bristol-city/kader/verein/698/saison_id/2026"]},
+    "Bradley Collins": {"age":29,"marketValueM":0.9,"position":0,"sources":["https://www.soccerbase.com/players/player.sd?player_id=96780&season_id=159","https://www.transfermarkt.com/brad-collins/profil/spieler/258914"]},
+    "Lisav Eissat": {"age":21,"marketValueM":1.4,"position":3,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/bristolc.htm","https://fbref.com/en/squads/93493607/2026-2027/Bristol-City-Stats","https://www.transfermarkt.com/bristol-city/kader/verein/698/saison_id/2026"]},
+    "Cameron Pring": {"age":28,"marketValueM":2,"position":2,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/bristolc.htm","https://www.transfermarkt.com/bristol-city/kader/verein/698/saison_id/2026"]},
+    "Rob Atkinson": {"age":28,"marketValueM":2.5,"position":3,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/bristolc.htm","https://www.transfermarkt.com/bristol-city/kader/verein/698/saison_id/2026"]},
+    "Luke McNally": {"age":26,"marketValueM":2,"position":3,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/bristolc.htm","https://www.transfermarkt.com/bristol-city/kader/verein/698/saison_id/2026"]},
+    "Rob Dickie": {"age":30,"marketValueM":1.5,"position":3,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/bristolc.htm","https://fbref.com/en/squads/93493607/2026-2027/Bristol-City-Stats","https://www.transfermarkt.com/bristol-city/kader/verein/698/saison_id/2026"]},
+    "Adam Randell": {"age":25,"marketValueM":3,"position":6,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/bristolc.htm","https://www.transfermarkt.com/bristol-city/kader/verein/698/saison_id/2026"]},
+    "Joe Williams": {"age":29,"marketValueM":0.8,"position":6,"sources":["https://fbref.com/en/squads/93493607/2026-2027/Bristol-City-Stats","https://www.transfermarkt.com/bristol-city/kader/verein/698/saison_id/2026"],"notes":"Age follows current Transfermarkt/FBref evidence; FootballSquads shows a one-year DOB discrepancy."},
+    "Jason Knight": {"age":25,"marketValueM":7,"position":6,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/bristolc.htm","https://fbref.com/en/squads/93493607/2026-2027/Bristol-City-Stats","https://www.transfermarkt.com/bristol-city/kader/verein/698/saison_id/2026"]},
+    "Tomi Horvat": {"age":27,"marketValueM":4,"position":4,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/bristolc.htm","https://www.transfermarkt.com/bristol-city/kader/verein/698/saison_id/2026"],"notes":"Transfermarkt primary listing is right midfield, mapped to SWOS RW/RM code 4."},
+    "Sam Greenwood": {"age":24,"marketValueM":2,"position":6,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/bristolc.htm","https://www.transfermarkt.com/bristol-city/kader/verein/698/saison_id/2026"]},
+    "Yu Hirakawa": {"age":25,"marketValueM":1,"position":4,"sources":["https://fbref.com/en/squads/93493607/2026-2027/Bristol-City-Stats","https://www.transfermarkt.com/yu-hirakawa/profil/spieler/936237"],"notes":"Primary position right winger, mapped to SWOS RW/RM code 4."},
+    "Lorent Tolaj": {"age":24,"marketValueM":1.5,"position":7,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/bristolc.htm","https://www.transfermarkt.com/lorent-tolaj/profil/spieler/507498"]},
+    "Scott Twine": {"age":27,"marketValueM":14,"position":6,"sources":["https://fbref.com/en/squads/93493607/2026-2027/Bristol-City-Stats","https://www.transfermarkt.com/bristol-city/kader/verein/698/saison_id/2026"],"notes":"Attacking midfield maps to SWOS midfield code 6."},
+    "Sam Bell": {"age":24,"marketValueM":1,"position":5,"sources":["https://www.footballsquads.co.uk/eng/2026-2027/flcham/bristolc.htm","https://www.transfermarkt.com/sam-bell/profil/spieler/801425"],"notes":"Primary position left winger, mapped to SWOS LW/LM code 5."}
+  }
+}
