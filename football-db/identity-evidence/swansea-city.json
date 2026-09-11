@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "swansea-city",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "Swansea City official 2026/27 men's first-team squad numbers, cross-checked against the current first-team squad and 2026 retained list",
+  "players": [
+    {"footballName":"Andy Fisher","group":"Goalkeeper","nationality":"England","shirt":1,"source":"Swansea City official 2026/27 men's squad numbers · #1 Andy Fisher"},
+    {"footballName":"Paul Farman","group":"Goalkeeper","nationality":"England","shirt":29,"source":"Swansea City official 2026/27 men's squad numbers · #29 Paul Farman"},
+    {"footballName":"Josh Key","group":"Defender","nationality":"England","shirt":2,"source":"Swansea City official 2026/27 men's squad numbers · #2 Josh Key; current Swansea squad lists him as a defender"},
+    {"footballName":"Ben Cabango","group":"Defender","nationality":"Wales","shirt":5,"source":"Swansea City official 2026/27 men's squad numbers · #5 Ben Cabango; current Swansea squad lists him as a defender"},
+    {"footballName":"Josh Tymon","group":"Defender","nationality":"England","shirt":14,"source":"Swansea City official 2026/27 men's squad numbers · #14 Josh Tymon; current Swansea squad lists him as a defender"},
+    {"footballName":"Cameron Burgess","group":"Defender","nationality":"Australia","shirt":15,"source":"Swansea City official 2026/27 men's squad numbers · #15 Cameron Burgess; current Swansea squad lists him as a defender"},
+    {"footballName":"Tiago Parente","group":"Defender","nationality":"Portugal","shirt":20,"source":"Swansea City official 2026/27 men's squad numbers · #20 Tiago Parente; current Swansea squad lists him as a defender"},
+    {"footballName":"Stephen Welsh","group":"Defender","nationality":"Scotland","shirt":23,"source":"Swansea City official 2026/27 men's squad numbers · #23 Stephen Welsh; current Swansea squad lists him as a defender"},
+    {"footballName":"Jay Fulton","group":"Midfielder","nationality":"Scotland","shirt":4,"source":"Swansea City official 2026/27 men's squad numbers · #4 Jay Fulton; current Swansea squad lists him as a midfielder"},
+    {"footballName":"Marko Stamenic","group":"Midfielder","nationality":"New Zealand","shirt":6,"source":"Swansea City official 2026/27 men's squad numbers · #6 Marko Stamenic; current Swansea squad lists him as a midfielder","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Melker Widell","group":"Midfielder","nationality":"Sweden","shirt":7,"source":"Swansea City official 2026/27 men's squad numbers · #7 Melker Widell; current Swansea squad lists him as a midfielder"},
+    {"footballName":"Elijah Just","group":"Midfielder","nationality":"New Zealand","shirt":8,"source":"Swansea City official 2026/27 men's squad numbers · #8 Elijah Just; current Swansea squad lists him as a midfielder"},
+    {"footballName":"Goncalo Franco","group":"Midfielder","nationality":"Portugal","shirt":17,"source":"Swansea City official 2026/27 men's squad numbers · #17 Gonçalo Franco","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Zan Vipotnik","group":"Forward","nationality":"Slovenia","shirt":9,"source":"Swansea City official 2026/27 men's squad numbers · #9 Žan Vipotnik; current Swansea squad lists him as an attacker","notes":"ASCII football name retained for SWOS database compatibility."},
+    {"footballName":"Jisung Eom","group":"Forward","nationality":"South Korea","shirt":10,"source":"Swansea City official 2026/27 men's squad numbers · #10 Jisung Eom; current Swansea squad lists him as an attacker"},
+    {"footballName":"Adam Idah","group":"Forward","nationality":"Ireland","shirt":33,"source":"Swansea City official 2026/27 men's squad numbers · #33 Adam Idah; current Swansea squad lists him as an attacker"}
+  ]
+}
