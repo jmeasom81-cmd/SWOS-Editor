@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "sheffield-united",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "Current Sheffield United 2026/27 first-team squad cross-checked across LiveScore, Sheffield United retail personalisation and contemporary squad listings",
+  "players": [
+    {"footballName":"Michael Cooper","group":"Goalkeeper","nationality":"England","shirt":1,"source":"LiveScore Sheffield United current squad · Michael Cooper #1 goalkeeper; Sheffield United Official Store 2026/27 player personalisation lists Michael Cooper"},
+    {"footballName":"Adam Davies","group":"Goalkeeper","nationality":"Wales","shirt":17,"source":"LiveScore Sheffield United current squad · Adam Davies #17 goalkeeper"},
+    {"footballName":"Matt Doherty","group":"Defender","nationality":"Ireland","shirt":2,"source":"LiveScore Sheffield United current squad · Matt Doherty #2 defender; Sheffield United Official Store 2026/27 personalisation lists Doherty 2"},
+    {"footballName":"Japhet Tanganga","group":"Defender","nationality":"England","shirt":5,"source":"LiveScore Sheffield United current squad · Japhet Tanganga #5 defender; current squad listing identifies him as captain"},
+    {"footballName":"Harrison Burrows","group":"Defender","nationality":"England","shirt":14,"source":"LiveScore Sheffield United current squad · Harrison Burrows #14 defender; Sheffield United Official Store 2026/27 personalisation lists Burrows 14"},
+    {"footballName":"Liam Kitching","group":"Defender","nationality":"England","shirt":15,"source":"LiveScore Sheffield United current squad · Liam Kitching #15 defender; Sheffield United Official Store 2026/27 personalisation lists Kitching 15"},
+    {"footballName":"Mark McGuinness","group":"Defender","nationality":"Ireland","shirt":25,"source":"LiveScore Sheffield United current squad · Mark McGuinness #25 defender; Sheffield United Official Store 2026/27 personalisation lists McGuinness 25"},
+    {"footballName":"Rhys Norrington-Davies","group":"Defender","nationality":"Wales","shirt":30,"source":"LiveScore Sheffield United current squad · Rhys Norrington-Davies #30 defender; Sheffield United Official Store 2026/27 personalisation lists Norrington-Davies 30"},
+    {"footballName":"Ollie Arblaster","group":"Midfielder","nationality":"England","shirt":4,"source":"LiveScore Sheffield United current squad · Ollie Arblaster #4 midfielder; Sheffield United Official Store 2026/27 personalisation lists Arblaster 4"},
+    {"footballName":"Joe Rothwell","group":"Midfielder","nationality":"England","shirt":7,"source":"LiveScore Sheffield United current squad · Joe Rothwell #7 midfielder"},
+    {"footballName":"Hamza Choudhury","group":"Midfielder","nationality":"Bangladesh","shirt":8,"source":"LiveScore Sheffield United current squad · Hamza Choudhury #8 midfielder; Sheffield United current 2026/27 squad listing confirms Bangladesh international status"},
+    {"footballName":"Romelle Donovan","group":"Midfielder","nationality":"England","shirt":11,"source":"LiveScore Sheffield United current squad · Romelle Donovan #11 midfielder; Sheffield United Official Store 2026/27 personalisation lists Donovan 11"},
+    {"footballName":"Kalvin Phillips","group":"Midfielder","nationality":"England","shirt":27,"source":"LiveScore Sheffield United current squad · Kalvin Phillips #27 midfielder; Sheffield United Official Store 2026/27 personalisation lists Phillips 27"},
+    {"footballName":"Tom Cannon","group":"Forward","nationality":"Ireland","shirt":9,"source":"LiveScore Sheffield United current squad · Tom Cannon #9 attacker; Sheffield United Official Store 2026/27 personalisation lists Cannon 9"},
+    {"footballName":"Tyrese Campbell","group":"Forward","nationality":"England","shirt":23,"source":"LiveScore Sheffield United current squad · Tyrese Campbell #23 attacker; Sheffield United Official Store 2026/27 personalisation lists Campbell 23"},
+    {"footballName":"Patrick Bamford","group":"Forward","nationality":"England","shirt":45,"source":"LiveScore Sheffield United current squad · Patrick Bamford #45 attacker; Sheffield United Official Store 2026/27 personalisation lists Bamford 45"}
+  ]
+}
