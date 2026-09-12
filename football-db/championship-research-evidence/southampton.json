@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "southampton",
+  "snapshot": "2026-09-12",
+  "sourceSummary": "Southampton 2026/27 post-window squad cross-check using current club, match and Transfermarkt evidence. Joshua Quarshie's Sturm Graz loan is corrected before publication, with current centre-back Keven Schlotterbeck substituted one-for-one in the selected 16.",
+  "players": {
+    "Daniel Peretz": {"age":26,"marketValueM":4,"position":0,"sources":["https://www.transfermarkt.com/southampton-fc/kader/verein/180/saison_id/2026","https://www.southamptonfc.com/en/teams/profile/daniel-peretz"],"notes":"Goalkeeper maps to SWOS code 0; latest published valuation €4m."},
+    "George Long": {"age":32,"marketValueM":0.15,"position":0,"sources":["https://www.transfermarkt.com/southampton-fc/kader/verein/180/saison_id/2026"],"notes":"Goalkeeper maps to SWOS code 0; latest published valuation €0.15m."},
+    "Mads Roerslev": {"age":27,"marketValueM":4,"position":1,"sources":["https://www.transfermarkt.com/southampton-fc/kader/verein/180/saison_id/2026"],"notes":"Primary right-back role maps to SWOS RB code 1; latest published valuation €4m."},
+    "Ryan Manning": {"age":30,"marketValueM":2.8,"position":2,"sources":["https://www.transfermarkt.com/southampton-fc/kader/verein/180/saison_id/2026"],"notes":"Primary left-back role maps to SWOS LB code 2; latest published valuation €2.8m."},
+    "Jack Stephens": {"age":32,"marketValueM":1,"position":3,"sources":["https://www.transfermarkt.com/southampton-fc/kader/verein/180/saison_id/2026"],"notes":"Centre-back maps to SWOS defender code 3; latest published valuation €1m."},
+    "Nathan Wood": {"age":24,"marketValueM":10,"position":3,"sources":["https://www.transfermarkt.com/nathan-wood/profil/spieler/503990","https://www.fotmob.com/players/953859/nathan-wood"],"notes":"Current Southampton appearances confirm club status. Centre-back maps to SWOS defender code 3; latest published Transfermarkt valuation €10m."},
+    "Welington": {"age":25,"marketValueM":3,"position":2,"sources":["https://www.transfermarkt.com/southampton-fc/kader/verein/180/saison_id/2026"],"notes":"Primary left-back role maps to SWOS LB code 2; latest published valuation €3m."},
+    "Flynn Downes": {"age":27,"marketValueM":10,"position":6,"sources":["https://www.transfermarkt.com/southampton-fc/kader/verein/180/saison_id/2026"],"notes":"Defensive midfield maps to SWOS midfield code 6; latest published valuation €10m."},
+    "Leo Scienza": {"age":27,"marketValueM":12,"position":5,"sources":["https://www.transfermarkt.com/southampton-fc/kader/verein/180/saison_id/2026"],"notes":"ASCII identity name matches Léo Scienza. Primary left-wing role maps to SWOS LW/LM code 5; latest published valuation €12m."},
+    "Caspar Jander": {"age":23,"marketValueM":18,"position":6,"sources":["https://www.transfermarkt.com/southampton-fc/kader/verein/180/saison_id/2026"],"notes":"Central midfield maps to SWOS code 6; latest published valuation €18m."},
+    "Finn Azaz": {"age":26,"marketValueM":20,"position":6,"sources":["https://www.transfermarkt.com/southampton-fc/kader/verein/180/saison_id/2026"],"notes":"Attacking midfield maps to SWOS midfield code 6; latest published valuation €20m."},
+    "Tom Fellows": {"age":23,"marketValueM":8,"position":4,"sources":["https://www.transfermarkt.com/southampton-fc/kader/verein/180/saison_id/2026"],"notes":"Primary right-midfield role maps to SWOS RW/RM code 4; latest published valuation €8m."},
+    "Cyle Larin": {"age":31,"marketValueM":2.5,"position":7,"sources":["https://www.transfermarkt.com/southampton-fc/kader/verein/180/saison_id/2026"],"notes":"Centre-forward maps to SWOS attack code 7; latest published valuation €2.5m."},
+    "Lewis Dobbin": {"age":23,"marketValueM":7,"position":5,"sources":["https://www.transfermarkt.com/southampton-fc/kader/verein/180/saison_id/2026"],"notes":"Primary left-wing role maps to SWOS LW/LM code 5; latest published valuation €7m."},
+    "Divin Mubama": {"age":21,"marketValueM":6,"position":7,"sources":["https://www.transfermarkt.com/southampton-fc/kader/verein/180/saison_id/2026"],"notes":"Centre-forward maps to SWOS attack code 7; latest published valuation €6m."},
+    "Keven Schlotterbeck": {"age":29,"marketValueM":6,"position":3,"sources":["https://www.southamptonfc.com/en/news/article/quarshie-joins-sk-sturm-graz-on-loan","https://www.transfermarkt.com/southampton-fc/kader/verein/180/saison_id/2026"],"notes":"Current Southampton centre-back replaces loaned-out Joshua Quarshie in the selected identity 16. Centre-back maps to SWOS defender code 3; latest published valuation €6m."}
+  }
+}

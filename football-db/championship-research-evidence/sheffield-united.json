@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "sheffield-united",
+  "snapshot": "2026-09-12",
+  "sourceSummary": "Sheffield United 2026/27 post-window squad cross-check using current club and Transfermarkt squad evidence. All 16 selected identities remain current; age, latest published market value and exact SWOS position are recorded from the same 12 September snapshot.",
+  "players": {
+    "Michael Cooper": {"age":26,"marketValueM":10,"position":0,"sources":["https://www.transfermarkt.com/sheffield-united/kader/verein/350/saison_id/2026","https://www.sufcdirect.co.uk/"],"notes":"Goalkeeper maps to SWOS code 0; latest published valuation €10m."},
+    "Adam Davies": {"age":34,"marketValueM":0.2,"position":0,"sources":["https://www.transfermarkt.com/sheffield-united/kader/verein/350/saison_id/2026"],"notes":"Goalkeeper maps to SWOS code 0; latest published valuation €0.2m."},
+    "Matt Doherty": {"age":34,"marketValueM":1,"position":1,"sources":["https://www.transfermarkt.com/sheffield-united/kader/verein/350/saison_id/2026","https://www.sufcdirect.co.uk/"],"notes":"Primary right-back role maps to SWOS RB code 1; latest published valuation €1m."},
+    "Japhet Tanganga": {"age":27,"marketValueM":6,"position":3,"sources":["https://www.transfermarkt.com/sheffield-united/kader/verein/350/saison_id/2026"],"notes":"Centre-back maps to SWOS defender code 3; latest published valuation €6m."},
+    "Harrison Burrows": {"age":24,"marketValueM":10,"position":2,"sources":["https://www.transfermarkt.com/sheffield-united/kader/verein/350/saison_id/2026","https://www.sufcdirect.co.uk/"],"notes":"Primary left-back role maps to SWOS LB code 2; latest published valuation €10m."},
+    "Liam Kitching": {"age":26,"marketValueM":14,"position":3,"sources":["https://www.transfermarkt.com/sheffield-united/kader/verein/350/saison_id/2026"],"notes":"Centre-back maps to SWOS defender code 3; latest published valuation €14m."},
+    "Mark McGuinness": {"age":25,"marketValueM":7,"position":3,"sources":["https://www.transfermarkt.com/sheffield-united/kader/verein/350/saison_id/2026"],"notes":"Centre-back maps to SWOS defender code 3; latest published valuation €7m."},
+    "Rhys Norrington-Davies": {"age":27,"marketValueM":2.5,"position":2,"sources":["https://www.transfermarkt.com/sheffield-united/kader/verein/350/saison_id/2026"],"notes":"Primary left-back role maps to SWOS LB code 2; latest published valuation €2.5m."},
+    "Ollie Arblaster": {"age":22,"marketValueM":1.5,"position":6,"sources":["https://www.transfermarkt.com/sheffield-united/kader/verein/350/saison_id/2026"],"notes":"The identity feed's Ollie Arblaster matches Transfermarkt's Oliver Arblaster. Central midfield maps to SWOS code 6; latest published valuation €1.5m."},
+    "Joe Rothwell": {"age":31,"marketValueM":0.6,"position":6,"sources":["https://www.transfermarkt.com/sheffield-united/kader/verein/350/saison_id/2026"],"notes":"Central midfield maps to SWOS code 6; latest published valuation €0.6m."},
+    "Hamza Choudhury": {"age":28,"marketValueM":4,"position":6,"sources":["https://www.transfermarkt.com/sheffield-united/kader/verein/350/saison_id/2026"],"notes":"Defensive midfield maps to SWOS midfield code 6; latest published valuation €4m."},
+    "Romelle Donovan": {"age":19,"marketValueM":3.5,"position":4,"sources":["https://www.transfermarkt.com/sheffield-united/kader/verein/350/saison_id/2026"],"notes":"Current right-wing role maps to SWOS RW/RM code 4; latest published valuation €3.5m."},
+    "Kalvin Phillips": {"age":30,"marketValueM":2.5,"position":6,"sources":["https://www.transfermarkt.com/sheffield-united/kader/verein/350/saison_id/2026","https://www.sufcdirect.co.uk/"],"notes":"Current Sheffield United loan from Manchester City; defensive midfield maps to SWOS code 6. Latest published valuation €2.5m."},
+    "Tom Cannon": {"age":23,"marketValueM":7,"position":7,"sources":["https://www.transfermarkt.com/sheffield-united/kader/verein/350/saison_id/2026"],"notes":"Centre-forward maps to SWOS attack code 7; latest published valuation €7m."},
+    "Tyrese Campbell": {"age":26,"marketValueM":7,"position":7,"sources":["https://www.transfermarkt.com/sheffield-united/kader/verein/350/saison_id/2026"],"notes":"Centre-forward maps to SWOS attack code 7; latest published valuation €7m."},
+    "Patrick Bamford": {"age":33,"marketValueM":1,"position":7,"sources":["https://www.transfermarkt.com/sheffield-united/kader/verein/350/saison_id/2026","https://www.sufcdirect.co.uk/"],"notes":"Centre-forward maps to SWOS attack code 7; latest published valuation €1m."}
+  }
+}

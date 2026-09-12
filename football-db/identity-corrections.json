@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026/27",
-  "snapshot": "2026-09-11",
+  "snapshot": "2026-09-12",
   "source": "Post-window current squad cross-check",
   "clubs": {
     "crystal-palace": {
@@ -33,6 +33,21 @@
         {"footballName":"Lyndon Dykes","shirt":13,"group":"Forward","nationality":"Scotland","source":"Millwall current 2026/27 squad + FootballSquads post-window roster + Brighton confirmation of Femi Azeez transfer"}
       ],
       "note": "Femi Azeez completed a permanent transfer from Millwall to Brighton on 2 September 2026. Lyndon Dykes, signed by Millwall in August and active in the current first team, replaces him one-for-one in the selected forward group so the current identity pack remains exactly 16 players."
+    },
+    "southampton": {
+      "remove": ["Joshua Quarshie"],
+      "add": [
+        {"footballName":"Keven Schlotterbeck","shirt":13,"group":"Defender","nationality":"Germany","source":"Southampton current 2026/27 squad + Southampton confirmation of Joshua Quarshie's season-long Sturm Graz loan + current Transfermarkt squad evidence"}
+      ],
+      "note": "Joshua Quarshie joined SK Sturm Graz on a season-long loan on 27 August 2026. Current Southampton centre-back Keven Schlotterbeck replaces him one-for-one, preserving the exact 16-player selection and defender balance."
+    },
+    "stoke-city": {
+      "remove": ["Tatsuki Seko", "Sorba Thomas"],
+      "add": [
+        {"footballName":"Jack McGlynn","shirt":7,"group":"Midfielder","nationality":"United States","source":"Stoke City current 2026/27 squad + official 2026/27 shirt-number confirmation + current Transfermarkt squad evidence"},
+        {"footballName":"Million Manhoef","shirt":42,"group":"Forward","nationality":"Netherlands","source":"Stoke City current 2026/27 squad + current Transfermarkt squad evidence + post-window departure evidence for Sorba Thomas"}
+      ],
+      "note": "Tatsuki Seko completed a permanent move to Urawa Reds on 16 August 2026 and Sorba Thomas joined Hull City on 1 September 2026. Current Stoke players Jack McGlynn and Million Manhoef replace them one-for-one by broad role, preserving the exact 16-player selection and role balance."
     }
   },
   "safety": {"teamWriteReady":false,"careerWriteReady":false}

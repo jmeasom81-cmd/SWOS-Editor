@@ -12,13 +12,17 @@ const cycle=[
 
 for(const step of cycle)if(!fs.existsSync(step))throw new Error(`Championship completion: missing ${step}`);
 
-for(let wave=1;wave<=7;wave++){
-  console.log(`\n▶ Championship completion promotion ${wave}/7`);
+let wave=0;
+while(wave<24){
+  const current=fs.existsSync('football-db/identity-expansion-queue.json')?JSON.parse(fs.readFileSync('football-db/identity-expansion-queue.json','utf8')):null;
+  if(current?.totals?.identityReady===24&&current?.totals?.evidenceRequired===0&&current?.next===null)break;
+  wave++;
+  console.log(`\n▶ Championship completion promotion ${wave} (bounded at 24)`);
   for(const step of cycle)execFileSync(process.execPath,[step],{stdio:'inherit'});
 }
 
 const queue=JSON.parse(fs.readFileSync('football-db/identity-expansion-queue.json','utf8'));
 const intake=JSON.parse(fs.readFileSync('football-db/identity-intake.json','utf8'));
-if(queue.totals?.identityReady!==24||queue.totals?.evidenceRequired!==0||queue.next!==null)throw new Error(`Championship completion failed: expected 24/24 identity-ready with no next club; found ${queue.totals?.identityReady}/24 and next ${queue.next?.clubName||'none'}.`);
+if(queue.totals?.identityReady!==24||queue.totals?.evidenceRequired!==0||queue.next!==null)throw new Error(`Championship completion failed after ${wave} bounded promotion cycle(s): expected 24/24 identity-ready with no next club; found ${queue.totals?.identityReady}/24 and next ${queue.next?.clubName||'none'}.`);
 if(intake.totals?.identityReady!==24||intake.next!==null||intake.totals?.promotionReadyClubs!==0)throw new Error('Championship completion failed: final intake is not closed cleanly.');
-console.log('Championship identity completion PASS · 24/24 clubs identity-ready · no evidence queue remains.');
+console.log(`Championship identity completion PASS · 24/24 clubs identity-ready · no evidence queue remains · ${wave} completion cycle(s) used.`);

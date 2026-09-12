@@ -32,7 +32,10 @@ const publication=read('publication.json');if(publication.databaseVersion!==mani
 if(fs.existsSync(path.join(DIST,'identity-expansion-queue.json'))){const iq=read('identity-expansion-queue.json'),ii=read('identity-intake.json');if(iq.totals?.identityReady!==champCoverage?.identityReady||ii.totals?.identityReady!==champCoverage?.identityReady)throw new Error('Static DB consistency failed: Championship identity queue/intake disagree with coverage.');}
 
 const championshipPipeline=['championship-research-queue.json','championship-research-intake.json','championship-research-evidence/schema-v1.json'];
-if(championshipPipeline.some(rel=>fs.existsSync(path.join(ROOT,rel)))){
+const championshipPipelinePresent=championshipPipeline.filter(rel=>fs.existsSync(path.join(ROOT,rel)));
+const championshipSchemaOnly=championshipPipelinePresent.length===1&&championshipPipelinePresent[0]==='championship-research-evidence/schema-v1.json';
+if(championshipPipelinePresent.length>0&&!championshipSchemaOnly&&championshipPipelinePresent.length!==championshipPipeline.length)throw new Error(`Static DB consistency failed: partial Championship research pipeline (${championshipPipelinePresent.join(', ')}).`);
+if(championshipPipelinePresent.length===championshipPipeline.length){
   for(const rel of championshipPipeline){const src=path.join(ROOT,rel),dst=path.join(DIST,rel);if(!fs.existsSync(src)||!fs.existsSync(dst))throw new Error(`Static DB consistency failed: Championship research resource ${rel} missing from source or dist.`);if(sha(src)!==sha(dst))throw new Error(`Static DB consistency failed: Championship research resource ${rel} SHA mismatch.`);}
   const cq=read('championship-research-queue.json'),ci=read('championship-research-intake.json');
   const pending=24-champResearch,players=pending*16,cells=players*3;
