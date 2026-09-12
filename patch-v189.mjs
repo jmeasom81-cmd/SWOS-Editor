@@ -1,0 +1,2 @@
+import {patchChampionshipResearchRelease} from './patch-championship-research-release.mjs';
+patchChampionshipResearchRelease({version:'1.89.0',previousVersion:'1.88.0',releaseId:'v189',previousReleaseId:'v188',clubId:'watford',clubName:'Watford',champReady:20,next:{id:'west-bromwich-albion',name:'West Bromwich Albion'},detail:'Watford’s exact 16-player pack passes the full evidence gate; Hector Kyprianou is retained after a second-source current-squad check.'});

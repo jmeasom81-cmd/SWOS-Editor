@@ -1,0 +1,2 @@
+import {patchChampionshipResearchRelease} from './patch-championship-research-release.mjs';
+patchChampionshipResearchRelease({version:'1.92.0',previousVersion:'1.91.0',releaseId:'v192',previousReleaseId:'v191',clubId:'wolverhampton-wanderers',clubName:'Wolverhampton Wanderers',champReady:23,next:{id:'wrexham',name:'Wrexham'},stale:['Santiago Bueno'],current:['Toti'],detail:'The post-window guard replaces loaned-out Santiago Bueno with current Wolves centre-back Toti before the exact-16 research pack is promoted.'});

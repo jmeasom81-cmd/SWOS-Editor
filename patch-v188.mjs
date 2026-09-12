@@ -1,0 +1,2 @@
+import {patchChampionshipResearchRelease} from './patch-championship-research-release.mjs';
+patchChampionshipResearchRelease({version:'1.88.0',previousVersion:'1.87.0',releaseId:'v188',previousReleaseId:'v187',clubId:'swansea-city',clubName:'Swansea City',champReady:19,next:{id:'watford',name:'Watford'},detail:'Swansea’s exact 16-player pack passes the full evidence gate; Eom Ji-Sung is retained after a second-source current-squad check.'});

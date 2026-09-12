@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "wolverhampton-wanderers",
+  "snapshot": "2026-09-12",
+  "sourceSummary": "Wolverhampton Wanderers 2026/27 post-window squad, age, market-value and exact-position cross-check using FootballSquads and current Transfermarkt evidence. The post-window correction removes Santiago Bueno and adds Toti one-for-one by broad role before promotion.",
+  "players": {
+    "Jose Sa": {
+      "age": 33,
+      "marketValueM": 3.5,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wolves.htm",
+        "https://www.transfermarkt.com/wolverhampton-wanderers/kader/verein/543/saison_id/2026"
+      ],
+      "notes": "Goalkeeper maps to SWOS goalkeeper code 0; latest published valuation €3.5m."
+    },
+    "Joao Virginia": {
+      "age": 26,
+      "marketValueM": 0.8,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wolves.htm",
+        "https://www.transfermarkt.com/wolverhampton-wanderers/kader/verein/543/saison_id/2026"
+      ],
+      "notes": "Goalkeeper maps to SWOS goalkeeper code 0; latest published valuation €0.8m."
+    },
+    "Kieran Trippier": {
+      "age": 35,
+      "marketValueM": 1.5,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wolves.htm",
+        "https://www.transfermarkt.com/wolverhampton-wanderers/kader/verein/543/saison_id/2026"
+      ],
+      "notes": "Right-Back maps to SWOS right-back code 1; latest published valuation €1.5m."
+    },
+    "Hugo Bueno": {
+      "age": 23,
+      "marketValueM": 12,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wolves.htm",
+        "https://www.transfermarkt.com/wolverhampton-wanderers/kader/verein/543/saison_id/2026"
+      ],
+      "notes": "Left-Back maps to SWOS left-back code 2; latest published valuation €12m."
+    },
+    "Ghislain Konan": {
+      "age": 30,
+      "marketValueM": 3,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wolves.htm",
+        "https://www.transfermarkt.com/wolverhampton-wanderers/kader/verein/543/saison_id/2026"
+      ],
+      "notes": "Left-Back maps to SWOS left-back code 2; latest published valuation €3m."
+    },
+    "Nasser Djiga": {
+      "age": 23,
+      "marketValueM": 6,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wolves.htm",
+        "https://www.transfermarkt.com/wolverhampton-wanderers/kader/verein/543/saison_id/2026"
+      ],
+      "notes": "Centre-Back maps to SWOS centre-back code 3; latest published valuation €6m."
+    },
+    "Ladislav Krejci": {
+      "age": 27,
+      "marketValueM": 22,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wolves.htm",
+        "https://www.transfermarkt.com/wolverhampton-wanderers/kader/verein/543/saison_id/2026"
+      ],
+      "notes": "Centre-Back maps to SWOS centre-back code 3; latest published valuation €22m."
+    },
+    "Marshall Munetsi": {
+      "age": 30,
+      "marketValueM": 15,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wolves.htm",
+        "https://www.transfermarkt.com/wolverhampton-wanderers/kader/verein/543/saison_id/2026"
+      ],
+      "notes": "Central Midfield maps to SWOS midfield code 6; latest published valuation €15m."
+    },
+    "Andre": {
+      "age": 25,
+      "marketValueM": 25,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wolves.htm",
+        "https://www.transfermarkt.com/wolverhampton-wanderers/kader/verein/543/saison_id/2026"
+      ],
+      "notes": "Defensive Midfield maps to SWOS midfield code 6; latest published valuation €25m."
+    },
+    "Jordan James": {
+      "age": 22,
+      "marketValueM": 12,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wolves.htm",
+        "https://www.transfermarkt.com/wolverhampton-wanderers/kader/verein/543/saison_id/2026"
+      ],
+      "notes": "Central Midfield maps to SWOS midfield code 6; latest published valuation €12m."
+    },
+    "Jean-Ricner Bellegarde": {
+      "age": 28,
+      "marketValueM": 16,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wolves.htm",
+        "https://www.transfermarkt.com/wolverhampton-wanderers/kader/verein/543/saison_id/2026"
+      ],
+      "notes": "Central Midfield maps to SWOS midfield code 6; latest published valuation €16m."
+    },
+    "Fer Lopez": {
+      "age": 22,
+      "marketValueM": 16,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wolves.htm",
+        "https://www.transfermarkt.com/wolverhampton-wanderers/kader/verein/543/saison_id/2026"
+      ],
+      "notes": "Attacking Midfield maps to SWOS midfield code 6; latest published valuation €16m."
+    },
+    "Raul Jimenez": {
+      "age": 35,
+      "marketValueM": 3,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wolves.htm",
+        "https://www.transfermarkt.com/wolverhampton-wanderers/kader/verein/543/saison_id/2026"
+      ],
+      "notes": "Centre-Forward maps to SWOS attack code 7; latest published valuation €3m."
+    },
+    "Adam Armstrong": {
+      "age": 29,
+      "marketValueM": 6,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wolves.htm",
+        "https://www.transfermarkt.com/wolverhampton-wanderers/kader/verein/543/saison_id/2026"
+      ],
+      "notes": "Centre-Forward maps to SWOS attack code 7; latest published valuation €6m."
+    },
+    "Enso Gonzalez": {
+      "age": 21,
+      "marketValueM": 2.5,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wolves.htm",
+        "https://www.transfermarkt.com/wolverhampton-wanderers/kader/verein/543/saison_id/2026"
+      ],
+      "notes": "Left Winger maps to SWOS left-wing/left-midfield code 5; latest published valuation €2.5m."
+    },
+    "Toti": {
+      "age": 27,
+      "marketValueM": 18,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wolves.htm",
+        "https://www.transfermarkt.com/wolverhampton-wanderers/kader/verein/543/saison_id/2026"
+      ],
+      "notes": "Centre-Back maps to SWOS centre-back code 3; latest published valuation €18m."
+    }
+  }
+}

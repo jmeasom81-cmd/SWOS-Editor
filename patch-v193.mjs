@@ -1,0 +1,2 @@
+import {patchChampionshipResearchRelease} from './patch-championship-research-release.mjs';
+patchChampionshipResearchRelease({version:'1.93.0',previousVersion:'1.92.0',releaseId:'v193',previousReleaseId:'v192',clubId:'wrexham',clubName:'Wrexham',champReady:24,next:null,detail:'Wrexham’s exact 16-player pack passes the complete sourced evidence gate, closing the Championship research queue at 24 of 24 clubs.'});

@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "west-bromwich-albion",
+  "snapshot": "2026-09-12",
+  "sourceSummary": "West Bromwich Albion 2026/27 post-window squad, age, market-value and exact-position cross-check using FootballSquads and current Transfermarkt evidence. The post-window correction removes Krystian Bielik, Alfie Gilchrist, Alex Mowatt and adds Nolan Galves, Brayann Pereira, Toby Collyer one-for-one by broad role before promotion.",
+  "players": {
+    "Max O'Leary": {
+      "age": 29,
+      "marketValueM": 2,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wba.htm",
+        "https://www.transfermarkt.com/west-bromwich-albion/kader/verein/984/saison_id/2026"
+      ],
+      "notes": "Goalkeeper maps to SWOS goalkeeper code 0; latest published valuation €2m."
+    },
+    "Matt Ingram": {
+      "age": 32,
+      "marketValueM": 0.3,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wba.htm",
+        "https://www.transfermarkt.com/west-bromwich-albion/kader/verein/984/saison_id/2026"
+      ],
+      "notes": "Goalkeeper maps to SWOS goalkeeper code 0; latest published valuation €0.3m."
+    },
+    "Chris Mepham": {
+      "age": 28,
+      "marketValueM": 3,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wba.htm",
+        "https://www.transfermarkt.com/west-bromwich-albion/kader/verein/984/saison_id/2026"
+      ],
+      "notes": "Centre-Back maps to SWOS centre-back code 3; latest published valuation €3m."
+    },
+    "Nat Phillips": {
+      "age": 29,
+      "marketValueM": 2.5,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wba.htm",
+        "https://www.transfermarkt.com/west-bromwich-albion/kader/verein/984/saison_id/2026"
+      ],
+      "notes": "Centre-Back maps to SWOS centre-back code 3; latest published valuation €2.5m."
+    },
+    "Callum Styles": {
+      "age": 26,
+      "marketValueM": 3,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wba.htm",
+        "https://www.transfermarkt.com/west-bromwich-albion/kader/verein/984/saison_id/2026"
+      ],
+      "notes": "Left-Back maps to SWOS left-back code 2; latest published valuation €3m."
+    },
+    "George Campbell": {
+      "age": 25,
+      "marketValueM": 2,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wba.htm",
+        "https://www.transfermarkt.com/west-bromwich-albion/kader/verein/984/saison_id/2026"
+      ],
+      "notes": "Centre-Back maps to SWOS centre-back code 3; latest published valuation €2m."
+    },
+    "Felix Horn Myhre": {
+      "age": 27,
+      "marketValueM": 3.5,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wba.htm",
+        "https://www.transfermarkt.com/west-bromwich-albion/kader/verein/984/saison_id/2026"
+      ],
+      "notes": "Central Midfield maps to SWOS midfield code 6; latest published valuation €3.5m."
+    },
+    "Jayson Molumby": {
+      "age": 27,
+      "marketValueM": 3.5,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wba.htm",
+        "https://www.transfermarkt.com/west-bromwich-albion/kader/verein/984/saison_id/2026"
+      ],
+      "notes": "Central Midfield maps to SWOS midfield code 6; latest published valuation €3.5m."
+    },
+    "Ousmane Diakite": {
+      "age": 26,
+      "marketValueM": 1.2,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wba.htm",
+        "https://www.transfermarkt.com/west-bromwich-albion/kader/verein/984/saison_id/2026"
+      ],
+      "notes": "Defensive Midfield maps to SWOS midfield code 6; latest published valuation €1.2m."
+    },
+    "Isaac Price": {
+      "age": 22,
+      "marketValueM": 12,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wba.htm",
+        "https://www.transfermarkt.com/west-bromwich-albion/kader/verein/984/saison_id/2026"
+      ],
+      "notes": "Central Midfield maps to SWOS midfield code 6; latest published valuation €12m."
+    },
+    "Mikey Johnston": {
+      "age": 27,
+      "marketValueM": 4,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wba.htm",
+        "https://www.transfermarkt.com/west-bromwich-albion/kader/verein/984/saison_id/2026"
+      ],
+      "notes": "Left Winger maps to SWOS left-wing/left-midfield code 5; latest published valuation €4m."
+    },
+    "Aune Heggebo": {
+      "age": 25,
+      "marketValueM": 7,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wba.htm",
+        "https://www.transfermarkt.com/aune-heggebo/profil/spieler/587222"
+      ],
+      "notes": "Centre-Forward maps to SWOS attack code 7; latest published valuation €7m."
+    },
+    "Tammer Bany": {
+      "age": 22,
+      "marketValueM": 0.25,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wba.htm",
+        "https://www.transfermarkt.com/west-bromwich-albion/kader/verein/984/saison_id/2026"
+      ],
+      "notes": "Centre-Forward maps to SWOS attack code 7; latest published valuation €0.25m."
+    },
+    "Nolan Galves": {
+      "age": 23,
+      "marketValueM": 1.8,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wba.htm",
+        "https://www.transfermarkt.com/west-bromwich-albion/kader/verein/984/saison_id/2026"
+      ],
+      "notes": "Right-Back maps to SWOS right-back code 1; latest published valuation €1.8m."
+    },
+    "Brayann Pereira": {
+      "age": 23,
+      "marketValueM": 1,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wba.htm",
+        "https://www.transfermarkt.com/west-bromwich-albion/kader/verein/984/saison_id/2026"
+      ],
+      "notes": "Right-Back maps to SWOS right-back code 1; latest published valuation €1m."
+    },
+    "Toby Collyer": {
+      "age": 22,
+      "marketValueM": 5,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wba.htm",
+        "https://www.transfermarkt.com/west-bromwich-albion/kader/verein/984/saison_id/2026"
+      ],
+      "notes": "Defensive Midfield maps to SWOS midfield code 6; latest published valuation €5m."
+    }
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "swansea-city",
+  "snapshot": "2026-09-12",
+  "sourceSummary": "Swansea City 2026/27 post-window squad, age, market-value and exact-position cross-check using FootballSquads and current Transfermarkt evidence.",
+  "players": {
+    "Andy Fisher": {
+      "age": 28,
+      "marketValueM": 0.6,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/swansea.htm",
+        "https://www.transfermarkt.com/swansea-city/kader/verein/2288/saison_id/2026"
+      ],
+      "notes": "Goalkeeper maps to SWOS goalkeeper code 0; latest published valuation €0.6m."
+    },
+    "Paul Farman": {
+      "age": 36,
+      "marketValueM": 0.05,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/swansea.htm",
+        "https://www.transfermarkt.com/swansea-city/kader/verein/2288/saison_id/2026"
+      ],
+      "notes": "Goalkeeper maps to SWOS goalkeeper code 0; latest published valuation €0.05m."
+    },
+    "Josh Key": {
+      "age": 26,
+      "marketValueM": 1.2,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/swansea.htm",
+        "https://www.transfermarkt.com/swansea-city/kader/verein/2288/saison_id/2026"
+      ],
+      "notes": "Right-Back maps to SWOS right-back code 1; latest published valuation €1.2m."
+    },
+    "Ben Cabango": {
+      "age": 26,
+      "marketValueM": 9,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/swansea.htm",
+        "https://www.transfermarkt.com/swansea-city/kader/verein/2288/saison_id/2026"
+      ],
+      "notes": "Centre-Back maps to SWOS centre-back code 3; latest published valuation €9m."
+    },
+    "Josh Tymon": {
+      "age": 27,
+      "marketValueM": 10,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/swansea.htm",
+        "https://www.transfermarkt.com/swansea-city/kader/verein/2288/saison_id/2026"
+      ],
+      "notes": "Left-Back maps to SWOS left-back code 2; latest published valuation €10m."
+    },
+    "Cameron Burgess": {
+      "age": 30,
+      "marketValueM": 1.5,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/swansea.htm",
+        "https://www.transfermarkt.com/swansea-city/kader/verein/2288/saison_id/2026"
+      ],
+      "notes": "Centre-Back maps to SWOS centre-back code 3; latest published valuation €1.5m."
+    },
+    "Tiago Parente": {
+      "age": 20,
+      "marketValueM": 0.5,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/swansea.htm",
+        "https://www.transfermarkt.com/swansea-city/kader/verein/2288/saison_id/2026"
+      ],
+      "notes": "Left-Back maps to SWOS left-back code 2; latest published valuation €0.5m."
+    },
+    "Stephen Welsh": {
+      "age": 26,
+      "marketValueM": 2,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/swansea.htm",
+        "https://www.transfermarkt.com/swansea-city/kader/verein/2288/saison_id/2026"
+      ],
+      "notes": "Centre-Back maps to SWOS centre-back code 3; latest published valuation €2m."
+    },
+    "Jay Fulton": {
+      "age": 32,
+      "marketValueM": 0.45,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/swansea.htm",
+        "https://www.transfermarkt.com/swansea-city/kader/verein/2288/saison_id/2026"
+      ],
+      "notes": "Central Midfield maps to SWOS midfield code 6; latest published valuation €0.45m."
+    },
+    "Marko Stamenic": {
+      "age": 24,
+      "marketValueM": 3,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/swansea.htm",
+        "https://www.transfermarkt.com/swansea-city/kader/verein/2288/saison_id/2026"
+      ],
+      "notes": "Central Midfield maps to SWOS midfield code 6; latest published valuation €3m."
+    },
+    "Melker Widell": {
+      "age": 24,
+      "marketValueM": 1.8,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/swansea.htm",
+        "https://www.transfermarkt.com/swansea-city/kader/verein/2288/saison_id/2026"
+      ],
+      "notes": "Central Midfield maps to SWOS midfield code 6; latest published valuation €1.8m."
+    },
+    "Elijah Just": {
+      "age": 26,
+      "marketValueM": 3.5,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/swansea.htm",
+        "https://www.transfermarkt.com/swansea-city/kader/verein/2288/saison_id/2026"
+      ],
+      "notes": "Attacking Midfield maps to SWOS midfield code 6; latest published valuation €3.5m."
+    },
+    "Goncalo Franco": {
+      "age": 25,
+      "marketValueM": 4,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/swansea.htm",
+        "https://www.transfermarkt.com/swansea-city/kader/verein/2288/saison_id/2026"
+      ],
+      "notes": "Central Midfield maps to SWOS midfield code 6; latest published valuation €4m."
+    },
+    "Zan Vipotnik": {
+      "age": 24,
+      "marketValueM": 22,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/swansea.htm",
+        "https://www.transfermarkt.com/swansea-city/kader/verein/2288/saison_id/2026"
+      ],
+      "notes": "Centre-Forward maps to SWOS attack code 7; latest published valuation €22m."
+    },
+    "Jisung Eom": {
+      "age": 24,
+      "marketValueM": 1.8,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/swansea.htm",
+        "https://www.transfermarkt.com/ji-sung-eom/profil/spieler/706968"
+      ],
+      "notes": "Left Winger maps to SWOS left-wing/left-midfield code 5; latest published valuation €1.8m."
+    },
+    "Adam Idah": {
+      "age": 25,
+      "marketValueM": 4.5,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/swansea.htm",
+        "https://www.transfermarkt.com/swansea-city/kader/verein/2288/saison_id/2026"
+      ],
+      "notes": "Centre-Forward maps to SWOS attack code 7; latest published valuation €4.5m."
+    }
+  }
+}

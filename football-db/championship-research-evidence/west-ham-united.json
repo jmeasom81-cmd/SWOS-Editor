@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "west-ham-united",
+  "snapshot": "2026-09-12",
+  "sourceSummary": "West Ham United 2026/27 post-window squad, age, market-value and exact-position cross-check using FootballSquads and current Transfermarkt evidence. The post-window correction removes El Hadji Malick Diouf, Jean-Clair Todibo, Aaron Wan-Bissaka, James Ward-Prowse and adds Morato, Adama Boiro, Joel Veltman, Arne Engels one-for-one by broad role before promotion.",
+  "players": {
+    "Mads Hermansen": {
+      "age": 26,
+      "marketValueM": 15,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/westham.htm",
+        "https://www.transfermarkt.com/west-ham-united/kader/verein/379/saison_id/2026"
+      ],
+      "notes": "Goalkeeper maps to SWOS goalkeeper code 0; latest published valuation €15m."
+    },
+    "Alphonse Areola": {
+      "age": 33,
+      "marketValueM": 4,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/westham.htm",
+        "https://www.transfermarkt.com/west-ham-united/kader/verein/379/saison_id/2026"
+      ],
+      "notes": "Goalkeeper maps to SWOS goalkeeper code 0; latest published valuation €4m."
+    },
+    "Kyle Walker-Peters": {
+      "age": 29,
+      "marketValueM": 12,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/westham.htm",
+        "https://www.transfermarkt.com/west-ham-united/kader/verein/379/saison_id/2026"
+      ],
+      "notes": "Right-Back maps to SWOS right-back code 1; latest published valuation €12m."
+    },
+    "Max Kilman": {
+      "age": 29,
+      "marketValueM": 13,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/westham.htm",
+        "https://www.transfermarkt.com/west-ham-united/kader/verein/379/saison_id/2026"
+      ],
+      "notes": "Centre-Back maps to SWOS centre-back code 3; latest published valuation €13m."
+    },
+    "Konstantinos Mavropanos": {
+      "age": 28,
+      "marketValueM": 18,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/westham.htm",
+        "https://www.transfermarkt.com/konstantinos-mavropanos/profil/spieler/415912"
+      ],
+      "notes": "Centre-Back maps to SWOS centre-back code 3; latest published valuation €18m."
+    },
+    "Edson Alvarez": {
+      "age": 28,
+      "marketValueM": 15,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/westham.htm",
+        "https://www.transfermarkt.com/west-ham-united/kader/verein/379/saison_id/2026"
+      ],
+      "notes": "Defensive Midfield maps to SWOS midfield code 6; latest published valuation €15m."
+    },
+    "Mohamadou Kante": {
+      "age": 20,
+      "marketValueM": 1,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/westham.htm",
+        "https://www.transfermarkt.com/west-ham-united/kader/verein/379/saison_id/2026"
+      ],
+      "notes": "Defensive Midfield maps to SWOS midfield code 6; latest published valuation €1m."
+    },
+    "Maxwel Cornet": {
+      "age": 29,
+      "marketValueM": 2,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/westham.htm",
+        "https://www.transfermarkt.com/west-ham-united/kader/verein/379/saison_id/2026"
+      ],
+      "notes": "Left Winger maps to SWOS left-wing/left-midfield code 5; latest published valuation €2m."
+    },
+    "Soungoutou Magassa": {
+      "age": 22,
+      "marketValueM": 17,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/westham.htm",
+        "https://www.transfermarkt.com/west-ham-united/kader/verein/379/saison_id/2026"
+      ],
+      "notes": "Defensive Midfield maps to SWOS midfield code 6; latest published valuation €17m."
+    },
+    "Valentin Castellanos": {
+      "age": 27,
+      "marketValueM": 28,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/westham.htm",
+        "https://www.transfermarkt.com/taty-castellanos/profil/spieler/522784"
+      ],
+      "notes": "Centre-Forward maps to SWOS attack code 7; latest published valuation €28m."
+    },
+    "Pablo": {
+      "age": 22,
+      "marketValueM": 18,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/westham.htm",
+        "https://www.transfermarkt.com/west-ham-united/kader/verein/379/saison_id/2026"
+      ],
+      "notes": "Centre-Forward maps to SWOS attack code 7; latest published valuation €18m."
+    },
+    "Jarrod Bowen": {
+      "age": 29,
+      "marketValueM": 30,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/westham.htm",
+        "https://www.transfermarkt.com/west-ham-united/kader/verein/379/saison_id/2026"
+      ],
+      "notes": "Right Winger maps to SWOS right-wing/right-midfield code 4; latest published valuation €30m."
+    },
+    "Morato": {
+      "age": 25,
+      "marketValueM": 14,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/westham.htm",
+        "https://www.transfermarkt.com/west-ham-united/kader/verein/379/saison_id/2026"
+      ],
+      "notes": "Centre-Back maps to SWOS centre-back code 3; latest published valuation €14m."
+    },
+    "Adama Boiro": {
+      "age": 24,
+      "marketValueM": 2.5,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/westham.htm",
+        "https://www.transfermarkt.com/west-ham-united/kader/verein/379/saison_id/2026"
+      ],
+      "notes": "Left-Back maps to SWOS left-back code 2; latest published valuation €2.5m."
+    },
+    "Joel Veltman": {
+      "age": 34,
+      "marketValueM": 1.5,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/westham.htm",
+        "https://www.transfermarkt.com/west-ham-united/kader/verein/379/saison_id/2026"
+      ],
+      "notes": "Right-Back maps to SWOS right-back code 1; latest published valuation €1.5m."
+    },
+    "Arne Engels": {
+      "age": 23,
+      "marketValueM": 20,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/westham.htm",
+        "https://www.transfermarkt.com/west-ham-united/kader/verein/379/saison_id/2026"
+      ],
+      "notes": "Central Midfield maps to SWOS midfield code 6; latest published valuation €20m."
+    }
+  }
+}

@@ -48,6 +48,91 @@
         {"footballName":"Million Manhoef","shirt":42,"group":"Forward","nationality":"Netherlands","source":"Stoke City current 2026/27 squad + current Transfermarkt squad evidence + post-window departure evidence for Sorba Thomas"}
       ],
       "note": "Tatsuki Seko completed a permanent move to Urawa Reds on 16 August 2026 and Sorba Thomas joined Hull City on 1 September 2026. Current Stoke players Jack McGlynn and Million Manhoef replace them one-for-one by broad role, preserving the exact 16-player selection and role balance."
+    },
+    "west-bromwich-albion": {
+      "remove": [
+        "Krystian Bielik",
+        "Alfie Gilchrist",
+        "Alex Mowatt"
+      ],
+      "add": [
+        {
+          "footballName": "Nolan Galves",
+          "shirt": 25,
+          "group": "Defender",
+          "nationality": "France",
+          "source": "FootballSquads West Bromwich Albion 2026/27 post-window current roster + current Transfermarkt squad evidence"
+        },
+        {
+          "footballName": "Brayann Pereira",
+          "shirt": 18,
+          "group": "Defender",
+          "nationality": "France",
+          "source": "FootballSquads West Bromwich Albion 2026/27 post-window current roster + current Transfermarkt squad evidence"
+        },
+        {
+          "footballName": "Toby Collyer",
+          "shirt": 15,
+          "group": "Midfielder",
+          "nationality": "England",
+          "source": "FootballSquads West Bromwich Albion 2026/27 post-window current roster + current Transfermarkt squad evidence"
+        }
+      ],
+      "note": "The post-window roster lists Alfie Gilchrist on loan at Leyton Orient, Alex Mowatt at Derby County and Krystian Bielik at Cardiff City. Nolan Galves, Brayann Pereira and Toby Collyer replace them one-for-one by broad role, preserving an exact current 16-player selection and role balance."
+    },
+    "west-ham-united": {
+      "remove": [
+        "El Hadji Malick Diouf",
+        "Jean-Clair Todibo",
+        "Aaron Wan-Bissaka",
+        "James Ward-Prowse"
+      ],
+      "add": [
+        {
+          "footballName": "Morato",
+          "shirt": 5,
+          "group": "Defender",
+          "nationality": "Brazil",
+          "source": "FootballSquads West Ham United 2026/27 post-window current roster + current Transfermarkt squad evidence"
+        },
+        {
+          "footballName": "Adama Boiro",
+          "shirt": 18,
+          "group": "Defender",
+          "nationality": "Senegal",
+          "source": "FootballSquads West Ham United 2026/27 post-window current roster + current Transfermarkt squad evidence"
+        },
+        {
+          "footballName": "Joel Veltman",
+          "shirt": 34,
+          "group": "Defender",
+          "nationality": "Netherlands",
+          "source": "FootballSquads West Ham United 2026/27 post-window current roster + current Transfermarkt squad evidence"
+        },
+        {
+          "footballName": "Arne Engels",
+          "shirt": 7,
+          "group": "Midfielder",
+          "nationality": "Belgium",
+          "source": "FootballSquads West Ham United 2026/27 post-window current roster + current Transfermarkt squad evidence"
+        }
+      ],
+      "note": "The post-window roster lists Aaron Wan-Bissaka on loan at Aston Villa, El Hadji Malick Diouf at Brentford, James Ward-Prowse at Southampton and Jean-Clair Todibo on loan at Lens. Current West Ham players Morato, Adama Boiro, Joel Veltman and Arne Engels replace them one-for-one by broad role, preserving an exact current 16-player selection and role balance."
+    },
+    "wolverhampton-wanderers": {
+      "remove": [
+        "Santiago Bueno"
+      ],
+      "add": [
+        {
+          "footballName": "Toti",
+          "shirt": 24,
+          "group": "Defender",
+          "nationality": "Portugal",
+          "source": "FootballSquads Wolverhampton Wanderers 2026/27 post-window current roster + current Transfermarkt squad evidence"
+        }
+      ],
+      "note": "Santiago Bueno is on loan at Club America for 2026/27. Current Wolves centre-back Toti replaces him one-for-one, preserving the exact 16-player selection and defender balance."
     }
   },
   "safety": {"teamWriteReady":false,"careerWriteReady":false}
