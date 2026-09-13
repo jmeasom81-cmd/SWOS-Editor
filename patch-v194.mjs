@@ -1,0 +1,26 @@
+import fs from 'node:fs';
+
+const FILE='dist/index.html',QUEUE='football-db/league-one-identity-expansion-queue.json',INTAKE='football-db/league-one-identity-intake.json',IDENTITIES='football-db/identities.json',COVERAGE='football-db/coverage.json',PACKS='football-db/research-packs.json',MANIFEST='football-db/manifest.json',BUILD='v1.94.0';
+for(const file of [FILE,QUEUE,INTAKE,IDENTITIES,COVERAGE,PACKS,MANIFEST])if(!fs.existsSync(file))throw new Error(`SWOS Studio ${BUILD} build failed: missing ${file}.`);
+let html=fs.readFileSync(FILE,'utf8');if(!html.includes('<title>SWOS Studio v1.93.0</title>'))throw new Error(`SWOS Studio ${BUILD} build failed: expected v1.93.0 output.`);
+const queue=JSON.parse(fs.readFileSync(QUEUE,'utf8')),intake=JSON.parse(fs.readFileSync(INTAKE,'utf8')),identities=JSON.parse(fs.readFileSync(IDENTITIES,'utf8')),coverage=JSON.parse(fs.readFileSync(COVERAGE,'utf8')),packs=JSON.parse(fs.readFileSync(PACKS,'utf8')),manifest=JSON.parse(fs.readFileSync(MANIFEST,'utf8')),l1=coverage.divisions?.find(d=>d.code===2);
+if(manifest.version!=='2026.27-england-research.24'||identities.clubCount!==44||identities.playerCount!==759)throw new Error(`SWOS Studio ${BUILD} build failed: v1.93 identity/research baseline regressed.`);
+if(packs.packCount!==44||packs.playerCount!==704||l1?.identityReady!==0||l1?.researchReady!==0)throw new Error(`SWOS Studio ${BUILD} build failed: League One foundation must not silently publish identity or research packs.`);
+if(queue.status!=='active'||queue.totals?.identityReady!==0||queue.totals?.evidenceRequired!==24||queue.next?.clubId!=='afc-wimbledon')throw new Error(`SWOS Studio ${BUILD} build failed: League One identity queue is not the expected clean 0/24 foundation.`);
+if(intake.totals?.clubs!==24||intake.totals?.evidenceCompleteClubs!==24||intake.totals?.evidencePlayers!==384||intake.totals?.promotionReadyClubs!==24||intake.next?.clubId!=='afc-wimbledon')throw new Error(`SWOS Studio ${BUILD} build failed: League One identity evidence is not a complete promotion-ready 24-club batch.`);
+if(manifest.installation?.teamWriteReady!==false||manifest.installation?.careerWriteReady!==false)throw new Error(`SWOS Studio ${BUILD} build failed: binary write locks changed.`);
+html=html.replace('<title>SWOS Studio v1.93.0</title>',`<title>SWOS Studio ${BUILD}</title>`);
+const js=String.raw`
+<script id="swos-v194-league-one-identity-foundation-layer">
+(function(){
+'use strict';var BUILD='v1.94.0';
+function render(){var anchor=document.getElementById('v193-research')||document.getElementById('v192-research');if(!anchor)return false;
+if(!document.getElementById('v194-league-one-foundation')){var box=document.createElement('div');box.id='v194-league-one-foundation';box.className='card stack';box.innerHTML='<strong>🧱 League One identity foundation — evidence complete</strong><span class="about">All 24 mapped League One clubs now have a current 2026/27 source file containing exactly 16 selected players: 2 goalkeepers, 5 defenders, 5 midfielders and 4 forwards.</span><span class="about"><b>384 identities</b> have passed the source, uniqueness, shirt-number and role-balance preflight. Promotion remains a separate guarded action, beginning with <b>AFC Wimbledon</b>.</span><span class="about">Premier League and Championship research remain protected at <b>44 clubs / 704 players</b>.</span><span class="feature-status beta">24 CLUB EVIDENCE PACKS READY · 0 PUBLISHED</span>';anchor.insertAdjacentElement('afterend',box);}
+if(!document.getElementById('v194-release-card')){var a=document.getElementById('v193-release-card')||document.getElementById('v192-release-card');if(a){var c=document.createElement('div');c.id='v194-release-card';c.className='card stack v133-release-card';c.innerHTML='<strong>New in v1.94.0 — League One identity evidence gate</strong><span class="about">• Separate League One queue, intake, evidence schema and source validator.</span><span class="about">• 24 current club files / 384 selected player identities pass the exact-16 gate.</span><span class="about">• Evidence can be staged without silently becoming published database data.</span><span class="about">• League One research remains blocked until all identity promotions complete.</span><span class="about">• TEAM.* and established .CAR binary writes remain locked.</span>';a.insertAdjacentElement('beforebegin',c);}}
+document.title='SWOS Studio '+BUILD;var b=document.querySelector('#v133-build-status-panel .build-status-head>.feature-status.beta');if(b)b.textContent=BUILD;return true;}
+var tries=0;function apply(){tries++;if(!render()&&tries<20)setTimeout(apply,100);}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();
+})();
+</script>`;
+html=html.replace('</body>',js+'\n</body>');fs.writeFileSync(FILE,html,'utf8');
+if(!html.includes('swos-v194-league-one-identity-foundation-layer')||!html.includes('<title>SWOS Studio v1.94.0</title>'))throw new Error(`SWOS Studio ${BUILD} build failed: foundation UI layer missing.`);
+console.log('SWOS Studio v1.94.0 League One identity foundation complete · 24 evidence files / 384 players · AFC Wimbledon first · binary writes locked.');

@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "huddersfield-town",
+  "snapshot": "2026-09-12",
+  "sourceSummary": "Huddersfield Town current 2026/27 first-team roster, shirt number, nationality and broad playing role from FootballSquads after the summer window. The selected 16 use a fixed balanced mix of 2 goalkeepers, 5 defenders, 5 midfielders and 4 forwards.",
+  "players": [
+    {
+      "footballName": "Matty Young",
+      "group": "Goalkeeper",
+      "nationality": "England",
+      "shirt": 1,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm · current 2026/27 roster · #1 · Goalkeeper"
+    },
+    {
+      "footballName": "Jak Alnwick",
+      "group": "Goalkeeper",
+      "nationality": "England",
+      "shirt": 31,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm · current 2026/27 roster · #31 · Goalkeeper"
+    },
+    {
+      "footballName": "Lasse Sorensen",
+      "group": "Defender",
+      "nationality": "Denmark",
+      "shirt": 2,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm · current 2026/27 roster · #2 · Defender",
+      "notes": "ASCII football name retained for SWOS database compatibility; source spelling: Lasse Sørensen."
+    },
+    {
+      "footballName": "Murray Wallace",
+      "group": "Defender",
+      "nationality": "Scotland",
+      "shirt": 3,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm · current 2026/27 roster · #3 · Defender"
+    },
+    {
+      "footballName": "Joe Low",
+      "group": "Defender",
+      "nationality": "Wales",
+      "shirt": 5,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm · current 2026/27 roster · #5 · Defender"
+    },
+    {
+      "footballName": "Jack Whatmough",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 6,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm · current 2026/27 roster · #6 · Defender"
+    },
+    {
+      "footballName": "Lynden Gooch",
+      "group": "Defender",
+      "nationality": "United States",
+      "shirt": 7,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm · current 2026/27 roster · #7 · Defender"
+    },
+    {
+      "footballName": "Ryan Ledson",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 4,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm · current 2026/27 roster · #4 · Midfielder"
+    },
+    {
+      "footballName": "Archie Collins",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 8,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm · current 2026/27 roster · #8 · Midfielder"
+    },
+    {
+      "footballName": "Marcus Harness",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 10,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm · current 2026/27 roster · #10 · Midfielder"
+    },
+    {
+      "footballName": "Ethan Brierley",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 14,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm · current 2026/27 roster · #14 · Midfielder"
+    },
+    {
+      "footballName": "Herbie Kane",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 16,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm · current 2026/27 roster · #16 · Midfielder"
+    },
+    {
+      "footballName": "Joe Taylor",
+      "group": "Forward",
+      "nationality": "Wales",
+      "shirt": 9,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm · current 2026/27 roster · #9 · Forward"
+    },
+    {
+      "footballName": "Ashley Fletcher",
+      "group": "Forward",
+      "nationality": "England",
+      "shirt": 11,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm · current 2026/27 roster · #11 · Forward"
+    },
+    {
+      "footballName": "Bojan Radulovic",
+      "group": "Forward",
+      "nationality": "Serbia",
+      "shirt": 25,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm · current 2026/27 roster · #25 · Forward",
+      "notes": "ASCII football name retained for SWOS database compatibility; source spelling: Bojan Radulović."
+    },
+    {
+      "footballName": "Derensili Sanches Fernandes",
+      "group": "Forward",
+      "nationality": "Netherlands",
+      "shirt": 30,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm · current 2026/27 roster · #30 · Forward"
+    }
+  ]
+}

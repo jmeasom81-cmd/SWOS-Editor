@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "oxford-united",
+  "snapshot": "2026-09-12",
+  "sourceSummary": "Oxford United current 2026/27 first-team roster, shirt number, nationality and broad playing role from FootballSquads after the summer window. The selected 16 use a fixed balanced mix of 2 goalkeepers, 5 defenders, 5 midfielders and 4 forwards.",
+  "players": [
+    {
+      "footballName": "Jamie Cumming",
+      "group": "Goalkeeper",
+      "nationality": "England",
+      "shirt": 1,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm · current 2026/27 roster · #1 · Goalkeeper"
+    },
+    {
+      "footballName": "Simon Eastwood",
+      "group": "Goalkeeper",
+      "nationality": "England",
+      "shirt": 13,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm · current 2026/27 roster · #13 · Goalkeeper"
+    },
+    {
+      "footballName": "Sam Long",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 2,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm · current 2026/27 roster · #2 · Defender"
+    },
+    {
+      "footballName": "Ciaron Brown",
+      "group": "Defender",
+      "nationality": "Northern Ireland",
+      "shirt": 3,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm · current 2026/27 roster · #3 · Defender"
+    },
+    {
+      "footballName": "Frankie Kent",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 5,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm · current 2026/27 roster · #5 · Defender"
+    },
+    {
+      "footballName": "Michal Helik",
+      "group": "Defender",
+      "nationality": "Poland",
+      "shirt": 6,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm · current 2026/27 roster · #6 · Defender",
+      "notes": "ASCII football name retained for SWOS database compatibility; source spelling: Michał Helik."
+    },
+    {
+      "footballName": "Ruben Roosken",
+      "group": "Defender",
+      "nationality": "Netherlands",
+      "shirt": 12,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm · current 2026/27 roster · #12 · Defender"
+    },
+    {
+      "footballName": "Kai Andrews",
+      "group": "Midfielder",
+      "nationality": "Wales",
+      "shirt": 4,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm · current 2026/27 roster · #4 · Midfielder"
+    },
+    {
+      "footballName": "Cameron Brannagan",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 8,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm · current 2026/27 roster · #8 · Midfielder"
+    },
+    {
+      "footballName": "Tyler Goodrham",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 11,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm · current 2026/27 roster · #11 · Midfielder"
+    },
+    {
+      "footballName": "Jamie McDonnell",
+      "group": "Midfielder",
+      "nationality": "Northern Ireland",
+      "shirt": 18,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm · current 2026/27 roster · #18 · Midfielder"
+    },
+    {
+      "footballName": "Luka Lynch",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 20,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm · current 2026/27 roster · #20 · Midfielder"
+    },
+    {
+      "footballName": "Jin-Woo Jeon",
+      "group": "Forward",
+      "nationality": "South Korea",
+      "shirt": 7,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm · current 2026/27 roster · #7 · Forward"
+    },
+    {
+      "footballName": "Mark Harris",
+      "group": "Forward",
+      "nationality": "Wales",
+      "shirt": 9,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm · current 2026/27 roster · #9 · Forward"
+    },
+    {
+      "footballName": "Aidomo Emakhu",
+      "group": "Forward",
+      "nationality": "Ireland",
+      "shirt": 10,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm · current 2026/27 roster · #10 · Forward"
+    },
+    {
+      "footballName": "Gatlin O'Donkor",
+      "group": "Forward",
+      "nationality": "England",
+      "shirt": 19,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm · current 2026/27 roster · #19 · Forward"
+    }
+  ]
+}

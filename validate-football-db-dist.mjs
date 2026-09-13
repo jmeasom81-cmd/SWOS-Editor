@@ -22,7 +22,7 @@ for(const [id,club] of Object.entries(packs.clubs||{})){
 if(plResearch!==20)throw new Error(`Static DB consistency failed: Premier League research foundation regressed to ${plResearch}/20.`);
 if(otherResearch!==0)throw new Error(`Static DB consistency failed: unexpected lower-division research packs (${otherResearch}).`);
 if(packs.packCount!==plResearch+champResearch||packs.playerCount!==totalResearchPlayers||totalResearchPlayers!==packs.packCount*16)throw new Error('Static DB consistency failed: research pack totals are inconsistent.');
-const plCoverage=coverage.divisions?.find(d=>d.code===0),champCoverage=coverage.divisions?.find(d=>d.code===1);
+const plCoverage=coverage.divisions?.find(d=>d.code===0),champCoverage=coverage.divisions?.find(d=>d.code===1),leagueOneCoverage=coverage.divisions?.find(d=>d.code===2);
 if(coverage.summary?.identityReady!==identities.clubCount||coverage.summary?.researchReady!==packs.packCount||plCoverage?.identityReady!==20||plCoverage?.researchReady!==20||champCoverage?.researchReady!==champResearch)throw new Error('Static DB consistency failed: deployed coverage disagrees with research/identity resources.');
 if(queue.totals?.clubs!==0||queue.totals?.stagedPlayers!==0||queue.next!=null)throw new Error('Static DB consistency failed: Premier League research queue should be empty.');
 if(intake.totals?.clubs!==0||intake.totals?.players!==0||intake.next!=null)throw new Error('Static DB consistency failed: Premier League research intake should be empty.');
@@ -30,6 +30,19 @@ if(validation.status!=='pass'||validation.totals?.clubs!==20||validation.totals?
 
 const publication=read('publication.json');if(publication.databaseVersion!==manifest.version||publication.resources?.length<files.length)throw new Error('Static DB consistency failed: publication receipt is incomplete.');
 if(fs.existsSync(path.join(DIST,'identity-expansion-queue.json'))){const iq=read('identity-expansion-queue.json'),ii=read('identity-intake.json');if(iq.totals?.identityReady!==champCoverage?.identityReady||ii.totals?.identityReady!==champCoverage?.identityReady)throw new Error('Static DB consistency failed: Championship identity queue/intake disagree with coverage.');}
+
+const leagueOneIdentityPipeline=['league-one-identity-expansion-queue.json','league-one-identity-intake.json','league-one-identity-evidence/schema-v1.json'];
+const leagueOneIdentityPresent=leagueOneIdentityPipeline.filter(rel=>fs.existsSync(path.join(ROOT,rel)));
+const leagueOneIdentitySchemaOnly=leagueOneIdentityPresent.length===1&&leagueOneIdentityPresent[0]==='league-one-identity-evidence/schema-v1.json';
+if(leagueOneIdentityPresent.length>0&&!leagueOneIdentitySchemaOnly&&leagueOneIdentityPresent.length!==leagueOneIdentityPipeline.length)throw new Error(`Static DB consistency failed: partial League One identity pipeline (${leagueOneIdentityPresent.join(', ')}).`);
+if(leagueOneIdentityPresent.length===leagueOneIdentityPipeline.length){
+  for(const rel of leagueOneIdentityPipeline){const src=path.join(ROOT,rel),dst=path.join(DIST,rel);if(!fs.existsSync(dst)||sha(src)!==sha(dst))throw new Error(`Static DB consistency failed: League One identity resource ${rel} missing or mismatched.`);}
+  const lq=read('league-one-identity-expansion-queue.json'),li=read('league-one-identity-intake.json'),ready=leagueOneCoverage?.identityReady||0,pending=24-ready;
+  if(lq.totals?.identityReady!==ready||lq.totals?.evidenceRequired!==pending||li.totals?.identityReady!==ready||li.totals?.promotionReadyClubs!==pending)throw new Error('Static DB consistency failed: League One identity queue/intake disagree with coverage.');
+  if(ready===0&&lq.next?.clubId!=='afc-wimbledon')throw new Error('Static DB consistency failed: League One identity foundation must begin with AFC Wimbledon.');
+  if(ready===24&&(lq.next!==null||li.next!==null||lq.status!=='complete'||li.status!=='complete'))throw new Error('Static DB consistency failed: completed League One identity queue/intake must be closed.');
+  const published=new Set((publication.resources||[]).map(r=>r.path));for(const rel of leagueOneIdentityPipeline)if(!published.has(rel))throw new Error(`Static DB consistency failed: publication receipt omits ${rel}.`);
+}
 
 const championshipPipeline=['championship-research-queue.json','championship-research-intake.json','championship-research-evidence/schema-v1.json'];
 const championshipPipelinePresent=championshipPipeline.filter(rel=>fs.existsSync(path.join(ROOT,rel)));
@@ -57,4 +70,4 @@ if(fs.existsSync(expSrc)){
 }else if(validation.databaseVersion!==manifest.version){
   throw new Error('Static DB consistency failed: legacy validation version differs from manifest before research expansion validation exists.');
 }
-console.log(`Static football-db consistency PASS · ${files.length} core hashes match · England identities ${identities.clubCount}/92 · PL research 20/20 · Championship research ${champResearch}/24`);
+console.log(`Static football-db consistency PASS · ${files.length} core hashes match · England identities ${identities.clubCount}/92 · League One identities ${leagueOneCoverage?.identityReady||0}/24 · PL research 20/20 · Championship research ${champResearch}/24`);

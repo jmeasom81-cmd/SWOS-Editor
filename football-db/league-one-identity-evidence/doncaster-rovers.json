@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "doncaster-rovers",
+  "snapshot": "2026-09-12",
+  "sourceSummary": "Doncaster Rovers current 2026/27 first-team roster, shirt number, nationality and broad playing role from FootballSquads after the summer window. The selected 16 use a fixed balanced mix of 2 goalkeepers, 5 defenders, 5 midfielders and 4 forwards.",
+  "players": [
+    {
+      "footballName": "Tommy Simkin",
+      "group": "Goalkeeper",
+      "nationality": "England",
+      "shirt": 1,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm · current 2026/27 roster · #1 · Goalkeeper"
+    },
+    {
+      "footballName": "Jake Oram",
+      "group": "Goalkeeper",
+      "nationality": "England",
+      "shirt": 32,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm · current 2026/27 roster · #32 · Goalkeeper"
+    },
+    {
+      "footballName": "Jamie Sterry",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 2,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm · current 2026/27 roster · #2 · Defender"
+    },
+    {
+      "footballName": "James Husband",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 3,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm · current 2026/27 roster · #3 · Defender"
+    },
+    {
+      "footballName": "Matty Pearson",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 5,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm · current 2026/27 roster · #5 · Defender"
+    },
+    {
+      "footballName": "Jay McGrath",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 6,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm · current 2026/27 roster · #6 · Defender"
+    },
+    {
+      "footballName": "Neill Byrne",
+      "group": "Defender",
+      "nationality": "Ireland",
+      "shirt": 12,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm · current 2026/27 roster · #12 · Defender"
+    },
+    {
+      "footballName": "Owen Bailey",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 4,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm · current 2026/27 roster · #4 · Midfielder"
+    },
+    {
+      "footballName": "Tommi O'Reilly",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 7,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm · current 2026/27 roster · #7 · Midfielder"
+    },
+    {
+      "footballName": "George Broadbent",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 8,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm · current 2026/27 roster · #8 · Midfielder"
+    },
+    {
+      "footballName": "Harry Clifton",
+      "group": "Midfielder",
+      "nationality": "Wales",
+      "shirt": 15,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm · current 2026/27 roster · #15 · Midfielder"
+    },
+    {
+      "footballName": "Jordan Thomas",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 19,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm · current 2026/27 roster · #19 · Midfielder"
+    },
+    {
+      "footballName": "Brandon Hanlan",
+      "group": "Forward",
+      "nationality": "England",
+      "shirt": 9,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm · current 2026/27 roster · #9 · Forward"
+    },
+    {
+      "footballName": "Alfie May",
+      "group": "Forward",
+      "nationality": "England",
+      "shirt": 10,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm · current 2026/27 roster · #10 · Forward"
+    },
+    {
+      "footballName": "Leon Ayinde",
+      "group": "Forward",
+      "nationality": "Ireland",
+      "shirt": 11,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm · current 2026/27 roster · #11 · Forward"
+    },
+    {
+      "footballName": "Francis Okoronkwo",
+      "group": "Forward",
+      "nationality": "England",
+      "shirt": 14,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm · current 2026/27 roster · #14 · Forward"
+    }
+  ]
+}

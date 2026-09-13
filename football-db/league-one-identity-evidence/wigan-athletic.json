@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "wigan-athletic",
+  "snapshot": "2026-09-12",
+  "sourceSummary": "Wigan Athletic current 2026/27 first-team roster, shirt number, nationality and broad playing role from FootballSquads after the summer window. The selected 16 use a fixed balanced mix of 2 goalkeepers, 5 defenders, 5 midfielders and 4 forwards.",
+  "players": [
+    {
+      "footballName": "Joe Walsh",
+      "group": "Goalkeeper",
+      "nationality": "England",
+      "shirt": 1,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/wigan.htm · current 2026/27 roster · #1 · Goalkeeper"
+    },
+    {
+      "footballName": "Tom Watson",
+      "group": "Goalkeeper",
+      "nationality": "England",
+      "shirt": 12,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/wigan.htm · current 2026/27 roster · #12 · Goalkeeper"
+    },
+    {
+      "footballName": "Connor Barrett",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 2,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/wigan.htm · current 2026/27 roster · #2 · Defender"
+    },
+    {
+      "footballName": "Morgan Fox",
+      "group": "Defender",
+      "nationality": "Wales",
+      "shirt": 3,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/wigan.htm · current 2026/27 roster · #3 · Defender"
+    },
+    {
+      "footballName": "Jeremiah Chilokoa-Mullen",
+      "group": "Defender",
+      "nationality": "Scotland",
+      "shirt": 4,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/wigan.htm · current 2026/27 roster · #4 · Defender"
+    },
+    {
+      "footballName": "Finley Burns",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 5,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/wigan.htm · current 2026/27 roster · #5 · Defender"
+    },
+    {
+      "footballName": "Llyton Chapman",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 15,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/wigan.htm · current 2026/27 roster · #15 · Defender"
+    },
+    {
+      "footballName": "Jensen Weir",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 6,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/wigan.htm · current 2026/27 roster · #6 · Midfielder"
+    },
+    {
+      "footballName": "Fraser Murray",
+      "group": "Midfielder",
+      "nationality": "Scotland",
+      "shirt": 7,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/wigan.htm · current 2026/27 roster · #7 · Midfielder"
+    },
+    {
+      "footballName": "Max Power",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 8,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/wigan.htm · current 2026/27 roster · #8 · Midfielder"
+    },
+    {
+      "footballName": "Reggie Walsh",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 10,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/wigan.htm · current 2026/27 roster · #10 · Midfielder"
+    },
+    {
+      "footballName": "Luke Harris",
+      "group": "Midfielder",
+      "nationality": "Wales",
+      "shirt": 13,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/wigan.htm · current 2026/27 roster · #13 · Midfielder"
+    },
+    {
+      "footballName": "Sonny Perkins",
+      "group": "Forward",
+      "nationality": "England",
+      "shirt": 9,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/wigan.htm · current 2026/27 roster · #9 · Forward"
+    },
+    {
+      "footballName": "Dara Costelloe",
+      "group": "Forward",
+      "nationality": "Ireland",
+      "shirt": 11,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/wigan.htm · current 2026/27 roster · #11 · Forward"
+    },
+    {
+      "footballName": "Akeel Higgins",
+      "group": "Forward",
+      "nationality": "England",
+      "shirt": 17,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/wigan.htm · current 2026/27 roster · #17 · Forward"
+    },
+    {
+      "footballName": "Adam Moseley",
+      "group": "Forward",
+      "nationality": "England",
+      "shirt": 24,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/flone/wigan.htm · current 2026/27 roster · #24 · Forward"
+    }
+  ]
+}
