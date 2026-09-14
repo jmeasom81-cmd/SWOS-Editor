@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "burton-albion",
+  "snapshot": "2026-09-13",
+  "sourceSummary": "Burton Albion current 2026/27 identity selection cross-checked against FootballSquads for squad membership and date of birth, plus current Transfermarkt player roles and published market values. Exact footballName keys remain aligned to the promoted League One identity 16.",
+  "players": {
+    "Kamil Dudek": {
+      "age": 20,
+      "marketValueM": 0,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/burton.htm",
+        "https://www.transfermarkt.co.uk/kamil-dudek/profil/spieler/1225050"
+      ],
+      "notes": "The cited Transfermarkt profile publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    },
+    "Corey Addai": {
+      "age": 28,
+      "marketValueM": 0.4,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/burton.htm",
+        "https://www.transfermarkt.co.uk/corey-addai/profil/spieler/424456"
+      ]
+    },
+    "Jack Armer": {
+      "age": 25,
+      "marketValueM": 0.55,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/burton.htm",
+        "https://www.transfermarkt.co.uk/jack-armer/profil/spieler/509423"
+      ]
+    },
+    "Toby Sibbick": {
+      "age": 27,
+      "marketValueM": 0.55,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/burton.htm",
+        "https://www.transfermarkt.co.uk/toby-sibbick/profil/spieler/484215"
+      ]
+    },
+    "Kyran Lofthouse": {
+      "age": 25,
+      "marketValueM": 0.3,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/burton.htm",
+        "https://www.transfermarkt.co.uk/kyran-lofthouse/profil/spieler/655723"
+      ]
+    },
+    "Curtis Tilt": {
+      "age": 35,
+      "marketValueM": 0.05,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/burton.htm",
+        "https://www.transfermarkt.co.uk/curtis-tilt/profil/spieler/444571"
+      ]
+    },
+    "Matthew Dennis": {
+      "age": 24,
+      "marketValueM": 0.275,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/burton.htm",
+        "https://www.transfermarkt.co.uk/matthew-dennis/profil/spieler/551964"
+      ]
+    },
+    "Kgaogelo Chauke": {
+      "age": 23,
+      "marketValueM": 0.3,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/burton.htm",
+        "https://www.transfermarkt.co.uk/kegs-chauke/profil/spieler/703577"
+      ],
+      "notes": "Transfermarkt publishes this player as Kegs Chauke; the footballName key remains matched to the identity feed."
+    },
+    "Charlie Webster": {
+      "age": 21,
+      "marketValueM": 0.9,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/burton.htm",
+        "https://www.transfermarkt.co.uk/charlie-webster/profil/spieler/697278"
+      ]
+    },
+    "George Evans": {
+      "age": 31,
+      "marketValueM": 0.15,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/burton.htm",
+        "https://www.transfermarkt.co.uk/george-evans/profil/spieler/181498"
+      ]
+    },
+    "Will Collar": {
+      "age": 29,
+      "marketValueM": 0.4,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/burton.htm",
+        "https://www.transfermarkt.co.uk/will-collar/profil/spieler/335598"
+      ]
+    },
+    "Ciaran Gilligan": {
+      "age": 24,
+      "marketValueM": 0.075,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/burton.htm",
+        "https://www.transfermarkt.co.uk/ciaran-gilligan/profil/spieler/809167"
+      ]
+    },
+    "Gbemi Arubi": {
+      "age": 22,
+      "marketValueM": 0.2,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/burton.htm",
+        "https://www.transfermarkt.co.uk/gbemi-arubi/profil/spieler/993050"
+      ],
+      "notes": "Role and valuation were taken from the current player search row because the player was not listed in the downloaded senior club table."
+    },
+    "Raphael Borges Rodrigues": {
+      "age": 23,
+      "marketValueM": 0.45,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/burton.htm",
+        "https://www.transfermarkt.co.uk/raphael-borges-rodrigues/profil/spieler/704398"
+      ]
+    },
+    "Caylan Vickers": {
+      "age": 21,
+      "marketValueM": 0.2,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/burton.htm",
+        "https://www.transfermarkt.co.uk/caylan-vickers/profil/spieler/890860"
+      ]
+    },
+    "Millar Matthews-Lewis": {
+      "age": 21,
+      "marketValueM": 0,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/burton.htm",
+        "https://www.transfermarkt.co.uk/millar-matthews-lewis/profil/spieler/965943"
+      ],
+      "notes": "The cited Transfermarkt profile publishes no market value; 0 records an unavailable published valuation, not an estimate. Role and valuation were taken from the current player search row because the player was not listed in the downloaded senior club table."
+    }
+  }
+}

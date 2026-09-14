@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "bromley",
+  "snapshot": "2026-09-13",
+  "sourceSummary": "Bromley current 2026/27 identity selection cross-checked against FootballSquads for squad membership and date of birth, plus current Transfermarkt player roles and published market values. Exact footballName keys remain aligned to the promoted League One identity 16.",
+  "players": {
+    "Grant Smith": {
+      "age": 32,
+      "marketValueM": 0.1,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bromley.htm",
+        "https://www.transfermarkt.co.uk/grant-smith/profil/spieler/185869"
+      ]
+    },
+    "Dillon Addai": {
+      "age": 21,
+      "marketValueM": 0,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bromley.htm",
+        "https://www.transfermarkt.co.uk/dillon-addai/profil/spieler/993428"
+      ],
+      "notes": "The cited Transfermarkt profile publishes no market value; 0 records an unavailable published valuation, not an estimate. Role and valuation were taken from the current player search row because the player was not listed in the downloaded senior club table."
+    },
+    "Chanse Headman": {
+      "age": 21,
+      "marketValueM": 0.075,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bromley.htm",
+        "https://www.transfermarkt.co.uk/chanse-headman/profil/spieler/1406628"
+      ]
+    },
+    "Richard Taylor": {
+      "age": 25,
+      "marketValueM": 0.325,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bromley.htm",
+        "https://www.transfermarkt.co.uk/richard-taylor/profil/spieler/696893"
+      ]
+    },
+    "Omar Sowunmi": {
+      "age": 30,
+      "marketValueM": 0.5,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bromley.htm",
+        "https://www.transfermarkt.co.uk/omar-sowunmi/profil/spieler/344354"
+      ]
+    },
+    "Deon Woodman": {
+      "age": 23,
+      "marketValueM": 0,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bromley.htm",
+        "https://www.transfermarkt.co.uk/deon-woodman/profil/spieler/842566"
+      ],
+      "notes": "The cited Transfermarkt profile publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    },
+    "Jacob Mendy": {
+      "age": 29,
+      "marketValueM": 0.125,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bromley.htm",
+        "https://www.transfermarkt.co.uk/jacob-mendy/profil/spieler/822163"
+      ]
+    },
+    "Ashley Charles": {
+      "age": 27,
+      "marketValueM": 0.25,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bromley.htm",
+        "https://www.transfermarkt.co.uk/ashley-charles/profil/spieler/649053"
+      ]
+    },
+    "George Saville": {
+      "age": 33,
+      "marketValueM": 0.7,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bromley.htm",
+        "https://www.transfermarkt.co.uk/george-saville/profil/spieler/141573"
+      ]
+    },
+    "Ethon Archer": {
+      "age": 24,
+      "marketValueM": 0.2,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bromley.htm",
+        "https://www.transfermarkt.co.uk/ethon-archer/profil/spieler/1201875"
+      ]
+    },
+    "Ben Thompson": {
+      "age": 30,
+      "marketValueM": 0.2,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bromley.htm",
+        "https://www.transfermarkt.co.uk/ben-thompson/profil/spieler/337062"
+      ]
+    },
+    "Mitch Pinnock": {
+      "age": 31,
+      "marketValueM": 0.2,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bromley.htm",
+        "https://www.transfermarkt.co.uk/mitch-pinnock/profil/spieler/265592"
+      ]
+    },
+    "Michael Cheek": {
+      "age": 35,
+      "marketValueM": 0.1,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bromley.htm",
+        "https://www.transfermarkt.co.uk/michael-cheek/profil/spieler/375095"
+      ]
+    },
+    "Nicke Kabamba": {
+      "age": 33,
+      "marketValueM": 0.05,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bromley.htm",
+        "https://www.transfermarkt.co.uk/nicke-kabamba/profil/spieler/483385"
+      ]
+    },
+    "Corey Whitely": {
+      "age": 35,
+      "marketValueM": 0.05,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bromley.htm",
+        "https://www.transfermarkt.co.uk/corey-whitely/profil/spieler/455600"
+      ]
+    },
+    "Mickel Miller": {
+      "age": 30,
+      "marketValueM": 0.325,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bromley.htm",
+        "https://www.transfermarkt.co.uk/mickel-miller/profil/spieler/563694"
+      ]
+    }
+  }
+}

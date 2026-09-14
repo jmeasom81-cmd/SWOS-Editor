@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "cambridge-united",
+  "snapshot": "2026-09-13",
+  "sourceSummary": "Cambridge United current 2026/27 identity selection cross-checked against FootballSquads for squad membership and date of birth, plus current Transfermarkt player roles and published market values. Exact footballName keys remain aligned to the promoted League One identity 16.",
+  "players": {
+    "Jake Eastwood": {
+      "age": 29,
+      "marketValueM": 0.3,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/cambr.htm",
+        "https://www.transfermarkt.co.uk/jake-eastwood/profil/spieler/526873"
+      ]
+    },
+    "Gabriel Breeze": {
+      "age": 22,
+      "marketValueM": 0,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/cambr.htm",
+        "https://www.transfermarkt.co.uk/gabe-breeze/profil/spieler/854900"
+      ],
+      "notes": "Transfermarkt publishes this player as Gabe Breeze; the footballName key remains matched to the identity feed. The cited Transfermarkt profile publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    },
+    "Liam Bennett": {
+      "age": 24,
+      "marketValueM": 0.45,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/cambr.htm",
+        "https://www.transfermarkt.co.uk/liam-bennett/profil/spieler/911757"
+      ]
+    },
+    "Callum Perry": {
+      "age": 20,
+      "marketValueM": 0,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/cambr.htm",
+        "https://www.transfermarkt.co.uk/callum-perry/profil/spieler/965919"
+      ],
+      "notes": "The cited Transfermarkt profile publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    },
+    "Dominic Ball": {
+      "age": 31,
+      "marketValueM": 0.25,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/cambr.htm",
+        "https://www.transfermarkt.co.uk/dominic-ball/profil/spieler/167254"
+      ]
+    },
+    "Patrick Bauer": {
+      "age": 33,
+      "marketValueM": 0.15,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/cambr.htm",
+        "https://www.transfermarkt.co.uk/patrick-bauer/profil/spieler/94603"
+      ]
+    },
+    "Kelland Watts": {
+      "age": 26,
+      "marketValueM": 0.6,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/cambr.htm",
+        "https://www.transfermarkt.co.uk/kell-watts/profil/spieler/484389"
+      ],
+      "notes": "Transfermarkt publishes this player as Kell Watts; the footballName key remains matched to the identity feed."
+    },
+    "Isaac Heath": {
+      "age": 21,
+      "marketValueM": 0.25,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/cambr.htm",
+        "https://www.transfermarkt.co.uk/isaac-heath/profil/spieler/847579"
+      ]
+    },
+    "Owen Moxon": {
+      "age": 28,
+      "marketValueM": 0.5,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/cambr.htm",
+        "https://www.transfermarkt.co.uk/owen-moxon/profil/spieler/347140"
+      ]
+    },
+    "Pelly Ruddock Mpanzu": {
+      "age": 33,
+      "marketValueM": 0.35,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/cambr.htm",
+        "https://www.transfermarkt.co.uk/pelly-ruddock-mpanzu/profil/spieler/244338"
+      ]
+    },
+    "Shane McLoughlin": {
+      "age": 29,
+      "marketValueM": 0.175,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/cambr.htm",
+        "https://www.transfermarkt.co.uk/shane-mcloughlin/profil/spieler/376252"
+      ]
+    },
+    "Glenn McConnell": {
+      "age": 21,
+      "marketValueM": 0.075,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/cambr.htm",
+        "https://www.transfermarkt.co.uk/glenn-mcconnell/profil/spieler/961075"
+      ]
+    },
+    "Louis Appere": {
+      "age": 27,
+      "marketValueM": 0.225,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/cambr.htm",
+        "https://www.transfermarkt.co.uk/louis-appere/profil/spieler/449019"
+      ]
+    },
+    "Ben Knight": {
+      "age": 24,
+      "marketValueM": 0.25,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/cambr.htm",
+        "https://www.transfermarkt.co.uk/ben-knight/profil/spieler/568007"
+      ]
+    },
+    "Sullay Kaikai": {
+      "age": 31,
+      "marketValueM": 0.15,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/cambr.htm",
+        "https://www.transfermarkt.co.uk/sullay-kaikai/profil/spieler/244130"
+      ]
+    },
+    "Callum Stead": {
+      "age": 26,
+      "marketValueM": 0.2,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/cambr.htm",
+        "https://www.transfermarkt.co.uk/callum-stead/profil/spieler/984136"
+      ]
+    }
+  }
+}

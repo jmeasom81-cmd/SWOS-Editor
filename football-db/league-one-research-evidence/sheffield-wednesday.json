@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "sheffield-wednesday",
+  "snapshot": "2026-09-13",
+  "sourceSummary": "Sheffield Wednesday current 2026/27 identity selection cross-checked against FootballSquads for squad membership and date of birth, plus current Transfermarkt player roles and published market values. Exact footballName keys remain aligned to the promoted League One identity 16.",
+  "players": {
+    "Joe Lumley": {
+      "age": 31,
+      "marketValueM": 0.4,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/sheffwed.htm",
+        "https://www.transfermarkt.co.uk/joe-lumley/profil/spieler/336367"
+      ]
+    },
+    "Connal Trueman": {
+      "age": 30,
+      "marketValueM": 0.075,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/sheffwed.htm",
+        "https://www.transfermarkt.co.uk/connal-trueman/profil/spieler/344586"
+      ]
+    },
+    "Liam Palmer": {
+      "age": 34,
+      "marketValueM": 0.1,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/sheffwed.htm",
+        "https://www.transfermarkt.co.uk/liam-palmer/profil/spieler/137149"
+      ],
+      "notes": "Role and valuation were taken from the current player search row because the player was not listed in the downloaded senior club table."
+    },
+    "Max Lowe": {
+      "age": 29,
+      "marketValueM": 1.8,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/sheffwed.htm",
+        "https://www.transfermarkt.co.uk/max-lowe/profil/spieler/258885"
+      ]
+    },
+    "Ricardo Santos": {
+      "age": 31,
+      "marketValueM": 0.35,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/sheffwed.htm",
+        "https://www.transfermarkt.co.uk/ricardo-santos/profil/spieler/247666"
+      ]
+    },
+    "Di'Shon Bernard": {
+      "age": 25,
+      "marketValueM": 1,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/sheffwed.htm",
+        "https://www.transfermarkt.co.uk/dishon-bernard/profil/spieler/531677"
+      ]
+    },
+    "Liam Cooper": {
+      "age": 35,
+      "marketValueM": 0.2,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/sheffwed.htm",
+        "https://www.transfermarkt.co.uk/liam-cooper/profil/spieler/75067"
+      ]
+    },
+    "Callum Slattery": {
+      "age": 27,
+      "marketValueM": 0.7,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/sheffwed.htm",
+        "https://www.transfermarkt.co.uk/callum-slattery/profil/spieler/332342"
+      ]
+    },
+    "Barry Bannan": {
+      "age": 36,
+      "marketValueM": 0.2,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/sheffwed.htm",
+        "https://www.transfermarkt.co.uk/barry-bannan/profil/spieler/61561"
+      ]
+    },
+    "Sean Fusire": {
+      "age": 21,
+      "marketValueM": 0.9,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/sheffwed.htm",
+        "https://www.transfermarkt.co.uk/sean-fusire/profil/spieler/969140"
+      ]
+    },
+    "Billy Mitchell": {
+      "age": 25,
+      "marketValueM": 3,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/sheffwed.htm",
+        "https://www.transfermarkt.co.uk/billy-mitchell/profil/spieler/671821"
+      ]
+    },
+    "Will Grainger": {
+      "age": 17,
+      "marketValueM": 0.1,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/sheffwed.htm",
+        "https://www.transfermarkt.co.uk/william-grainger/profil/spieler/1122295"
+      ],
+      "notes": "Transfermarkt publishes this player as William Grainger; the footballName key remains matched to the identity feed."
+    },
+    "Jamal Lowe": {
+      "age": 32,
+      "marketValueM": 0.5,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/sheffwed.htm",
+        "https://www.transfermarkt.co.uk/jamal-lowe/profil/spieler/239949"
+      ]
+    },
+    "Louie Barry": {
+      "age": 23,
+      "marketValueM": 2.5,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/sheffwed.htm",
+        "https://www.transfermarkt.co.uk/louie-barry/profil/spieler/581670"
+      ],
+      "notes": "Role and valuation were taken from the current player search row because the player was not listed in the downloaded senior club table."
+    },
+    "Ali Al-Hamadi": {
+      "age": 24,
+      "marketValueM": 1.5,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/sheffwed.htm",
+        "https://www.transfermarkt.co.uk/ali-al-hamadi/profil/spieler/610581"
+      ]
+    },
+    "Jaden Heskey": {
+      "age": 20,
+      "marketValueM": 0.3,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/sheffwed.htm",
+        "https://www.transfermarkt.co.uk/jaden-heskey/profil/spieler/961833"
+      ]
+    }
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "mansfield-town",
+  "snapshot": "2026-09-13",
+  "sourceSummary": "Mansfield Town current 2026/27 identity selection cross-checked against FootballSquads for squad membership and date of birth, plus current Transfermarkt player roles and published market values. Exact footballName keys remain aligned to the promoted League One identity 16.",
+  "players": {
+    "Liam Roberts": {
+      "age": 31,
+      "marketValueM": 0.2,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/mansfield.htm",
+        "https://www.transfermarkt.co.uk/liam-roberts/profil/spieler/249164"
+      ]
+    },
+    "Harry Lewis": {
+      "age": 28,
+      "marketValueM": 0.075,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/mansfield.htm",
+        "https://www.transfermarkt.co.uk/harry-lewis/profil/spieler/341043"
+      ]
+    },
+    "Kyle Knoyle": {
+      "age": 29,
+      "marketValueM": 0.2,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/mansfield.htm",
+        "https://www.transfermarkt.co.uk/kyle-knoyle/profil/spieler/291171"
+      ]
+    },
+    "Stephen McLaughlin": {
+      "age": 36,
+      "marketValueM": 0.05,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/mansfield.htm",
+        "https://www.transfermarkt.co.uk/stephen-mclaughlin/profil/spieler/178067"
+      ]
+    },
+    "Elliott Hewitt": {
+      "age": 32,
+      "marketValueM": 0.1,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/mansfield.htm",
+        "https://www.transfermarkt.co.uk/elliott-hewitt/profil/spieler/186624"
+      ]
+    },
+    "Ryan Sweeney": {
+      "age": 29,
+      "marketValueM": 0.4,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/mansfield.htm",
+        "https://www.transfermarkt.co.uk/ryan-sweeney/profil/spieler/347666"
+      ],
+      "notes": "Role and valuation were taken from the current player search row because the player was not listed in the downloaded senior club table."
+    },
+    "Baily Cargill": {
+      "age": 30,
+      "marketValueM": 0.175,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/mansfield.htm",
+        "https://www.transfermarkt.co.uk/baily-cargill/profil/spieler/293450"
+      ]
+    },
+    "Luke Bolton": {
+      "age": 26,
+      "marketValueM": 0.3,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/mansfield.htm",
+        "https://www.transfermarkt.co.uk/luke-bolton/profil/spieler/382553"
+      ]
+    },
+    "George Maris": {
+      "age": 30,
+      "marketValueM": 0.175,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/mansfield.htm",
+        "https://www.transfermarkt.co.uk/george-maris/profil/spieler/355489"
+      ]
+    },
+    "Jon Russell": {
+      "age": 25,
+      "marketValueM": 0.75,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/mansfield.htm",
+        "https://www.transfermarkt.co.uk/jon-russell/profil/spieler/505561"
+      ]
+    },
+    "Liam Thompson": {
+      "age": 24,
+      "marketValueM": 1.5,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/mansfield.htm",
+        "https://www.transfermarkt.co.uk/liam-thompson/profil/spieler/581331"
+      ]
+    },
+    "Nathan Moriah-Welsh": {
+      "age": 24,
+      "marketValueM": 0.3,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/mansfield.htm",
+        "https://www.transfermarkt.co.uk/nathan-moriah-welsh/profil/spieler/655139"
+      ]
+    },
+    "Lucas Akins": {
+      "age": 37,
+      "marketValueM": 0.05,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/mansfield.htm",
+        "https://www.transfermarkt.co.uk/lucas-akins/profil/spieler/63199"
+      ]
+    },
+    "Jordan Bowery": {
+      "age": 35,
+      "marketValueM": 0.05,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/mansfield.htm",
+        "https://www.transfermarkt.co.uk/jordan-bowery/profil/spieler/94655"
+      ]
+    },
+    "Michael Smith": {
+      "age": 34,
+      "marketValueM": 0.15,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/mansfield.htm",
+        "https://www.transfermarkt.co.uk/michael-smith/profil/spieler/96173"
+      ]
+    },
+    "David McGoldrick": {
+      "age": 38,
+      "marketValueM": 0.025,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/mansfield.htm",
+        "https://www.transfermarkt.co.uk/david-mcgoldrick/profil/spieler/35416"
+      ]
+    }
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "peterborough-united",
+  "snapshot": "2026-09-13",
+  "sourceSummary": "Peterborough United current 2026/27 identity selection cross-checked against FootballSquads for squad membership and date of birth, plus current Transfermarkt player roles and published market values. Exact footballName keys remain aligned to the promoted League One identity 16.",
+  "players": {
+    "Alex Bass": {
+      "age": 28,
+      "marketValueM": 0.375,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/peterb.htm",
+        "https://www.transfermarkt.co.uk/alex-bass/profil/spieler/334687"
+      ]
+    },
+    "Collin Andeng Ndi": {
+      "age": 23,
+      "marketValueM": 0,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/peterb.htm",
+        "https://www.transfermarkt.co.uk/collin-andeng-ndi/profil/spieler/934449"
+      ],
+      "notes": "The cited Transfermarkt profile publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    },
+    "Carl Johnston": {
+      "age": 24,
+      "marketValueM": 0.25,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/peterb.htm",
+        "https://www.transfermarkt.co.uk/carl-johnston/profil/spieler/515548"
+      ]
+    },
+    "Evan Weir": {
+      "age": 24,
+      "marketValueM": 0.3,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/peterb.htm",
+        "https://www.transfermarkt.co.uk/evan-weir/profil/spieler/746956"
+      ]
+    },
+    "Sam Hughes": {
+      "age": 29,
+      "marketValueM": 0.2,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/peterb.htm",
+        "https://www.transfermarkt.co.uk/sam-hughes/profil/spieler/395797"
+      ],
+      "notes": "Role and valuation were taken from the current player search row because the player was not listed in the downloaded senior club table."
+    },
+    "Josh Feeney": {
+      "age": 21,
+      "marketValueM": 0.65,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/peterb.htm",
+        "https://www.transfermarkt.co.uk/josh-feeney/profil/spieler/875929"
+      ]
+    },
+    "Harley Mills": {
+      "age": 20,
+      "marketValueM": 0.15,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/peterb.htm",
+        "https://www.transfermarkt.co.uk/harley-mills/profil/spieler/1176441"
+      ]
+    },
+    "Liam Kelly": {
+      "age": 30,
+      "marketValueM": 0.3,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/peterb.htm",
+        "https://www.transfermarkt.co.uk/liam-kelly/profil/spieler/252986"
+      ]
+    },
+    "Thomas O'Connor": {
+      "age": 27,
+      "marketValueM": 0.5,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/peterb.htm",
+        "https://www.transfermarkt.co.uk/thomas-oconnor/profil/spieler/357661"
+      ]
+    },
+    "Harrison Jones": {
+      "age": 21,
+      "marketValueM": 0.15,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/peterb.htm",
+        "https://www.transfermarkt.co.uk/harrison-jones/profil/spieler/937840"
+      ]
+    },
+    "Brandon Khela": {
+      "age": 21,
+      "marketValueM": 0.35,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/peterb.htm",
+        "https://www.transfermarkt.co.uk/brandon-khela/profil/spieler/921735"
+      ]
+    },
+    "Ethan Williams": {
+      "age": 20,
+      "marketValueM": 0.5,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/peterb.htm",
+        "https://www.transfermarkt.co.uk/ethan-williams/profil/spieler/935082"
+      ],
+      "notes": "Role and valuation were taken from the current player search row because the player was not listed in the downloaded senior club table."
+    },
+    "Harry Leonard": {
+      "age": 23,
+      "marketValueM": 1.5,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/peterb.htm",
+        "https://www.transfermarkt.co.uk/harry-leonard/profil/spieler/672526"
+      ]
+    },
+    "Vernon Masara": {
+      "age": 19,
+      "marketValueM": 0,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/peterb.htm",
+        "https://www.transfermarkt.co.uk/vernon-masara/profil/spieler/1091662"
+      ],
+      "notes": "The cited Transfermarkt profile publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    },
+    "Bolu Shofowoke": {
+      "age": 17,
+      "marketValueM": 0,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/peterb.htm",
+        "https://www.transfermarkt.co.uk/bolu-shofowoke/profil/spieler/1401850"
+      ],
+      "notes": "The cited Transfermarkt profile publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    },
+    "Danny Ormerod": {
+      "age": 20,
+      "marketValueM": 0,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/peterb.htm",
+        "https://www.transfermarkt.co.uk/danny-ormerod/profil/spieler/1200263"
+      ],
+      "notes": "The cited Transfermarkt profile publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    }
+  }
+}

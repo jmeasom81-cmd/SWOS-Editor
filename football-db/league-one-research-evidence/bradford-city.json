@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "bradford-city",
+  "snapshot": "2026-09-13",
+  "sourceSummary": "Bradford City current 2026/27 identity selection cross-checked against FootballSquads for squad membership and date of birth, plus current Transfermarkt player roles and published market values. Exact footballName keys remain aligned to the promoted League One identity 16.",
+  "players": {
+    "Cameron Dawson": {
+      "age": 31,
+      "marketValueM": 0.3,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bradford.htm",
+        "https://www.transfermarkt.co.uk/cameron-dawson/profil/spieler/251056"
+      ]
+    },
+    "Jon McCracken": {
+      "age": 26,
+      "marketValueM": 0.5,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bradford.htm",
+        "https://www.transfermarkt.co.uk/jon-mccracken/profil/spieler/403564"
+      ]
+    },
+    "Reece Welch": {
+      "age": 22,
+      "marketValueM": 0.25,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bradford.htm",
+        "https://www.transfermarkt.co.uk/reece-welch/profil/spieler/655986"
+      ]
+    },
+    "Ibou Touray": {
+      "age": 31,
+      "marketValueM": 0.225,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bradford.htm",
+        "https://www.transfermarkt.co.uk/ibou-touray/profil/spieler/204960"
+      ]
+    },
+    "Macaulay Gillesphey": {
+      "age": 30,
+      "marketValueM": 0.4,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bradford.htm",
+        "https://www.transfermarkt.co.uk/macaulay-gillesphey/profil/spieler/267113"
+      ]
+    },
+    "Callum Connolly": {
+      "age": 28,
+      "marketValueM": 0.55,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bradford.htm",
+        "https://www.transfermarkt.co.uk/callum-connolly/profil/spieler/308632"
+      ]
+    },
+    "Hayden Matthews": {
+      "age": 22,
+      "marketValueM": 1.3,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bradford.htm",
+        "https://www.transfermarkt.co.uk/hayden-matthews/profil/spieler/1109824"
+      ]
+    },
+    "Adam Phillips": {
+      "age": 28,
+      "marketValueM": 0.65,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bradford.htm",
+        "https://www.transfermarkt.co.uk/adam-phillips/profil/spieler/314381"
+      ]
+    },
+    "Antoni Sarcevic": {
+      "age": 34,
+      "marketValueM": 0.05,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bradford.htm",
+        "https://www.transfermarkt.co.uk/antoni-sarcevic/profil/spieler/160525"
+      ],
+      "notes": "Role and valuation were taken from the current player search row because the player was not listed in the downloaded senior club table."
+    },
+    "Tyreik Wright": {
+      "age": 24,
+      "marketValueM": 0.35,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bradford.htm",
+        "https://www.transfermarkt.co.uk/tyreik-wright/profil/spieler/505657"
+      ]
+    },
+    "Henry Cartwright": {
+      "age": 21,
+      "marketValueM": 0.15,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bradford.htm",
+        "https://www.transfermarkt.co.uk/henry-cartwright/profil/spieler/866651"
+      ]
+    },
+    "Kieran Morgan": {
+      "age": 20,
+      "marketValueM": 1.5,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bradford.htm",
+        "https://www.transfermarkt.co.uk/kieran-morgan/profil/spieler/1047344"
+      ]
+    },
+    "Josh Neufville": {
+      "age": 25,
+      "marketValueM": 0.7,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bradford.htm",
+        "https://www.transfermarkt.co.uk/josh-neufville/profil/spieler/543093"
+      ]
+    },
+    "Jake Beesley": {
+      "age": 29,
+      "marketValueM": 0.3,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bradford.htm",
+        "https://www.transfermarkt.co.uk/jake-beesley/profil/spieler/321579"
+      ]
+    },
+    "Stephen Humphrys": {
+      "age": 28,
+      "marketValueM": 0.55,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bradford.htm",
+        "https://www.transfermarkt.co.uk/stephen-humphrys/profil/spieler/354567"
+      ]
+    },
+    "Kayden Jackson": {
+      "age": 32,
+      "marketValueM": 0.2,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/bradford.htm",
+        "https://www.transfermarkt.co.uk/kayden-jackson/profil/spieler/378872"
+      ]
+    }
+  }
+}

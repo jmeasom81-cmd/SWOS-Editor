@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "blackpool",
+  "snapshot": "2026-09-13",
+  "sourceSummary": "Blackpool current 2026/27 identity selection cross-checked against FootballSquads for squad membership and date of birth, plus current Transfermarkt player roles and published market values. Exact footballName keys remain aligned to the promoted League One identity 16.",
+  "players": {
+    "Bailey Peacock-Farrell": {
+      "age": 29,
+      "marketValueM": 0.9,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/blackpo.htm",
+        "https://www.transfermarkt.co.uk/bailey-peacock-farrell/profil/spieler/410436"
+      ]
+    },
+    "Luke Southwood": {
+      "age": 28,
+      "marketValueM": 0.2,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/blackpo.htm",
+        "https://www.transfermarkt.co.uk/luke-southwood/profil/spieler/398063"
+      ]
+    },
+    "Andy Lyons": {
+      "age": 26,
+      "marketValueM": 0.375,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/blackpo.htm",
+        "https://www.transfermarkt.co.uk/andy-lyons/profil/spieler/546024"
+      ]
+    },
+    "Zac Ashworth": {
+      "age": 24,
+      "marketValueM": 0.3,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/blackpo.htm",
+        "https://www.transfermarkt.co.uk/zac-ashworth/profil/spieler/699018"
+      ]
+    },
+    "Oliver Casey": {
+      "age": 25,
+      "marketValueM": 0.75,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/blackpo.htm",
+        "https://www.transfermarkt.co.uk/oliver-casey/profil/spieler/559800"
+      ]
+    },
+    "Fraser Horsfall": {
+      "age": 29,
+      "marketValueM": 0.275,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/blackpo.htm",
+        "https://www.transfermarkt.co.uk/fraser-horsfall/profil/spieler/525867"
+      ],
+      "notes": "Role and valuation were taken from the current player search row because the player was not listed in the downloaded senior club table."
+    },
+    "Jordan Brown": {
+      "age": 25,
+      "marketValueM": 0.65,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/blackpo.htm",
+        "https://www.transfermarkt.co.uk/jordan-brown/profil/spieler/508398"
+      ]
+    },
+    "Leighton Clarkson": {
+      "age": 24,
+      "marketValueM": 0.7,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/blackpo.htm",
+        "https://www.transfermarkt.co.uk/leighton-clarkson/profil/spieler/470606"
+      ]
+    },
+    "Albie Morgan": {
+      "age": 26,
+      "marketValueM": 0.35,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/blackpo.htm",
+        "https://www.transfermarkt.co.uk/albie-morgan/profil/spieler/606026"
+      ]
+    },
+    "George Honeyman": {
+      "age": 32,
+      "marketValueM": 0.5,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/blackpo.htm",
+        "https://www.transfermarkt.co.uk/george-honeyman/profil/spieler/218140"
+      ]
+    },
+    "Josh Bowler": {
+      "age": 27,
+      "marketValueM": 0.6,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/blackpo.htm",
+        "https://www.transfermarkt.co.uk/josh-bowler/profil/spieler/506470"
+      ]
+    },
+    "Karoy Anderson": {
+      "age": 21,
+      "marketValueM": 0.375,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/blackpo.htm",
+        "https://www.transfermarkt.co.uk/karoy-anderson/profil/spieler/874081"
+      ]
+    },
+    "Niall Ennis": {
+      "age": 27,
+      "marketValueM": 0.6,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/blackpo.htm",
+        "https://www.transfermarkt.co.uk/niall-ennis/profil/spieler/369171"
+      ]
+    },
+    "Jerry Yates": {
+      "age": 29,
+      "marketValueM": 1.3,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/blackpo.htm",
+        "https://www.transfermarkt.co.uk/jerry-yates/profil/spieler/351261"
+      ]
+    },
+    "Tom Bloxham": {
+      "age": 22,
+      "marketValueM": 0.6,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/blackpo.htm",
+        "https://www.transfermarkt.co.uk/tom-bloxham/profil/spieler/816515"
+      ]
+    },
+    "Dale Taylor": {
+      "age": 22,
+      "marketValueM": 0.6,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/blackpo.htm",
+        "https://www.transfermarkt.co.uk/dale-taylor/profil/spieler/624267"
+      ]
+    }
+  }
+}

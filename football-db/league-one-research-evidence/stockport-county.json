@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "stockport-county",
+  "snapshot": "2026-09-13",
+  "sourceSummary": "Stockport County current 2026/27 identity selection cross-checked against FootballSquads for squad membership and date of birth, plus current Transfermarkt player roles and published market values. Exact footballName keys remain aligned to the promoted League One identity 16.",
+  "players": {
+    "Oliver Whatmuff": {
+      "age": 18,
+      "marketValueM": 0,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stockprt.htm",
+        "https://www.transfermarkt.co.uk/oliver-whatmuff/profil/spieler/1056430"
+      ],
+      "notes": "The cited Transfermarkt profile publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    },
+    "Luca Ashby-Hammond": {
+      "age": 25,
+      "marketValueM": 0.3,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stockprt.htm",
+        "https://www.transfermarkt.co.uk/luca-ashby-hammond/profil/spieler/433163"
+      ]
+    },
+    "Josh Dacres-Cogley": {
+      "age": 30,
+      "marketValueM": 0.5,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stockprt.htm",
+        "https://www.transfermarkt.co.uk/josh-dacres-cogley/profil/spieler/452683"
+      ]
+    },
+    "Ethan Pye": {
+      "age": 23,
+      "marketValueM": 0.9,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stockprt.htm",
+        "https://www.transfermarkt.co.uk/ethan-pye/profil/spieler/887409"
+      ]
+    },
+    "Eoghan O'Connell": {
+      "age": 31,
+      "marketValueM": 0.4,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stockprt.htm",
+        "https://www.transfermarkt.co.uk/eoghan-oconnell/profil/spieler/280982"
+      ]
+    },
+    "Tom Wilson-Brown": {
+      "age": 21,
+      "marketValueM": 0.1,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stockprt.htm",
+        "https://www.transfermarkt.co.uk/tom-wilson-brown/profil/spieler/867710"
+      ]
+    },
+    "Tayo Edun": {
+      "age": 28,
+      "marketValueM": 0.25,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stockprt.htm",
+        "https://www.transfermarkt.co.uk/tayo-edun/profil/spieler/351502"
+      ]
+    },
+    "Lewis Bate": {
+      "age": 23,
+      "marketValueM": 0.55,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stockprt.htm",
+        "https://www.transfermarkt.co.uk/lewis-bate/profil/spieler/587003"
+      ]
+    },
+    "Jack Diamond": {
+      "age": 26,
+      "marketValueM": 0.7,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stockprt.htm",
+        "https://www.transfermarkt.co.uk/jack-diamond/profil/spieler/484385"
+      ]
+    },
+    "Callum Camps": {
+      "age": 30,
+      "marketValueM": 0.25,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stockprt.htm",
+        "https://www.transfermarkt.co.uk/callum-camps/profil/spieler/265577"
+      ]
+    },
+    "Oliver Norwood": {
+      "age": 35,
+      "marketValueM": 0.2,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stockprt.htm",
+        "https://www.transfermarkt.co.uk/oliver-norwood/profil/spieler/73547"
+      ],
+      "notes": "Role and valuation were taken from the current player search row because the player was not listed in the downloaded senior club table."
+    },
+    "Ryan Glover": {
+      "age": 25,
+      "marketValueM": 0.35,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stockprt.htm",
+        "https://www.transfermarkt.co.uk/ryan-glover/profil/spieler/684173"
+      ]
+    },
+    "Benony Breki Andresson": {
+      "age": 21,
+      "marketValueM": 0.4,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stockprt.htm",
+        "https://www.transfermarkt.co.uk/benony-breki-andresson/profil/spieler/907211"
+      ]
+    },
+    "Kyle Wootton": {
+      "age": 29,
+      "marketValueM": 0.7,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stockprt.htm",
+        "https://www.transfermarkt.co.uk/kyle-wootton/profil/spieler/334721"
+      ]
+    },
+    "Mikael Mandron": {
+      "age": 31,
+      "marketValueM": 0.1,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stockprt.htm",
+        "https://www.transfermarkt.co.uk/mikael-mandron/profil/spieler/218144"
+      ]
+    },
+    "Adama Sidibeh": {
+      "age": 28,
+      "marketValueM": 0.4,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stockprt.htm",
+        "https://www.transfermarkt.co.uk/adama-sidibeh/profil/spieler/1229924"
+      ]
+    }
+  }
+}

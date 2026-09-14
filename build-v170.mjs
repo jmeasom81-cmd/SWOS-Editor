@@ -1,10 +1,14 @@
 import {execFileSync} from 'node:child_process';
 import fs from 'node:fs';
 
+let preservedHtml=null;
 function run(step){
   if(!fs.existsSync(step))throw new Error(`SWOS v1.70 build runner: missing ${step}`);
+  if(preservedHtml!==null)fs.writeFileSync('dist/index.html',preservedHtml);
   console.log(`\n▶ ${step}`);
   execFileSync(process.execPath,[step],{stdio:'inherit'});
+  if(fs.existsSync('dist/index.html')&&(step.startsWith('patch-')||preservedHtml===null))preservedHtml=fs.readFileSync('dist/index.html');
+  else if(preservedHtml!==null)fs.writeFileSync('dist/index.html',preservedHtml);
 }
 
 // Rebuild the guarded v1.68 foundation first.

@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "notts-county",
+  "snapshot": "2026-09-13",
+  "sourceSummary": "Notts County current 2026/27 identity selection cross-checked against FootballSquads for squad membership and date of birth, plus current Transfermarkt player roles and published market values. Exact footballName keys remain aligned to the promoted League One identity 16.",
+  "players": {
+    "James Belshaw": {
+      "age": 35,
+      "marketValueM": 0.025,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/nottsco.htm",
+        "https://www.transfermarkt.co.uk/james-belshaw/profil/spieler/107534"
+      ]
+    },
+    "Harry Griffiths": {
+      "age": 21,
+      "marketValueM": 0,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/nottsco.htm",
+        "https://www.transfermarkt.co.uk/harry-griffiths/profil/spieler/911194"
+      ],
+      "notes": "The cited Transfermarkt profile publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    },
+    "James Gibbons": {
+      "age": 28,
+      "marketValueM": 0.3,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/nottsco.htm",
+        "https://www.transfermarkt.co.uk/james-gibbons/profil/spieler/453678"
+      ]
+    },
+    "Rod McDonald": {
+      "age": 34,
+      "marketValueM": 0.05,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/nottsco.htm",
+        "https://www.transfermarkt.co.uk/rod-mcdonald/profil/spieler/129021"
+      ]
+    },
+    "Jacob Bedeau": {
+      "age": 26,
+      "marketValueM": 0.35,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/nottsco.htm",
+        "https://www.transfermarkt.co.uk/jacob-bedeau/profil/spieler/453661"
+      ]
+    },
+    "Matthew Platt": {
+      "age": 28,
+      "marketValueM": 0.325,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/nottsco.htm",
+        "https://www.transfermarkt.co.uk/matty-platt/profil/spieler/405978"
+      ],
+      "notes": "Transfermarkt publishes this player as Matty Platt; the footballName key remains matched to the identity feed."
+    },
+    "Lucas Ness": {
+      "age": 24,
+      "marketValueM": 0.15,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/nottsco.htm",
+        "https://www.transfermarkt.co.uk/lucas-ness/profil/spieler/819713"
+      ]
+    },
+    "Max Sanders": {
+      "age": 27,
+      "marketValueM": 0.4,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/nottsco.htm",
+        "https://www.transfermarkt.co.uk/max-sanders/profil/spieler/411495"
+      ]
+    },
+    "Ollie Cooper": {
+      "age": 26,
+      "marketValueM": 1.5,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/nottsco.htm",
+        "https://www.transfermarkt.co.uk/oliver-cooper/profil/spieler/504617"
+      ],
+      "notes": "Transfermarkt publishes this player as Oliver Cooper; the footballName key remains matched to the identity feed."
+    },
+    "Rosaire Longelo": {
+      "age": 26,
+      "marketValueM": 0.25,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/nottsco.htm",
+        "https://www.transfermarkt.co.uk/rosaire-longelo/profil/spieler/503794"
+      ]
+    },
+    "Conor Grant": {
+      "age": 25,
+      "marketValueM": 0.225,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/nottsco.htm",
+        "https://www.transfermarkt.co.uk/conor-grant/profil/spieler/579997"
+      ]
+    },
+    "Darius Lipsiuc": {
+      "age": 20,
+      "marketValueM": 0,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/nottsco.htm",
+        "https://www.transfermarkt.co.uk/darius-lipsiuc/profil/spieler/941441"
+      ],
+      "notes": "The cited Transfermarkt profile publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    },
+    "Callum Roberts": {
+      "age": 29,
+      "marketValueM": 0,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/nottsco.htm",
+        "https://www.transfermarkt.co.uk/callum-roberts/profil/spieler/288952"
+      ],
+      "notes": "The cited Transfermarkt profile publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    },
+    "Daniel Kanu": {
+      "age": 21,
+      "marketValueM": 0.6,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/nottsco.htm",
+        "https://www.transfermarkt.co.uk/daniel-kanu/profil/spieler/965605"
+      ]
+    },
+    "Luka Smyth": {
+      "age": 22,
+      "marketValueM": 0.1,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/nottsco.htm",
+        "https://www.transfermarkt.co.uk/luka-smyth/profil/spieler/1063842"
+      ]
+    },
+    "Beck-Ray Enoru": {
+      "age": 24,
+      "marketValueM": 0.05,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/nottsco.htm",
+        "https://www.transfermarkt.co.uk/beck-ray-enoru/profil/spieler/1171119"
+      ]
+    }
+  }
+}

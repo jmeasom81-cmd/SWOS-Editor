@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "wycombe-wanderers",
+  "snapshot": "2026-09-13",
+  "sourceSummary": "Wycombe Wanderers current 2026/27 identity selection cross-checked against FootballSquads for squad membership and date of birth, plus current Transfermarkt player roles and published market values. Exact footballName keys remain aligned to the promoted League One identity 16.",
+  "players": {
+    "Mikki van Sas": {
+      "age": 22,
+      "marketValueM": 0.4,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/wycombe.htm",
+        "https://www.transfermarkt.co.uk/mikki-van-sas/profil/spieler/646708"
+      ]
+    },
+    "Conor Hazard": {
+      "age": 28,
+      "marketValueM": 0.7,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/wycombe.htm",
+        "https://www.transfermarkt.co.uk/conor-hazard/profil/spieler/322770"
+      ]
+    },
+    "Jack Grimmer": {
+      "age": 32,
+      "marketValueM": 0.225,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/wycombe.htm",
+        "https://www.transfermarkt.co.uk/jack-grimmer/profil/spieler/119553"
+      ],
+      "notes": "Role and valuation were taken from the current player search row because the player was not listed in the downloaded senior club table."
+    },
+    "Daniel Harvie": {
+      "age": 28,
+      "marketValueM": 0.6,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/wycombe.htm",
+        "https://www.transfermarkt.co.uk/daniel-harvie/profil/spieler/293729"
+      ]
+    },
+    "Dan Casey": {
+      "age": 28,
+      "marketValueM": 0.45,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/wycombe.htm",
+        "https://www.transfermarkt.co.uk/dan-casey/profil/spieler/270221"
+      ]
+    },
+    "Sam Parker": {
+      "age": 20,
+      "marketValueM": 0.3,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/wycombe.htm",
+        "https://www.transfermarkt.co.uk/sam-parker/profil/spieler/1028959"
+      ]
+    },
+    "Connor Taylor": {
+      "age": 24,
+      "marketValueM": 0.6,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/wycombe.htm",
+        "https://www.transfermarkt.co.uk/connor-taylor/profil/spieler/712106"
+      ]
+    },
+    "Josh Scowen": {
+      "age": 33,
+      "marketValueM": 0.1,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/wycombe.htm",
+        "https://www.transfermarkt.co.uk/josh-scowen/profil/spieler/182842"
+      ]
+    },
+    "Aaron Morley": {
+      "age": 26,
+      "marketValueM": 0.9,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/wycombe.htm",
+        "https://www.transfermarkt.co.uk/aaron-morley/profil/spieler/451749"
+      ]
+    },
+    "Junior Quitirna": {
+      "age": 26,
+      "marketValueM": 0.325,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/wycombe.htm",
+        "https://www.transfermarkt.co.uk/armando-junior-quitirna/profil/spieler/696229"
+      ],
+      "notes": "Transfermarkt publishes this player as Armando Junior Quitirna; the footballName key remains matched to the identity feed."
+    },
+    "Caolan Boyd-Munce": {
+      "age": 26,
+      "marketValueM": 0.5,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/wycombe.htm",
+        "https://www.transfermarkt.co.uk/caolan-boyd-munce/profil/spieler/438086"
+      ]
+    },
+    "Luke Leahy": {
+      "age": 33,
+      "marketValueM": 0.1,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/wycombe.htm",
+        "https://www.transfermarkt.co.uk/luke-leahy/profil/spieler/227315"
+      ]
+    },
+    "Silko Thomas": {
+      "age": 22,
+      "marketValueM": 0.5,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/wycombe.htm",
+        "https://www.transfermarkt.co.uk/silko-thomas/profil/spieler/670855"
+      ]
+    },
+    "Cauley Woodrow": {
+      "age": 31,
+      "marketValueM": 0.4,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/wycombe.htm",
+        "https://www.transfermarkt.co.uk/cauley-woodrow/profil/spieler/169801"
+      ]
+    },
+    "Jayden Wareham": {
+      "age": 23,
+      "marketValueM": 0.4,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/wycombe.htm",
+        "https://www.transfermarkt.co.uk/jayden-wareham/profil/spieler/735140"
+      ]
+    },
+    "Emre Tezgel": {
+      "age": 20,
+      "marketValueM": 0.55,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/wycombe.htm",
+        "https://www.transfermarkt.co.uk/emre-tezgel/profil/spieler/812397"
+      ]
+    }
+  }
+}

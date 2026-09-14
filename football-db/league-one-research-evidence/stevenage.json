@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "stevenage",
+  "snapshot": "2026-09-13",
+  "sourceSummary": "Stevenage current 2026/27 identity selection cross-checked against FootballSquads for squad membership and date of birth, plus current Transfermarkt player roles and published market values. Exact footballName keys remain aligned to the promoted League One identity 16.",
+  "players": {
+    "Tommy Setford": {
+      "age": 20,
+      "marketValueM": 0.5,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stevenage.htm",
+        "https://www.transfermarkt.co.uk/tommy-setford/profil/spieler/848753"
+      ]
+    },
+    "Daniel Barden": {
+      "age": 25,
+      "marketValueM": 0.1,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stevenage.htm",
+        "https://www.transfermarkt.co.uk/daniel-barden/profil/spieler/504042"
+      ]
+    },
+    "Luther Wildin": {
+      "age": 28,
+      "marketValueM": 0.55,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stevenage.htm",
+        "https://www.transfermarkt.co.uk/luther-james-wildin/profil/spieler/432181"
+      ],
+      "notes": "Transfermarkt publishes this player as Luther James-Wildin; the footballName key remains matched to the identity feed."
+    },
+    "Carl Piergianni": {
+      "age": 34,
+      "marketValueM": 0.075,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stevenage.htm",
+        "https://www.transfermarkt.co.uk/carl-piergianni/profil/spieler/147623"
+      ],
+      "notes": "Role and valuation were taken from the current player search row because the player was not listed in the downloaded senior club table."
+    },
+    "Lewis Freestone": {
+      "age": 26,
+      "marketValueM": 0.3,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stevenage.htm",
+        "https://www.transfermarkt.co.uk/lewis-freestone/profil/spieler/457897"
+      ]
+    },
+    "Saxon Earley": {
+      "age": 23,
+      "marketValueM": 0.225,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stevenage.htm",
+        "https://www.transfermarkt.co.uk/saxon-earley/profil/spieler/670989"
+      ]
+    },
+    "Terence Vancooten": {
+      "age": 28,
+      "marketValueM": 0.325,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stevenage.htm",
+        "https://www.transfermarkt.co.uk/terence-vancooten/profil/spieler/406935"
+      ]
+    },
+    "Jordan Houghton": {
+      "age": 30,
+      "marketValueM": 0.75,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stevenage.htm",
+        "https://www.transfermarkt.co.uk/jordan-houghton/profil/spieler/186927"
+      ]
+    },
+    "Terry Taylor": {
+      "age": 25,
+      "marketValueM": 0.3,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stevenage.htm",
+        "https://www.transfermarkt.co.uk/terry-taylor/profil/spieler/463758"
+      ]
+    },
+    "Daniel Phillips": {
+      "age": 25,
+      "marketValueM": 0.25,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stevenage.htm",
+        "https://www.transfermarkt.co.uk/daniel-phillips/profil/spieler/646996"
+      ]
+    },
+    "Dan Kemp": {
+      "age": 27,
+      "marketValueM": 0.55,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stevenage.htm",
+        "https://www.transfermarkt.co.uk/dan-kemp/profil/spieler/396857"
+      ]
+    },
+    "Jasper Pattenden": {
+      "age": 24,
+      "marketValueM": 0.2,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stevenage.htm",
+        "https://www.transfermarkt.co.uk/jasper-pattenden/profil/spieler/1001380"
+      ]
+    },
+    "Josh Magennis": {
+      "age": 36,
+      "marketValueM": 0.05,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stevenage.htm",
+        "https://www.transfermarkt.co.uk/josh-magennis/profil/spieler/63223"
+      ]
+    },
+    "Jordan Roberts": {
+      "age": 32,
+      "marketValueM": 0.15,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stevenage.htm",
+        "https://www.transfermarkt.co.uk/jordan-roberts/profil/spieler/213847"
+      ]
+    },
+    "Oliver Sanderson": {
+      "age": 22,
+      "marketValueM": 0,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stevenage.htm",
+        "https://www.transfermarkt.co.uk/oliver-sanderson/profil/spieler/624040"
+      ],
+      "notes": "The cited Transfermarkt profile publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    },
+    "Michael Mellon": {
+      "age": 22,
+      "marketValueM": 0.25,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/stevenage.htm",
+        "https://www.transfermarkt.co.uk/michael-mellon/profil/spieler/714459"
+      ]
+    }
+  }
+}

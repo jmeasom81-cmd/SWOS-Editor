@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "reading",
+  "snapshot": "2026-09-13",
+  "sourceSummary": "Reading current 2026/27 identity selection cross-checked against FootballSquads for squad membership and date of birth, plus current Transfermarkt player roles and published market values. Exact footballName keys remain aligned to the promoted League One identity 16.",
+  "players": {
+    "Joel Pereira": {
+      "age": 30,
+      "marketValueM": 0.325,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/reading.htm",
+        "https://www.transfermarkt.co.uk/joel-pereira/profil/spieler/192611"
+      ]
+    },
+    "Jack Stevens": {
+      "age": 29,
+      "marketValueM": 0.125,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/reading.htm",
+        "https://www.transfermarkt.co.uk/jack-stevens/profil/spieler/337101"
+      ]
+    },
+    "Udoka Godwin-Malife": {
+      "age": 26,
+      "marketValueM": 0.55,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/reading.htm",
+        "https://www.transfermarkt.co.uk/udoka-godwin-malife/profil/spieler/636888"
+      ]
+    },
+    "Jeriel Dorsett": {
+      "age": 24,
+      "marketValueM": 0.45,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/reading.htm",
+        "https://www.transfermarkt.co.uk/jeriel-dorsett/profil/spieler/503989"
+      ]
+    },
+    "Haydon Roberts": {
+      "age": 24,
+      "marketValueM": 1,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/reading.htm",
+        "https://www.transfermarkt.co.uk/haydon-roberts/profil/spieler/533523"
+      ]
+    },
+    "Paudie O'Connor": {
+      "age": 29,
+      "marketValueM": 0.65,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/reading.htm",
+        "https://www.transfermarkt.co.uk/paudie-oconnor/profil/spieler/364024"
+      ]
+    },
+    "Benn Ward": {
+      "age": 22,
+      "marketValueM": 0.175,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/reading.htm",
+        "https://www.transfermarkt.co.uk/benn-ward/profil/spieler/859944"
+      ]
+    },
+    "Andy Rinomhota": {
+      "age": 29,
+      "marketValueM": 0.45,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/reading.htm",
+        "https://www.transfermarkt.co.uk/andy-rinomhota/profil/spieler/368862"
+      ]
+    },
+    "Liam Fraser": {
+      "age": 28,
+      "marketValueM": 0.55,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/reading.htm",
+        "https://www.transfermarkt.co.uk/liam-fraser/profil/spieler/377109"
+      ]
+    },
+    "Charlie Savage": {
+      "age": 23,
+      "marketValueM": 0.9,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/reading.htm",
+        "https://www.transfermarkt.co.uk/charlie-savage/profil/spieler/686837"
+      ]
+    },
+    "Lewis Wing": {
+      "age": 31,
+      "marketValueM": 0.7,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/reading.htm",
+        "https://www.transfermarkt.co.uk/lewis-wing/profil/spieler/517286"
+      ],
+      "notes": "Role and valuation were taken from the current player search row because the player was not listed in the downloaded senior club table."
+    },
+    "Daniel Kyerewaa": {
+      "age": 24,
+      "marketValueM": 0.65,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/reading.htm",
+        "https://www.transfermarkt.co.uk/daniel-kyerewaa/profil/spieler/522104"
+      ]
+    },
+    "Jack Marriott": {
+      "age": 32,
+      "marketValueM": 0.4,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/reading.htm",
+        "https://www.transfermarkt.co.uk/jack-marriott/profil/spieler/268746"
+      ]
+    },
+    "Jamie Reid": {
+      "age": 32,
+      "marketValueM": 0.2,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/reading.htm",
+        "https://www.transfermarkt.co.uk/jamie-reid/profil/spieler/250840"
+      ]
+    },
+    "Jacob Brown": {
+      "age": 28,
+      "marketValueM": 1,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/reading.htm",
+        "https://www.transfermarkt.co.uk/jacob-brown/profil/spieler/469958"
+      ]
+    },
+    "Kyreece Lisbie": {
+      "age": 22,
+      "marketValueM": 0.15,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/reading.htm",
+        "https://www.transfermarkt.co.uk/kyreece-lisbie/profil/spieler/948958"
+      ]
+    }
+  }
+}

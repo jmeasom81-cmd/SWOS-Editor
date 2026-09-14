@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "oxford-united",
+  "snapshot": "2026-09-13",
+  "sourceSummary": "Oxford United current 2026/27 identity selection cross-checked against FootballSquads for squad membership and date of birth, plus current Transfermarkt player roles and published market values. Exact footballName keys remain aligned to the promoted League One identity 16.",
+  "players": {
+    "Jamie Cumming": {
+      "age": 27,
+      "marketValueM": 1.2,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm",
+        "https://www.transfermarkt.co.uk/jamie-cumming/profil/spieler/396859"
+      ]
+    },
+    "Simon Eastwood": {
+      "age": 37,
+      "marketValueM": 0.05,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm",
+        "https://www.transfermarkt.co.uk/simon-eastwood/profil/spieler/49089"
+      ]
+    },
+    "Sam Long": {
+      "age": 31,
+      "marketValueM": 0.3,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm",
+        "https://www.transfermarkt.co.uk/sam-long/profil/spieler/238591"
+      ]
+    },
+    "Ciaron Brown": {
+      "age": 28,
+      "marketValueM": 1.5,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm",
+        "https://www.transfermarkt.co.uk/ciaron-brown/profil/spieler/611845"
+      ]
+    },
+    "Frankie Kent": {
+      "age": 30,
+      "marketValueM": 0.4,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm",
+        "https://www.transfermarkt.co.uk/frankie-kent/profil/spieler/307094"
+      ],
+      "notes": "Role and valuation were taken from the current player search row because the player was not listed in the downloaded senior club table."
+    },
+    "Michal Helik": {
+      "age": 31,
+      "marketValueM": 1,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm",
+        "https://www.transfermarkt.co.uk/michal-helik/profil/spieler/255383"
+      ]
+    },
+    "Ruben Roosken": {
+      "age": 26,
+      "marketValueM": 0.5,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm",
+        "https://www.transfermarkt.co.uk/ruben-roosken/profil/spieler/538963"
+      ]
+    },
+    "Kai Andrews": {
+      "age": 20,
+      "marketValueM": 0.5,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm",
+        "https://www.transfermarkt.co.uk/kai-andrews/profil/spieler/965924"
+      ]
+    },
+    "Cameron Brannagan": {
+      "age": 30,
+      "marketValueM": 0.8,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm",
+        "https://www.transfermarkt.co.uk/cameron-brannagan/profil/spieler/261357"
+      ],
+      "notes": "Role and valuation were taken from the current player search row because the player was not listed in the downloaded senior club table."
+    },
+    "Tyler Goodrham": {
+      "age": 23,
+      "marketValueM": 1.5,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm",
+        "https://www.transfermarkt.co.uk/tyler-goodrham/profil/spieler/700441"
+      ]
+    },
+    "Jamie McDonnell": {
+      "age": 22,
+      "marketValueM": 1,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm",
+        "https://www.transfermarkt.co.uk/jamie-mcdonnell/profil/spieler/694901"
+      ]
+    },
+    "Luka Lynch": {
+      "age": 19,
+      "marketValueM": 0,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm",
+        "https://www.transfermarkt.co.uk/luka-lynch/profil/spieler/1005947"
+      ],
+      "notes": "The cited Transfermarkt profile publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    },
+    "Jin-Woo Jeon": {
+      "age": 27,
+      "marketValueM": 0.7,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm",
+        "https://www.transfermarkt.co.uk/jin-woo-jeon/profil/spieler/560797"
+      ]
+    },
+    "Mark Harris": {
+      "age": 27,
+      "marketValueM": 0.6,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm",
+        "https://www.transfermarkt.co.uk/mark-harris/profil/spieler/344012"
+      ]
+    },
+    "Aidomo Emakhu": {
+      "age": 22,
+      "marketValueM": 1,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm",
+        "https://www.transfermarkt.co.uk/aidomo-emakhu/profil/spieler/746971"
+      ]
+    },
+    "Gatlin O'Donkor": {
+      "age": 21,
+      "marketValueM": 0.2,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm",
+        "https://www.transfermarkt.co.uk/gatlin-odonkor/profil/spieler/843394"
+      ]
+    }
+  }
+}

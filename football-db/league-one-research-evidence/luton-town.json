@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "luton-town",
+  "snapshot": "2026-09-13",
+  "sourceSummary": "Luton Town current 2026/27 identity selection cross-checked against FootballSquads for squad membership and date of birth, plus current Transfermarkt player roles and published market values. Exact footballName keys remain aligned to the promoted League One identity 16.",
+  "players": {
+    "James Shea": {
+      "age": 35,
+      "marketValueM": 0.1,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/luton.htm",
+        "https://www.transfermarkt.co.uk/james-shea/profil/spieler/91340"
+      ]
+    },
+    "Josh Keeley": {
+      "age": 23,
+      "marketValueM": 0.8,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/luton.htm",
+        "https://www.transfermarkt.co.uk/josh-keeley/profil/spieler/724536"
+      ]
+    },
+    "Hakeem Odoffin": {
+      "age": 28,
+      "marketValueM": 0.55,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/luton.htm",
+        "https://www.transfermarkt.co.uk/hakeem-odoffin/profil/spieler/399340"
+      ]
+    },
+    "Kal Naismith": {
+      "age": 34,
+      "marketValueM": 0.2,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/luton.htm",
+        "https://www.transfermarkt.co.uk/kal-naismith/profil/spieler/61011"
+      ],
+      "notes": "Role and valuation were taken from the current player search row because the player was not listed in the downloaded senior club table."
+    },
+    "Mads Juel Andersen": {
+      "age": 28,
+      "marketValueM": 2,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/luton.htm",
+        "https://www.transfermarkt.co.uk/mads-andersen/profil/spieler/407021"
+      ],
+      "notes": "Transfermarkt publishes this player as Mads Andersen; the footballName key remains matched to the identity feed."
+    },
+    "George Johnston": {
+      "age": 28,
+      "marketValueM": 0.8,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/luton.htm",
+        "https://www.transfermarkt.co.uk/george-johnston/profil/spieler/318549"
+      ]
+    },
+    "Joe Johnson": {
+      "age": 20,
+      "marketValueM": 0.4,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/luton.htm",
+        "https://www.transfermarkt.co.uk/joe-johnson/profil/spieler/1088818"
+      ]
+    },
+    "Sverre Sandal": {
+      "age": 23,
+      "marketValueM": 0.8,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/luton.htm",
+        "https://www.transfermarkt.co.uk/sverre-sandal/profil/spieler/912481"
+      ]
+    },
+    "Jake Richards": {
+      "age": 19,
+      "marketValueM": 0.3,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/luton.htm",
+        "https://www.transfermarkt.co.uk/jake-richards/profil/spieler/1091446"
+      ]
+    },
+    "Liam Walsh": {
+      "age": 28,
+      "marketValueM": 0.7,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/luton.htm",
+        "https://www.transfermarkt.co.uk/liam-walsh/profil/spieler/314998"
+      ]
+    },
+    "Daniel Gore": {
+      "age": 21,
+      "marketValueM": 1,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/luton.htm",
+        "https://www.transfermarkt.co.uk/dan-gore/profil/spieler/747153"
+      ],
+      "notes": "Transfermarkt publishes this player as Dan Gore; the footballName key remains matched to the identity feed."
+    },
+    "Jordan Clark": {
+      "age": 32,
+      "marketValueM": 0.5,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/luton.htm",
+        "https://www.transfermarkt.co.uk/jordan-clark/profil/spieler/184129"
+      ],
+      "notes": "Role and valuation were taken from the current player search row because the player was not listed in the downloaded senior club table."
+    },
+    "Callum Marshall": {
+      "age": 21,
+      "marketValueM": 2,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/luton.htm",
+        "https://www.transfermarkt.co.uk/callum-marshall/profil/spieler/953135"
+      ]
+    },
+    "Jamie Donley": {
+      "age": 21,
+      "marketValueM": 1.5,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/luton.htm",
+        "https://www.transfermarkt.co.uk/jamie-donley/profil/spieler/796305"
+      ]
+    },
+    "Emilio Lawrence": {
+      "age": 20,
+      "marketValueM": 0.2,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/luton.htm",
+        "https://www.transfermarkt.co.uk/emilio-lawrence/profil/spieler/872962"
+      ]
+    },
+    "Shayden Morris": {
+      "age": 24,
+      "marketValueM": 1,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/luton.htm",
+        "https://www.transfermarkt.co.uk/shayden-morris/profil/spieler/727023"
+      ]
+    }
+  }
+}

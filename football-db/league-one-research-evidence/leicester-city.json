@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "leicester-city",
+  "snapshot": "2026-09-13",
+  "sourceSummary": "Leicester City current 2026/27 identity selection cross-checked against FootballSquads for squad membership and date of birth, plus current Transfermarkt player roles and published market values. Exact footballName keys remain aligned to the promoted League One identity 16.",
+  "players": {
+    "Jakub Stolarczyk": {
+      "age": 25,
+      "marketValueM": 1.8,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leicester.htm",
+        "https://www.transfermarkt.co.uk/jakub-stolarczyk/profil/spieler/486144"
+      ],
+      "notes": "Role and valuation were taken from the current player search row because the player was not listed in the downloaded senior club table."
+    },
+    "Franco Ravizzoli": {
+      "age": 29,
+      "marketValueM": 0.225,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leicester.htm",
+        "https://www.transfermarkt.co.uk/franco-ravizzoli/profil/spieler/837205"
+      ]
+    },
+    "Jayden Joseph": {
+      "age": 20,
+      "marketValueM": 0.1,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leicester.htm",
+        "https://www.transfermarkt.co.uk/jayden-joseph/profil/spieler/1047357"
+      ]
+    },
+    "Wout Faes": {
+      "age": 28,
+      "marketValueM": 10,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leicester.htm",
+        "https://www.transfermarkt.co.uk/wout-faes/profil/spieler/292808"
+      ]
+    },
+    "Ben Nelson": {
+      "age": 22,
+      "marketValueM": 1.5,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leicester.htm",
+        "https://www.transfermarkt.co.uk/ben-nelson/profil/spieler/714458"
+      ],
+      "notes": "Role and valuation were taken from the current player search row because the player was not listed in the downloaded senior club table."
+    },
+    "Caleb Okoli": {
+      "age": 25,
+      "marketValueM": 9,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leicester.htm",
+        "https://www.transfermarkt.co.uk/caleb-okoli/profil/spieler/461833"
+      ]
+    },
+    "Harry Souttar": {
+      "age": 27,
+      "marketValueM": 3.5,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leicester.htm",
+        "https://www.transfermarkt.co.uk/harry-souttar/profil/spieler/298091"
+      ]
+    },
+    "Conor Chaplin": {
+      "age": 29,
+      "marketValueM": 2.2,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leicester.htm",
+        "https://www.transfermarkt.co.uk/conor-chaplin/profil/spieler/349503"
+      ]
+    },
+    "Bobby Decordova-Reid": {
+      "age": 33,
+      "marketValueM": 0.7,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leicester.htm",
+        "https://www.transfermarkt.co.uk/bobby-de-cordova-reid/profil/spieler/186186"
+      ]
+    },
+    "Louis Page": {
+      "age": 17,
+      "marketValueM": 4,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leicester.htm",
+        "https://www.transfermarkt.co.uk/louis-page/profil/spieler/1078155"
+      ]
+    },
+    "Kamari Doyle": {
+      "age": 21,
+      "marketValueM": 0.5,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leicester.htm",
+        "https://www.transfermarkt.co.uk/kamari-doyle/profil/spieler/864480"
+      ]
+    },
+    "Sammy Braybrooke": {
+      "age": 22,
+      "marketValueM": 0.4,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leicester.htm",
+        "https://www.transfermarkt.co.uk/sammy-braybrooke/profil/spieler/840640"
+      ]
+    },
+    "Wes Burns": {
+      "age": 30,
+      "marketValueM": 1.5,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leicester.htm",
+        "https://www.transfermarkt.co.uk/wes-burns/profil/spieler/255731"
+      ]
+    },
+    "Admir Bristric": {
+      "age": 23,
+      "marketValueM": 0.6,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leicester.htm",
+        "https://www.transfermarkt.co.uk/admir-bristric/profil/spieler/678606"
+      ]
+    },
+    "Liam Cullen": {
+      "age": 27,
+      "marketValueM": 3.2,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leicester.htm",
+        "https://www.transfermarkt.co.uk/liam-cullen/profil/spieler/296978"
+      ]
+    },
+    "Emil Riis Jakobsen": {
+      "age": 28,
+      "marketValueM": 6,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leicester.htm",
+        "https://www.transfermarkt.co.uk/emil-riis/profil/spieler/293325"
+      ],
+      "notes": "Transfermarkt publishes this player as Emil Riis; the footballName key remains matched to the identity feed."
+    }
+  }
+}

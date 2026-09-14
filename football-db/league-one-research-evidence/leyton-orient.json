@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "leyton-orient",
+  "snapshot": "2026-09-13",
+  "sourceSummary": "Leyton Orient current 2026/27 identity selection cross-checked against FootballSquads for squad membership and date of birth, plus current Transfermarkt player roles and published market values. Exact footballName keys remain aligned to the promoted League One identity 16.",
+  "players": {
+    "Nathan Baxter": {
+      "age": 27,
+      "marketValueM": 0.7,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leyton.htm",
+        "https://www.transfermarkt.co.uk/nathan-baxter/profil/spieler/342050"
+      ]
+    },
+    "Noah Phillips": {
+      "age": 21,
+      "marketValueM": 0,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leyton.htm",
+        "https://www.transfermarkt.co.uk/noah-phillips/profil/spieler/935800"
+      ],
+      "notes": "The cited Transfermarkt profile publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    },
+    "Fin Stevens": {
+      "age": 23,
+      "marketValueM": 0.5,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leyton.htm",
+        "https://www.transfermarkt.co.uk/fin-stevens/profil/spieler/587019"
+      ]
+    },
+    "James Morris": {
+      "age": 24,
+      "marketValueM": 0.5,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leyton.htm",
+        "https://www.transfermarkt.co.uk/james-morris/profil/spieler/610621"
+      ]
+    },
+    "Rarmani Edmonds-Green": {
+      "age": 27,
+      "marketValueM": 0.275,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leyton.htm",
+        "https://www.transfermarkt.co.uk/rarmani-edmonds-green/profil/spieler/689893"
+      ]
+    },
+    "Joseph Olowu": {
+      "age": 26,
+      "marketValueM": 0.375,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leyton.htm",
+        "https://www.transfermarkt.co.uk/joseph-olowu/profil/spieler/469249"
+      ]
+    },
+    "Will Forrester": {
+      "age": 25,
+      "marketValueM": 0.3,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leyton.htm",
+        "https://www.transfermarkt.co.uk/will-forrester/profil/spieler/511561"
+      ]
+    },
+    "Ollie O'Neill": {
+      "age": 23,
+      "marketValueM": 0.65,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leyton.htm",
+        "https://www.transfermarkt.co.uk/ollie-oneill/profil/spieler/610786"
+      ]
+    },
+    "Idris El Mizouni": {
+      "age": 25,
+      "marketValueM": 0.65,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leyton.htm",
+        "https://www.transfermarkt.co.uk/idris-el-mizouni/profil/spieler/633399"
+      ]
+    },
+    "Demi Mitchell": {
+      "age": 29,
+      "marketValueM": 0.175,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leyton.htm",
+        "https://www.transfermarkt.co.uk/demetri-mitchell/profil/spieler/258886"
+      ],
+      "notes": "Transfermarkt publishes this player as Demetri Mitchell; the footballName key remains matched to the identity feed."
+    },
+    "Isaac Hayden": {
+      "age": 31,
+      "marketValueM": 0.4,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leyton.htm",
+        "https://www.transfermarkt.co.uk/isaac-hayden/profil/spieler/206225"
+      ]
+    },
+    "Armando Dobra": {
+      "age": 25,
+      "marketValueM": 0.35,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leyton.htm",
+        "https://www.transfermarkt.co.uk/armando-dobra/profil/spieler/664581"
+      ]
+    },
+    "Jaze Kabia": {
+      "age": 26,
+      "marketValueM": 0.2,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leyton.htm",
+        "https://www.transfermarkt.co.uk/jaze-kabia/profil/spieler/572810"
+      ]
+    },
+    "Aaron Connolly": {
+      "age": 26,
+      "marketValueM": 1.8,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leyton.htm",
+        "https://www.transfermarkt.co.uk/aaron-connolly/profil/spieler/434207"
+      ]
+    },
+    "Dane Scarlett": {
+      "age": 22,
+      "marketValueM": 1.5,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leyton.htm",
+        "https://www.transfermarkt.co.uk/dane-scarlett/profil/spieler/670883"
+      ]
+    },
+    "Alex Gilbert": {
+      "age": 24,
+      "marketValueM": 1,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leyton.htm",
+        "https://www.transfermarkt.co.uk/alex-gilbert/profil/spieler/542884"
+      ]
+    }
+  }
+}

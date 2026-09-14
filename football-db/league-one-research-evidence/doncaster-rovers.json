@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "doncaster-rovers",
+  "snapshot": "2026-09-13",
+  "sourceSummary": "Doncaster Rovers current 2026/27 identity selection cross-checked against FootballSquads for squad membership and date of birth, plus current Transfermarkt player roles and published market values. Exact footballName keys remain aligned to the promoted League One identity 16.",
+  "players": {
+    "Tommy Simkin": {
+      "age": 21,
+      "marketValueM": 1,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm",
+        "https://www.transfermarkt.co.uk/tommy-simkin/profil/spieler/720695"
+      ]
+    },
+    "Jake Oram": {
+      "age": 20,
+      "marketValueM": 0,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm",
+        "https://www.transfermarkt.co.uk/jake-oram/profil/spieler/1077812"
+      ],
+      "notes": "The cited Transfermarkt profile publishes no market value; 0 records an unavailable published valuation, not an estimate. Role and valuation were taken from the current player search row because the player was not listed in the downloaded senior club table."
+    },
+    "Jamie Sterry": {
+      "age": 30,
+      "marketValueM": 0.125,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm",
+        "https://www.transfermarkt.co.uk/jamie-sterry/profil/spieler/250431"
+      ]
+    },
+    "James Husband": {
+      "age": 32,
+      "marketValueM": 0.175,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm",
+        "https://www.transfermarkt.co.uk/james-husband/profil/spieler/167393"
+      ]
+    },
+    "Matty Pearson": {
+      "age": 33,
+      "marketValueM": 0.55,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm",
+        "https://www.transfermarkt.co.uk/matty-pearson/profil/spieler/121395"
+      ]
+    },
+    "Jay McGrath": {
+      "age": 23,
+      "marketValueM": 0.3,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm",
+        "https://www.transfermarkt.co.uk/jay-mcgrath/profil/spieler/1089316"
+      ]
+    },
+    "Neill Byrne": {
+      "age": 33,
+      "marketValueM": 0.05,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm",
+        "https://www.transfermarkt.co.uk/neill-byrne/profil/spieler/121536"
+      ]
+    },
+    "Owen Bailey": {
+      "age": 27,
+      "marketValueM": 0.65,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm",
+        "https://www.transfermarkt.co.uk/owen-bailey/profil/spieler/419326"
+      ],
+      "notes": "Role and valuation were taken from the current player search row because the player was not listed in the downloaded senior club table."
+    },
+    "Tommi O'Reilly": {
+      "age": 22,
+      "marketValueM": 0.45,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm",
+        "https://www.transfermarkt.co.uk/tommi-oreilly/profil/spieler/818237"
+      ]
+    },
+    "George Broadbent": {
+      "age": 25,
+      "marketValueM": 0.3,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm",
+        "https://www.transfermarkt.co.uk/george-broadbent/profil/spieler/804040"
+      ]
+    },
+    "Harry Clifton": {
+      "age": 28,
+      "marketValueM": 0.275,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm",
+        "https://www.transfermarkt.co.uk/harry-clifton/profil/spieler/381352"
+      ]
+    },
+    "Jordan Thomas": {
+      "age": 25,
+      "marketValueM": 0.2,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm",
+        "https://www.transfermarkt.co.uk/jordan-thomas/profil/spieler/1165670"
+      ]
+    },
+    "Brandon Hanlan": {
+      "age": 29,
+      "marketValueM": 0.2,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm",
+        "https://www.transfermarkt.co.uk/brandon-hanlan/profil/spieler/451736"
+      ]
+    },
+    "Alfie May": {
+      "age": 33,
+      "marketValueM": 0.45,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm",
+        "https://www.transfermarkt.co.uk/alfie-may/profil/spieler/479987"
+      ]
+    },
+    "Leon Ayinde": {
+      "age": 22,
+      "marketValueM": 0,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm",
+        "https://www.transfermarkt.co.uk/leon-ayinde/profil/spieler/1116111"
+      ],
+      "notes": "The cited Transfermarkt profile publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    },
+    "Francis Okoronkwo": {
+      "age": 21,
+      "marketValueM": 0.2,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/doncast.htm",
+        "https://www.transfermarkt.co.uk/francis-okoronkwo/profil/spieler/814684"
+      ]
+    }
+  }
+}

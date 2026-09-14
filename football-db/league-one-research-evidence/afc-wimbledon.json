@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "afc-wimbledon",
+  "snapshot": "2026-09-13",
+  "sourceSummary": "AFC Wimbledon current 2026/27 identity selection cross-checked against FootballSquads for squad membership and date of birth, plus current Transfermarkt player roles and published market values. Exact footballName keys remain aligned to the promoted League One identity 16.",
+  "players": {
+    "Nathan Bishop": {
+      "age": 26,
+      "marketValueM": 0.35,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/afcwimb.htm",
+        "https://www.transfermarkt.co.uk/nathan-bishop/profil/spieler/495033"
+      ]
+    },
+    "Joe McDonnell": {
+      "age": 32,
+      "marketValueM": 0.075,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/afcwimb.htm",
+        "https://www.transfermarkt.co.uk/joe-mcdonnell/profil/spieler/330583"
+      ]
+    },
+    "Steven Sessegnon": {
+      "age": 26,
+      "marketValueM": 0.25,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/afcwimb.htm",
+        "https://www.transfermarkt.co.uk/steven-sessegnon/profil/spieler/406558"
+      ]
+    },
+    "Steve Seddon": {
+      "age": 28,
+      "marketValueM": 0.35,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/afcwimb.htm",
+        "https://www.transfermarkt.co.uk/steve-seddon/profil/spieler/564049"
+      ]
+    },
+    "Ryan Johnson": {
+      "age": 29,
+      "marketValueM": 0.25,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/afcwimb.htm",
+        "https://www.transfermarkt.co.uk/ryan-johnson/profil/spieler/299471"
+      ]
+    },
+    "Freddie Simmonds": {
+      "age": 18,
+      "marketValueM": 0,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/afcwimb.htm",
+        "https://www.transfermarkt.co.uk/freddie-simmonds/profil/spieler/1120418"
+      ],
+      "notes": "The cited Transfermarkt profile publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    },
+    "Andy Yiadom": {
+      "age": 34,
+      "marketValueM": 0.1,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/afcwimb.htm",
+        "https://www.transfermarkt.co.uk/andy-yiadom/profil/spieler/188256"
+      ]
+    },
+    "Ollie Harrison": {
+      "age": 19,
+      "marketValueM": 0,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/afcwimb.htm",
+        "https://www.transfermarkt.co.uk/ollie-harrison/profil/spieler/1071819"
+      ],
+      "notes": "The cited Transfermarkt profile publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    },
+    "Callum Maycock": {
+      "age": 28,
+      "marketValueM": 0.175,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/afcwimb.htm",
+        "https://www.transfermarkt.co.uk/callum-maycock/profil/spieler/425795"
+      ]
+    },
+    "Zack Nelson": {
+      "age": 21,
+      "marketValueM": 0.6,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/afcwimb.htm",
+        "https://www.transfermarkt.co.uk/zack-nelson/profil/spieler/965940"
+      ]
+    },
+    "Marcus Browne": {
+      "age": 28,
+      "marketValueM": 0.175,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/afcwimb.htm",
+        "https://www.transfermarkt.co.uk/marcus-browne/profil/spieler/391470"
+      ]
+    },
+    "Alistair Smith": {
+      "age": 27,
+      "marketValueM": 0.45,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/afcwimb.htm",
+        "https://www.transfermarkt.co.uk/alistair-smith/profil/spieler/631258"
+      ]
+    },
+    "James Tilley": {
+      "age": 28,
+      "marketValueM": 0.35,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/afcwimb.htm",
+        "https://www.transfermarkt.co.uk/james-tilley/profil/spieler/359693"
+      ]
+    },
+    "Jayden Stockley": {
+      "age": 32,
+      "marketValueM": 0.125,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/afcwimb.htm",
+        "https://www.transfermarkt.co.uk/jayden-stockley/profil/spieler/134293"
+      ]
+    },
+    "Mathew Stevens": {
+      "age": 28,
+      "marketValueM": 0.35,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/afcwimb.htm",
+        "https://www.transfermarkt.co.uk/matty-stevens/profil/spieler/339023"
+      ],
+      "notes": "Transfermarkt publishes this player as Matty Stevens; the footballName key remains matched to the identity feed."
+    },
+    "Donnell McNeilly": {
+      "age": 20,
+      "marketValueM": 0.1,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/afcwimb.htm",
+        "https://www.transfermarkt.co.uk/donnell-mcneilly/profil/spieler/1019201"
+      ]
+    }
+  }
+}

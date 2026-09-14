@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "huddersfield-town",
+  "snapshot": "2026-09-13",
+  "sourceSummary": "Huddersfield Town current 2026/27 identity selection cross-checked against FootballSquads for squad membership and date of birth, plus current Transfermarkt player roles and published market values. Exact footballName keys remain aligned to the promoted League One identity 16.",
+  "players": {
+    "Matty Young": {
+      "age": 19,
+      "marketValueM": 0.35,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm",
+        "https://www.transfermarkt.co.uk/matty-young/profil/spieler/1018834"
+      ]
+    },
+    "Jak Alnwick": {
+      "age": 33,
+      "marketValueM": 0.225,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm",
+        "https://www.transfermarkt.co.uk/jak-alnwick/profil/spieler/128895"
+      ]
+    },
+    "Lasse Sorensen": {
+      "age": 26,
+      "marketValueM": 0.6,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm",
+        "https://www.transfermarkt.co.uk/lasse-sorensen/profil/spieler/357967"
+      ]
+    },
+    "Murray Wallace": {
+      "age": 33,
+      "marketValueM": 0.4,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm",
+        "https://www.transfermarkt.co.uk/murray-wallace/profil/spieler/174099"
+      ]
+    },
+    "Joe Low": {
+      "age": 24,
+      "marketValueM": 0.55,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm",
+        "https://www.transfermarkt.co.uk/joe-low/profil/spieler/633464"
+      ]
+    },
+    "Jack Whatmough": {
+      "age": 30,
+      "marketValueM": 0.6,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm",
+        "https://www.transfermarkt.co.uk/jack-whatmough/profil/spieler/237505"
+      ]
+    },
+    "Lynden Gooch": {
+      "age": 30,
+      "marketValueM": 0.6,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm",
+        "https://www.transfermarkt.co.uk/lynden-gooch/profil/spieler/307781"
+      ]
+    },
+    "Ryan Ledson": {
+      "age": 29,
+      "marketValueM": 1.5,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm",
+        "https://www.transfermarkt.co.uk/ryan-ledson/profil/spieler/258884"
+      ],
+      "notes": "Role and valuation were taken from the current player search row because the player was not listed in the downloaded senior club table."
+    },
+    "Archie Collins": {
+      "age": 27,
+      "marketValueM": 0.8,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm",
+        "https://www.transfermarkt.co.uk/archie-collins/profil/spieler/472714"
+      ]
+    },
+    "Marcus Harness": {
+      "age": 32,
+      "marketValueM": 0.75,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm",
+        "https://www.transfermarkt.co.uk/marcus-harness/profil/spieler/288323"
+      ]
+    },
+    "Ethan Brierley": {
+      "age": 22,
+      "marketValueM": 0.375,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm",
+        "https://www.transfermarkt.co.uk/ethan-brierley/profil/spieler/718250"
+      ]
+    },
+    "Herbie Kane": {
+      "age": 27,
+      "marketValueM": 0.75,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm",
+        "https://www.transfermarkt.co.uk/herbie-kane/profil/spieler/314253"
+      ],
+      "notes": "Role and valuation were taken from the current player search row because the player was not listed in the downloaded senior club table."
+    },
+    "Joe Taylor": {
+      "age": 23,
+      "marketValueM": 0.6,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm",
+        "https://www.transfermarkt.co.uk/joe-taylor/profil/spieler/944551"
+      ]
+    },
+    "Ashley Fletcher": {
+      "age": 30,
+      "marketValueM": 0.325,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm",
+        "https://www.transfermarkt.co.uk/ashley-fletcher/profil/spieler/289846"
+      ]
+    },
+    "Bojan Radulovic": {
+      "age": 26,
+      "marketValueM": 0.8,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm",
+        "https://www.transfermarkt.co.uk/bojan-radulovic/profil/spieler/516407"
+      ]
+    },
+    "Derensili Sanches Fernandes": {
+      "age": 25,
+      "marketValueM": 0.9,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/hudders.htm",
+        "https://www.transfermarkt.co.uk/derensili-sanches-fernandes/profil/spieler/608407"
+      ]
+    }
+  }
+}

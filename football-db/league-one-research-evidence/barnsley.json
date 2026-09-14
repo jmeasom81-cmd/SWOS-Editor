@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "barnsley",
+  "snapshot": "2026-09-13",
+  "sourceSummary": "Barnsley current 2026/27 identity selection cross-checked against FootballSquads for squad membership and date of birth, plus current Transfermarkt player roles and published market values. Exact footballName keys remain aligned to the promoted League One identity 16.",
+  "players": {
+    "Cieran Slicker": {
+      "age": 23,
+      "marketValueM": 0.35,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/barnsley.htm",
+        "https://www.transfermarkt.co.uk/cieran-slicker/profil/spieler/621997"
+      ]
+    },
+    "Rogan Ravenhill": {
+      "age": 20,
+      "marketValueM": 0,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/barnsley.htm",
+        "https://www.transfermarkt.co.uk/rogan-ravenhill/profil/spieler/969470"
+      ],
+      "notes": "The cited Transfermarkt profile publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    },
+    "Arley Kay": {
+      "age": 18,
+      "marketValueM": 0,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/barnsley.htm",
+        "https://www.transfermarkt.co.uk/arley-kay/profil/spieler/1580602"
+      ],
+      "notes": "The cited Transfermarkt profile publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    },
+    "Ziyad Larkeche": {
+      "age": 23,
+      "marketValueM": 0.7,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/barnsley.htm",
+        "https://www.transfermarkt.co.uk/ziyad-larkeche/profil/spieler/618402"
+      ]
+    },
+    "Sam Gale": {
+      "age": 21,
+      "marketValueM": 0.35,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/barnsley.htm",
+        "https://www.transfermarkt.co.uk/sam-gale/profil/spieler/959594"
+      ]
+    },
+    "Jack Shepherd": {
+      "age": 25,
+      "marketValueM": 0.3,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/barnsley.htm",
+        "https://www.transfermarkt.co.uk/jack-shepherd/profil/spieler/1163461"
+      ]
+    },
+    "Connor O'Riordan": {
+      "age": 22,
+      "marketValueM": 0.6,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/barnsley.htm",
+        "https://www.transfermarkt.co.uk/connor-oriordan/profil/spieler/929715"
+      ]
+    },
+    "Cameron McGeehan": {
+      "age": 31,
+      "marketValueM": 0.25,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/barnsley.htm",
+        "https://www.transfermarkt.co.uk/cameron-mcgeehan/profil/spieler/167265"
+      ],
+      "notes": "Role and valuation were taken from the current player search row because the player was not listed in the downloaded senior club table."
+    },
+    "Tyrese Noslin": {
+      "age": 24,
+      "marketValueM": 0.75,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/barnsley.htm",
+        "https://www.transfermarkt.co.uk/tyrese-noslin/profil/spieler/708005"
+      ]
+    },
+    "Clayton Taylor": {
+      "age": 22,
+      "marketValueM": 0.65,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/barnsley.htm",
+        "https://www.transfermarkt.co.uk/clayton-taylor/profil/spieler/1109827"
+      ]
+    },
+    "Fabio Jalo": {
+      "age": 20,
+      "marketValueM": 0.15,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/barnsley.htm",
+        "https://www.transfermarkt.co.uk/fabio-jalo/profil/spieler/969456"
+      ]
+    },
+    "Patrick Kelly": {
+      "age": 21,
+      "marketValueM": 0.35,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/barnsley.htm",
+        "https://www.transfermarkt.co.uk/patrick-kelly/profil/spieler/896526"
+      ]
+    },
+    "Makenzie Kirk": {
+      "age": 22,
+      "marketValueM": 0.4,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/barnsley.htm",
+        "https://www.transfermarkt.co.uk/makenzie-kirk/profil/spieler/700144"
+      ]
+    },
+    "Amani Richards": {
+      "age": 21,
+      "marketValueM": 0.05,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/barnsley.htm",
+        "https://www.transfermarkt.co.uk/amani-richards/profil/spieler/764934"
+      ]
+    },
+    "Reyes Cleary": {
+      "age": 22,
+      "marketValueM": 0.25,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/barnsley.htm",
+        "https://www.transfermarkt.co.uk/reyes-cleary/profil/spieler/746553"
+      ]
+    },
+    "Noah Town": {
+      "age": 17,
+      "marketValueM": 0,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/barnsley.htm",
+        "https://www.transfermarkt.co.uk/noah-town/profil/spieler/1580393",
+        "https://www.worldfootball.net/teams/te200/barnsley-fc/all-players/"
+      ],
+      "notes": "The cited Transfermarkt profile publishes no market value; 0 records an unavailable published valuation, not an estimate. Role and valuation were taken from the current player search row because the player was not listed in the downloaded senior club table. Age 17 at the snapshot is supported by the cited current Barnsley player-history listing (born 24 November 2008)."
+    }
+  }
+}
