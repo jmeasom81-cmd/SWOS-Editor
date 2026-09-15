@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "walsall",
+  "snapshot": "2026-09-15",
+  "sourceSummary": "Walsall current 2026/27 first-team roster, shirt number, nationality and broad playing role from FootballSquads after the summer window. The selected 16 use a balanced mix of 2 goalkeepers, 5 defenders, 6 midfielders and 3 forwards.",
+  "players": [
+    {
+      "footballName": "Jed Ward",
+      "group": "Goalkeeper",
+      "nationality": "England",
+      "shirt": 1,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm · current 2026/27 roster · #1 · Goalkeeper"
+    },
+    {
+      "footballName": "Jenson Kilroy",
+      "group": "Goalkeeper",
+      "nationality": "England",
+      "shirt": 21,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm · current 2026/27 roster · #21 · Goalkeeper"
+    },
+    {
+      "footballName": "Rico Browne",
+      "group": "Defender",
+      "nationality": "Saint Kitts and Nevis",
+      "shirt": 2,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm · current 2026/27 roster · #2 · Defender"
+    },
+    {
+      "footballName": "Mason Hancock",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 3,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm · current 2026/27 roster · #3 · Defender"
+    },
+    {
+      "footballName": "James Connolly",
+      "group": "Defender",
+      "nationality": "Wales",
+      "shirt": 4,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm · current 2026/27 roster · #4 · Defender"
+    },
+    {
+      "footballName": "Harrison Burke",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 5,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm · current 2026/27 roster · #5 · Defender"
+    },
+    {
+      "footballName": "Courtney Clarke",
+      "group": "Defender",
+      "nationality": "Jamaica",
+      "shirt": 17,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm · current 2026/27 roster · #17 · Defender"
+    },
+    {
+      "footballName": "Sven Sprangler",
+      "group": "Midfielder",
+      "nationality": "Austria",
+      "shirt": 6,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm · current 2026/27 roster · #6 · Midfielder"
+    },
+    {
+      "footballName": "Charlie Crew",
+      "group": "Midfielder",
+      "nationality": "Wales",
+      "shirt": 8,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm · current 2026/27 roster · #8 · Midfielder"
+    },
+    {
+      "footballName": "Lewis Simper",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 10,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm · current 2026/27 roster · #10 · Midfielder"
+    },
+    {
+      "footballName": "Reece Smith",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 11,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm · current 2026/27 roster · #11 · Midfielder"
+    },
+    {
+      "footballName": "Antony Evans",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 14,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm · current 2026/27 roster · #14 · Midfielder"
+    },
+    {
+      "footballName": "Tai Sodje",
+      "group": "Forward",
+      "nationality": "England",
+      "shirt": 7,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm · current 2026/27 roster · #7 · Forward"
+    },
+    {
+      "footballName": "Andrew Dallas",
+      "group": "Forward",
+      "nationality": "Scotland",
+      "shirt": 9,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm · current 2026/27 roster · #9 · Forward"
+    },
+    {
+      "footballName": "Aaron Pressley",
+      "group": "Forward",
+      "nationality": "Scotland",
+      "shirt": 19,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm · current 2026/27 roster · #19 · Forward"
+    },
+    {
+      "footballName": "Isaac Moore",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 15,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm · current 2026/27 roster · #15 · Midfielder"
+    }
+  ]
+}

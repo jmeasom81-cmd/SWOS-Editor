@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "exeter-city",
+  "snapshot": "2026-09-15",
+  "sourceSummary": "Exeter City current 2026/27 first-team roster, shirt number, nationality and broad playing role from FootballSquads after the summer window. The selected 16 use a balanced mix of 2 goalkeepers, 5 defenders, 5 midfielders and 4 forwards.",
+  "players": [
+    {
+      "footballName": "Jack Bycroft",
+      "group": "Goalkeeper",
+      "nationality": "England",
+      "shirt": 1,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm · current 2026/27 roster · #1 · Goalkeeper"
+    },
+    {
+      "footballName": "Frankie Phillips",
+      "group": "Goalkeeper",
+      "nationality": "England",
+      "shirt": 22,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm · current 2026/27 roster · #22 · Goalkeeper"
+    },
+    {
+      "footballName": "Lakyle Samuel",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 2,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm · current 2026/27 roster · #2 · Defender"
+    },
+    {
+      "footballName": "Luca Woodhouse",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 3,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm · current 2026/27 roster · #3 · Defender"
+    },
+    {
+      "footballName": "Ed Turns",
+      "group": "Defender",
+      "nationality": "Wales",
+      "shirt": 4,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm · current 2026/27 roster · #4 · Defender"
+    },
+    {
+      "footballName": "Jack Fitzwater",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 5,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm · current 2026/27 roster · #5 · Defender"
+    },
+    {
+      "footballName": "Jack Taylor",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 6,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm · current 2026/27 roster · #6 · Defender"
+    },
+    {
+      "footballName": "Gwion Edwards",
+      "group": "Midfielder",
+      "nationality": "Wales",
+      "shirt": 7,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm · current 2026/27 roster · #7 · Midfielder"
+    },
+    {
+      "footballName": "Taylor Perry",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 8,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm · current 2026/27 roster · #8 · Midfielder"
+    },
+    {
+      "footballName": "Andrew Oluwabori",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 11,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm · current 2026/27 roster · #11 · Midfielder"
+    },
+    {
+      "footballName": "Reece Cole",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 12,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm · current 2026/27 roster · #12 · Midfielder"
+    },
+    {
+      "footballName": "Harry Kite",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 14,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm · current 2026/27 roster · #14 · Midfielder"
+    },
+    {
+      "footballName": "Josh Gordon",
+      "group": "Forward",
+      "nationality": "England",
+      "shirt": 10,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm · current 2026/27 roster · #10 · Forward"
+    },
+    {
+      "footballName": "Ajay Matthews",
+      "group": "Forward",
+      "nationality": "England",
+      "shirt": 15,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm · current 2026/27 roster · #15 · Forward"
+    },
+    {
+      "footballName": "Danny Rose",
+      "group": "Forward",
+      "nationality": "England",
+      "shirt": 32,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm · current 2026/27 roster · #32 · Forward"
+    },
+    {
+      "footballName": "Kieran Wilson",
+      "group": "Forward",
+      "nationality": "Scotland",
+      "shirt": 37,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm · current 2026/27 roster · #37 · Forward"
+    }
+  ]
+}

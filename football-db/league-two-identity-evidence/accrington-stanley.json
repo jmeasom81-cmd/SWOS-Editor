@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "accrington-stanley",
+  "snapshot": "2026-09-15",
+  "sourceSummary": "Accrington Stanley current 2026/27 first-team roster, shirt number, nationality and broad playing role from FootballSquads after the summer window. The selected 16 use a balanced mix of 2 goalkeepers, 5 defenders, 5 midfielders and 4 forwards.",
+  "players": [
+    {
+      "footballName": "Louie Moulden",
+      "group": "Goalkeeper",
+      "nationality": "England",
+      "shirt": 1,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm · current 2026/27 roster · #1 · Goalkeeper"
+    },
+    {
+      "footballName": "James Rogerson",
+      "group": "Goalkeeper",
+      "nationality": "England",
+      "shirt": 21,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm · current 2026/27 roster · #21 · Goalkeeper"
+    },
+    {
+      "footballName": "Donald Love",
+      "group": "Defender",
+      "nationality": "Scotland",
+      "shirt": 2,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm · current 2026/27 roster · #2 · Defender"
+    },
+    {
+      "footballName": "Tom Moore",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 4,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm · current 2026/27 roster · #4 · Defender"
+    },
+    {
+      "footballName": "Farrend Rawson",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 5,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm · current 2026/27 roster · #5 · Defender"
+    },
+    {
+      "footballName": "Devon Matthews",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 17,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm · current 2026/27 roster · #17 · Defender"
+    },
+    {
+      "footballName": "Joe Anderson",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 22,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm · current 2026/27 roster · #22 · Defender"
+    },
+    {
+      "footballName": "Liam Coyle",
+      "group": "Midfielder",
+      "nationality": "Northern Ireland",
+      "shirt": 6,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm · current 2026/27 roster · #6 · Midfielder"
+    },
+    {
+      "footballName": "Shaun Whalley",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 7,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm · current 2026/27 roster · #7 · Midfielder"
+    },
+    {
+      "footballName": "Conor Grant",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 8,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm · current 2026/27 roster · #8 · Midfielder"
+    },
+    {
+      "footballName": "Alex Henderson",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 10,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm · current 2026/27 roster · #10 · Midfielder"
+    },
+    {
+      "footballName": "Isaac Sinclair",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 11,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm · current 2026/27 roster · #11 · Midfielder"
+    },
+    {
+      "footballName": "Kelsey Mooney",
+      "group": "Forward",
+      "nationality": "England",
+      "shirt": 9,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm · current 2026/27 roster · #9 · Forward"
+    },
+    {
+      "footballName": "Cole Stockton",
+      "group": "Forward",
+      "nationality": "England",
+      "shirt": 13,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm · current 2026/27 roster · #13 · Forward"
+    },
+    {
+      "footballName": "Charlie Caton",
+      "group": "Forward",
+      "nationality": "Wales",
+      "shirt": 18,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm · current 2026/27 roster · #18 · Forward"
+    },
+    {
+      "footballName": "Anjola Popoola",
+      "group": "Forward",
+      "nationality": "England",
+      "shirt": 19,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm · current 2026/27 roster · #19 · Forward"
+    }
+  ]
+}

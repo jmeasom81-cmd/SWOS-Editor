@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "northampton-town",
+  "snapshot": "2026-09-15",
+  "sourceSummary": "Northampton Town current 2026/27 first-team roster, shirt number, nationality and broad playing role from FootballSquads after the summer window. The selected 16 use a balanced mix of 2 goalkeepers, 5 defenders, 5 midfielders and 4 forwards.",
+  "players": [
+    {
+      "footballName": "Zach Jeacock",
+      "group": "Goalkeeper",
+      "nationality": "England",
+      "shirt": 1,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm · current 2026/27 roster · #1 · Goalkeeper"
+    },
+    {
+      "footballName": "James Dadge",
+      "group": "Goalkeeper",
+      "nationality": "England",
+      "shirt": 31,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm · current 2026/27 roster · #31 · Goalkeeper"
+    },
+    {
+      "footballName": "James Maxwell",
+      "group": "Defender",
+      "nationality": "Scotland",
+      "shirt": 3,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm · current 2026/27 roster · #3 · Defender"
+    },
+    {
+      "footballName": "Jon Guthrie",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 5,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm · current 2026/27 roster · #5 · Defender"
+    },
+    {
+      "footballName": "Elliott Moore",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 6,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm · current 2026/27 roster · #6 · Defender"
+    },
+    {
+      "footballName": "Conor McCarthy",
+      "group": "Defender",
+      "nationality": "Republic of Ireland",
+      "shirt": 15,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm · current 2026/27 roster · #15 · Defender"
+    },
+    {
+      "footballName": "Joe Wormleighton",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 16,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm · current 2026/27 roster · #16 · Defender"
+    },
+    {
+      "footballName": "Joseph O'Brien-Whitmarsh",
+      "group": "Midfielder",
+      "nationality": "Republic of Ireland",
+      "shirt": 4,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm · current 2026/27 roster · #4 · Midfielder"
+    },
+    {
+      "footballName": "Lee Evans",
+      "group": "Midfielder",
+      "nationality": "Wales",
+      "shirt": 8,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm · current 2026/27 roster · #8 · Midfielder"
+    },
+    {
+      "footballName": "Tyrese Fornah",
+      "group": "Midfielder",
+      "nationality": "Sierra Leone",
+      "shirt": 14,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm · current 2026/27 roster · #14 · Midfielder"
+    },
+    {
+      "footballName": "Owen Dale",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 19,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm · current 2026/27 roster · #19 · Midfielder"
+    },
+    {
+      "footballName": "Logan Briggs",
+      "group": "Midfielder",
+      "nationality": "Wales",
+      "shirt": 20,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm · current 2026/27 roster · #20 · Midfielder"
+    },
+    {
+      "footballName": "Sam Hoskins",
+      "group": "Forward",
+      "nationality": "England",
+      "shirt": 7,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm · current 2026/27 roster · #7 · Forward"
+    },
+    {
+      "footballName": "Matty Warhurst",
+      "group": "Forward",
+      "nationality": "England",
+      "shirt": 9,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm · current 2026/27 roster · #9 · Forward"
+    },
+    {
+      "footballName": "Elliott List",
+      "group": "Forward",
+      "nationality": "England",
+      "shirt": 10,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm · current 2026/27 roster · #10 · Forward"
+    },
+    {
+      "footballName": "Kamarai Simon-Swyer",
+      "group": "Forward",
+      "nationality": "England",
+      "shirt": 11,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm · current 2026/27 roster · #11 · Forward"
+    }
+  ]
+}

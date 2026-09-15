@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "rotherham-united",
+  "snapshot": "2026-09-15",
+  "sourceSummary": "Rotherham United current 2026/27 first-team roster, shirt number, nationality and broad playing role from FootballSquads after the summer window. The selected 16 use a balanced mix of 2 goalkeepers, 5 defenders, 5 midfielders and 4 forwards.",
+  "players": [
+    {
+      "footballName": "Ted Cann",
+      "group": "Goalkeeper",
+      "nationality": "England",
+      "shirt": 1,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm · current 2026/27 roster · #1 · Goalkeeper"
+    },
+    {
+      "footballName": "Julian Eyestone",
+      "group": "Goalkeeper",
+      "nationality": "United States",
+      "shirt": 13,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm · current 2026/27 roster · #13 · Goalkeeper"
+    },
+    {
+      "footballName": "Joe Rafferty",
+      "group": "Defender",
+      "nationality": "Republic of Ireland",
+      "shirt": 2,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm · current 2026/27 roster · #2 · Defender"
+    },
+    {
+      "footballName": "Ewan Otoo",
+      "group": "Defender",
+      "nationality": "Scotland",
+      "shirt": 3,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm · current 2026/27 roster · #3 · Defender"
+    },
+    {
+      "footballName": "Kieran Ngwenya",
+      "group": "Defender",
+      "nationality": "Scotland",
+      "shirt": 5,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm · current 2026/27 roster · #5 · Defender"
+    },
+    {
+      "footballName": "Denzel Hall",
+      "group": "Defender",
+      "nationality": "Netherlands",
+      "shirt": 12,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm · current 2026/27 roster · #12 · Defender"
+    },
+    {
+      "footballName": "Sonny Aljofree",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 14,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm · current 2026/27 roster · #14 · Defender"
+    },
+    {
+      "footballName": "Josh Austerfield",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 4,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm · current 2026/27 roster · #4 · Midfielder"
+    },
+    {
+      "footballName": "Ossama Ashley",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 6,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm · current 2026/27 roster · #6 · Midfielder"
+    },
+    {
+      "footballName": "Kian Spence",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 8,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm · current 2026/27 roster · #8 · Midfielder"
+    },
+    {
+      "footballName": "Jayce Fitzgerald",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 15,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm · current 2026/27 roster · #15 · Midfielder"
+    },
+    {
+      "footballName": "Jamie Jellis",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 22,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm · current 2026/27 roster · #22 · Midfielder"
+    },
+    {
+      "footballName": "Fabio Tavares",
+      "group": "Forward",
+      "nationality": "England",
+      "shirt": 7,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm · current 2026/27 roster · #7 · Forward"
+    },
+    {
+      "footballName": "Tom Bradshaw",
+      "group": "Forward",
+      "nationality": "Wales",
+      "shirt": 9,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm · current 2026/27 roster · #9 · Forward"
+    },
+    {
+      "footballName": "Paul Mullin",
+      "group": "Forward",
+      "nationality": "England",
+      "shirt": 10,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm · current 2026/27 roster · #10 · Forward"
+    },
+    {
+      "footballName": "George Sebine",
+      "group": "Forward",
+      "nationality": "England",
+      "shirt": 19,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm · current 2026/27 roster · #19 · Forward"
+    }
+  ]
+}

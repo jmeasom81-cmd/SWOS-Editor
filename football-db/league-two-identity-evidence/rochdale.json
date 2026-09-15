@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "rochdale",
+  "snapshot": "2026-09-15",
+  "sourceSummary": "Rochdale current 2026/27 first-team roster, shirt number, nationality and broad playing role from FootballSquads after the summer window. The selected 16 use a balanced mix of 2 goalkeepers, 5 defenders, 5 midfielders and 4 forwards.",
+  "players": [
+    {
+      "footballName": "Nils Ramming",
+      "group": "Goalkeeper",
+      "nationality": "Sweden",
+      "shirt": 1,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm · current 2026/27 roster · #1 · Goalkeeper"
+    },
+    {
+      "footballName": "Jake Spaven",
+      "group": "Goalkeeper",
+      "nationality": "England",
+      "shirt": 12,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm · current 2026/27 roster · #12 · Goalkeeper"
+    },
+    {
+      "footballName": "Charlie Tasker",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 2,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm · current 2026/27 roster · #2 · Defender"
+    },
+    {
+      "footballName": "Kaiden Wilson",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 3,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm · current 2026/27 roster · #3 · Defender"
+    },
+    {
+      "footballName": "Laurence Maguire",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 5,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm · current 2026/27 roster · #5 · Defender"
+    },
+    {
+      "footballName": "Ethan Ebanks-Landell",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 6,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm · current 2026/27 roster · #6 · Defender"
+    },
+    {
+      "footballName": "Tobi Adebayo-Rowling",
+      "group": "Defender",
+      "nationality": "England",
+      "shirt": 13,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm · current 2026/27 roster · #13 · Defender"
+    },
+    {
+      "footballName": "Ryan East",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 4,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm · current 2026/27 roster · #4 · Midfielder"
+    },
+    {
+      "footballName": "Harvey Gilmour",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 8,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm · current 2026/27 roster · #8 · Midfielder"
+    },
+    {
+      "footballName": "Ed Francis",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 14,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm · current 2026/27 roster · #14 · Midfielder"
+    },
+    {
+      "footballName": "Casey Pettit",
+      "group": "Midfielder",
+      "nationality": "England",
+      "shirt": 16,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm · current 2026/27 roster · #16 · Midfielder"
+    },
+    {
+      "footballName": "Baba Adeeko",
+      "group": "Midfielder",
+      "nationality": "Republic of Ireland",
+      "shirt": 17,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm · current 2026/27 roster · #17 · Midfielder"
+    },
+    {
+      "footballName": "Cian Hayes",
+      "group": "Forward",
+      "nationality": "Republic of Ireland",
+      "shirt": 7,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm · current 2026/27 roster · #7 · Forward"
+    },
+    {
+      "footballName": "Mani Dieseruvwe",
+      "group": "Forward",
+      "nationality": "England",
+      "shirt": 9,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm · current 2026/27 roster · #9 · Forward"
+    },
+    {
+      "footballName": "Devante Rodney",
+      "group": "Forward",
+      "nationality": "England",
+      "shirt": 10,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm · current 2026/27 roster · #10 · Forward"
+    },
+    {
+      "footballName": "Zain Silcott-Duberry",
+      "group": "Forward",
+      "nationality": "England",
+      "shirt": 11,
+      "source": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm · current 2026/27 roster · #11 · Forward"
+    }
+  ]
+}
