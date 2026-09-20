@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "chesterfield",
+  "snapshot": "2026-09-20",
+  "sourceSummary": "Chesterfield 2026/27 identity selection reconstructed after the local preview crash and refreshed against the committed FootballSquads identity source plus current Transfermarkt role and published market-value evidence. Exact footballName keys remain aligned to the League Two identity 16; unavailable published values are recorded as 0 rather than estimated.",
+  "players": {
+    "Zach Hemming": {
+      "age": 26,
+      "marketValueM": 0.4,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chestrf.htm",
+        "https://www.transfermarkt.co.uk/chesterfield-fc/kader/verein/1219/saison_id/2026/plus/1"
+      ]
+    },
+    "Ryan Boot": {
+      "age": 31,
+      "marketValueM": 0.075,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chestrf.htm",
+        "https://www.transfermarkt.co.uk/chesterfield-fc/kader/verein/1219/saison_id/2026/plus/1"
+      ]
+    },
+    "Malik Owolabi-Belewu": {
+      "age": 24,
+      "marketValueM": 0.1,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chestrf.htm",
+        "https://www.transfermarkt.co.uk/chesterfield-fc/kader/verein/1219/saison_id/2026/plus/1"
+      ]
+    },
+    "Kyle McFadzean": {
+      "age": 39,
+      "marketValueM": 0.025,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chestrf.htm",
+        "https://www.transfermarkt.co.uk/chesterfield-fc/kader/verein/1219/saison_id/2026/plus/1"
+      ]
+    },
+    "Jack Simpson": {
+      "age": 29,
+      "marketValueM": 0.225,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chestrf.htm",
+        "https://www.transfermarkt.co.uk/chesterfield-fc/kader/verein/1219/saison_id/2026/plus/1"
+      ]
+    },
+    "Alfie Pond": {
+      "age": 22,
+      "marketValueM": 0.25,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chestrf.htm",
+        "https://www.transfermarkt.co.uk/chesterfield-fc/kader/verein/1219/saison_id/2026/plus/1"
+      ]
+    },
+    "Lewis Gordon": {
+      "age": 25,
+      "marketValueM": 0.25,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chestrf.htm",
+        "https://www.transfermarkt.co.uk/chesterfield-fc/kader/verein/1219/saison_id/2026/plus/1"
+      ]
+    },
+    "Tom Naylor": {
+      "age": 35,
+      "marketValueM": 0.075,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chestrf.htm",
+        "https://www.transfermarkt.co.uk/chesterfield-fc/kader/verein/1219/saison_id/2026/plus/1"
+      ]
+    },
+    "Ryan Stirk": {
+      "age": 25,
+      "marketValueM": 0.3,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chestrf.htm",
+        "https://www.transfermarkt.co.uk/chesterfield-fc/kader/verein/1219/saison_id/2026/plus/1"
+      ]
+    },
+    "Dylan Duffy": {
+      "age": 23,
+      "marketValueM": 0.25,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chestrf.htm",
+        "https://www.transfermarkt.co.uk/chesterfield-fc/kader/verein/1219/saison_id/2026/plus/1"
+      ]
+    },
+    "George McEachran": {
+      "age": 26,
+      "marketValueM": 0.275,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chestrf.htm",
+        "https://www.transfermarkt.co.uk/chesterfield-fc/kader/verein/1219/saison_id/2026/plus/1"
+      ]
+    },
+    "Kiano Dyer": {
+      "age": 19,
+      "marketValueM": 0.1,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chestrf.htm",
+        "https://www.transfermarkt.co.uk/chesterfield-fc/kader/verein/1219/saison_id/2026/plus/1"
+      ]
+    },
+    "Liam Mandeville": {
+      "age": 29,
+      "marketValueM": 0.275,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chestrf.htm",
+        "https://www.transfermarkt.co.uk/chesterfield-fc/kader/verein/1219/saison_id/2026/plus/1"
+      ],
+      "notes": "SWOS position is attacking/central midfield, matching current Transfermarkt detailed role evidence."
+    },
+    "Fraser Bryden": {
+      "age": 22,
+      "marketValueM": 0.3,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chestrf.htm",
+        "https://www.transfermarkt.co.uk/chesterfield-fc/kader/verein/1219/saison_id/2026/plus/1"
+      ]
+    },
+    "Lee Bonis": {
+      "age": 27,
+      "marketValueM": 0.45,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chestrf.htm",
+        "https://www.transfermarkt.co.uk/chesterfield-fc/kader/verein/1219/saison_id/2026/plus/1"
+      ]
+    },
+    "Ruel Sotiriou": {
+      "age": 26,
+      "marketValueM": 0.275,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chestrf.htm",
+        "https://www.transfermarkt.co.uk/chesterfield-fc/kader/verein/1219/saison_id/2026/plus/1"
+      ]
+    }
+  }
+}
