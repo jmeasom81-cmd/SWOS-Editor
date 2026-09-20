@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "colchester-united",
+  "snapshot": "2026-09-20",
+  "sourceSummary": "Colchester United 2026/27 identity selection reconstructed after the local preview crash and refreshed against the committed FootballSquads identity source plus current Transfermarkt role and published market-value evidence. Exact footballName keys remain aligned to the League Two identity 16; unavailable published values are recorded as 0 rather than estimated.",
+  "players": {
+    "Tom Smith": {
+      "age": 24,
+      "marketValueM": 0.075,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/colches.htm",
+        "https://www.transfermarkt.co.uk/colchester-united/kader/verein/1060"
+      ]
+    },
+    "Thimothee Lo-Tutala": {
+      "age": 23,
+      "marketValueM": 0.4,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/colches.htm",
+        "https://www.transfermarkt.co.uk/colchester-united/kader/verein/1060"
+      ]
+    },
+    "Rob Hunt": {
+      "age": 31,
+      "marketValueM": 0.15,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/colches.htm",
+        "https://www.transfermarkt.co.uk/colchester-united/kader/verein/1060"
+      ]
+    },
+    "Ellis Iandolo": {
+      "age": 29,
+      "marketValueM": 0.2,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/colches.htm",
+        "https://www.transfermarkt.co.uk/colchester-united/kader/verein/1060"
+      ]
+    },
+    "Jack Tucker": {
+      "age": 26,
+      "marketValueM": 0.35,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/colches.htm",
+        "https://www.transfermarkt.co.uk/colchester-united/kader/verein/1060"
+      ]
+    },
+    "Sean Raggett": {
+      "age": 33,
+      "marketValueM": 0.15,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/colches.htm",
+        "https://www.transfermarkt.co.uk/colchester-united/kader/verein/1060"
+      ],
+      "notes": "Age follows the committed FootballSquads date-of-birth evidence; Transfermarkt currently publishes a conflicting birth date."
+    },
+    "Jake Leake": {
+      "age": 23,
+      "marketValueM": 0.075,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/colches.htm",
+        "https://www.transfermarkt.co.uk/colchester-united/kader/verein/1060"
+      ]
+    },
+    "Ben Perry": {
+      "age": 21,
+      "marketValueM": 0.1,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/colches.htm",
+        "https://www.transfermarkt.co.uk/colchester-united/kader/verein/1060"
+      ]
+    },
+    "Paul Digby": {
+      "age": 31,
+      "marketValueM": 0.1,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/colches.htm",
+        "https://www.transfermarkt.co.uk/colchester-united/kader/verein/1060"
+      ]
+    },
+    "Harry Anderson": {
+      "age": 29,
+      "marketValueM": 0.275,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/colches.htm",
+        "https://www.transfermarkt.co.uk/colchester-united/kader/verein/1060"
+      ]
+    },
+    "Teddy Bishop": {
+      "age": 30,
+      "marketValueM": 0.2,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/colches.htm",
+        "https://www.transfermarkt.co.uk/colchester-united/kader/verein/1060"
+      ]
+    },
+    "Jack Payne": {
+      "age": 31,
+      "marketValueM": 0.275,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/colches.htm",
+        "https://www.transfermarkt.co.uk/colchester-united/kader/verein/1060"
+      ]
+    },
+    "Bradley Ihionvien": {
+      "age": 22,
+      "marketValueM": 0.075,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/colches.htm",
+        "https://www.transfermarkt.co.uk/colchester-united/kader/verein/1060"
+      ]
+    },
+    "Leon Chiwome": {
+      "age": 20,
+      "marketValueM": 0.5,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/colches.htm",
+        "https://www.transfermarkt.co.uk/colchester-united/kader/verein/1060"
+      ]
+    },
+    "Kylian Kouassi": {
+      "age": 23,
+      "marketValueM": 0.25,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/colches.htm",
+        "https://www.transfermarkt.co.uk/colchester-united/kader/verein/1060"
+      ]
+    },
+    "Jaden Williams": {
+      "age": 22,
+      "marketValueM": 0.125,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/colches.htm",
+        "https://www.transfermarkt.co.uk/colchester-united/kader/verein/1060"
+      ]
+    }
+  }
+}
