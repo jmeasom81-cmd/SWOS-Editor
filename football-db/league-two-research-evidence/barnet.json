@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "barnet",
+  "snapshot": "2026-09-20",
+  "sourceSummary": "Barnet 2026/27 identity selection reconstructed after the local preview crash and refreshed against the committed FootballSquads identity source plus current Transfermarkt role and published market-value evidence. Exact footballName keys remain aligned to the League Two identity 16; unavailable published values are recorded as 0 rather than estimated.",
+  "players": {
+    "Taye Ashby-Hammond": {
+      "age": 27,
+      "marketValueM": 0.175,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/barnet.htm",
+        "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804"
+      ]
+    },
+    "Matthew Cox": {
+      "age": 23,
+      "marketValueM": 0.7,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/barnet.htm",
+        "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804"
+      ]
+    },
+    "Romoney Crichlow-Noble": {
+      "age": 27,
+      "marketValueM": 0.175,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/barnet.htm",
+        "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804"
+      ],
+      "notes": "Transfermarkt commonly publishes this player as Romoney Crichlow; the footballName key remains matched to the League Two identity feed."
+    },
+    "Daniele Collinge": {
+      "age": 28,
+      "marketValueM": 0.2,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/barnet.htm",
+        "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804"
+      ],
+      "notes": "Transfermarkt publishes this player as Danny Collinge; the footballName key remains matched to the League Two identity feed."
+    },
+    "Adam Senior": {
+      "age": 24,
+      "marketValueM": 0.4,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/barnet.htm",
+        "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804"
+      ]
+    },
+    "Zac Williams": {
+      "age": 22,
+      "marketValueM": 0.45,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/barnet.htm",
+        "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804"
+      ]
+    },
+    "Will Wright": {
+      "age": 29,
+      "marketValueM": 0.35,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/barnet.htm",
+        "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804"
+      ]
+    },
+    "Charlie Lakin": {
+      "age": 27,
+      "marketValueM": 0.2,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/barnet.htm",
+        "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804"
+      ]
+    },
+    "Nnamdi Ofoborh": {
+      "age": 26,
+      "marketValueM": 0.275,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/barnet.htm",
+        "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804"
+      ]
+    },
+    "Idris Kanu": {
+      "age": 26,
+      "marketValueM": 0.25,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/barnet.htm",
+        "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804"
+      ]
+    },
+    "Brandon Comley": {
+      "age": 30,
+      "marketValueM": 0.1,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/barnet.htm",
+        "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804"
+      ]
+    },
+    "Kane Smith": {
+      "age": 30,
+      "marketValueM": 0.1,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/barnet.htm",
+        "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804"
+      ]
+    },
+    "Tom Knowles": {
+      "age": 27,
+      "marketValueM": 0,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/barnet.htm",
+        "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804"
+      ],
+      "notes": "The current Transfermarkt squad publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    },
+    "Jack Maskell": {
+      "age": 22,
+      "marketValueM": 0,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/barnet.htm",
+        "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804"
+      ],
+      "notes": "The current Transfermarkt squad publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    },
+    "Damola Ajayi": {
+      "age": 20,
+      "marketValueM": 0.1,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/barnet.htm",
+        "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804"
+      ]
+    },
+    "Kabongo Tshimanga": {
+      "age": 29,
+      "marketValueM": 0.175,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/barnet.htm",
+        "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804"
+      ]
+    }
+  }
+}
