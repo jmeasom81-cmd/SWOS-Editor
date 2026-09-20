@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "accrington-stanley",
+  "snapshot": "2026-09-20",
+  "sourceSummary": "Accrington Stanley 2026/27 identity selection reconstructed after the local preview crash and refreshed against the committed FootballSquads identity source plus current Transfermarkt role and published market-value evidence. Exact footballName keys remain aligned to the League Two identity 16; unavailable published values are recorded as 0 rather than estimated.",
+  "players": {
+    "Louie Moulden": {
+      "age": 24,
+      "marketValueM": 0,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm",
+        "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688"
+      ],
+      "notes": "The current Transfermarkt squad publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    },
+    "James Rogerson": {
+      "age": 19,
+      "marketValueM": 0,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm",
+        "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688"
+      ],
+      "notes": "The current Transfermarkt squad publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    },
+    "Donald Love": {
+      "age": 31,
+      "marketValueM": 0.175,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm",
+        "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688"
+      ]
+    },
+    "Tom Moore": {
+      "age": 27,
+      "marketValueM": 0,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm",
+        "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688"
+      ],
+      "notes": "The current Transfermarkt squad publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    },
+    "Farrend Rawson": {
+      "age": 30,
+      "marketValueM": 0.3,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm",
+        "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688"
+      ]
+    },
+    "Devon Matthews": {
+      "age": 26,
+      "marketValueM": 0.25,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm",
+        "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688"
+      ]
+    },
+    "Joe Anderson": {
+      "age": 25,
+      "marketValueM": 0.125,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm",
+        "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688"
+      ]
+    },
+    "Liam Coyle": {
+      "age": 26,
+      "marketValueM": 0.175,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm",
+        "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688"
+      ]
+    },
+    "Shaun Whalley": {
+      "age": 39,
+      "marketValueM": 0.025,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm",
+        "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688"
+      ]
+    },
+    "Conor Grant": {
+      "age": 31,
+      "marketValueM": 0.075,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm",
+        "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688"
+      ]
+    },
+    "Alex Henderson": {
+      "age": 21,
+      "marketValueM": 0.125,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm",
+        "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688"
+      ]
+    },
+    "Isaac Sinclair": {
+      "age": 25,
+      "marketValueM": 0.2,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm",
+        "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688"
+      ]
+    },
+    "Kelsey Mooney": {
+      "age": 27,
+      "marketValueM": 0.075,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm",
+        "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688"
+      ]
+    },
+    "Cole Stockton": {
+      "age": 32,
+      "marketValueM": 0.1,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm",
+        "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688"
+      ]
+    },
+    "Charlie Caton": {
+      "age": 23,
+      "marketValueM": 0.075,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm",
+        "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688"
+      ]
+    },
+    "Anjola Popoola": {
+      "age": 19,
+      "marketValueM": 0,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/accring.htm",
+        "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688"
+      ],
+      "notes": "The current Transfermarkt squad publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    }
+  }
+}
