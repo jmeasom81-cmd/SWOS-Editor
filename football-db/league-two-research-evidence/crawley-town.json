@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "crawley-town",
+  "snapshot": "2026-09-20",
+  "sourceSummary": "Crawley Town current 2026/27 identity selection cross-checked against FootballSquads for current squad membership and date of birth, plus Transfermarkt for detailed roles and published market values. Exact footballName keys remain aligned to the promoted League Two identity 16.",
+  "players": {
+    "Vito Mannone": {
+      "age": 38,
+      "marketValueM": 0,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+        "https://www.transfermarkt.co.uk/crawley-town/kader/verein/3537"
+      ],
+      "notes": "The cited Transfermarkt current-squad page publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    },
+    "Nicholas Michalski": {
+      "age": 19,
+      "marketValueM": 0,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+        "https://www.transfermarkt.com/nicholas-michalski/profil/spieler/931512"
+      ],
+      "notes": "The cited Transfermarkt profile publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    },
+    "Kellan Gordon": {
+      "age": 28,
+      "marketValueM": 0.1,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+        "https://www.transfermarkt.co.uk/kellan-gordon/profil/spieler/370138"
+      ]
+    },
+    "Pele Arganese-McDermott": {
+      "age": 21,
+      "marketValueM": 0,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+        "https://www.transfermarkt.co.uk/crawley-town/kader/verein/3537"
+      ],
+      "notes": "The cited Transfermarkt current-squad page publishes no market value; 0 records an unavailable published valuation, not an estimate."
+    },
+    "Charlie Barker": {
+      "age": 23,
+      "marketValueM": 0.35,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+        "https://www.transfermarkt.com/charlie-barker/transfers/spieler/747258/transfer_id/4399222"
+      ]
+    },
+    "Priestley Farquharson": {
+      "age": 29,
+      "marketValueM": 0.125,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+        "https://www.transfermarkt.com/priestley-farquharson/profil/spieler/652989"
+      ]
+    },
+    "Lewis Richards": {
+      "age": 24,
+      "marketValueM": 0.15,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+        "https://www.transfermarkt.co.uk/crawley-town/kader/verein/3537"
+      ]
+    },
+    "Louie Watson": {
+      "age": 25,
+      "marketValueM": 0.125,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+        "https://www.transfermarkt.com/louie-watson/profil/spieler/505548"
+      ]
+    },
+    "Stephen Duke-McKenna": {
+      "age": 26,
+      "marketValueM": 0.15,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+        "https://www.transfermarkt.co.uk/stephen-duke-mckenna/profil/spieler/503731"
+      ]
+    },
+    "Dion Pereira": {
+      "age": 27,
+      "marketValueM": 0.175,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+        "https://www.transfermarkt.co.uk/crawley-town/kader/verein/3537"
+      ]
+    },
+    "Jude Arthurs": {
+      "age": 25,
+      "marketValueM": 0.225,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+        "https://www.transfermarkt.de/jude-arthurs/profil/spieler/807418"
+      ]
+    },
+    "Justin Ferizaj": {
+      "age": 21,
+      "marketValueM": 0.05,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+        "https://www.transfermarkt.com/justin-ferizaj/profil/spieler/741271"
+      ]
+    },
+    "Malcolm Ebiowei": {
+      "age": 23,
+      "marketValueM": 0.75,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+        "https://www.transfermarkt.co.uk/malcolm-ebiowei/profil/spieler/512354"
+      ]
+    },
+    "Danilo Orsi-Dadomo": {
+      "age": 30,
+      "marketValueM": 0.175,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+        "https://www.transfermarkt.co.uk/danilo-orsi/profil/spieler/641124"
+      ],
+      "notes": "Transfermarkt publishes this player as Danilo Orsi; the footballName key remains matched to the League Two identity feed."
+    },
+    "Pemi Aderoju": {
+      "age": 22,
+      "marketValueM": 0.1,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+        "https://www.transfermarkt.co.uk/pemi-aderoju/profil/spieler/1220275"
+      ]
+    },
+    "Gianmarco Di Biase": {
+      "age": 20,
+      "marketValueM": 0.1,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+        "https://www.transfermarkt.co.uk/gianmarco-di-biase/profil/spieler/995472"
+      ]
+    }
+  }
+}
