@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "cheltenham-town",
+  "snapshot": "2026-09-20",
+  "sourceSummary": "Cheltenham Town 2026/27 identity selection reconstructed after the local preview crash and refreshed against the committed FootballSquads identity source plus current Transfermarkt role and published market-value evidence. Exact footballName keys remain aligned to the League Two identity 16; unavailable published values are recorded as 0 rather than estimated.",
+  "players": {
+    "Joe Day": {
+      "age": 36,
+      "marketValueM": 0.05,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chelt.htm",
+        "https://www.transfermarkt.co.uk/cheltenham-town/kader/verein/3371"
+      ]
+    },
+    "Wyll Stanway": {
+      "age": 25,
+      "marketValueM": 0.175,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chelt.htm",
+        "https://www.transfermarkt.co.uk/cheltenham-town/kader/verein/3371"
+      ]
+    },
+    "Jonathan Tomkinson": {
+      "age": 24,
+      "marketValueM": 0.2,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chelt.htm",
+        "https://www.transfermarkt.co.uk/cheltenham-town/kader/verein/3371"
+      ]
+    },
+    "Joe Tomlinson": {
+      "age": 26,
+      "marketValueM": 0.25,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chelt.htm",
+        "https://www.transfermarkt.co.uk/cheltenham-town/kader/verein/3371"
+      ],
+      "notes": "SWOS position is left midfield, matching the current detailed role evidence rather than the broader identity-group label."
+    },
+    "Robbie Cundy": {
+      "age": 29,
+      "marketValueM": 0.2,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chelt.htm",
+        "https://www.transfermarkt.co.uk/cheltenham-town/kader/verein/3371"
+      ]
+    },
+    "James Wilson": {
+      "age": 37,
+      "marketValueM": 0.025,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chelt.htm",
+        "https://www.transfermarkt.co.uk/cheltenham-town/kader/verein/3371"
+      ]
+    },
+    "George Nurse": {
+      "age": 27,
+      "marketValueM": 0.1,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chelt.htm",
+        "https://www.transfermarkt.co.uk/cheltenham-town/kader/verein/3371"
+      ]
+    },
+    "Ben Stevenson": {
+      "age": 29,
+      "marketValueM": 0.175,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chelt.htm",
+        "https://www.transfermarkt.co.uk/cheltenham-town/kader/verein/3371"
+      ]
+    },
+    "Charlie McCann": {
+      "age": 24,
+      "marketValueM": 0.15,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chelt.htm",
+        "https://www.transfermarkt.co.uk/cheltenham-town/kader/verein/3371"
+      ]
+    },
+    "Ryan Broom": {
+      "age": 30,
+      "marketValueM": 0.15,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chelt.htm",
+        "https://www.transfermarkt.co.uk/cheltenham-town/kader/verein/3371"
+      ]
+    },
+    "Shaun McWilliams": {
+      "age": 28,
+      "marketValueM": 0.25,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chelt.htm",
+        "https://www.transfermarkt.co.uk/cheltenham-town/kader/verein/3371"
+      ]
+    },
+    "Jordan Shipley": {
+      "age": 28,
+      "marketValueM": 0.25,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chelt.htm",
+        "https://www.transfermarkt.co.uk/cheltenham-town/kader/verein/3371"
+      ]
+    },
+    "Kirsten Otchere": {
+      "age": 19,
+      "marketValueM": 0,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chelt.htm",
+        "https://www.transfermarkt.co.uk/cheltenham-town/kader/verein/3371"
+      ],
+      "notes": "The cited Transfermarkt profile publishes no market value; 0 records an unavailable published valuation, not an estimate. Leicester City confirms the 2026/27 Cheltenham loan."
+    },
+    "George Miller": {
+      "age": 28,
+      "marketValueM": 0.125,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chelt.htm",
+        "https://www.transfermarkt.co.uk/cheltenham-town/kader/verein/3371"
+      ]
+    },
+    "Jake Bickerstaff": {
+      "age": 25,
+      "marketValueM": 0.1,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chelt.htm",
+        "https://www.transfermarkt.co.uk/cheltenham-town/kader/verein/3371"
+      ]
+    },
+    "Andreas Weimann": {
+      "age": 35,
+      "marketValueM": 0.4,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/chelt.htm",
+        "https://www.transfermarkt.co.uk/cheltenham-town/kader/verein/3371"
+      ]
+    }
+  }
+}
