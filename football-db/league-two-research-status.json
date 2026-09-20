@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "generatedAt": "2026-09-20T16:40:00.000Z",
+  "division": {
+    "code": 3,
+    "name": "League Two",
+    "clubs": 24
+  },
+  "progress": {
+    "identityReadyClubs": 24,
+    "researchReadyClubs": 8,
+    "researchPendingClubs": 16,
+    "researchedPlayers": 128
+  },
+  "next": {
+    "clubId": "exeter-city",
+    "order": 9
+  },
+  "readyClubIds": [
+    "accrington-stanley",
+    "barnet",
+    "bristol-rovers",
+    "cheltenham-town",
+    "chesterfield",
+    "colchester-united",
+    "crawley-town",
+    "crewe-alexandra"
+  ],
+  "pendingClubIds": [
+    "exeter-city",
+    "fleetwood-town",
+    "gillingham",
+    "grimsby-town",
+    "newport-county",
+    "northampton-town",
+    "oldham-athletic",
+    "port-vale",
+    "rochdale",
+    "rotherham-united",
+    "salford-city",
+    "shrewsbury-town",
+    "swindon-town",
+    "tranmere-rovers",
+    "walsall",
+    "york-city"
+  ],
+  "policy": {
+    "exactIdentity16": true,
+    "noFabricatedValues": true,
+    "unavailableMarketValueEncodedAsZero": true,
+    "teamWritesLocked": true,
+    "careerWritesLocked": true
+  }
+}
