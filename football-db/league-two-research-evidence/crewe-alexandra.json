@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "crewe-alexandra",
+  "snapshot": "2026-09-20",
+  "sourceSummary": "Crewe Alexandra current 2026/27 identity selection cross-checked against the committed FootballSquads squad/date-of-birth source and current detailed role/market-value evidence. Exact footballName keys remain aligned to the League Two identity 16; unavailable values are encoded as 0 rather than estimated.",
+  "players": {
+    "Tom Booth": {
+      "age": 22,
+      "marketValueM": 0.175,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crewe.htm",
+        "https://www.transfermarkt.co.uk/crewe-alexandra/kader/verein/1042/saison_id/2026/plus/1"
+      ]
+    },
+    "Ian Lawlor": {
+      "age": 31,
+      "marketValueM": 0.075,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crewe.htm",
+        "https://www.transfermarkt.co.uk/crewe-alexandra/kader/verein/1042/saison_id/2026/plus/1"
+      ]
+    },
+    "Lewis Billington": {
+      "age": 22,
+      "marketValueM": 0.3,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crewe.htm",
+        "https://www.transfermarkt.co.uk/crewe-alexandra/kader/verein/1042/saison_id/2026/plus/1"
+      ]
+    },
+    "Reece Hutchinson": {
+      "age": 26,
+      "marketValueM": 0.3,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crewe.htm",
+        "https://www.transfermarkt.co.uk/crewe-alexandra/kader/verein/1042/saison_id/2026/plus/1"
+      ]
+    },
+    "Mickey Demetriou": {
+      "age": 36,
+      "marketValueM": 0.05,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crewe.htm",
+        "https://www.transfermarkt.co.uk/crewe-alexandra/kader/verein/1042/saison_id/2026/plus/1"
+      ]
+    },
+    "Luke Offord": {
+      "age": 26,
+      "marketValueM": 0.45,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crewe.htm",
+        "https://www.transfermarkt.co.uk/crewe-alexandra/kader/verein/1042/saison_id/2026/plus/1"
+      ]
+    },
+    "Josh Stephenson": {
+      "age": 19,
+      "marketValueM": 0,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crewe.htm",
+        "https://www.fotmob.com/players/1906025/joshua-stephenson",
+        "https://www.playmakerstats.com/team/crewe-alexandra/4760/market-value"
+      ],
+      "notes": "The committed FootballSquads identity source is retained as the age authority for this pack. FotMob currently publishes a conflicting date of birth (15 February 2006). No published market value is available in the current squad evidence, so 0 records unavailable evidence rather than an estimate."
+    },
+    "Kyle Ure": {
+      "age": 20,
+      "marketValueM": 0.1,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crewe.htm",
+        "https://www.transfermarkt.co.uk/crewe-alexandra/kader/verein/1042/saison_id/2026/plus/1"
+      ]
+    },
+    "Conor Thomas": {
+      "age": 32,
+      "marketValueM": 0.05,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crewe.htm",
+        "https://www.transfermarkt.co.uk/crewe-alexandra/kader/verein/1042/saison_id/2026/plus/1"
+      ]
+    },
+    "Joe White": {
+      "age": 23,
+      "marketValueM": 0.2,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crewe.htm",
+        "https://www.transfermarkt.co.uk/crewe-alexandra/kader/verein/1042/saison_id/2026/plus/1",
+        "https://www.playmakerstats.com/team/crewe-alexandra/4760/market-value"
+      ],
+      "notes": "Current public market-value sources differ slightly; the pack uses the €200k current Crewe squad value rather than inventing an average."
+    },
+    "Jordan Gibson": {
+      "age": 28,
+      "marketValueM": 0.3,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crewe.htm",
+        "https://www.transfermarkt.co.uk/crewe-alexandra/kader/verein/1042/saison_id/2026/plus/1"
+      ]
+    },
+    "Matúš Holíček": {
+      "age": 21,
+      "marketValueM": 0.3,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crewe.htm",
+        "https://www.transfermarkt.co.uk/crewe-alexandra/kader/verein/1042/saison_id/2026/plus/1"
+      ]
+    },
+    "Jack Lankester": {
+      "age": 26,
+      "marketValueM": 0.2,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crewe.htm",
+        "https://www.transfermarkt.co.uk/crewe-alexandra/kader/verein/1042/saison_id/2026/plus/1"
+      ]
+    },
+    "Josh March": {
+      "age": 29,
+      "marketValueM": 0.15,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crewe.htm",
+        "https://www.transfermarkt.co.uk/crewe-alexandra/kader/verein/1042/saison_id/2026/plus/1"
+      ]
+    },
+    "Joel Tabiner": {
+      "age": 22,
+      "marketValueM": 0.15,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crewe.htm",
+        "https://www.transfermarkt.co.uk/crewe-alexandra/kader/verein/1042/saison_id/2026/plus/1"
+      ],
+      "notes": "Detailed current role evidence is central midfield, so the SWOS position is midfield despite the broader identity feed grouping the player as a forward."
+    },
+    "Fin Roberts": {
+      "age": 20,
+      "marketValueM": 0,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/crewe.htm",
+        "https://www.transfermarkt.co.uk/crewe-alexandra/kader/verein/1042/saison_id/2026/plus/1"
+      ],
+      "notes": "Current detailed role evidence is right winger. No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    }
+  }
+}
