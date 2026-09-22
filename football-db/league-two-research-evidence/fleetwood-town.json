@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "fleetwood-town",
+  "snapshot": "2026-09-22",
+  "sourceSummary": "Fleetwood Town current 2026/27 identity selection cross-checked against the committed FootballSquads roster/DOB source plus current Transfermarkt and Playmaker role/value evidence. Exact footballName keys remain aligned to the League Two identity 16; unavailable published values are encoded as 0 rather than estimated.",
+  "players": {
+    "Jay Lynch": {
+      "age": 33,
+      "marketValueM": 0.075,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/fleetwood.htm",
+        "https://www.transfermarkt.co.uk/jay-lynch/profil/spieler/128273"
+      ]
+    },
+    "James Pradic": {
+      "age": 21,
+      "marketValueM": 0,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/fleetwood.htm",
+        "https://www.transfermarkt.co.uk/james-pradic/profil/spieler/883541",
+        "https://www.playmakerstats.com/team/fleetwood-town/8400?edicao_id=219853"
+      ],
+      "notes": "No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Danny Andrew": {
+      "age": 35,
+      "marketValueM": 0.05,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/fleetwood.htm",
+        "https://www.transfermarkt.co.uk/danny-andrew/profil/spieler/95245"
+      ]
+    },
+    "Finley Potter": {
+      "age": 22,
+      "marketValueM": 0.25,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/fleetwood.htm",
+        "https://www.transfermarkt.co.uk/finley-potter/profil/spieler/945771"
+      ]
+    },
+    "Rhys Bennett": {
+      "age": 22,
+      "marketValueM": 0.075,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/fleetwood.htm",
+        "https://www.transfermarkt.co.uk/fleetwood-town/kader/verein/11177/saison_id/2026/plus/1"
+      ],
+      "notes": "Current Transfermarkt 2026/27 squad evidence publishes €75k; this is used in preference to older third-party valuations."
+    },
+    "Conor Haughey": {
+      "age": 19,
+      "marketValueM": 0,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/fleetwood.htm",
+        "https://www.transfermarkt.com/conor-haughey/profil/spieler/1160449"
+      ],
+      "notes": "No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Jake Batty": {
+      "age": 21,
+      "marketValueM": 0.25,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/fleetwood.htm",
+        "https://www.transfermarkt.co.uk/jake-batty/profil/spieler/866669"
+      ],
+      "notes": "The current identity snapshot places Batty at Fleetwood; the cited profile still reflects his pre-Fleetwood club state but provides the detailed role and last published market value."
+    },
+    "Harrison Neal": {
+      "age": 25,
+      "marketValueM": 0.275,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/fleetwood.htm",
+        "https://www.transfermarkt.co.uk/harrison-neal/profil/spieler/746736"
+      ]
+    },
+    "Andy Cannon": {
+      "age": 30,
+      "marketValueM": 0.2,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/fleetwood.htm",
+        "https://www.transfermarkt.co.uk/andy-cannon/profil/spieler/341882"
+      ],
+      "notes": "The committed identity snapshot places Cannon at Fleetwood; the cited profile supplies the detailed role and last published value."
+    },
+    "Kane Thompson-Sommers": {
+      "age": 25,
+      "marketValueM": 0.15,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/fleetwood.htm",
+        "https://www.transfermarkt.co.uk/kane-thompson-sommers/profil/spieler/577410"
+      ]
+    },
+    "Mark Helm": {
+      "age": 24,
+      "marketValueM": 0.35,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/fleetwood.htm",
+        "https://www.transfermarkt.co.uk/mark-helm/profil/spieler/596217"
+      ]
+    },
+    "Adam Murphy": {
+      "age": 21,
+      "marketValueM": 0,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/fleetwood.htm",
+        "https://www.transfermarkt.co.uk/adam-murphy/profil/spieler/741270",
+        "https://www.playmakerstats.com/team/fleetwood-town/8400?edicao_id=219853"
+      ],
+      "notes": "No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Will Davies": {
+      "age": 27,
+      "marketValueM": 0.1,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/fleetwood.htm",
+        "https://www.transfermarkt.com/will-davies/profil/spieler/106376"
+      ]
+    },
+    "Josh Thomas": {
+      "age": 23,
+      "marketValueM": 0.125,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/fleetwood.htm",
+        "https://www.transfermarkt.com/josh-thomas/profil/spieler/551011"
+      ]
+    },
+    "Lewis McCann": {
+      "age": 25,
+      "marketValueM": 0.15,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/fleetwood.htm",
+        "https://www.transfermarkt.co.uk/lewis-mccann/profil/spieler/586938"
+      ]
+    },
+    "Ched Evans": {
+      "age": 37,
+      "marketValueM": 0.025,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/fleetwood.htm",
+        "https://www.transfermarkt.co.uk/ched-evans/profil/spieler/61622"
+      ]
+    }
+  }
+}
