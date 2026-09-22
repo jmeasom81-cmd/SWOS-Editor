@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "northampton-town",
+  "snapshot": "2026-09-22",
+  "sourceSummary": "Northampton Town current 2026/27 identity selection cross-checked against the committed FootballSquads roster/DOB source and detailed current or last-published role/value evidence. Snapshot-date birthdays are normalized, broad identity groups are refined to SWOS roles, and unavailable published values are encoded as 0 rather than estimated.",
+  "players": {
+    "Zach Jeacock": {
+      "age": 25,
+      "marketValueM": 0.1,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+        "https://www.transfermarkt.co.uk/northampton-town/kader/verein/1302"
+      ]
+    },
+    "James Dadge": {
+      "age": 21,
+      "marketValueM": 0,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+        "https://www.transfermarkt.co.uk/northampton-town/kader/verein/1302"
+      ],
+      "notes": "No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "James Maxwell": {
+      "age": 24,
+      "marketValueM": 0.275,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+        "https://www.transfermarkt.co.uk/northampton-town/kader/verein/1302"
+      ]
+    },
+    "Jon Guthrie": {
+      "age": 33,
+      "marketValueM": 0.1,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+        "https://www.transfermarkt.co.uk/northampton-town/kader/verein/1302"
+      ],
+      "notes": "Age follows the committed FootballSquads date-of-birth evidence (01/02/1993). Transfermarkt currently publishes a conflicting 29/07/1992 date; the identity source remains the age authority for this pack."
+    },
+    "Elliott Moore": {
+      "age": 29,
+      "marketValueM": 0.4,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+        "https://www.transfermarkt.co.uk/northampton-town/kader/verein/1302"
+      ]
+    },
+    "Conor McCarthy": {
+      "age": 28,
+      "marketValueM": 0.275,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+        "https://www.transfermarkt.co.uk/northampton-town/kader/verein/1302"
+      ]
+    },
+    "Joe Wormleighton": {
+      "age": 22,
+      "marketValueM": 0.125,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+        "https://www.transfermarkt.co.uk/northampton-town/kader/verein/1302"
+      ]
+    },
+    "Joseph O'Brien-Whitmarsh": {
+      "age": 21,
+      "marketValueM": 0,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+        "https://fbref.com/en/players/fd1c27b8/matchlogs/2026-2027/Joe-OBrien-Whitmarsh-Match-Logs"
+      ],
+      "notes": "Current League Two match evidence shows central-midfield usage. No published market value is available in the cited evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Lee Evans": {
+      "age": 32,
+      "marketValueM": 0.275,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+        "https://www.transfermarkt.com/lee-evans/profil/spieler/221446"
+      ],
+      "notes": "Age is calculated at the 2026-09-22 snapshot from the published 24/07/1994 date of birth. The player profile is stale on club membership but supplies the detailed central-midfield role and last published €275k value; FootballSquads confirms Northampton membership."
+    },
+    "Tyrese Fornah": {
+      "age": 27,
+      "marketValueM": 0.35,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+        "https://www.transfermarkt.co.uk/northampton-town/kader/verein/1302"
+      ],
+      "notes": "Age is calculated at the 2026-09-22 snapshot from FootballSquads' 11/09/1999 date of birth; cached market pages still show 26."
+    },
+    "Owen Dale": {
+      "age": 27,
+      "marketValueM": 0.45,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+        "https://www.transfermarkt.com/owen-dale/profil/spieler/485252"
+      ],
+      "notes": "FootballSquads confirms Northampton membership; the cited profile supplies the detailed right-wing role and last published €450k value but is stale on club membership."
+    },
+    "Logan Briggs": {
+      "age": 21,
+      "marketValueM": 0,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+        "https://www.transfermarkt.com/logan-briggs/profil/spieler/988697"
+      ],
+      "notes": "Detailed role is attacking midfield. No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Sam Hoskins": {
+      "age": 33,
+      "marketValueM": 0.125,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+        "https://www.transfermarkt.co.uk/northampton-town/kader/verein/1302"
+      ],
+      "notes": "Detailed current role is right winger despite the broad FootballSquads forward grouping."
+    },
+    "Matty Warhurst": {
+      "age": 19,
+      "marketValueM": 0,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+        "https://www.transfermarkt.co.uk/matty-warhurst/profil/spieler/1174516"
+      ],
+      "notes": "FootballSquads confirms Northampton membership; the cited profile supplies the centre-forward role but is stale on club membership. No published market value is shown, so 0 records unavailable evidence rather than an estimate."
+    },
+    "Elliott List": {
+      "age": 29,
+      "marketValueM": 0.1,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+        "https://www.transfermarkt.co.uk/northampton-town/kader/verein/1302"
+      ],
+      "notes": "Detailed current role is right winger despite the broad FootballSquads forward grouping."
+    },
+    "Kamarai Simon-Swyer": {
+      "age": 23,
+      "marketValueM": 0.1,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+        "https://www.transfermarkt.com/kamarai-swyer/profil/spieler/693066"
+      ],
+      "notes": "Transfermarkt publishes this player as Kamarai Swyer and lists attacking midfield as the main position; the footballName key remains matched to the committed identity feed."
+    }
+  }
+}
