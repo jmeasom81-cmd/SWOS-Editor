@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "gillingham",
+  "snapshot": "2026-09-22",
+  "sourceSummary": "Gillingham current 2026/27 identity selection cross-checked against the committed FootballSquads roster/DOB source, current Transfermarkt detailed roles and market values, plus current club/career evidence where the identity group is broader than the actual role. Exact footballName keys remain aligned to the League Two identity 16; unavailable published values are encoded as 0 rather than estimated.",
+  "players": {
+    "Oliver Wright": {
+      "age": 23,
+      "marketValueM": 0.25,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/gilling.htm",
+        "https://www.transfermarkt.co.uk/fc-gillingham/kader/verein/2814"
+      ]
+    },
+    "Taite Holtam": {
+      "age": 21,
+      "marketValueM": 0,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/gilling.htm",
+        "https://www.transfermarkt.co.uk/taite-holtam/profil/spieler/1080558"
+      ],
+      "notes": "No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Sam Tabares": {
+      "age": 20,
+      "marketValueM": 0,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/gilling.htm",
+        "https://www.transfermarkt.co.uk/samuel-tabares/profil/spieler/1112520"
+      ],
+      "notes": "Transfermarkt publishes this player as Samuel Tabares. No published market value is available in the cited evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Conor McManus": {
+      "age": 22,
+      "marketValueM": 0,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/gilling.htm",
+        "https://www.worldfootball.net/person/pe1175819/conor-mcmanus/"
+      ],
+      "notes": "Detailed current career evidence lists left-back as a playing position; the broader identity feed grouped him as a midfielder. No published market value is available, so 0 records unavailable evidence rather than an estimate."
+    },
+    "Liam Gordon": {
+      "age": 30,
+      "marketValueM": 0.25,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/gilling.htm",
+        "https://www.transfermarkt.co.uk/liam-gordon/profil/spieler/238029"
+      ]
+    },
+    "Andy Smith": {
+      "age": 25,
+      "marketValueM": 0.3,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/gilling.htm",
+        "https://www.transfermarkt.co.uk/andy-smith/profil/spieler/743741"
+      ]
+    },
+    "Robbie McKenzie": {
+      "age": 27,
+      "marketValueM": 0.4,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/gilling.htm",
+        "https://www.transfermarkt.com/robbie-mckenzie/profil/spieler/532079"
+      ]
+    },
+    "Ethan Coleman": {
+      "age": 26,
+      "marketValueM": 0.25,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/gilling.htm",
+        "https://www.transfermarkt.com/ethan-coleman/rueckennummern/spieler/424903"
+      ]
+    },
+    "Kadeem Harris": {
+      "age": 33,
+      "marketValueM": 0.1,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/gilling.htm",
+        "https://www.transfermarkt.co.uk/kadeem-harris/profil/spieler/136501"
+      ]
+    },
+    "Armani Little": {
+      "age": 29,
+      "marketValueM": 0.2,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/gilling.htm",
+        "https://www.transfermarkt.co.uk/armani-little/profil/spieler/337279"
+      ]
+    },
+    "Garath McCleary": {
+      "age": 39,
+      "marketValueM": 0.025,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/gilling.htm",
+        "https://www.transfermarkt.co.uk/garath-mccleary/profil/spieler/69653"
+      ]
+    },
+    "Zane Albarus": {
+      "age": 20,
+      "marketValueM": 0,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/gilling.htm",
+        "https://www.transfermarkt.co.uk/zane-albarus/profil/spieler/933724"
+      ],
+      "notes": "No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Will Goodwin": {
+      "age": 24,
+      "marketValueM": 0.25,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/gilling.htm",
+        "https://www.transfermarkt.co.uk/will-goodwin/profil/spieler/860694"
+      ]
+    },
+    "Ronan Hale": {
+      "age": 28,
+      "marketValueM": 0.35,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/gilling.htm",
+        "https://www.transfermarkt.co.uk/ronan-hale/profil/spieler/436034"
+      ],
+      "notes": "Age is calculated at the 2026-09-22 snapshot from the published 08/09/1998 date of birth."
+    },
+    "Lamin Sillah": {
+      "age": 20,
+      "marketValueM": 0,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/gilling.htm",
+        "https://www.transfermarkt.co.uk/lamin-sillah/profil/spieler/1328146"
+      ],
+      "notes": "No published market value is available in the cited evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Sheldon Kendall": {
+      "age": 18,
+      "marketValueM": 0,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/gilling.htm",
+        "https://www.transfermarkt.co.uk/sheldon-kendall/profil/spieler/1212561",
+        "https://www.gillinghamfootballclub.com/news/gills-sign-sheldon-kendall-loan"
+      ],
+      "notes": "Current club evidence describes Kendall as a winger who can play either side; Transfermarkt lists right winger. No published market value is available, so 0 records unavailable evidence rather than an estimate."
+    }
+  }
+}
