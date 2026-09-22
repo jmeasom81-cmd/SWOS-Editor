@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "newport-county",
+  "snapshot": "2026-09-22",
+  "sourceSummary": "Newport County current 2026/27 identity selection cross-checked against the committed FootballSquads roster/DOB source, Newport club evidence and current detailed role/market-value sources. Exact footballName keys remain aligned to the League Two identity 16; September birthdays are normalized to the snapshot date and unavailable published values are encoded as 0 rather than estimated.",
+  "players": {
+    "Jordan Wright": {
+      "age": 27,
+      "marketValueM": 0.125,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/newport.htm",
+        "https://www.transfermarkt.co.uk/newport-county/startseite/verein/3716"
+      ]
+    },
+    "Jake Turner": {
+      "age": 27,
+      "marketValueM": 0.1,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/newport.htm",
+        "https://www.transfermarkt.co.uk/jake-turner/profil/spieler/496691"
+      ],
+      "notes": "The current Newport identity source confirms the move; the cited player profile supplies the last published market value and goalkeeper role."
+    },
+    "Cameron Evans": {
+      "age": 25,
+      "marketValueM": 0.15,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/newport.htm",
+        "https://www.transfermarkt.co.uk/newport-county/startseite/verein/3716"
+      ]
+    },
+    "Tom Davies": {
+      "age": 22,
+      "marketValueM": 0.1,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/newport.htm",
+        "https://www.transfermarkt.co.uk/newport-county/startseite/verein/3716"
+      ]
+    },
+    "Kyle Cameron": {
+      "age": 29,
+      "marketValueM": 0.3,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/newport.htm",
+        "https://www.transfermarkt.co.uk/newport-county/startseite/verein/3716"
+      ]
+    },
+    "Lee Jenkins": {
+      "age": 25,
+      "marketValueM": 0.2,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/newport.htm",
+        "https://www.transfermarkt.co.uk/newport-county/startseite/verein/3716"
+      ],
+      "notes": "Age is calculated at the 2026-09-22 snapshot from the published 30/08/2001 date of birth; some cached squad rows still display age 24."
+    },
+    "Ciaran Brennan": {
+      "age": 26,
+      "marketValueM": 0.075,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/newport.htm",
+        "https://www.transfermarkt.co.uk/newport-county/startseite/verein/3716"
+      ]
+    },
+    "Kieron Evans": {
+      "age": 24,
+      "marketValueM": 0,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/newport.htm",
+        "https://www.transfermarkt.co.uk/newport-county/startseite/verein/3716"
+      ],
+      "notes": "Detailed role evidence is attacking midfield. No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Matt Smith": {
+      "age": 26,
+      "marketValueM": 0.15,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/newport.htm",
+        "https://www.newport-county.co.uk/player/168",
+        "https://www.transfermarkt.co.uk/newport-county/startseite/verein/3716/saison_id/2025"
+      ],
+      "notes": "Newport's own player biography identifies Matthew Smith, born 22/11/1999, as a midfielder. Transfermarkt's prior detailed squad lists defensive midfield and €150k. This avoids a malformed current squad-row association with Moses Alexander-Walker."
+    },
+    "Harrison Biggins": {
+      "age": 30,
+      "marketValueM": 0.125,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/newport.htm",
+        "https://www.transfermarkt.co.uk/harrison-biggins/leistungsdatendetails/spieler/533958/saison/2025/wettbewerb/GBFL/verein/3054",
+        "https://www.newport-county.co.uk/news/harrison-biggins-returns-newport-county-permanent-deal"
+      ]
+    },
+    "Matt Dibley-Dias": {
+      "age": 22,
+      "marketValueM": 0,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/newport.htm",
+        "https://www.transfermarkt.co.uk/matt-dibley-dias/profil/spieler/817611",
+        "https://www.365scores.com/en-uk/football/player/matt-dibley-dias-131936"
+      ],
+      "notes": "Current loan evidence places Dibley-Dias at Newport and detailed sources list central midfield. No current published market value was found in the cited evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Keenan Patten": {
+      "age": 25,
+      "marketValueM": 0.05,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/newport.htm",
+        "https://www.transfermarkt.co.uk/newport-county/startseite/verein/3716"
+      ]
+    },
+    "Shaquille Gwengwe": {
+      "age": 25,
+      "marketValueM": 0,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/newport.htm",
+        "https://fbref.com/en/players/66fed450/Shaquille-Gwengwe",
+        "https://achievemanagement.co.uk/featured/done-deal-shaquille-gwengwe-makes-efl-move"
+      ],
+      "notes": "Current sources confirm a forward/striker role and Newport membership. No published market value is available in the cited evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "James Crole": {
+      "age": 22,
+      "marketValueM": 0.1,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/newport.htm",
+        "https://www.transfermarkt.co.uk/newport-county/startseite/verein/3716"
+      ]
+    },
+    "Moses Alexander-Walker": {
+      "age": 19,
+      "marketValueM": 0,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/newport.htm",
+        "https://www.transfermarkt.co.uk/newport-county/startseite/verein/3716"
+      ],
+      "notes": "Age is calculated at the 2026-09-22 snapshot from the published 27/07/2007 date of birth. Detailed role is right winger. No published market value is available; 0 records unavailable evidence rather than an estimate."
+    },
+    "Ged Garner": {
+      "age": 27,
+      "marketValueM": 0.1,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/newport.htm",
+        "https://www.transfermarkt.com/gerard-garner/profil/spieler/618883"
+      ],
+      "notes": "Transfermarkt publishes this player as Gerard Garner; the footballName key remains matched to the committed Newport identity feed."
+    }
+  }
+}
