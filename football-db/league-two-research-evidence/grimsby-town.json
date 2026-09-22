@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "grimsby-town",
+  "snapshot": "2026-09-22",
+  "sourceSummary": "Grimsby Town current 2026/27 identity selection cross-checked against FootballSquads dates/roster, current Transfermarkt role/value evidence and current club/match sources for recent arrivals. Exact footballName keys remain aligned to the committed League Two identity 16; unavailable published market values are encoded as 0 rather than estimated.",
+  "players": {
+    "Harvey Cartwright": {
+      "age": 24,
+      "marketValueM": 0.15,
+      "position": 0,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/fltwo/grimsby.htm",
+        "https://www.transfermarkt.co.uk/harvey-cartwright/profil/spieler/712592"
+      ],
+      "notes": "The committed identity snapshot places Cartwright at Grimsby; the cited profile supplies detailed role and last published market value."
+    },
+    "Christy Pym": {
+      "age": 31,
+      "marketValueM": 0.2,
+      "position": 0,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/fltwo/grimsby.htm",
+        "https://www.transfermarkt.co.uk/christy-pym/profil/spieler/260368"
+      ]
+    },
+    "Maldini Kacurri": {
+      "age": 20,
+      "marketValueM": 0.45,
+      "position": 3,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/fltwo/grimsby.htm",
+        "https://www.transfermarkt.com/maldini-kacurri/profil/spieler/903189"
+      ]
+    },
+    "Jayden Sweeney": {
+      "age": 24,
+      "marketValueM": 0.2,
+      "position": 2,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/fltwo/grimsby.htm",
+        "https://www.transfermarkt.co.uk/jayden-sweeney/profil/spieler/676168"
+      ]
+    },
+    "Harvey Rodgers": {
+      "age": 29,
+      "marketValueM": 0.35,
+      "position": 3,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/fltwo/grimsby.htm",
+        "https://www.transfermarkt.co.uk/harvey-rodgers/marktwertverlauf/spieler/459873"
+      ]
+    },
+    "Sam Lavelle": {
+      "age": 29,
+      "marketValueM": 0.125,
+      "position": 3,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/fltwo/grimsby.htm",
+        "https://www.transfermarkt.co.uk/sam-lavelle/profil/spieler/285846"
+      ]
+    },
+    "Joe Foulkes": {
+      "age": 23,
+      "marketValueM": 0,
+      "position": 1,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/fltwo/grimsby.htm",
+        "https://www.transfermarkt.co.uk/joe-foulkes/profil/spieler/744951"
+      ],
+      "notes": "No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Kieran Green": {
+      "age": 29,
+      "marketValueM": 0.35,
+      "position": 6,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/fltwo/grimsby.htm",
+        "https://www.transfermarkt.co.uk/kieran-green/profil/spieler/343301"
+      ]
+    },
+    "Jamie Walker": {
+      "age": 33,
+      "marketValueM": 0.125,
+      "position": 6,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/fltwo/grimsby.htm",
+        "https://www.transfermarkt.com/jamie-walker/profil/spieler/72518"
+      ]
+    },
+    "Cian Doyle": {
+      "age": 21,
+      "marketValueM": 0,
+      "position": 6,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/fltwo/grimsby.htm",
+        "https://www.sofascore.com/football/player/cian-doyle/2051435",
+        "https://fbref.com/en/players/915968c8/matchlogs/2026-2027/c16/summary/Cian-Doyle-Match-Logs"
+      ],
+      "notes": "Current evidence confirms a midfield/attacking-midfield role. No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Ryley Reynolds": {
+      "age": 21,
+      "marketValueM": 0,
+      "position": 6,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/fltwo/grimsby.htm",
+        "https://www.sofascore.com/football/player/ryley-reynolds/1900008",
+        "https://gtfc.co.uk/mariners-sign-ryley-reynolds-on-season-long-loan/"
+      ],
+      "notes": "Current club and match sources confirm a central midfield role. No published market value is available in the cited evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Géza Dávid Turi": {
+      "age": 24,
+      "marketValueM": 0.25,
+      "position": 6,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/fltwo/grimsby.htm",
+        "https://www.transfermarkt.co.uk/geza-david-turi/profil/spieler/692906"
+      ]
+    },
+    "Iwan Morgan": {
+      "age": 20,
+      "marketValueM": 0,
+      "position": 7,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/fltwo/grimsby.htm",
+        "https://www.transfermarkt.co.uk/iwan-morgan/transfers/spieler/966671/transfer_id/6087843"
+      ],
+      "notes": "No published market value is available in the cited evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Sonny Finch": {
+      "age": 21,
+      "marketValueM": 0,
+      "position": 7,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/fltwo/grimsby.htm",
+        "https://www.transfermarkt.co.uk/sonny-finch/profil/spieler/865970"
+      ],
+      "notes": "Age is calculated at the 2026-09-22 snapshot from the published 05/08/2005 date of birth. No published market value is available; 0 records unavailable evidence rather than an estimate."
+    },
+    "Justin Amaluzor": {
+      "age": 29,
+      "marketValueM": 0.125,
+      "position": 4,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/fltwo/grimsby.htm",
+        "https://www.transfermarkt.co.uk/justin-amaluzor/profil/spieler/380026"
+      ]
+    },
+    "Josh Andrews": {
+      "age": 24,
+      "marketValueM": 0.25,
+      "position": 7,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/fltwo/grimsby.htm",
+        "https://www.transfermarkt.com/grimsby-town/kadernaechstesaison/verein/1034",
+        "https://gtfc.co.uk/andrews-becomes-latest-attacking-addition/"
+      ]
+    }
+  }
+}
