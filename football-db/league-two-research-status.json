@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026/27",
-  "generatedAt": "2026-09-20T16:50:00.000Z",
+  "generatedAt": "2026-09-22T15:22:00.000Z",
   "division": {
     "code": 3,
     "name": "League Two",
@@ -9,13 +9,13 @@
   },
   "progress": {
     "identityReadyClubs": 24,
-    "researchReadyClubs": 9,
-    "researchPendingClubs": 15,
-    "researchedPlayers": 144
+    "researchReadyClubs": 12,
+    "researchPendingClubs": 12,
+    "researchedPlayers": 192
   },
   "next": {
-    "clubId": "fleetwood-town",
-    "order": 10
+    "clubId": "newport-county",
+    "order": 13
   },
   "readyClubIds": [
     "accrington-stanley",
@@ -26,12 +26,12 @@
     "colchester-united",
     "crawley-town",
     "crewe-alexandra",
-    "exeter-city"
-  ],
-  "pendingClubIds": [
+    "exeter-city",
     "fleetwood-town",
     "gillingham",
-    "grimsby-town",
+    "grimsby-town"
+  ],
+  "pendingClubIds": [
     "newport-county",
     "northampton-town",
     "oldham-athletic",
