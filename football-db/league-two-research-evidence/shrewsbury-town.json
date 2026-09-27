@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "shrewsbury-town",
+  "snapshot": "2026-09-27",
+  "sourceSummary": "Shrewsbury Town current 2026/27 identity selection cross-checked against the committed FootballSquads roster/DOB source, Shrewsbury's current signing/loan records and detailed current or last-published Transfermarkt role/value evidence. Snapshot-date birthdays are normalized, broad identity groups are refined to SWOS roles, and unavailable published values are encoded as 0 rather than estimated.",
+  "players": {
+    "Will Brook": {
+      "age": 22,
+      "marketValueM": 0.1,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/shrews.htm",
+        "https://www.transfermarkt.co.uk/will-brook/profil/spieler/805895",
+        "https://www.shrewsburytown.com/news/2025/november/28/will-brook-signs-new-2-5-year-deal-with-shrewsbury"
+      ]
+    },
+    "Sam Proctor": {
+      "age": 19,
+      "marketValueM": 0,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/shrews.htm",
+        "https://www.transfermarkt.co.uk/aston-villa-u23/startseite/verein/12124",
+        "https://www.shrewsburytown.com/news/2026/july/17/shrewsbury-town-snap-up-england-youth-international-goalkeeper-sam-proctor"
+      ],
+      "notes": "Shrewsbury confirms the 2026/27 season-long Aston Villa loan. No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Luca Hoole": {
+      "age": 24,
+      "marketValueM": 0.2,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/shrews.htm",
+        "https://www.transfermarkt.co.uk/luca-hoole/profil/spieler/698895"
+      ]
+    },
+    "Josh Ruffels": {
+      "age": 32,
+      "marketValueM": 0.175,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/shrews.htm",
+        "https://www.transfermarkt.com/josh-ruffels/profil/spieler/176632"
+      ]
+    },
+    "William Boyle": {
+      "age": 31,
+      "marketValueM": 0.15,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/shrews.htm",
+        "https://www.transfermarkt.co.uk/will-boyle/profil/spieler/247400"
+      ],
+      "notes": "Transfermarkt publishes this player as Will Boyle. Age is normalized at the 2026-09-27 snapshot from the published 01/09/1995 date of birth; older cached pages still display 30."
+    },
+    "Sam Stubbs": {
+      "age": 27,
+      "marketValueM": 0.3,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/shrews.htm",
+        "https://www.transfermarkt.com/sam-stubbs/profil/spieler/425872"
+      ]
+    },
+    "Kevin Berkoe": {
+      "age": 25,
+      "marketValueM": 0.15,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/shrews.htm",
+        "https://www.transfermarkt.co.uk/kevin-berkoe/profil/spieler/509156"
+      ],
+      "notes": "Age is normalized at the 2026-09-27 snapshot from the published 05/07/2001 date of birth; older cached pages still display 24."
+    },
+    "Isaac England": {
+      "age": 18,
+      "marketValueM": 0.075,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/shrews.htm",
+        "https://www.transfermarkt.com/isaac-england/profil/spieler/1399959"
+      ]
+    },
+    "Jay Turner-Cooke": {
+      "age": 22,
+      "marketValueM": 0.15,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/shrews.htm",
+        "https://www.transfermarkt.com/jay-turner-cooke/profil/spieler/726860",
+        "https://www.shrewsburytown.com/news/2026/july/04/shrewsbury-win-the-race-to-snap-up-talented-midfielder-jay-turner-cooke"
+      ],
+      "notes": "Shrewsbury confirms the July 2026 permanent signing. Detailed role is attacking midfield / central midfield. €150k is the last published Transfermarkt value from his Newcastle development period; the player profile is stale on club membership."
+    },
+    "Isaac Fletcher": {
+      "age": 24,
+      "marketValueM": 0.15,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/shrews.htm",
+        "https://www.transfermarkt.com/isaac-fletcher/profil/spieler/575212"
+      ]
+    },
+    "Tom Sang": {
+      "age": 27,
+      "marketValueM": 0.225,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/shrews.htm",
+        "https://www.transfermarkt.com/tom-sang/profil/spieler/396176"
+      ],
+      "notes": "Detailed role evidence lists right-back, with defensive midfield and right midfield as alternatives; mapped to the SWOS right-sided defender role."
+    },
+    "Jack Price": {
+      "age": 33,
+      "marketValueM": 0,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/shrews.htm",
+        "https://www.transfermarkt.co.uk/jack-price/profil/spieler/129062",
+        "https://www.transfermarkt.co.uk/shrewsbury-town/kader/verein/3054/saison_id/2026"
+      ],
+      "notes": "Current Shrewsbury evidence confirms the July 2026 return. No current published market value is available in the cited squad/profile evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "George Lloyd": {
+      "age": 26,
+      "marketValueM": 0.15,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/shrews.htm",
+        "https://www.transfermarkt.com/george-lloyd/profil/spieler/532192"
+      ]
+    },
+    "Josh Davison": {
+      "age": 26,
+      "marketValueM": 0.125,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/shrews.htm",
+        "https://www.transfermarkt.co.uk/josh-davison/profil/spieler/718547"
+      ],
+      "notes": "Age follows the committed FootballSquads date-of-birth evidence (16/09/2000). Transfermarkt currently publishes a conflicting 16/09/1999 date; the identity source remains the age authority for this pack."
+    },
+    "Kian McMahon-Brown": {
+      "age": 18,
+      "marketValueM": 0,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/shrews.htm",
+        "https://www.transfermarkt.com/kian-mcmahon-brown/profil/spieler/1165131",
+        "https://shrewsburytown.com/news/2026/august/31/town-welcome-kian-mcmahon-brown-on-loan-from-burnley"
+      ],
+      "notes": "Shrewsbury confirms the season-long Burnley loan and describes him as a striker who can also operate as a number 10. Transfermarkt lists right winger; the SWOS role uses the detailed wide-attacker evidence. No published market value is available; 0 records unavailable evidence rather than an estimate."
+    },
+    "Jay Snook": {
+      "age": 18,
+      "marketValueM": 0,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/shrews.htm",
+        "https://www.shrewsburytown.com/news/2026/august/03/striker-jay-snook-joins-nuneaton-town-on-loan",
+        "https://v2.shrewsburytown.com/news/2026/july/13/academy-trio-earn-third-year-scholarships"
+      ],
+      "notes": "Shrewsbury identifies Snook as an academy striker and confirms his August 2026 Nuneaton loan. Public first-team sources do not publish a market value; 0 records unavailable evidence rather than an estimate. Age 18 reflects his third-year scholar cohort at the snapshot."
+    }
+  }
+}
