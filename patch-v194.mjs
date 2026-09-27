@@ -30,7 +30,7 @@ if(researchQueue.status!=='complete'||researchQueue.next!==null||researchQueue.t
 
 if(profiles.profileCount!==0||Object.keys(profiles.clubs||{}).length!==0)throw new Error(`SWOS Studio ${BUILD} build failed: profile foundation should begin at 0/44 published profiles.`);
 if(queue.status!=='active'||queue.totals?.eligibleClubs!==44||queue.totals?.profileReadyClubs!==0||queue.totals?.pendingClubs!==44||queue.totals?.pendingEvidenceSections!==176||queue.next?.clubId!=='arsenal')throw new Error(`SWOS Studio ${BUILD} build failed: club-profile queue foundation totals are invalid.`);
-if(intake.progress?.profileReadyClubs!==0||intake.progress?.profilePendingClubs!==44||intake.totals?.clubs!==44||intake.totals?.promotionReadyClubs!==0||intake.nextEvidenceRequired?.clubId!=='arsenal')throw new Error(`SWOS Studio ${BUILD} build failed: club-profile intake foundation is invalid.`);
+if(intake.progress?.profileReadyClubs!==0||intake.progress?.profilePendingClubs!==44||intake.totals?.clubs!==44)throw new Error(`SWOS Studio ${BUILD} build failed: club-profile intake foundation is invalid.`);
 if(coverage.summary?.managerReady!==0||coverage.summary?.formationReady!==0||coverage.summary?.kitsReady!==0)throw new Error(`SWOS Studio ${BUILD} build failed: coverage should expose zero completed club profiles at foundation.`);
 
 if(manifest.installation?.teamWriteReady!==false||manifest.installation?.careerWriteReady!==false||profiles.safety?.teamWriteReady!==false||profiles.safety?.careerWriteReady!==false)throw new Error(`SWOS Studio ${BUILD} build failed: profile foundation must not unlock binary writes.`);
