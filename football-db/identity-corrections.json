@@ -148,6 +148,45 @@
         }
       ],
       "note": "Post-window audit removes Krystian Bielik after his permanent Cardiff move, Alfie Gilchrist after his season-long Leyton Orient loan and Alex Mowatt after his permanent Derby move. Current West Brom players Brayann Pereira, Nolan Galves and Toby Collyer replace them one-for-one by broad role, preserving the exact 16-player selection."
+    },
+    "west-ham-united": {
+      "remove": [
+        "El Hadji Malick Diouf",
+        "Jean-Clair Todibo",
+        "Aaron Wan-Bissaka",
+        "James Ward-Prowse"
+      ],
+      "add": [
+        {
+          "footballName": "Morato",
+          "shirt": 5,
+          "group": "Defender",
+          "nationality": "Brazil",
+          "source": "West Ham official current 2026/27 first-team squad · #5 defender"
+        },
+        {
+          "footballName": "Joel Veltman",
+          "shirt": 34,
+          "group": "Defender",
+          "nationality": "Netherlands",
+          "source": "West Ham official current 2026/27 first-team squad · #34 defender"
+        },
+        {
+          "footballName": "Ollie Scarles",
+          "shirt": 30,
+          "group": "Defender",
+          "nationality": "England",
+          "source": "West Ham official current 2026/27 first-team squad · #30 defender"
+        },
+        {
+          "footballName": "Arne Engels",
+          "shirt": 7,
+          "group": "Midfielder",
+          "nationality": "Belgium",
+          "source": "West Ham official current 2026/27 first-team squad · #7 midfielder"
+        }
+      ],
+      "note": "Current-squad audit removes El Hadji Malick Diouf after his permanent Brentford move, Jean-Clair Todibo and Aaron Wan-Bissaka after loan departures, and James Ward-Prowse after his permanent Southampton return. Current West Ham players Morato, Joel Veltman, Ollie Scarles and Arne Engels replace them one-for-one by broad role."
     }
   },
   "safety": {
