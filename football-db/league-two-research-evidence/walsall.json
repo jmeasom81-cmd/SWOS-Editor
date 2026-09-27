@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "walsall",
+  "snapshot": "2026-09-27",
+  "sourceSummary": "Walsall current 2026/27 identity selection cross-checked against the committed FootballSquads roster/DOB source, current signing/loan evidence and detailed current or last-published role/value records. Snapshot-date birthdays are normalized, broad identity groups are refined to SWOS roles, and unavailable published values are encoded as 0 rather than estimated.",
+  "players": {
+    "Jed Ward": {
+      "age": 23,
+      "marketValueM": 0.2,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm",
+        "https://www.transfermarkt.co.uk/jed-ward/profil/spieler/610232",
+        "https://www.transfermarkt.co.uk/walsall-fc/kader/verein/899/saison_id/2026/plus/1"
+      ]
+    },
+    "Jenson Kilroy": {
+      "age": 19,
+      "marketValueM": 0,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm",
+        "https://www.transfermarkt.co.uk/walsall-fc/kader/verein/899/saison_id/2026/plus/1"
+      ],
+      "notes": "No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Rico Browne": {
+      "age": 22,
+      "marketValueM": 0.15,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm",
+        "https://www.transfermarkt.co.uk/rico-browne/profil/spieler/1214544",
+        "https://www.transfermarkt.co.uk/walsall-fc/kader/verein/899/saison_id/2026/plus/1"
+      ]
+    },
+    "Mason Hancock": {
+      "age": 23,
+      "marketValueM": 0.225,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm",
+        "https://www.transfermarkt.co.uk/mason-hancock/profil/spieler/1055113",
+        "https://www.transfermarkt.co.uk/walsall-fc/kader/verein/899/saison_id/2026/plus/1"
+      ],
+      "notes": "Detailed role evidence lists left-back, with centre-back and left midfield as alternatives."
+    },
+    "James Connolly": {
+      "age": 24,
+      "marketValueM": 0.375,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm",
+        "https://www.transfermarkt.co.uk/james-connolly/profil/spieler/503991",
+        "https://www.transfermarkt.co.uk/walsall-fc/kader/verein/899/saison_id/2026/plus/1"
+      ]
+    },
+    "Harrison Burke": {
+      "age": 24,
+      "marketValueM": 0.1,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm",
+        "https://www.transfermarkt.co.uk/harrison-burke/profil/spieler/941263",
+        "https://www.transfermarkt.co.uk/walsall-fc/kader/verein/899/saison_id/2026/plus/1"
+      ],
+      "notes": "Age is normalized at the 2026-09-27 snapshot from the published 13/09/2002 date of birth; older cached pages still display 23."
+    },
+    "Courtney Clarke": {
+      "age": 23,
+      "marketValueM": 0.15,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm",
+        "https://www.transfermarkt.co.uk/courtney-clarke/profil/spieler/819863",
+        "https://www.bbc.co.uk/sport/football/articles/clyxv0qeqz4o"
+      ],
+      "notes": "The broad identity feed labels Clarke as a defender, but detailed current role evidence lists central midfield with defensive/right-midfield alternatives. The SWOS role is therefore midfield."
+    },
+    "Sven Sprangler": {
+      "age": 31,
+      "marketValueM": 0.1,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm",
+        "https://www.transfermarkt.co.uk/sven-sprangler/profil/spieler/405032",
+        "https://www.transfermarkt.co.uk/walsall-fc/transfers/verein/899"
+      ],
+      "notes": "Current 2026/27 transfer evidence confirms Walsall membership. Detailed role is central midfield/defensive midfield; the player profile may be stale on club membership."
+    },
+    "Charlie Crew": {
+      "age": 20,
+      "marketValueM": 0.15,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm",
+        "https://www.transfermarkt.com/charlie-crew/profil/spieler/883539",
+        "https://www.leedsunited.com/en/news/charlie-crew-joins-walsall-on-loan"
+      ],
+      "notes": "Leeds confirms the 05/08/2026 season-long Walsall loan. Detailed role is defensive midfield with central midfield as an alternative."
+    },
+    "Lewis Simper": {
+      "age": 25,
+      "marketValueM": 0,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm",
+        "https://www.transfermarkt.co.uk/walsall-fc/transfers/verein/899"
+      ],
+      "notes": "Age is normalized at the 2026-09-27 snapshot from the published 03/09/2001 date of birth. Current transfer evidence confirms the Walsall arrival and central-midfield role. No current published market value is available; 0 records unavailable evidence rather than an estimate."
+    },
+    "Reece Smith": {
+      "age": 24,
+      "marketValueM": 0.15,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm",
+        "https://www.transfermarkt.co.uk/england-u23/kader/verein/40453",
+        "https://bbc.com.im/sport/football/articles/c98v9ql1gndo"
+      ],
+      "notes": "Walsall's July 2026 signing is confirmed by current reporting. Detailed role evidence lists left winger; €150k is the published England C value."
+    },
+    "Antony Evans": {
+      "age": 28,
+      "marketValueM": 0.4,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm",
+        "https://www.transfermarkt.co.uk/antony-evans/profil/spieler/374283",
+        "https://bbc.com.im/sport/football/articles/c7507nvvlp0o"
+      ],
+      "notes": "Walsall's 01/09/2026 season-long loan is separately confirmed. Age is normalized at the snapshot from the published 23/09/1998 date of birth. The detailed profile is stale on club membership but supplies the attacking-midfield role and last published €400k value."
+    },
+    "Tai Sodje": {
+      "age": 23,
+      "marketValueM": 0,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm",
+        "https://www.transfermarkt.co.uk/tai-sodje/profil/spieler/812683",
+        "https://bbc.com.im/sport/football/articles/cly9zk6839yo"
+      ],
+      "notes": "BBC confirms the 17/07/2026 permanent Walsall signing. Age is normalized at the snapshot from the published 20/09/2003 date of birth. Detailed role is centre-forward with attacking midfield as an alternative. No published market value is available; 0 records unavailable evidence rather than an estimate."
+    },
+    "Andrew Dallas": {
+      "age": 27,
+      "marketValueM": 0.1,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm",
+        "https://www.transfermarkt.co.uk/andy-dallas/profil/spieler/515394",
+        "https://www.transfermarkt.co.uk/walsall-fc/transfers/verein/899"
+      ],
+      "notes": "Transfermarkt publishes this player as Andy Dallas. Age is normalized at the snapshot from the published 22/07/1999 date of birth; the footballName key remains matched to the committed identity feed."
+    },
+    "Aaron Pressley": {
+      "age": 24,
+      "marketValueM": 0.3,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm",
+        "https://www.transfermarkt.co.uk/aaron-pressley/profil/spieler/503898",
+        "https://www.transfermarkt.co.uk/walsall-fc/kader/verein/899/saison_id/2026/plus/1"
+      ]
+    },
+    "Isaac Moore": {
+      "age": 20,
+      "marketValueM": 0,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/walsall.htm",
+        "https://www.transfermarkt.com/isaac-moore/profil/spieler/965920",
+        "https://www.sofascore.com/football/player/isaac-moore/2121577"
+      ],
+      "notes": "Current evidence confirms the 2026/27 Walsall loan from Coventry and central-midfield role. No published market value is shown in the cited evidence; 0 records unavailable evidence rather than an estimate."
+    }
+  }
+}
