@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "watford",
+  "snapshot": "2026-09-27",
+  "sourceSummary": "Watford 2026/27 current squad cross-check using FootballSquads, live current squad listings and latest published market-value sources. Current-club truth is separated from older valuation pages where a summer move has not yet propagated.",
+  "players": {
+    "Federico Ravaglia": {
+      "age": 26,
+      "marketValueM": 1.8,
+      "position": 0,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/flcham/watford.htm",
+        "https://playersdb.app/team?pk=359"
+      ],
+      "notes": "Current Watford goalkeeper; maps to SWOS GK code 0. Latest published valuation €1.8m."
+    },
+    "Sam Walker": {
+      "age": 34,
+      "marketValueM": 0.1,
+      "position": 0,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/flcham/watford.htm",
+        "https://matchchase.com/team/watford"
+      ],
+      "notes": "DOB 2 October 1991 gives age 34 at the 27 September 2026 snapshot. Goalkeeper maps to SWOS code 0."
+    },
+    "Jeremy Ngakia": {
+      "age": 26,
+      "marketValueM": 3,
+      "position": 1,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/flcham/watford.htm",
+        "https://playersdb.app/team?pk=359"
+      ],
+      "notes": "Primary right-back maps to SWOS RB code 1; latest published valuation €3m."
+    },
+    "Soumaila Coulibaly": {
+      "age": 22,
+      "marketValueM": 6,
+      "position": 3,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/flcham/watford.htm",
+        "https://playersdb.app/team?pk=359"
+      ],
+      "notes": "ASCII identity name retained for Soumaïla Coulibaly. Centre-back maps to SWOS defender code 3; latest published valuation €6m."
+    },
+    "Kevin Keben": {
+      "age": 22,
+      "marketValueM": 3.5,
+      "position": 3,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/flcham/watford.htm",
+        "https://playersdb.app/team?pk=359"
+      ],
+      "notes": "ASCII identity name retained for Kévin Keben. Centre-back maps to SWOS defender code 3; latest published valuation €3.5m."
+    },
+    "Mattie Pollock": {
+      "age": 24,
+      "marketValueM": 2,
+      "position": 3,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/flcham/watford.htm",
+        "https://playersdb.app/team?pk=359"
+      ],
+      "notes": "Centre-back maps to SWOS defender code 3; latest published valuation €2m."
+    },
+    "Marc Bola": {
+      "age": 28,
+      "marketValueM": 1.5,
+      "position": 2,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/flcham/watford.htm",
+        "https://www.transfermarkt.co.uk/marc-bola/profil/spieler/340310"
+      ],
+      "notes": "Primary left-back maps to SWOS LB code 2; latest published valuation €1.5m."
+    },
+    "Omar Traore": {
+      "age": 28,
+      "marketValueM": 2,
+      "position": 1,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/flcham/watford.htm",
+        "https://www.transfermarkt.co.uk/omar-traore/profil/spieler/388294"
+      ],
+      "notes": "ASCII identity name retained for Omar Traoré. Current Watford right-back; latest valuation page predates the move. Maps to SWOS RB code 1; latest published valuation €2m."
+    },
+    "Hector Kyprianou": {
+      "age": 25,
+      "marketValueM": 1.5,
+      "position": 6,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/flcham/watford.htm",
+        "https://www.transfermarkt.co.uk/fc-watford/marktwertanalyse/verein/1010"
+      ],
+      "notes": "Central/defensive midfield maps to SWOS midfield code 6; latest published valuation €1.5m."
+    },
+    "Edoardo Bove": {
+      "age": 24,
+      "marketValueM": 4,
+      "position": 6,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/flcham/watford.htm",
+        "https://www.transfermarkt.co.uk/fc-watford/marktwertanalyse/verein/1010"
+      ],
+      "notes": "Central midfield maps to SWOS code 6; latest published valuation €4m."
+    },
+    "Martin Payero": {
+      "age": 28,
+      "marketValueM": 5,
+      "position": 6,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/flcham/watford.htm",
+        "https://www.zerozero.pt/equipa/watford/2599/valor-de-mercado"
+      ],
+      "notes": "ASCII identity name retained for Martín Payero. Central midfield maps to SWOS code 6; current published valuation €5m."
+    },
+    "Edo Kayembe": {
+      "age": 28,
+      "marketValueM": 4,
+      "position": 6,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/flcham/watford.htm",
+        "https://www.transfermarkt.co.uk/fc-watford/marktwertanalyse/verein/1010"
+      ],
+      "notes": "Central midfield maps to SWOS code 6; latest published valuation €4m."
+    },
+    "Jack Grieves": {
+      "age": 21,
+      "marketValueM": 0.2,
+      "position": 7,
+      "sources": [
+        "https://www.livescore.com/en/football/team/watford/3929/squad/",
+        "https://www.transfermarkt.com/jack-grieves/profil/spieler/974327"
+      ],
+      "notes": "Current Watford squad listing places Grieves with attackers, while Transfermarkt lists centre-forward. Exact research mapping therefore uses SWOS attack code 7 rather than the broad staged identity group."
+    },
+    "Othmane Maamma": {
+      "age": 20,
+      "marketValueM": 8,
+      "position": 4,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/flcham/watford.htm",
+        "https://www.transfermarkt.com/watford-fc/kader/verein/1010"
+      ],
+      "notes": "Primary right-wing role maps to SWOS RW/RM code 4; latest published valuation €8m."
+    },
+    "Luca Kjerrumgaard": {
+      "age": 23,
+      "marketValueM": 8,
+      "position": 7,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/flcham/watford.htm",
+        "https://www.transfermarkt.com/watford-fc/kader/verein/1010"
+      ],
+      "notes": "Centre-forward maps to SWOS attack code 7; latest published valuation €8m."
+    },
+    "Rocco Vata": {
+      "age": 21,
+      "marketValueM": 1.8,
+      "position": 5,
+      "sources": [
+        "https://footballsquads.co.uk/eng/2026-2027/flcham/watford.htm",
+        "https://www.transfermarkt.com/watford-fc/kader/verein/1010"
+      ],
+      "notes": "Primary left-wing role maps to SWOS LW/LM code 5; latest published valuation €1.8m."
+    }
+  }
+}
