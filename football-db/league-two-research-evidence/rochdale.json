@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "rochdale",
+  "snapshot": "2026-09-27",
+  "sourceSummary": "Rochdale current 2026/27 identity selection cross-checked against the committed FootballSquads roster/DOB source, Rochdale AFC's current first-team and signing records, and detailed current or last-published role/value evidence. Snapshot-date birthdays are normalized, broad identity groups are refined to SWOS roles, and unavailable published values are encoded as 0 rather than estimated.",
+  "players": {
+    "Nils Ramming": {
+      "age": 19,
+      "marketValueM": 0.5,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm",
+        "https://www.transfermarkt.co.uk/nils-ramming/profil/spieler/1145455",
+        "https://rochdaleafc.co.uk/goalkeeper-nils-ramming-loaned-in/"
+      ],
+      "notes": "Rochdale and FootballSquads confirm the season-long loan. The €500k value is the last published Transfermarkt value from 10/06/2026."
+    },
+    "Jake Spaven": {
+      "age": 19,
+      "marketValueM": 0,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm",
+        "https://rochdaleafc.co.uk/shot-stopper-spaven-signs/",
+        "https://fbref.com/en/players/a6a5c467/matchlogs/2026-2027/summary/Jake-Spaven-Match-Logs"
+      ],
+      "notes": "FootballSquads has no date of birth for Spaven; current match/profile evidence gives 13/05/2007. No published market value is available in the cited evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Charlie Tasker": {
+      "age": 20,
+      "marketValueM": 0.2,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm",
+        "https://www.transfermarkt.co.uk/charlie-tasker/profil/spieler/921662",
+        "https://rochdaleafc.co.uk/tasker-joins-on-loan/"
+      ],
+      "notes": "Rochdale confirms the September 2026 season-long loan. Detailed role evidence lists right-back; €200k is the last published Transfermarkt value from 03/06/2026."
+    },
+    "Kaiden Wilson": {
+      "age": 21,
+      "marketValueM": 0,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm",
+        "https://www.transfermarkt.co.uk/kaiden-wilson/profil/spieler/936841",
+        "https://bbc.com.im/sport/football/articles/crl7884kxx9o"
+      ],
+      "notes": "Age is calculated at the 2026-09-27 snapshot from the published 02/09/2005 date of birth. Detailed role evidence lists centre-back. No published market value is available in the cited evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Laurence Maguire": {
+      "age": 29,
+      "marketValueM": 0.15,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm",
+        "https://www.transfermarkt.co.uk/laurence-maguire/profil/spieler/338291",
+        "https://rochdaleafc.co.uk/dale-sign-laurence-maguire/"
+      ]
+    },
+    "Ethan Ebanks-Landell": {
+      "age": 33,
+      "marketValueM": 0,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm",
+        "https://www.transfermarkt.co.uk/ethan-ebanks-landell/profil/spieler/129067",
+        "https://www.transfermarkt.co.uk/afc-rochdale/kader/verein/1088"
+      ],
+      "notes": "FootballSquads and Transfermarkt differ on the exact December 1992 birth date but both make the player 33 at the snapshot. Detailed role evidence lists centre-back. The current squad page publishes no market value; 0 records unavailable evidence rather than an estimate."
+    },
+    "Tobi Adebayo-Rowling": {
+      "age": 29,
+      "marketValueM": 0,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm",
+        "https://www.transfermarkt.co.uk/tobi-adebayo-rowling/profil/spieler/369555",
+        "https://www.transfermarkt.co.uk/afc-rochdale/kader/verein/1088"
+      ],
+      "notes": "Detailed role evidence lists right-back. The current squad page publishes no market value; 0 records unavailable evidence rather than an estimate."
+    },
+    "Ryan East": {
+      "age": 28,
+      "marketValueM": 0,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm",
+        "https://www.transfermarkt.com/ryan-east/profil/spieler/424884",
+        "https://www.transfermarkt.co.uk/afc-rochdale/kader/verein/1088"
+      ],
+      "notes": "Age is calculated at the 2026-09-27 snapshot from the published 07/08/1998 date of birth. Detailed role evidence lists defensive midfield. The current squad page publishes no market value; 0 records unavailable evidence rather than an estimate."
+    },
+    "Harvey Gilmour": {
+      "age": 27,
+      "marketValueM": 0,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm",
+        "https://www.transfermarkt.com/harvey-gilmour/profil/spieler/473079",
+        "https://www.transfermarkt.co.uk/afc-rochdale/kader/verein/1088"
+      ],
+      "notes": "Detailed role evidence lists central midfield. The current squad page publishes no market value; 0 records unavailable evidence rather than an estimate."
+    },
+    "Ed Francis": {
+      "age": 27,
+      "marketValueM": 0,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm",
+        "https://www.transfermarkt.co.uk/ed-francis/profil/spieler/332327",
+        "https://www.transfermarkt.co.uk/afc-rochdale/kader/verein/1088"
+      ],
+      "notes": "Age is calculated at the 2026-09-27 snapshot from the published 11/09/1999 date of birth. Detailed role evidence lists defensive midfield. The current squad page publishes no market value; 0 records unavailable evidence rather than using an older valuation."
+    },
+    "Casey Pettit": {
+      "age": 23,
+      "marketValueM": 0,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm",
+        "https://www.transfermarkt.com/casey-pettit/profil/spieler/802233",
+        "https://www.transfermarkt.co.uk/afc-rochdale/kader/verein/1088"
+      ],
+      "notes": "Detailed role evidence lists defensive midfield. The current squad page publishes no market value; 0 records unavailable evidence rather than an estimate."
+    },
+    "Baba Adeeko": {
+      "age": 23,
+      "marketValueM": 0.3,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm",
+        "https://www.transfermarkt.co.uk/baba-adeeko/profil/spieler/746338",
+        "https://rochdaleafc.co.uk/adeeko-arrives-at-dale/"
+      ],
+      "notes": "Rochdale confirms the permanent August 2026 signing from Wigan. The detailed profile supplies central-midfield/defensive-midfield roles and the last published €300k value from 12/05/2026, though its club field is stale."
+    },
+    "Cian Hayes": {
+      "age": 23,
+      "marketValueM": 0.325,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm",
+        "https://www.transfermarkt.co.uk/cian-hayes/profil/spieler/727025",
+        "https://rochdaleafc.co.uk/cian-hayes/"
+      ],
+      "notes": "Detailed current role is right winger; Rochdale confirms the July 2026 three-year signing."
+    },
+    "Mani Dieseruvwe": {
+      "age": 32,
+      "marketValueM": 0,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm",
+        "https://www.transfermarkt.co.uk/afc-rochdale/kader/verein/1088",
+        "https://rochdaleafc.co.uk/first-team-players-staff/"
+      ],
+      "notes": "Transfermarkt publishes this player as Emmanuel Dieseruvwe and lists centre-forward. Age is calculated at the 2026-09-27 snapshot from the published 05/01/1994 date of birth. The current squad page publishes no market value; 0 records unavailable evidence rather than an estimate."
+    },
+    "Devante Rodney": {
+      "age": 28,
+      "marketValueM": 0,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm",
+        "https://www.transfermarkt.co.uk/devante-rodney/profil/spieler/483383",
+        "https://rochdaleafc.co.uk/devante-rodney/"
+      ],
+      "notes": "Detailed role evidence lists right winger, with centre-forward as an alternate role. No current published market value is shown in the cited squad evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Zain Silcott-Duberry": {
+      "age": 21,
+      "marketValueM": 0.2,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rochdale.htm",
+        "https://www.transfermarkt.co.uk/zain-silcott-duberry/profil/spieler/777308",
+        "https://rochdaleafc.co.uk/first-team-players-staff/"
+      ],
+      "notes": "Rochdale and FootballSquads confirm current membership; the cited Transfermarkt profile is stale on club membership but supplies the left-midfield role and last published €200k value from 28/05/2026."
+    }
+  }
+}
