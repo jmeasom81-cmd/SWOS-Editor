@@ -122,15 +122,17 @@
       "remove": [
         "Krystian Bielik",
         "Alfie Gilchrist",
-        "Alex Mowatt"
+        "Alex Mowatt",
+        "Mikey Johnston",
+        "Tammer Bany"
       ],
       "add": [
         {
           "footballName": "Brayann Pereira",
           "shirt": 18,
           "group": "Defender",
-          "nationality": "Congo",
-          "source": "West Brom current 2026/27 squad + Soccerbase current West Brom registration · #18 defender"
+          "nationality": "France",
+          "source": "FootballSquads West Brom 2026/27 current roster · #18 defender + Soccerbase permanent signing from NEC Nijmegen on 1 September 2026"
         },
         {
           "footballName": "Nolan Galves",
@@ -145,9 +147,23 @@
           "group": "Midfielder",
           "nationality": "England",
           "source": "West Brom current 2026/27 squad + Soccerbase current West Brom registration · #15 midfielder"
+        },
+        {
+          "footballName": "Mikey Johnston",
+          "shirt": 10,
+          "group": "Forward",
+          "nationality": "Ireland",
+          "source": "FootballSquads West Brom 2026/27 current roster · #10 midfielder + current left-wing role"
+        },
+        {
+          "footballName": "Tammer Bany",
+          "shirt": 23,
+          "group": "Forward",
+          "nationality": "Jordan",
+          "source": "FootballSquads West Brom 2026/27 current roster · #23 midfielder + current centre-forward role"
         }
       ],
-      "note": "Post-window audit removes Krystian Bielik after his permanent Cardiff move, Alfie Gilchrist after his season-long Leyton Orient loan and Alex Mowatt after his permanent Derby move. Current West Brom players Brayann Pereira, Nolan Galves and Toby Collyer replace them one-for-one by broad role, preserving the exact 16-player selection."
+      "note": "Post-window audit removes Krystian Bielik after his permanent Cardiff move, Alfie Gilchrist after his season-long Leyton Orient loan and Alex Mowatt after his permanent Derby move. Current West Brom players Brayann Pereira, Nolan Galves and Toby Collyer replace them one-for-one by broad role. Mikey Johnston and Tammer Bany are re-published with current shirt numbers 10 and 23, preserving the exact 16-player selection."
     }
   },
   "safety": {
