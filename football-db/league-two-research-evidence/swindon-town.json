@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "swindon-town",
+  "snapshot": "2026-09-27",
+  "sourceSummary": "Swindon Town current 2026/27 identity selection cross-checked against the committed FootballSquads roster/DOB source, current match/loan evidence and detailed current or last-published Transfermarkt role/value records. Snapshot-date birthdays are normalized, broad identity groups are refined to SWOS roles, and unavailable published values are encoded as 0 rather than estimated.",
+  "players": {
+    "Connor Ripley": {
+      "age": 33,
+      "marketValueM": 0.125,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/swindon.htm",
+        "https://www.transfermarkt.com/connor-ripley/profil/spieler/163531"
+      ]
+    },
+    "Lewis Ward": {
+      "age": 29,
+      "marketValueM": 0.075,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/swindon.htm",
+        "https://www.transfermarkt.co.uk/lewis-ward/profil/spieler/258910"
+      ]
+    },
+    "Mitchell Clark": {
+      "age": 27,
+      "marketValueM": 0.175,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/swindon.htm",
+        "https://www.transfermarkt.co.uk/mitch-clark/profil/spieler/390693"
+      ],
+      "notes": "Transfermarkt publishes this player as Mitch Clark; the footballName key remains matched to the committed identity feed."
+    },
+    "Stephan Negru": {
+      "age": 24,
+      "marketValueM": 0.175,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/swindon.htm",
+        "https://www.transfermarkt.co.uk/stephan-negru/profil/spieler/882219"
+      ],
+      "notes": "Age is normalized at the 2026-09-27 snapshot from the published 24/07/2002 date of birth; older cached pages still display 23."
+    },
+    "Sam Inwood": {
+      "age": 21,
+      "marketValueM": 0,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/swindon.htm",
+        "https://www.transfermarkt.co.uk/sam-inwood/profil/spieler/1188933",
+        "https://fbref.com/en/players/f18cb843/matchlogs/2026-2027/Sam-Inwood-Match-Logs"
+      ],
+      "notes": "Current 2026/27 match evidence confirms Swindon membership on loan from Bolton. Age is normalized from the published 17/09/2005 date of birth. No published market value is available; 0 records unavailable evidence rather than an estimate."
+    },
+    "Ryan Tafazolli": {
+      "age": 34,
+      "marketValueM": 0.05,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/swindon.htm",
+        "https://www.transfermarkt.co.uk/ryan-tafazolli/profil/spieler/244154"
+      ]
+    },
+    "James Debayo": {
+      "age": 21,
+      "marketValueM": 0,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/swindon.htm",
+        "https://www.transfermarkt.co.uk/james-debayo/profil/spieler/906891"
+      ],
+      "notes": "Transfermarkt confirms the 2026/27 Swindon loan from Hull. Age is normalized from the published 11/07/2005 date of birth. No published market value is shown in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Gavin Kilkenny": {
+      "age": 26,
+      "marketValueM": 0.35,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/swindon.htm",
+        "https://www.transfermarkt.co.uk/gavin-kilkenny/profil/spieler/469064"
+      ]
+    },
+    "James Ball": {
+      "age": 30,
+      "marketValueM": 0.075,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/swindon.htm",
+        "https://www.transfermarkt.com/james-ball/profil/spieler/297571"
+      ]
+    },
+    "Ollie Clarke": {
+      "age": 34,
+      "marketValueM": 0.075,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/swindon.htm",
+        "https://www.transfermarkt.co.uk/ollie-clarke/profil/spieler/146542"
+      ],
+      "notes": "Age is normalized at the 2026-09-27 snapshot from the published 29/06/1992 date of birth; older cached pages still display 33."
+    },
+    "Joseph Hungbo": {
+      "age": 26,
+      "marketValueM": 0.375,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/swindon.htm",
+        "https://www.transfermarkt.co.uk/joseph-hungbo/profil/spieler/725703",
+        "https://www.swindontownfc.co.uk/matches/t888/2026/g2648447"
+      ],
+      "notes": "Current Swindon match evidence confirms 2026/27 membership. The detailed Transfermarkt profile is stale on club membership but supplies the right-wing role and last published €375k value."
+    },
+    "Joe Snowdon": {
+      "age": 22,
+      "marketValueM": 0.1,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/swindon.htm",
+        "https://www.transfermarkt.co.uk/joe-snowdon/profil/spieler/745692"
+      ],
+      "notes": "Detailed role evidence lists right midfield, mapped to the SWOS right-sided midfield/wing role."
+    },
+    "Tom Nichols": {
+      "age": 33,
+      "marketValueM": 0.1,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/swindon.htm",
+        "https://www.transfermarkt.co.uk/tom-nichols/profil/spieler/186597"
+      ],
+      "notes": "Age is normalized at the 2026-09-27 snapshot from the published 28/08/1993 date of birth; older cached pages still display 32. Detailed current role is attacking midfield, with centre-forward and left-wing alternatives."
+    },
+    "Paul Glatzel": {
+      "age": 25,
+      "marketValueM": 0.275,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/swindon.htm",
+        "https://www.transfermarkt.co.uk/paul-glatzel/profil/spieler/470604"
+      ],
+      "notes": "Detailed current role is attacking midfield, with centre-forward and right-wing alternatives."
+    },
+    "Harry Smith": {
+      "age": 31,
+      "marketValueM": 0.1,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/swindon.htm",
+        "https://www.transfermarkt.co.uk/harry-smith/profil/spieler/452019"
+      ]
+    },
+    "Fletcher Holman": {
+      "age": 21,
+      "marketValueM": 0.1,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/swindon.htm",
+        "https://www.transfermarkt.co.uk/fletcher-holman/profil/spieler/1080392",
+        "https://www.bbc.co.uk/sport/football/articles/cgk8rj3p167o"
+      ]
+    }
+  }
+}
