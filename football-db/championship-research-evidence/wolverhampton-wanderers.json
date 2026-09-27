@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "wolverhampton-wanderers",
+  "snapshot": "2026-09-27",
+  "sourceSummary": "Wolverhampton Wanderers 2026/27 current first-team audit using Wolves' live squad and transfer pages with current published valuation sources. Santiago Bueno is removed after his 11 September Club America loan and Toti Gomes replaces him one-for-one before publication.",
+  "players": {
+    "Jose Sa": {
+      "age": 33,
+      "marketValueM": 3.5,
+      "position": 0,
+      "sources": [
+        "https://www.wolves.co.uk/teams/mens-first-team/jose-sa/",
+        "https://www.transfermarkt.co.uk/jose-sa/profil/spieler/249994"
+      ],
+      "notes": "ASCII identity name retained for José Sá. Goalkeeper maps to SWOS code 0; latest Transfermarkt valuation €3.5m."
+    },
+    "Joao Virginia": {
+      "age": 26,
+      "marketValueM": 0.85,
+      "position": 0,
+      "sources": [
+        "https://www.wolves.co.uk/news/mens-first-team/20260827-virginia-added-to-goalkeeper-department/",
+        "https://www.playmakerstats.com/team/wolverhampton/market-value"
+      ],
+      "notes": "ASCII identity name retained for João Virgínia. Wolves confirms the August 2026 signing. Goalkeeper maps to SWOS code 0; current published valuation €0.85m."
+    },
+    "Kieran Trippier": {
+      "age": 36,
+      "marketValueM": 1.5,
+      "position": 1,
+      "sources": [
+        "https://www.wolves.co.uk/teams/mens-first-team/kieran-trippier/",
+        "https://www.playmakerstats.com/team/wolverhampton/market-value"
+      ],
+      "notes": "DOB 19 September 1990 gives age 36 at the snapshot. Primary right-back maps to SWOS RB code 1; current published valuation €1.5m."
+    },
+    "Hugo Bueno": {
+      "age": 24,
+      "marketValueM": 12,
+      "position": 2,
+      "sources": [
+        "https://www.wolves.co.uk/teams/mens-first-team/",
+        "https://www.playmakerstats.com/team/wolverhampton/market-value"
+      ],
+      "notes": "Primary left-back maps to SWOS LB code 2; current published valuation €12m."
+    },
+    "Toti Gomes": {
+      "age": 27,
+      "marketValueM": 19,
+      "position": 3,
+      "sources": [
+        "https://theanalyst.com/players/4338/toti-gomes",
+        "https://www.playmakerstats.com/team/wolverhampton/market-value"
+      ],
+      "notes": "Current Wolves centre-back replacing loaned Santiago Bueno in the selected identity 16. Maps to SWOS defender code 3; current published valuation €19m."
+    },
+    "Ghislain Konan": {
+      "age": 30,
+      "marketValueM": 3,
+      "position": 2,
+      "sources": [
+        "https://www.wolves.co.uk/news/mens-first-team/20260902-konan-signs-to-bolster-defensive-options/",
+        "https://www.playmakerstats.com/team/wolverhampton/market-value"
+      ],
+      "notes": "Current Wolves left-back signed in September 2026. DOB 27 December 1995 gives age 30. Maps to SWOS LB code 2; current published valuation €3m."
+    },
+    "Nasser Djiga": {
+      "age": 23,
+      "marketValueM": 6.5,
+      "position": 3,
+      "sources": [
+        "https://www.wolves.co.uk/teams/mens-first-team/",
+        "https://www.playmakerstats.com/team/wolverhampton/market-value"
+      ],
+      "notes": "Centre-back maps to SWOS defender code 3; current published valuation €6.5m."
+    },
+    "Ladislav Krejci": {
+      "age": 27,
+      "marketValueM": 25,
+      "position": 3,
+      "sources": [
+        "https://www.wolves.co.uk/teams/mens-first-team/",
+        "https://www.playmakerstats.com/team/wolverhampton/market-value"
+      ],
+      "notes": "ASCII identity name retained for Ladislav Krejčí. Centre-back maps to SWOS defender code 3; current published valuation €25m."
+    },
+    "Marshall Munetsi": {
+      "age": 30,
+      "marketValueM": 12,
+      "position": 6,
+      "sources": [
+        "https://www.wolves.co.uk/teams/mens-first-team/",
+        "https://www.playmakerstats.com/team/wolverhampton/market-value"
+      ],
+      "notes": "Central midfield maps to SWOS code 6; current published valuation €12m."
+    },
+    "Andre": {
+      "age": 25,
+      "marketValueM": 24,
+      "position": 6,
+      "sources": [
+        "https://www.wolves.co.uk/teams/mens-first-team/",
+        "https://www.playmakerstats.com/team/wolverhampton/market-value"
+      ],
+      "notes": "ASCII identity name retained for André. Central/defensive midfield maps to SWOS code 6; current published valuation €24m."
+    },
+    "Jordan James": {
+      "age": 22,
+      "marketValueM": 12,
+      "position": 6,
+      "sources": [
+        "https://www.wolves.co.uk/teams/mens-first-team/",
+        "https://www.playmakerstats.com/team/wolverhampton/market-value"
+      ],
+      "notes": "Central midfield maps to SWOS code 6; current published valuation €12m."
+    },
+    "Jean-Ricner Bellegarde": {
+      "age": 28,
+      "marketValueM": 15,
+      "position": 6,
+      "sources": [
+        "https://www.wolves.co.uk/teams/mens-first-team/",
+        "https://www.playmakerstats.com/team/wolverhampton/market-value"
+      ],
+      "notes": "Attacking/central midfield maps to SWOS midfield code 6; current published valuation €15m."
+    },
+    "Fer Lopez": {
+      "age": 22,
+      "marketValueM": 15,
+      "position": 6,
+      "sources": [
+        "https://www.wolves.co.uk/teams/mens-first-team/",
+        "https://www.playmakerstats.com/team/wolverhampton/market-value"
+      ],
+      "notes": "ASCII identity name retained for Fer López. Attacking midfield maps to SWOS code 6; current published valuation €15m."
+    },
+    "Raul Jimenez": {
+      "age": 35,
+      "marketValueM": 3,
+      "position": 7,
+      "sources": [
+        "https://www.wolves.co.uk/teams/mens-first-team/raul-jimenez/",
+        "https://www.playmakerstats.com/team/wolverhampton/market-value"
+      ],
+      "notes": "ASCII identity name retained for Raúl Jiménez. Centre-forward maps to SWOS attack code 7; current published valuation €3m."
+    },
+    "Adam Armstrong": {
+      "age": 29,
+      "marketValueM": 8.5,
+      "position": 7,
+      "sources": [
+        "https://www.wolves.co.uk/teams/mens-first-team/adam-armstrong/",
+        "https://www.playmakerstats.com/team/wolverhampton/market-value"
+      ],
+      "notes": "Centre-forward maps to SWOS attack code 7; current published valuation €8.5m."
+    },
+    "Enso Gonzalez": {
+      "age": 21,
+      "marketValueM": 3,
+      "position": 5,
+      "sources": [
+        "https://www.wolves.co.uk/teams/mens-first-team/",
+        "https://www.playmakerstats.com/team/wolverhampton/market-value"
+      ],
+      "notes": "ASCII identity name retained for Enso González. Current primary role is left winger, mapped to SWOS LW/LM code 5; current published valuation €3m."
+    }
+  }
+}
