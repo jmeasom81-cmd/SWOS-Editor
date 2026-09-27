@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "tranmere-rovers",
+  "snapshot": "2026-09-27",
+  "sourceSummary": "Tranmere Rovers current 2026/27 identity selection cross-checked against the committed FootballSquads roster/DOB source, current club/league evidence and detailed current or last-published Transfermarkt role/value records. Snapshot-date birthdays are normalized, broad identity groups are refined to SWOS roles, and unavailable published values are encoded as 0 rather than estimated.",
+  "players": {
+    "Luke McGee": {
+      "age": 31,
+      "marketValueM": 0.075,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/tranmere.htm",
+        "https://www.transfermarkt.com/luke-mcgee/leistungsdaten/spieler/183301"
+      ],
+      "notes": "Age is normalized at the 2026-09-27 snapshot from the published 02/09/1995 date of birth; older cached pages still display 30."
+    },
+    "Harrison Male": {
+      "age": 26,
+      "marketValueM": 0,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/tranmere.htm",
+        "https://www.transfermarkt.com/harrison-male/profil/spieler/392759",
+        "https://www.tranmere-web.com/season/2026"
+      ],
+      "notes": "Current Tranmere season evidence confirms the July 2026 arrival from York. Age is normalized from the published 13/09/2000 date of birth. No published market value is available in the cited evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Joel Senior": {
+      "age": 27,
+      "marketValueM": 0.15,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/tranmere.htm",
+        "https://www.transfermarkt.co.uk/joel-senior/profil/spieler/674136",
+        "https://www.transfermarkt.co.uk/tranmere-rovers/startseite/verein/1074/saison_id/2026"
+      ],
+      "notes": "Current Tranmere transfer evidence confirms the 2026 arrival; the detailed player profile may still show Bristol Rovers."
+    },
+    "Jacob Slater": {
+      "age": 21,
+      "marketValueM": 0.15,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/tranmere.htm",
+        "https://www.transfermarkt.co.uk/jacob-slater/profil/spieler/854930"
+      ]
+    },
+    "Jordan Turnbull": {
+      "age": 31,
+      "marketValueM": 0.15,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/tranmere.htm",
+        "https://www.transfermarkt.co.uk/jordan-turnbull/profil/spieler/226978"
+      ]
+    },
+    "Nathan Smith": {
+      "age": 30,
+      "marketValueM": 0.275,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/tranmere.htm",
+        "https://www.transfermarkt.co.uk/nathan-smith/profil/spieler/321416"
+      ]
+    },
+    "Will Vaulks": {
+      "age": 33,
+      "marketValueM": 0.4,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/tranmere.htm",
+        "https://www.transfermarkt.co.uk/will-vaulks/profil/spieler/238427",
+        "https://theanalyst.com/players/978/will-vaulks"
+      ],
+      "notes": "Current 2026/27 evidence confirms Tranmere membership and midfield usage. Age is normalized from the published 13/09/1993 date of birth; the Transfermarkt profile is stale on club membership but supplies the defensive-midfield role and last published €400k value."
+    },
+    "Charlie Whitaker": {
+      "age": 23,
+      "marketValueM": 0.25,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/tranmere.htm",
+        "https://www.transfermarkt.co.uk/charlie-whitaker/profil/spieler/726992"
+      ],
+      "notes": "Age is normalized at the 2026-09-27 snapshot from the published 16/09/2003 date of birth; older cached pages still display 22. Detailed role is attacking midfield."
+    },
+    "Sam Finley": {
+      "age": 34,
+      "marketValueM": 0.075,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/tranmere.htm",
+        "https://www.transfermarkt.co.uk/sam-finley/profil/spieler/217806"
+      ],
+      "notes": "Age is normalized from the published 04/08/1992 date of birth; older cached pages still display 33."
+    },
+    "Thomas Ince": {
+      "age": 34,
+      "marketValueM": 0.3,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/tranmere.htm",
+        "https://www.transfermarkt.co.uk/tom-ince/profil/spieler/157368",
+        "https://www.youtube.com/watch?v=DEWEbMY6_NA"
+      ],
+      "notes": "Transfermarkt publishes this player as Tom Ince and is stale on club membership. Tranmere's official July 2026 signing interview confirms the move; detailed role is right winger, mapped to the SWOS right-sided midfield/wing role."
+    },
+    "Tom Conlon": {
+      "age": 30,
+      "marketValueM": 0.15,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/tranmere.htm",
+        "https://www.transfermarkt.co.uk/tom-conlon/profil/spieler/294056"
+      ]
+    },
+    "Jordan Davies": {
+      "age": 28,
+      "marketValueM": 0.15,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/tranmere.htm",
+        "https://www.transfermarkt.com/jordan-davies/profil/spieler/427927",
+        "https://www.tranmere-web.com/season/2026"
+      ],
+      "notes": "Current Tranmere season evidence confirms the July 2026 signing. Age is normalized from the published 18/08/1998 date of birth; the Transfermarkt profile is stale on club membership but supplies the central/attacking midfield role and last published €150k value."
+    },
+    "Joe Ironside": {
+      "age": 32,
+      "marketValueM": 0.15,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/tranmere.htm",
+        "https://www.transfermarkt.co.uk/joe-ironside/profil/spieler/177901"
+      ]
+    },
+    "Zane Okoro": {
+      "age": 19,
+      "marketValueM": 0.15,
+      "position": 4,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/tranmere.htm",
+        "https://www.transfermarkt.co.uk/zane-okoro/profil/spieler/1091678",
+        "https://bbc.com.im/sport/football/articles/cj9d0wv84l7o"
+      ],
+      "notes": "BBC confirms the 2026/27 season-long Tranmere loan from Lincoln. Detailed role is right winger; the Transfermarkt profile is stale on club membership but supplies the last published €150k value."
+    },
+    "Connor Jennings": {
+      "age": 34,
+      "marketValueM": 0.05,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/tranmere.htm",
+        "https://www.transfermarkt.co.uk/connor-jennings/profil/spieler/212426"
+      ]
+    },
+    "Courtney Baker-Richardson": {
+      "age": 30,
+      "marketValueM": 0.125,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/tranmere.htm",
+        "https://www.transfermarkt.co.uk/courtney-baker-richardson/profil/spieler/298231",
+        "https://bbc.com.im/sport/football/articles/c204ny6zz5qo"
+      ],
+      "notes": "BBC confirms the July 2026 Tranmere signing. The Transfermarkt profile is stale on club membership but supplies the centre-forward role and last published €125k value."
+    }
+  }
+}
