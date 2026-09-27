@@ -187,6 +187,21 @@
         }
       ],
       "note": "Current-squad audit removes El Hadji Malick Diouf after his permanent Brentford move, Jean-Clair Todibo and Aaron Wan-Bissaka after loan departures, and James Ward-Prowse after his permanent Southampton return. Current West Ham players Morato, Joel Veltman, Ollie Scarles and Arne Engels replace them one-for-one by broad role."
+    },
+    "wolverhampton-wanderers": {
+      "remove": [
+        "Santiago Bueno"
+      ],
+      "add": [
+        {
+          "footballName": "Toti Gomes",
+          "shirt": 24,
+          "group": "Defender",
+          "nationality": "Portugal",
+          "source": "Wolves official current 2026/27 first-team squad · #24 defender"
+        }
+      ],
+      "note": "Santiago Bueno joined Club America on a season-long loan on 11 September 2026 and is no longer part of Wolves' current selected first-team 16. Current Wolves centre-back Toti Gomes replaces him one-for-one, preserving the exact defender balance."
     }
   },
   "safety": {
