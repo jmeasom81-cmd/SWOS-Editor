@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026/27",
-  "generatedAt": "2026-09-27T19:48:00.000Z",
+  "generatedAt": "2026-09-27T19:58:00.000Z",
   "division": {
     "code": 3,
     "name": "League Two",
@@ -9,13 +9,13 @@
   },
   "progress": {
     "identityReadyClubs": 24,
-    "researchReadyClubs": 22,
-    "researchPendingClubs": 2,
-    "researchedPlayers": 352
+    "researchReadyClubs": 23,
+    "researchPendingClubs": 1,
+    "researchedPlayers": 368
   },
   "next": {
-    "clubId": "walsall",
-    "order": 23
+    "clubId": "york-city",
+    "order": 24
   },
   "readyClubIds": [
     "accrington-stanley",
@@ -39,10 +39,10 @@
     "salford-city",
     "shrewsbury-town",
     "swindon-town",
-    "tranmere-rovers"
+    "tranmere-rovers",
+    "walsall"
   ],
   "pendingClubIds": [
-    "walsall",
     "york-city"
   ],
   "policy": {
