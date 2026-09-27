@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "snapshot": "2026-09-27",
+  "profileCount": 0,
+  "clubs": {},
+  "model": {
+    "managerMaxLength": 24,
+    "formationCodes": ["4-4-2","5-4-1","4-5-1","5-3-2","3-5-2","4-3-3","4-2-4","3-4-3","Sweeper","5-2-3","Attack","Defend","User A","User B","User C","User D","User E","User F"],
+    "kitStyles": ["Plain","Colored sleeves","Vertical stripes","Horizontal stripes"],
+    "kitColours": ["Grey","White","Black","Orange","Red","Blue","Brown","Light blue","Green","Yellow"]
+  },
+  "safety": {
+    "teamWriteReady": false,
+    "careerWriteReady": false,
+    "note": "Club profiles are evidence and translation data only. Publishing profiles does not enable TEAM.* or .CAR writes."
+  }
+}
