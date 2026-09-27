@@ -1,54 +1,157 @@
 {
   "schemaVersion": 1,
   "season": "2026/27",
-  "snapshot": "2026-09-12",
+  "snapshot": "2026-09-27",
   "source": "Post-window current squad cross-check",
   "clubs": {
     "crystal-palace": {
-      "remove": ["Daniel Munoz"],
+      "remove": [
+        "Daniel Munoz"
+      ],
       "add": [
-        {"footballName":"Honest Ahanor","shirt":21,"group":"Defender","nationality":"Italy","source":"Crystal Palace current 2026/27 squad + post-window transfer evidence"}
+        {
+          "footballName": "Honest Ahanor",
+          "shirt": 21,
+          "group": "Defender",
+          "nationality": "Italy",
+          "source": "Crystal Palace current 2026/27 squad + post-window transfer evidence"
+        }
       ],
       "note": "Daniel Munoz is no longer in the current Crystal Palace squad; Honest Ahanor joined on deadline day and is present in the current squad."
     },
     "bolton-wanderers": {
-      "remove": ["Joel Randall"],
+      "remove": [
+        "Joel Randall"
+      ],
       "add": [
-        {"footballName":"Luca Stephenson","shirt":27,"group":"Defender","nationality":"England","source":"Bolton Wanderers official 2026/27 signing/current squad evidence + FootballSquads post-window roster"}
+        {
+          "footballName": "Luca Stephenson",
+          "shirt": 27,
+          "group": "Defender",
+          "nationality": "England",
+          "source": "Bolton Wanderers official 2026/27 signing/current squad evidence + FootballSquads post-window roster"
+        }
       ],
       "note": "Joel Randall moved to Chesterfield on a season-long loan on 2 September 2026. Luca Stephenson is a current Bolton first-team player, signed permanently in July 2026; his primary role is right-back with additional midfield experience. The replacement preserves an exact 16-player current selection and the minimum role balance."
     },
     "middlesbrough": {
-      "remove": ["Seny Dieng","Finley Munroe","Morgan Whittaker"],
+      "remove": [
+        "Seny Dieng",
+        "Finley Munroe",
+        "Morgan Whittaker"
+      ],
       "add": [
-        {"footballName":"Radek Vitek","shirt":1,"group":"Goalkeeper","nationality":"Czech Republic","source":"FootballSquads Middlesbrough 2026/27 post-window current roster · #1 G"},
-        {"footballName":"Ashley Phillips","shirt":4,"group":"Defender","nationality":"England","source":"FootballSquads Middlesbrough 2026/27 post-window current roster + Tottenham confirmation of permanent Middlesbrough transfer"},
-        {"footballName":"Amario Cozier-Duberry","shirt":11,"group":"Forward","nationality":"England","source":"FootballSquads Middlesbrough 2026/27 post-window current roster + Brighton confirmation of season-long Middlesbrough loan"}
+        {
+          "footballName": "Radek Vitek",
+          "shirt": 1,
+          "group": "Goalkeeper",
+          "nationality": "Czech Republic",
+          "source": "FootballSquads Middlesbrough 2026/27 post-window current roster · #1 G"
+        },
+        {
+          "footballName": "Ashley Phillips",
+          "shirt": 4,
+          "group": "Defender",
+          "nationality": "England",
+          "source": "FootballSquads Middlesbrough 2026/27 post-window current roster + Tottenham confirmation of permanent Middlesbrough transfer"
+        },
+        {
+          "footballName": "Amario Cozier-Duberry",
+          "shirt": 11,
+          "group": "Forward",
+          "nationality": "England",
+          "source": "FootballSquads Middlesbrough 2026/27 post-window current roster + Brighton confirmation of season-long Middlesbrough loan"
+        }
       ],
       "note": "Post-window roster audit found Seny Dieng at Atromitos, Finley Munroe on loan at Blackpool and Morgan Whittaker at Colorado Rapids. Radek Vitek, Ashley Phillips and Amario Cozier-Duberry replace them one-for-one by broad role, preserving an exact current 16 and the minimum role balance."
     },
     "millwall": {
-      "remove": ["Femi Azeez"],
+      "remove": [
+        "Femi Azeez"
+      ],
       "add": [
-        {"footballName":"Lyndon Dykes","shirt":13,"group":"Forward","nationality":"Scotland","source":"Millwall current 2026/27 squad + FootballSquads post-window roster + Brighton confirmation of Femi Azeez transfer"}
+        {
+          "footballName": "Lyndon Dykes",
+          "shirt": 13,
+          "group": "Forward",
+          "nationality": "Scotland",
+          "source": "Millwall current 2026/27 squad + FootballSquads post-window roster + Brighton confirmation of Femi Azeez transfer"
+        }
       ],
       "note": "Femi Azeez completed a permanent transfer from Millwall to Brighton on 2 September 2026. Lyndon Dykes, signed by Millwall in August and active in the current first team, replaces him one-for-one in the selected forward group so the current identity pack remains exactly 16 players."
     },
     "southampton": {
-      "remove": ["Joshua Quarshie"],
+      "remove": [
+        "Joshua Quarshie"
+      ],
       "add": [
-        {"footballName":"Keven Schlotterbeck","shirt":13,"group":"Defender","nationality":"Germany","source":"Southampton current 2026/27 squad + Southampton confirmation of Joshua Quarshie's season-long Sturm Graz loan + current Transfermarkt squad evidence"}
+        {
+          "footballName": "Keven Schlotterbeck",
+          "shirt": 13,
+          "group": "Defender",
+          "nationality": "Germany",
+          "source": "Southampton current 2026/27 squad + Southampton confirmation of Joshua Quarshie's season-long Sturm Graz loan + current Transfermarkt squad evidence"
+        }
       ],
       "note": "Joshua Quarshie joined SK Sturm Graz on a season-long loan on 27 August 2026. Current Southampton centre-back Keven Schlotterbeck replaces him one-for-one, preserving the exact 16-player selection and defender balance."
     },
     "stoke-city": {
-      "remove": ["Tatsuki Seko", "Sorba Thomas"],
+      "remove": [
+        "Tatsuki Seko",
+        "Sorba Thomas"
+      ],
       "add": [
-        {"footballName":"Jack McGlynn","shirt":7,"group":"Midfielder","nationality":"United States","source":"Stoke City current 2026/27 squad + official 2026/27 shirt-number confirmation + current Transfermarkt squad evidence"},
-        {"footballName":"Million Manhoef","shirt":42,"group":"Forward","nationality":"Netherlands","source":"Stoke City current 2026/27 squad + current Transfermarkt squad evidence + post-window departure evidence for Sorba Thomas"}
+        {
+          "footballName": "Jack McGlynn",
+          "shirt": 7,
+          "group": "Midfielder",
+          "nationality": "United States",
+          "source": "Stoke City current 2026/27 squad + official 2026/27 shirt-number confirmation + current Transfermarkt squad evidence"
+        },
+        {
+          "footballName": "Million Manhoef",
+          "shirt": 42,
+          "group": "Forward",
+          "nationality": "Netherlands",
+          "source": "Stoke City current 2026/27 squad + current Transfermarkt squad evidence + post-window departure evidence for Sorba Thomas"
+        }
       ],
       "note": "Tatsuki Seko completed a permanent move to Urawa Reds on 16 August 2026 and Sorba Thomas joined Hull City on 1 September 2026. Current Stoke players Jack McGlynn and Million Manhoef replace them one-for-one by broad role, preserving the exact 16-player selection and role balance."
+    },
+    "west-bromwich-albion": {
+      "remove": [
+        "Krystian Bielik",
+        "Alfie Gilchrist",
+        "Alex Mowatt"
+      ],
+      "add": [
+        {
+          "footballName": "Brayann Pereira",
+          "shirt": 18,
+          "group": "Defender",
+          "nationality": "Congo",
+          "source": "West Brom current 2026/27 squad + Soccerbase current West Brom registration · #18 defender"
+        },
+        {
+          "footballName": "Nolan Galves",
+          "shirt": 25,
+          "group": "Defender",
+          "nationality": "France",
+          "source": "West Brom current 2026/27 squad + Soccerbase current West Brom registration · #25 defender"
+        },
+        {
+          "footballName": "Toby Collyer",
+          "shirt": 15,
+          "group": "Midfielder",
+          "nationality": "England",
+          "source": "West Brom current 2026/27 squad + Soccerbase current West Brom registration · #15 midfielder"
+        }
+      ],
+      "note": "Post-window audit removes Krystian Bielik after his permanent Cardiff move, Alfie Gilchrist after his season-long Leyton Orient loan and Alex Mowatt after his permanent Derby move. Current West Brom players Brayann Pereira, Nolan Galves and Toby Collyer replace them one-for-one by broad role, preserving the exact 16-player selection."
     }
   },
-  "safety": {"teamWriteReady":false,"careerWriteReady":false}
+  "safety": {
+    "teamWriteReady": false,
+    "careerWriteReady": false
+  }
 }
