@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "salford-city",
+  "snapshot": "2026-09-27",
+  "sourceSummary": "Salford City current 2026/27 identity selection cross-checked against the committed FootballSquads roster/DOB source, current club/loan evidence and detailed Transfermarkt role/value records. Snapshot-date birthdays are normalized, broad identity groups are refined to SWOS roles, and unavailable values would be encoded as 0 rather than estimated.",
+  "players": {
+    "Will Norris": {
+      "age": 33,
+      "marketValueM": 0.3,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/salford.htm",
+        "https://www.transfermarkt.co.uk/salford-city/kader/verein/6973/saison_id/2026/plus/1"
+      ],
+      "notes": "Age is normalized at the 2026-09-27 snapshot from the published 12/08/1993 date of birth; older cached market pages still display 32."
+    },
+    "Sam Long": {
+      "age": 23,
+      "marketValueM": 0.075,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/salford.htm",
+        "https://www.transfermarkt.co.uk/salford-city/kader/verein/6973/saison_id/2026/plus/1"
+      ]
+    },
+    "Nathan Asiimwe": {
+      "age": 21,
+      "marketValueM": 0.275,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/salford.htm",
+        "https://www.transfermarkt.co.uk/nathan-asiimwe/profil/spieler/926189",
+        "https://www.charltonafc.com/news/nathan-asiimwe-joins-salford-city-loan"
+      ],
+      "notes": "Current September 2026 loan evidence confirms Salford membership. Detailed role evidence lists right-back, with centre-back and left-back as alternatives."
+    },
+    "Zach Awe": {
+      "age": 22,
+      "marketValueM": 0.1,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/salford.htm",
+        "https://www.transfermarkt.co.uk/zach-awe/profil/spieler/745398",
+        "https://www.transfermarkt.co.uk/salford-city/kader/verein/6973/saison_id/2026/plus/1"
+      ]
+    },
+    "Will Aimson": {
+      "age": 32,
+      "marketValueM": 0.2,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/salford.htm",
+        "https://www.transfermarkt.co.uk/will-aimson/profil/spieler/236129",
+        "https://www.transfermarkt.co.uk/salford-city/kader/verein/6973/saison_id/2026/plus/1"
+      ]
+    },
+    "Michael Rose": {
+      "age": 30,
+      "marketValueM": 0.3,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/salford.htm",
+        "https://www.transfermarkt.co.uk/michael-rose/profil/spieler/240548",
+        "https://www.transfermarkt.co.uk/salford-city/kader/verein/6973/saison_id/2026/plus/1"
+      ]
+    },
+    "Brandon Cooper": {
+      "age": 26,
+      "marketValueM": 0.35,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/salford.htm",
+        "https://www.transfermarkt.co.uk/brandon-cooper/profil/spieler/503992",
+        "https://www.transfermarkt.co.uk/salford-city/kader/verein/6973/saison_id/2026/plus/1"
+      ]
+    },
+    "Joe Powell": {
+      "age": 27,
+      "marketValueM": 0.8,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/salford.htm",
+        "https://www.transfermarkt.co.uk/joe-powell/profil/spieler/433180",
+        "https://www.transfermarkt.co.uk/salford-city/kader/verein/6973/saison_id/2026/plus/1"
+      ]
+    },
+    "Ben Woodburn": {
+      "age": 26,
+      "marketValueM": 0.25,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/salford.htm",
+        "https://www.transfermarkt.co.uk/salford-city/kader/verein/6973/saison_id/2026/plus/1"
+      ],
+      "notes": "Detailed current role is attacking midfield."
+    },
+    "Jorge Grant": {
+      "age": 31,
+      "marketValueM": 0.225,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/salford.htm",
+        "https://www.transfermarkt.co.uk/salford-city/kader/verein/6973/saison_id/2026/plus/1"
+      ],
+      "notes": "Detailed current role is attacking midfield / central midfield."
+    },
+    "Kelly N'Mai": {
+      "age": 22,
+      "marketValueM": 0.3,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/salford.htm",
+        "https://www.transfermarkt.co.uk/salford-city/kader/verein/6973/saison_id/2026/plus/1"
+      ],
+      "notes": "Detailed current role is left midfield, mapped to the SWOS left-sided midfield/wing role."
+    },
+    "Elliot Bonds": {
+      "age": 26,
+      "marketValueM": 0.35,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/salford.htm",
+        "https://www.transfermarkt.co.uk/elliot-bonds/profil/spieler/433703",
+        "https://www.salfordcityfc.co.uk/news/2026/july/14/elliot-bonds-signs-for-salford-city/"
+      ],
+      "notes": "Current July 2026 transfer evidence confirms Salford membership. Detailed role is defensive midfield; the player profile may be stale on club membership."
+    },
+    "Macaulay Langstaff": {
+      "age": 29,
+      "marketValueM": 0.7,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/salford.htm",
+        "https://www.transfermarkt.co.uk/macaulay-langstaff/profil/spieler/533174",
+        "https://www.transfermarkt.co.uk/salford-city/kader/verein/6973/saison_id/2026/plus/1"
+      ]
+    },
+    "Abraham Odoh": {
+      "age": 26,
+      "marketValueM": 0.2,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/salford.htm",
+        "https://www.transfermarkt.co.uk/abraham-odoh/profil/spieler/692604",
+        "https://www.transfermarkt.co.uk/salford-city/kader/verein/6973/saison_id/2026/plus/1"
+      ],
+      "notes": "Age is normalized at the 2026-09-27 snapshot from the published 07/08/2000 date of birth; older cached market pages still display 25. Detailed role is left winger."
+    },
+    "Ryan Graydon": {
+      "age": 27,
+      "marketValueM": 0.3,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/salford.htm",
+        "https://www.transfermarkt.co.uk/ryan-graydon/profil/spieler/522651",
+        "https://www.transfermarkt.co.uk/salford-city/kader/verein/6973/saison_id/2026/plus/1"
+      ],
+      "notes": "Detailed role evidence lists centre-forward with wide-forward alternatives."
+    },
+    "Daniel Udoh": {
+      "age": 30,
+      "marketValueM": 0.35,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/salford.htm",
+        "https://www.transfermarkt.co.uk/daniel-udoh/profil/spieler/483562",
+        "https://www.transfermarkt.co.uk/salford-city/kader/verein/6973/saison_id/2026/plus/1"
+      ],
+      "notes": "Age is normalized at the 2026-09-27 snapshot from the published 30/08/1996 date of birth; older cached market pages still display 29."
+    }
+  }
+}
