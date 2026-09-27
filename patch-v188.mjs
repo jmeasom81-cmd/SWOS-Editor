@@ -1,0 +1,56 @@
+import fs from 'node:fs';
+
+const FILE='dist/index.html';
+const PACKS='football-db/research-packs.json';
+const COVERAGE='football-db/coverage.json';
+const QUEUE='football-db/championship-research-queue.json';
+const INTAKE='football-db/championship-research-intake.json';
+const VALIDATION='football-db/research-expansion-validation.json';
+const IDENTITIES='football-db/identities.json';
+const MANIFEST='football-db/manifest.json';
+const BUILD='v1.88.0';
+for(const file of [FILE,PACKS,COVERAGE,QUEUE,INTAKE,VALIDATION,IDENTITIES,MANIFEST])if(!fs.existsSync(file))throw new Error(`SWOS Studio ${BUILD} build failed: missing ${file}.`);
+
+let html=fs.readFileSync(FILE,'utf8');
+if(!html.includes('<title>SWOS Studio v1.87.0</title>'))throw new Error(`SWOS Studio ${BUILD} build failed: expected v1.87.0 output was not found.`);
+
+const packs=JSON.parse(fs.readFileSync(PACKS,'utf8'));
+const coverage=JSON.parse(fs.readFileSync(COVERAGE,'utf8'));
+const queue=JSON.parse(fs.readFileSync(QUEUE,'utf8'));
+const intake=JSON.parse(fs.readFileSync(INTAKE,'utf8'));
+const validation=JSON.parse(fs.readFileSync(VALIDATION,'utf8'));
+const identities=JSON.parse(fs.readFileSync(IDENTITIES,'utf8'));
+const manifest=JSON.parse(fs.readFileSync(MANIFEST,'utf8'));
+const champ=coverage.divisions?.find(d=>d.code===1),pl=coverage.divisions?.find(d=>d.code===0);
+
+if(manifest.version!=='2026.27-england-research.19')throw new Error(`SWOS Studio ${BUILD} build failed: expected research DB .19; found ${manifest.version}.`);
+if(!packs.clubs?.['swansea-city']||Object.keys(packs.clubs['swansea-city'].players||{}).length!==16)throw new Error(`SWOS Studio ${BUILD} build failed: Swansea City research pack missing or incomplete.`);
+const identityNames=new Set((identities.clubs?.['swansea-city']||[]).map(p=>p.footballName));
+const researchNames=new Set(Object.keys(packs.clubs['swansea-city'].players||{}));
+if(identityNames.size!==16||researchNames.size!==16)throw new Error(`SWOS Studio ${BUILD} build failed: Swansea identity/research sets must both contain exactly 16 players.`);
+for(const name of identityNames)if(!researchNames.has(name))throw new Error(`SWOS Studio ${BUILD} build failed: Swansea research pack is missing identity player ${name}.`);
+if(packs.packCount!==39||packs.playerCount!==624)throw new Error(`SWOS Studio ${BUILD} build failed: expected 39 research packs / 624 players; found ${packs.packCount} / ${packs.playerCount}.`);
+if(pl?.researchReady!==20||champ?.identityReady!==24||champ?.researchReady!==19)throw new Error(`SWOS Studio ${BUILD} build failed: expected PL 20/20 and Championship 19/24 research.`);
+if(queue.progress?.researchReadyClubs!==19||queue.totals?.clubs!==5||queue.totals?.stagedPlayers!==80||queue.totals?.requiredEvidenceCells!==240||queue.next?.clubId!=='watford')throw new Error(`SWOS Studio ${BUILD} build failed: pending Championship queue should be 5 clubs with Watford next.`);
+if(intake.progress?.researchReadyClubs!==19||intake.progress?.researchPendingClubs!==5||intake.totals?.clubs!==5||intake.totals?.players!==80||intake.totals?.requiredEvidenceCells!==240)throw new Error(`SWOS Studio ${BUILD} build failed: Championship intake progress is stale.`);
+if(validation.status!=='pass'||validation.divisions?.premierLeague?.researchReady!==20||validation.divisions?.championship?.researchReady!==19||validation.totals?.researchClubs!==39||validation.totals?.researchPlayers!==624)throw new Error(`SWOS Studio ${BUILD} build failed: research expansion validation is stale.`);
+if(manifest.installation?.teamWriteReady!==false||manifest.installation?.careerWriteReady!==false)throw new Error(`SWOS Studio ${BUILD} build failed: binary write locks changed unexpectedly.`);
+
+html=html.replace('<title>SWOS Studio v1.87.0</title>',`<title>SWOS Studio ${BUILD}</title>`);
+const meta={champReady:19,totalResearchClubs:39,totalResearchPlayers:624,next:queue.next.clubName};
+const embedded=JSON.stringify(meta).replace(/</g,'\\u003c');
+const js=String.raw`
+<script id="swos-v188-swansea-research-layer">
+(function(){
+'use strict';var BUILD='v1.88.0',META=${embedded};
+function render(){var anchor=document.getElementById('v187-stoke-research')||document.getElementById('v186-southampton-research');if(!anchor)return false;
+if(!document.getElementById('v188-swansea-research')){var box=document.createElement('div');box.id='v188-swansea-research';box.className='card stack';box.innerHTML='<strong>✅ Swansea City research pack promoted</strong><span class="about">All 16 selected Swansea identities remain current and now carry sourced age, market-value and exact SWOS-position evidence. Elijah Just\'s current Swansea registration is kept separate from the latest valuation record that predates his July move.</span><span class="about">Championship research coverage: <b>'+META.champReady+' / 24</b>. England now carries <b>'+META.totalResearchClubs+' research-ready clubs / '+META.totalResearchPlayers+' researched players</b>.</span><span class="about">Next evidence target: <b>'+META.next+'</b>. Five Championship clubs remain.</span><span class="feature-status available">19 / 24 CHAMPIONSHIP RESEARCH READY ✓</span>';anchor.insertAdjacentElement('afterend',box);}
+if(!document.getElementById('v188-release-card')){var a=document.getElementById('v187-release-card')||document.getElementById('v186-release-card');if(a){var c=document.createElement('div');c.id='v188-release-card';c.className='card stack v133-release-card';c.innerHTML='<strong>New in v1.88.0 — Swansea City research promotion</strong><span class="about">• Swansea becomes the nineteenth Championship research-ready club.</span><span class="about">• The exact selected 16 still matches the current first-team squad.</span><span class="about">• Elijah Just uses current Swansea transfer evidence while his latest published valuation remains separately auditable.</span><span class="about">• Full-backs, centre-backs, central midfielders, winger and strikers are mapped to explicit SWOS position codes.</span><span class="about">• Championship research reaches 19 / 24; Watford is next.</span><span class="about">• TEAM.* and established .CAR binary writes remain locked.</span>';a.insertAdjacentElement('beforebegin',c);}}
+document.title='SWOS Studio '+BUILD;var b=document.querySelector('#v133-build-status-panel .build-status-head>.feature-status.beta');if(b)b.textContent=BUILD;return true;}
+var tries=0;function apply(){tries++;if(!render()&&tries<20)setTimeout(apply,100);}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();
+})();
+</script>`;
+html=html.replace('</body>',js+'\n</body>');
+fs.writeFileSync(FILE,html,'utf8');
+if(!html.includes('swos-v188-swansea-research-layer')||!html.includes('<title>SWOS Studio v1.88.0</title>'))throw new Error(`SWOS Studio ${BUILD} build failed: Swansea City research layer missing.`);
+console.log(`SWOS Studio v1.88.0 Swansea City research promotion complete · Championship 19/24 · all research 39 clubs / 624 players · next ${queue.next.clubName} · binary writes locked.`);
