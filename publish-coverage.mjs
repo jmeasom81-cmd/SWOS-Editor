@@ -43,6 +43,7 @@ catch(e){throw new Error(`Coverage publisher failed: EFL club list is not valid 
 const identities=readJson('football-db/identities.json');
 const packs=readJson('football-db/research-packs.json');
 const manifest=readJson('football-db/manifest.json');
+const profiles=fs.existsSync('football-db/club-profiles.json')?readJson('football-db/club-profiles.json'):{schemaVersion:1,profileCount:0,clubs:{}};
 const divisions=[
   {code:0,name:'Premier League',target:20},
   {code:1,name:'Championship',target:24},
@@ -67,9 +68,13 @@ const clubs=all.map(c=>{
   const packPlayers=researchCount(c.id);
   const researchReady=packPlayers===16;
   const identityReady=identityCount>0;
+  const profile=profiles.clubs?.[c.id]||null;
+  const managerReady=!!profile?.manager;
+  const formationReady=!!profile?.formation;
+  const kitsReady=!!profile?.kits?.home&&!!profile?.kits?.away;
   let nextStep='Verify current squad identity';
   if(identityReady&&!researchReady)nextStep='Build 16-player research pack';
-  if(researchReady)nextStep='Research manager, formation and kits';
+  if(researchReady)nextStep=(managerReady&&formationReady&&kitsReady)?'Club profile complete — installer remains locked':'Research manager, formation and kits';
   return {
     id:c.id,
     name:c.name,
@@ -79,9 +84,9 @@ const clubs=all.map(c=>{
       identity:{status:identityReady?'ready':'pending',players:identityCount},
       researchPack:{status:researchReady?'ready':packPlayers>0?'attention':'pending',players:packPlayers},
       swos16:{status:researchReady?'builder-ready':'blocked',players:researchReady?16:0},
-      manager:{status:'pending'},
-      formation:{status:'pending'},
-      kits:{status:'pending'},
+      manager:{status:managerReady?'ready':'pending'},
+      formation:{status:formationReady?'ready':'pending'},
+      kits:{status:kitsReady?'ready':'pending'},
       installer:{status:writeLocked?'locked':'review-required'}
     },
     nextStep
@@ -94,14 +99,15 @@ const summary={
   identityReady:clubs.filter(c=>c.stages.identity.status==='ready').length,
   researchReady:clubs.filter(c=>c.stages.researchPack.status==='ready').length,
   swos16BuilderReady:clubs.filter(c=>c.stages.swos16.status==='builder-ready').length,
-  managerReady:0,
-  formationReady:0,
-  kitsReady:0,
+  managerReady:clubs.filter(c=>c.stages.manager.status==='ready').length,
+  formationReady:clubs.filter(c=>c.stages.formation.status==='ready').length,
+  kitsReady:clubs.filter(c=>c.stages.kits.status==='ready').length,
   installerReady:writeLocked?0:clubs.length,
   installerLocked:writeLocked
 };
 if(summary.identityReady!==identities.clubCount)throw new Error(`Coverage publisher failed: identity summary ${summary.identityReady} does not match identity feed ${identities.clubCount}.`);
 if(summary.researchReady!==packs.packCount)throw new Error(`Coverage publisher failed: research summary ${summary.researchReady} does not match research feed ${packs.packCount}.`);
+if(summary.managerReady!==profiles.profileCount||summary.formationReady!==profiles.profileCount||summary.kitsReady!==profiles.profileCount)throw new Error(`Coverage publisher failed: club profile status totals ${summary.managerReady}/${summary.formationReady}/${summary.kitsReady} do not match profile feed ${profiles.profileCount}.`);
 
 const divisionSummary=divisions.map(d=>{
   const rows=clubs.filter(c=>c.division===d.code);
