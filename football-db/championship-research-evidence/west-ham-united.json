@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "west-ham-united",
+  "snapshot": "2026-09-27",
+  "sourceSummary": "West Ham United 2026/27 current first-team audit using the club's live squad page plus current transfer evidence. El Hadji Malick Diouf, Jean-Clair Todibo, Aaron Wan-Bissaka and James Ward-Prowse are removed before publication; Morato, Joel Veltman, Ollie Scarles and Arne Engels replace them one-for-one. Current-club evidence is kept separate from the latest published valuation source where summer registrations lag.",
+  "players": {
+    "Mads Hermansen": {
+      "age": 26,
+      "marketValueM": 15,
+      "position": 0,
+      "sources": [
+        "https://www.transfermarkt.com/west-ham-united/kader/verein/379/saison_id/2026/plus/1"
+      ],
+      "notes": "Goalkeeper maps to SWOS code 0; latest published valuation €15m."
+    },
+    "Alphonse Areola": {
+      "age": 33,
+      "marketValueM": 4,
+      "position": 0,
+      "sources": [
+        "https://www.transfermarkt.com/west-ham-united/kader/verein/379/saison_id/2026"
+      ],
+      "notes": "Goalkeeper maps to SWOS code 0; latest published valuation €4m."
+    },
+    "Kyle Walker-Peters": {
+      "age": 29,
+      "marketValueM": 12,
+      "position": 1,
+      "sources": [
+        "https://www.transfermarkt.co.uk/kyle-walker-peters/profil/spieler/341051"
+      ],
+      "notes": "Primary right-back maps to SWOS RB code 1; latest published valuation €12m."
+    },
+    "Max Kilman": {
+      "age": 29,
+      "marketValueM": 13,
+      "position": 3,
+      "sources": [
+        "https://www.transfermarkt.com/west-ham-utd-/marktwertanalyse/verein/379/sort/spieler"
+      ],
+      "notes": "Centre-back maps to SWOS defender code 3; latest published valuation €13m."
+    },
+    "Morato": {
+      "age": 25,
+      "marketValueM": 14,
+      "position": 3,
+      "sources": [
+        "https://www.whufc.com/en/teams/mens-team/morato",
+        "https://www.transfermarkt.co.uk/morato/profil/spieler/673492"
+      ],
+      "notes": "West Ham confirms the 1 September 2026 season-long loan. Centre-back maps to SWOS code 3; latest published valuation €14m predates the loan."
+    },
+    "Konstantinos Mavropanos": {
+      "age": 28,
+      "marketValueM": 18,
+      "position": 3,
+      "sources": [
+        "https://www.transfermarkt.co.uk/konstantinos-mavropanos/marktwertverlauf/spieler/415912"
+      ],
+      "notes": "Centre-back maps to SWOS defender code 3; latest published valuation €18m."
+    },
+    "Joel Veltman": {
+      "age": 34,
+      "marketValueM": 1.5,
+      "position": 1,
+      "sources": [
+        "https://www.whufc.com/en/teams/mens-team/joel-veltman",
+        "https://www.transfermarkt.co.uk/joel-veltman/profil/spieler/111195"
+      ],
+      "notes": "ASCII identity name retained for Joël Veltman. West Ham confirms his August 2026 arrival. Primary right-back maps to SWOS code 1; latest published valuation €1.5m predates the move."
+    },
+    "Ollie Scarles": {
+      "age": 20,
+      "marketValueM": 12.3,
+      "position": 2,
+      "sources": [
+        "https://www.whufc.com/en/teams/mens-team/ollie-scarles?tab=bio",
+        "https://www.fotmob.com/players/1315319/ollie-scarles"
+      ],
+      "notes": "Current West Ham left-back/wing-back; mapped to SWOS LB code 2. Current published transfer value €12.3m."
+    },
+    "Edson Alvarez": {
+      "age": 28,
+      "marketValueM": 15,
+      "position": 6,
+      "sources": [
+        "https://www.transfermarkt.com/edson-alvarez/marktwertverlauf/spieler/401356"
+      ],
+      "notes": "ASCII identity name retained for Edson Álvarez. Defensive midfield maps to SWOS code 6; latest published valuation €15m."
+    },
+    "Arne Engels": {
+      "age": 23,
+      "marketValueM": 11.6,
+      "position": 6,
+      "sources": [
+        "https://www.whufc.com/en/teams/mens-team/arne-engels",
+        "https://www.footballtransfers.com/en/players/arne-engels"
+      ],
+      "notes": "West Ham confirms the August 2026 signing. Central midfield maps to SWOS code 6; current 1 September 2026 ETV €11.6m."
+    },
+    "Mohamadou Kante": {
+      "age": 21,
+      "marketValueM": 1,
+      "position": 6,
+      "sources": [
+        "https://www.whufc.com/en/teams/mens-team/mohamadou-kante",
+        "https://www.transfermarkt.co.uk/mohamadou-kante/profil/spieler/1081995"
+      ],
+      "notes": "ASCII identity name retained for Mohamadou Kanté. DOB 20 September 2005 gives age 21 at the snapshot. Defensive midfield maps to SWOS code 6; latest published Transfermarkt valuation €1m."
+    },
+    "Maxwel Cornet": {
+      "age": 30,
+      "marketValueM": 2,
+      "position": 5,
+      "sources": [
+        "https://www.whufc.com/en/teams/mens-team/maxwel-cornet",
+        "https://www.transfermarkt.co.uk/maxwel-cornet/profil/spieler/234781"
+      ],
+      "notes": "DOB 27 September 1996 gives age 30 on the snapshot date. Primary left-wing role maps to SWOS LW/LM code 5; latest published Transfermarkt valuation €2m."
+    },
+    "Soungoutou Magassa": {
+      "age": 22,
+      "marketValueM": 17,
+      "position": 6,
+      "sources": [
+        "https://www.transfermarkt.co.uk/soungoutou-magassa/marktwertverlauf/spieler/745181"
+      ],
+      "notes": "Defensive midfield maps to SWOS code 6; latest published valuation €17m."
+    },
+    "Valentin Castellanos": {
+      "age": 27,
+      "marketValueM": 28,
+      "position": 7,
+      "sources": [
+        "https://www.transfermarkt.com/taty-castellanos/profil/spieler/522784"
+      ],
+      "notes": "Identity name Valentin Castellanos matches Taty Castellanos. Centre-forward maps to SWOS attack code 7; latest published valuation €28m."
+    },
+    "Pablo": {
+      "age": 22,
+      "marketValueM": 18,
+      "position": 7,
+      "sources": [
+        "https://www.whufc.com/en/teams/mens-team/pablo",
+        "https://www.transfermarkt.com/pablo/profil/spieler/817665"
+      ],
+      "notes": "Current West Ham #19 centre-forward; maps to SWOS attack code 7. Latest published valuation €18m."
+    },
+    "Jarrod Bowen": {
+      "age": 29,
+      "marketValueM": 30,
+      "position": 4,
+      "sources": [
+        "https://www.transfermarkt.com/jarrod-bowen/profil/spieler/314875"
+      ],
+      "notes": "Primary right-wing role maps to SWOS RW/RM code 4; latest published valuation €30m."
+    }
+  }
+}
