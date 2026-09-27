@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "west-bromwich-albion",
+  "snapshot": "2026-09-27",
+  "sourceSummary": "West Bromwich Albion 2026/27 post-window squad audit. Krystian Bielik, Alfie Gilchrist and Alex Mowatt are removed after their Cardiff, Leyton Orient and Derby moves; current West Brom players Brayann Pereira, Nolan Galves and Toby Collyer replace them one-for-one. Latest published market values and primary positions are retained separately from current-club evidence where databases lag summer transfers.",
+  "players": {
+    "Max O'Leary": {
+      "age": 29,
+      "marketValueM": 2,
+      "position": 0,
+      "sources": [
+        "https://www.transfermarkt.co.uk/max-oleary/profil/spieler/296582"
+      ],
+      "notes": "Current West Brom goalkeeper; maps to SWOS GK code 0. Latest published valuation €2m."
+    },
+    "Matt Ingram": {
+      "age": 32,
+      "marketValueM": 0.3,
+      "position": 0,
+      "sources": [
+        "https://www.transfermarkt.co.uk/west-brom/marktwertanalyse/verein/984"
+      ],
+      "notes": "Goalkeeper maps to SWOS code 0; latest published valuation €0.3m."
+    },
+    "Chris Mepham": {
+      "age": 28,
+      "marketValueM": 3,
+      "position": 3,
+      "sources": [
+        "https://www.transfermarkt.co.uk/west-brom/marktwertanalyse/verein/984"
+      ],
+      "notes": "Centre-back maps to SWOS defender code 3; latest published valuation €3m."
+    },
+    "Nat Phillips": {
+      "age": 29,
+      "marketValueM": 2.5,
+      "position": 3,
+      "sources": [
+        "https://www.transfermarkt.co.uk/west-brom/marktwertanalyse/verein/984"
+      ],
+      "notes": "Centre-back maps to SWOS defender code 3; latest published valuation €2.5m."
+    },
+    "Callum Styles": {
+      "age": 26,
+      "marketValueM": 3,
+      "position": 2,
+      "sources": [
+        "https://www.transfermarkt.co.uk/west-brom/marktwertanalyse/verein/984"
+      ],
+      "notes": "Primary left-back role maps to SWOS LB code 2; latest published valuation €3m."
+    },
+    "George Campbell": {
+      "age": 25,
+      "marketValueM": 2,
+      "position": 3,
+      "sources": [
+        "https://www.transfermarkt.co.uk/west-brom/marktwertanalyse/verein/984"
+      ],
+      "notes": "Centre-back maps to SWOS defender code 3; latest published valuation €2m."
+    },
+    "Brayann Pereira": {
+      "age": 23,
+      "marketValueM": 1,
+      "position": 1,
+      "sources": [
+        "https://www.soccerbase.com/players/player.sd?player_id=148898",
+        "https://www.transfermarkt.com/brayann-pereira/marktwertverlauf/spieler/620317"
+      ],
+      "notes": "Soccerbase confirms current West Brom #18 registration. Current usage is right-back; mapped to SWOS RB code 1. Latest published Transfermarkt valuation €1m predates the September move."
+    },
+    "Nolan Galves": {
+      "age": 23,
+      "marketValueM": 1.8,
+      "position": 1,
+      "sources": [
+        "https://www.soccerbase.com/players/player.sd?player_id=183400",
+        "https://www.transfermarkt.co.uk/nolan-galves/marktwertverlauf/spieler/855098"
+      ],
+      "notes": "Soccerbase confirms current West Brom #25 registration. Primary right-back maps to SWOS RB code 1; latest published valuation €1.8m predates the July move."
+    },
+    "Felix Horn Myhre": {
+      "age": 27,
+      "marketValueM": 3.5,
+      "position": 6,
+      "sources": [
+        "https://www.transfermarkt.co.uk/felix-horn-myhre/profil/spieler/367274"
+      ],
+      "notes": "Current West Brom midfielder; latest published valuation €3.5m predates his summer move. Central midfield maps to SWOS code 6."
+    },
+    "Jayson Molumby": {
+      "age": 27,
+      "marketValueM": 3.5,
+      "position": 6,
+      "sources": [
+        "https://www.transfermarkt.co.uk/west-brom/marktwertanalyse/verein/984"
+      ],
+      "notes": "Central midfield maps to SWOS code 6; latest published valuation €3.5m."
+    },
+    "Ousmane Diakite": {
+      "age": 26,
+      "marketValueM": 1.2,
+      "position": 6,
+      "sources": [
+        "https://www.transfermarkt.co.uk/west-brom/marktwertanalyse/verein/984"
+      ],
+      "notes": "ASCII identity name retained for Ousmane Diakité. Defensive midfield maps to SWOS code 6; latest published valuation €1.2m."
+    },
+    "Isaac Price": {
+      "age": 23,
+      "marketValueM": 12,
+      "position": 6,
+      "sources": [
+        "https://www.transfermarkt.co.uk/west-brom/marktwertanalyse/verein/984"
+      ],
+      "notes": "DOB 26 September 2003 gives age 23 at the 27 September 2026 snapshot. Central midfield maps to SWOS code 6; latest published valuation €12m."
+    },
+    "Toby Collyer": {
+      "age": 22,
+      "marketValueM": 5,
+      "position": 6,
+      "sources": [
+        "https://www.soccerbase.com/players/player.sd?player_id=135067",
+        "https://www.transfermarkt.co.uk/toby-collyer/profil/spieler/654253"
+      ],
+      "notes": "Soccerbase confirms the 30 August 2026 permanent West Brom move and #15 shirt. Defensive midfield maps to SWOS code 6; latest published Transfermarkt valuation €5m predates the move."
+    },
+    "Mikey Johnston": {
+      "age": 27,
+      "marketValueM": 4,
+      "position": 5,
+      "sources": [
+        "https://www.transfermarkt.co.uk/west-brom/marktwertanalyse/verein/984"
+      ],
+      "notes": "Primary left-wing role maps to SWOS LW/LM code 5; latest published valuation €4m."
+    },
+    "Aune Heggebo": {
+      "age": 25,
+      "marketValueM": 7,
+      "position": 7,
+      "sources": [
+        "https://www.transfermarkt.co.uk/west-brom/marktwertanalyse/verein/984"
+      ],
+      "notes": "ASCII identity name retained for Aune Heggebø. Centre-forward maps to SWOS attack code 7; latest published valuation €7m."
+    },
+    "Tammer Bany": {
+      "age": 22,
+      "marketValueM": 0.25,
+      "position": 7,
+      "sources": [
+        "https://www.transfermarkt.com/west-bromwich-albion/kader/verein/984/sort/age"
+      ],
+      "notes": "Current West Brom forward. DOB 19 October 2003 gives age 22 at the snapshot. Centre-forward maps to SWOS attack code 7; latest published valuation €0.25m."
+    }
+  }
+}
