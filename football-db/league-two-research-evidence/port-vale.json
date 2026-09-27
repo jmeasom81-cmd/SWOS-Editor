@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "port-vale",
+  "snapshot": "2026-09-27",
+  "sourceSummary": "Port Vale current 2026/27 identity selection cross-checked against the committed FootballSquads roster/DOB source and detailed current or last-published role/value evidence. Snapshot-date birthdays are normalized, broad identity groups are refined to SWOS roles, and unavailable published values are encoded as 0 rather than estimated.",
+  "players": {
+    "Jackson Smith": {
+      "age": 24,
+      "marketValueM": 0.3,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/portv.htm",
+        "https://www.transfermarkt.co.uk/port-vale-fc/kader/verein/1211/saison_id/2026/plus/1"
+      ]
+    },
+    "Mason Terry": {
+      "age": 22,
+      "marketValueM": 0,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/portv.htm",
+        "https://www.transfermarkt.co.uk/port-vale-fc/kader/verein/1211/saison_id/2026/plus/1"
+      ],
+      "notes": "Age is calculated at the 2026-09-27 snapshot from the published 20/09/2004 date of birth; older cached market pages still display 21. No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Kyle John": {
+      "age": 25,
+      "marketValueM": 0.225,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/portv.htm",
+        "https://www.transfermarkt.co.uk/port-vale-fc/kader/verein/1211/saison_id/2026/plus/1"
+      ]
+    },
+    "Jaheim Headley": {
+      "age": 25,
+      "marketValueM": 0.55,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/portv.htm",
+        "https://www.transfermarkt.co.uk/port-vale-fc/kader/verein/1211/saison_id/2026/plus/1"
+      ],
+      "notes": "Age is calculated at the 2026-09-27 snapshot from the published 24/09/2001 date of birth; older cached market pages still display 24."
+    },
+    "Jasper Moon": {
+      "age": 25,
+      "marketValueM": 0.25,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/portv.htm",
+        "https://www.transfermarkt.co.uk/port-vale-fc/kader/verein/1211/saison_id/2026/plus/1"
+      ]
+    },
+    "Connor Hall": {
+      "age": 33,
+      "marketValueM": 0.125,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/portv.htm",
+        "https://www.transfermarkt.co.uk/port-vale-fc/kader/verein/1211/saison_id/2026/plus/1"
+      ]
+    },
+    "Jordan Lawrence-Gabriel": {
+      "age": 28,
+      "marketValueM": 0.6,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/portv.htm",
+        "https://www.transfermarkt.co.uk/port-vale-fc/kader/verein/1211/saison_id/2026/plus/1"
+      ],
+      "notes": "Transfermarkt publishes this player as Jordan Gabriel. Age is calculated at the 2026-09-27 snapshot from the published 25/09/1998 date of birth; the footballName key remains matched to the committed identity feed."
+    },
+    "George Byers": {
+      "age": 30,
+      "marketValueM": 0.225,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/portv.htm",
+        "https://www.transfermarkt.co.uk/port-vale-fc/kader/verein/1211/saison_id/2026/plus/1"
+      ]
+    },
+    "Ben Garrity": {
+      "age": 29,
+      "marketValueM": 0.3,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/portv.htm",
+        "https://www.transfermarkt.co.uk/port-vale-fc/kader/verein/1211/saison_id/2026/plus/1"
+      ]
+    },
+    "Kyle Dempsey": {
+      "age": 31,
+      "marketValueM": 0.35,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/portv.htm",
+        "https://www.transfermarkt.co.uk/kyle-dempsey/profil/spieler/308388"
+      ],
+      "notes": "Age is calculated at the 2026-09-27 snapshot from the published 17/09/1995 date of birth; the cited detailed profile supplies the central-midfield role and €350k last-published value."
+    },
+    "Onel Hernández": {
+      "age": 33,
+      "marketValueM": 0.25,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/portv.htm",
+        "https://www.transfermarkt.es/onel-hernandez/profil/spieler/109751"
+      ],
+      "notes": "Detailed role evidence lists left winger as the main position, mapped to the SWOS left-sided midfield/wing role."
+    },
+    "Ryan Croasdale": {
+      "age": 32,
+      "marketValueM": 0.175,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/portv.htm",
+        "https://www.transfermarkt.co.uk/port-vale-fc/kader/verein/1211/saison_id/2026/plus/1"
+      ],
+      "notes": "Age is calculated at the 2026-09-27 snapshot from the published 26/09/1994 date of birth; older cached market pages still display 31."
+    },
+    "Modou Faal": {
+      "age": 23,
+      "marketValueM": 0.35,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/portv.htm",
+        "https://www.transfermarkt.co.uk/port-vale-fc/legionaere/verein/1211"
+      ],
+      "notes": "Transfermarkt commonly publishes this player as Mo Faal; the footballName key remains matched to the committed identity feed."
+    },
+    "Oliver Lynch": {
+      "age": 21,
+      "marketValueM": 0,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/portv.htm",
+        "https://www.transfermarkt.co.uk/fc-port-vale/vertragsende/verein/1211"
+      ],
+      "notes": "Detailed current evidence lists centre-forward. No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Tyreece Simpson": {
+      "age": 24,
+      "marketValueM": 0.175,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/portv.htm",
+        "https://www.transfermarkt.co.uk/tyreece-simpson/profil/spieler/664558/sort/minutes_played"
+      ],
+      "notes": "FootballSquads confirms current Port Vale membership; the cited Transfermarkt profile is stale on club membership but supplies the centre-forward role and last published €175k value."
+    },
+    "Ben Waine": {
+      "age": 25,
+      "marketValueM": 0.4,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/portv.htm",
+        "https://www.transfermarkt.co.uk/port-vale-fc/legionaere/verein/1211"
+      ]
+    }
+  }
+}
