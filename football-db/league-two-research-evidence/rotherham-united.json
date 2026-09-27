@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "rotherham-united",
+  "snapshot": "2026-09-27",
+  "sourceSummary": "Rotherham United current 2026/27 identity selection cross-checked against the committed FootballSquads roster/DOB source, current transfer/signing evidence and Transfermarkt detailed role/value records. Late-August and September arrivals are preserved from the current identity feed, snapshot-date birthdays are normalized, and unavailable values are encoded as 0 rather than estimated.",
+  "players": {
+    "Ted Cann": {
+      "age": 25,
+      "marketValueM": 0.15,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+        "https://www.transfermarkt.co.uk/ted-cann/profil/spieler/503880"
+      ]
+    },
+    "Julian Eyestone": {
+      "age": 20,
+      "marketValueM": 0,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+        "https://www.transfermarkt.co.uk/julian-eyestone/profil/spieler/1008553",
+        "https://www.brentfordfc.com/en/teams/mens/julian-eyestone"
+      ],
+      "notes": "Brentford confirms the August 2026 season-long Rotherham loan. No published market value is visible in the cited profile evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Joe Rafferty": {
+      "age": 32,
+      "marketValueM": 0.2,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+        "https://www.transfermarkt.com/rotherham-united/kader/verein/1194/saison_id/2026/plus/1"
+      ]
+    },
+    "Ewan Otoo": {
+      "age": 24,
+      "marketValueM": 0.125,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+        "https://www.transfermarkt.co.uk/ewan-otoo/profil/spieler/614141",
+        "https://sortitoutsi.net/football-manager-data-update/team/704"
+      ],
+      "notes": "Rotherham transfer evidence confirms the August 2026 move. Age is calculated at the snapshot from the published 30/08/2002 date of birth; the €125k value is the last published Transfermarkt value from 21/05/2026. Main role is centre-back."
+    },
+    "Kieran Ngwenya": {
+      "age": 24,
+      "marketValueM": 0.2,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+        "https://www.transfermarkt.co.uk/kieran-ngwenya/profil/spieler/808456",
+        "https://sortitoutsi.net/football-manager-data-update/team/704"
+      ],
+      "notes": "Rotherham transfer evidence confirms the August 2026 move. Age is normalized at the snapshot from the published 25/09/2002 date of birth. Main role is centre-back with left-back as an alternate; €200k is the last published value from 21/05/2026."
+    },
+    "Denzel Hall": {
+      "age": 25,
+      "marketValueM": 0.5,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+        "https://www.transfermarkt.com/rotherham-united/kader/verein/1194/saison_id/2026/plus/1"
+      ]
+    },
+    "Sonny Aljofree": {
+      "age": 21,
+      "marketValueM": 0.2,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+        "https://www.transfermarkt.co.uk/sonny-aljofree/profil/spieler/911431/",
+        "https://rotherhamfcnews.co.uk/news/sonny-aljofree-joins-rotherham"
+      ],
+      "notes": "Current signing evidence confirms the August 2026 permanent move. Detailed role is centre-back; €200k is the last published Transfermarkt value from 03/06/2026."
+    },
+    "Josh Austerfield": {
+      "age": 24,
+      "marketValueM": 0.25,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+        "https://www.transfermarkt.co.uk/josh-austerfield/profil/spieler/728983",
+        "https://www.soccerbase.com/players/player.sd?player_id=127043"
+      ],
+      "notes": "Current career evidence confirms the 27/08/2026 Rotherham signing. Detailed role is central midfield with defensive/attacking midfield alternatives; €250k is the last published Transfermarkt value from 15/05/2026."
+    },
+    "Ossama Ashley": {
+      "age": 26,
+      "marketValueM": 0.175,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+        "https://www.transfermarkt.co.uk/ossama-ashley/profil/spieler/555545",
+        "https://www.transfermarkt.com/rotherham-united/kader/verein/1194/saison_id/2026/plus/1"
+      ],
+      "notes": "Detailed role is defensive midfield; Rotherham's 2026/27 squad evidence confirms the July 2026 arrival."
+    },
+    "Kian Spence": {
+      "age": 25,
+      "marketValueM": 0.3,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+        "https://www.transfermarkt.com/rotherham-united/kader/verein/1194/saison_id/2026/plus/1"
+      ]
+    },
+    "Jayce Fitzgerald": {
+      "age": 19,
+      "marketValueM": 0,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+        "https://www.transfermarkt.co.uk/jayce-fitzgerald/profil/spieler/964690",
+        "https://www.manutd.com/en/news/jayce-fitzgerald-joins-rotherham-on-loan-aug-2026"
+      ],
+      "notes": "Manchester United confirms the August 2026 season-long loan. Detailed role is central midfield. No published market value is visible in the cited profile evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Jamie Jellis": {
+      "age": 25,
+      "marketValueM": 0.175,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+        "https://www.transfermarkt.co.uk/jamie-jellis/profil/spieler/678931",
+        "https://www.transfermarkt.com/rotherham-united/kader/verein/1194/saison_id/2026/plus/1"
+      ],
+      "notes": "Detailed role is central midfield; Rotherham 2026/27 evidence confirms the July 2026 arrival. €175k is the published value from 15/05/2026."
+    },
+    "Fabio Tavares": {
+      "age": 25,
+      "marketValueM": 0.225,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+        "https://www.transfermarkt.co.uk/fabio-tavares/profil/spieler/614086",
+        "https://www.transfermarkt.com/rotherham-united/kader/verein/1194/saison_id/2026/plus/1"
+      ],
+      "notes": "Transfermarkt publishes this player as Fábio Tavares. Detailed role is centre-forward."
+    },
+    "Tom Bradshaw": {
+      "age": 34,
+      "marketValueM": 0.2,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+        "https://www.transfermarkt.co.uk/tom-bradshaw/profil/spieler/139781",
+        "https://www.soccerbase.com/players/player.sd?player_id=51785&season_id=146"
+      ],
+      "notes": "Current career evidence confirms the 05/08/2026 Rotherham signing. Age is normalized at the snapshot from the published 27/07/1992 date of birth. Detailed role is centre-forward; €200k is the last published Transfermarkt value from 12/05/2026."
+    },
+    "Paul Mullin": {
+      "age": 31,
+      "marketValueM": 0.35,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+        "https://www.transfermarkt.co.uk/paul-mullin/profil/spieler/278501",
+        "https://bbc.com.im/sport/football/articles/ce347l61rplo"
+      ],
+      "notes": "BBC confirms the 29/07/2026 two-year Rotherham signing. Detailed role is centre-forward; €350k is the last published Transfermarkt value from 12/05/2026."
+    },
+    "George Sebine": {
+      "age": 19,
+      "marketValueM": 0,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+        "https://www.transfermarkt.co.uk/george-sebine/profil/spieler/1340433",
+        "https://bbc.com.im/sport/football/articles/c20l139xlvjo"
+      ],
+      "notes": "BBC confirms the September 2026 season-long Rotherham loan from Huddersfield. Detailed role is centre-forward. No published market value is visible in the cited profile evidence; 0 records unavailable evidence rather than an estimate."
+    }
+  }
+}
