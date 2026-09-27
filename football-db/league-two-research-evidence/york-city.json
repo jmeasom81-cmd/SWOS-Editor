@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "york-city",
+  "snapshot": "2026-09-27",
+  "sourceSummary": "York City current 2026/27 identity selection cross-checked against the committed FootballSquads roster/DOB source, York City signing/loan records and detailed current or last-published role/value evidence. Snapshot-date birthdays are normalized, broad identity groups are refined to SWOS roles, and unavailable published values are encoded as 0 rather than estimated.",
+  "players": {
+    "Alfie McNally": {
+      "age": 21,
+      "marketValueM": 0,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/york.htm",
+        "https://www.transfermarkt.co.uk/alfie-mcnally/profil/spieler/747950",
+        "https://www.yorkcityfootballclub.co.uk/news/2026/july/20/york-city-secure-alfie-mcnally-as-latest-summer-signing/"
+      ],
+      "notes": "York confirms the 2026/27 season-long loan from Fulham. No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "George Sykes-Kenworthy": {
+      "age": 26,
+      "marketValueM": 0,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/york.htm",
+        "https://www.transfermarkt.co.uk/york-city/kader/verein/1252"
+      ],
+      "notes": "No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Ryan Fallowfield": {
+      "age": 30,
+      "marketValueM": 0,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/york.htm",
+        "https://www.transfermarkt.com/ryan-fallowfield/profil/spieler/450736",
+        "https://www.bbc.co.uk/sport/football/articles/czd2yvzrq06o"
+      ],
+      "notes": "Detailed role evidence lists right-back. No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Mark Kitching": {
+      "age": 31,
+      "marketValueM": 0,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/york.htm",
+        "https://www.transfermarkt.co.uk/mark-kitching/profil/spieler/295639",
+        "https://www.yorkcityfootballclub.co.uk/teams/mens-first-team/markkitching"
+      ],
+      "notes": "Age is normalized at the 2026-09-27 snapshot from the published 04/09/1995 date of birth; older cached market pages still display 30. Detailed role is centre-back. No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Zech Medley": {
+      "age": 26,
+      "marketValueM": 0.325,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/york.htm",
+        "https://www.transfermarkt.com/zech-medley/profil/spieler/392761",
+        "https://bbc.com.im/sport/football/articles/cn07g0447jro"
+      ]
+    },
+    "Zak Johnson": {
+      "age": 22,
+      "marketValueM": 0.075,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/york.htm",
+        "https://www.yorkcityfootballclub.co.uk/news/2026/june/26/zak-johnson-returns-to-york-city-on-permanent-deal/",
+        "https://www.transfermarkt.co.uk/york-city/kader/verein/1252"
+      ],
+      "notes": "Age is normalized at the 2026-09-27 snapshot from FootballSquads' 30/07/2004 date of birth. York confirms the June 2026 permanent signing; €75k is the current published squad value."
+    },
+    "Ashley Palmer": {
+      "age": 33,
+      "marketValueM": 0,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/york.htm",
+        "https://www.transfermarkt.co.uk/york-city/kader/verein/1252"
+      ],
+      "notes": "Transfermarkt publishes this player as Ashley Palmer; York commonly uses Ash Palmer. Detailed role is centre-back. No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Alex Hunt": {
+      "age": 26,
+      "marketValueM": 0,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/york.htm",
+        "https://www.transfermarkt.co.uk/york-city/kader/verein/1252"
+      ],
+      "notes": "Detailed current role is central midfield. No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Frankie Maguire": {
+      "age": 23,
+      "marketValueM": 0,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/york.htm",
+        "https://www.yorkcityfootballclub.co.uk/news/2026/june/11/frankie-maguire-joins-the-minstermen/",
+        "https://www.soccerbase.com/players/player.sd?player_id=137886"
+      ],
+      "notes": "York confirms the July 2026 signing. Age is normalized from the published 29/07/2003 date of birth. Detailed squad evidence lists attacking midfield. No published market value is available; 0 records unavailable evidence rather than an estimate."
+    },
+    "Arthur Read": {
+      "age": 26,
+      "marketValueM": 0.35,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/york.htm",
+        "https://www.transfermarkt.co.uk/arthur-read/profil/spieler/458187",
+        "https://bbc.com.im/sport/football/articles/cn07g0447jro"
+      ]
+    },
+    "Craig Hewitt": {
+      "age": 22,
+      "marketValueM": 0,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/york.htm",
+        "https://www.transfermarkt.co.uk/craig-hewitt/profil/spieler/1066935",
+        "https://yorkcityfootballclub.co.uk/dvteam/craig-hewitt/"
+      ],
+      "notes": "Craig turns 23 on 28/09/2026, one day after this snapshot. Detailed role is left midfield/left wing. No published market value is available; 0 records unavailable evidence rather than an estimate."
+    },
+    "Hiram Boateng": {
+      "age": 30,
+      "marketValueM": 0,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/york.htm",
+        "https://www.transfermarkt.co.uk/york-city/kader/verein/1252"
+      ],
+      "notes": "Detailed current role is central midfield. No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Joe Grey": {
+      "age": 23,
+      "marketValueM": 0,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/york.htm",
+        "https://www.transfermarkt.co.uk/joe-grey/profil/spieler/730305"
+      ],
+      "notes": "Detailed role is left winger, with centre-forward and right-wing alternatives. No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Josh Stones": {
+      "age": 22,
+      "marketValueM": 0,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/york.htm",
+        "https://www.transfermarkt.co.uk/york-city/kader/verein/1252"
+      ],
+      "notes": "Detailed current role is centre-forward. No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Ollie Pearce": {
+      "age": 31,
+      "marketValueM": 0,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/york.htm",
+        "https://www.transfermarkt.co.uk/york-city/kader/verein/1252"
+      ],
+      "notes": "Age is normalized at the 2026-09-27 snapshot from the published 08/08/1995 date of birth; older cached squad pages still display 30. Detailed role is centre-forward. No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Jovan Malcolm": {
+      "age": 23,
+      "marketValueM": 0.1,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/york.htm",
+        "https://www.transfermarkt.co.uk/jovan-malcolm/profil/spieler/671073",
+        "https://www.yorkmix.com/york-city-sign-forward-jovan-malcolm-on-loan"
+      ],
+      "notes": "Current York evidence confirms the 26/08/2026 loan from Stevenage until January 2027. Transfermarkt publishes a 10/12/2002 date of birth and centre-forward role with a €100k last-published value; one live stats provider publishes a conflicting August 2002 date, so the detailed Transfermarkt record is retained as the age/value authority for this pack."
+    }
+  }
+}
