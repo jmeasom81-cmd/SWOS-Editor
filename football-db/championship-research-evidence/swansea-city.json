@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "swansea-city",
+  "snapshot": "2026-09-27",
+  "sourceSummary": "Swansea City current 2026/27 squad cross-check using live squad listings and official/current transfer confirmations, with latest published Transfermarkt market values and role data. Elijah Just's July 2026 move from Motherwell is treated as current-club truth while his latest published valuation remains separately sourced from the pre-transfer profile.",
+  "players": {
+    "Andy Fisher": {
+      "age": 28,
+      "marketValueM": 0.6,
+      "position": 0,
+      "sources": [
+        "https://www.soccerbase.com/teams/team.sd?team_id=2513",
+        "https://www.transfermarkt.com/andy-fisher/marktwertverlauf/spieler/359199"
+      ],
+      "notes": "Current Swansea goalkeeper; maps to SWOS GK code 0. Latest published valuation €0.6m."
+    },
+    "Paul Farman": {
+      "age": 36,
+      "marketValueM": 0.05,
+      "position": 0,
+      "sources": [
+        "https://www.soccerbase.com/teams/team.sd?team_id=2513",
+        "https://www.transfermarkt.com/paul-farman/marktwertverlauf/spieler/97930"
+      ],
+      "notes": "Current Swansea goalkeeper; maps to SWOS GK code 0. Latest published valuation €0.05m."
+    },
+    "Josh Key": {
+      "age": 26,
+      "marketValueM": 1.2,
+      "position": 1,
+      "sources": [
+        "https://www.soccerbase.com/teams/team.sd?team_id=2513",
+        "https://www.transfermarkt.com/josh-key/profil/spieler/533912"
+      ],
+      "notes": "Primary right-back maps to SWOS RB code 1. Latest published valuation €1.2m."
+    },
+    "Ben Cabango": {
+      "age": 26,
+      "marketValueM": 9,
+      "position": 3,
+      "sources": [
+        "https://www.soccerbase.com/teams/team.sd?team_id=2513",
+        "https://www.transfermarkt.co.uk/benjamin-cabango/marktwertverlauf/spieler/496659"
+      ],
+      "notes": "Centre-back maps to SWOS defender code 3. Latest published valuation €9m."
+    },
+    "Josh Tymon": {
+      "age": 27,
+      "marketValueM": 10,
+      "position": 2,
+      "sources": [
+        "https://www.soccerbase.com/teams/team.sd?team_id=2513",
+        "https://www.transfermarkt.co.uk/josh-tymon/marktwertverlauf/spieler/419929"
+      ],
+      "notes": "Primary left-back maps to SWOS LB code 2. Latest published valuation €10m."
+    },
+    "Cameron Burgess": {
+      "age": 30,
+      "marketValueM": 1.5,
+      "position": 3,
+      "sources": [
+        "https://www.soccerbase.com/teams/team.sd?team_id=2513",
+        "https://www.transfermarkt.co.uk/cameron-burgess/profil/spieler/255788"
+      ],
+      "notes": "Centre-back maps to SWOS defender code 3. Latest published valuation €1.5m."
+    },
+    "Tiago Parente": {
+      "age": 20,
+      "marketValueM": 0.5,
+      "position": 2,
+      "sources": [
+        "https://www.soccerbase.com/teams/team.sd?team_id=2513",
+        "https://www.sofascore.com/football/player/tiago-parente/1479518",
+        "https://www.transfermarkt.co.uk/tiago-parente/profil/spieler/1093811"
+      ],
+      "notes": "Current Swansea left-back on loan; latest published valuation €0.5m. Primary left-back maps to SWOS LB code 2."
+    },
+    "Stephen Welsh": {
+      "age": 26,
+      "marketValueM": 2,
+      "position": 3,
+      "sources": [
+        "https://www.soccerbase.com/teams/team.sd?team_id=2513",
+        "https://www.transfermarkt.com/stephen-welsh/profil/spieler/403568"
+      ],
+      "notes": "Current Swansea centre-back; maps to SWOS defender code 3. Latest published valuation €2m."
+    },
+    "Jay Fulton": {
+      "age": 32,
+      "marketValueM": 0.45,
+      "position": 6,
+      "sources": [
+        "https://www.soccerbase.com/teams/team.sd?team_id=2513",
+        "https://www.transfermarkt.com/jay-fulton/profil/spieler/171260"
+      ],
+      "notes": "Central midfield maps to SWOS midfield code 6. Latest published valuation €0.45m."
+    },
+    "Marko Stamenic": {
+      "age": 24,
+      "marketValueM": 3,
+      "position": 6,
+      "sources": [
+        "https://www.soccerbase.com/teams/team.sd?team_id=2513",
+        "https://www.transfermarkt.co.uk/marko-stamenic/profil/spieler/617018"
+      ],
+      "notes": "ASCII identity name retained for Marko Stamenić. Central midfield maps to SWOS code 6. Latest published valuation €3m."
+    },
+    "Melker Widell": {
+      "age": 24,
+      "marketValueM": 1.8,
+      "position": 6,
+      "sources": [
+        "https://www.soccerbase.com/teams/team.sd?team_id=2513",
+        "https://www.transfermarkt.co.uk/melker-widell/profil/spieler/579295"
+      ],
+      "notes": "Central midfield maps to SWOS code 6. Latest published valuation €1.8m."
+    },
+    "Elijah Just": {
+      "age": 26,
+      "marketValueM": 2.5,
+      "position": 6,
+      "sources": [
+        "https://www.soccerbase.com/teams/team.sd?team_id=2513",
+        "https://www.motherwellfc.co.uk/2026/07/22/elijah-just-moves-to-swansea-for-club-record-fee/",
+        "https://www.transfermarkt.co.uk/elijah-just/profil/spieler/485672"
+      ],
+      "notes": "Motherwell confirms the July 2026 permanent move to Swansea. Latest published Transfermarkt valuation €2.5m predates the move. Attacking midfield maps to SWOS midfield code 6."
+    },
+    "Goncalo Franco": {
+      "age": 25,
+      "marketValueM": 4,
+      "position": 6,
+      "sources": [
+        "https://www.soccerbase.com/teams/team.sd?team_id=2513",
+        "https://www.transfermarkt.co.uk/goncalo-franco/profil/spieler/674798"
+      ],
+      "notes": "ASCII identity name retained for Gonçalo Franco. Central midfield maps to SWOS code 6. Latest published valuation €4m."
+    },
+    "Zan Vipotnik": {
+      "age": 24,
+      "marketValueM": 22,
+      "position": 7,
+      "sources": [
+        "https://www.soccerbase.com/teams/team.sd?team_id=2513",
+        "https://www.transfermarkt.com/zan-vipotnik/transfers/spieler/506942/transfer_id/5163386"
+      ],
+      "notes": "ASCII identity name retained for Žan Vipotnik. Centre-forward maps to SWOS attack code 7. Latest published valuation €22m."
+    },
+    "Jisung Eom": {
+      "age": 24,
+      "marketValueM": 1.8,
+      "position": 5,
+      "sources": [
+        "https://www.soccerbase.com/teams/team.sd?team_id=2513",
+        "https://www.transfermarkt.co.uk/ji-sung-eom/profil/spieler/706968"
+      ],
+      "notes": "Current Swansea left winger; maps to SWOS LW/LM code 5. Latest published valuation €1.8m."
+    },
+    "Adam Idah": {
+      "age": 25,
+      "marketValueM": 4.5,
+      "position": 7,
+      "sources": [
+        "https://www.soccerbase.com/teams/team.sd?team_id=2513",
+        "https://www.transfermarkt.co.uk/adam-idah/profil/spieler/434223"
+      ],
+      "notes": "Centre-forward maps to SWOS attack code 7. Latest published valuation €4.5m."
+    }
+  }
+}
