@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "sheffield-united",
+  "snapshot": "2026-09-11",
+  "sourceSummary": "Sheffield United 2026/27 current first-team selection cross-checked against the official 2026/27 retail personalisation roster and contemporary squad evidence, with latest published Transfermarkt valuations and positional data. For late-window arrivals whose Transfermarkt club field still reflects a previous club, current Sheffield United roster evidence is kept separate from valuation evidence.",
+  "players": {
+    "Michael Cooper": {
+      "age": 26,
+      "marketValueM": 10,
+      "position": 0,
+      "sources": [
+        "https://store.sufc.co.uk/en/sheffield-united-fc/home/t-9618",
+        "https://www.transfermarkt.co.uk/sheffield-united/kader/verein/350/saison_id/2026"
+      ],
+      "notes": "Goalkeeper maps to SWOS code 0; latest published valuation €10m."
+    },
+    "Adam Davies": {
+      "age": 34,
+      "marketValueM": 0.2,
+      "position": 0,
+      "sources": [
+        "https://www.transfermarkt.co.uk/sheffield-united/kader/verein/350/saison_id/2026"
+      ],
+      "notes": "DOB 17 July 1992 gives age 34 at the 11 September 2026 snapshot. Goalkeeper maps to SWOS code 0; latest published valuation €0.2m."
+    },
+    "Matt Doherty": {
+      "age": 34,
+      "marketValueM": 1,
+      "position": 1,
+      "sources": [
+        "https://store.sufc.co.uk/en/sheffield-united-fc/home/t-9618",
+        "https://www.transfermarkt.co.uk/matt-doherty/profil/spieler/171679"
+      ],
+      "notes": "Official Sheffield United 2026/27 personalisation confirms current squad status while the latest Transfermarkt valuation page still shows his pre-signing status. Primary right-back maps to SWOS RB code 1; latest published valuation €1m."
+    },
+    "Japhet Tanganga": {
+      "age": 27,
+      "marketValueM": 6,
+      "position": 3,
+      "sources": [
+        "https://store.sufc.co.uk/en/sheffield-united-fc/men-jerseys-replica/t-10397897%2Bga-56%2Bd-2306666752-29704%2Bz-9-316890588",
+        "https://www.transfermarkt.co.uk/sheffield-united/kader/verein/350/saison_id/2026"
+      ],
+      "notes": "Current Sheffield United shirt personalisation lists Tanganga #5. Centre-back maps to SWOS defender code 3; latest published valuation €6m."
+    },
+    "Harrison Burrows": {
+      "age": 24,
+      "marketValueM": 10,
+      "position": 2,
+      "sources": [
+        "https://store.sufc.co.uk/en/sheffield-united-fc/home/t-9618",
+        "https://www.transfermarkt.co.uk/harrison-burrows/profil/spieler/533980"
+      ],
+      "notes": "Primary left-back maps to SWOS LB code 2; latest published valuation €10m."
+    },
+    "Liam Kitching": {
+      "age": 26,
+      "marketValueM": 14,
+      "position": 3,
+      "sources": [
+        "https://store.sufc.co.uk/en/sheffield-united-fc/football-kits-home/t-21179075%2Bd-7872216171%2Bz-92-2725256449",
+        "https://www.transfermarkt.co.uk/liam-kitching/profil/spieler/534701"
+      ],
+      "notes": "Official Sheffield United 2026/27 kit personalisation confirms current squad status while the valuation profile still reflects Coventry. Centre-back maps to SWOS defender code 3; latest published valuation €14m."
+    },
+    "Mark McGuinness": {
+      "age": 25,
+      "marketValueM": 7,
+      "position": 3,
+      "sources": [
+        "https://www.transfermarkt.co.uk/sheffield-united/kader/verein/350/saison_id/2026"
+      ],
+      "notes": "Centre-back maps to SWOS defender code 3; latest published valuation €7m."
+    },
+    "Rhys Norrington-Davies": {
+      "age": 27,
+      "marketValueM": 2.5,
+      "position": 2,
+      "sources": [
+        "https://store.sufc.co.uk/en/sheffield-united-fc/football-kits-home/t-21179075%2Bd-7872216171%2Bz-92-2725256449",
+        "https://www.transfermarkt.co.uk/rhys-norrington-davies/profil/spieler/543164"
+      ],
+      "notes": "Primary left-back maps to SWOS LB code 2; latest published valuation €2.5m."
+    },
+    "Ollie Arblaster": {
+      "age": 22,
+      "marketValueM": 1.5,
+      "position": 6,
+      "sources": [
+        "https://store.sufc.co.uk/en/sheffield-united-fc/home/t-9618",
+        "https://www.transfermarkt.co.uk/oliver-arblaster/profil/spieler/874066"
+      ],
+      "notes": "Identity uses Ollie Arblaster while Transfermarkt renders Oliver Arblaster. Central midfield maps to SWOS code 6; latest published valuation €1.5m."
+    },
+    "Joe Rothwell": {
+      "age": 31,
+      "marketValueM": 0.6,
+      "position": 6,
+      "sources": [
+        "https://www.transfermarkt.co.uk/joe-rothwell/profil/spieler/183293"
+      ],
+      "notes": "Central midfield maps to SWOS code 6; latest published valuation €0.6m."
+    },
+    "Hamza Choudhury": {
+      "age": 28,
+      "marketValueM": 4,
+      "position": 6,
+      "sources": [
+        "https://store.sufc.co.uk/en/sheffield-united-fc/home/t-9618",
+        "https://www.footballsquads.co.uk/eng/2026-2027/flone/leicester.htm",
+        "https://www.transfermarkt.co.uk/hamza-choudhury/profil/spieler/341501/1000/"
+      ],
+      "notes": "Current Sheffield United store and Leicester departure record establish the 2026/27 move; latest Transfermarkt valuation still reflects Leicester. Defensive midfield maps to SWOS midfield code 6; latest published valuation €4m."
+    },
+    "Romelle Donovan": {
+      "age": 19,
+      "marketValueM": 3.5,
+      "position": 4,
+      "sources": [
+        "https://store.sufc.co.uk/en/sheffield-united-fc/men-jerseys-replica/t-10397897%2Bga-56%2Bd-2306666752-29704%2Bz-9-316890588",
+        "https://www.transfermarkt.co.uk/romelle-donovan/profil/spieler/1091562"
+      ],
+      "notes": "Transfermarkt confirms the current Sheffield United loan. Primary right-wing role maps to SWOS RW/RM code 4; latest published valuation €3.5m."
+    },
+    "Kalvin Phillips": {
+      "age": 30,
+      "marketValueM": 2.5,
+      "position": 6,
+      "sources": [
+        "https://store.sufc.co.uk/en/sheffield-united-fc/home/t-9618",
+        "https://www.footballsquads.co.uk/eng/2026-2027/engprem/mancity.htm",
+        "https://www.transfermarkt.co.uk/kalvin-phillips/profil/spieler/351749"
+      ],
+      "notes": "Manchester City departure evidence records the Sheffield United loan and the official Sheffield United store lists Phillips #27. Latest valuation profile still reflects Manchester City ownership. Defensive midfield maps to SWOS code 6; latest published valuation €2.5m."
+    },
+    "Tom Cannon": {
+      "age": 23,
+      "marketValueM": 7,
+      "position": 7,
+      "sources": [
+        "https://store.sufc.co.uk/en/sheffield-united-fc/home/t-9618",
+        "https://www.transfermarkt.co.uk/tom-cannon/profil/spieler/669366"
+      ],
+      "notes": "Centre-forward maps to SWOS attack code 7; latest published valuation €7m."
+    },
+    "Tyrese Campbell": {
+      "age": 26,
+      "marketValueM": 7,
+      "position": 7,
+      "sources": [
+        "https://store.sufc.co.uk/en/sheffield-united-fc/home/t-9618",
+        "https://www.transfermarkt.co.uk/tyrese-campbell/profil/spieler/382554"
+      ],
+      "notes": "Centre-forward maps to SWOS attack code 7; latest published valuation €7m."
+    },
+    "Patrick Bamford": {
+      "age": 33,
+      "marketValueM": 1,
+      "position": 7,
+      "sources": [
+        "https://store.sufc.co.uk/en/sheffield-united-fc/home/t-9618",
+        "https://www.transfermarkt.co.uk/patrick-bamford/profil/spieler/183334"
+      ],
+      "notes": "DOB 5 September 1993 gives age 33 at the 11 September 2026 snapshot. Centre-forward maps to SWOS attack code 7; latest published valuation €1m."
+    }
+  }
+}
