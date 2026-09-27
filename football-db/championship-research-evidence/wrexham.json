@@ -2,168 +2,153 @@
   "schemaVersion": 1,
   "season": "2026/27",
   "clubId": "wrexham",
-  "snapshot": "2026-09-12",
-  "sourceSummary": "Wrexham 2026/27 post-window squad, age, market-value and exact-position cross-check using FootballSquads and current Transfermarkt evidence.",
+  "snapshot": "2026-09-27",
+  "sourceSummary": "Wrexham 2026/27 current Championship squad and market-value cross-check using a live current squad/value feed. All 16 selected identities remain current at the 27 September 2026 snapshot, so no roster correction is required.",
   "players": {
     "Danny Ward": {
       "age": 33,
       "marketValueM": 0.6,
       "position": 0,
       "sources": [
-        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wrexham.htm",
-        "https://www.transfermarkt.com/wrexham-afc/kader/verein/1112/saison_id/2026"
+        "https://matchchase.com/team/wrexham/squad"
       ],
-      "notes": "Goalkeeper maps to SWOS goalkeeper code 0; latest published valuation €0.6m."
+      "notes": "Current Wrexham goalkeeper; maps to SWOS GK code 0. Current published valuation €0.6m."
     },
     "Anthony Patterson": {
       "age": 26,
       "marketValueM": 8,
       "position": 0,
       "sources": [
-        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wrexham.htm",
-        "https://www.transfermarkt.com/wrexham-afc/kader/verein/1112/saison_id/2026"
+        "https://matchchase.com/team/wrexham/squad"
       ],
-      "notes": "Goalkeeper maps to SWOS goalkeeper code 0; latest published valuation €8m."
+      "notes": "Current Wrexham goalkeeper; maps to SWOS GK code 0. Current published valuation €8m."
     },
     "Callum Doyle": {
       "age": 22,
       "marketValueM": 12,
       "position": 3,
       "sources": [
-        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wrexham.htm",
-        "https://www.transfermarkt.com/wrexham-afc/kader/verein/1112/saison_id/2026"
+        "https://matchchase.com/team/wrexham/squad"
       ],
-      "notes": "Centre-Back maps to SWOS centre-back code 3; latest published valuation €12m."
+      "notes": "Centre-back maps to SWOS defender code 3. Current published valuation €12m."
     },
     "Jacques Ekomie": {
       "age": 23,
       "marketValueM": 9,
       "position": 2,
       "sources": [
-        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wrexham.htm",
-        "https://www.transfermarkt.com/wrexham-afc/kader/verein/1112/saison_id/2026"
+        "https://matchchase.com/team/wrexham/squad"
       ],
-      "notes": "Left-Back maps to SWOS left-back code 2; latest published valuation €9m."
+      "notes": "ASCII identity name retained for Jacques Ekomié. Primary left-back maps to SWOS LB code 2. Current published valuation €9m."
     },
     "Max Cleworth": {
       "age": 24,
       "marketValueM": 10,
       "position": 3,
       "sources": [
-        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wrexham.htm",
-        "https://www.transfermarkt.com/wrexham-afc/kader/verein/1112/saison_id/2026"
+        "https://matchchase.com/team/wrexham/squad"
       ],
-      "notes": "Centre-Back maps to SWOS centre-back code 3; latest published valuation €10m."
+      "notes": "Centre-back maps to SWOS defender code 3. Current published valuation €10m."
     },
     "Dominic Hyam": {
       "age": 30,
       "marketValueM": 2,
       "position": 3,
       "sources": [
-        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wrexham.htm",
-        "https://www.transfermarkt.com/wrexham-afc/kader/verein/1112/saison_id/2026"
+        "https://matchchase.com/team/wrexham/squad"
       ],
-      "notes": "Centre-Back maps to SWOS centre-back code 3; latest published valuation €2m."
+      "notes": "Centre-back maps to SWOS defender code 3. Current published valuation €2m."
     },
     "Joe Worrall": {
       "age": 29,
       "marketValueM": 2,
       "position": 3,
       "sources": [
-        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wrexham.htm",
-        "https://www.transfermarkt.com/wrexham-afc/kader/verein/1112/saison_id/2026"
+        "https://matchchase.com/team/wrexham/squad"
       ],
-      "notes": "Centre-Back maps to SWOS centre-back code 3; latest published valuation €2m."
+      "notes": "Current Wrexham centre-back after his September 2026 arrival. Maps to SWOS defender code 3. Current published valuation €2m."
     },
     "Issa Kabore": {
       "age": 25,
       "marketValueM": 4,
       "position": 1,
       "sources": [
-        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wrexham.htm",
-        "https://www.transfermarkt.com/wrexham-afc/kader/verein/1112/saison_id/2026"
+        "https://matchchase.com/team/wrexham/squad"
       ],
-      "notes": "Right-Back maps to SWOS right-back code 1; latest published valuation €4m."
+      "notes": "ASCII identity name retained for Issa Kaboré. Primary right-back maps to SWOS RB code 1. Current published valuation €4m."
     },
     "Ben Whiteman": {
       "age": 30,
       "marketValueM": 2,
       "position": 6,
       "sources": [
-        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wrexham.htm",
-        "https://www.transfermarkt.com/wrexham-afc/kader/verein/1112/saison_id/2026"
+        "https://matchchase.com/team/wrexham/squad"
       ],
-      "notes": "Central Midfield maps to SWOS midfield code 6; latest published valuation €2m."
+      "notes": "Central midfield maps to SWOS code 6. Current published valuation €2m."
     },
     "Josh Windass": {
       "age": 32,
       "marketValueM": 1,
       "position": 6,
       "sources": [
-        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wrexham.htm",
-        "https://www.transfermarkt.com/wrexham-afc/kader/verein/1112/saison_id/2026"
+        "https://matchchase.com/team/wrexham/squad"
       ],
-      "notes": "Attacking Midfield maps to SWOS midfield code 6; latest published valuation €1m."
+      "notes": "Attacking midfield maps to SWOS midfield code 6. Current published valuation €1m."
     },
     "George Thomason": {
       "age": 25,
       "marketValueM": 2.5,
       "position": 6,
       "sources": [
-        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wrexham.htm",
-        "https://www.transfermarkt.com/wrexham-afc/kader/verein/1112/saison_id/2026"
+        "https://matchchase.com/team/wrexham/squad"
       ],
-      "notes": "Central Midfield maps to SWOS midfield code 6; latest published valuation €2.5m."
+      "notes": "Central midfield maps to SWOS code 6. Current published valuation €2.5m."
     },
     "George Dobson": {
       "age": 28,
       "marketValueM": 1.5,
       "position": 6,
       "sources": [
-        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wrexham.htm",
-        "https://www.transfermarkt.com/wrexham-afc/kader/verein/1112/saison_id/2026"
+        "https://matchchase.com/team/wrexham/squad",
+        "https://xgstats.com/players/632548/george-dobson"
       ],
-      "notes": "Defensive Midfield maps to SWOS midfield code 6; latest published valuation €1.5m."
+      "notes": "Defensive midfield maps to SWOS code 6. Current published valuation €1.5m."
     },
     "Callum O'Hare": {
       "age": 28,
       "marketValueM": 5,
       "position": 6,
       "sources": [
-        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wrexham.htm",
-        "https://www.transfermarkt.com/wrexham-afc/kader/verein/1112/saison_id/2026"
+        "https://matchchase.com/team/wrexham/squad"
       ],
-      "notes": "Attacking Midfield maps to SWOS midfield code 6; latest published valuation €5m."
+      "notes": "Attacking midfield maps to SWOS midfield code 6. Current published valuation €5m."
     },
     "Bailey-Tye Cadamarteri": {
       "age": 21,
       "marketValueM": 2,
       "position": 7,
       "sources": [
-        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wrexham.htm",
-        "https://www.transfermarkt.com/wrexham-afc/kader/verein/1112/saison_id/2026"
+        "https://matchchase.com/team/wrexham/squad"
       ],
-      "notes": "Centre-Forward maps to SWOS attack code 7; latest published valuation €2m."
+      "notes": "Centre-forward maps to SWOS attack code 7. Current published valuation €2m."
     },
     "Kieffer Moore": {
       "age": 34,
       "marketValueM": 1.3,
       "position": 7,
       "sources": [
-        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wrexham.htm",
-        "https://www.transfermarkt.com/wrexham-afc/kader/verein/1112/saison_id/2026"
+        "https://matchchase.com/team/wrexham/squad"
       ],
-      "notes": "Centre-Forward maps to SWOS attack code 7; latest published valuation €1.3m."
+      "notes": "Centre-forward maps to SWOS attack code 7. Current published valuation €1.3m."
     },
     "Sam Smith": {
       "age": 28,
       "marketValueM": 1.2,
       "position": 7,
       "sources": [
-        "https://www.footballsquads.co.uk/eng/2026-2027/flcham/wrexham.htm",
-        "https://www.transfermarkt.com/wrexham-afc/kader/verein/1112/saison_id/2026"
+        "https://matchchase.com/team/wrexham/squad"
       ],
-      "notes": "Centre-Forward maps to SWOS attack code 7; latest published valuation €1.2m."
+      "notes": "Centre-forward maps to SWOS attack code 7. Current published valuation €1.2m."
     }
   }
 }
