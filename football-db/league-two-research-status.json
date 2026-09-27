@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026/27",
-  "generatedAt": "2026-09-27T18:42:00.000Z",
+  "generatedAt": "2026-09-27T18:58:00.000Z",
   "division": {
     "code": 3,
     "name": "League Two",
@@ -9,13 +9,13 @@
   },
   "progress": {
     "identityReadyClubs": 24,
-    "researchReadyClubs": 18,
-    "researchPendingClubs": 6,
-    "researchedPlayers": 288
+    "researchReadyClubs": 19,
+    "researchPendingClubs": 5,
+    "researchedPlayers": 304
   },
   "next": {
-    "clubId": "salford-city",
-    "order": 19
+    "clubId": "shrewsbury-town",
+    "order": 20
   },
   "readyClubIds": [
     "accrington-stanley",
@@ -35,10 +35,10 @@
     "oldham-athletic",
     "port-vale",
     "rochdale",
-    "rotherham-united"
+    "rotherham-united",
+    "salford-city"
   ],
   "pendingClubIds": [
-    "salford-city",
     "shrewsbury-town",
     "swindon-town",
     "tranmere-rovers",
