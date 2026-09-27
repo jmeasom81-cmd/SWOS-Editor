@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "oldham-athletic",
+  "snapshot": "2026-09-27",
+  "sourceSummary": "Oldham Athletic current 2026/27 identity selection cross-checked against the committed FootballSquads roster/DOB source and Transfermarkt's 2026/27 detailed role/value evidence. Snapshot-date birthdays are normalized, broad identity groups are refined to SWOS roles, and unavailable published values are encoded as 0 rather than estimated.",
+  "players": {
+    "Mathew Hudson": {
+      "age": 28,
+      "marketValueM": 0.2,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/oldham.htm",
+        "https://www.transfermarkt.co.uk/oldham-athletic/kader/verein/1078/saison_id/2026"
+      ],
+      "notes": "Age is calculated at the 2026-09-27 snapshot from the published 29/07/1998 date of birth; older cached market pages still display 27."
+    },
+    "Aston Wilson": {
+      "age": 19,
+      "marketValueM": 0,
+      "position": 0,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/oldham.htm",
+        "https://www.transfermarkt.co.uk/oldham-athletic/kader/verein/1078/saison_id/2026"
+      ],
+      "notes": "No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Gus Scott-Morriss": {
+      "age": 29,
+      "marketValueM": 0,
+      "position": 1,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/oldham.htm",
+        "https://www.transfermarkt.co.uk/oldham-athletic/kader/verein/1078/saison_id/2026"
+      ],
+      "notes": "Detailed current role is right-back. No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Jamie Robson": {
+      "age": 28,
+      "marketValueM": 0.3,
+      "position": 2,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/oldham.htm",
+        "https://www.transfermarkt.co.uk/oldham-athletic/kader/verein/1078/saison_id/2026"
+      ]
+    },
+    "Donervon Daniels": {
+      "age": 32,
+      "marketValueM": 0.075,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/oldham.htm",
+        "https://www.transfermarkt.co.uk/oldham-athletic/kader/verein/1078/saison_id/2026"
+      ]
+    },
+    "Emmanuel Monthé": {
+      "age": 31,
+      "marketValueM": 0.15,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/oldham.htm",
+        "https://www.transfermarkt.co.uk/oldham-athletic/kader/verein/1078/saison_id/2026"
+      ],
+      "notes": "Transfermarkt publishes this player as Manny Monthe; the footballName key remains matched to the committed FootballSquads identity feed."
+    },
+    "Will Sutton": {
+      "age": 23,
+      "marketValueM": 0.15,
+      "position": 3,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/oldham.htm",
+        "https://www.transfermarkt.co.uk/oldham-athletic/kader/verein/1078/saison_id/2026"
+      ]
+    },
+    "Tom Pett": {
+      "age": 34,
+      "marketValueM": 0.075,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/oldham.htm",
+        "https://www.transfermarkt.co.uk/oldham-athletic/kader/verein/1078/saison_id/2026"
+      ]
+    },
+    "Keenan Appiah-Forson": {
+      "age": 24,
+      "marketValueM": 0,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/oldham.htm",
+        "https://www.transfermarkt.co.uk/oldham-athletic/kader/verein/1078/saison_id/2026"
+      ],
+      "notes": "Detailed current role is defensive midfield. No published market value is available in the cited current evidence; 0 records unavailable evidence rather than an estimate."
+    },
+    "Oliver Norburn": {
+      "age": 33,
+      "marketValueM": 0.075,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/oldham.htm",
+        "https://www.transfermarkt.co.uk/oldham-athletic/kader/verein/1078/saison_id/2026"
+      ]
+    },
+    "Noah Chilvers": {
+      "age": 25,
+      "marketValueM": 0.1,
+      "position": 6,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/oldham.htm",
+        "https://www.transfermarkt.co.uk/oldham-athletic/kader/verein/1078/saison_id/2026"
+      ],
+      "notes": "Detailed current role is attacking midfield."
+    },
+    "Josh Hawkes": {
+      "age": 27,
+      "marketValueM": 0.15,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/oldham.htm",
+        "https://www.transfermarkt.co.uk/oldham-athletic/kader/verein/1078/saison_id/2026"
+      ],
+      "notes": "Detailed current role is left midfield, mapped to the SWOS left-sided midfield/wing role."
+    },
+    "Mike Fondop": {
+      "age": 32,
+      "marketValueM": 0.075,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/oldham.htm",
+        "https://www.transfermarkt.co.uk/oldham-athletic/kader/verein/1078/saison_id/2026"
+      ]
+    },
+    "Calum Kavanagh": {
+      "age": 23,
+      "marketValueM": 0.25,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/oldham.htm",
+        "https://www.transfermarkt.co.uk/oldham-athletic/kader/verein/1078/saison_id/2026"
+      ],
+      "notes": "Age is calculated at the 2026-09-27 snapshot from the published 05/09/2003 date of birth; older cached market pages still display 22."
+    },
+    "Jack Stevens": {
+      "age": 25,
+      "marketValueM": 0.15,
+      "position": 5,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/oldham.htm",
+        "https://www.transfermarkt.co.uk/oldham-athletic/kader/verein/1078/saison_id/2026"
+      ],
+      "notes": "Detailed current role is left winger."
+    },
+    "Kane Drummond": {
+      "age": 25,
+      "marketValueM": 0.15,
+      "position": 7,
+      "sources": [
+        "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/oldham.htm",
+        "https://www.transfermarkt.co.uk/oldham-athletic/kader/verein/1078/saison_id/2026"
+      ]
+    }
+  }
+}
