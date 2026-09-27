@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026/27",
-  "generatedAt": "2026-09-27T17:45:00.000Z",
+  "generatedAt": "2026-09-27T18:02:00.000Z",
   "division": {
     "code": 3,
     "name": "League Two",
@@ -9,13 +9,13 @@
   },
   "progress": {
     "identityReadyClubs": 24,
-    "researchReadyClubs": 15,
-    "researchPendingClubs": 9,
-    "researchedPlayers": 240
+    "researchReadyClubs": 16,
+    "researchPendingClubs": 8,
+    "researchedPlayers": 256
   },
   "next": {
-    "clubId": "port-vale",
-    "order": 16
+    "clubId": "rochdale",
+    "order": 17
   },
   "readyClubIds": [
     "accrington-stanley",
@@ -32,10 +32,10 @@
     "grimsby-town",
     "newport-county",
     "northampton-town",
-    "oldham-athletic"
+    "oldham-athletic",
+    "port-vale"
   ],
   "pendingClubIds": [
-    "port-vale",
     "rochdale",
     "rotherham-united",
     "salford-city",
