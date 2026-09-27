@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SWOS Studio Club Profile Evidence v1",
+  "type": "object",
+  "required": ["schemaVersion","season","clubId","snapshot","sourceSummary","manager","formation","kits"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "season": {"const": "2026/27"},
+    "clubId": {"type": "string","minLength": 1},
+    "snapshot": {"type": "string","pattern": "^2026-[0-9]{2}-[0-9]{2}$"},
+    "sourceSummary": {"type": "string","minLength": 1},
+    "manager": {
+      "type": "object",
+      "required": ["fullName","swosName","sources"],
+      "properties": {
+        "fullName": {"type": "string","minLength": 1},
+        "swosName": {"type": "string","minLength": 1,"maxLength": 24},
+        "sources": {"type":"array","minItems":1,"items":{"type":"string","minLength":1}},
+        "notes": {"type":["string","null"]}
+      },
+      "additionalProperties": false
+    },
+    "formation": {
+      "type": "object",
+      "required": ["observedFormation","swosFormation","swosTacticCode","sources"],
+      "properties": {
+        "observedFormation": {"type":"string","minLength":1},
+        "swosFormation": {"enum":["4-4-2","5-4-1","4-5-1","5-3-2","3-5-2","4-3-3","4-2-4","3-4-3","Sweeper","5-2-3","Attack","Defend","User A","User B","User C","User D","User E","User F"]},
+        "swosTacticCode": {"type":"integer","minimum":0,"maximum":17},
+        "sources": {"type":"array","minItems":1,"items":{"type":"string","minLength":1}},
+        "notes": {"type":["string","null"]}
+      },
+      "additionalProperties": false
+    },
+    "kits": {
+      "type":"object",
+      "required":["home","away"],
+      "properties":{
+        "home":{"$ref":"#/$defs/kit"},
+        "away":{"$ref":"#/$defs/kit"}
+      },
+      "additionalProperties":false
+    }
+  },
+  "$defs": {
+    "kit": {
+      "type":"object",
+      "required":["styleCode","style","shirt1","shirt2","shorts","socks","sources"],
+      "properties":{
+        "styleCode":{"type":"integer","minimum":0,"maximum":3},
+        "style":{"enum":["Plain","Colored sleeves","Vertical stripes","Horizontal stripes"]},
+        "shirt1":{"type":"integer","minimum":0,"maximum":9},
+        "shirt2":{"type":"integer","minimum":0,"maximum":9},
+        "shorts":{"type":"integer","minimum":0,"maximum":9},
+        "socks":{"type":"integer","minimum":0,"maximum":9},
+        "sources":{"type":"array","minItems":1,"items":{"type":"string","minLength":1}},
+        "notes":{"type":["string","null"]}
+      },
+      "additionalProperties":false
+    }
+  },
+  "additionalProperties": false
+}
