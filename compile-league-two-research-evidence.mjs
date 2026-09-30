@@ -101,7 +101,7 @@ function swosPosition(role){
 
 const identityFiles=fs.readdirSync(IDENTITY_DIR).filter(file=>file.endsWith('.json')&&file!=='schema-v1.json').sort();
 const coverage=JSON.parse(fs.readFileSync('football-db/coverage.json','utf8'));
-const clubNames=new Map(coverage.clubs.filter(club=>club.division===2).map(club=>[club.id,club.name]));
+const clubNames=new Map(coverage.clubs.filter(club=>club.division===3).map(club=>[club.id,club.name]));
 if(identityFiles.length!==24||clubNames.size!==24)throw new Error(`Expected 24 League Two clubs; found ${identityFiles.length} evidence files and ${clubNames.size} coverage rows.`);
 fs.mkdirSync(OUT_DIR,{recursive:true});
 let playerTotal=0,zeroValues=0,searchFallbacks=0,aliasMatches=0;

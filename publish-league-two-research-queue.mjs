@@ -9,9 +9,9 @@ for(const file of [COVERAGE,IDENTITIES,MANIFEST])if(!fs.existsSync(file))throw n
 const coverage=JSON.parse(fs.readFileSync(COVERAGE,'utf8'));
 const identities=JSON.parse(fs.readFileSync(IDENTITIES,'utf8'));
 const manifest=JSON.parse(fs.readFileSync(MANIFEST,'utf8'));
-const leagueOne=coverage.divisions?.find(d=>d.code===3);
-if(leagueOne?.clubs!==24||leagueOne?.identityReady!==24)throw new Error(`League Two research queue: identity foundation must remain 24/24; found ${leagueOne?.identityReady||0}/24.`);
-const researchReady=Number(leagueOne?.researchReady||0);
+const leagueTwo=coverage.divisions?.find(d=>d.code===3);
+if(leagueTwo?.clubs!==24||leagueTwo?.identityReady!==24)throw new Error(`League Two research queue: identity foundation must remain 24/24; found ${leagueTwo?.identityReady||0}/24.`);
+const researchReady=Number(leagueTwo?.researchReady||0);
 if(!Number.isInteger(researchReady)||researchReady<0||researchReady>24)throw new Error(`League Two research queue: invalid research-ready total ${leagueOne?.researchReady}.`);
 
 const all=(coverage.clubs||[]).filter(c=>c.division===3).sort((a,b)=>a.name.localeCompare(b.name));
@@ -74,11 +74,11 @@ if(researchReady===24&&out.next!==null)throw new Error('League Two research queu
 
 fs.writeFileSync(OUT,JSON.stringify(out,null,2)+'\n','utf8');
 manifest.resources=manifest.resources||{};
-manifest.resources.leagueOneResearchQueue=OUT;
-manifest.resources.leagueOneResearchEvidenceSchema='football-db/league-two-research-evidence/schema-v1.json';
+manifest.resources.leagueTwoResearchQueue=OUT;
+manifest.resources.leagueTwoResearchEvidenceSchema='football-db/league-two-research-evidence/schema-v1.json';
 manifest.dataModel=manifest.dataModel||{};
-manifest.dataModel.leagueOneResearchQueue=true;
-manifest.dataModel.leagueOneResearchEvidenceGate=true;
+manifest.dataModel.leagueTwoResearchQueue=true;
+manifest.dataModel.leagueTwoResearchEvidenceGate=true;
 manifest.notes=Array.isArray(manifest.notes)?manifest.notes:[];
 manifest.notes=manifest.notes.filter(x=>!String(x).startsWith('League Two research queue staged '));
 manifest.notes.push(`League Two research queue staged ${queue.length} pending club(s) / ${stagedPlayers} identity-verified player slots / ${requiredEvidenceCells} required evidence cells; ${researchReady}/24 clubs are already research-ready.`);

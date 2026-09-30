@@ -72,8 +72,8 @@ const out={
 if(out.totals.clubs!==expectedClubs||out.totals.players!==expectedPlayers||out.totals.requiredEvidenceCells!==expectedCells)throw new Error('League Two research intake: derived totals do not match the pending queue.');
 if(researchReadyClubs+out.totals.clubs!==24)throw new Error('League Two research intake: ready + pending club totals must equal 24.');
 fs.writeFileSync(OUT,JSON.stringify(out,null,2)+'\n','utf8');
-manifest.resources=manifest.resources||{};manifest.resources.leagueOneResearchIntake=OUT;
-manifest.dataModel=manifest.dataModel||{};manifest.dataModel.leagueOneResearchIntake=true;manifest.dataModel.leagueOneResearchPromotionGuard=true;
+manifest.resources=manifest.resources||{};manifest.resources.leagueTwoResearchIntake=OUT;
+manifest.dataModel=manifest.dataModel||{};manifest.dataModel.leagueTwoResearchIntake=true;manifest.dataModel.leagueTwoResearchPromotionGuard=true;
 manifest.notes=Array.isArray(manifest.notes)?manifest.notes:[];manifest.notes=manifest.notes.filter(x=>!String(x).startsWith('League Two research intake tracks '));manifest.notes.push(`League Two research intake tracks ${requiredCells} required cells across ${out.totals.players} pending players; ${completeCells} cells are complete, ${promotionReady.length} club(s) pass the promotion guard and ${researchReadyClubs}/24 are already published.`);
 fs.writeFileSync(MANIFEST,JSON.stringify(manifest,null,2)+'\n','utf8');
 if(fs.existsSync('dist')){fs.mkdirSync('dist/football-db',{recursive:true});fs.copyFileSync(OUT,'dist/football-db/league-two-research-intake.json');fs.copyFileSync(MANIFEST,'dist/football-db/manifest.json');}
