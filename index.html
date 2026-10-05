@@ -4182,7 +4182,22 @@
     const before=source.bytes,after=before.slice(),clubChanges=[],playerChanges=[];
     let renamedClubs=0,divisionChanges=0,namesWritten=0,positionsWritten=0,nationalitiesWritten=0,shirtsWritten=0,valuesWritten=0,valuesPreserved=0,skillsPreserved=0;
 
-    // First apply the 92-club structural plan. Recognised clubs keep their familiar SWOS spelling;
+    // First normalise the physical division membership. Any legacy team slot not used by the
+    // modern 92-club map must not remain in divisions 0-3, otherwise an old club can survive
+    // alongside the complete 2026/27 structure and create a 93rd top-four team.
+    const mappedSlots=new Set(ENGLAND_2627_STRUCTURE.clubs.map(club=>seasonUpdateState.mapping[club.id]?.teamIndex).filter(Number.isInteger));
+    let legacyTopFourDemotions=0;
+    for(const team of (source.teams||[])){
+      if(mappedSlots.has(team.index)||team.division<0||team.division>3)continue;
+      const o=HEADER_SIZE+team.index*TEAM_RECORD_SIZE;
+      if(after[o+T.division]!==4){
+        after[o+T.division]=4;
+        legacyTopFourDemotions++;
+        divisionChanges++;
+      }
+    }
+
+    // Then apply the 92-club structural plan. Recognised clubs keep their familiar SWOS spelling;
     // reused legacy slots receive the modern club identity.
     for(const club of ENGLAND_2627_STRUCTURE.clubs){
       const map=seasonUpdateState.mapping[club.id],idx=map?.teamIndex;
@@ -4286,7 +4301,7 @@
       generatedAt:Date.now(),sourceFile:source.fileName,sourceModified:source.modified,
       sourceLength:before.length,previewLength:after.length,changedBytes,
       clubsMapped:92,premierClubs:20,playersWritten:playerChanges.length,verifiedClubs,championshipClubsPrepared,championshipPlayersWritten,verifiedChampionshipClubs,leagueOneClubsPrepared,leagueOnePlayersWritten,verifiedLeagueOneClubs,leagueTwoClubsPrepared,leagueTwoPlayersWritten,verifiedLeagueTwoClubs,
-      renamedClubs,divisionChanges,namesWritten,positionsWritten,nationalitiesWritten,shirtsWritten,valuesWritten,valuesPreserved,skillsPreserved,
+      renamedClubs,divisionChanges,legacyTopFourDemotions,namesWritten,positionsWritten,nationalitiesWritten,shirtsWritten,valuesWritten,valuesPreserved,skillsPreserved,
       byteLengthPass:after.length===before.length,reopenPass:verifiedClubs===20,physical92Pass,physicalDivisionCounts,physicalUniqueNames:physicalNames.size,physicalDuplicateNames:physicalDuplicates.length,
       clubChanges,playerChanges,
       previewBytes:after,
@@ -4441,6 +4456,7 @@
           <div class="audit-item"><small>Duplicate club names</small><strong>${p.physicalDuplicateNames}</strong></div>
           <div class="audit-item"><small>Physical divisions</small><strong>${p.physicalDivisionCounts.join(" / ")} ✓</strong></div>
           <div class="audit-item"><small>Division bytes changed</small><strong>${p.divisionChanges}</strong></div>
+          <div class="audit-item"><small>Unused legacy top-four slots moved out</small><strong>${p.legacyTopFourDemotions||0}</strong></div>
           <div class="audit-item"><small>Legacy club identities replaced</small><strong>${p.renamedClubs}</strong></div>
           <div class="audit-item"><small>Positions written</small><strong>${p.positionsWritten}</strong></div>
           <div class="audit-item"><small>Nationalities written</small><strong>${p.nationalitiesWritten}</strong></div>
