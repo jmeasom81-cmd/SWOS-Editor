@@ -5564,6 +5564,10 @@
         if(!group)missing.push("group");
         if(position===null)missing.push("position");
         if(value===null)missing.push("value");
+        if(age===null)missing.push("age");
+        if(minutes===null)missing.push("minutes");
+        if(goals===null)missing.push("goals");
+        if(assists===null)missing.push("assists");
         rows.push({division:targetDivisionName(club.division),club:club.name,clubId:club.id,player:name,shirt,nationality,group,position,positionLabel:scoutPositionLabel(position),age,value,minutes,goals,assists,missing,source:pack.source||"",snapshot:pack.snapshot||""});
       }
     }
@@ -5616,12 +5620,12 @@
       '<td style="padding:7px;border-bottom:1px solid #172a45">'+masterMissingCell(r.shirt,"SHIRT")+'</td>'+
       '<td style="padding:7px;border-bottom:1px solid #172a45">'+masterMissingCell(r.nationality,"NAT")+'</td>'+
       '<td style="padding:7px;border-bottom:1px solid #172a45">'+masterMissingCell(r.group,"GROUP")+'</td>'+
-      '<td style="padding:7px;border-bottom:1px solid #172a45">'+esc(r.positionLabel)+'</td>'+
-      '<td style="padding:7px;border-bottom:1px solid #172a45">'+(r.age==null?"":r.age)+'</td>'+
-      '<td style="padding:7px;border-bottom:1px solid #172a45">'+(r.value===null?'<span style="color:#ff8b8b;font-weight:900">MISSING</span>':esc(r.value))+'</td>'+
-      '<td style="padding:7px;border-bottom:1px solid #172a45">'+(r.minutes==null?"":r.minutes)+'</td>'+
-      '<td style="padding:7px;border-bottom:1px solid #172a45">'+(r.goals==null?"":r.goals)+'</td>'+
-      '<td style="padding:7px;border-bottom:1px solid #172a45">'+(r.assists==null?"":r.assists)+'</td>'+
+      '<td style="padding:7px;border-bottom:1px solid #172a45">'+masterMissingCell(r.positionLabel,"POS")+'</td>'+
+      '<td style="padding:7px;border-bottom:1px solid #172a45">'+masterMissingCell(r.age,"AGE")+'</td>'+
+      '<td style="padding:7px;border-bottom:1px solid #172a45">'+masterMissingCell(r.value,"VALUE")+'</td>'+
+      '<td style="padding:7px;border-bottom:1px solid #172a45">'+masterMissingCell(r.minutes,"MIN")+'</td>'+
+      '<td style="padding:7px;border-bottom:1px solid #172a45">'+masterMissingCell(r.goals,"GOALS")+'</td>'+
+      '<td style="padding:7px;border-bottom:1px solid #172a45">'+masterMissingCell(r.assists,"AST")+'</td>'+
       '<td style="padding:7px;border-bottom:1px solid #172a45">'+(r.missing.length?'<span style="color:#ff8b8b">'+esc(r.missing.join(", "))+'</span>':'<span style="color:var(--green)">Complete</span>')+'</td></tr>').join("");
     main.innerHTML='<section class="hero" style="justify-content:flex-start">'+
       '<button class="btn back" id="masterBack">← England 2026/27</button><div class="simple-pill">📊 LIVE MASTER DATA</div><h1>2026/27 Master Data</h1>'+
@@ -5630,7 +5634,7 @@
       '<div class="notice info section-gap"><strong>Blank means unverified, not zero.</strong><br>Market values are deliberately left blank until researched. This makes the outstanding work visible rather than hiding it behind guesses.</div>'+
       '<div class="scout-filters section-gap"><div class="field"><label>Search</label><input id="masterQuery" value="'+esc(s.query)+'" placeholder="Player, club, nationality, position"/></div>'+
       '<div class="grid2 section-gap"><div class="field"><label>Division</label><select id="masterDivision"><option value="all">All divisions</option>'+divOptions+'</select></div><div class="field"><label>Club</label><select id="masterClub"><option value="all">All clubs</option>'+clubOptions+'</select></div></div>'+
-      '<div class="grid2 section-gap"><div class="field"><label>Position group</label><select id="masterGroup"><option value="all">All positions</option>'+groupOptions+'</select></div><div class="field"><label>Missing data</label><select id="masterMissing"><option value="all" '+(s.missing==="all"?"selected":"")+'>All rows</option><option value="any" '+(s.missing==="any"?"selected":"")+'>Any core field missing</option><option value="value" '+(s.missing==="value"?"selected":"")+'>Missing market value</option><option value="shirt" '+(s.missing==="shirt"?"selected":"")+'>Missing shirt #</option><option value="nationality" '+(s.missing==="nationality"?"selected":"")+'>Missing nationality</option><option value="group" '+(s.missing==="group"?"selected":"")+'>Missing position group</option></select></div></div>'+
+      '<div class="grid2 section-gap"><div class="field"><label>Position group</label><select id="masterGroup"><option value="all">All positions</option>'+groupOptions+'</select></div><div class="field"><label>Missing data</label><select id="masterMissing"><option value="all" '+(s.missing==="all"?"selected":"")+'>All rows</option><option value="any" '+(s.missing==="any"?"selected":"")+'>Any core field missing</option><option value="value" '+(s.missing==="value"?"selected":"")+'>Missing market value</option><option value="shirt" '+(s.missing==="shirt"?"selected":"")+'>Missing shirt #</option><option value="nationality" '+(s.missing==="nationality"?"selected":"")+'>Missing nationality</option><option value="group" '+(s.missing==="group"?"selected":"")+'>Missing position group</option><option value="position" '+(s.missing==="position"?"selected":"")+'>Missing SWOS position</option><option value="age" '+(s.missing==="age"?"selected":"")+'>Missing age</option><option value="minutes" '+(s.missing==="minutes"?"selected":"")+'>Missing minutes</option><option value="goals" '+(s.missing==="goals"?"selected":"")+'>Missing goals</option><option value="assists" '+(s.missing==="assists"?"selected":"")+'>Missing assists</option></select></div></div>'+
       '<button class="btn btn-green big section-gap" id="masterApply">Apply filters</button><button class="btn btn-blue big section-gap" id="masterCsv">Download current master CSV · opens in Excel</button></div>'+
       '<div class="friendly-card section-gap"><div class="scout-summary"><span class="hit">'+filtered.length+' matching players</span><span>Page '+(s.page+1)+'/'+pages+'</span><span>'+(filtered.length?Math.min(start+1,filtered.length):0)+'–'+Math.min(start+s.pageSize,filtered.length)+'</span></div>'+
       '<div style="overflow:auto;margin-top:12px"><table style="width:100%;border-collapse:collapse;font-size:11px;min-width:1050px"><thead><tr>'+["Division","Club","Player","Shirt","Nationality","Group","SWOS Pos","Age","Value £m","Minutes","Goals","Assists","Gaps"].map(x=>'<th style="text-align:left;padding:8px;border-bottom:1px solid var(--line);color:var(--green);background:#091421">'+x+'</th>').join("")+'</tr></thead><tbody>'+body+'</tbody></table></div>'+
