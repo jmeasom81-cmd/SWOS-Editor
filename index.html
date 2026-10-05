@@ -4300,6 +4300,11 @@
   }
 
   async function saveSeasonCheckpoint(file,bytes){
+    const existing=await appStoreGet(SEASON_CHECKPOINT_KEY);
+    if(existing?.packId===ENGLAND_2627_STRUCTURE.id&&existing?.fileName===file.name&&existing?.bytes){
+      seasonUpdateState.checkpoint=existing;
+      return existing
+    }
     const checkpoint={
       version:1,
       packId:ENGLAND_2627_STRUCTURE.id,
@@ -4346,13 +4351,30 @@
         const perm=await source.fileHandle.requestPermission({mode:"readwrite"});
         if(perm!=="granted")throw new Error("Write permission was not granted.");
       }
-      const writable=await source.fileHandle.createWritable();
-      await writable.write(preview.previewBytes);
-      await writable.close();
+      let wroteFile=false;
+      try{
+        const writable=await source.fileHandle.createWritable();
+        await writable.write(preview.previewBytes);
+        await writable.close();
+        wroteFile=true;
+        const checkFile=await source.fileHandle.getFile();
+        const checkBytes=new Uint8Array(await checkFile.arrayBuffer());
+        if(!byteEqual(checkBytes,preview.previewBytes))throw new Error("TEAM file write verification did not match the preview.");
+        verifyInstalledEnglandBytes(checkBytes,checkFile.name);
+        source.bytes=checkBytes.slice();
+        source.modified=checkFile.lastModified;
+        source.teams=parseTeamFileBytes(checkBytes,checkFile.name).teams.map(t=>({index:t.index,name:t.name,division:t.division,nation:t.nation,teamNumber:t.teamNumber}));
+      }catch(writeError){
+        if(wroteFile){
+          try{await rollbackEnglandSeasonUpdate()}catch(rollbackError){
+            throw new Error(`${writeError.message} Automatic rollback also failed: ${rollbackError.message}. Use Restore pre-update England file before launching SWOS.`)
+          }
+          throw new Error(`${writeError.message} Studio automatically restored the pre-update England file.`)
+        }
+        throw writeError
+      }
       const checkFile=await source.fileHandle.getFile();
       const checkBytes=new Uint8Array(await checkFile.arrayBuffer());
-      if(!byteEqual(checkBytes,preview.previewBytes))throw new Error("TEAM file write verification did not match the preview.");
-      verifyInstalledEnglandBytes(checkBytes,checkFile.name);
       source.bytes=checkBytes.slice();
       source.modified=checkFile.lastModified;
       source.teams=parseTeamFileBytes(checkBytes,checkFile.name).teams.map(t=>({index:t.index,name:t.name,division:t.division,nation:t.nation,teamNumber:t.teamNumber}));
