@@ -3826,7 +3826,8 @@
 
   const SEASON_MAP_KEY="season-map:england-2026-27:v1";
   const LEGACY_PL_MAP_KEY="season-map:pl-2026-27";
-  const seasonUpdateState={loaded:false,loading:false,error:null,english:null,mapping:{},saved:false,viewDivision:0,showMapping:false,autoResolved:false,installerPreflight:null,preflightRunning:false,installPreview:null,previewRunning:false};
+  const SEASON_CHECKPOINT_KEY="season-checkpoint:england-2026-27:v1";
+  const seasonUpdateState={loaded:false,loading:false,error:null,english:null,mapping:{},saved:false,viewDivision:0,showMapping:false,autoResolved:false,installerPreflight:null,preflightRunning:false,installPreview:null,previewRunning:false,installing:false,checkpoint:null};
 
   function normalizeClubName(value){
     return String(value||"").toUpperCase()
@@ -4288,8 +4289,105 @@
       renamedClubs,divisionChanges,namesWritten,positionsWritten,nationalitiesWritten,shirtsWritten,valuesWritten,valuesPreserved,skillsPreserved,
       byteLengthPass:after.length===before.length,reopenPass:verifiedClubs===20,physical92Pass,physicalDivisionCounts,physicalUniqueNames:physicalNames.size,physicalDuplicateNames:physicalDuplicates.length,
       clubChanges,playerChanges,
-      writeEnabled:false
+      previewBytes:after,
+      writeEnabled:true
     }
+  }
+
+  async function loadSeasonCheckpoint(){
+    seasonUpdateState.checkpoint=await appStoreGet(SEASON_CHECKPOINT_KEY);
+    return seasonUpdateState.checkpoint
+  }
+
+  async function saveSeasonCheckpoint(file,bytes){
+    const checkpoint={
+      version:1,
+      packId:ENGLAND_2627_STRUCTURE.id,
+      createdAt:Date.now(),
+      fileName:file.name,
+      fileModified:file.lastModified,
+      byteLength:bytes.length,
+      bytes:bytes.slice()
+    };
+    const ok=await appStoreSet(SEASON_CHECKPOINT_KEY,checkpoint);
+    if(!ok)throw new Error("Studio could not store the automatic rollback checkpoint.");
+    seasonUpdateState.checkpoint=checkpoint;
+    return checkpoint
+  }
+
+  function verifyInstalledEnglandBytes(bytes,fileName){
+    validateTeam(bytes);
+    const reopened=parseTeamFileBytes(bytes,fileName);
+    const topFour=reopened.teams.filter(t=>t.division>=0&&t.division<=3);
+    const counts=[0,1,2,3].map(code=>topFour.filter(t=>t.division===code).length);
+    const names=new Set(topFour.map(t=>normalizeClubName(t.name)));
+    if(topFour.length!==92||names.size!==92||counts.join(",")!=="20,24,24,24"){
+      throw new Error(`Post-write verification failed: ${topFour.length} top-four clubs · ${names.size} unique · divisions ${counts.join("/")}`);
+    }
+    return{teams:topFour.length,unique:names.size,counts}
+  }
+
+  async function installEnglandSeasonUpdate(){
+    if(seasonUpdateState.installing)return false;
+    seasonUpdateState.installing=true;
+    try{
+      const source=seasonUpdateState.english;
+      if(!source?.fileHandle)throw new Error("Reconnect and analyse the England TEAM file first.");
+      const liveFile=await source.fileHandle.getFile();
+      const liveBytes=new Uint8Array(await liveFile.arrayBuffer());
+      if(liveFile.lastModified!==source.modified||!byteEqual(liveBytes,source.bytes)){
+        seasonUpdateState.installPreview=null;
+        throw new Error("The England TEAM file changed since Studio analysed it. No write was attempted. Re-scan and build a fresh preview.");
+      }
+      const preview=buildPremierInstallPreview();
+      if(!preview.writeEnabled||!preview.byteLengthPass||!preview.physical92Pass)throw new Error("The install preview is not safe to write.");
+      await saveSeasonCheckpoint(liveFile,liveBytes);
+      if(source.fileHandle.requestPermission){
+        const perm=await source.fileHandle.requestPermission({mode:"readwrite"});
+        if(perm!=="granted")throw new Error("Write permission was not granted.");
+      }
+      const writable=await source.fileHandle.createWritable();
+      await writable.write(preview.previewBytes);
+      await writable.close();
+      const checkFile=await source.fileHandle.getFile();
+      const checkBytes=new Uint8Array(await checkFile.arrayBuffer());
+      if(!byteEqual(checkBytes,preview.previewBytes))throw new Error("TEAM file write verification did not match the preview.");
+      verifyInstalledEnglandBytes(checkBytes,checkFile.name);
+      source.bytes=checkBytes.slice();
+      source.modified=checkFile.lastModified;
+      source.teams=parseTeamFileBytes(checkBytes,checkFile.name).teams.map(t=>({index:t.index,name:t.name,division:t.division,nation:t.nation,teamNumber:t.teamNumber}));
+      seasonUpdateState.installPreview=preview;
+      trackUsage("season_install","team");
+      return true
+    }finally{
+      seasonUpdateState.installing=false
+    }
+  }
+
+  async function rollbackEnglandSeasonUpdate(){
+    const source=seasonUpdateState.english;
+    if(!source?.fileHandle)throw new Error("Reconnect and analyse the England TEAM file first.");
+    const checkpoint=seasonUpdateState.checkpoint||await loadSeasonCheckpoint();
+    if(!checkpoint?.bytes||checkpoint.packId!==ENGLAND_2627_STRUCTURE.id)throw new Error("No England 2026/27 rollback checkpoint is available on this device.");
+    if(checkpoint.fileName&&checkpoint.fileName!==source.fileName)throw new Error(`Rollback checkpoint belongs to ${checkpoint.fileName}, not ${source.fileName}.`);
+    const bytes=checkpoint.bytes instanceof Uint8Array?checkpoint.bytes:new Uint8Array(checkpoint.bytes);
+    validateTeam(bytes);
+    if(source.fileHandle.requestPermission){
+      const perm=await source.fileHandle.requestPermission({mode:"readwrite"});
+      if(perm!=="granted")throw new Error("Write permission was not granted.");
+    }
+    const writable=await source.fileHandle.createWritable();
+    await writable.write(bytes);
+    await writable.close();
+    const checkFile=await source.fileHandle.getFile();
+    const checkBytes=new Uint8Array(await checkFile.arrayBuffer());
+    if(!byteEqual(checkBytes,bytes))throw new Error("Rollback write verification failed.");
+    source.bytes=checkBytes.slice();
+    source.modified=checkFile.lastModified;
+    source.teams=parseTeamFileBytes(checkBytes,checkFile.name).teams.map(t=>({index:t.index,name:t.name,division:t.division,nation:t.nation,teamNumber:t.teamNumber}));
+    seasonUpdateState.installPreview=null;
+    trackUsage("season_rollback","team");
+    return true
   }
 
   async function runPremierInstallPreview(){
@@ -4330,8 +4428,10 @@
         </div>
       </div>
       <div class="notice section-gap"><strong>Dry-run writer passed.</strong><br>The re-opened database contains exactly 92 unique top-four clubs in a 20 / 24 / 24 / 24 split, with zero duplicate club names. All researched Premier League, Championship, League One and League Two player records were prepared and survived a fresh parse.</div>
+      <div class="notice info section-gap"><strong>Automatic rollback protection is armed.</strong><br>Install stores the untouched England TEAM file in Studio before writing, verifies the write byte-for-byte, then re-parses the installed database. If the source file changed since this preview, installation stops safely.</div>
+      <button class="btn btn-green big section-gap" id="installSeasonUpdate">Install England 2026/27</button>
       <button class="btn btn-blue big section-gap" id="runInstallPreview">Build preview again</button>
-      <button class="btn big section-gap" disabled>Write this preview to TEAM.* — still locked until automatic checkpoint + rollback are wired</button>
+      <button class="btn big section-gap" id="rollbackSeasonUpdate">Restore pre-update England file</button>
     </div>`
   }
 
@@ -5550,6 +5650,30 @@
       try{await runPremierInstallPreview()}catch(e){alert(`Install preview stopped safely: ${e.message}`)}
       await renderSeasonUpdate();
       window.scrollTo(0,document.body.scrollHeight)
+    }
+
+    const installSeason=document.getElementById("installSeasonUpdate");
+    if(installSeason)installSeason.onclick=async()=>{
+      if(!confirm("Install the verified England 2026/27 update over the connected England TEAM file?\n\nStudio will first save an automatic rollback checkpoint, then verify the written file byte-for-byte. Close SWOS / Magic DOSBox before continuing."))return;
+      installSeason.disabled=true;installSeason.textContent="Creating checkpoint + installing…";
+      try{
+        await installEnglandSeasonUpdate();
+        alert("England 2026/27 installed and verified. The original TEAM file is stored as a rollback checkpoint in Studio. Restart SWOS / Magic DOSBox to load it.");
+      }catch(e){alert(`Install stopped safely: ${e.message}`)}
+      await renderSeasonUpdate();window.scrollTo(0,document.body.scrollHeight)
+    }
+
+    const rollbackSeason=document.getElementById("rollbackSeasonUpdate");
+    if(rollbackSeason)rollbackSeason.onclick=async()=>{
+      await loadSeasonCheckpoint();
+      if(!seasonUpdateState.checkpoint){alert("No rollback checkpoint is stored on this device yet.");return}
+      if(!confirm("Restore the England TEAM file exactly as it was before the last 2026/27 install?\n\nClose SWOS / Magic DOSBox before continuing."))return;
+      rollbackSeason.disabled=true;rollbackSeason.textContent="Restoring…";
+      try{
+        await rollbackEnglandSeasonUpdate();
+        alert("Original England TEAM file restored and verified.");
+      }catch(e){alert(`Rollback stopped safely: ${e.message}`)}
+      await renderSeasonUpdate();window.scrollTo(0,document.body.scrollHeight)
     }
   }
 
