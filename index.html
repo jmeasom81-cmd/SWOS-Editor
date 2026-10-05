@@ -4955,6 +4955,27 @@
     state.view="play";state.message=null;render();window.scrollTo(0,0)
   }
 
+  async function downloadSwosStudioApp(){
+    try{
+      const sourceUrl=new URL(location.href);
+      sourceUrl.search="";
+      sourceUrl.hash="";
+      const res=await fetch(sourceUrl.toString(),{cache:"no-store"});
+      if(!res.ok)throw new Error("Could not fetch the current app");
+      const html=await res.text();
+      const blob=new Blob([html],{type:"text/html;charset=utf-8"});
+      const url=URL.createObjectURL(blob),a=document.createElement("a");
+      a.href=url;
+      a.download="SWOS-Studio-Latest.html";
+      document.body.appendChild(a);a.click();a.remove();
+      setTimeout(()=>URL.revokeObjectURL(url),1000);
+      trackUsage("export").catch(()=>{})
+    }catch(e){
+      state.message="Could not download SWOS Studio right now. Please try again.";
+      render()
+    }
+  }
+
   function renderLanding(){const ac=activeCareer.meta;main.innerHTML=`<section class="hero studio-hero"><div class="simple-pill">✓ Simple Mode</div><h1>SWOS Studio</h1><p class="studio-lead">Make Sensible World of Soccer your own. Choose what you want to change — SWOS Studio takes care of the files, codes and technical work underneath.</p>${setupBannerHtml()}
     ${ac?`<div class="active-career"><span class="scope-kicker">🏆 ACTIVE CAREER</span><div class="title">${esc(ac.club)} career</div><div class="subline">${esc(ac.manager)} · ${money(ac.balance)} · ${ac.players} players${ac.formation?` · ${esc(ac.formation)}`:""}</div>
       ${ac.recentChanges?.length?`<div class="subline"><strong>Last Studio change:</strong> ${esc(ac.recentChanges[0].label)}</div>`:""}
@@ -4978,6 +4999,7 @@
       <button class="studio-tile" id="simpleSafety"><span class="ico">🕒</span><strong>Time Machine</strong><span>${backup.master?"Master Version protected · create or restore checkpoints.":"Save points and go back in time if you need to."}</span></button>
       <button class="studio-tile" id="simpleUpdates"><span class="ico">🌍</span><strong>Update SWOS</strong><span>Build the Premier League 2026/27 update from your existing SWOS database.</span></button>
       <button class="studio-tile play" id="simplePlay"><span class="ico">▶️</span><strong>PLAY SWOS</strong><span>${launcher.profile?"Magic DOSBox profile linked · launcher bridge setup ready.":"Set up your Magic DOSBox SWOS profile and launcher bridge."}</span></button>
+      <button class="studio-tile" id="downloadStudio"><span class="ico">⬇️</span><strong>Download App</strong><span>Save the latest SWOS Studio as one HTML file for easy access or backup.</span><span class="scope-tag">LATEST VERSION</span></button>
     </div>
     <div class="studio-trust"><div><strong>Safe changes</strong><span>Verified before saving</span></div><div><strong>Easy restore</strong><span>Protection being built in</span></div><div><strong>No hex editing</strong><span>Technical detail stays hidden</span></div></div>
     ${state.message?`<div class="notice error section-gap">${esc(state.message)}</div>`:""}
@@ -5016,6 +5038,7 @@
     document.getElementById("simpleSafety").onclick=async()=>{if(directoryApiAvailable)await ensureGameFolder();state.view="safety";render();window.scrollTo(0,0)};
     document.getElementById("simpleUpdates").onclick=()=>{state.view="seasonUpdate";state.message=null;render();window.scrollTo(0,0)};
     document.getElementById("simplePlay").onclick=()=>{state.view="play";render();window.scrollTo(0,0)};
+    document.getElementById("downloadStudio").onclick=downloadSwosStudioApp;
     document.getElementById("advancedHome").onclick=()=>{state.simplePurpose=null;state.view="advancedHome";render();window.scrollTo(0,0)}
   }
 
