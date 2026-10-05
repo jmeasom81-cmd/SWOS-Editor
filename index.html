@@ -5539,7 +5539,7 @@
   }
 
 
-  const masterDataViewState={division:"all",club:"all",group:"all",missing:"all",query:"",page:0,pageSize:150};
+  const masterDataViewState={division:"all",club:"all",group:"all",missing:"all",query:"",sort:"divisionClubPlayer",page:0,pageSize:150};
 
   function masterDataRows(){
     const rows=[];
@@ -5579,17 +5579,30 @@
     return /[",\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s
   }
 
-  function downloadMasterDataCsv(){
-    const rows=masterDataRows(),headers=["Division","Club","Club ID","Player","Shirt #","Nationality","Position Group","SWOS Pos Code","SWOS Position","Age","Market Value GBPm","Minutes","Goals","Assists","Missing Fields","Source","Snapshot"];
+  function downloadMasterDataCsv(filteredOnly=true){
+    const rows=filteredOnly?masterDataFilteredRows():masterDataRows(),headers=["Division","Club","Club ID","Player","Shirt #","Nationality","Position Group","SWOS Pos Code","SWOS Position","Age","Market Value GBPm","Minutes","Goals","Assists","Missing Fields","Source","Snapshot"];
     const lines=[headers.map(masterCsvCell).join(",")];
     rows.forEach(r=>lines.push([r.division,r.club,r.clubId,r.player,r.shirt,r.nationality,r.group,r.position,r.positionLabel,r.age,r.value,r.minutes,r.goals,r.assists,r.missing.join("; "),r.source,r.snapshot].map(masterCsvCell).join(",")));
     const blob=new Blob(["\uFEFF"+lines.join("\n")],{type:"text/csv;charset=utf-8"}),url=URL.createObjectURL(blob),a=document.createElement("a");
-    a.href=url;a.download="SWOS_Studio_2026-27_Master_Data.csv";document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)
+    a.href=url;a.download=filteredOnly?"SWOS_Studio_2026-27_Filtered_Data.csv":"SWOS_Studio_2026-27_Master_Data.csv";document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)
+  }
+
+  function masterDataSortRows(rows){
+    const s=masterDataViewState;
+    const txt=v=>String(v||"").toLowerCase(), num=v=>v===null||v===undefined?-Infinity:Number(v);
+    return rows.slice().sort((a,b)=>{
+      if(s.sort==="player")return txt(a.player).localeCompare(txt(b.player));
+      if(s.sort==="club")return txt(a.club).localeCompare(txt(b.club))||txt(a.player).localeCompare(txt(b.player));
+      if(s.sort==="valueDesc")return num(b.value)-num(a.value)||txt(a.player).localeCompare(txt(b.player));
+      if(s.sort==="ageAsc")return num(a.age)-num(b.age)||txt(a.player).localeCompare(txt(b.player));
+      if(s.sort==="missingDesc")return b.missing.length-a.missing.length||txt(a.player).localeCompare(txt(b.player));
+      return txt(a.division).localeCompare(txt(b.division))||txt(a.club).localeCompare(txt(b.club))||txt(a.player).localeCompare(txt(b.player))
+    })
   }
 
   function masterDataFilteredRows(){
     const s=masterDataViewState,q=s.query.trim().toLowerCase();
-    return masterDataRows().filter(r=>{
+    return masterDataSortRows(masterDataRows().filter(r=>{
       if(s.division!=="all"&&r.division!==s.division)return false;
       if(s.club!=="all"&&r.clubId!==s.club)return false;
       if(s.group!=="all"&&(r.group||"Missing")!==s.group)return false;
@@ -5597,7 +5610,7 @@
       if(s.missing!=="all"&&s.missing!=="any"&&!r.missing.includes(s.missing))return false;
       if(q&&(r.player+" "+r.club+" "+(r.nationality||"")+" "+(r.group||"")+" "+(r.positionLabel||"")).toLowerCase().indexOf(q)<0)return false;
       return true
-    })
+    }))
   }
 
   function masterMissingCell(value,label){
@@ -5653,14 +5666,16 @@
       '<div class="scout-filters section-gap"><div class="field"><label>Search</label><input id="masterQuery" value="'+esc(s.query)+'" placeholder="Player, club, nationality, position"/></div>'+
       '<div class="grid2 section-gap"><div class="field"><label>Division</label><select id="masterDivision"><option value="all">All divisions</option>'+divOptions+'</select></div><div class="field"><label>Club</label><select id="masterClub"><option value="all">All clubs</option>'+clubOptions+'</select></div></div>'+
       '<div class="grid2 section-gap"><div class="field"><label>Position group</label><select id="masterGroup"><option value="all">All positions</option>'+groupOptions+'</select></div><div class="field"><label>Missing data</label><select id="masterMissing"><option value="all" '+(s.missing==="all"?"selected":"")+'>All rows</option><option value="any" '+(s.missing==="any"?"selected":"")+'>Any core field missing</option><option value="value" '+(s.missing==="value"?"selected":"")+'>Missing market value</option><option value="shirt" '+(s.missing==="shirt"?"selected":"")+'>Missing shirt #</option><option value="nationality" '+(s.missing==="nationality"?"selected":"")+'>Missing nationality</option><option value="group" '+(s.missing==="group"?"selected":"")+'>Missing position group</option><option value="position" '+(s.missing==="position"?"selected":"")+'>Missing SWOS position</option><option value="age" '+(s.missing==="age"?"selected":"")+'>Missing age</option><option value="minutes" '+(s.missing==="minutes"?"selected":"")+'>Missing minutes</option><option value="goals" '+(s.missing==="goals"?"selected":"")+'>Missing goals</option><option value="assists" '+(s.missing==="assists"?"selected":"")+'>Missing assists</option></select></div></div>'+
-      '<button class="btn btn-green big section-gap" id="masterApply">Apply filters</button><button class="btn btn-blue big section-gap" id="masterCsv">Download current master CSV · opens in Excel</button></div>'+
+      '<div class="field section-gap"><label>Sort by</label><select id="masterSort"><option value="divisionClubPlayer" '+(s.sort==="divisionClubPlayer"?"selected":"")+'>Division → Club → Player</option><option value="club" '+(s.sort==="club"?"selected":"")+'>Club → Player</option><option value="player" '+(s.sort==="player"?"selected":"")+'>Player A–Z</option><option value="valueDesc" '+(s.sort==="valueDesc"?"selected":"")+'>Market value high → low</option><option value="ageAsc" '+(s.sort==="ageAsc"?"selected":"")+'>Age young → old</option><option value="missingDesc" '+(s.sort==="missingDesc"?"selected":"")+'>Most research gaps first</option></select></div>'+
+      '<button class="btn btn-green big section-gap" id="masterApply">Apply filters</button><button class="btn btn-blue big section-gap" id="masterCsv">Download filtered CSV · opens in Excel</button><button class="btn big section-gap" id="masterCsvAll">Download full 92-club master CSV</button></div>'+
       '<div class="friendly-card section-gap"><div class="scout-summary"><span class="hit">'+filtered.length+' matching players</span><span>Page '+(s.page+1)+'/'+pages+'</span><span>'+(filtered.length?Math.min(start+1,filtered.length):0)+'–'+Math.min(start+s.pageSize,filtered.length)+'</span></div>'+
       '<div style="overflow:auto;margin-top:12px"><table style="width:100%;border-collapse:collapse;font-size:11px;min-width:1050px"><thead><tr>'+["Division","Club","Player","Shirt","Nationality","Group","SWOS Pos","Age","Value £m","Minutes","Goals","Assists","Gaps"].map(x=>'<th style="text-align:left;padding:8px;border-bottom:1px solid var(--line);color:var(--green);background:#091421">'+x+'</th>').join("")+'</tr></thead><tbody>'+body+'</tbody></table></div>'+
       '<div class="split-actions section-gap"><button class="btn" id="masterPrev" '+(s.page<=0?"disabled":"")+'>← Previous</button><button class="btn" id="masterNext" '+(s.page>=pages-1?"disabled":"")+'>Next →</button></div></div>'+
       '<div class="tiny section-gap">The formatted .xlsx workbook is the companion snapshot; this live view and CSV export always use the current Studio research data.</div></section>';
     document.getElementById("masterBack").onclick=()=>{state.view="seasonUpdate";render();window.scrollTo(0,0)};
-    document.getElementById("masterApply").onclick=()=>{s.query=document.getElementById("masterQuery").value;s.division=document.getElementById("masterDivision").value;s.club=document.getElementById("masterClub").value;s.group=document.getElementById("masterGroup").value;s.missing=document.getElementById("masterMissing").value;s.page=0;renderMasterData();window.scrollTo(0,0)};
-    document.getElementById("masterCsv").onclick=downloadMasterDataCsv;
+    document.getElementById("masterApply").onclick=()=>{s.query=document.getElementById("masterQuery").value;s.division=document.getElementById("masterDivision").value;s.club=document.getElementById("masterClub").value;s.group=document.getElementById("masterGroup").value;s.missing=document.getElementById("masterMissing").value;s.sort=document.getElementById("masterSort").value;s.page=0;renderMasterData();window.scrollTo(0,0)};
+    document.getElementById("masterCsv").onclick=()=>downloadMasterDataCsv(true);
+    document.getElementById("masterCsvAll").onclick=()=>downloadMasterDataCsv(false);
     document.querySelectorAll("[data-master-audit-club]").forEach(b=>b.onclick=()=>{s.club=b.dataset.masterAuditClub;s.division="all";s.group="all";s.missing="any";s.query="";s.page=0;renderMasterData();window.scrollTo(0,0)});
     document.getElementById("masterPrev").onclick=()=>{if(s.page>0){s.page--;renderMasterData();window.scrollTo(0,0)}};
     document.getElementById("masterNext").onclick=()=>{if(s.page<pages-1){s.page++;renderMasterData();window.scrollTo(0,0)}};
