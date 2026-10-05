@@ -5659,7 +5659,9 @@
 
       <div class="scope-banner"><span class="scope-kicker">AUTOMATIC 92-CLUB REBUILD</span><strong>20 Premier · 24 Championship · 24 League One · 24 League Two.</strong><span>You do not need to choose old SWOS slots. Studio resolves the structure automatically and only exposes the technical mapping if you want to inspect it.</span></div>
 
-      <div class="friendly-card section-gap"><h3>Master data workbook</h3><p class="about">One filterable view of all 92 clubs and 1,472 researched players. Missing values and identity fields stay visible instead of being guessed.</p><button class="btn btn-blue big section-gap" id="openMasterData">Open live Master Data / Excel export</button></div>\n\n      <div class="friendly-card section-gap"><h3>Target England structure</h3>
+      <div class="friendly-card section-gap"><h3>Master data workbook</h3><p class="about">One filterable view of all 92 clubs and 1,472 researched players. Missing values and identity fields stay visible instead of being guessed.</p><button class="btn btn-blue big section-gap" id="openMasterData">Open live Master Data / Excel export</button></div>
+
+      <div class="friendly-card section-gap"><h3>Target England structure</h3>
         <div class="division-audit section-gap">${structure.divisions.map(d=>`<button data-structure-div="${d.code}" class="${selectedDiv===d.code?"active":""}">${esc(d.name)}<strong>${d.target}</strong></button>`).join("")}</div>
         ${loaded?`<div class="structure-grid section-gap">
           <div class="structure-stat"><small>Modern clubs mapped</small><strong>${stats.mapped}/92</strong></div>
@@ -5741,7 +5743,9 @@
       <div class="notice info section-gap"><strong>Safe Installer status:</strong> all 92 clubs now pass through the shared dry-run/re-open verification path. Installation is only enabled after the 20 / 24 / 24 / 24 structure, 92 unique clubs and automatic rollback protection have all passed.</div>
     </section>`;
 
-    document.getElementById("seasonBack").onclick=()=>{state.view="landing";render();window.scrollTo(0,0)};\n    const openMasterData=document.getElementById("openMasterData");\n    if(openMasterData)openMasterData.onclick=()=>{state.view="masterData";render();window.scrollTo(0,0)};
+    document.getElementById("seasonBack").onclick=()=>{state.view="landing";render();window.scrollTo(0,0)};
+    const openMasterData=document.getElementById("openMasterData");
+    if(openMasterData)openMasterData.onclick=()=>{state.view="masterData";render();window.scrollTo(0,0)};
     const scan=document.getElementById("seasonScan");
     if(scan)scan.onclick=async()=>{await loadSeasonEnglishDatabase(false);await renderSeasonUpdate();window.scrollTo(0,0)};
 
