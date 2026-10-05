@@ -5604,12 +5604,28 @@
     return value===null||value===undefined||value===""?'<span style="color:#ff8b8b;font-weight:900">MISSING '+esc(label)+'</span>':esc(value)
   }
 
+  function masterDataAuditRows(rows){
+    const byClub=new Map(),byDivision=new Map();
+    for(const r of rows){
+      if(!byClub.has(r.clubId))byClub.set(r.clubId,{club:r.club,clubId:r.clubId,division:r.division,players:0,missing:0,completePlayers:0});
+      const cc=byClub.get(r.clubId);cc.players++;cc.missing+=r.missing.length;if(!r.missing.length)cc.completePlayers++;
+      if(!byDivision.has(r.division))byDivision.set(r.division,{division:r.division,players:0,missing:0,completePlayers:0,clubs:new Set()});
+      const dd=byDivision.get(r.division);dd.players++;dd.missing+=r.missing.length;if(!r.missing.length)dd.completePlayers++;dd.clubs.add(r.clubId);
+    }
+    const clubs=[...byClub.values()].map(x=>({...x,completion:x.players?Math.round((x.completePlayers/x.players)*100):0})).sort((a,b)=>b.missing-a.missing||a.club.localeCompare(b.club));
+    const divisions=[...byDivision.values()].map(x=>({division:x.division,players:x.players,missing:x.missing,completePlayers:x.completePlayers,clubs:x.clubs.size,completion:x.players?Math.round((x.completePlayers/x.players)*100):0}));
+    return {clubs,divisions}
+  }
+
   async function renderMasterData(){
     const all=masterDataRows(),filtered=masterDataFilteredRows(),s=masterDataViewState;
     const pages=Math.max(1,Math.ceil(filtered.length/s.pageSize));if(s.page>=pages)s.page=pages-1;
     const start=s.page*s.pageSize,visible=filtered.slice(start,start+s.pageSize);
     const clubs=ENGLAND_2627_STRUCTURE.clubs.filter(x=>s.division==="all"||targetDivisionName(x.division)===s.division);
     const gaps={shirt:all.filter(x=>x.shirt===null).length,nationality:all.filter(x=>!x.nationality).length,group:all.filter(x=>!x.group).length,value:all.filter(x=>x.value===null).length};
+    const audit=masterDataAuditRows(all),totalMissing=all.reduce((n,r)=>n+r.missing.length,0),completePlayers=all.filter(r=>!r.missing.length).length;
+    const divisionAuditHtml=audit.divisions.map(d=>'<div class="structure-stat"><small>'+esc(d.division)+'</small><strong>'+d.completion+'%</strong><span class="tiny">'+d.completePlayers+'/'+d.players+' complete · '+d.missing+' gaps</span></div>').join("");
+    const clubAuditHtml=audit.clubs.slice(0,12).map(x=>'<button class="research-pack-row" data-master-audit-club="'+esc(x.clubId)+'" style="width:100%;text-align:left"><div class="head"><strong>'+esc(x.club)+'</strong><span class="research-pack-status">'+x.completion+'%</span></div><div class="tiny section-gap">'+esc(x.division)+' · '+x.completePlayers+'/'+x.players+' complete players · '+x.missing+' gaps</div></button>').join("");
     const divOptions=ENGLAND_2627_STRUCTURE.divisions.map(d=>'<option value="'+esc(d.name)+'" '+(s.division===d.name?"selected":"")+'>'+esc(d.name)+'</option>').join("");
     const clubOptions=clubs.map(x=>'<option value="'+esc(x.id)+'" '+(s.club===x.id?"selected":"")+'>'+esc(x.name)+'</option>').join("");
     const groupOptions=["Goalkeeper","Defender","Midfielder","Forward","Missing"].map(x=>'<option value="'+x+'" '+(s.group===x?"selected":"")+'>'+x+'</option>').join("");
@@ -5630,7 +5646,9 @@
     main.innerHTML='<section class="hero" style="justify-content:flex-start">'+
       '<button class="btn back" id="masterBack">← England 2026/27</button><div class="simple-pill">📊 LIVE MASTER DATA</div><h1>2026/27 Master Data</h1>'+
       '<p class="studio-lead">The live visual version of the master spreadsheet. It is built directly from the same research packs as the installer, so when Studio football data changes, this view changes with it.</p>'+
-      '<div class="structure-grid"><div class="structure-stat"><small>Clubs</small><strong>92</strong></div><div class="structure-stat"><small>Players</small><strong>'+all.length+'</strong></div><div class="structure-stat"><small>Missing values</small><strong>'+gaps.value+'</strong></div><div class="structure-stat"><small>Identity gaps</small><strong>'+(gaps.shirt+gaps.nationality+gaps.group)+'</strong></div></div>'+
+      '<div class="structure-grid"><div class="structure-stat"><small>Clubs</small><strong>92</strong></div><div class="structure-stat"><small>Players</small><strong>'+all.length+'</strong></div><div class="structure-stat"><small>Complete players</small><strong>'+completePlayers+'</strong></div><div class="structure-stat"><small>Total research gaps</small><strong>'+totalMissing+'</strong></div></div>'+
+      '<div class="friendly-card section-gap"><h3>Completeness by division</h3><p class="about">A player counts as complete only when every tracked research field has a verified value.</p><div class="structure-grid section-gap">'+divisionAuditHtml+'</div></div>'+
+      '<div class="friendly-card section-gap"><h3>Clubs needing most attention</h3><p class="about">Worst first. Tap a club to jump straight into its rows and see exactly what is missing.</p><div class="research-pack-list section-gap">'+clubAuditHtml+'</div></div>'+
       '<div class="notice info section-gap"><strong>Blank means unverified, not zero.</strong><br>Market values are deliberately left blank until researched. This makes the outstanding work visible rather than hiding it behind guesses.</div>'+
       '<div class="scout-filters section-gap"><div class="field"><label>Search</label><input id="masterQuery" value="'+esc(s.query)+'" placeholder="Player, club, nationality, position"/></div>'+
       '<div class="grid2 section-gap"><div class="field"><label>Division</label><select id="masterDivision"><option value="all">All divisions</option>'+divOptions+'</select></div><div class="field"><label>Club</label><select id="masterClub"><option value="all">All clubs</option>'+clubOptions+'</select></div></div>'+
@@ -5643,6 +5661,7 @@
     document.getElementById("masterBack").onclick=()=>{state.view="seasonUpdate";render();window.scrollTo(0,0)};
     document.getElementById("masterApply").onclick=()=>{s.query=document.getElementById("masterQuery").value;s.division=document.getElementById("masterDivision").value;s.club=document.getElementById("masterClub").value;s.group=document.getElementById("masterGroup").value;s.missing=document.getElementById("masterMissing").value;s.page=0;renderMasterData();window.scrollTo(0,0)};
     document.getElementById("masterCsv").onclick=downloadMasterDataCsv;
+    document.querySelectorAll("[data-master-audit-club]").forEach(b=>b.onclick=()=>{s.club=b.dataset.masterAuditClub;s.division="all";s.group="all";s.missing="any";s.query="";s.page=0;renderMasterData();window.scrollTo(0,0)});
     document.getElementById("masterPrev").onclick=()=>{if(s.page>0){s.page--;renderMasterData();window.scrollTo(0,0)}};
     document.getElementById("masterNext").onclick=()=>{if(s.page<pages-1){s.page++;renderMasterData();window.scrollTo(0,0)}};
   }
