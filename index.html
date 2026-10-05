@@ -4826,7 +4826,7 @@
     }
   }
 
-  function render(){if(usageDashboardMode){renderUsageDashboard();return}if(state.view==="landing"){setChrome(false);renderLanding();return}if(state.view==="setup"){setChrome(false);renderSetupCentre();return}if(state.view==="careerLibrary"){setChrome(false);renderCareerLibrary();return}if(state.view==="databaseLibrary"){setChrome(false);renderDatabaseLibrary();return}if(state.view==="advancedHome"){setChrome(false);renderAdvancedHome();return}if(state.view==="safety"){setChrome(false);renderSafetyCentre();return}if(state.view==="play"){setChrome(false);renderPlayCentre();return}if(state.view==="globalScout"){setChrome(false);renderGlobalScout().catch(e=>{console.error(e);alert(`Global Scout could not load: ${e.message}`)});return}if(state.view==="seasonUpdate"){setChrome(false);renderSeasonUpdate().catch(e=>{console.error(e);alert(`Season Update could not load: ${e.message}`)});return}if(state.view==="seasonSquads"){setChrome(false);renderSeasonSquads().catch(e=>{console.error(e);alert(`Squad Database could not load: ${e.message}`)});return}if(state.view==="swos16"){setChrome(false);renderSwos16().catch(e=>{console.error(e);alert(`SWOS 16 Builder could not load: ${e.message}`)});return}if(state.view==="ratingLab"){setChrome(false);renderRatingLab().catch(e=>{console.error(e);alert(`Rating Lab could not load: ${e.message}`)});return}setChrome(true);if(state.view==="teams")renderTeams();if(state.view==="team")renderTeam();if(state.view==="player")renderPlayer();if(state.view==="teamOrder")renderTeamOrder();if(state.view==="transfer")renderTransfer();if(state.view==="playerSearch")renderPlayerSearch();if(state.view==="audit")renderAudit();if(state.view==="career")renderCareer();if(state.view==="careerPlus")renderCareerPlus().catch(e=>{console.error(e);alert(`Career+ could not load: ${e.message}`)});if(state.view==="careerTransfers")renderCareerTransfers().catch(e=>{console.error(e);alert(`Transfer Centre could not load: ${e.message}`)});if(state.view==="careerSquadWatch")renderCareerSquadWatch().catch(e=>{console.error(e);alert(`Squad Watch could not load: ${e.message}`)});if(state.view==="careerDevelopment")renderCareerDevelopment().catch(e=>{console.error(e);alert(`Player Development could not load: ${e.message}`)});if(state.view==="careerCopy")renderCareerCopy();if(state.view==="careerKit")renderCareerKit();if(state.view==="careerFormation")renderCareerFormation();if(state.view==="careerPlayers")renderCareerPlayers();if(state.view==="careerPlayer")renderCareerPlayer();if(state.view==="careerOrder")renderCareerOrder();if(state.view==="pool")renderPool();if(state.view==="poolPlayer")renderPoolPlayer();if(state.view==="poolSource")renderPoolSource();if(state.view==="exe")renderExe()}
+  function render(){if(usageDashboardMode){renderUsageDashboard();return}if(state.view==="landing"){setChrome(false);renderLanding();return}if(state.view==="setup"){setChrome(false);renderSetupCentre();return}if(state.view==="careerLibrary"){setChrome(false);renderCareerLibrary();return}if(state.view==="databaseLibrary"){setChrome(false);renderDatabaseLibrary();return}if(state.view==="advancedHome"){setChrome(false);renderAdvancedHome();return}if(state.view==="safety"){setChrome(false);renderSafetyCentre();return}if(state.view==="play"){setChrome(false);renderPlayCentre();return}if(state.view==="globalScout"){setChrome(false);renderGlobalScout().catch(e=>{console.error(e);alert(`Global Scout could not load: ${e.message}`)});return}if(state.view==="seasonUpdate"){setChrome(false);renderSeasonUpdate().catch(e=>{console.error(e);alert(`Season Update could not load: ${e.message}`)});return}if(state.view==="masterData"){setChrome(false);renderMasterData().catch(e=>{console.error(e);alert(`Master Data could not load: ${e.message}`)});return}if(state.view==="seasonSquads"){setChrome(false);renderSeasonSquads().catch(e=>{console.error(e);alert(`Squad Database could not load: ${e.message}`)});return}if(state.view==="swos16"){setChrome(false);renderSwos16().catch(e=>{console.error(e);alert(`SWOS 16 Builder could not load: ${e.message}`)});return}if(state.view==="ratingLab"){setChrome(false);renderRatingLab().catch(e=>{console.error(e);alert(`Rating Lab could not load: ${e.message}`)});return}setChrome(true);if(state.view==="teams")renderTeams();if(state.view==="team")renderTeam();if(state.view==="player")renderPlayer();if(state.view==="teamOrder")renderTeamOrder();if(state.view==="transfer")renderTransfer();if(state.view==="playerSearch")renderPlayerSearch();if(state.view==="audit")renderAudit();if(state.view==="career")renderCareer();if(state.view==="careerPlus")renderCareerPlus().catch(e=>{console.error(e);alert(`Career+ could not load: ${e.message}`)});if(state.view==="careerTransfers")renderCareerTransfers().catch(e=>{console.error(e);alert(`Transfer Centre could not load: ${e.message}`)});if(state.view==="careerSquadWatch")renderCareerSquadWatch().catch(e=>{console.error(e);alert(`Squad Watch could not load: ${e.message}`)});if(state.view==="careerDevelopment")renderCareerDevelopment().catch(e=>{console.error(e);alert(`Player Development could not load: ${e.message}`)});if(state.view==="careerCopy")renderCareerCopy();if(state.view==="careerKit")renderCareerKit();if(state.view==="careerFormation")renderCareerFormation();if(state.view==="careerPlayers")renderCareerPlayers();if(state.view==="careerPlayer")renderCareerPlayer();if(state.view==="careerOrder")renderCareerOrder();if(state.view==="pool")renderPool();if(state.view==="poolPlayer")renderPoolPlayer();if(state.view==="poolSource")renderPoolSource();if(state.view==="exe")renderExe()}
 
   async function openSimple(kind,purpose){
     state.simplePurpose=purpose;
@@ -5538,6 +5538,111 @@
     document.querySelectorAll("[data-career-player]").forEach(b=>b.onclick=()=>{state.careerPlayerIndex=Number(b.dataset.careerPlayer);state.view="careerPlayer";state.message=null;render();window.scrollTo(0,0)})
   }
 
+
+  const masterDataViewState={division:"all",club:"all",group:"all",missing:"all",query:"",page:0,pageSize:150};
+
+  function masterDataRows(){
+    const rows=[];
+    for(const club of ENGLAND_2627_STRUCTURE.clubs){
+      const pack=researchPackFor(club.id)||eflResearchPackFor(club.id);
+      if(!pack)continue;
+      const verified=(PL_2627_VERIFIED_IDENTITIES&&PL_2627_VERIFIED_IDENTITIES[club.id])||[];
+      for(const pair of Object.entries(pack.data||{})){
+        const name=pair[0],raw=pair[1],ident=verified.find(x=>x.footballName===name)||null;
+        const shirt=Number.isInteger(raw.shirt)?raw.shirt:(Number.isInteger(ident&&ident.shirt)?ident.shirt:null);
+        const nationality=raw.nationality||(ident&&ident.nationality)||null;
+        const group=raw.group||(ident&&ident.group)||null;
+        const position=Number.isInteger(raw.position)?raw.position:null;
+        const value=Number.isFinite(Number(raw.marketValueM))?Number(raw.marketValueM):null;
+        const age=Number.isFinite(Number(raw.age))?Number(raw.age):null;
+        const minutes=Number.isFinite(Number(raw.minutes))?Number(raw.minutes):null;
+        const goals=Number.isFinite(Number(raw.goals))?Number(raw.goals):null;
+        const assists=Number.isFinite(Number(raw.assists))?Number(raw.assists):null;
+        const missing=[];
+        if(shirt===null)missing.push("shirt");
+        if(!nationality)missing.push("nationality");
+        if(!group)missing.push("group");
+        if(position===null)missing.push("position");
+        if(value===null)missing.push("value");
+        rows.push({division:targetDivisionName(club.division),club:club.name,clubId:club.id,player:name,shirt,nationality,group,position,positionLabel:scoutPositionLabel(position),age,value,minutes,goals,assists,missing,source:pack.source||"",snapshot:pack.snapshot||""});
+      }
+    }
+    return rows
+  }
+
+  function masterCsvCell(v){
+    const s=String(v==null?"":v);
+    return /[",\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s
+  }
+
+  function downloadMasterDataCsv(){
+    const rows=masterDataRows(),headers=["Division","Club","Club ID","Player","Shirt #","Nationality","Position Group","SWOS Pos Code","SWOS Position","Age","Market Value GBPm","Minutes","Goals","Assists","Missing Fields","Source","Snapshot"];
+    const lines=[headers.map(masterCsvCell).join(",")];
+    rows.forEach(r=>lines.push([r.division,r.club,r.clubId,r.player,r.shirt,r.nationality,r.group,r.position,r.positionLabel,r.age,r.value,r.minutes,r.goals,r.assists,r.missing.join("; "),r.source,r.snapshot].map(masterCsvCell).join(",")));
+    const blob=new Blob(["\uFEFF"+lines.join("\n")],{type:"text/csv;charset=utf-8"}),url=URL.createObjectURL(blob),a=document.createElement("a");
+    a.href=url;a.download="SWOS_Studio_2026-27_Master_Data.csv";document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)
+  }
+
+  function masterDataFilteredRows(){
+    const s=masterDataViewState,q=s.query.trim().toLowerCase();
+    return masterDataRows().filter(r=>{
+      if(s.division!=="all"&&r.division!==s.division)return false;
+      if(s.club!=="all"&&r.clubId!==s.club)return false;
+      if(s.group!=="all"&&(r.group||"Missing")!==s.group)return false;
+      if(s.missing==="any"&&!r.missing.length)return false;
+      if(s.missing!=="all"&&s.missing!=="any"&&!r.missing.includes(s.missing))return false;
+      if(q&&(r.player+" "+r.club+" "+(r.nationality||"")+" "+(r.group||"")+" "+(r.positionLabel||"")).toLowerCase().indexOf(q)<0)return false;
+      return true
+    })
+  }
+
+  function masterMissingCell(value,label){
+    return value===null||value===undefined||value===""?'<span style="color:#ff8b8b;font-weight:900">MISSING '+esc(label)+'</span>':esc(value)
+  }
+
+  async function renderMasterData(){
+    const all=masterDataRows(),filtered=masterDataFilteredRows(),s=masterDataViewState;
+    const pages=Math.max(1,Math.ceil(filtered.length/s.pageSize));if(s.page>=pages)s.page=pages-1;
+    const start=s.page*s.pageSize,visible=filtered.slice(start,start+s.pageSize);
+    const clubs=ENGLAND_2627_STRUCTURE.clubs.filter(x=>s.division==="all"||targetDivisionName(x.division)===s.division);
+    const gaps={shirt:all.filter(x=>x.shirt===null).length,nationality:all.filter(x=>!x.nationality).length,group:all.filter(x=>!x.group).length,value:all.filter(x=>x.value===null).length};
+    const divOptions=ENGLAND_2627_STRUCTURE.divisions.map(d=>'<option value="'+esc(d.name)+'" '+(s.division===d.name?"selected":"")+'>'+esc(d.name)+'</option>').join("");
+    const clubOptions=clubs.map(x=>'<option value="'+esc(x.id)+'" '+(s.club===x.id?"selected":"")+'>'+esc(x.name)+'</option>').join("");
+    const groupOptions=["Goalkeeper","Defender","Midfielder","Forward","Missing"].map(x=>'<option value="'+x+'" '+(s.group===x?"selected":"")+'>'+x+'</option>').join("");
+    const body=visible.map(r=>'<tr>'+
+      '<td style="padding:7px;border-bottom:1px solid #172a45">'+esc(r.division)+'</td>'+
+      '<td style="padding:7px;border-bottom:1px solid #172a45"><strong>'+esc(r.club)+'</strong></td>'+
+      '<td style="padding:7px;border-bottom:1px solid #172a45">'+esc(r.player)+'</td>'+
+      '<td style="padding:7px;border-bottom:1px solid #172a45">'+masterMissingCell(r.shirt,"SHIRT")+'</td>'+
+      '<td style="padding:7px;border-bottom:1px solid #172a45">'+masterMissingCell(r.nationality,"NAT")+'</td>'+
+      '<td style="padding:7px;border-bottom:1px solid #172a45">'+masterMissingCell(r.group,"GROUP")+'</td>'+
+      '<td style="padding:7px;border-bottom:1px solid #172a45">'+esc(r.positionLabel)+'</td>'+
+      '<td style="padding:7px;border-bottom:1px solid #172a45">'+(r.age==null?"":r.age)+'</td>'+
+      '<td style="padding:7px;border-bottom:1px solid #172a45">'+(r.value===null?'<span style="color:#ff8b8b;font-weight:900">MISSING</span>':esc(r.value))+'</td>'+
+      '<td style="padding:7px;border-bottom:1px solid #172a45">'+(r.minutes==null?"":r.minutes)+'</td>'+
+      '<td style="padding:7px;border-bottom:1px solid #172a45">'+(r.goals==null?"":r.goals)+'</td>'+
+      '<td style="padding:7px;border-bottom:1px solid #172a45">'+(r.assists==null?"":r.assists)+'</td>'+
+      '<td style="padding:7px;border-bottom:1px solid #172a45">'+(r.missing.length?'<span style="color:#ff8b8b">'+esc(r.missing.join(", "))+'</span>':'<span style="color:var(--green)">Complete</span>')+'</td></tr>').join("");
+    main.innerHTML='<section class="hero" style="justify-content:flex-start">'+
+      '<button class="btn back" id="masterBack">← England 2026/27</button><div class="simple-pill">📊 LIVE MASTER DATA</div><h1>2026/27 Master Data</h1>'+
+      '<p class="studio-lead">The live visual version of the master spreadsheet. It is built directly from the same research packs as the installer, so when Studio football data changes, this view changes with it.</p>'+
+      '<div class="structure-grid"><div class="structure-stat"><small>Clubs</small><strong>92</strong></div><div class="structure-stat"><small>Players</small><strong>'+all.length+'</strong></div><div class="structure-stat"><small>Missing values</small><strong>'+gaps.value+'</strong></div><div class="structure-stat"><small>Identity gaps</small><strong>'+(gaps.shirt+gaps.nationality+gaps.group)+'</strong></div></div>'+
+      '<div class="notice info section-gap"><strong>Blank means unverified, not zero.</strong><br>Market values are deliberately left blank until researched. This makes the outstanding work visible rather than hiding it behind guesses.</div>'+
+      '<div class="scout-filters section-gap"><div class="field"><label>Search</label><input id="masterQuery" value="'+esc(s.query)+'" placeholder="Player, club, nationality, position"/></div>'+
+      '<div class="grid2 section-gap"><div class="field"><label>Division</label><select id="masterDivision"><option value="all">All divisions</option>'+divOptions+'</select></div><div class="field"><label>Club</label><select id="masterClub"><option value="all">All clubs</option>'+clubOptions+'</select></div></div>'+
+      '<div class="grid2 section-gap"><div class="field"><label>Position group</label><select id="masterGroup"><option value="all">All positions</option>'+groupOptions+'</select></div><div class="field"><label>Missing data</label><select id="masterMissing"><option value="all" '+(s.missing==="all"?"selected":"")+'>All rows</option><option value="any" '+(s.missing==="any"?"selected":"")+'>Any core field missing</option><option value="value" '+(s.missing==="value"?"selected":"")+'>Missing market value</option><option value="shirt" '+(s.missing==="shirt"?"selected":"")+'>Missing shirt #</option><option value="nationality" '+(s.missing==="nationality"?"selected":"")+'>Missing nationality</option><option value="group" '+(s.missing==="group"?"selected":"")+'>Missing position group</option></select></div></div>'+
+      '<button class="btn btn-green big section-gap" id="masterApply">Apply filters</button><button class="btn btn-blue big section-gap" id="masterCsv">Download current master CSV · opens in Excel</button></div>'+
+      '<div class="friendly-card section-gap"><div class="scout-summary"><span class="hit">'+filtered.length+' matching players</span><span>Page '+(s.page+1)+'/'+pages+'</span><span>'+(filtered.length?Math.min(start+1,filtered.length):0)+'–'+Math.min(start+s.pageSize,filtered.length)+'</span></div>'+
+      '<div style="overflow:auto;margin-top:12px"><table style="width:100%;border-collapse:collapse;font-size:11px;min-width:1050px"><thead><tr>'+["Division","Club","Player","Shirt","Nationality","Group","SWOS Pos","Age","Value £m","Minutes","Goals","Assists","Gaps"].map(x=>'<th style="text-align:left;padding:8px;border-bottom:1px solid var(--line);color:var(--green);background:#091421">'+x+'</th>').join("")+'</tr></thead><tbody>'+body+'</tbody></table></div>'+
+      '<div class="split-actions section-gap"><button class="btn" id="masterPrev" '+(s.page<=0?"disabled":"")+'>← Previous</button><button class="btn" id="masterNext" '+(s.page>=pages-1?"disabled":"")+'>Next →</button></div></div>'+
+      '<div class="tiny section-gap">The formatted .xlsx workbook is the companion snapshot; this live view and CSV export always use the current Studio research data.</div></section>';
+    document.getElementById("masterBack").onclick=()=>{state.view="seasonUpdate";render();window.scrollTo(0,0)};
+    document.getElementById("masterApply").onclick=()=>{s.query=document.getElementById("masterQuery").value;s.division=document.getElementById("masterDivision").value;s.club=document.getElementById("masterClub").value;s.group=document.getElementById("masterGroup").value;s.missing=document.getElementById("masterMissing").value;s.page=0;renderMasterData();window.scrollTo(0,0)};
+    document.getElementById("masterCsv").onclick=downloadMasterDataCsv;
+    document.getElementById("masterPrev").onclick=()=>{if(s.page>0){s.page--;renderMasterData();window.scrollTo(0,0)}};
+    document.getElementById("masterNext").onclick=()=>{if(s.page<pages-1){s.page++;renderMasterData();window.scrollTo(0,0)}};
+  }
+
   async function renderSeasonUpdate(){
     const structure=ENGLAND_2627_STRUCTURE,loaded=seasonUpdateState.loaded,eng=seasonUpdateState.english;
     const stats=loaded?englandStructureStats():{mapped:0,total:92,unmapped:92,reused:0,review:0,moves:0,duplicates:0,spareSlots:0,complete:false,oldCounts:[],byDivision:{}};
@@ -5554,7 +5659,7 @@
 
       <div class="scope-banner"><span class="scope-kicker">AUTOMATIC 92-CLUB REBUILD</span><strong>20 Premier · 24 Championship · 24 League One · 24 League Two.</strong><span>You do not need to choose old SWOS slots. Studio resolves the structure automatically and only exposes the technical mapping if you want to inspect it.</span></div>
 
-      <div class="friendly-card section-gap"><h3>Target England structure</h3>
+      <div class="friendly-card section-gap"><h3>Master data workbook</h3><p class="about">One filterable view of all 92 clubs and 1,472 researched players. Missing values and identity fields stay visible instead of being guessed.</p><button class="btn btn-blue big section-gap" id="openMasterData">Open live Master Data / Excel export</button></div>\n\n      <div class="friendly-card section-gap"><h3>Target England structure</h3>
         <div class="division-audit section-gap">${structure.divisions.map(d=>`<button data-structure-div="${d.code}" class="${selectedDiv===d.code?"active":""}">${esc(d.name)}<strong>${d.target}</strong></button>`).join("")}</div>
         ${loaded?`<div class="structure-grid section-gap">
           <div class="structure-stat"><small>Modern clubs mapped</small><strong>${stats.mapped}/92</strong></div>
@@ -5630,13 +5735,13 @@
       <div class="update-stage ${complete?"ready":"locked"} section-gap"><h3>2 · Premier League player rebuild ${complete?"ACTIVE":"LOCKED"}</h3><p class="about">Identity verification now covers ${identityReadyClubCount()}/20 Premier League clubs, with all 20 clubs carrying packaged 16-player research selections. Senior registrations remain based on the post-window Premier League submission.</p>${complete?'<button class="btn btn-green big section-gap" id="openSeasonSquads">Open Premier League squad database</button>':""}</div>
       <div class="update-stage ${complete?"ready":"locked"} section-gap"><h3>3 · SWOS 16 Builder ${complete?"LIVE":"LOCKED"}</h3><p class="about">Each completed club can still be reduced from its modern extended squad to the verified 16 physical SWOS player records.</p></div>
       <div class="update-stage ${complete?"ready":"locked"} section-gap"><h3>4 · Research Pack Centre</h3><p class="about">All 20 Premier League clubs now have packaged 2026/27 research. The final five — Coventry City, Hull City, Ipswich Town, Leeds United and Sunderland — complete the Premier League identity, role and SWOS-position layer. The next stage is the protected TEAM.* installer.</p>${complete?`<div class="structure-grid section-gap"><div class="structure-stat"><small>Research-ready clubs</small><strong>${Object.keys(PL_2627_RESEARCH_PACKS).length}/20</strong></div><div class="structure-stat"><small>Packaged players</small><strong>${Object.values(PL_2627_RESEARCH_PACKS).reduce((n,p)=>n+p.players,0)}</strong></div></div>`:""}${complete?`<div class="research-pack-list section-gap">${Object.values(PL_2627_RESEARCH_PACKS).map(pack=>{const ps=researchPackSummary(pack);return `<div class="research-pack-row"><div class="head"><strong>${esc(pack.label)}</strong><span class="research-pack-status">READY</span></div><div class="tiny section-gap">${ps.players} players · ${ps.withValues} values · ${ps.withStats} with league-output evidence · ${esc(pack.kind)}</div></div>`}).join("")}</div><button class="btn btn-green big section-gap" id="loadAllResearchPacks">Load all available research packs</button>`:""}</div>
-      <div class="update-stage ${complete?"pending":"locked"} section-gap"><h3>5 · England squad research</h3><p class="about">Premier League research is complete at 20/20 clubs. The same 16-player pack system is now expanding through the EFL so promoted and relegated clubs are not just moved between divisions — their actual squads are modernised too.</p>${complete?(()=>{const ec=eflResearchCounts();return `<div class="structure-grid section-gap"><div class="structure-stat"><small>Premier League</small><strong>20/20</strong></div><div class="structure-stat"><small>Championship</small><strong>${ec.championship}/24</strong></div><div class="structure-stat"><small>League One</small><strong>${ec.leagueOne}/24</strong></div><div class="structure-stat"><small>League Two</small><strong>${ec.leagueTwo}/24</strong></div></div><div class="notice info section-gap"><strong>Championship expansion:</strong> Premier League, Championship and League One are complete, and League Two research has started at 10/24 clubs: Accrington Stanley, Barnet, Bristol Rovers, Cheltenham Town, Chesterfield, Colchester United, Crawley Town, Crewe Alexandra, Exeter City and Fleetwood Town. The writer handles all five through the same mapped 92-club database.</div>`})():""}</div>
+      <div class="update-stage ${complete?"pending":"locked"} section-gap"><h3>5 · England squad research</h3><p class="about">Premier League research is complete at 20/20 clubs. The same 16-player pack system is now expanding through the EFL so promoted and relegated clubs are not just moved between divisions — their actual squads are modernised too.</p>${complete?(()=>{const ec=eflResearchCounts();return `<div class="structure-grid section-gap"><div class="structure-stat"><small>Premier League</small><strong>20/20</strong></div><div class="structure-stat"><small>Championship</small><strong>${ec.championship}/24</strong></div><div class="structure-stat"><small>League One</small><strong>${ec.leagueOne}/24</strong></div><div class="structure-stat"><small>League Two</small><strong>${ec.leagueTwo}/24</strong></div></div><div class="notice info section-gap"><strong>Championship expansion:</strong> Premier League, Championship, League One and League Two research are complete. The master set contains 92 clubs and 1,472 physical SWOS player records.</div>`})():""}</div>
       ${complete?installerPreflightHtml():'<div class="update-stage locked section-gap"><h3>6 · England Safe Installer</h3><p class="about">Complete and pass the England structure audit before the installer pre-flight can run.</p></div>'}${complete&&seasonUpdateState.installerPreflight?.structurallyReady?installerPreviewHtml():''}
 
-      <div class="notice info section-gap"><strong>No SWOS files are changed by v1.51.0.</strong> League Two research now covers 10/24 clubs. The shared EFL writer now prepares and re-opens all three EFL divisions through one verification path; saving back to TEAM.* remains locked.</div>
+      <div class="notice info section-gap"><strong>Safe Installer status:</strong> all 92 clubs now pass through the shared dry-run/re-open verification path. Installation is only enabled after the 20 / 24 / 24 / 24 structure, 92 unique clubs and automatic rollback protection have all passed.</div>
     </section>`;
 
-    document.getElementById("seasonBack").onclick=()=>{state.view="landing";render();window.scrollTo(0,0)};
+    document.getElementById("seasonBack").onclick=()=>{state.view="landing";render();window.scrollTo(0,0)};\n    const openMasterData=document.getElementById("openMasterData");\n    if(openMasterData)openMasterData.onclick=()=>{state.view="masterData";render();window.scrollTo(0,0)};
     const scan=document.getElementById("seasonScan");
     if(scan)scan.onclick=async()=>{await loadSeasonEnglishDatabase(false);await renderSeasonUpdate();window.scrollTo(0,0)};
 
