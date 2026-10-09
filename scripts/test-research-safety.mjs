@@ -120,5 +120,16 @@ const rochdaleClub=master.clubs.find(c=>c.clubId==='rochdale');
 assert.equal(Object.keys(officialRochdale.officialShirts).length,14,'Official Rochdale source should confirm 14 shirts');
 for(const [name,shirt] of Object.entries(officialRochdale.officialShirts)){const p=rochdaleClub.players.find(p=>p.player===name);assert.ok(p);assert.equal(p.shirt,shirt,'Official shirt differs '+name);assert.equal(p.shirtEvidenceUrl,officialRochdale.clubs[0].sourceUrl);assert.equal(p.seasonSquadSourceUrl,officialRochdale.clubs[0].sourceUrl);}
 for(const name of officialRochdale.notConfirmed){const p=rochdaleClub.players.find(p=>p.player===name);assert.ok(p);assert.equal(p.shirtEvidenceUrl ?? null,null,'Unconfirmed shirt must stay unverified');}
-assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,495,'Do not alter valuations when confirming shirts');
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,453,'Valuations tally after League Two batch C');
 console.log('Rochdale: 14 official 2026/27 numbers confirmed, 2 pending.');
+
+// Batch C: each market value is tied to a named season-squad source, not a guessed valuation.
+const batchC=JSON.parse(fs.readFileSync('data/league-two-verified-values-batch-c-2026-10-09.json','utf8'));
+assert.equal(batchC.clubs.length,6);
+assert.equal(new Set(batchC.clubs.map(c=>c.id)).size,6);
+assert.equal(batchC.clubs.reduce((n,c)=>n+c.players.length,0),42);
+assert.equal(batchC.clubs.reduce((n,c)=>n+c.squadReviews.length,0),13);
+for(const c of batchC.clubs){const club=master.clubs.find(x=>x.clubId===c.id);assert.ok(club,'Missing source club');for(const r of c.players){const p=club.players.find(x=>x.player===r.name);assert.ok(p,'Missing source player '+r.name);assert.equal(p.marketValueSourceEuroK,r.eurThousands);assert.equal(p.marketValueM,Math.round(r.eurThousands*batchC.referenceFxRateEurGbp)/1000);assert.equal(p.marketValueSourceUrl,c.sourceUrl);assert.equal(p.seasonSquadSourceUrl,c.sourceUrl);}}
+for(const [clubId,name] of [['newport-county','Matt Smith'],['oldham-athletic','Emmanuel Monthe'],['tranmere-rovers','Joe Murphy'],['walsall','Lewis Simper'],['york-city','Ollie Pearce'],['rochdale','Mani Dieseruvwe']]){const p=master.clubs.find(c=>c.clubId===clubId).players.find(p=>p.player===name);assert.ok(p);assert.equal(p.marketValueM,null,'Unverified missing valuation must remain blank: '+name);}
+assert.ok(html.includes('Matt Smith in the SWOS pack'));
+console.log('League Two batch C: 42 season-linked values across six clubs; aliases and missing estimates preserved.');

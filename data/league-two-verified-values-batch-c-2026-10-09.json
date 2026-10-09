@@ -1,0 +1,292 @@
+{
+  "season": "2026/27",
+  "checkedAt": "2026-10-09",
+  "referenceFxRateEurGbp": 0.846328,
+  "referenceFxNote": "Existing SWOS 9 October EUR/GBP conversion reference; GBP values rounded to £1k.",
+  "meaning": "Indicative current-market valuations from a season-specific squad listing, not in-game SWOS encoded costs. Missing source valuations and disputed aliases have not been filled.",
+  "clubs": [
+    {
+      "id": "newport-county",
+      "pack": "NEWPORT_COUNTY_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/newport-county/marktwertanalyse/verein/3716",
+      "sourceSnapshot": "2026/27 squad listing",
+      "players": [
+        {
+          "name": "Jordan Wright",
+          "eurThousands": 125,
+          "gbpMillions": 0.106
+        },
+        {
+          "name": "Cameron Evans",
+          "eurThousands": 150,
+          "gbpMillions": 0.127
+        },
+        {
+          "name": "Tom Davies",
+          "eurThousands": 100,
+          "gbpMillions": 0.085
+        },
+        {
+          "name": "Kyle Cameron",
+          "eurThousands": 300,
+          "gbpMillions": 0.254
+        },
+        {
+          "name": "Lee Jenkins",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        },
+        {
+          "name": "Ciaran Brennan",
+          "eurThousands": 75,
+          "gbpMillions": 0.063
+        },
+        {
+          "name": "Harrison Biggins",
+          "eurThousands": 125,
+          "gbpMillions": 0.106
+        }
+      ],
+      "squadReviews": [
+        "Matt Smith in the SWOS pack appears as Matthew Smith in the source (€150k); leave valuation blank until the alias is deliberately confirmed.",
+        "Kieron Evans appears without a listed market value; do not convert that absence to zero."
+      ]
+    },
+    {
+      "id": "oldham-athletic",
+      "pack": "OLDHAM_ATHLETIC_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/oldham-athletic/startseite/verein/1078/saison_id/2026",
+      "sourceSnapshot": "2026/27 squad listing",
+      "players": [
+        {
+          "name": "Mathew Hudson",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        },
+        {
+          "name": "Will Sutton",
+          "eurThousands": 150,
+          "gbpMillions": 0.127
+        },
+        {
+          "name": "Donervon Daniels",
+          "eurThousands": 75,
+          "gbpMillions": 0.063
+        },
+        {
+          "name": "Jamie Robson",
+          "eurThousands": 300,
+          "gbpMillions": 0.254
+        },
+        {
+          "name": "Oliver Norburn",
+          "eurThousands": 75,
+          "gbpMillions": 0.063
+        },
+        {
+          "name": "Tom Pett",
+          "eurThousands": 75,
+          "gbpMillions": 0.063
+        },
+        {
+          "name": "Josh Hawkes",
+          "eurThousands": 150,
+          "gbpMillions": 0.127
+        },
+        {
+          "name": "Jack Stevens",
+          "eurThousands": 150,
+          "gbpMillions": 0.127
+        },
+        {
+          "name": "Calum Kavanagh",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        },
+        {
+          "name": "Elliott Nevitt",
+          "eurThousands": 125,
+          "gbpMillions": 0.106
+        },
+        {
+          "name": "Mike Fondop",
+          "eurThousands": 75,
+          "gbpMillions": 0.063
+        }
+      ],
+      "squadReviews": [
+        "Emmanuel Monthe in SWOS is listed as Manny Monthe in the 2026/27 source (€150k); hold valuation for name/identity reconciliation.",
+        "Gus Scott-Morriss and Keenan Appiah-Forson have no numeric market value on the season page; retain blanks."
+      ]
+    },
+    {
+      "id": "tranmere-rovers",
+      "pack": "TRANMERE_ROVERS_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/tranmere-rovers/startseite/verein/1074/saison_id/2026",
+      "sourceSnapshot": "2026/27 squad listing",
+      "players": [
+        {
+          "name": "Luke McGee",
+          "eurThousands": 75,
+          "gbpMillions": 0.063
+        },
+        {
+          "name": "Nathan Smith",
+          "eurThousands": 275,
+          "gbpMillions": 0.233
+        },
+        {
+          "name": "Jordan Turnbull",
+          "eurThousands": 150,
+          "gbpMillions": 0.127
+        },
+        {
+          "name": "Jacob Slater",
+          "eurThousands": 150,
+          "gbpMillions": 0.127
+        },
+        {
+          "name": "Joel Senior",
+          "eurThousands": 150,
+          "gbpMillions": 0.127
+        },
+        {
+          "name": "Lewis Warrington",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        },
+        {
+          "name": "Sam Finley",
+          "eurThousands": 75,
+          "gbpMillions": 0.063
+        },
+        {
+          "name": "James Plant",
+          "eurThousands": 175,
+          "gbpMillions": 0.148
+        },
+        {
+          "name": "Charlie Whitaker",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        },
+        {
+          "name": "Joe Ironside",
+          "eurThousands": 150,
+          "gbpMillions": 0.127
+        }
+      ],
+      "squadReviews": [
+        "Joe Murphy appears in the older 2025/26 roster and has a 30 June 2026 contract end; do not treat his older €25k as season-confirmed.",
+        "Sam Mann appears without a market valuation and Ryan Watson has a recorded 30 June 2026 contract end; both remain unvalued pending more current evidence.",
+        "Will Vaulks, David Kamara and Dylan Jones are not confirmed by the cited selected 2026/27 market-value listing; leave untouched."
+      ]
+    },
+    {
+      "id": "walsall",
+      "pack": "WALSALL_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/fc-walsall/kader/verein/899",
+      "sourceSnapshot": "2026/27 squad listing",
+      "players": [
+        {
+          "name": "Jed Ward",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        },
+        {
+          "name": "James Connolly",
+          "eurThousands": 375,
+          "gbpMillions": 0.317
+        },
+        {
+          "name": "Rico Browne",
+          "eurThousands": 150,
+          "gbpMillions": 0.127
+        },
+        {
+          "name": "Harrison Burke",
+          "eurThousands": 100,
+          "gbpMillions": 0.085
+        },
+        {
+          "name": "Mason Hancock",
+          "eurThousands": 225,
+          "gbpMillions": 0.19
+        },
+        {
+          "name": "Alex Pattison",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        },
+        {
+          "name": "Sven Sprangler",
+          "eurThousands": 100,
+          "gbpMillions": 0.085
+        },
+        {
+          "name": "Albert Adomah",
+          "eurThousands": 25,
+          "gbpMillions": 0.021
+        },
+        {
+          "name": "Aaron Pressley",
+          "eurThousands": 300,
+          "gbpMillions": 0.254
+        },
+        {
+          "name": "Andrew Dallas",
+          "eurThousands": 100,
+          "gbpMillions": 0.085
+        }
+      ],
+      "squadReviews": [
+        "Lewis Simper appears on the 2026/27 listing with no market valuation; do not enter zero.",
+        "Some listed shirt numbers are unassigned; keep SWOS research numbers provisional until an official club squad-number check."
+      ]
+    },
+    {
+      "id": "york-city",
+      "pack": "YORK_CITY_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/york-city/kader/verein/1252",
+      "sourceSnapshot": "2026/27 squad listing",
+      "players": [
+        {
+          "name": "Zech Medley",
+          "eurThousands": 325,
+          "gbpMillions": 0.275
+        },
+        {
+          "name": "Arthur Read",
+          "eurThousands": 350,
+          "gbpMillions": 0.296
+        },
+        {
+          "name": "Dipo Akinyemi",
+          "eurThousands": 175,
+          "gbpMillions": 0.148
+        }
+      ],
+      "squadReviews": [
+        "Most of York City's 2026/27 roster has no published market estimate; their values remain blank, not zero.",
+        "Dipo Akinyemi's €175k is a market value and not his undisclosed transfer fee; preserve that distinction."
+      ]
+    },
+    {
+      "id": "rochdale",
+      "pack": "ROCHDALE_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/afc-rochdale/kader/verein/1088",
+      "sourceSnapshot": "2026/27 squad listing",
+      "players": [
+        {
+          "name": "Cian Hayes",
+          "eurThousands": 325,
+          "gbpMillions": 0.275
+        }
+      ],
+      "squadReviews": [
+        "Cian Hayes has a listed €325k value; many other Rochdale players have no published estimate. The value does not validate their shirt numbers.",
+        "SWOS 'Mani Dieseruvwe' is labelled Emmanuel Dieseruvwe on the source squad; leave unchanged until identity is reconciled."
+      ]
+    }
+  ]
+}
