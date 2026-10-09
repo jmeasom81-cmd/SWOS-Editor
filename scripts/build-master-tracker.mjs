@@ -95,6 +95,41 @@ for (const club of baseline.clubs) {
   const d = divisionStats[club.division] ||= {clubs:0,players:0,ready:0,essentialGaps:0};
   d.clubs++; d.players += club.players.length; d.ready += complete; d.essentialGaps += Object.values(gaps).reduce((a,b) => a+b, 0);
 }
+// Flag integrity risks without silently rewriting any verified game record.
+const integrity = [];
+const clubKeys = new Set();
+const byPlayerName = new Map();
+const expectedDivisions = {'Premier League':20,'Championship':24,'League One':24,'League Two':24};
+for (const club of baseline.clubs) {
+  if (clubKeys.has(club.clubId)) throw new Error('Duplicate club in master: '+club.clubId);
+  clubKeys.add(club.clubId);
+  const shirtOwners = new Map();
+  for (const p of club.players) {
+    if (Number.isInteger(p.shirt)) {
+      const owner = shirtOwners.get(p.shirt);
+      if (owner) integrity.push(['DUPLICATE SHIRT',club.division,club.club,p.player,'Shirt #'+p.shirt+' also used by '+owner,'Requires official squad-number verification']);
+      else shirtOwners.set(p.shirt,p.player);
+    }
+    if (!Number.isInteger(p.position) || p.position < 0 || p.position > 7)
+      integrity.push(['INVALID POSITION',club.division,club.club,p.player,'SWOS position is not a valid code 0-7','Review source']);
+    if (p.marketValueM != null && (!Number.isFinite(p.marketValueM) || p.marketValueM < 0))
+      integrity.push(['INVALID VALUE',club.division,club.club,p.player,'Value must be non-negative number in GBP millions','Review source']);
+    const nameKey = p.player.normalize('NFKD').toLowerCase().replace(/[^a-z0-9]+/g,'');
+    if (!byPlayerName.has(nameKey)) byPlayerName.set(nameKey, []);
+    byPlayerName.get(nameKey).push({club:club.club,division:club.division,player:p.player});
+  }
+}
+for (const duplicate of byPlayerName.values()) {
+  if (duplicate.length <= 1) continue;
+  for (const player of duplicate)
+    integrity.push(['NAME COLLISION',player.division,player.club,player.player,
+      'Same normalised name is listed for '+duplicate.map(p=>p.club).filter(c=>c!==player.club).join(', '),
+      'May be different people; compare identities before editing']);
+}
+for (const [division, expected] of Object.entries(expectedDivisions)) {
+  const actual = baseline.clubs.filter(c=>c.division===division).length;
+  if (actual !== expected) throw new Error('Wrong 2026/27 division size: '+division+' is '+actual+' expected '+expected);
+}
 const headers = ['Division','Club','Club ID','Player','Shirt #','Nationality','Position group','SWOS position','Position code','Value (£m)','SWOS status','Missing essentials','Research source','Research snapshot','Value evidence URL','Value checked','Reference EUR k','EUR-GBP rate'];
 const clubHeaders = ['Division','Club','Players','SWOS ready','Players needing work','Missing shirts','Missing nationality','Missing position','Missing value','Kit colours checked'];
 const csvCell = v => { const s = String(v ?? ''); return /[",\r\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
@@ -104,7 +139,7 @@ const audit = {
   season:baseline.season, generatedAt:baseline.generatedAt, source:'Live Studio research packs',
   clubs:baseline.clubCount, players:baseline.playerCount, valued:rowData.filter(r=>r[9]!=null).length,
   swosReady:rowData.filter(r=>r[10]==='READY').length, essentialGaps:rowData.reduce((a,r)=>a+(r[11]?r[11].split(', ').length:0),0),
-  divisionStats, nameChangesSincePriorExport:nameChanges,
+  divisionStats, nameChangesSincePriorExport:nameChanges, qualityWarnings:integrity.length, qualityByType:integrity.reduce((o,r)=>(o[r[0]]=(o[r[0]]||0)+1,o),{}),
   kitReview:'Not verified; never mark kits complete solely from squad research'
 };
 fs.writeFileSync(path.join(ROOT, 'data/master-audit-2026-27.json'),JSON.stringify(audit,null,2)+'\n');
@@ -137,6 +172,7 @@ function worksheet(rows, widths, opts={}) {
 const sheets = [
   ['Players',[headers,...rowData],[20,27,23,27,10,18,17,16,14,15,19,28,52,18,60,16,16,16],{missingColumns:[4,5,7,8,9],statusColumn:10,filter:true}],
   ['Clubs',[clubHeaders,...clubData],[20,30,11,14,22,19,22,19,19,24],{filter:true}],
+  ['Quality checks', [['Issue','Division','Club','Player','What needs checking','Next action'],...integrity],[23,20,29,30,80,55],{filter:true}],
   ['How to use',[
    ['SWOS 2026/27 MASTER TRACKER','What this workbook means'],
    ['Players','All 92 clubs, exactly 16 researched players per club'],
@@ -147,6 +183,7 @@ const sheets = [
    ['Valuation evidence','For individually researched values see the evidence URL, source amount in EUR thousands, exchange rate and checked date columns. Blank means unverified.'],
    ['Foreign exchange','October 9, 2026 EUR/GBP reference rate 0.846328; later rates must be recorded explicitly for each future batch.'],
    ['Kit colours','Separate review, not yet confirmed in this workbook'],
+   ['Quality checks','This tab flags duplicate shirt numbers, player-name collisions, invalid position or value entries. Name collisions do not automatically imply a player belongs to two clubs.'],
    ['Age / goals / assists','Not included because SWOS does not need them in the current priority pass'],
    ['Source date','Each player inherits their club source/snapshot; generating the workbook does not reverify football facts'],
    ['Source of truth','Generated automatically from the same embedded research packs used by SWOS Studio'],
