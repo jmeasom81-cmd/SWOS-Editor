@@ -64,4 +64,38 @@ assert.equal(new Set(master.clubs.map(c=>c.clubId)).size, 92);
 assert.equal(master.clubs.reduce((n,c)=>n+c.players.length,0), 1472);
 for (const [division,size] of Object.entries({'Premier League':20,Championship:24,'League One':24,'League Two':24}))
   assert.equal(master.clubs.filter(c=>c.division===division).length,size,'Division size: '+division);
-console.log('Research safety: passed null/zero ratings, installer value/number guards and 92-club integrity.');
+// Parse the actual client-side application so a malformed review panel cannot ship.
+const scripts = [...html.matchAll(/<script(?:\\s[^>]*)?>([\\s\\S]*?)<\\/script>/g)]
+  .map(m=>m[1]).filter(s=>s.includes('const TEAM_RECORD_SIZE='));
+assert.equal(scripts.length, 1, 'Exactly one SWOS application script should be present');
+assert.doesNotThrow(()=>new vm.Script(scripts[0], {filename:'index.html script'}), 'Editor must be syntactically valid JavaScript');
+
+const expectedNewValues = {
+  'sheffield-wednesday': {
+    'Joe Lumley':400, 'Max Lowe':1800, 'Ricardo Santos':350,
+    'Liam Palmer':100, 'Liam Cooper':200, 'Sean Fusire':900,
+    'Callum Slattery':700, 'Barry Bannan':200, 'Louie Barry':2500, 'Jamal Lowe':500
+  },
+  'wigan-athletic': {'Joe Walsh':1500}
+};
+for (const [clubId, records] of Object.entries(expectedNewValues)) {
+  const club = master.clubs.find(c=>c.clubId===clubId);
+  assert.ok(club, 'Missing verified club: '+clubId);
+  for (const [name, euroThousands] of Object.entries(records)) {
+    const player = club.players.find(p=>p.player===name);
+    assert.ok(player, 'Missing researched player: '+name);
+    assert.equal(player.marketValueM, Math.round(euroThousands*0.846328)/1000, 'Wrong GBP market value: '+name);
+    assert.equal(player.marketValueSourceEuroK,euroThousands);
+    assert.equal(player.marketValueFxRate,0.846328);
+    assert.ok(player.marketValueSourceUrl?.includes('transfermarkt.'), 'No source URL for '+name);
+    assert.ok(player.seasonSquadSourceUrl, 'No squad link for '+name);
+  }
+}
+const batchD = JSON.parse(fs.readFileSync('data/league-one-squad-review-batch-d-2026-10-09.json','utf8'));
+const reviewCount = batchD.clubs.reduce((n,c)=>n+c.squadReviews.length,0);
+assert.equal(reviewCount,8);
+assert.ok(html.includes('2026/27 squad number and membership reviews'));
+assert.ok(html.includes('data-master-review-club'));
+for (const reviewed of batchD.clubs) assert.ok(html.includes(reviewed.id));
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,649,'Unexpected valuations tally');
+console.log('Research safety: verified 92 clubs, 1,472 players, 11 sourced additions, eight reviews and editor syntax.');
