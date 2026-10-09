@@ -1,0 +1,32 @@
+{
+  "season": "2026/27",
+  "checkedAt": "2026-10-09",
+  "referenceFxRateEurGbp": 0.846328,
+  "meaning": "Explicit 2026/27 squad-matching and shirt-number review notes. Never use flagged shirt numbers to overwrite SWOS records automatically.",
+  "clubs": [
+    {
+      "id": "sheffield-wednesday",
+      "pack": "SHEFFIELD_WEDNESDAY_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/sheffield-wednesday/startseite/verein/1035/saison_id/2026",
+      "sourceSnapshot": "2026/27 squad overview",
+      "squadReviews": [
+        "Ricardo Santos — research shirt #4, but the 2026/27 source leaves number unassigned; do not overwrite without verification.",
+        "Liam Cooper — research shirt #6, 2026/27 source shows #16; verify official number before applying.",
+        "Sean Fusire — research shirt #14, 2026/27 source shows #4; potential clash with Ricardo Santos in current research pack.",
+        "Barry Bannan — research shirt #10, 2026/27 source shows no assigned number; verify.",
+        "Louie Barry — research shirt #11, 2026/27 source shows no assigned number; verify.",
+        "Joe Lumley — value is linked to current squad profile, not the season-specific squad list; verify season membership separately.",
+        "Ashley Maynard-Brewer, Billy Mitchell, Tyler Onyango, Ali Al-Hamadi and Mason Burstow — not observed in cited 2026/27 snapshot; verify squad selection rather than replacing automatically."
+      ]
+    },
+    {
+      "id": "wigan-athletic",
+      "pack": "WIGAN_ATHLETIC_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/wigan-athletic/kader/verein/1071/saison_id/2026",
+      "sourceSnapshot": "2026/27 squad overview",
+      "squadReviews": [
+        "Joe Walsh — new €1.50m valuation source is from 2026/27, but the source lists no shirt number; research shirt #1 requires a separate official check."
+      ]
+    }
+  ]
+}
