@@ -9503,10 +9503,14 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.254,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/barnsley-fc/kader/verein/349/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 300,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Connor O'Riordan",
@@ -9539,10 +9543,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.212,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/barnsley-fc/kader/verein/349/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 250,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Tyrese Noslin",
@@ -9563,10 +9571,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.55,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/barnsley-fc/kader/verein/349/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 650,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Patrick Kelly",
@@ -9575,10 +9587,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.296,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/barnsley-fc/kader/verein/349/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 350,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Luca Connell",
@@ -9587,10 +9603,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.677,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/barnsley-fc/kader/verein/349/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 800,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Makenzie Kirk",
@@ -9635,10 +9655,14 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.212,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/barnsley-fc/kader/verein/349/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 250,
+          "marketValueFxRate": 0.846328
         }
       ]
     },
@@ -9658,10 +9682,14 @@
           "group": "Goalkeeper",
           "position": 0,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.762,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/blackpool-fc/kader/verein/1181/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 900,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Luke Southwood",
@@ -9682,10 +9710,14 @@
           "group": "Defender",
           "position": 1,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.317,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/blackpool-fc/kader/verein/1181/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 375,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Zac Ashworth",
@@ -9694,10 +9726,14 @@
           "group": "Defender",
           "position": 2,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.254,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/blackpool-fc/kader/verein/1181/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 300,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Oliver Casey",
@@ -9706,10 +9742,14 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.635,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/blackpool-fc/kader/verein/1181/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 750,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Fraser Horsfall",
@@ -9718,10 +9758,14 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.233,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/blackpool-fc/kader/verein/1181/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 275,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Hayden Coulson",
@@ -9730,10 +9774,14 @@
           "group": "Defender",
           "position": 2,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.339,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/blackpool-fc/kader/verein/1181/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 400,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Leighton Clarkson",
@@ -9742,10 +9790,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.592,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/blackpool-fc/kader/verein/1181/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 700,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Albie Morgan",
@@ -9766,10 +9818,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.423,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/blackpool-fc/kader/verein/1181/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 500,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Josh Bowler",
@@ -9778,10 +9834,14 @@
           "group": "Midfielder",
           "position": 4,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.508,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/blackpool-fc/kader/verein/1181/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 600,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Karoy Anderson",
@@ -9802,10 +9862,14 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.508,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/blackpool-fc/kader/verein/1181/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 600,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Jerry Yates",
@@ -9826,10 +9890,14 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.508,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/blackpool-fc/kader/verein/1181/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 600,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Dion Charles",
@@ -9838,10 +9906,14 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.423,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/blackpool-fc/kader/verein/1181/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 500,
+          "marketValueFxRate": 0.846328
         }
       ]
     },
@@ -9873,10 +9945,14 @@
           "group": "Goalkeeper",
           "position": 0,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.423,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bradford-city/startseite/verein/1027/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 500,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Reece Welch",
@@ -9897,10 +9973,14 @@
           "group": "Defender",
           "position": 2,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.19,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bradford-city/startseite/verein/1027/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 225,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Macaulay Gillesphey",
@@ -9909,10 +9989,14 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.339,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bradford-city/startseite/verein/1027/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 400,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Hayden Matthews",
@@ -9933,10 +10017,14 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.254,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bradford-city/startseite/verein/1027/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 300,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Callum Connolly",
@@ -9945,10 +10033,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.465,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bradford-city/startseite/verein/1027/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 550,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Adam Phillips",
@@ -9957,10 +10049,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.55,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bradford-city/startseite/verein/1027/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 650,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Antoni Sarcevic",
@@ -9969,10 +10065,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.042,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bradford-city/startseite/verein/1027/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 50,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Tyreik Wright",
@@ -9981,10 +10081,14 @@
           "group": "Midfielder",
           "position": 5,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.296,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bradford-city/startseite/verein/1027/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 350,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Kieran Morgan",
@@ -10005,10 +10109,14 @@
           "group": "Forward",
           "position": 4,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.592,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bradford-city/startseite/verein/1027/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 700,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Jake Beesley",
@@ -10017,10 +10125,14 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.254,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bradford-city/startseite/verein/1027/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 300,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Stephen Humphrys",
@@ -10029,10 +10141,14 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.465,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bradford-city/startseite/verein/1027/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 550,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Kayden Jackson",
@@ -10041,10 +10157,14 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.169,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bradford-city/startseite/verein/1027/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 200,
+          "marketValueFxRate": 0.846328
         }
       ]
     },
@@ -10064,10 +10184,14 @@
           "group": "Goalkeeper",
           "position": 0,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.085,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bromley-fc/kader/verein/8981",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 100,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Dillon Addai",
@@ -10112,10 +10236,14 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.423,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bromley-fc/kader/verein/8981",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 500,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Deon Woodman",
@@ -10184,10 +10312,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.169,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bromley-fc/kader/verein/8981",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 200,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Mitch Pinnock",
@@ -10196,10 +10328,14 @@
           "group": "Midfielder",
           "position": 5,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.169,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bromley-fc/kader/verein/8981",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 200,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Michael Cheek",
@@ -10208,10 +10344,14 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.085,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bromley-fc/kader/verein/8981",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 100,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Nicke Kabamba",
@@ -10220,10 +10360,14 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.042,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bromley-fc/kader/verein/8981",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 50,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Corey Whitely",
@@ -10232,10 +10376,14 @@
           "group": "Forward",
           "position": 5,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.042,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bromley-fc/kader/verein/8981",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 50,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Victor Adeboyejo",
@@ -10470,10 +10618,14 @@
           "group": "Goalkeeper",
           "position": 0,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.254,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/cambridge-united/kader/verein/986/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 300,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Gabriel Breeze",
@@ -10494,10 +10646,14 @@
           "group": "Defender",
           "position": 1,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.381,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/cambridge-united/kader/verein/986/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 450,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Callum Perry",
@@ -10518,10 +10674,14 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.127,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/cambridge-united/kader/verein/986/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 150,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Kelland Watts",
@@ -10530,10 +10690,14 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.508,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/cambridge-united/kader/verein/986/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 600,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Sam Curtis",
@@ -10554,10 +10718,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.212,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/cambridge-united/kader/verein/986/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 250,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Pelly Ruddock Mpanzu",
@@ -10566,10 +10734,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.296,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/cambridge-united/kader/verein/986/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 350,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Ben Knight",
@@ -10578,10 +10750,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.212,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/cambridge-united/kader/verein/986/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 250,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Isaac Heath",
@@ -10590,10 +10766,14 @@
           "group": "Midfielder",
           "position": 5,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.212,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/cambridge-united/kader/verein/986/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 250,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Owen Moxon",
@@ -10614,10 +10794,14 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.19,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/cambridge-united/kader/verein/986/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 225,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Sullay Kaikai",
@@ -10626,10 +10810,14 @@
           "group": "Forward",
           "position": 5,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.127,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/cambridge-united/kader/verein/986/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 150,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Shayne Lavery",
@@ -10638,10 +10826,14 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.212,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/cambridge-united/kader/verein/986/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 250,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Gassan Ahadme",
@@ -10650,10 +10842,14 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.508,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/cambridge-united/kader/verein/986/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 600,
+          "marketValueFxRate": 0.846328
         }
       ]
     },
@@ -10673,10 +10869,14 @@
           "group": "Goalkeeper",
           "position": 0,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.846,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/doncaster-rovers/kader/verein/2454",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 1000,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Josh Clarke",
@@ -10685,10 +10885,14 @@
           "group": "Goalkeeper",
           "position": 0,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.169,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/doncaster-rovers/kader/verein/2454",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 200,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Jamie Sterry",
@@ -10697,10 +10901,14 @@
           "group": "Defender",
           "position": 1,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.106,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/doncaster-rovers/kader/verein/2454",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 125,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "James Husband",
@@ -10709,10 +10917,14 @@
           "group": "Defender",
           "position": 2,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.148,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/doncaster-rovers/kader/verein/2454",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 175,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Matty Pearson",
@@ -10721,10 +10933,14 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.465,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/doncaster-rovers/kader/verein/2454",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 550,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Jay McGrath",
@@ -10745,10 +10961,14 @@
           "group": "Defender",
           "position": 1,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.169,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/doncaster-rovers/kader/verein/2454",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 200,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Owen Bailey",
@@ -10757,10 +10977,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.55,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/doncaster-rovers/kader/verein/2454",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 650,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Tommi O'Reilly",
@@ -10781,10 +11005,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.254,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/doncaster-rovers/kader/verein/2454",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 300,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Harry Clifton",
@@ -10793,10 +11021,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.233,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/doncaster-rovers/kader/verein/2454",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 275,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Isaac Hutchinson",
@@ -10817,10 +11049,14 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.169,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/doncaster-rovers/kader/verein/2454",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 200,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Alfie May",
@@ -10829,10 +11065,14 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.381,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/doncaster-rovers/kader/verein/2454",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 450,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Leon Ayinde",
@@ -11079,10 +11319,14 @@
           "group": "Goalkeeper",
           "position": 0,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 1.523,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/leicester-city/kader/verein/1003/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 1800,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Franco Ravizzoli",
@@ -11103,10 +11347,14 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 8.463,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/leicester-city/kader/verein/1003/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 10000,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Ben Nelson",
@@ -11115,10 +11363,14 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 1.269,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/leicester-city/kader/verein/1003/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 1500,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Caleb Okoli",
@@ -11127,10 +11379,14 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 7.617,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/leicester-city/kader/verein/1003/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 9000,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Warren O'Hora",
@@ -12500,10 +12756,14 @@
           "group": "Goalkeeper",
           "position": 0,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.317,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/peterborough-united/kader/verein/1072",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 375,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Collin Andeng Ndi",
@@ -13169,10 +13429,14 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.846,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/sheffield-wednesday/kader/verein/1035/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 1000,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Liam Cooper",
