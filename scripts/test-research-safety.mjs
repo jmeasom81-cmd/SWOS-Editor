@@ -119,6 +119,6 @@ const officialRochdale=JSON.parse(fs.readFileSync('data/league-two-rochdale-offi
 const rochdaleClub=master.clubs.find(c=>c.clubId==='rochdale');
 assert.equal(Object.keys(officialRochdale.officialShirts).length,14,'Official Rochdale source should confirm 14 shirts');
 for(const [name,shirt] of Object.entries(officialRochdale.officialShirts)){const p=rochdaleClub.players.find(p=>p.player===name);assert.ok(p);assert.equal(p.shirt,shirt,'Official shirt differs '+name);assert.equal(p.shirtEvidenceUrl,officialRochdale.clubs[0].sourceUrl);assert.equal(p.seasonSquadSourceUrl,officialRochdale.clubs[0].sourceUrl);}
-for(const name of officialRochdale.notConfirmed){const p=rochdaleClub.players.find(p=>p.player===name);assert.ok(p);assert.equal(p.shirtEvidenceUrl,null,'Unconfirmed shirt must stay unverified');}
+for(const name of officialRochdale.notConfirmed){const p=rochdaleClub.players.find(p=>p.player===name);assert.ok(p);assert.equal(p.shirtEvidenceUrl ?? null,null,'Unconfirmed shirt must stay unverified');}
 assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,495,'Do not alter valuations when confirming shirts');
 console.log('Rochdale: 14 official 2026/27 numbers confirmed, 2 pending.');
