@@ -65,8 +65,8 @@ assert.equal(master.clubs.reduce((n,c)=>n+c.players.length,0), 1472);
 for (const [division,size] of Object.entries({'Premier League':20,Championship:24,'League One':24,'League Two':24}))
   assert.equal(master.clubs.filter(c=>c.division===division).length,size,'Division size: '+division);
 // Parse the actual client-side application so a malformed review panel cannot ship.
-const scripts = [...html.matchAll(/<script(?:\\s[^>]*)?>([\\s\\S]*?)<\\/script>/g)]
-  .map(m=>m[1]).filter(s=>s.includes('const TEAM_RECORD_SIZE='));
+const scripts = html.split('<script>').slice(1).map(part=>part.split('</script>')[0])
+  .filter(part=>part.includes('const TEAM_RECORD_SIZE='));
 assert.equal(scripts.length, 1, 'Exactly one SWOS application script should be present');
 assert.doesNotThrow(()=>new vm.Script(scripts[0], {filename:'index.html script'}), 'Editor must be syntactically valid JavaScript');
 
