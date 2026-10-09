@@ -15082,10 +15082,16 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.148,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 175,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Oliver Smith",
@@ -15118,10 +15124,16 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.254,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 300,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Joe Anderson",
@@ -15130,10 +15142,16 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.106,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 125,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Liam Coyle",
@@ -15142,10 +15160,16 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.148,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 175,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Shaun Whalley",
@@ -15154,10 +15178,16 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.021,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 25,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Conor Grant",
@@ -15166,10 +15196,16 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.063,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 75,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Alex Henderson",
@@ -15178,10 +15214,16 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.106,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 125,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Stefan Mols",
@@ -15202,10 +15244,16 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.063,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 75,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Cole Stockton",
@@ -15226,10 +15274,16 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.063,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 75,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Charlie Brown",
@@ -15238,10 +15292,16 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.106,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 125,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688",
+          "seasonSquadCheckedAt": "2026-10-09"
         }
       ]
     },
@@ -15261,10 +15321,16 @@
           "group": "Goalkeeper",
           "position": 0,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.148,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804/sort/name",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 175,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804/sort/name",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Matthew Cox",
@@ -15297,10 +15363,16 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.169,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804/sort/name",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 200,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804/sort/name",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Adam Senior",
@@ -15309,10 +15381,16 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.339,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804/sort/name",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 400,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804/sort/name",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Zac Williams",
@@ -15321,10 +15399,16 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.381,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804/sort/name",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 450,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804/sort/name",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Nikola Tavares",
@@ -15333,10 +15417,16 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.212,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804/sort/name",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 250,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804/sort/name",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Charlie Lakin",
@@ -15357,10 +15447,16 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.233,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804/sort/name",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 275,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804/sort/name",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Idris Kanu",
@@ -15369,10 +15465,16 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.212,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804/sort/name",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 250,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804/sort/name",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Brandon Comley",
@@ -15441,10 +15543,16 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.148,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804/sort/name",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 175,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804/sort/name",
+          "seasonSquadCheckedAt": "2026-10-09"
         }
       ]
     },
@@ -15464,10 +15572,16 @@
           "group": "Goalkeeper",
           "position": 0,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.169,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 200,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Charlie Binns",
@@ -15488,10 +15602,16 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.254,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 300,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Jack Sparkes",
@@ -15500,10 +15620,16 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.339,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 400,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Kofi Balmer",
@@ -15512,10 +15638,16 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.254,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 300,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Alfie Kilgour",
@@ -15524,10 +15656,16 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.212,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 250,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Clinton Mola",
@@ -15536,10 +15674,16 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.212,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 250,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Reiss-Alexander Russell-Denny",
@@ -15560,10 +15704,16 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.275,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 325,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Richard Smallwood",
@@ -15572,10 +15722,16 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.021,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 25,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Tommy Leigh",
@@ -15584,10 +15740,16 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.296,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 350,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Ryan De Havilland",
@@ -15596,10 +15758,16 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.169,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 200,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Shaq Forde",
@@ -15608,10 +15776,16 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.19,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 225,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Joe Quigley",
@@ -15620,10 +15794,16 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.085,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 100,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Bobby Kamwa",
@@ -15632,10 +15812,16 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.148,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 175,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Ellis Harrison",
@@ -15644,10 +15830,16 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.063,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 75,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+          "seasonSquadCheckedAt": "2026-10-09"
         }
       ]
     },

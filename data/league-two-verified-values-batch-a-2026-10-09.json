@@ -1,0 +1,213 @@
+{
+  "season": "2026/27",
+  "checkedAt": "2026-10-09",
+  "referenceFxRateEurGbp": 0.846328,
+  "referenceFxNote": "Existing 9 Oct EUR/GBP reference; rounded to GBP 1k.",
+  "meaning": "Indicative sourced market values, not game-native encoded values; flagged names and shirts require verification.",
+  "clubs": [
+    {
+      "id": "accrington-stanley",
+      "pack": "ACCRINGTON_STANLEY_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/accrington-stanley/kader/verein/3688",
+      "sourceSnapshot": "2026/27 detailed squad",
+      "sourceAliases": {},
+      "players": [
+        {
+          "name": "Donald Love",
+          "eurThousands": 175,
+          "gbpMillions": 0.148
+        },
+        {
+          "name": "Farrend Rawson",
+          "eurThousands": 300,
+          "gbpMillions": 0.254
+        },
+        {
+          "name": "Joe Anderson",
+          "eurThousands": 125,
+          "gbpMillions": 0.106
+        },
+        {
+          "name": "Liam Coyle",
+          "eurThousands": 175,
+          "gbpMillions": 0.148
+        },
+        {
+          "name": "Shaun Whalley",
+          "eurThousands": 25,
+          "gbpMillions": 0.021
+        },
+        {
+          "name": "Conor Grant",
+          "eurThousands": 75,
+          "gbpMillions": 0.063
+        },
+        {
+          "name": "Alex Henderson",
+          "eurThousands": 125,
+          "gbpMillions": 0.106
+        },
+        {
+          "name": "Kelsey Mooney",
+          "eurThousands": 75,
+          "gbpMillions": 0.063
+        },
+        {
+          "name": "Charlie Caton",
+          "eurThousands": 75,
+          "gbpMillions": 0.063
+        },
+        {
+          "name": "Charlie Brown",
+          "eurThousands": 125,
+          "gbpMillions": 0.106
+        }
+      ],
+      "squadReviews": [
+        "Oliver Smith and Cole Stockton are not observed in the cited 2026/27 squad; verify club membership, but do not remove automatically.",
+        "Conor Grant: source shows #4, versus researched #8; verify official 2026/27 shirt before changing.",
+        "Joe Anderson and Charlie Caton have unassigned shirt numbers in the source; current numbers remain provisional."
+      ]
+    },
+    {
+      "id": "barnet",
+      "pack": "BARNET_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/fc-barnet/kader/verein/2804/sort/name",
+      "sourceSnapshot": "2026/27 detailed squad",
+      "sourceAliases": {
+        "Daniele Collinge": "Danny Collinge"
+      },
+      "players": [
+        {
+          "name": "Taye Ashby-Hammond",
+          "eurThousands": 175,
+          "gbpMillions": 0.148
+        },
+        {
+          "name": "Daniele Collinge",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        },
+        {
+          "name": "Adam Senior",
+          "eurThousands": 400,
+          "gbpMillions": 0.339
+        },
+        {
+          "name": "Zac Williams",
+          "eurThousands": 450,
+          "gbpMillions": 0.381
+        },
+        {
+          "name": "Nikola Tavares",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        },
+        {
+          "name": "Nnamdi Ofoborh",
+          "eurThousands": 275,
+          "gbpMillions": 0.233
+        },
+        {
+          "name": "Idris Kanu",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        },
+        {
+          "name": "Kabongo Tshimanga",
+          "eurThousands": 175,
+          "gbpMillions": 0.148
+        }
+      ],
+      "squadReviews": [
+        "Daniele Collinge is called Danny Collinge in the valuation source; verify exact name before renaming.",
+        "Nnamdi Ofoborh: source has #28 versus researched #10; confirm official shirt.",
+        "Taye Ashby-Hammond and Zac Williams have unassigned source numbers; do not overwrite existing shirts."
+      ]
+    },
+    {
+      "id": "bristol-rovers",
+      "pack": "BRISTOL_ROVERS_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/bristol-rovers/kader/verein/2455/sort/contractEndTimestamp",
+      "sourceSnapshot": "2026/27 detailed squad",
+      "sourceAliases": {},
+      "players": [
+        {
+          "name": "Brad Young",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        },
+        {
+          "name": "Tom James",
+          "eurThousands": 300,
+          "gbpMillions": 0.254
+        },
+        {
+          "name": "Jack Sparkes",
+          "eurThousands": 400,
+          "gbpMillions": 0.339
+        },
+        {
+          "name": "Kofi Balmer",
+          "eurThousands": 300,
+          "gbpMillions": 0.254
+        },
+        {
+          "name": "Alfie Kilgour",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        },
+        {
+          "name": "Clinton Mola",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        },
+        {
+          "name": "Jack Aitchison",
+          "eurThousands": 325,
+          "gbpMillions": 0.275
+        },
+        {
+          "name": "Richard Smallwood",
+          "eurThousands": 25,
+          "gbpMillions": 0.021
+        },
+        {
+          "name": "Tommy Leigh",
+          "eurThousands": 350,
+          "gbpMillions": 0.296
+        },
+        {
+          "name": "Ryan De Havilland",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        },
+        {
+          "name": "Shaq Forde",
+          "eurThousands": 225,
+          "gbpMillions": 0.19
+        },
+        {
+          "name": "Joe Quigley",
+          "eurThousands": 100,
+          "gbpMillions": 0.085
+        },
+        {
+          "name": "Bobby Kamwa",
+          "eurThousands": 175,
+          "gbpMillions": 0.148
+        },
+        {
+          "name": "Ellis Harrison",
+          "eurThousands": 75,
+          "gbpMillions": 0.063
+        }
+      ],
+      "squadReviews": [
+        "Brad Young: 2026/27 source shirt #13, versus researched #1; confirm before altering.",
+        "Ryan De Havilland: 2026/27 source #15 versus researched #33; confirm before altering.",
+        "Charlie Binns and Reiss-Alexander Russell-Denny are not observed in the cited 2026/27 squad; no invented valuations or transfers."
+      ]
+    }
+  ]
+}

@@ -132,7 +132,8 @@ for (const [division, expected] of Object.entries(expectedDivisions)) {
 }
 const reviewBatchPaths = [
   'data/league-one-verified-values-batch-c-2026-10-09.json',
-  'data/league-one-squad-review-batch-d-2026-10-09.json'
+  'data/league-one-squad-review-batch-d-2026-10-09.json',
+  'data/league-two-verified-values-batch-a-2026-10-09.json'
 ];
 const squadReviewRows = [];
 for (const reviewBatchPath of reviewBatchPaths) {
