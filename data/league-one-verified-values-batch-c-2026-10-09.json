@@ -1,0 +1,360 @@
+{
+  "season": "2026/27",
+  "checkedAt": "2026-10-09",
+  "referenceFxRateEurGbp": 0.846328,
+  "referenceFxNote": "Previously recorded October 9 EUR/GBP reference rate. Conversion rounded to nearest GBP 1,000.",
+  "meaning": "Indicative research market values in EUR thousands, not SWOS native encoded costs",
+  "clubs": [
+    {
+      "id": "stockport-county",
+      "pack": "STOCKPORT_COUNTY_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/stockport-county/kader/verein/1098/saison_id/2026",
+      "secondarySourceUrl": null,
+      "sourceAliases": {
+        "Benony Breki Andresson": "Benoný Breki Andrésson"
+      },
+      "players": [
+        {
+          "name": "Ethan Pye",
+          "eurThousands": 900,
+          "gbpMillions": 0.762
+        },
+        {
+          "name": "Brad Hills",
+          "eurThousands": 650,
+          "gbpMillions": 0.55
+        },
+        {
+          "name": "Eoghan O'Connell",
+          "eurThousands": 400,
+          "gbpMillions": 0.339
+        },
+        {
+          "name": "Josh Dacres-Cogley",
+          "eurThousands": 500,
+          "gbpMillions": 0.423
+        },
+        {
+          "name": "Lewis Bate",
+          "eurThousands": 550,
+          "gbpMillions": 0.465
+        },
+        {
+          "name": "Callum Camps",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        },
+        {
+          "name": "Oliver Norwood",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        },
+        {
+          "name": "Jack Diamond",
+          "eurThousands": 700,
+          "gbpMillions": 0.592
+        },
+        {
+          "name": "Benony Breki Andresson",
+          "eurThousands": 400,
+          "gbpMillions": 0.339
+        },
+        {
+          "name": "Adama Sidibeh",
+          "eurThousands": 400,
+          "gbpMillions": 0.339
+        }
+      ],
+      "squadReviews": [
+        "Oliver Whatmuff: source has no market valuation",
+        "Luca Ashby-Hammond: not observed in snapshot",
+        "Dan Marshall: not observed in snapshot",
+        "Ethan Ennis: not observed in snapshot",
+        "Joe Astles: not observed in snapshot",
+        "Che Gardner: source has no market valuation"
+      ]
+    },
+    {
+      "id": "wycombe-wanderers",
+      "pack": "WYCOMBE_WANDERERS_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/wycombe-wanderers/startseite/verein/2805",
+      "secondarySourceUrl": null,
+      "sourceAliases": {},
+      "players": [
+        {
+          "name": "Conor Hazard",
+          "eurThousands": 700,
+          "gbpMillions": 0.592
+        },
+        {
+          "name": "Mikki van Sas",
+          "eurThousands": 400,
+          "gbpMillions": 0.339
+        },
+        {
+          "name": "Jack Grimmer",
+          "eurThousands": 225,
+          "gbpMillions": 0.19
+        },
+        {
+          "name": "Daniel Harvie",
+          "eurThousands": 600,
+          "gbpMillions": 0.508
+        },
+        {
+          "name": "Dan Casey",
+          "eurThousands": 450,
+          "gbpMillions": 0.381
+        },
+        {
+          "name": "Connor Taylor",
+          "eurThousands": 600,
+          "gbpMillions": 0.508
+        },
+        {
+          "name": "Steve Cook",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        },
+        {
+          "name": "Josh Scowen",
+          "eurThousands": 100,
+          "gbpMillions": 0.085
+        },
+        {
+          "name": "Aaron Morley",
+          "eurThousands": 900,
+          "gbpMillions": 0.762
+        },
+        {
+          "name": "Caolan Boyd-Munce",
+          "eurThousands": 500,
+          "gbpMillions": 0.423
+        },
+        {
+          "name": "Luke Leahy",
+          "eurThousands": 100,
+          "gbpMillions": 0.085
+        },
+        {
+          "name": "Ewan Henderson",
+          "eurThousands": 550,
+          "gbpMillions": 0.465
+        },
+        {
+          "name": "Silko Thomas",
+          "eurThousands": 500,
+          "gbpMillions": 0.423
+        },
+        {
+          "name": "Cauley Woodrow",
+          "eurThousands": 400,
+          "gbpMillions": 0.339
+        }
+      ],
+      "squadReviews": [
+        "Jayden Wareham: not observed in 2026/27 snapshot",
+        "Danny Ings: not observed in 2026/27 snapshot"
+      ]
+    },
+    {
+      "id": "wigan-athletic",
+      "pack": "WIGAN_ATHLETIC_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.com/wigan-athletic/startseite/verein/1071/saison_id/2026",
+      "secondarySourceUrl": null,
+      "sourceAliases": {},
+      "players": [
+        {
+          "name": "Jeremiah Chilokoa-Mullen",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        },
+        {
+          "name": "Morgan Fox",
+          "eurThousands": 325,
+          "gbpMillions": 0.275
+        },
+        {
+          "name": "Connor Barrett",
+          "eurThousands": 400,
+          "gbpMillions": 0.339
+        },
+        {
+          "name": "Jensen Weir",
+          "eurThousands": 450,
+          "gbpMillions": 0.381
+        },
+        {
+          "name": "Fraser Murray",
+          "eurThousands": 600,
+          "gbpMillions": 0.508
+        },
+        {
+          "name": "Max Power",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        },
+        {
+          "name": "Sonny Perkins",
+          "eurThousands": 600,
+          "gbpMillions": 0.508
+        },
+        {
+          "name": "Christian Saydee",
+          "eurThousands": 400,
+          "gbpMillions": 0.339
+        }
+      ],
+      "squadReviews": [
+        "Joe Walsh: separately listed €1.50m on 26/27 UK squad snapshot but not this squad snapshot",
+        "Joe Whitworth: not observed in current squad snapshot",
+        "Scott Hogan: not observed in current squad snapshot",
+        "Finley Burns: not observed in current squad snapshot"
+      ]
+    },
+    {
+      "id": "stevenage",
+      "pack": "STEVENAGE_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/fc-stevenage/kader/verein/3684",
+      "secondarySourceUrl": null,
+      "sourceAliases": {
+        "Luther Wildin": "Luther James-Wildin"
+      },
+      "players": [
+        {
+          "name": "Carl Piergianni",
+          "eurThousands": 75,
+          "gbpMillions": 0.063
+        },
+        {
+          "name": "Lewis Freestone",
+          "eurThousands": 300,
+          "gbpMillions": 0.254
+        },
+        {
+          "name": "Saxon Earley",
+          "eurThousands": 225,
+          "gbpMillions": 0.19
+        },
+        {
+          "name": "Luther Wildin",
+          "eurThousands": 550,
+          "gbpMillions": 0.465
+        },
+        {
+          "name": "Jordan Houghton",
+          "eurThousands": 750,
+          "gbpMillions": 0.635
+        },
+        {
+          "name": "Terry Taylor",
+          "eurThousands": 300,
+          "gbpMillions": 0.254
+        },
+        {
+          "name": "Jordan Roberts",
+          "eurThousands": 150,
+          "gbpMillions": 0.127
+        },
+        {
+          "name": "Dan Kemp",
+          "eurThousands": 550,
+          "gbpMillions": 0.465
+        },
+        {
+          "name": "Chem Campbell",
+          "eurThousands": 1000,
+          "gbpMillions": 0.846
+        },
+        {
+          "name": "Josh Magennis",
+          "eurThousands": 50,
+          "gbpMillions": 0.042
+        }
+      ],
+      "squadReviews": [
+        "Tommy Setford: not observed in 2026/27 source snapshot",
+        "Daniel Barden: not observed in 2026/27 source snapshot",
+        "Michael Mellon: not observed in 2026/27 source snapshot"
+      ]
+    },
+    {
+      "id": "peterborough-united",
+      "pack": "PETERBOROUGH_UNITED_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/peterborough-united/kader/verein/1072",
+      "secondarySourceUrl": "https://m.aiscore.com/team-peterborough-united/1edq09i1l6t4qxg/squad",
+      "sourceAliases": {},
+      "players": [
+        {
+          "name": "Carl Johnston",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        },
+        {
+          "name": "Evan Weir",
+          "eurThousands": 300,
+          "gbpMillions": 0.254
+        },
+        {
+          "name": "Sam Hughes",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        },
+        {
+          "name": "Josh Feeney",
+          "eurThousands": 650,
+          "gbpMillions": 0.55
+        },
+        {
+          "name": "David Okagbue",
+          "eurThousands": 325,
+          "gbpMillions": 0.275
+        },
+        {
+          "name": "Liam Kelly",
+          "eurThousands": 300,
+          "gbpMillions": 0.254
+        },
+        {
+          "name": "Thomas O'Connor",
+          "eurThousands": 500,
+          "gbpMillions": 0.423
+        },
+        {
+          "name": "Harrison Jones",
+          "eurThousands": 150,
+          "gbpMillions": 0.127
+        },
+        {
+          "name": "Brandon Khela",
+          "eurThousands": 350,
+          "gbpMillions": 0.296
+        },
+        {
+          "name": "Chris Conn-Clarke",
+          "eurThousands": 175,
+          "gbpMillions": 0.148
+        },
+        {
+          "name": "Harry Leonard",
+          "eurThousands": 1500,
+          "gbpMillions": 1.269
+        },
+        {
+          "name": "Ethan Williams",
+          "eurThousands": 500,
+          "gbpMillions": 0.423
+        },
+        {
+          "name": "Owura Edwards",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        }
+      ],
+      "squadReviews": [
+        "Collin Andeng Ndi: listed without valuation in squad source",
+        "Other players without a verified player valuation remain blank"
+      ]
+    }
+  ]
+}
