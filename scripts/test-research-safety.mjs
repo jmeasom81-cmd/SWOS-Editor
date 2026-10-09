@@ -114,3 +114,11 @@ assert.equal(batchB.clubs.reduce((n,c)=>n+c.players.length,0),122,'Batch B sourc
 for(const c of batchB.clubs){const club=master.clubs.find(x=>x.clubId===c.id);assert.ok(club);for(const v of c.players){const p=club.players.find(p=>p.player===v.name);assert.ok(p,'Missing player '+v.name);assert.equal(p.marketValueSourceEuroK,v.eurThousands);assert.equal(p.marketValueM,Math.round(v.eurThousands*batchB.referenceFxRateEurGbp)/1000);assert.equal(p.marketValueSourceUrl,c.sourceUrl);assert.equal(p.seasonSquadSourceUrl,c.sourceUrl);}}
 assert.ok(html.includes('William Boyle as Will Boyle'),'Review notes must be visible');
 console.log('League Two batch B: 15 clubs, 122 individually sourced values, review safeguards checked.');
+
+const officialRochdale=JSON.parse(fs.readFileSync('data/league-two-rochdale-official-numbers-2026-10-09.json','utf8'));
+const rochdaleClub=master.clubs.find(c=>c.clubId==='rochdale');
+assert.equal(Object.keys(officialRochdale.officialShirts).length,14,'Official Rochdale source should confirm 14 shirts');
+for(const [name,shirt] of Object.entries(officialRochdale.officialShirts)){const p=rochdaleClub.players.find(p=>p.player===name);assert.ok(p);assert.equal(p.shirt,shirt,'Official shirt differs '+name);assert.equal(p.shirtEvidenceUrl,officialRochdale.clubs[0].sourceUrl);assert.equal(p.seasonSquadSourceUrl,officialRochdale.clubs[0].sourceUrl);}
+for(const name of officialRochdale.notConfirmed){const p=rochdaleClub.players.find(p=>p.player===name);assert.ok(p);assert.equal(p.shirtEvidenceUrl,null,'Unconfirmed shirt must stay unverified');}
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,495,'Do not alter valuations when confirming shirts');
+console.log('Rochdale: 14 official 2026/27 numbers confirmed, 2 pending.');

@@ -1,0 +1,34 @@
+{
+  "season": "2026/27",
+  "checkedAt": "2026-10-09",
+  "meaning": "Official football club shirt assignments, not valuations. Never infer unlisted players have been transferred.",
+  "officialShirts": {
+    "Nils Ramming": 1,
+    "Jake Spaven": 12,
+    "Kaiden Wilson": 3,
+    "Laurence Maguire": 5,
+    "Ethan Ebanks-Landell": 6,
+    "Tobi Adebayo-Rowling": 13,
+    "Ryan East": 4,
+    "Harvey Gilmour": 8,
+    "Ed Francis": 14,
+    "Casey Pettit": 16,
+    "Cian Hayes": 7,
+    "Mani Dieseruvwe": 9,
+    "Devante Rodney": 10,
+    "Zain Silcott-Duberry": 11
+  },
+  "notConfirmed": [
+    "Charlie Tasker",
+    "Baba Adeeko"
+  ],
+  "clubs": [
+    {
+      "id": "rochdale",
+      "sourceUrl": "https://rochdaleafc.co.uk/2026-27-squad-numbers-confirmed/",
+      "squadReviews": [
+        "Official 2026/27 Rochdale squad-number announcement confirms 14 of the selected SWOS shirts. Charlie Tasker (#2 in research) and Baba Adeeko (#17 in research) are not on the published announcement; their shirt and season membership need confirmation, not automatic reassignment."
+      ]
+    }
+  ]
+}
