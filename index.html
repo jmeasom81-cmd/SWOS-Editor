@@ -5576,11 +5576,11 @@
         const nationality=raw.nationality||(ident&&ident.nationality)||null;
         const group=raw.group||(ident&&ident.group)||null;
         const position=Number.isInteger(raw.position)?raw.position:null;
-        const value=Number.isFinite(Number(raw.marketValueM))?Number(raw.marketValueM):null;
-        const age=Number.isFinite(Number(raw.age))?Number(raw.age):null;
-        const minutes=Number.isFinite(Number(raw.minutes))?Number(raw.minutes):null;
-        const goals=Number.isFinite(Number(raw.goals))?Number(raw.goals):null;
-        const assists=Number.isFinite(Number(raw.assists))?Number(raw.assists):null;
+        const value=typeof raw.marketValueM==="number"&&Number.isFinite(raw.marketValueM)?raw.marketValueM:null;
+        const age=typeof raw.age==="number"&&Number.isFinite(raw.age)?raw.age:null;
+        const minutes=typeof raw.minutes==="number"&&Number.isFinite(raw.minutes)?raw.minutes:null;
+        const goals=typeof raw.goals==="number"&&Number.isFinite(raw.goals)?raw.goals:null;
+        const assists=typeof raw.assists==="number"&&Number.isFinite(raw.assists)?raw.assists:null;
         const missing=[];
         if(shirt===null)missing.push("shirt");
         if(!nationality)missing.push("nationality");
@@ -5592,7 +5592,7 @@
         if(minutes===null)optionalMissing.push("minutes");
         if(goals===null)optionalMissing.push("goals");
         if(assists===null)optionalMissing.push("assists");
-        rows.push({division:targetDivisionName(club.division),club:club.name,clubId:club.id,player:name,shirt,nationality,group,position,positionLabel:scoutPositionLabel(position),age,value,minutes,goals,assists,missing,optionalMissing,source:pack.source||"",snapshot:pack.snapshot||""});
+        rows.push({division:targetDivisionName(club.division),club:club.name,clubId:club.id,player:name,shirt,nationality,group,position,positionLabel:position===null?null:scoutPositionLabel(position),age,value,minutes,goals,assists,missing,optionalMissing,source:pack.source||"",snapshot:pack.snapshot||"",valueSource:raw.marketValueSourceUrl||"",valueChecked:raw.marketValueCheckedAt||"",shirtSource:raw.shirtEvidenceUrl||""});
       }
     }
     return rows
@@ -5604,9 +5604,9 @@
   }
 
   function downloadMasterDataCsv(filteredOnly=true){
-    const rows=filteredOnly?masterDataFilteredRows():masterDataRows(),headers=["Division","Club","Club ID","Player","Shirt #","Nationality","Position Group","SWOS Pos Code","SWOS Position","Age","Market Value GBPm","Minutes","Goals","Assists","Missing Fields","Source","Snapshot"];
+    const rows=filteredOnly?masterDataFilteredRows():masterDataRows(),headers=["Division","Club","Club ID","Player","Shirt #","Nationality","Position Group","SWOS Pos Code","SWOS Position","Market Value GBPm","Missing Essentials","Value Evidence URL","Valuation Checked","Shirt Evidence URL","Club Research Source","Research Snapshot"];
     const lines=[headers.map(masterCsvCell).join(",")];
-    rows.forEach(r=>lines.push([r.division,r.club,r.clubId,r.player,r.shirt,r.nationality,r.group,r.position,r.positionLabel,r.age,r.value,r.minutes,r.goals,r.assists,r.missing.join("; "),r.source,r.snapshot].map(masterCsvCell).join(",")));
+    rows.forEach(r=>lines.push([r.division,r.club,r.clubId,r.player,r.shirt,r.nationality,r.group,r.position,r.positionLabel,r.value,r.missing.join("; "),r.valueSource,r.valueChecked,r.shirtSource,r.source,r.snapshot].map(masterCsvCell).join(",")));
     const blob=new Blob(["\uFEFF"+lines.join("\n")],{type:"text/csv;charset=utf-8"}),url=URL.createObjectURL(blob),a=document.createElement("a");
     a.href=url;a.download=filteredOnly?"SWOS_Studio_2026-27_Filtered_Data.csv":"SWOS_Studio_2026-27_Master_Data.csv";document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)
   }
@@ -5632,7 +5632,9 @@
       if(s.group!=="all"&&(r.group||"Missing")!==s.group)return false;
       if(s.missing==="any"&&!r.missing.length)return false;
       if(s.missing==="identity"&&!(r.shirt===null||!r.nationality||r.position===null))return false;
-      if(s.missing!=="all"&&s.missing!=="any"&&s.missing!=="identity"&&!r.missing.includes(s.missing))return false;
+      if(s.missing==="unlinkedValue"&&!(r.value!==null&&!r.valueSource))return false;
+      if(s.missing==="linkedValue"&&!(r.value!==null&&r.valueSource))return false;
+      if(s.missing!=="all"&&s.missing!=="any"&&s.missing!=="identity"&&s.missing!=="unlinkedValue"&&s.missing!=="linkedValue"&&!r.missing.includes(s.missing))return false;
       if(q&&(r.player+" "+r.club+" "+(r.nationality||"")+" "+(r.group||"")+" "+(r.positionLabel||"")).toLowerCase().indexOf(q)<0)return false;
       return true
     }))
@@ -5683,6 +5685,8 @@
     const clubs=ENGLAND_2627_STRUCTURE.clubs.filter(x=>s.division==="all"||targetDivisionName(x.division)===s.division);
     const gaps={shirt:all.filter(x=>x.shirt===null).length,nationality:all.filter(x=>!x.nationality).length,position:all.filter(x=>x.position===null).length,value:all.filter(x=>x.value===null).length};
     const identityPlayers=all.filter(r=>r.shirt===null||!r.nationality||r.position===null).length;
+    const linkedValues=all.filter(r=>r.value!==null&&r.valueSource).length;
+    const unlinkedValues=all.filter(r=>r.value!==null&&!r.valueSource).length;
     const audit=masterDataAuditRows(all),totalMissing=all.reduce((n,r)=>n+r.missing.length,0),completePlayers=all.filter(r=>!r.missing.length).length;
     const quality=masterQualityChecks(all);
     const nextBatch=audit.clubs.filter(x=>x.division==="League One"&&x.missing>0).sort((a,b)=>b.missing-a.missing||a.club.localeCompare(b.club)).slice(0,15);
@@ -5702,24 +5706,25 @@
       '<td style="padding:7px;border-bottom:1px solid #172a45">'+masterMissingCell(r.nationality,"NAT")+'</td>'+
       '<td style="padding:7px;border-bottom:1px solid #172a45">'+masterMissingCell(r.positionLabel,"POS")+'</td>'+
       '<td style="padding:7px;border-bottom:1px solid #172a45">'+masterMissingCell(r.value,"VALUE")+'</td>'+
+      '<td style="padding:7px;border-bottom:1px solid #172a45">'+(r.valueSource?'<a href="'+esc(r.valueSource)+'" rel="noopener noreferrer" target="_blank">Evidence ↗</a>':'<span class="tiny">—</span>')+'</td>'+
       '<td style="padding:7px;border-bottom:1px solid #172a45">'+(r.missing.length?'<span style="color:#ff8b8b">'+esc(r.missing.join(", "))+'</span>':'<span style="color:var(--green)">SWOS READY</span>')+'</td></tr>').join("");
     main.innerHTML='<section class="hero" style="justify-content:flex-start">'+
       '<button class="btn back" id="masterBack">← England 2026/27</button><div class="simple-pill">📊 LIVE MASTER DATA</div><h1>2026/27 Master Data</h1>'+
       '<p class="studio-lead">The live visual version of the master spreadsheet. It is built directly from the same research packs as the installer, so when Studio football data changes, this view changes with it.</p>'+
       '<div class="structure-grid"><div class="structure-stat"><small>Clubs</small><strong>92</strong></div><div class="structure-stat"><small>Players</small><strong>'+all.length+'</strong></div><div class="structure-stat"><small>SWOS-ready players</small><strong>'+completePlayers+'</strong></div><div class="structure-stat"><small>Essential gaps</small><strong>'+totalMissing+'</strong></div></div>'+
       '<div class="friendly-card section-gap"><h3>Build priority</h3><p class="about">Finish what the game needs first. Identity blockers come before valuations; kits are a separate team-level pass. Skills are important, but are deliberately the next layer after the core database is structurally correct.</p><div class="structure-grid section-gap"><div class="structure-stat"><small>Players with identity blockers</small><strong>'+identityPlayers+'</strong><span class="tiny">'+gaps.shirt+' shirt · '+gaps.nationality+' nation · '+gaps.position+' position gaps</span></div><div class="structure-stat"><small>Missing valuations</small><strong>'+gaps.value+'</strong><span class="tiny">Main bulk research job</span></div><div class="structure-stat"><small>Kit pass</small><strong>92 clubs</strong><span class="tiny">Home + away colours/style to verify</span></div><div class="structure-stat"><small>Skills</small><strong>LATER PASS</strong><span class="tiny">Important for gameplay, not a core-data blocker</span></div></div><div class="split-actions section-gap"><button class="btn btn-danger" id="masterIdentityQueue">Show identity blockers</button><button class="btn btn-blue" id="masterValueQueue">Show missing valuations</button></div></div>'+
-      '<div class="friendly-card section-gap"><h3>SWOS readiness by division</h3><p class="about">A player counts as ready when the fields SWOS actually needs are present: name, shirt number, nationality, SWOS position and value. Age and match statistics do not block the update.</p><div class="structure-grid section-gap">'+divisionAuditHtml+'</div></div>'+
+      '<div class="friendly-card section-gap"><h3>Valuation evidence</h3><p class="about">Separate recorded market values from independently linked research. A completed field is not the same as a verified modern squad place. Historical values without a direct player/club source remain clearly flagged for follow-up.</p><div class="structure-grid section-gap"><div class="structure-stat"><small>Valuations recorded</small><strong>'+(all.length-gaps.value)+'</strong></div><div class="structure-stat"><small>With direct source link</small><strong>'+linkedValues+'</strong></div><div class="structure-stat"><small>Source link still needed</small><strong>'+unlinkedValues+'</strong></div></div><div class="split-actions section-gap"><button class="btn btn-blue" id="masterLinkedQueue">Show linked valuations</button><button class="btn" id="masterUnlinkedQueue">Show values needing evidence</button></div></div>'+<div class="friendly-card section-gap"><h3>SWOS readiness by division</h3><p class="about">A player counts as ready when the fields SWOS actually needs are present: name, shirt number, nationality, SWOS position and value. Age and match statistics do not block the update.</p><div class="structure-grid section-gap">'+divisionAuditHtml+'</div></div>'+
       '<div class="friendly-card section-gap"><h3>Current 15-club research batch</h3><p class="about">The next 15 League One clubs with missing essential fields. Sorted by remaining work, with a direct link to each club. Only sourced numbers count; unverified fields remain blank.</p><div class="structure-grid section-gap"><div class="structure-stat"><small>Clubs in batch</small><strong>'+nextBatch.length+'</strong></div><div class="structure-stat"><small>Essential gaps in batch</small><strong>'+nextBatch.reduce((n,c)=>n+c.missing,0)+'</strong></div></div><div class="research-pack-list section-gap">'+(nextBatchHtml||'<p class="about">League One essential fields have been completed.</p>')+'</div></div>'+
       '<div class="friendly-card section-gap"><h3>Squad quality checks</h3><p class="about">'+quality.length+' review flags across the master. A shirt clash needs a confirmed squad number. A matching player name between clubs is only a possible conflict, not proof of a duplicated player.</p><div class="research-pack-list section-gap">'+qualityHtml+'</div></div>'+
       '<div class="friendly-card section-gap"><h3>Clubs needing most SWOS work</h3><p class="about">Worst first, based only on data required for the SWOS database. Tap a club to see the missing essentials.</p><div class="research-pack-list section-gap">'+clubAuditHtml+'</div></div>'+
       '<div class="notice info section-gap"><strong>SWOS-first rule:</strong> we now prioritise player name, shirt number, nationality, SWOS position and valuation, plus correct club/division and home/away kits. Age, minutes, goals and assists are supporting research only and do not count against readiness.</div>'+
       '<div class="scout-filters section-gap"><div class="field"><label>Search</label><input id="masterQuery" value="'+esc(s.query)+'" placeholder="Player, club, nationality, position"/></div>'+
       '<div class="grid2 section-gap"><div class="field"><label>Division</label><select id="masterDivision"><option value="all">All divisions</option>'+divOptions+'</select></div><div class="field"><label>Club</label><select id="masterClub"><option value="all">All clubs</option>'+clubOptions+'</select></div></div>'+
-      '<div class="grid2 section-gap"><div class="field"><label>Position group</label><select id="masterGroup"><option value="all">All positions</option>'+groupOptions+'</select></div><div class="field"><label>Missing data</label><select id="masterMissing"><option value="all" '+(s.missing==="all"?"selected":"")+'>All rows</option><option value="any" '+(s.missing==="any"?"selected":"")+'>Any SWOS-required field missing</option><option value="identity" '+(s.missing==="identity"?"selected":"")+'>Identity blockers only</option><option value="value" '+(s.missing==="value"?"selected":"")+'>Missing market value</option><option value="shirt" '+(s.missing==="shirt"?"selected":"")+'>Missing shirt #</option><option value="nationality" '+(s.missing==="nationality"?"selected":"")+'>Missing nationality</option><option value="position" '+(s.missing==="position"?"selected":"")+'>Missing SWOS position</option></select></div></div>'+
+      '<div class="grid2 section-gap"><div class="field"><label>Position group</label><select id="masterGroup"><option value="all">All positions</option>'+groupOptions+'</select></div><div class="field"><label>Missing data</label><select id="masterMissing"><option value="all" '+(s.missing==="all"?"selected":"")+'>All rows</option><option value="any" '+(s.missing==="any"?"selected":"")+'>Any SWOS-required field missing</option><option value="identity" '+(s.missing==="identity"?"selected":"")+'>Identity blockers only</option><option value="value" '+(s.missing==="value"?"selected":"")+'>Missing market value</option><option value="shirt" '+(s.missing==="shirt"?"selected":"")+'>Missing shirt #</option><option value="nationality" '+(s.missing==="nationality"?"selected":"")+'>Missing nationality</option><option value="position" '+(s.missing==="position"?"selected":"")+'>Missing SWOS position</option><option value="unlinkedValue" '+(s.missing==="unlinkedValue"?"selected":"")+'>Value needs a direct evidence link</option><option value="linkedValue" '+(s.missing==="linkedValue"?"selected":"")+'>Value with direct evidence link</option></select></div></div>'+
       '<div class="field section-gap"><label>Sort by</label><select id="masterSort"><option value="divisionClubPlayer" '+(s.sort==="divisionClubPlayer"?"selected":"")+'>Division → Club → Player</option><option value="club" '+(s.sort==="club"?"selected":"")+'>Club → Player</option><option value="player" '+(s.sort==="player"?"selected":"")+'>Player A–Z</option><option value="valueDesc" '+(s.sort==="valueDesc"?"selected":"")+'>Market value high → low</option><option value="missingDesc" '+(s.sort==="missingDesc"?"selected":"")+'>Most research gaps first</option></select></div>'+
       '<button class="btn btn-green big section-gap" id="masterApply">Apply filters</button><button class="btn btn-blue big section-gap" id="masterCsv">Download filtered CSV · opens in Excel</button><button class="btn big section-gap" id="masterCsvAll">Download full 92-club master CSV</button></div>'+
       '<div class="friendly-card section-gap"><div class="scout-summary"><span class="hit">'+filtered.length+' matching players</span><span>Page '+(s.page+1)+'/'+pages+'</span><span>'+(filtered.length?Math.min(start+1,filtered.length):0)+'–'+Math.min(start+s.pageSize,filtered.length)+'</span></div>'+
-      '<div style="overflow:auto;margin-top:12px"><table style="width:100%;border-collapse:collapse;font-size:11px;min-width:820px"><thead><tr>'+["Division","Club","Player","Shirt","Nationality","SWOS Pos","Value £m","SWOS gaps"].map(x=>'<th style="text-align:left;padding:8px;border-bottom:1px solid var(--line);color:var(--green);background:#091421">'+x+'</th>').join("")+'</tr></thead><tbody>'+body+'</tbody></table></div>'+
+      '<div style="overflow:auto;margin-top:12px"><table style="width:100%;border-collapse:collapse;font-size:11px;min-width:820px"><thead><tr>'+["Division","Club","Player","Shirt","Nationality","SWOS Pos","Value £m","Value source","SWOS gaps"].map(x=>'<th style="text-align:left;padding:8px;border-bottom:1px solid var(--line);color:var(--green);background:#091421">'+x+'</th>').join("")+'</tr></thead><tbody>'+body+'</tbody></table></div>'+
       '<div class="split-actions section-gap"><button class="btn" id="masterPrev" '+(s.page<=0?"disabled":"")+'>← Previous</button><button class="btn" id="masterNext" '+(s.page>=pages-1?"disabled":"")+'>Next →</button></div></div>'+
       '<div class="tiny section-gap">The formatted .xlsx workbook is the companion snapshot; this live view and CSV export always use the current Studio research data.</div></section>';
     document.getElementById("masterBack").onclick=()=>{state.view="seasonUpdate";render();window.scrollTo(0,0)};
@@ -5727,6 +5732,8 @@
     document.getElementById("masterCsv").onclick=()=>downloadMasterDataCsv(true);
     document.getElementById("masterCsvAll").onclick=()=>downloadMasterDataCsv(false);
     document.getElementById("masterIdentityQueue").onclick=()=>{s.division="all";s.club="all";s.group="all";s.missing="identity";s.query="";s.sort="missingDesc";s.page=0;renderMasterData();window.scrollTo(0,0)};
+    document.getElementById("masterLinkedQueue").onclick=()=>{s.division="all";s.club="all";s.group="all";s.missing="linkedValue";s.query="";s.page=0;renderMasterData();window.scrollTo(0,0)};
+    document.getElementById("masterUnlinkedQueue").onclick=()=>{s.division="all";s.club="all";s.group="all";s.missing="unlinkedValue";s.query="";s.page=0;renderMasterData();window.scrollTo(0,0)};
     document.getElementById("masterValueQueue").onclick=()=>{s.division="all";s.club="all";s.group="all";s.missing="value";s.query="";s.sort="divisionClubPlayer";s.page=0;renderMasterData();window.scrollTo(0,0)};
     document.querySelectorAll("[data-master-quality-club],[data-master-batch-club]").forEach(b=>b.onclick=()=>{
       s.division="all";s.club=b.dataset.masterQualityClub||b.dataset.masterBatchClub;s.group="all";s.missing="all";s.query="";s.page=0;renderMasterData();window.scrollTo(0,0)
