@@ -98,7 +98,7 @@ assert.equal(reviewCount,8);
 assert.ok(html.includes('2026/27 squad number and membership reviews'));
 assert.ok(html.includes('data-master-review-club'));
 for (const reviewed of batchD.clubs) assert.ok(html.includes(reviewed.id));
-assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,495,'Unexpected valuations tally');
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,453,'Unexpected valuations tally');
 const l2batch=JSON.parse(fs.readFileSync('data/league-two-verified-values-batch-a-2026-10-09.json','utf8'));
 assert.equal(l2batch.clubs.length,3);
 assert.equal(l2batch.clubs.reduce((n,c)=>n+c.players.length,0),32);
