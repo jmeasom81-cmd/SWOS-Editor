@@ -130,14 +130,21 @@ for (const [division, expected] of Object.entries(expectedDivisions)) {
   const actual = baseline.clubs.filter(c=>c.division===division).length;
   if (actual !== expected) throw new Error('Wrong 2026/27 division size: '+division+' is '+actual+' expected '+expected);
 }
-const reviewBatchPath = 'data/league-one-verified-values-batch-c-2026-10-09.json';
-const reviewData = fs.existsSync(reviewBatchPath) ? JSON.parse(fs.readFileSync(reviewBatchPath,'utf8')) : {clubs:[]};
+const reviewBatchPaths = [
+  'data/league-one-verified-values-batch-c-2026-10-09.json',
+  'data/league-one-squad-review-batch-d-2026-10-09.json'
+];
 const squadReviewRows = [];
-for (const club of reviewData.clubs || []) {
-  const match = baseline.clubs.find(c => c.clubId === club.id);
-  if (!match) throw new Error('Squad review source club missing: '+club.id);
-  for (const note of club.squadReviews || []) {
-    squadReviewRows.push(['REVIEW',match.division,match.club,note,club.sourceUrl,reviewData.checkedAt]);
+for (const reviewBatchPath of reviewBatchPaths) {
+  if (!fs.existsSync(reviewBatchPath)) throw new Error('Missing squad-review research source: '+reviewBatchPath);
+  const reviewData = JSON.parse(fs.readFileSync(reviewBatchPath,'utf8'));
+  if (reviewData.season !== '2026/27') throw new Error('Wrong squad-review season: '+reviewBatchPath);
+  for (const club of reviewData.clubs || []) {
+    const match = baseline.clubs.find(c => c.clubId === club.id);
+    if (!match) throw new Error('Squad review source club missing: '+club.id);
+    for (const note of club.squadReviews || []) {
+      squadReviewRows.push(['REVIEW',match.division,match.club,note,club.sourceUrl,reviewData.checkedAt]);
+    }
   }
 }
 const headers = ['Division','Club','Club ID','Player','Shirt #','Nationality','Position group','SWOS position','Position code','Value (£m)','SWOS status','Missing essentials','Research source','Research snapshot','Value evidence URL','Value checked','Reference EUR k','EUR-GBP rate','Shirt evidence URL','Shirt checked','26/27 squad match','Squad source URL','Squad checked'];
@@ -196,7 +203,7 @@ const sheets = [
    ['Shirt evidence','Blank shirts can mean a squad number is unallocated or disputed. Evidence URL and checked date are recorded when researched; blank is safer than guessing.'],
    ['Valuation caution','Historical 2026/27 packs contain approximate valuations that may not have individual URLs or explicit currency conversion; treat these as unverified reference numbers until checked.'],
    ['Squad match','SOURCE MATCHED means matched by name against an identified 2026/27 squad research source, not proof of game installation. All others need individual verification.'],
-   ['Squad reviews','The dedicated Squad reviews tab highlights players whose current 2026/27 club assignment, source valuation or number still needs checking.'],
+   ['Squad reviews','The dedicated Squad reviews tab combines all reviewed research batches and flags squad assignments and shirt numbers needing confirmation before install.'],
    ['Ready status','READY means the four required data fields have values. It does not certify up-to-date squad membership or kit colours.'],
    ['Foreign exchange','October 9, 2026 EUR/GBP reference rate 0.846328; later rates must be recorded explicitly for each future batch.'],
    ['Kit colours','Separate review, not yet confirmed in this workbook'],
