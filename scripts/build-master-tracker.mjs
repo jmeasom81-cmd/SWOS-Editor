@@ -53,11 +53,11 @@ for (const club of baseline.clubs) {
   nameChanges += club.players.filter(p => !currentNames.has(p.player)).length;
   club.players = Object.entries(raw).map(([player, p]) => {
     const previous = old.get(player) || {};
-    const field = name => p[name] ?? previous[name] ?? null;
+    const field = name => Object.prototype.hasOwnProperty.call(p,name) ? p[name] : (previous[name] ?? null);
     return {
       player, shirt: field('shirt'), nationality: field('nationality'),
       group: field('group'), position: field('position'), age: field('age'),
-      marketValueM: field('marketValueM'), marketValueSourceUrl: field('marketValueSourceUrl'), marketValueCheckedAt: field('marketValueCheckedAt'), marketValueSourceEuroK: field('marketValueSourceEuroK'), marketValueFxRate: field('marketValueFxRate'), minutes: field('minutes'),
+      marketValueM: field('marketValueM'), marketValueSourceUrl: field('marketValueSourceUrl'), marketValueCheckedAt: field('marketValueCheckedAt'), marketValueSourceEuroK: field('marketValueSourceEuroK'), marketValueFxRate: field('marketValueFxRate'), shirtEvidenceUrl: field('shirtEvidenceUrl'), shirtCheckedAt: field('shirtCheckedAt'), minutes: field('minutes'),
       goals: field('goals'), assists: field('assists'),
       ...(previous.identitySource ? {identitySource: previous.identitySource} : {})
     };
@@ -89,7 +89,7 @@ for (const club of baseline.clubs) {
     const absent = missing(p);
     for (const k of absent) gaps[k]++;
     if (!absent.length) complete++;
-    rowData.push([club.division,club.club,club.clubId,p.player,p.shirt,p.nationality,p.group,p.position === null ? null : posNames[p.position] || 'Unknown',p.position,p.marketValueM,absent.length ? 'NEEDS RESEARCH':'READY',absent.map(k => k === 'marketValueM' ? 'value' : k).join(', '),club.source,club.snapshot,p.marketValueSourceUrl,p.marketValueCheckedAt,p.marketValueSourceEuroK,p.marketValueFxRate]);
+    rowData.push([club.division,club.club,club.clubId,p.player,p.shirt,p.nationality,p.group,p.position === null ? null : posNames[p.position] || 'Unknown',p.position,p.marketValueM,absent.length ? 'NEEDS RESEARCH':'READY',absent.map(k => k === 'marketValueM' ? 'value' : k).join(', '),club.source,club.snapshot,p.marketValueSourceUrl,p.marketValueCheckedAt,p.marketValueSourceEuroK,p.marketValueFxRate,p.shirtEvidenceUrl,p.shirtCheckedAt]);
   }
   clubData.push([club.division,club.club,club.players.length,complete,club.players.length-complete,gaps.shirt,gaps.nationality,gaps.position,gaps.marketValueM,'NOT VERIFIED']);
   const d = divisionStats[club.division] ||= {clubs:0,players:0,ready:0,essentialGaps:0};
@@ -130,7 +130,7 @@ for (const [division, expected] of Object.entries(expectedDivisions)) {
   const actual = baseline.clubs.filter(c=>c.division===division).length;
   if (actual !== expected) throw new Error('Wrong 2026/27 division size: '+division+' is '+actual+' expected '+expected);
 }
-const headers = ['Division','Club','Club ID','Player','Shirt #','Nationality','Position group','SWOS position','Position code','Value (£m)','SWOS status','Missing essentials','Research source','Research snapshot','Value evidence URL','Value checked','Reference EUR k','EUR-GBP rate'];
+const headers = ['Division','Club','Club ID','Player','Shirt #','Nationality','Position group','SWOS position','Position code','Value (£m)','SWOS status','Missing essentials','Research source','Research snapshot','Value evidence URL','Value checked','Reference EUR k','EUR-GBP rate','Shirt evidence URL','Shirt checked'];
 const clubHeaders = ['Division','Club','Players','SWOS ready','Players needing work','Missing shirts','Missing nationality','Missing position','Missing value','Kit colours checked'];
 const csvCell = v => { const s = String(v ?? ''); return /[",\r\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
 fs.writeFileSync(path.join(OUTPUT, 'SWOS_Master_2026-27.csv'),
@@ -170,7 +170,7 @@ function worksheet(rows, widths, opts={}) {
     (opts.filter?'<autoFilter ref="A1:'+end+'"/>':'')+'</worksheet>';
 }
 const sheets = [
-  ['Players',[headers,...rowData],[20,27,23,27,10,18,17,16,14,15,19,28,52,18,60,16,16,16],{missingColumns:[4,5,7,8,9],statusColumn:10,filter:true}],
+  ['Players',[headers,...rowData],[20,27,23,27,10,18,17,16,14,15,19,28,52,18,60,16,16,16,60,16],{missingColumns:[4,5,7,8,9],statusColumn:10,filter:true}],
   ['Clubs',[clubHeaders,...clubData],[20,30,11,14,22,19,22,19,19,24],{filter:true}],
   ['Quality checks', [['Issue','Division','Club','Player','What needs checking','Next action'],...integrity],[23,20,29,30,80,55],{filter:true}],
   ['How to use',[
@@ -181,6 +181,8 @@ const sheets = [
    ['READY','The research pack has the five essential identity/value fields, not a guarantee it has been installed'],
    ['Market value','Values shown in GBP millions as currently recorded in Studio research, not a live valuation feed'],
    ['Valuation evidence','For individually researched values see the evidence URL, source amount in EUR thousands, exchange rate and checked date columns. Blank means unverified.'],
+   ['Shirt evidence','Blank shirts can mean a squad number is unallocated or disputed. Evidence URL and checked date are recorded when researched; blank is safer than guessing.'],
+   ['Valuation caution','Historical 2026/27 packs contain approximate valuations that may not have individual URLs or explicit currency conversion; treat these as unverified reference numbers until checked.'],
    ['Foreign exchange','October 9, 2026 EUR/GBP reference rate 0.846328; later rates must be recorded explicitly for each future batch.'],
    ['Kit colours','Separate review, not yet confirmed in this workbook'],
    ['Quality checks','This tab flags duplicate shirt numbers, player-name collisions, invalid position or value entries. Name collisions do not automatically imply a player belongs to two clubs.'],
