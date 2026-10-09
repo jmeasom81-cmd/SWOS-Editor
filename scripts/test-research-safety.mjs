@@ -98,7 +98,7 @@ assert.equal(reviewCount,8);
 assert.ok(html.includes('2026/27 squad number and membership reviews'));
 assert.ok(html.includes('data-master-review-club'));
 for (const reviewed of batchD.clubs) assert.ok(html.includes(reviewed.id));
-assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,617,'Unexpected valuations tally');
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,495,'Unexpected valuations tally');
 const l2batch=JSON.parse(fs.readFileSync('data/league-two-verified-values-batch-a-2026-10-09.json','utf8'));
 assert.equal(l2batch.clubs.length,3);
 assert.equal(l2batch.clubs.reduce((n,c)=>n+c.players.length,0),32);
@@ -106,3 +106,11 @@ assert.equal(l2batch.clubs.reduce((n,c)=>n+c.squadReviews.length,0),9);
 for(const c of l2batch.clubs){const club=master.clubs.find(x=>x.clubId===c.id);assert.ok(club);for(const r of c.players){const p=club.players.find(x=>x.player===r.name);assert.ok(p,'No L2 record '+r.name);assert.equal(p.marketValueSourceEuroK,r.eurThousands);assert.equal(p.marketValueM,Math.round(r.eurThousands*l2batch.referenceFxRateEurGbp)/1000);assert.ok(p.seasonSquadSourceUrl);}}
 assert.ok(html.includes('Oliver Smith and Cole Stockton'));
 console.log('Research safety: verified 92 clubs, 1,472 players, 11 sourced additions, eight reviews and editor syntax.');
+
+const batchB=JSON.parse(fs.readFileSync('data/league-two-verified-values-batch-b-2026-10-09.json','utf8'));
+assert.equal(batchB.clubs.length,15,'Batch B should cover 15 unique League Two clubs');
+assert.equal(new Set(batchB.clubs.map(c=>c.id)).size,15,'No duplicate source clubs');
+assert.equal(batchB.clubs.reduce((n,c)=>n+c.players.length,0),122,'Batch B source value count');
+for(const c of batchB.clubs){const club=master.clubs.find(x=>x.clubId===c.id);assert.ok(club);for(const v of c.players){const p=club.players.find(p=>p.player===v.name);assert.ok(p,'Missing player '+v.name);assert.equal(p.marketValueSourceEuroK,v.eurThousands);assert.equal(p.marketValueM,Math.round(v.eurThousands*batchB.referenceFxRateEurGbp)/1000);assert.equal(p.marketValueSourceUrl,c.sourceUrl);assert.equal(p.seasonSquadSourceUrl,c.sourceUrl);}}
+assert.ok(html.includes('William Boyle as Will Boyle'),'Review notes must be visible');
+console.log('League Two batch B: 15 clubs, 122 individually sourced values, review safeguards checked.');

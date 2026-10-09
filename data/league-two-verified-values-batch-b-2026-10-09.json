@@ -1,0 +1,784 @@
+{
+  "season": "2026/27",
+  "checkedAt": "2026-10-09",
+  "referenceFxRateEurGbp": 0.846328,
+  "referenceFxNote": "SWOS recorded EUR/GBP rate for 9 Oct 2026. GBP millions rounded to nearest 0.001.",
+  "meaning": "Transfermarkt indicative squad market value, not transfer price or native SWOS game-file cost. Review club and shirt concerns separately.",
+  "clubs": [
+    {
+      "id": "cheltenham-town",
+      "pack": "CHELTENHAM_TOWN_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/cheltenham-town/kader/verein/3371/saison_id/2026",
+      "sourceSnapshot": "2026/27 squad overview",
+      "players": [
+        {
+          "name": "Joe Day",
+          "eurThousands": 50,
+          "gbpMillions": 0.042
+        },
+        {
+          "name": "Robbie Cundy",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        },
+        {
+          "name": "Jonathan Tomkinson",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        },
+        {
+          "name": "James Wilson",
+          "eurThousands": 25,
+          "gbpMillions": 0.021
+        },
+        {
+          "name": "George Nurse",
+          "eurThousands": 100,
+          "gbpMillions": 0.085
+        },
+        {
+          "name": "Charlie McCann",
+          "eurThousands": 150,
+          "gbpMillions": 0.127
+        },
+        {
+          "name": "Ben Stevenson",
+          "eurThousands": 175,
+          "gbpMillions": 0.148
+        },
+        {
+          "name": "Ryan Broom",
+          "eurThousands": 150,
+          "gbpMillions": 0.127
+        },
+        {
+          "name": "Jordan Shipley",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        },
+        {
+          "name": "Joe Tomlinson",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        },
+        {
+          "name": "George Miller",
+          "eurThousands": 125,
+          "gbpMillions": 0.106
+        },
+        {
+          "name": "Jake Bickerstaff",
+          "eurThousands": 100,
+          "gbpMillions": 0.085
+        }
+      ],
+      "squadReviews": [
+        "Source-listed 2026/27 shirts include Jonathan Tomkinson #27, Jordan Shipley unassigned and Joe Tomlinson unassigned; check against research pack before changing numbers."
+      ]
+    },
+    {
+      "id": "chesterfield",
+      "pack": "CHESTERFIELD_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/chesterfield-fc/kader/verein/1219/saison_id/2026",
+      "sourceSnapshot": "2026/27 squad overview",
+      "players": [
+        {
+          "name": "Zach Hemming",
+          "eurThousands": 400,
+          "gbpMillions": 0.339
+        },
+        {
+          "name": "Ryan Boot",
+          "eurThousands": 75,
+          "gbpMillions": 0.063
+        },
+        {
+          "name": "Malik Owolabi-Belewu",
+          "eurThousands": 100,
+          "gbpMillions": 0.085
+        },
+        {
+          "name": "Alfie Pond",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        },
+        {
+          "name": "Jack Simpson",
+          "eurThousands": 225,
+          "gbpMillions": 0.19
+        },
+        {
+          "name": "George McEachran",
+          "eurThousands": 275,
+          "gbpMillions": 0.233
+        },
+        {
+          "name": "Dylan Duffy",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        },
+        {
+          "name": "Liam Mandeville",
+          "eurThousands": 275,
+          "gbpMillions": 0.233
+        },
+        {
+          "name": "Dilan Markanday",
+          "eurThousands": 350,
+          "gbpMillions": 0.296
+        },
+        {
+          "name": "Lee Bonis",
+          "eurThousands": 450,
+          "gbpMillions": 0.381
+        },
+        {
+          "name": "Ruel Sotiriou",
+          "eurThousands": 275,
+          "gbpMillions": 0.233
+        },
+        {
+          "name": "Ryan Stirk",
+          "eurThousands": 300,
+          "gbpMillions": 0.254
+        }
+      ],
+      "squadReviews": [
+        "Season-specific source lists Alfie Pond and Jack Simpson with unassigned numbers; verify against official club squad before applying any player-number changes."
+      ]
+    },
+    {
+      "id": "colchester-united",
+      "pack": "COLCHESTER_UNITED_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/colchester-united/kader/verein/1060/saison_id/2026",
+      "sourceSnapshot": "2026/27 squad overview",
+      "players": [
+        {
+          "name": "Tom Smith",
+          "eurThousands": 75,
+          "gbpMillions": 0.063
+        },
+        {
+          "name": "Jack Tucker",
+          "eurThousands": 350,
+          "gbpMillions": 0.296
+        },
+        {
+          "name": "Sean Raggett",
+          "eurThousands": 150,
+          "gbpMillions": 0.127
+        },
+        {
+          "name": "Ellis Iandolo",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        },
+        {
+          "name": "Jake Leake",
+          "eurThousands": 75,
+          "gbpMillions": 0.063
+        },
+        {
+          "name": "Rob Hunt",
+          "eurThousands": 150,
+          "gbpMillions": 0.127
+        },
+        {
+          "name": "Paul Digby",
+          "eurThousands": 100,
+          "gbpMillions": 0.085
+        },
+        {
+          "name": "Ben Perry",
+          "eurThousands": 100,
+          "gbpMillions": 0.085
+        },
+        {
+          "name": "Teddy Bishop",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        },
+        {
+          "name": "Jack Payne",
+          "eurThousands": 275,
+          "gbpMillions": 0.233
+        },
+        {
+          "name": "Harry Anderson",
+          "eurThousands": 275,
+          "gbpMillions": 0.233
+        },
+        {
+          "name": "Bradley Ihionvien",
+          "eurThousands": 75,
+          "gbpMillions": 0.063
+        }
+      ],
+      "squadReviews": [
+        "Tom Smith's cited profile has an earlier 30 June 2026 contract end; verify ongoing squad status separately from historical valuation before game-file changes."
+      ]
+    },
+    {
+      "id": "crawley-town",
+      "pack": "CRAWLEY_TOWN_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/crawley-town/kader/verein/3537/saison_id/2026",
+      "sourceSnapshot": "2026/27 squad overview",
+      "players": [
+        {
+          "name": "Charlie Barker",
+          "eurThousands": 350,
+          "gbpMillions": 0.296
+        },
+        {
+          "name": "Kellan Gordon",
+          "eurThousands": 100,
+          "gbpMillions": 0.085
+        },
+        {
+          "name": "Louie Watson",
+          "eurThousands": 125,
+          "gbpMillions": 0.106
+        },
+        {
+          "name": "Stephen Duke-McKenna",
+          "eurThousands": 150,
+          "gbpMillions": 0.127
+        },
+        {
+          "name": "Dion Pereira",
+          "eurThousands": 175,
+          "gbpMillions": 0.148
+        },
+        {
+          "name": "Jude Arthurs",
+          "eurThousands": 225,
+          "gbpMillions": 0.19
+        },
+        {
+          "name": "Justin Ferizaj",
+          "eurThousands": 50,
+          "gbpMillions": 0.042
+        }
+      ],
+      "squadReviews": [
+        "Vito Mannone has no market valuation in cited source; keep missing. Source also lists Danilo Orsi rather than research name Danilo Orsi-Dadomo; verify alias before applying a valuation."
+      ]
+    },
+    {
+      "id": "crewe-alexandra",
+      "pack": "CREWE_ALEXANDRA_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/crewe-alexandra/kader/verein/1042/saison_id/2026",
+      "sourceSnapshot": "2026/27 squad overview",
+      "players": [
+        {
+          "name": "Tom Booth",
+          "eurThousands": 175,
+          "gbpMillions": 0.148
+        },
+        {
+          "name": "Ian Lawlor",
+          "eurThousands": 75,
+          "gbpMillions": 0.063
+        },
+        {
+          "name": "Luke Offord",
+          "eurThousands": 450,
+          "gbpMillions": 0.381
+        },
+        {
+          "name": "Conor Thomas",
+          "eurThousands": 50,
+          "gbpMillions": 0.042
+        },
+        {
+          "name": "Matus Holicek",
+          "eurThousands": 300,
+          "gbpMillions": 0.254
+        },
+        {
+          "name": "Joel Tabiner",
+          "eurThousands": 150,
+          "gbpMillions": 0.127
+        },
+        {
+          "name": "Jordan Gibson",
+          "eurThousands": 300,
+          "gbpMillions": 0.254
+        },
+        {
+          "name": "Jack Lankester",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        },
+        {
+          "name": "Josh March",
+          "eurThousands": 150,
+          "gbpMillions": 0.127
+        }
+      ],
+      "squadReviews": [
+        "Cited 2026/27 selection does not provide valuations for all sixteen SWOS candidates; preserve blanks until player-specific corroboration."
+      ]
+    },
+    {
+      "id": "exeter-city",
+      "pack": "EXETER_CITY_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/exeter-city/kader/verein/6699/saison_id/2026",
+      "sourceSnapshot": "2026/27 squad overview",
+      "players": [
+        {
+          "name": "Jack Bycroft",
+          "eurThousands": 175,
+          "gbpMillions": 0.148
+        },
+        {
+          "name": "Ed Turns",
+          "eurThousands": 450,
+          "gbpMillions": 0.381
+        },
+        {
+          "name": "Jack Fitzwater",
+          "eurThousands": 300,
+          "gbpMillions": 0.254
+        },
+        {
+          "name": "Luca Woodhouse",
+          "eurThousands": 100,
+          "gbpMillions": 0.085
+        },
+        {
+          "name": "Josh Gordon",
+          "eurThousands": 75,
+          "gbpMillions": 0.063
+        },
+        {
+          "name": "Kieran Wilson",
+          "eurThousands": 75,
+          "gbpMillions": 0.063
+        }
+      ],
+      "squadReviews": [
+        "2026/27 squad source lists Gwion Edwards without a market valuation; blank is not zero."
+      ]
+    },
+    {
+      "id": "fleetwood-town",
+      "pack": "FLEETWOOD_TOWN_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/fleetwood-town/kader/verein/11177/saison_id/2026",
+      "sourceSnapshot": "2026/27 squad overview",
+      "players": [
+        {
+          "name": "Jay Lynch",
+          "eurThousands": 75,
+          "gbpMillions": 0.063
+        },
+        {
+          "name": "Finley Potter",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        },
+        {
+          "name": "Lewis McCann",
+          "eurThousands": 150,
+          "gbpMillions": 0.127
+        },
+        {
+          "name": "Josh Thomas",
+          "eurThousands": 125,
+          "gbpMillions": 0.106
+        },
+        {
+          "name": "Will Davies",
+          "eurThousands": 100,
+          "gbpMillions": 0.085
+        },
+        {
+          "name": "Ronan Coughlan",
+          "eurThousands": 100,
+          "gbpMillions": 0.085
+        }
+      ],
+      "squadReviews": [
+        "Only season-squad matched market values are entered; keep remaining 2026/27 valuation fields unknown."
+      ]
+    },
+    {
+      "id": "gillingham",
+      "pack": "GILLINGHAM_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/fc-gillingham/kader/verein/2814/saison_id/2026",
+      "sourceSnapshot": "2026/27 squad overview",
+      "players": [
+        {
+          "name": "Oliver Wright",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        },
+        {
+          "name": "Garath McCleary",
+          "eurThousands": 25,
+          "gbpMillions": 0.021
+        },
+        {
+          "name": "Ronan Hale",
+          "eurThousands": 350,
+          "gbpMillions": 0.296
+        },
+        {
+          "name": "Will Goodwin",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        }
+      ],
+      "squadReviews": [
+        "Taite Holtam appears without a valuation in the 2026/27 squad listing; do not treat the blank as £0."
+      ]
+    },
+    {
+      "id": "grimsby-town",
+      "pack": "GRIMSBY_TOWN_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/grimsby-town/kader/verein/1034/saison_id/2026",
+      "sourceSnapshot": "2026/27 squad overview",
+      "players": [
+        {
+          "name": "Christy Pym",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        },
+        {
+          "name": "Maldini Kacurri",
+          "eurThousands": 450,
+          "gbpMillions": 0.381
+        },
+        {
+          "name": "Harvey Rodgers",
+          "eurThousands": 350,
+          "gbpMillions": 0.296
+        },
+        {
+          "name": "Kieran Green",
+          "eurThousands": 350,
+          "gbpMillions": 0.296
+        },
+        {
+          "name": "Jamie Walker",
+          "eurThousands": 125,
+          "gbpMillions": 0.106
+        },
+        {
+          "name": "Justin Amaluzor",
+          "eurThousands": 125,
+          "gbpMillions": 0.106
+        },
+        {
+          "name": "Josh Andrews",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        }
+      ],
+      "squadReviews": [
+        "Harvey Cartwright is in the research 16 but not shown in the cited selected 2026/27 squad excerpt; check season membership before transfer changes."
+      ]
+    },
+    {
+      "id": "northampton-town",
+      "pack": "NORTHAMPTON_TOWN_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/northampton-town/kader/verein/1302/saison_id/2026",
+      "sourceSnapshot": "2026/27 squad overview",
+      "players": [
+        {
+          "name": "Zach Jeacock",
+          "eurThousands": 100,
+          "gbpMillions": 0.085
+        },
+        {
+          "name": "Elliott Moore",
+          "eurThousands": 400,
+          "gbpMillions": 0.339
+        },
+        {
+          "name": "Jack Perkins",
+          "eurThousands": 175,
+          "gbpMillions": 0.148
+        },
+        {
+          "name": "Sam Hoskins",
+          "eurThousands": 125,
+          "gbpMillions": 0.106
+        },
+        {
+          "name": "Elliott List",
+          "eurThousands": 100,
+          "gbpMillions": 0.085
+        }
+      ],
+      "squadReviews": [
+        "Source shows James Dadge without a valuation and includes alternate 2026/27 squad options; do not infer missing values."
+      ]
+    },
+    {
+      "id": "port-vale",
+      "pack": "PORT_VALE_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/port-vale-fc/kader/verein/1211/saison_id/2026",
+      "sourceSnapshot": "2026/27 squad overview",
+      "players": [
+        {
+          "name": "Jackson Smith",
+          "eurThousands": 300,
+          "gbpMillions": 0.254
+        },
+        {
+          "name": "Ben Garrity",
+          "eurThousands": 300,
+          "gbpMillions": 0.254
+        },
+        {
+          "name": "George Byers",
+          "eurThousands": 225,
+          "gbpMillions": 0.19
+        },
+        {
+          "name": "Kyle Dempsey",
+          "eurThousands": 350,
+          "gbpMillions": 0.296
+        },
+        {
+          "name": "Ryan Croasdale",
+          "eurThousands": 175,
+          "gbpMillions": 0.148
+        },
+        {
+          "name": "Onel Hernandez",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        },
+        {
+          "name": "Ben Waine",
+          "eurThousands": 400,
+          "gbpMillions": 0.339
+        },
+        {
+          "name": "Modou Faal",
+          "eurThousands": 350,
+          "gbpMillions": 0.296
+        }
+      ],
+      "squadReviews": [
+        "Valuation source spells Onel Hernandez as Onel Hernández and Modou Faal as Mo Faal. Verify official display names and squad shirts; no automatic renames."
+      ]
+    },
+    {
+      "id": "rotherham-united",
+      "pack": "ROTHERHAM_UNITED_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/rotherham-united/kader/verein/1194/saison_id/2026",
+      "sourceSnapshot": "2026/27 squad overview",
+      "players": [
+        {
+          "name": "Ted Cann",
+          "eurThousands": 150,
+          "gbpMillions": 0.127
+        },
+        {
+          "name": "Emmanuel Adegboyega",
+          "eurThousands": 350,
+          "gbpMillions": 0.296
+        },
+        {
+          "name": "Aaron Nemane",
+          "eurThousands": 300,
+          "gbpMillions": 0.254
+        },
+        {
+          "name": "Fabio Tavares",
+          "eurThousands": 225,
+          "gbpMillions": 0.19
+        }
+      ],
+      "squadReviews": [
+        "Valuation source spells Fabio Tavares as Fábio Tavares; preserve research pack spelling pending official identity review."
+      ]
+    },
+    {
+      "id": "salford-city",
+      "pack": "SALFORD_CITY_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/salford-city/kader/verein/34888/saison_id/2026",
+      "sourceSnapshot": "2026/27 squad overview",
+      "players": [
+        {
+          "name": "Will Norris",
+          "eurThousands": 300,
+          "gbpMillions": 0.254
+        },
+        {
+          "name": "Sam Long",
+          "eurThousands": 75,
+          "gbpMillions": 0.063
+        },
+        {
+          "name": "Kelly N'Mai",
+          "eurThousands": 300,
+          "gbpMillions": 0.254
+        },
+        {
+          "name": "Ben Woodburn",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        },
+        {
+          "name": "Jorge Grant",
+          "eurThousands": 225,
+          "gbpMillions": 0.19
+        },
+        {
+          "name": "Abraham Odoh",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        },
+        {
+          "name": "Macaulay Langstaff",
+          "eurThousands": 700,
+          "gbpMillions": 0.592
+        },
+        {
+          "name": "Daniel Udoh",
+          "eurThousands": 350,
+          "gbpMillions": 0.296
+        },
+        {
+          "name": "Ryan Graydon",
+          "eurThousands": 300,
+          "gbpMillions": 0.254
+        }
+      ],
+      "squadReviews": [
+        "Macaulay Langstaff is shown without a source shirt number; keep 2026/27 shirt confirmation separate from his sourced valuation."
+      ]
+    },
+    {
+      "id": "shrewsbury-town",
+      "pack": "SHREWSBURY_TOWN_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/shrewsbury-town/kader/verein/3054/saison_id/2026",
+      "sourceSnapshot": "2026/27 squad overview",
+      "players": [
+        {
+          "name": "Will Brook",
+          "eurThousands": 100,
+          "gbpMillions": 0.085
+        },
+        {
+          "name": "Sam Stubbs",
+          "eurThousands": 300,
+          "gbpMillions": 0.254
+        },
+        {
+          "name": "William Boyle",
+          "eurThousands": 150,
+          "gbpMillions": 0.127
+        },
+        {
+          "name": "Josh Ruffels",
+          "eurThousands": 175,
+          "gbpMillions": 0.148
+        },
+        {
+          "name": "Tom Sang",
+          "eurThousands": 225,
+          "gbpMillions": 0.19
+        },
+        {
+          "name": "Luca Hoole",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        },
+        {
+          "name": "George Lloyd",
+          "eurThousands": 150,
+          "gbpMillions": 0.127
+        },
+        {
+          "name": "Josh Davison",
+          "eurThousands": 125,
+          "gbpMillions": 0.106
+        }
+      ],
+      "squadReviews": [
+        "Valuation source lists William Boyle as Will Boyle; check identity before changing stored display names. Jack Price has no valuation in cited squad."
+      ]
+    },
+    {
+      "id": "swindon-town",
+      "pack": "SWINDON_TOWN_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/swindon-town/kader/verein/352/saison_id/2026",
+      "sourceSnapshot": "2026/27 squad overview",
+      "players": [
+        {
+          "name": "Connor Ripley",
+          "eurThousands": 125,
+          "gbpMillions": 0.106
+        },
+        {
+          "name": "Lewis Ward",
+          "eurThousands": 75,
+          "gbpMillions": 0.063
+        },
+        {
+          "name": "Stephan Negru",
+          "eurThousands": 175,
+          "gbpMillions": 0.148
+        },
+        {
+          "name": "Ryan Tafazolli",
+          "eurThousands": 50,
+          "gbpMillions": 0.042
+        },
+        {
+          "name": "Mitchell Clark",
+          "eurThousands": 175,
+          "gbpMillions": 0.148
+        },
+        {
+          "name": "Gavin Kilkenny",
+          "eurThousands": 350,
+          "gbpMillions": 0.296
+        },
+        {
+          "name": "Matty Virtue",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        },
+        {
+          "name": "James Ball",
+          "eurThousands": 75,
+          "gbpMillions": 0.063
+        },
+        {
+          "name": "Ollie Clarke",
+          "eurThousands": 75,
+          "gbpMillions": 0.063
+        },
+        {
+          "name": "Paul Glatzel",
+          "eurThousands": 275,
+          "gbpMillions": 0.233
+        },
+        {
+          "name": "Tom Nichols",
+          "eurThousands": 100,
+          "gbpMillions": 0.085
+        },
+        {
+          "name": "Aaron Drinan",
+          "eurThousands": 500,
+          "gbpMillions": 0.423
+        },
+        {
+          "name": "Harry Smith",
+          "eurThousands": 100,
+          "gbpMillions": 0.085
+        }
+      ],
+      "squadReviews": [
+        "Valuation source lists Mitchell Clark as Mitch Clark; verify display name. Other squad numbers may differ from researched FootballSquads starter data."
+      ]
+    }
+  ]
+}
