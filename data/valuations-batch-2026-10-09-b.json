@@ -1,0 +1,294 @@
+{
+  "season": "2026/27",
+  "checkedAt": "2026-10-09",
+  "eurToGbpRate": 0.846328,
+  "rateAsOf": "2026-10-09 (existing SWOS build exchange-rate reference)",
+  "sourceType": "Transfermarkt indicative football market values",
+  "currency": "EUR",
+  "unit": "thousands",
+  "valueDescription": "Indicative market values, not transfer prices or native SWOS write codes",
+  "clubs": [
+    {
+      "clubId": "notts-county",
+      "pack": "NOTTS_COUNTY_2627_PACK",
+      "source": "https://www.transfermarkt.co.uk/notts-county/marktwertanalyse/verein/1045",
+      "notes": "Matthew Platt listed as Matty Platt and Nicholas Tsaroulla as Nick Tsaroulla in valuation source. Separate 2026/27 FootballSquads team list is prioritised for shirt numbers, including Belshaw #1.",
+      "players": [
+        {
+          "player": "James Belshaw",
+          "eurK": 25,
+          "valueGbpm": 0.021
+        },
+        {
+          "player": "James Gibbons",
+          "eurK": 300,
+          "valueGbpm": 0.254
+        },
+        {
+          "player": "Rod McDonald",
+          "eurK": 50,
+          "valueGbpm": 0.042
+        },
+        {
+          "player": "Jacob Bedeau",
+          "eurK": 350,
+          "valueGbpm": 0.296
+        },
+        {
+          "player": "Matthew Platt",
+          "eurK": 325,
+          "valueGbpm": 0.275
+        },
+        {
+          "player": "Nicholas Tsaroulla",
+          "eurK": 275,
+          "valueGbpm": 0.233
+        },
+        {
+          "player": "Max Sanders",
+          "eurK": 400,
+          "valueGbpm": 0.339
+        },
+        {
+          "player": "Conor Grant",
+          "eurK": 225,
+          "valueGbpm": 0.19
+        },
+        {
+          "player": "Matt Palmer",
+          "eurK": 250,
+          "valueGbpm": 0.212
+        }
+      ]
+    },
+    {
+      "clubId": "oxford-united",
+      "pack": "OXFORD_UNITED_2627_PACK",
+      "source": "https://www.transfermarkt.co.uk/oxford-united/marktwertanalyse/verein/988",
+      "notes": "Cross-check 2026/27 number changes against official Oxford squad page. Simon Eastwood has a 30 June 2026 expiry in valuation source: record valuation as historic reference; identity requires further review.",
+      "players": [
+        {
+          "player": "Jamie Cumming",
+          "eurK": 1200,
+          "valueGbpm": 1.016
+        },
+        {
+          "player": "Simon Eastwood",
+          "eurK": 50,
+          "valueGbpm": 0.042
+        },
+        {
+          "player": "Sam Long",
+          "eurK": 300,
+          "valueGbpm": 0.254
+        },
+        {
+          "player": "Ciaron Brown",
+          "eurK": 1500,
+          "valueGbpm": 1.269
+        },
+        {
+          "player": "Frankie Kent",
+          "eurK": 400,
+          "valueGbpm": 0.339
+        },
+        {
+          "player": "Michal Helik",
+          "eurK": 1000,
+          "valueGbpm": 0.846
+        },
+        {
+          "player": "Ruben Roosken",
+          "eurK": 500,
+          "valueGbpm": 0.423
+        },
+        {
+          "player": "Cameron Brannagan",
+          "eurK": 800,
+          "valueGbpm": 0.677
+        },
+        {
+          "player": "Tyler Goodrham",
+          "eurK": 1500,
+          "valueGbpm": 1.269
+        },
+        {
+          "player": "Jamie McDonnell",
+          "eurK": 1000,
+          "valueGbpm": 0.846
+        },
+        {
+          "player": "Louie Sibley",
+          "eurK": 1200,
+          "valueGbpm": 1.016
+        },
+        {
+          "player": "Jin-Woo Jeon",
+          "eurK": 700,
+          "valueGbpm": 0.592
+        },
+        {
+          "player": "Mark Harris",
+          "eurK": 600,
+          "valueGbpm": 0.508
+        },
+        {
+          "player": "Aidomo Emakhu",
+          "eurK": 1000,
+          "valueGbpm": 0.846
+        },
+        {
+          "player": "Siriki Dembele",
+          "eurK": 800,
+          "valueGbpm": 0.677
+        }
+      ]
+    },
+    {
+      "clubId": "plymouth-argyle",
+      "pack": "PLYMOUTH_ARGYLE_2627_PACK",
+      "source": "https://www.transfermarkt.co.uk/plymouth-argyle/marktwertanalyse/verein/2262",
+      "notes": "Current shirt numbers retained from reported 2026/27 list; valuation site contains older squad number information. Source calls Jack MacKenzie with capital K.",
+      "players": [
+        {
+          "player": "James Storer",
+          "eurK": 75,
+          "valueGbpm": 0.063
+        },
+        {
+          "player": "Mathias Ross",
+          "eurK": 750,
+          "valueGbpm": 0.635
+        },
+        {
+          "player": "Jack Mackenzie",
+          "eurK": 700,
+          "valueGbpm": 0.592
+        },
+        {
+          "player": "Julio Pleguezuelo",
+          "eurK": 700,
+          "valueGbpm": 0.592
+        },
+        {
+          "player": "Alex Hartridge",
+          "eurK": 450,
+          "valueGbpm": 0.381
+        },
+        {
+          "player": "Malachi Boateng",
+          "eurK": 700,
+          "valueGbpm": 0.592
+        },
+        {
+          "player": "Harvey White",
+          "eurK": 700,
+          "valueGbpm": 0.592
+        },
+        {
+          "player": "Joe Edwards",
+          "eurK": 50,
+          "valueGbpm": 0.042
+        },
+        {
+          "player": "Caleb Watts",
+          "eurK": 250,
+          "valueGbpm": 0.212
+        },
+        {
+          "player": "Michael Baidoo",
+          "eurK": 2000,
+          "valueGbpm": 1.693
+        },
+        {
+          "player": "Ronan Curtis",
+          "eurK": 200,
+          "valueGbpm": 0.169
+        },
+        {
+          "player": "Xavier Amaechi",
+          "eurK": 550,
+          "valueGbpm": 0.465
+        },
+        {
+          "player": "Owen Oseni",
+          "eurK": 250,
+          "valueGbpm": 0.212
+        }
+      ]
+    },
+    {
+      "clubId": "reading",
+      "pack": "READING_2627_PACK",
+      "source": "https://www.transfermarkt.com/reading-fc/kader/verein/1032/saison_id/2026",
+      "notes": "Individual values from 2026/27 squad listing; source has a 19-20 player snapshot vs our 16-player SWOS install roster.",
+      "players": [
+        {
+          "player": "Joel Pereira",
+          "eurK": 325,
+          "valueGbpm": 0.275
+        },
+        {
+          "player": "Jack Stevens",
+          "eurK": 125,
+          "valueGbpm": 0.106
+        },
+        {
+          "player": "Udoka Godwin-Malife",
+          "eurK": 550,
+          "valueGbpm": 0.465
+        },
+        {
+          "player": "Jeriel Dorsett",
+          "eurK": 450,
+          "valueGbpm": 0.381
+        },
+        {
+          "player": "Haydon Roberts",
+          "eurK": 1000,
+          "valueGbpm": 0.846
+        },
+        {
+          "player": "Paudie O'Connor",
+          "eurK": 650,
+          "valueGbpm": 0.55
+        },
+        {
+          "player": "Liam Fraser",
+          "eurK": 550,
+          "valueGbpm": 0.465
+        },
+        {
+          "player": "Charlie Savage",
+          "eurK": 900,
+          "valueGbpm": 0.762
+        },
+        {
+          "player": "Lewis Wing",
+          "eurK": 700,
+          "valueGbpm": 0.592
+        },
+        {
+          "player": "Daniel Kyerewaa",
+          "eurK": 650,
+          "valueGbpm": 0.55
+        },
+        {
+          "player": "Jack Marriott",
+          "eurK": 400,
+          "valueGbpm": 0.339
+        },
+        {
+          "player": "Jacob Brown",
+          "eurK": 1000,
+          "valueGbpm": 0.846
+        },
+        {
+          "player": "Kyreece Lisbie",
+          "eurK": 150,
+          "valueGbpm": 0.127
+        }
+      ]
+    }
+  ]
+}
