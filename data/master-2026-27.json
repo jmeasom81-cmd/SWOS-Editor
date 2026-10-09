@@ -13726,9 +13726,7 @@
           "marketValueSourceUrl": "https://www.transfermarkt.co.uk/sheffield-wednesday/startseite/verein/1035",
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 400,
-          "marketValueFxRate": 0.846328,
-          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/sheffield-wednesday/startseite/verein/1035",
-          "seasonSquadCheckedAt": "2026-10-09"
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Ashley Maynard-Brewer",
