@@ -57,7 +57,7 @@ for (const club of baseline.clubs) {
     return {
       player, shirt: field('shirt'), nationality: field('nationality'),
       group: field('group'), position: field('position'), age: field('age'),
-      marketValueM: field('marketValueM'), minutes: field('minutes'),
+      marketValueM: field('marketValueM'), marketValueSourceUrl: field('marketValueSourceUrl'), marketValueCheckedAt: field('marketValueCheckedAt'), marketValueSourceEuroK: field('marketValueSourceEuroK'), marketValueFxRate: field('marketValueFxRate'), minutes: field('minutes'),
       goals: field('goals'), assists: field('assists'),
       ...(previous.identitySource ? {identitySource: previous.identitySource} : {})
     };
@@ -89,13 +89,13 @@ for (const club of baseline.clubs) {
     const absent = missing(p);
     for (const k of absent) gaps[k]++;
     if (!absent.length) complete++;
-    rowData.push([club.division,club.club,club.clubId,p.player,p.shirt,p.nationality,p.group,p.position === null ? null : posNames[p.position] || 'Unknown',p.position,p.marketValueM,absent.length ? 'NEEDS RESEARCH':'READY',absent.map(k => k === 'marketValueM' ? 'value' : k).join(', '),club.source,club.snapshot]);
+    rowData.push([club.division,club.club,club.clubId,p.player,p.shirt,p.nationality,p.group,p.position === null ? null : posNames[p.position] || 'Unknown',p.position,p.marketValueM,absent.length ? 'NEEDS RESEARCH':'READY',absent.map(k => k === 'marketValueM' ? 'value' : k).join(', '),club.source,club.snapshot,p.marketValueSourceUrl,p.marketValueCheckedAt,p.marketValueSourceEuroK,p.marketValueFxRate]);
   }
   clubData.push([club.division,club.club,club.players.length,complete,club.players.length-complete,gaps.shirt,gaps.nationality,gaps.position,gaps.marketValueM,'NOT VERIFIED']);
   const d = divisionStats[club.division] ||= {clubs:0,players:0,ready:0,essentialGaps:0};
   d.clubs++; d.players += club.players.length; d.ready += complete; d.essentialGaps += Object.values(gaps).reduce((a,b) => a+b, 0);
 }
-const headers = ['Division','Club','Club ID','Player','Shirt #','Nationality','Position group','SWOS position','Position code','Value (£m)','SWOS status','Missing essentials','Research source','Research snapshot'];
+const headers = ['Division','Club','Club ID','Player','Shirt #','Nationality','Position group','SWOS position','Position code','Value (£m)','SWOS status','Missing essentials','Research source','Research snapshot','Value evidence URL','Value checked','Reference EUR k','EUR-GBP rate'];
 const clubHeaders = ['Division','Club','Players','SWOS ready','Players needing work','Missing shirts','Missing nationality','Missing position','Missing value','Kit colours checked'];
 const csvCell = v => { const s = String(v ?? ''); return /[",\r\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
 fs.writeFileSync(path.join(OUTPUT, 'SWOS_Master_2026-27.csv'),
@@ -135,7 +135,7 @@ function worksheet(rows, widths, opts={}) {
     (opts.filter?'<autoFilter ref="A1:'+end+'"/>':'')+'</worksheet>';
 }
 const sheets = [
-  ['Players',[headers,...rowData],[20,27,23,27,10,18,17,16,14,15,19,28,52,18],{missingColumns:[4,5,7,8,9],statusColumn:10,filter:true}],
+  ['Players',[headers,...rowData],[20,27,23,27,10,18,17,16,14,15,19,28,52,18,60,16,16,16],{missingColumns:[4,5,7,8,9],statusColumn:10,filter:true}],
   ['Clubs',[clubHeaders,...clubData],[20,30,11,14,22,19,22,19,19,24],{filter:true}],
   ['How to use',[
    ['SWOS 2026/27 MASTER TRACKER','What this workbook means'],
@@ -144,6 +144,8 @@ const sheets = [
    ['Red blank cell','A required SWOS field is missing: shirt number, nationality, position or market value'],
    ['READY','The research pack has the five essential identity/value fields, not a guarantee it has been installed'],
    ['Market value','Values shown in GBP millions as currently recorded in Studio research, not a live valuation feed'],
+   ['Valuation evidence','For individually researched values see the evidence URL, source amount in EUR thousands, exchange rate and checked date columns. Blank means unverified.'],
+   ['Foreign exchange','October 9, 2026 EUR/GBP reference rate 0.846328; later rates must be recorded explicitly for each future batch.'],
    ['Kit colours','Separate review, not yet confirmed in this workbook'],
    ['Age / goals / assists','Not included because SWOS does not need them in the current priority pass'],
    ['Source date','Each player inherits their club source/snapshot; generating the workbook does not reverify football facts'],
