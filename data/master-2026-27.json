@@ -12416,10 +12416,14 @@
           "group": "Goalkeeper",
           "position": 0,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.021,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/notts-county/marktwertanalyse/verein/1045",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 25,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Harry Griffiths",
@@ -12440,10 +12444,14 @@
           "group": "Defender",
           "position": 1,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.254,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/notts-county/marktwertanalyse/verein/1045",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 300,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Rod McDonald",
@@ -12452,10 +12460,14 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.042,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/notts-county/marktwertanalyse/verein/1045",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 50,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Jacob Bedeau",
@@ -12464,10 +12476,14 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.296,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/notts-county/marktwertanalyse/verein/1045",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 350,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Matthew Platt",
@@ -12476,10 +12492,14 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.275,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/notts-county/marktwertanalyse/verein/1045",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 325,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Nicholas Tsaroulla",
@@ -12488,10 +12508,14 @@
           "group": "Defender",
           "position": 2,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.233,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/notts-county/marktwertanalyse/verein/1045",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 275,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Max Sanders",
@@ -12500,10 +12524,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.339,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/notts-county/marktwertanalyse/verein/1045",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 400,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Ollie Cooper",
@@ -12524,10 +12552,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.19,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/notts-county/marktwertanalyse/verein/1045",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 225,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Dean Campbell",
@@ -12548,10 +12580,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.212,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/notts-county/marktwertanalyse/verein/1045",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 250,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Callum Roberts",
@@ -12619,10 +12655,14 @@
           "group": "Goalkeeper",
           "position": 0,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 1.016,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/oxford-united/marktwertanalyse/verein/988",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 1200,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Simon Eastwood",
@@ -12631,10 +12671,14 @@
           "group": "Goalkeeper",
           "position": 0,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.042,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/oxford-united/marktwertanalyse/verein/988",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 50,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Sam Long",
@@ -12643,10 +12687,14 @@
           "group": "Defender",
           "position": 1,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.254,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/oxford-united/marktwertanalyse/verein/988",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 300,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Ciaron Brown",
@@ -12655,10 +12703,14 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 1.269,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/oxford-united/marktwertanalyse/verein/988",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 1500,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Frankie Kent",
@@ -12667,10 +12719,14 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.339,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/oxford-united/marktwertanalyse/verein/988",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 400,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Michal Helik",
@@ -12679,10 +12735,14 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.846,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/oxford-united/marktwertanalyse/verein/988",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 1000,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Ruben Roosken",
@@ -12691,10 +12751,14 @@
           "group": "Defender",
           "position": 2,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.423,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/oxford-united/marktwertanalyse/verein/988",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 500,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Kai Andrews",
@@ -12715,10 +12779,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.677,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/oxford-united/marktwertanalyse/verein/988",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 800,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Tyler Goodrham",
@@ -12727,10 +12795,16 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 1.269,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/oxford-united/marktwertanalyse/verein/988",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 1500,
+          "marketValueFxRate": 0.846328,
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm",
+          "shirtCheckedAt": "2026-10-09"
         },
         {
           "player": "Jamie McDonnell",
@@ -12739,10 +12813,16 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.846,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/oxford-united/marktwertanalyse/verein/988",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 1000,
+          "marketValueFxRate": 0.846328,
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm",
+          "shirtCheckedAt": "2026-10-09"
         },
         {
           "player": "Louie Sibley",
@@ -12751,10 +12831,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 1.016,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/oxford-united/marktwertanalyse/verein/988",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 1200,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Jin-Woo Jeon",
@@ -12763,10 +12847,16 @@
           "group": "Forward",
           "position": 4,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.592,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/oxford-united/marktwertanalyse/verein/988",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 700,
+          "marketValueFxRate": 0.846328,
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/flone/oxfordu.htm",
+          "shirtCheckedAt": "2026-10-09"
         },
         {
           "player": "Mark Harris",
@@ -12775,10 +12865,14 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.508,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/oxford-united/marktwertanalyse/verein/988",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 600,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Aidomo Emakhu",
@@ -12787,10 +12881,14 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.846,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/oxford-united/marktwertanalyse/verein/988",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 1000,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Siriki Dembele",
@@ -12799,10 +12897,14 @@
           "group": "Forward",
           "position": 5,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.677,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/oxford-united/marktwertanalyse/verein/988",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 800,
+          "marketValueFxRate": 0.846328
         }
       ]
     },
@@ -13041,10 +13143,14 @@
           "group": "Goalkeeper",
           "position": 0,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.063,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/plymouth-argyle/marktwertanalyse/verein/2262",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 75,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Mathias Ross",
@@ -13053,10 +13159,14 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.635,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/plymouth-argyle/marktwertanalyse/verein/2262",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 750,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Jack Mackenzie",
@@ -13065,10 +13175,14 @@
           "group": "Defender",
           "position": 2,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.592,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/plymouth-argyle/marktwertanalyse/verein/2262",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 700,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Julio Pleguezuelo",
@@ -13077,10 +13191,14 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.592,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/plymouth-argyle/marktwertanalyse/verein/2262",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 700,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Alex Mitchell",
@@ -13101,10 +13219,14 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.381,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/plymouth-argyle/marktwertanalyse/verein/2262",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 450,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Malachi Boateng",
@@ -13113,10 +13235,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.592,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/plymouth-argyle/marktwertanalyse/verein/2262",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 700,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Harvey White",
@@ -13125,10 +13251,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.592,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/plymouth-argyle/marktwertanalyse/verein/2262",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 700,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Joe Edwards",
@@ -13137,10 +13267,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.042,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/plymouth-argyle/marktwertanalyse/verein/2262",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 50,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Caleb Watts",
@@ -13149,10 +13283,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.212,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/plymouth-argyle/marktwertanalyse/verein/2262",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 250,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Michael Baidoo",
@@ -13161,10 +13299,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 1.693,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/plymouth-argyle/marktwertanalyse/verein/2262",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 2000,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Will Evans",
@@ -13185,10 +13327,14 @@
           "group": "Forward",
           "position": 4,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.465,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/plymouth-argyle/marktwertanalyse/verein/2262",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 550,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Ronan Curtis",
@@ -13197,10 +13343,14 @@
           "group": "Forward",
           "position": 5,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.169,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/plymouth-argyle/marktwertanalyse/verein/2262",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 200,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Owen Oseni",
@@ -13209,10 +13359,14 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.212,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/plymouth-argyle/marktwertanalyse/verein/2262",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 250,
+          "marketValueFxRate": 0.846328
         }
       ]
     },
@@ -13232,10 +13386,14 @@
           "group": "Goalkeeper",
           "position": 0,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.275,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.com/reading-fc/kader/verein/1032/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 325,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Jack Stevens",
@@ -13244,10 +13402,14 @@
           "group": "Goalkeeper",
           "position": 0,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.106,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.com/reading-fc/kader/verein/1032/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 125,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Udoka Godwin-Malife",
@@ -13256,10 +13418,14 @@
           "group": "Defender",
           "position": 1,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.465,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.com/reading-fc/kader/verein/1032/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 550,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Jeriel Dorsett",
@@ -13268,10 +13434,14 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.381,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.com/reading-fc/kader/verein/1032/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 450,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Haydon Roberts",
@@ -13280,10 +13450,14 @@
           "group": "Defender",
           "position": 2,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.846,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.com/reading-fc/kader/verein/1032/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 1000,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Paudie O'Connor",
@@ -13292,10 +13466,14 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.55,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.com/reading-fc/kader/verein/1032/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 650,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Conor Masterson",
@@ -13328,10 +13506,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.465,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.com/reading-fc/kader/verein/1032/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 550,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Charlie Savage",
@@ -13340,10 +13522,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.762,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.com/reading-fc/kader/verein/1032/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 900,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Lewis Wing",
@@ -13352,10 +13538,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.592,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.com/reading-fc/kader/verein/1032/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 700,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Daniel Kyerewaa",
@@ -13364,10 +13554,14 @@
           "group": "Midfielder",
           "position": 4,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.55,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.com/reading-fc/kader/verein/1032/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 650,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Jack Marriott",
@@ -13376,10 +13570,14 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.339,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.com/reading-fc/kader/verein/1032/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 400,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Jamie Reid",
@@ -13400,10 +13598,14 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.846,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.com/reading-fc/kader/verein/1032/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 1000,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Kyreece Lisbie",
@@ -13412,10 +13614,14 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.127,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.com/reading-fc/kader/verein/1032/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 150,
+          "marketValueFxRate": 0.846328
         }
       ]
     },
