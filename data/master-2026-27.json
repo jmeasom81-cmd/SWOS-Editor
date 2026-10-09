@@ -4411,7 +4411,7 @@
         },
         {
           "player": "Dael Fry",
-          "shirt": 23,
+          "shirt": null,
           "nationality": "England",
           "group": "Defender",
           "position": 3,
@@ -4419,7 +4419,9 @@
           "marketValueM": 4,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "shirtEvidenceUrl": "https://www.transfermarkt.co.uk/birmingham-city/kader/verein/337/saison_id/2026",
+          "shirtCheckedAt": "2026-10-09"
         },
         {
           "player": "Alex Cochrane",
@@ -4829,7 +4831,7 @@
         },
         {
           "player": "Akin Famewo",
-          "shirt": 23,
+          "shirt": 14,
           "nationality": "England",
           "group": "Defender",
           "position": 3,
@@ -4837,7 +4839,9 @@
           "marketValueM": 0.8,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "shirtEvidenceUrl": "https://www.goal.com/en-gb/team/bolton-wanderers/squad/69t8imcdaqlgfbds2p58596my",
+          "shirtCheckedAt": "2026-10-09"
         },
         {
           "player": "Max Conway",
@@ -4853,7 +4857,7 @@
         },
         {
           "player": "Luca Stephenson",
-          "shirt": 27,
+          "shirt": null,
           "nationality": "England",
           "group": "Defender",
           "position": 1,
@@ -4861,7 +4865,9 @@
           "marketValueM": 1,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "shirtEvidenceUrl": "https://www.transfermarkt.co.uk/bolton-wanderers/kader/verein/355/saison_id/2026",
+          "shirtCheckedAt": "2026-10-09"
         },
         {
           "player": "Xavier Simons",
@@ -5270,16 +5276,22 @@
           "assists": null
         },
         {
-          "player": "Lesley Ugochukwu",
-          "shirt": 8,
-          "nationality": "France",
+          "player": "Josh Laurent",
+          "shirt": 29,
+          "nationality": "England",
           "group": "Midfielder",
           "position": 6,
-          "age": 22,
-          "marketValueM": 25,
+          "age": null,
+          "marketValueM": 1.269,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/josh-laurent/profil/spieler/314241",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 1500,
+          "marketValueFxRate": 0.846328,
+          "shirtEvidenceUrl": "https://www.burnleyfootballclub.com/media-article/2026-27-squad-numbers-confirmed",
+          "shirtCheckedAt": "2026-10-09"
         },
         {
           "player": "Florentino Luis",
@@ -8603,7 +8615,7 @@
         },
         {
           "player": "Jimmy Morgan",
-          "shirt": 11,
+          "shirt": null,
           "nationality": "England",
           "group": "Forward",
           "position": 7,
@@ -8611,7 +8623,9 @@
           "marketValueM": 0.35,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "shirtEvidenceUrl": "https://www.transfermarkt.co.uk/west-bromwich-albion/kadernaechstesaison/verein/984/saison_id/2026",
+          "shirtCheckedAt": "2026-10-09"
         },
         {
           "player": "Josh Maja",
@@ -9559,10 +9573,14 @@
           "group": "Midfielder",
           "position": 4,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.635,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/tyrese-noslin/profil/spieler/708005",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 750,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Clayton Taylor",
@@ -9806,10 +9824,14 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.296,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/albie-morgan/profil/spieler/606026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 350,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "George Honeyman",
@@ -10212,10 +10234,14 @@
           "group": "Defender",
           "position": 1,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.063,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/fc-bromley/kader/verein/8981",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 75,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Richard Taylor",
@@ -10949,10 +10975,14 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.254,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/doncaster-rovers/kader/verein/2454",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 300,
+          "marketValueFxRate": 0.846328
         },
         {
           "player": "Tom Nixon",
@@ -11326,7 +11356,9 @@
           "marketValueSourceUrl": "https://www.transfermarkt.co.uk/leicester-city/kader/verein/1003/saison_id/2026",
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 1800,
-          "marketValueFxRate": 0.846328
+          "marketValueFxRate": 0.846328,
+          "shirtEvidenceUrl": "https://www.lcfc.com/media-article/leicester-city-lcfc-men-league-one-squad-numbers",
+          "shirtCheckedAt": "2026-10-09"
         },
         {
           "player": "Franco Ravizzoli",
@@ -11338,7 +11370,9 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "shirtEvidenceUrl": "https://www.lcfc.com/media-article/leicester-city-lcfc-men-league-one-squad-numbers",
+          "shirtCheckedAt": "2026-10-09"
         },
         {
           "player": "Wout Faes",
@@ -11354,7 +11388,9 @@
           "marketValueSourceUrl": "https://www.transfermarkt.co.uk/leicester-city/kader/verein/1003/saison_id/2026",
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 10000,
-          "marketValueFxRate": 0.846328
+          "marketValueFxRate": 0.846328,
+          "shirtEvidenceUrl": "https://www.lcfc.com/media-article/leicester-city-lcfc-men-league-one-squad-numbers",
+          "shirtCheckedAt": "2026-10-09"
         },
         {
           "player": "Ben Nelson",
@@ -11370,7 +11406,9 @@
           "marketValueSourceUrl": "https://www.transfermarkt.co.uk/leicester-city/kader/verein/1003/saison_id/2026",
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 1500,
-          "marketValueFxRate": 0.846328
+          "marketValueFxRate": 0.846328,
+          "shirtEvidenceUrl": "https://www.lcfc.com/media-article/leicester-city-lcfc-men-league-one-squad-numbers",
+          "shirtCheckedAt": "2026-10-09"
         },
         {
           "player": "Caleb Okoli",
@@ -11386,11 +11424,13 @@
           "marketValueSourceUrl": "https://www.transfermarkt.co.uk/leicester-city/kader/verein/1003/saison_id/2026",
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 9000,
-          "marketValueFxRate": 0.846328
+          "marketValueFxRate": 0.846328,
+          "shirtEvidenceUrl": "https://www.lcfc.com/media-article/leicester-city-lcfc-men-league-one-squad-numbers",
+          "shirtCheckedAt": "2026-10-09"
         },
         {
           "player": "Warren O'Hora",
-          "shirt": 16,
+          "shirt": null,
           "nationality": "Republic of Ireland",
           "group": "Defender",
           "position": 3,
@@ -11398,7 +11438,9 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "shirtEvidenceUrl": "https://www.lcfc.com/media-article/leicester-city-lcfc-men-league-one-squad-numbers",
+          "shirtCheckedAt": "2026-10-09"
         },
         {
           "player": "Luke Thomas",
@@ -11410,11 +11452,13 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "shirtEvidenceUrl": "https://www.lcfc.com/media-article/leicester-city-lcfc-men-league-one-squad-numbers",
+          "shirtCheckedAt": "2026-10-09"
         },
         {
           "player": "John Lundstram",
-          "shirt": 6,
+          "shirt": null,
           "nationality": "England",
           "group": "Midfielder",
           "position": 6,
@@ -11422,7 +11466,9 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "shirtEvidenceUrl": "https://www.lcfc.com/media-article/leicester-city-lcfc-men-league-one-squad-numbers",
+          "shirtCheckedAt": "2026-10-09"
         },
         {
           "player": "Conor Chaplin",
@@ -11434,11 +11480,13 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "shirtEvidenceUrl": "https://www.lcfc.com/media-article/leicester-city-lcfc-men-league-one-squad-numbers",
+          "shirtCheckedAt": "2026-10-09"
         },
         {
           "player": "Kamari Doyle",
-          "shirt": 27,
+          "shirt": null,
           "nationality": "England",
           "group": "Midfielder",
           "position": 6,
@@ -11446,7 +11494,9 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "shirtEvidenceUrl": "https://www.lcfc.com/media-article/leicester-city-lcfc-men-league-one-squad-numbers",
+          "shirtCheckedAt": "2026-10-09"
         },
         {
           "player": "Sammy Braybrooke",
@@ -11458,7 +11508,9 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "shirtEvidenceUrl": "https://www.lcfc.com/media-article/leicester-city-lcfc-men-league-one-squad-numbers",
+          "shirtCheckedAt": "2026-10-09"
         },
         {
           "player": "Will Alves",
@@ -11467,10 +11519,16 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.339,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/leicester-city/kader/verein/1003/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 400,
+          "marketValueFxRate": 0.846328,
+          "shirtEvidenceUrl": "https://www.lcfc.com/media-article/leicester-city-lcfc-men-league-one-squad-numbers",
+          "shirtCheckedAt": "2026-10-09"
         },
         {
           "player": "Admir Bristric",
@@ -11482,7 +11540,9 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "shirtEvidenceUrl": "https://www.lcfc.com/media-article/leicester-city-lcfc-men-league-one-squad-numbers",
+          "shirtCheckedAt": "2026-10-09"
         },
         {
           "player": "Liam Cullen",
@@ -11494,11 +11554,13 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "shirtEvidenceUrl": "https://www.lcfc.com/media-article/leicester-city-lcfc-men-league-one-squad-numbers",
+          "shirtCheckedAt": "2026-10-09"
         },
         {
           "player": "Emil Riis",
-          "shirt": 17,
+          "shirt": null,
           "nationality": "Denmark",
           "group": "Forward",
           "position": 7,
@@ -11506,11 +11568,13 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "shirtEvidenceUrl": "https://www.lcfc.com/media-article/leicester-city-lcfc-men-league-one-squad-numbers",
+          "shirtCheckedAt": "2026-10-09"
         },
         {
           "player": "Tom Watson",
-          "shirt": 23,
+          "shirt": 20,
           "nationality": "England",
           "group": "Forward",
           "position": 4,
@@ -11518,7 +11582,9 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "shirtEvidenceUrl": "https://www.lcfc.com/media-article/leicester-city-lcfc-men-league-one-squad-numbers",
+          "shirtCheckedAt": "2026-10-09"
         }
       ]
     },
