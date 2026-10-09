@@ -129,7 +129,15 @@ assert.equal(batchC.clubs.length,6);
 assert.equal(new Set(batchC.clubs.map(c=>c.id)).size,6);
 assert.equal(batchC.clubs.reduce((n,c)=>n+c.players.length,0),42);
 assert.equal(batchC.clubs.reduce((n,c)=>n+c.squadReviews.length,0),13);
-for(const c of batchC.clubs){const club=master.clubs.find(x=>x.clubId===c.id);assert.ok(club,'Missing source club');for(const r of c.players){const p=club.players.find(x=>x.player===r.name);assert.ok(p,'Missing source player '+r.name);assert.equal(p.marketValueSourceEuroK,r.eurThousands);assert.equal(p.marketValueM,Math.round(r.eurThousands*batchC.referenceFxRateEurGbp)/1000);assert.equal(p.marketValueSourceUrl,c.sourceUrl);assert.equal(p.seasonSquadSourceUrl,c.sourceUrl);}}
+for(const c of batchC.clubs){const club=master.clubs.find(x=>x.clubId===c.id);assert.ok(club,'Missing source club');for(const r of c.players){const p=club.players.find(x=>x.player===r.name);assert.ok(p,'Missing source player '+r.name);assert.equal(p.marketValueSourceEuroK,r.eurThousands);assert.equal(p.marketValueM,Math.round(r.eurThousands*batchC.referenceFxRateEurGbp)/1000);assert.equal(p.marketValueSourceUrl,c.sourceUrl);assert.equal(p.seasonSquadSourceUrl,c.id==='rochdale'?officialRochdale.clubs[0].sourceUrl:c.sourceUrl);}}
 for(const [clubId,name] of [['newport-county','Matt Smith'],['oldham-athletic','Emmanuel Monthe'],['tranmere-rovers','Joe Murphy'],['walsall','Lewis Simper'],['york-city','Ollie Pearce'],['rochdale','Mani Dieseruvwe']]){const p=master.clubs.find(c=>c.clubId===clubId).players.find(p=>p.player===name);assert.ok(p);assert.equal(p.marketValueM,null,'Unverified missing valuation must remain blank: '+name);}
 assert.ok(html.includes('Matt Smith in the SWOS pack'));
 console.log('League Two batch C: 42 season-linked values across six clubs; aliases and missing estimates preserved.');
+
+// Market-value evidence must never replace stronger official shirt or squad membership evidence.
+const cian=rochdaleClub.players.find(p=>p.player==='Cian Hayes');
+assert.equal(cian.marketValueSourceUrl,batchC.clubs.find(c=>c.id==='rochdale').sourceUrl);
+assert.equal(cian.shirtEvidenceUrl,officialRochdale.clubs[0].sourceUrl);
+assert.equal(cian.seasonSquadSourceUrl,officialRochdale.clubs[0].sourceUrl);
+assert.equal((html.match(/\"Cian Hayes\":\{/g)||[]).length>=1,true);
+console.log('Evidence priority: official Rochdale shirt source retained independently of market valuation.');
