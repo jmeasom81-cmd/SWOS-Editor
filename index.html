@@ -3502,7 +3502,7 @@
   };
   function researchPackFor(clubId){return PL_2627_RESEARCH_PACKS[clubId]||null}
   // A blank research field is unknown, not numeric zero. Preserve genuine 0s.
-  function evidenceNumberPresent(v){return v!==null&&v!==undefined&&v!==""&&Number.isFinite(Number(v))}
+  function evidenceNumberPresent(v){return (typeof v==="number"||(typeof v==="string"&&v.trim()!==""))&&Number.isFinite(Number(v))}
   function researchPackSummary(pack){
     if(!pack)return{players:0,withStats:0,withValues:0};
     const rows=Object.values(pack.data||{});
