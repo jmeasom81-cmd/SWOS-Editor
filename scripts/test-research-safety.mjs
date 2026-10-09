@@ -26,7 +26,7 @@ function functionSource(name) {
   }
   throw new Error('Cannot extract ' + name);
 }
-const names = ['evidenceNumberPresent', 'ageBandFromAge', 'inferTierFromEvidence', 'blend07', 'clamp07'];
+const names = ['evidenceNumberPresent', 'ageBandFromAge', 'inferTierFromEvidence', 'blend07', 'evidenceTo07', 'clamp07'];
 const source = names.map(functionSource).join('\n') + '\n';
 const run = expression => vm.runInNewContext(source + '\n(' + expression + ')', Object.create(null), {timeout: 1500});
 
