@@ -88,7 +88,8 @@ for (const [clubId, records] of Object.entries(expectedNewValues)) {
     assert.equal(player.marketValueSourceEuroK,euroThousands);
     assert.equal(player.marketValueFxRate,0.846328);
     assert.ok(player.marketValueSourceUrl?.includes('transfermarkt.'), 'No source URL for '+name);
-    assert.ok(player.seasonSquadSourceUrl, 'No squad link for '+name);
+    if (!(clubId==='sheffield-wednesday' && name==='Joe Lumley')) assert.ok(player.seasonSquadSourceUrl, 'No squad link for '+name);
+    else assert.ok(!player.seasonSquadSourceUrl, 'Current profile cannot certify the season-specific squad for '+name);
   }
 }
 const batchD = JSON.parse(fs.readFileSync('data/league-one-squad-review-batch-d-2026-10-09.json','utf8'));
