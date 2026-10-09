@@ -3501,13 +3501,15 @@
     }
   };
   function researchPackFor(clubId){return PL_2627_RESEARCH_PACKS[clubId]||null}
+  // A blank research field is unknown, not numeric zero. Preserve genuine 0s.
+  function evidenceNumberPresent(v){return v!==null&&v!==undefined&&v!==""&&Number.isFinite(Number(v))}
   function researchPackSummary(pack){
     if(!pack)return{players:0,withStats:0,withValues:0};
     const rows=Object.values(pack.data||{});
     return{
       players:rows.length,
-      withStats:rows.filter(x=>Number.isFinite(Number(x.minutes))).length,
-      withValues:rows.filter(x=>Number.isFinite(Number(x.marketValueM))).length
+      withStats:rows.filter(x=>evidenceNumberPresent(x.minutes)).length,
+      withValues:rows.filter(x=>evidenceNumberPresent(x.marketValueM)).length
     }
   }
   async function loadResearchPack(clubId){
@@ -3517,7 +3519,7 @@
     for(const [name,raw] of Object.entries(pack.data)){
       const p=findModernCandidateByFootballName(clubId,name);
       if(!p)continue;
-      const hasMinutes=Number.isFinite(Number(raw.minutes));
+      const hasMinutes=evidenceNumberPresent(raw.minutes);
       const importance=hasMinutes?Math.max(0,Math.min(100,Math.round(Number(raw.minutes)/3420*100))):null;
       const evidence={
         age:raw.age??null,importance,marketValueM:raw.marketValueM??null,
@@ -3552,12 +3554,14 @@
     sources:["FBref 2025/26 Arsenal standard stats","Transfermarkt market values 03/06/2026","UEFA 2026/27 Arsenal squad"]
   };
   function ageBandFromAge(age){
+    if(!evidenceNumberPresent(age)||Number(age)<15||Number(age)>60)return"unknown";
     const a=Number(age);
     if(a<21)return"u21";if(a<=24)return"21-24";if(a<=28)return"25-28";if(a<=31)return"29-31";return"32plus"
   }
   function inferTierFromEvidence(e){
-    const mv=Number(e?.marketValueM),imp=Number(e?.importance);
-    if(Number.isFinite(mv)){
+    const mv=evidenceNumberPresent(e?.marketValueM)?Number(e.marketValueM):null;
+    const imp=evidenceNumberPresent(e?.importance)?Number(e.importance):null;
+    if(mv!==null){
       if(mv>=100)return"global";
       if(mv>=70)return"top";
       if(mv>=50)return"strong";
@@ -3566,7 +3570,7 @@
       if(mv>=7)return"prospect";
       return"fringe"
     }
-    if(Number.isFinite(imp)){
+    if(imp!==null){
       if(imp>=90)return"top";if(imp>=70)return"strong";if(imp>=50)return"starter";if(imp>=25)return"rotation";return"prospect"
     }
     return"starter"
@@ -3615,9 +3619,9 @@
   function evidenceForPlayer(player){return swosEvidenceState.values[player.candidateId]||{}}
   function evidenceCoverage(e){
     const keys=["importance","pace","passing","shooting","aerial","defending","control","finishing"];
-    const filled=keys.filter(k=>Number.isFinite(Number(e?.[k]))).length;
-    const hasMarket=Number.isFinite(Number(e?.marketValueM));
-    const hasOutput=Number.isFinite(Number(e?.minutes))||Number.isFinite(Number(e?.goals))||Number.isFinite(Number(e?.assists));
+    const filled=keys.filter(k=>evidenceNumberPresent(e?.[k])).length;
+    const hasMarket=evidenceNumberPresent(e?.marketValueM);
+    const hasOutput=evidenceNumberPresent(e?.minutes)||evidenceNumberPresent(e?.goals)||evidenceNumberPresent(e?.assists);
     return{filled,total:keys.length,hasMarket,hasOutput,score:filled+(hasMarket?1:0)+(hasOutput?1:0)}
   }
   function nearestValueIndexFromMillions(m){
@@ -3629,7 +3633,7 @@
   }
   function evidenceTo07(v){return clamp07((Math.max(0,Math.min(100,Number(v)||0))/100)*7)}
   function blend07(base,evidenceValue,weight=.7){
-    if(!Number.isFinite(Number(evidenceValue)))return base;
+    if(!evidenceNumberPresent(evidenceValue))return base;
     return clamp07(base*(1-weight)+evidenceTo07(evidenceValue)*weight)
   }
   function profileFromEvidence(player,e){
@@ -3659,7 +3663,7 @@
 
     const cov=evidenceCoverage(e);
     const confidence=cov.score>=8?"High":cov.score>=5?"Medium":"Low";
-    const valueIndex=Number.isFinite(Number(e.marketValueM))?nearestValueIndexFromMillions(e.marketValueM):base.valueIndex;
+    const valueIndex=evidenceNumberPresent(e.marketValueM)?nearestValueIndexFromMillions(e.marketValueM):base.valueIndex;
     return{
       levels:[passing,shooting,heading,tackling,control,speed,finishing],
       valueIndex,confidence,
@@ -3703,6 +3707,7 @@
     {id:"fringe",label:"Fringe / depth",skillBoost:-1.5,valueIndex:33}
   ];
   const SWOS_AGE_BANDS=[
+    {id:"unknown",label:"Age not confirmed",valueShift:0},
     {id:"u21",label:"Under 21",valueShift:1},
     {id:"21-24",label:"21–24",valueShift:1},
     {id:"25-28",label:"25–28",valueShift:0},
@@ -4029,8 +4034,8 @@
         const ident=seasonIdentityFor(p,club.id);
         if(!ident.nationality){missingNationalities++;clubResult.nationalityMissing++}
         if(!Number.isInteger(ident.shirt)){missingShirts++;clubResult.shirtMissing++}
-        if(!Number.isFinite(Number(raw.marketValueM))){missingValues++;clubResult.valueMissing++}
-        if(!Number.isFinite(Number(raw.minutes))){missingStats++;clubResult.statsMissing++}
+        if(!evidenceNumberPresent(raw.marketValueM)){missingValues++;clubResult.valueMissing++}
+        if(!evidenceNumberPresent(raw.minutes)){missingStats++;clubResult.statsMissing++}
         const safe=swosSafeName(ident.footballName||name);
         if(!safe||safe.length>23||/[^\x20-\x7E]/.test(safe))hardBlockers.push(`${club.name}: ${name} cannot be encoded safely in a SWOS player name`)
       }
@@ -4164,10 +4169,10 @@
       after[o+P.multi]=(after[o+P.multi]&31)|((raw.position&7)<<5);positionsWritten++;
       const nat=swosNationalityCode(raw.nationality);
       if(Number.isInteger(nat)){after[o+P.nationality]=nat;nationalitiesWritten++}
-      const shirt=Number(raw.shirt);
+      const shirt=evidenceNumberPresent(raw.shirt)?Number(raw.shirt):null;
       if(Number.isInteger(shirt)&&shirt>=0&&shirt<=99){after[o+P.shirt]=shirt;shirtsWritten++}
-      if(Number.isFinite(Number(raw.marketValueM))){after[o+P.value]=nearestValueIndexFromMillions(raw.marketValueM);valuesWritten++}else valuesPreserved++;
-      playerChanges.push({club:club.name,slot:slot+1,oldName:old.name,newName:safe,position:raw.position,nationalityUpdated:Number.isInteger(nat),shirtUpdated:Number.isInteger(shirt)&&shirt>=0&&shirt<=99,valueUpdated:Number.isFinite(Number(raw.marketValueM)),division:club.division===1?"Championship":club.division===2?"League One":"League Two"})
+      if(evidenceNumberPresent(raw.marketValueM)){after[o+P.value]=nearestValueIndexFromMillions(raw.marketValueM);valuesWritten++}else valuesPreserved++;
+      playerChanges.push({club:club.name,slot:slot+1,oldName:old.name,newName:safe,position:raw.position,nationalityUpdated:Number.isInteger(nat),shirtUpdated:Number.isInteger(shirt)&&shirt>=0&&shirt<=99,valueUpdated:evidenceNumberPresent(raw.marketValueM),division:club.division===1?"Championship":club.division===2?"League One":"League Two"})
     });
     const order=previewSquadOrder(rows.map(([name,raw])=>({position:raw.position})));
     for(let i=0;i<16;i++)after[teamOffset+T.order+i]=order[i];
@@ -4231,11 +4236,11 @@
         after[o+P.multi]=(after[o+P.multi]&31)|((r.position&7)<<5);positionsWritten++;
         const nat=swosNationalityCode(r.ident.nationality);
         if(Number.isInteger(nat)){after[o+P.nationality]=nat;nationalitiesWritten++}
-        const shirt=Number(r.ident.shirt);
+        const shirt=evidenceNumberPresent(r.ident.shirt)?Number(r.ident.shirt):null;
         if(Number.isInteger(shirt)&&shirt>=0&&shirt<=99){after[o+P.shirt]=shirt;shirtsWritten++}
-        if(Number.isFinite(Number(r.raw.marketValueM))){after[o+P.value]=nearestValueIndexFromMillions(r.raw.marketValueM);valuesWritten++}else valuesPreserved++;
+        if(evidenceNumberPresent(r.raw.marketValueM)){after[o+P.value]=nearestValueIndexFromMillions(r.raw.marketValueM);valuesWritten++}else valuesPreserved++;
         skillsPreserved++;
-        playerChanges.push({club:club.name,slot:slot+1,oldName:old.name,newName:name,position:r.position,nationalityUpdated:Number.isInteger(nat),shirtUpdated:Number.isInteger(shirt)&&shirt>=0&&shirt<=99,valueUpdated:Number.isFinite(Number(r.raw.marketValueM))})
+        playerChanges.push({club:club.name,slot:slot+1,oldName:old.name,newName:name,position:r.position,nationalityUpdated:Number.isInteger(nat),shirtUpdated:Number.isInteger(shirt)&&shirt>=0&&shirt<=99,valueUpdated:evidenceNumberPresent(r.raw.marketValueM)})
       });
       const order=previewSquadOrder(rows);
       for(let i=0;i<16;i++)after[teamOffset+T.order+i]=order[i]
