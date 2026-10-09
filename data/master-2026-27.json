@@ -13719,10 +13719,16 @@
           "group": "Goalkeeper",
           "position": 0,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.339,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/sheffield-wednesday/startseite/verein/1035",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 400,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/sheffield-wednesday/startseite/verein/1035",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Ashley Maynard-Brewer",
@@ -13743,10 +13749,16 @@
           "group": "Defender",
           "position": 1,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.085,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/sheffield-wednesday/startseite/verein/1035/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 100,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/sheffield-wednesday/startseite/verein/1035/saison_id/2026",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Max Lowe",
@@ -13755,10 +13767,16 @@
           "group": "Defender",
           "position": 2,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 1.523,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/sheffield-wednesday/startseite/verein/1035/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 1800,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/sheffield-wednesday/startseite/verein/1035/saison_id/2026",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Ricardo Santos",
@@ -13767,10 +13785,16 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.296,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/sheffield-wednesday/startseite/verein/1035/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 350,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/sheffield-wednesday/startseite/verein/1035/saison_id/2026",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Di'Shon Bernard",
@@ -13786,7 +13810,9 @@
           "marketValueSourceUrl": "https://www.transfermarkt.co.uk/sheffield-wednesday/kader/verein/1035/saison_id/2026",
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 1000,
-          "marketValueFxRate": 0.846328
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/sheffield-wednesday/startseite/verein/1035/saison_id/2026",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Liam Cooper",
@@ -13795,10 +13821,16 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.169,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/sheffield-wednesday/startseite/verein/1035/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 200,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/sheffield-wednesday/startseite/verein/1035/saison_id/2026",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Callum Slattery",
@@ -13807,10 +13839,16 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.592,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/sheffield-wednesday/startseite/verein/1035/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 700,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/sheffield-wednesday/startseite/verein/1035/saison_id/2026",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Barry Bannan",
@@ -13819,10 +13857,16 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.169,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/sheffield-wednesday/startseite/verein/1035/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 200,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/sheffield-wednesday/startseite/verein/1035/saison_id/2026",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Sean Fusire",
@@ -13831,10 +13875,16 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.762,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/sheffield-wednesday/startseite/verein/1035/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 900,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/sheffield-wednesday/startseite/verein/1035/saison_id/2026",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Billy Mitchell",
@@ -13867,10 +13917,16 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.423,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/sheffield-wednesday/startseite/verein/1035/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 500,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/sheffield-wednesday/startseite/verein/1035/saison_id/2026",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Louie Barry",
@@ -13879,10 +13935,16 @@
           "group": "Forward",
           "position": 5,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 2.116,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/sheffield-wednesday/startseite/verein/1035/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 2500,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/sheffield-wednesday/startseite/verein/1035/saison_id/2026",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Ali Al-Hamadi",
@@ -14454,10 +14516,16 @@
           "group": "Goalkeeper",
           "position": 0,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 1.269,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/wigan-athletic/kader/verein/1071/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 1500,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/wigan-athletic/kader/verein/1071/saison_id/2026",
+          "seasonSquadCheckedAt": "2026-10-09"
         },
         {
           "player": "Joe Whitworth",
