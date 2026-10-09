@@ -1,0 +1,402 @@
+{
+  "season": "2026/27",
+  "reviewedOn": "2026-10-09",
+  "currencyNote": "Transfermarkt reference estimates in EUR thousands converted to GBP millions. These are reference market estimates, not transfer fees and not the game's native value codes.",
+  "eurToGbpRate": 0.846328,
+  "fxRateSource": "Currency exchange rate reference obtained 2026-10-09 at 15:21 UTC",
+  "clubs": [
+    {
+      "clubId": "barnsley",
+      "pack": "BARNSLEY_2627_PACK",
+      "source": "https://www.transfermarkt.co.uk/barnsley-fc/kader/verein/349/saison_id/2026",
+      "players": [
+        {
+          "name": "Jack Shepherd",
+          "eurK": 300,
+          "valueGbpm": 0.254
+        },
+        {
+          "name": "Cameron McGeehan",
+          "eurK": 250,
+          "valueGbpm": 0.212
+        },
+        {
+          "name": "Clayton Taylor",
+          "eurK": 650,
+          "valueGbpm": 0.55
+        },
+        {
+          "name": "Patrick Kelly",
+          "eurK": 350,
+          "valueGbpm": 0.296
+        },
+        {
+          "name": "Luca Connell",
+          "eurK": 800,
+          "valueGbpm": 0.677
+        },
+        {
+          "name": "Reyes Cleary",
+          "eurK": 250,
+          "valueGbpm": 0.212
+        }
+      ]
+    },
+    {
+      "clubId": "blackpool",
+      "pack": "BLACKPOOL_2627_PACK",
+      "source": "https://www.transfermarkt.co.uk/blackpool-fc/kader/verein/1181/saison_id/2026",
+      "players": [
+        {
+          "name": "Bailey Peacock-Farrell",
+          "eurK": 900,
+          "valueGbpm": 0.762
+        },
+        {
+          "name": "Andy Lyons",
+          "eurK": 375,
+          "valueGbpm": 0.317
+        },
+        {
+          "name": "Zac Ashworth",
+          "eurK": 300,
+          "valueGbpm": 0.254
+        },
+        {
+          "name": "Oliver Casey",
+          "eurK": 750,
+          "valueGbpm": 0.635
+        },
+        {
+          "name": "Fraser Horsfall",
+          "eurK": 275,
+          "valueGbpm": 0.233
+        },
+        {
+          "name": "Hayden Coulson",
+          "eurK": 400,
+          "valueGbpm": 0.339
+        },
+        {
+          "name": "Leighton Clarkson",
+          "eurK": 700,
+          "valueGbpm": 0.592
+        },
+        {
+          "name": "George Honeyman",
+          "eurK": 500,
+          "valueGbpm": 0.423
+        },
+        {
+          "name": "Josh Bowler",
+          "eurK": 600,
+          "valueGbpm": 0.508
+        },
+        {
+          "name": "Niall Ennis",
+          "eurK": 600,
+          "valueGbpm": 0.508
+        },
+        {
+          "name": "Tom Bloxham",
+          "eurK": 600,
+          "valueGbpm": 0.508
+        },
+        {
+          "name": "Dion Charles",
+          "eurK": 500,
+          "valueGbpm": 0.423
+        }
+      ]
+    },
+    {
+      "clubId": "bradford-city",
+      "pack": "BRADFORD_CITY_2627_PACK",
+      "source": "https://www.transfermarkt.co.uk/bradford-city/startseite/verein/1027/saison_id/2026",
+      "players": [
+        {
+          "name": "Jon McCracken",
+          "eurK": 500,
+          "valueGbpm": 0.423
+        },
+        {
+          "name": "Ibou Touray",
+          "eurK": 225,
+          "valueGbpm": 0.19
+        },
+        {
+          "name": "Macaulay Gillesphey",
+          "eurK": 400,
+          "valueGbpm": 0.339
+        },
+        {
+          "name": "Aden Baldwin",
+          "eurK": 300,
+          "valueGbpm": 0.254
+        },
+        {
+          "name": "Callum Connolly",
+          "eurK": 550,
+          "valueGbpm": 0.465
+        },
+        {
+          "name": "Adam Phillips",
+          "eurK": 650,
+          "valueGbpm": 0.55
+        },
+        {
+          "name": "Antoni Sarcevic",
+          "eurK": 50,
+          "valueGbpm": 0.042
+        },
+        {
+          "name": "Tyreik Wright",
+          "eurK": 350,
+          "valueGbpm": 0.296
+        },
+        {
+          "name": "Josh Neufville",
+          "eurK": 700,
+          "valueGbpm": 0.592
+        },
+        {
+          "name": "Jake Beesley",
+          "eurK": 300,
+          "valueGbpm": 0.254
+        },
+        {
+          "name": "Stephen Humphrys",
+          "eurK": 550,
+          "valueGbpm": 0.465
+        },
+        {
+          "name": "Kayden Jackson",
+          "eurK": 200,
+          "valueGbpm": 0.169
+        }
+      ]
+    },
+    {
+      "clubId": "bromley",
+      "pack": "BROMLEY_2627_PACK",
+      "source": "https://www.transfermarkt.co.uk/bromley-fc/kader/verein/8981",
+      "players": [
+        {
+          "name": "Grant Smith",
+          "eurK": 100,
+          "valueGbpm": 0.085
+        },
+        {
+          "name": "Omar Sowunmi",
+          "eurK": 500,
+          "valueGbpm": 0.423
+        },
+        {
+          "name": "Ben Thompson",
+          "eurK": 200,
+          "valueGbpm": 0.169
+        },
+        {
+          "name": "Mitch Pinnock",
+          "eurK": 200,
+          "valueGbpm": 0.169
+        },
+        {
+          "name": "Michael Cheek",
+          "eurK": 100,
+          "valueGbpm": 0.085
+        },
+        {
+          "name": "Nicke Kabamba",
+          "eurK": 50,
+          "valueGbpm": 0.042
+        },
+        {
+          "name": "Corey Whitely",
+          "eurK": 50,
+          "valueGbpm": 0.042
+        }
+      ]
+    },
+    {
+      "clubId": "cambridge-united",
+      "pack": "CAMBRIDGE_UNITED_2627_PACK",
+      "source": "https://www.transfermarkt.co.uk/cambridge-united/kader/verein/986/saison_id/2026",
+      "players": [
+        {
+          "name": "Jake Eastwood",
+          "eurK": 300,
+          "valueGbpm": 0.254
+        },
+        {
+          "name": "Liam Bennett",
+          "eurK": 450,
+          "valueGbpm": 0.381
+        },
+        {
+          "name": "Patrick Bauer",
+          "eurK": 150,
+          "valueGbpm": 0.127
+        },
+        {
+          "name": "Kelland Watts",
+          "eurK": 600,
+          "valueGbpm": 0.508
+        },
+        {
+          "name": "Dominic Ball",
+          "eurK": 250,
+          "valueGbpm": 0.212
+        },
+        {
+          "name": "Pelly Ruddock Mpanzu",
+          "eurK": 350,
+          "valueGbpm": 0.296
+        },
+        {
+          "name": "Ben Knight",
+          "eurK": 250,
+          "valueGbpm": 0.212
+        },
+        {
+          "name": "Isaac Heath",
+          "eurK": 250,
+          "valueGbpm": 0.212
+        },
+        {
+          "name": "Louis Appere",
+          "eurK": 225,
+          "valueGbpm": 0.19
+        },
+        {
+          "name": "Sullay Kaikai",
+          "eurK": 150,
+          "valueGbpm": 0.127
+        },
+        {
+          "name": "Shayne Lavery",
+          "eurK": 250,
+          "valueGbpm": 0.212
+        },
+        {
+          "name": "Gassan Ahadme",
+          "eurK": 600,
+          "valueGbpm": 0.508
+        }
+      ]
+    },
+    {
+      "clubId": "doncaster-rovers",
+      "pack": "DONCASTER_ROVERS_2627_PACK",
+      "source": "https://www.transfermarkt.co.uk/doncaster-rovers/kader/verein/2454",
+      "players": [
+        {
+          "name": "Tommy Simkin",
+          "eurK": 1000,
+          "valueGbpm": 0.846
+        },
+        {
+          "name": "Josh Clarke",
+          "eurK": 200,
+          "valueGbpm": 0.169
+        },
+        {
+          "name": "Jamie Sterry",
+          "eurK": 125,
+          "valueGbpm": 0.106
+        },
+        {
+          "name": "James Husband",
+          "eurK": 175,
+          "valueGbpm": 0.148
+        },
+        {
+          "name": "Matty Pearson",
+          "eurK": 550,
+          "valueGbpm": 0.465
+        },
+        {
+          "name": "Tom Nixon",
+          "eurK": 200,
+          "valueGbpm": 0.169
+        },
+        {
+          "name": "Owen Bailey",
+          "eurK": 650,
+          "valueGbpm": 0.55
+        },
+        {
+          "name": "George Broadbent",
+          "eurK": 300,
+          "valueGbpm": 0.254
+        },
+        {
+          "name": "Harry Clifton",
+          "eurK": 275,
+          "valueGbpm": 0.233
+        },
+        {
+          "name": "Brandon Hanlan",
+          "eurK": 200,
+          "valueGbpm": 0.169
+        },
+        {
+          "name": "Alfie May",
+          "eurK": 450,
+          "valueGbpm": 0.381
+        }
+      ]
+    },
+    {
+      "clubId": "leicester-city",
+      "pack": "LEICESTER_CITY_2627_PACK",
+      "source": "https://www.transfermarkt.co.uk/leicester-city/kader/verein/1003/saison_id/2026",
+      "players": [
+        {
+          "name": "Jakub Stolarczyk",
+          "eurK": 1800,
+          "valueGbpm": 1.523
+        },
+        {
+          "name": "Wout Faes",
+          "eurK": 10000,
+          "valueGbpm": 8.463
+        },
+        {
+          "name": "Caleb Okoli",
+          "eurK": 9000,
+          "valueGbpm": 7.617
+        },
+        {
+          "name": "Ben Nelson",
+          "eurK": 1500,
+          "valueGbpm": 1.269
+        }
+      ]
+    },
+    {
+      "clubId": "sheffield-wednesday",
+      "pack": "SHEFFIELD_WEDNESDAY_2627_PACK",
+      "source": "https://www.transfermarkt.co.uk/sheffield-wednesday/kader/verein/1035/saison_id/2026",
+      "players": [
+        {
+          "name": "Di'Shon Bernard",
+          "eurK": 1000,
+          "valueGbpm": 0.846
+        }
+      ]
+    },
+    {
+      "clubId": "peterborough-united",
+      "pack": "PETERBOROUGH_UNITED_2627_PACK",
+      "source": "https://www.transfermarkt.co.uk/peterborough-united/kader/verein/1072",
+      "players": [
+        {
+          "name": "Alex Bass",
+          "eurK": 375,
+          "valueGbpm": 0.317
+        }
+      ]
+    }
+  ]
+}
