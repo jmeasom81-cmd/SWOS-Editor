@@ -5655,6 +5655,27 @@
     return {clubs,divisions}
   }
 
+  function masterQualityChecks(rows){
+    const issues=[],byName=new Map(),shirtOwners=new Map();
+    for(const r of rows){
+      const normalized=r.player.normalize("NFKD").toLowerCase().replace(/[^a-z0-9]+/g,"");
+      const group=byName.get(normalized)||[];group.push(r);byName.set(normalized,group);
+      if(Number.isInteger(r.shirt)){
+        const key=r.clubId+"|"+r.shirt,prior=shirtOwners.get(key);
+        if(prior)issues.push({type:"SHIRT CLASH",club:r.club,clubId:r.clubId,division:r.division,player:r.player,detail:"#"+r.shirt+" also assigned to "+prior.player,priority:0});
+        else shirtOwners.set(key,r)
+      }
+    }
+    for(const people of byName.values()){
+      if(people.length<2)continue;
+      for(const r of people){
+        const others=people.filter(p=>p.clubId!==r.clubId);
+        if(others.length)issues.push({type:"NAME REVIEW",club:r.club,clubId:r.clubId,division:r.division,player:r.player,detail:"Same name at "+others.map(x=>x.club).join(", ")+" — may be different players",priority:1})
+      }
+    }
+    return issues.sort((a,b)=>a.priority-b.priority||a.club.localeCompare(b.club))
+  }
+
   async function renderMasterData(){
     const all=masterDataRows(),filtered=masterDataFilteredRows(),s=masterDataViewState;
     const pages=Math.max(1,Math.ceil(filtered.length/s.pageSize));if(s.page>=pages)s.page=pages-1;
@@ -5663,6 +5684,11 @@
     const gaps={shirt:all.filter(x=>x.shirt===null).length,nationality:all.filter(x=>!x.nationality).length,position:all.filter(x=>x.position===null).length,value:all.filter(x=>x.value===null).length};
     const identityPlayers=all.filter(r=>r.shirt===null||!r.nationality||r.position===null).length;
     const audit=masterDataAuditRows(all),totalMissing=all.reduce((n,r)=>n+r.missing.length,0),completePlayers=all.filter(r=>!r.missing.length).length;
+    const quality=masterQualityChecks(all);
+    const nextBatch=audit.clubs.filter(x=>x.division==="League One"&&x.missing>0).sort((a,b)=>b.missing-a.missing||a.club.localeCompare(b.club)).slice(0,15);
+    const qualityHtml=quality.length?quality.slice(0,16).map(x=>'<button class="research-pack-row" data-master-quality-club="'+esc(x.clubId)+'" style="width:100%;text-align:left"><div class="head"><strong>'+esc(x.type)+' · '+esc(x.club)+'</strong></div><div class="tiny">'+esc(x.player)+' · '+esc(x.detail)+'</div></button>').join(""):'<p class="about">No duplicate shirts or repeated full names currently detected.</p>';
+    const nextBatchHtml=nextBatch.map(x=>'<button class="research-pack-row" data-master-batch-club="'+esc(x.clubId)+'" style="width:100%;text-align:left"><div class="head"><strong>'+esc(x.club)+'</strong><span class="research-pack-status">'+x.completePlayers+'/'+x.players+' ready</span></div><div class="tiny">'+x.missing+' essential data gaps · tap to review</div></button>').join("");
+
     const divisionAuditHtml=audit.divisions.map(d=>'<div class="structure-stat"><small>'+esc(d.division)+'</small><strong>'+d.completion+'%</strong><span class="tiny">'+d.completePlayers+'/'+d.players+' complete · '+d.missing+' gaps</span></div>').join("");
     const clubAuditHtml=audit.clubs.slice(0,12).map(x=>'<button class="research-pack-row" data-master-audit-club="'+esc(x.clubId)+'" style="width:100%;text-align:left"><div class="head"><strong>'+esc(x.club)+'</strong><span class="research-pack-status">'+x.completion+'%</span></div><div class="tiny section-gap">'+esc(x.division)+' · '+x.completePlayers+'/'+x.players+' complete players · '+x.missing+' gaps</div></button>').join("");
     const divOptions=ENGLAND_2627_STRUCTURE.divisions.map(d=>'<option value="'+esc(d.name)+'" '+(s.division===d.name?"selected":"")+'>'+esc(d.name)+'</option>').join("");
@@ -5683,6 +5709,8 @@
       '<div class="structure-grid"><div class="structure-stat"><small>Clubs</small><strong>92</strong></div><div class="structure-stat"><small>Players</small><strong>'+all.length+'</strong></div><div class="structure-stat"><small>SWOS-ready players</small><strong>'+completePlayers+'</strong></div><div class="structure-stat"><small>Essential gaps</small><strong>'+totalMissing+'</strong></div></div>'+
       '<div class="friendly-card section-gap"><h3>Build priority</h3><p class="about">Finish what the game needs first. Identity blockers come before valuations; kits are a separate team-level pass. Skills are important, but are deliberately the next layer after the core database is structurally correct.</p><div class="structure-grid section-gap"><div class="structure-stat"><small>Players with identity blockers</small><strong>'+identityPlayers+'</strong><span class="tiny">'+gaps.shirt+' shirt · '+gaps.nationality+' nation · '+gaps.position+' position gaps</span></div><div class="structure-stat"><small>Missing valuations</small><strong>'+gaps.value+'</strong><span class="tiny">Main bulk research job</span></div><div class="structure-stat"><small>Kit pass</small><strong>92 clubs</strong><span class="tiny">Home + away colours/style to verify</span></div><div class="structure-stat"><small>Skills</small><strong>LATER PASS</strong><span class="tiny">Important for gameplay, not a core-data blocker</span></div></div><div class="split-actions section-gap"><button class="btn btn-danger" id="masterIdentityQueue">Show identity blockers</button><button class="btn btn-blue" id="masterValueQueue">Show missing valuations</button></div></div>'+
       '<div class="friendly-card section-gap"><h3>SWOS readiness by division</h3><p class="about">A player counts as ready when the fields SWOS actually needs are present: name, shirt number, nationality, SWOS position and value. Age and match statistics do not block the update.</p><div class="structure-grid section-gap">'+divisionAuditHtml+'</div></div>'+
+      '<div class="friendly-card section-gap"><h3>Current 15-club research batch</h3><p class="about">The next 15 League One clubs with missing essential fields. Sorted by remaining work, with a direct link to each club. Only sourced numbers count; unverified fields remain blank.</p><div class="structure-grid section-gap"><div class="structure-stat"><small>Clubs in batch</small><strong>'+nextBatch.length+'</strong></div><div class="structure-stat"><small>Essential gaps in batch</small><strong>'+nextBatch.reduce((n,c)=>n+c.missing,0)+'</strong></div></div><div class="research-pack-list section-gap">'+(nextBatchHtml||'<p class="about">League One essential fields have been completed.</p>')+'</div></div>'+
+      '<div class="friendly-card section-gap"><h3>Squad quality checks</h3><p class="about">'+quality.length+' review flags across the master. A shirt clash needs a confirmed squad number. A matching player name between clubs is only a possible conflict, not proof of a duplicated player.</p><div class="research-pack-list section-gap">'+qualityHtml+'</div></div>'+
       '<div class="friendly-card section-gap"><h3>Clubs needing most SWOS work</h3><p class="about">Worst first, based only on data required for the SWOS database. Tap a club to see the missing essentials.</p><div class="research-pack-list section-gap">'+clubAuditHtml+'</div></div>'+
       '<div class="notice info section-gap"><strong>SWOS-first rule:</strong> we now prioritise player name, shirt number, nationality, SWOS position and valuation, plus correct club/division and home/away kits. Age, minutes, goals and assists are supporting research only and do not count against readiness.</div>'+
       '<div class="scout-filters section-gap"><div class="field"><label>Search</label><input id="masterQuery" value="'+esc(s.query)+'" placeholder="Player, club, nationality, position"/></div>'+
@@ -5700,6 +5728,9 @@
     document.getElementById("masterCsvAll").onclick=()=>downloadMasterDataCsv(false);
     document.getElementById("masterIdentityQueue").onclick=()=>{s.division="all";s.club="all";s.group="all";s.missing="identity";s.query="";s.sort="missingDesc";s.page=0;renderMasterData();window.scrollTo(0,0)};
     document.getElementById("masterValueQueue").onclick=()=>{s.division="all";s.club="all";s.group="all";s.missing="value";s.query="";s.sort="divisionClubPlayer";s.page=0;renderMasterData();window.scrollTo(0,0)};
+    document.querySelectorAll("[data-master-quality-club],[data-master-batch-club]").forEach(b=>b.onclick=()=>{
+      s.division="all";s.club=b.dataset.masterQualityClub||b.dataset.masterBatchClub;s.group="all";s.missing="all";s.query="";s.page=0;renderMasterData();window.scrollTo(0,0)
+    });
     document.querySelectorAll("[data-master-audit-club]").forEach(b=>b.onclick=()=>{s.club=b.dataset.masterAuditClub;s.division="all";s.group="all";s.missing="any";s.query="";s.page=0;renderMasterData();window.scrollTo(0,0)});
     document.getElementById("masterPrev").onclick=()=>{if(s.page>0){s.page--;renderMasterData();window.scrollTo(0,0)}};
     document.getElementById("masterNext").onclick=()=>{if(s.page<pages-1){s.page++;renderMasterData();window.scrollTo(0,0)}};
