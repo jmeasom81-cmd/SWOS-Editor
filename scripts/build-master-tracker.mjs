@@ -212,7 +212,7 @@ function worksheet(rows, widths, opts={}) {
 const kitRows = baseline.clubs.map(club => {
   const k=kitById.get(club.clubId),h=k?.home;
   const label=i=>i==null?'':kitResearch.swosPalette[i].name;
-  return [club.division,club.club,club.clubId,k?(k.fullComponentsSourced?'HOME REFERENCE':'SHIRT REFERENCE'):'NOT RESEARCHED',k?.description||'',h?.type??null,h?kitResearch.swosPatterns[h.type].name:'',h?.shirt1??null,h?label(h.shirt1):'',h?.shirt2??null,h?label(h.shirt2):'',h?.shorts??null,h?label(h.shorts):'',h?.socks??null,h?label(h.socks):'',k?.paletteApproximation?'YES':'',k?.sourceUrl||'',k?.checkedAt||'',k?.note||''];
+  return [club.division,club.club,club.clubId,k?(k.fullComponentsSourced?'HOME REFERENCE':'SHIRT REFERENCE'):'NOT RESEARCHED',k?.description||'',h?.type??null,h?kitResearch.swosPatterns[h.type].name:'',h?.shirt1??null,h?label(h.shirt1):'',h?.shirt2??null,h?label(h.shirt2):'',h?.shorts??null,h?label(h.shorts):'',h?.socks??null,h?label(h.socks):'',k?.paletteApproximation?'YES':'',k?.sourceUrl||'',k?.secondarySourceUrl||'',k?.checkedAt||'',k?.note||''];
 });
 
 const sheets = [
@@ -220,7 +220,7 @@ const sheets = [
   ['Clubs',[clubHeaders,...clubData],[20,30,11,14,22,19,22,19,19,24],{filter:true}],
   ['Quality checks', [['Issue','Division','Club','Player','What needs checking','Next action'],...integrity],[23,20,29,30,80,55],{filter:true}],
   ['Squad reviews', [['Status','Division','Club','Player / issue','2026/27 source URL','Checked'],...squadReviewRows],[16,20,30,80,65,17],{filter:true}],
-  ['Kit colours', [['Division','Club','Club ID','Reference status','Official 2026/27 shirt','SWOS pattern code','SWOS pattern','Shirt primary code','Primary palette colour','Shirt second code','Second palette colour','Shorts code','Shorts colour','Socks code','Socks colour','Palette approximate','Official source URL','Checked','Limitations / follow-up'],...kitRows], [20,28,25,22,52,19,21,19,22,19,22,16,21,16,21,19,72,17,90], {missingColumns:[5,7,9,11,13],filter:true}],
+  ['Kit colours', [['Division','Club','Club ID','Reference status','Official 2026/27 shirt','SWOS pattern code','SWOS pattern','Shirt primary code','Primary palette colour','Shirt second code','Second palette colour','Shorts code','Shorts colour','Socks code','Socks colour','Palette approximate','Kit evidence URL','Design cross-check URL','Checked','Limitations / follow-up'],...kitRows], [20,28,25,22,52,19,21,19,22,19,22,16,21,16,21,19,72,72,17,90], {missingColumns:[5,7,9,11,13],filter:true}],
   ['How to use',[
    ['SWOS 2026/27 MASTER TRACKER','What this workbook means'],
    ['Players','All 92 clubs, exactly 16 researched players per club'],
@@ -235,7 +235,7 @@ const sheets = [
    ['Squad reviews','The dedicated Squad reviews tab combines all reviewed research batches and flags squad assignments and shirt numbers needing confirmation before install.'],
    ['Ready status','READY means the four required data fields have values. It does not certify up-to-date squad membership or kit colours.'],
    ['Foreign exchange','October 9, 2026 EUR/GBP reference rate 0.846328; later rates must be recorded explicitly for each future batch.'],
-   ['Kit colours','Dedicated Kit colours sheet: 2026/27 official shirt descriptions and their closest SWOS palette mappings, with status and source per club. Full kit data only when shorts/socks sourced. No TEAM.* file is changed.'],
+   ['Kit colours','Dedicated Kit colours sheet: 2026/27 sourced shirt descriptions and their closest SWOS palette mappings, with status and source per club. Full kit data only when shorts/socks sourced. No TEAM.* file is changed.'],
    ['Quality checks','This tab flags duplicate shirt numbers, player-name collisions, invalid position or value entries. Name collisions do not automatically imply a player belongs to two clubs.'],
    ['Age / goals / assists','Not included because SWOS does not need them in the current priority pass'],
    ['Source date','Each player inherits their club source/snapshot; generating the workbook does not reverify football facts'],

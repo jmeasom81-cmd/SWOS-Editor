@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "season": "2026/27",
   "checkedAt": "2026-10-10",
-  "sourcePolicy": "2026/27 club/manufacturer materials and official first-team match kit reports. Exact colours remain simplified when mapped into the original SWOS palette; research never edits TEAM.* automatically.",
+  "sourcePolicy": "Sources prioritize 2026/27 club or manufacturer releases; season-specific independent kit references are explicitly cross-linked when needed for design details, and carry-over shirts are labelled. SWOS palette is an approximation, and this research never edits TEAM.* automatically.",
   "swosPalette": [
     {
       "id": 0,
@@ -1066,6 +1066,269 @@
       "fullComponentsSourced": false,
       "paletteApproximation": true,
       "note": "Official 2026/27 Puma Notts County home shirt confirms black-white stripes and Lifeline collar anniversary detail. SWOS can render stripes, not the front panel or commemorative detailing; home shorts/socks colours unverified."
+    },
+    {
+      "clubId": "oxford-united",
+      "description": "Yellow shirt with navy horizontal chest band; navy shorts and yellow socks",
+      "sourceUrl": "https://about.macron.com/en/news/kit-launches/oxford-united-fc-new-2026-27-home-kit/",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 9,
+        "shirt2": 9,
+        "shorts": 2,
+        "socks": 9
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": true,
+      "paletteApproximation": true,
+      "note": "Macron's 13 July 2026 launch explicitly confirms a wide navy chest band, navy shorts and yellow socks. SWOS plain yellow is chosen because horizontal-repeat stripes would misrepresent a single navy chest band; black substitutes for navy."
+    },
+    {
+      "clubId": "peterborough-united",
+      "description": "Traditional Posh blue Puma home shirt with crossover crew collar",
+      "sourceUrl": "https://www.theposh.com/news/new-era-kit",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 5,
+        "shirt2": 5,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "Peterborough's official 1 June 2026 launch confirms a blue 2026/27 Puma shirt with its new crest and crossover ribbed crew collar. SWOS cannot render collar or branding, and team shorts/socks colours require first-team confirmation."
+    },
+    {
+      "clubId": "plymouth-argyle",
+      "description": "Dark Argyle green home shirt with white trim; white shorts and socks",
+      "sourceUrl": "https://www.pafc.co.uk/news/202627-argyle-home-kit-has-docked",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 8,
+        "shirt2": 8,
+        "shorts": 1,
+        "socks": 1
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": true,
+      "paletteApproximation": true,
+      "note": "The club's official 24 May 2026 release explicitly confirms green shirt, white shorts and white socks. SWOS green cannot reproduce precise dark Argyle green or rope details."
+    },
+    {
+      "clubId": "reading",
+      "description": "Blue and white horizontal hoops with fine red piping; white shorts and white/blue hooped socks",
+      "sourceUrl": "https://fanstore.readingfc.co.uk/collections/26-27-home-kit",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 3,
+        "shirt1": 5,
+        "shirt2": 1,
+        "shorts": 1,
+        "socks": 1
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": true,
+      "paletteApproximation": true,
+      "note": "Club store has separate 26/27 shirt, white home shorts and matching socks; current-season kit reporting describes red fine piping and white socks with blue hoops. SWOS white socks omit the blue bands; horizontal hoops omit fine red piping.",
+      "secondarySourceUrl": "https://footballshirtculture.com/new-kits/reading-jersey-26-27-home-macron.html"
+    },
+    {
+      "clubId": "sheffield-wednesday",
+      "description": "Classic blue and white vertical stripes with collared neckline and yellow crest details",
+      "sourceUrl": "https://shop.swfc.co.uk/products/sheffield-wednesday-mens-2026-27-home-short-sleeve-shirt",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 2,
+        "shirt1": 5,
+        "shirt2": 1,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "The official Umbro 2026/27 shirt explicitly describes royal blue and white vertical stripes and yellow emblem details. SWOS cannot model yellow crest embroidery or ribbed collar. Shorts/socks still need independent colour verification."
+    },
+    {
+      "clubId": "stevenage",
+      "description": "Predominantly white shirt with red shoulders, cuff and neck accents; tonal grey graphic",
+      "sourceUrl": "https://stevenagefcshop.com/products/home-shirt-youth-26-27",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 1,
+        "shirt2": 1,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "Stevenage FC's official 2026/27 Puma shirt confirms the current design; a season-matched kit archive identifies white body with subtle grey pattern and red collar/shoulder trim. SWOS plain white omits the subtle body graphic and trims. Shorts/socks remain unconfirmed.",
+      "secondarySourceUrl": "https://www.footballkitarchive.com/stevenage-fc-2026-27-home-kit-491777/"
+    },
+    {
+      "clubId": "stockport-county",
+      "description": "Deeper royal-blue Puma shirt inspired by club designs from 1980s and 1990s",
+      "sourceUrl": "https://www.stockportcounty.com/",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 5,
+        "shirt2": 5,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "The club's official 2026/27 home-kit launch, corroborated by contemporaneous local reporting, identifies deeper royal blue. SWOS standard blue simplifies the retro detailing. Home shorts/socks colours not verified.",
+      "secondarySourceUrl": "https://marketingstockport.co.uk/news/stockport-county-unveils-2026-27-home-kit/"
+    },
+    {
+      "clubId": "wigan-athletic",
+      "description": "Predominantly blue O'Neills shirt with subtle tonal vertical stripes and white accents",
+      "sourceUrl": "https://store.wiganathletic.com/",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 5,
+        "shirt2": 5,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "Official 26/27 home collection and season-specific O'Neills design reporting confirm tonal blue-on-blue vertical stripes, white V-neck trim and blue dominant body. SWOS plain blue avoids incorrectly rendering broad contrasting stripes. Shorts/socks need more direct confirmation.",
+      "secondarySourceUrl": "https://www.footballkitarchive.com/wigan-athletic-2026-27-home-kit-492442/"
+    },
+    {
+      "clubId": "wycombe-wanderers",
+      "description": "Light-blue and dark-navy split geometric home shirt, navy shorts and light-blue socks",
+      "sourceUrl": "https://shop.wwfc.com/products/wycombe-wanderers-adult-home-shirt-26-27",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 7,
+        "shirt2": 7,
+        "shorts": 2,
+        "socks": 7
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": true,
+      "paletteApproximation": true,
+      "note": "The 2026/27 Hummel home kit has a sky-blue/navy quartered and geometric split rather than a conventional striped pattern. SWOS cannot recreate the split, so uses light-blue plain shirt and black-as-navy shorts. Matching navy shorts and light-blue socks are supported by current kit-specific coverage.",
+      "secondarySourceUrl": "https://www.footballshirtculture.com/new-kits/wycombe-wanderers-jersey-2026-27-home-hummel.html"
+    },
+    {
+      "clubId": "accrington-stanley",
+      "description": "Carried-over red home shirt with white sleeves and white geometric chest detail",
+      "sourceUrl": "https://www.footballkitarchive.com/accrington-stanley-2026-27-home-kit-510831/",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 1,
+        "shirt1": 4,
+        "shirt2": 1,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "Season-specific kit catalogue identifies this as a CARRY-OVER 2026/27 Macron shirt, not a new 2026/27 release. SWOS contrast sleeves approximate the red body and white sleeves; geometric graphic and shorts/socks are unverified."
+    },
+    {
+      "clubId": "barnet",
+      "description": "Amber-orange and black vertical stripes with subtle rose motif",
+      "sourceUrl": "https://barnetfc.com/introducing-our-2026-27-home-and-away-shirts",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 2,
+        "shirt1": 3,
+        "shirt2": 2,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "Barnet's 18 July official 2026/27 Capelli announcement confirms continued stripes and a club-crest rose motif. Current season kit reference identifies amber/orange and black stripes with black sleeves. SWOS orange/black stripes omit rose pattern and white trim.",
+      "secondarySourceUrl": "https://www.footballkitarchive.com/barnet-fc-2026-27-home-kit-497716/"
+    },
+    {
+      "clubId": "bristol-rovers",
+      "description": "Traditional blue and white quartered Puma home shirt",
+      "sourceUrl": "https://www.bristolrovers.co.uk/news/new-era-introducing-bristol-rovers-202627-primary-kit",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 5,
+        "shirt2": 5,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "Official Bristol Rovers 12 June 2026 Puma primary-kit launch explicitly confirms blue-and-white quarters. SWOS lacks quartering, so plain blue is a deliberately incomplete mapping rather than fake vertical stripes. Home shorts/socks need verification."
+    },
+    {
+      "clubId": "cheltenham-town",
+      "description": "Red and white vertically striped Adidas shirt with black shoulder trim",
+      "sourceUrl": "https://shop.ctfc.com/products/adult-home-shirt-26-27",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 2,
+        "shirt1": 4,
+        "shirt2": 1,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "The official 2026/27 Cheltenham Adidas home product confirms current shirt; a release-dated kit reference describes red/white stripes and black collar/cuff/shoulder details. SWOS broad red-white vertical stripes omit black accents. Shorts/socks not established.",
+      "secondarySourceUrl": "https://www.footballkitarchive.com/cheltenham-town-2026-27-home-kit-490697/"
+    },
+    {
+      "clubId": "chesterfield",
+      "description": "Chesterfield blue Puma home shirt with gold anniversary trim",
+      "sourceUrl": "https://chesterfield-fc.co.uk/news/2026-27-kits-on-sale-now",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 5,
+        "shirt2": 5,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "Official Chesterfield FC kit launch explicitly identifies traditional blue Puma home shirt with gold trim. The fixed SWOS blue palette cannot display gold detail; shorts/socks require additional season-specific kit evidence."
+    },
+    {
+      "clubId": "colchester-united",
+      "description": "Blue and white vertically striped shirt with white shoulder panels and yellow cuffs",
+      "sourceUrl": "https://www.cu-fc.com/news/2026/july/19/us-reveal-new-kits/",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 2,
+        "shirt1": 5,
+        "shirt2": 1,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "Official Colchester United 19 July 2026 launch describes heritage inspiration from 2006/07 with central badge. A 2026/27 kit catalogue confirms blue/white stripes, white shoulders, blue sleeves and yellow sleeve-cuff details. SWOS cannot render the shoulder layout; shorts/socks not verified.",
+      "secondarySourceUrl": "https://www.footballkitarchive.com/colchester-united-2026-27-home-kit-497308/"
     }
   ]
 }

@@ -193,11 +193,11 @@ console.log('Premier League batch H: 34 sourced valuations across three clubs; d
 // 2026/27 official shirt reference never automatically changes SWOS binary-team data.
 const kitResearch=JSON.parse(fs.readFileSync('data/kit-research-2026-27.json','utf8'));
 assert.equal(kitResearch.season,'2026/27');
-assert.ok(kitResearch.clubs.length>=59 && kitResearch.clubs.length<=92,'Sourced kit reference coverage must not shrink');
+assert.ok(kitResearch.clubs.length>=74 && kitResearch.clubs.length<=92,'Sourced kit reference coverage must not shrink');
 assert.equal(new Set(kitResearch.clubs.map(c=>c.clubId)).size,kitResearch.clubs.length,'Kit clubs must be unique');
 assert.equal(kitResearch.swosPalette.length,10);
 assert.equal(kitResearch.swosPatterns.length,4);
-assert.ok(kitResearch.clubs.filter(c=>c.fullComponentsSourced).length>=20,'At least 11 official full home kit references required');
+assert.ok(kitResearch.clubs.filter(c=>c.fullComponentsSourced).length>=24,'At least 11 official full home kit references required');
 for(const c of kitResearch.clubs){const stored=master.clubs.find(x=>x.clubId===c.clubId);assert.ok(stored,'Kit research refers to unknown club '+c.clubId);assert.equal(c.homeShirtSourced,true);assert.ok(c.sourceUrl.startsWith('https://'));const h=c.home;assert.ok(Number.isInteger(h.type)&&h.type>=0&&h.type<=3);for(const n of ['shirt1','shirt2'])assert.ok(Number.isInteger(h[n])&&h[n]>=0&&h[n]<=9);for(const n of ['shorts','socks'])assert.ok(h[n]===null||(Number.isInteger(h[n])&&h[n]>=0&&h[n]<=9));assert.equal(c.fullComponentsSourced,h.shorts!==null&&h.socks!==null);}
 const checkKit=id=>kitResearch.clubs.find(c=>c.clubId===id).home;
 assert.equal(checkKit('newcastle').type,2);assert.equal(checkKit('brentford').type,2);
@@ -216,6 +216,16 @@ assert.equal(checkKit('burton-albion').type,2,'2026/27 Burton has returned to am
 assert.equal(checkKit('burton-albion').socks,3,'Admiral verifies Burton orange socks');
 assert.equal(checkKit('huddersfield-town').shorts,null,'Huddersfield shorts still need colour evidence');
 assert.equal(checkKit('cambridge-united').type,0,'2026/27 Cambridge home shirt is plain amber, not 2025/26 stripes');
+assert.ok(master.clubs.filter(c=>c.division==='League One').every(c=>kitResearch.clubs.some(k=>k.clubId===c.clubId)),'All League One clubs need sourced 2026/27 shirts');
+assert.ok(master.clubs.filter(c=>c.division==='League Two').slice(0,6).every(c=>kitResearch.clubs.some(k=>k.clubId===c.clubId)),'First six League Two clubs need sourced 2026/27 shirt references');
+assert.equal(checkKit('oxford-united').shorts,2,'Oxford Macron launch explicitly lists navy shorts');
+assert.equal(checkKit('plymouth-argyle').socks,1,'Plymouth official white socks');
+assert.equal(checkKit('reading').type,3,'Reading home design is blue-and-white hoops');
+assert.equal(checkKit('wycombe-wanderers').shorts,2,'Wycombe navy shorts approximate black in SWOS');
+assert.equal(checkKit('accrington-stanley').type,1,'Accrington retained red shirt with white sleeves');
+assert.equal(checkKit('bristol-rovers').type,0,'SWOS has no blue-white quarter pattern; do not pretend this is a striped shirt');
+assert.equal(checkKit('stevenage').type,0,'Stevenage white kit with red trim is not white-red full sleeves');
+for (const k of kitResearch.clubs) if(k.secondarySourceUrl) assert.ok(/^https:\/\//.test(k.secondarySourceUrl),'Secondary evidence must link to a valid https source');
 assert.equal(checkKit('crystal-palace').type,0,'Diagonal sash unavailable in SWOS');
 assert.equal(checkKit('ipswich').shorts,1,'Official Ipswich white shorts');
 assert.equal(checkKit('coventry').socks,5,'Official Coventry royal blue socks');
