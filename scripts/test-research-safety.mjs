@@ -249,3 +249,21 @@ assert.equal(checkKit('crystal-palace').type,0,'Diagonal sash unavailable in SWO
 assert.equal(checkKit('ipswich').shorts,1,'Official Ipswich white shorts');
 assert.equal(checkKit('coventry').socks,5,'Official Coventry royal blue socks');
 console.log('Kit research: '+kitResearch.clubs.length+' sourced 2026/27 home shirts, '+kitResearch.clubs.filter(c=>c.fullComponentsSourced).length+' full component references, SWOS approximations safeguarded.');
+
+// 2026/27 essential fields evidence batch J: no invented shirt assignments or nationalities.
+const essentialJ=JSON.parse(fs.readFileSync('data/essential-evidence-batch-j-2026-10-10.json','utf8'));
+assert.equal(essentialJ.season,'2026/27');
+assert.equal(essentialJ.changes.length,11);
+for(const item of essentialJ.changes){
+ const club=master.clubs.find(c=>c.clubId===item.clubId);
+ assert.ok(club,'Essential evidence club missing '+item.clubId);
+ const p=club.players.find(p=>p.player===item.player);
+ assert.ok(p,'Essential evidence player missing '+item.clubId+'/'+item.player);
+ assert.equal(p[item.field],item.verifiedValue,'Essential field conflict '+item.player);
+ assert.equal(p[item.field==='shirt'?'shirtEvidenceUrl':'nationalityEvidenceUrl'],item.sourceUrl,'Evidence URL must be retained '+item.player);
+ assert.equal(p[item.field==='shirt'?'shirtCheckedAt':'nationalityCheckedAt'],essentialJ.checkedAt,'Evidence date must be retained '+item.player);
+}
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.nationality===null).length,0,'All 1,472 researched players now have nationality');
+assert.equal(master.clubs.find(c=>c.clubId==='west-bromwich-albion').players.find(p=>p.player==='Jimmy Morgan').shirt,null,'Do not guess West Brom shirt');
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.shirt===null).length,1,'Only unconfirmed West Brom shirt remains');
+console.log('Essential batch J: 5 nationalities + 6 shirts sourced; 1 unconfirmed shirt safely blank.');

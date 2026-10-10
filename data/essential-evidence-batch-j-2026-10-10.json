@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "checkedAt": "2026-10-10",
+  "policy": "Verify essential data only where the player and club appear in a named current-season source. Do not reuse an unconfirmed number or infer nationality from name.",
+  "changes": [
+    {
+      "clubId": "liverpool",
+      "player": "Jeremy Jacquet",
+      "field": "nationality",
+      "previousValue": null,
+      "verifiedValue": "France",
+      "sourceUrl": "https://www.liverpoolfc.com/teams/mens-team/jeremy-jacquet",
+      "checkedAt": "2026-10-10",
+      "notes": "Current player profile specifies nationality."
+    },
+    {
+      "clubId": "liverpool",
+      "player": "Federico Chiesa",
+      "field": "nationality",
+      "previousValue": null,
+      "verifiedValue": "Italy",
+      "sourceUrl": "https://www.liverpoolfc.com/teams/mens-team/federico-chiesa",
+      "checkedAt": "2026-10-10",
+      "notes": "Current player profile specifies nationality."
+    },
+    {
+      "clubId": "everton",
+      "player": "Tyrique George",
+      "field": "nationality",
+      "previousValue": null,
+      "verifiedValue": "England",
+      "sourceUrl": "https://theanalyst.com/players/3937/tyrique-george",
+      "checkedAt": "2026-10-10",
+      "notes": "Current player profile specifies nationality."
+    },
+    {
+      "clubId": "everton",
+      "player": "Tyler Dibling",
+      "field": "nationality",
+      "previousValue": null,
+      "verifiedValue": "England",
+      "sourceUrl": "https://www.premierleague.com/en/players/496661/tyler-dibling/stats",
+      "checkedAt": "2026-10-10",
+      "notes": "Current player profile specifies nationality."
+    },
+    {
+      "clubId": "everton",
+      "player": "Harrison Armstrong",
+      "field": "nationality",
+      "previousValue": null,
+      "verifiedValue": "England",
+      "sourceUrl": "https://www.laliga.com/en-GB/player/harrison-armstrong",
+      "checkedAt": "2026-10-10",
+      "notes": "Current player profile specifies nationality."
+    },
+    {
+      "clubId": "leicester-city",
+      "player": "Warren O'Hora",
+      "field": "shirt",
+      "previousValue": null,
+      "verifiedValue": 16,
+      "sourceUrl": "https://www.lcfc.com/match-centre-lineups?gameId=2647987",
+      "checkedAt": "2026-10-10",
+      "notes": "Official live Leicester team line-up shows this number; original August 2026 squad-number press release did not list this player."
+    },
+    {
+      "clubId": "leicester-city",
+      "player": "John Lundstram",
+      "field": "shirt",
+      "previousValue": null,
+      "verifiedValue": 6,
+      "sourceUrl": "https://www.lcfc.com/match-centre-lineups?gameId=2647987",
+      "checkedAt": "2026-10-10",
+      "notes": "Official live Leicester team line-up shows this number; original August 2026 squad-number press release did not list this player."
+    },
+    {
+      "clubId": "leicester-city",
+      "player": "Kamari Doyle",
+      "field": "shirt",
+      "previousValue": null,
+      "verifiedValue": 27,
+      "sourceUrl": "https://www.lcfc.com/match-centre-lineups?gameId=2647987",
+      "checkedAt": "2026-10-10",
+      "notes": "Official live Leicester team line-up shows this number; original August 2026 squad-number press release did not list this player."
+    },
+    {
+      "clubId": "leicester-city",
+      "player": "Emil Riis",
+      "field": "shirt",
+      "previousValue": null,
+      "verifiedValue": 17,
+      "sourceUrl": "https://www.lcfc.com/match-centre-lineups?gameId=2647987",
+      "checkedAt": "2026-10-10",
+      "notes": "Official live Leicester team line-up shows this number; original August 2026 squad-number press release did not list this player."
+    },
+    {
+      "clubId": "birmingham-city",
+      "player": "Dael Fry",
+      "field": "shirt",
+      "previousValue": null,
+      "verifiedValue": 23,
+      "sourceUrl": "https://www.livescore.com/en/football/team/name/2858/squad/",
+      "checkedAt": "2026-10-10",
+      "notes": "Current-season squad listing (third party); lower authority than official club list."
+    },
+    {
+      "clubId": "bolton-wanderers",
+      "player": "Luca Stephenson",
+      "field": "shirt",
+      "previousValue": null,
+      "verifiedValue": 27,
+      "sourceUrl": "https://footballsquads.co.uk/eng/2026-2027/flcham/bolton.htm",
+      "checkedAt": "2026-10-10",
+      "notes": "Current-season squad listing (third party); lower authority than official club list."
+    }
+  ],
+  "held": [
+    {
+      "clubId": "west-bromwich-albion",
+      "player": "Jimmy Morgan",
+      "field": "shirt",
+      "reason": "No club-confirmed current 2026/27 number; the current research pack has shirt:null."
+    }
+  ]
+}
