@@ -1,0 +1,377 @@
+{
+  "season": "2026/27",
+  "checkedAt": "2026-10-10",
+  "referenceFxRateEurGbp": 0.846328,
+  "referenceFxNote": "Existing SWOS reference currency conversion as of 9 October 2026; rounded to the nearest £1,000.",
+  "meaning": "Indicative 2026/27 indexed market values, not SWOS native encoded costs. Unverified squad members retain null values and no shirt/kit changes are inferred.",
+  "clubs": [
+    {
+      "id": "brighton",
+      "pack": "BRIGHTON_2627_EVIDENCE_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/brighton-amp-hove-albion/kader/verein/1237/saison_id/2026",
+      "sourceSnapshot": "2026/27 Transfermarkt indexed squad values",
+      "players": [
+        {
+          "name": "Bart Verbruggen",
+          "eurThousands": 40000,
+          "gbpMillions": 33.853
+        },
+        {
+          "name": "Jason Steele",
+          "eurThousands": 500,
+          "gbpMillions": 0.423
+        },
+        {
+          "name": "Lewis Dunk",
+          "eurThousands": 3500,
+          "gbpMillions": 2.962
+        },
+        {
+          "name": "Pascal Struijk",
+          "eurThousands": 22000,
+          "gbpMillions": 18.619
+        },
+        {
+          "name": "Olivier Boscagli",
+          "eurThousands": 15000,
+          "gbpMillions": 12.695
+        },
+        {
+          "name": "Maxim De Cuyper",
+          "eurThousands": 22000,
+          "gbpMillions": 18.619
+        },
+        {
+          "name": "Ferdi Kadioglu",
+          "eurThousands": 35000,
+          "gbpMillions": 29.621
+        },
+        {
+          "name": "Mats Wieffer",
+          "eurThousands": 25000,
+          "gbpMillions": 21.158
+        },
+        {
+          "name": "Pascal Gross",
+          "eurThousands": 2500,
+          "gbpMillions": 2.116
+        },
+        {
+          "name": "Diego Gomez",
+          "eurThousands": 25000,
+          "gbpMillions": 21.158
+        },
+        {
+          "name": "Yasin Ayari",
+          "eurThousands": 35000,
+          "gbpMillions": 29.621
+        },
+        {
+          "name": "Matt O'Riley",
+          "eurThousands": 18000,
+          "gbpMillions": 15.234
+        },
+        {
+          "name": "Kaoru Mitoma",
+          "eurThousands": 22000,
+          "gbpMillions": 18.619
+        },
+        {
+          "name": "Yankuba Minteh",
+          "eurThousands": 45000,
+          "gbpMillions": 38.085
+        },
+        {
+          "name": "Georginio Rutter",
+          "eurThousands": 30000,
+          "gbpMillions": 25.39
+        },
+        {
+          "name": "Evan Ferguson",
+          "eurThousands": 20000,
+          "gbpMillions": 16.927
+        }
+      ],
+      "squadReviews": [
+        "Transfermarkt spells Ferdi Kadioglu as Ferdi Kadıoğlu, Pascal Gross as Pascal Groß, and Diego Gomez as Diego Gómez; values are for the same full names with diacritics omitted in the editor.",
+        "Pascal Struijk appears without a shirt number on the 2026/27 source; do not use this market valuation as evidence of a shirt assignment.",
+        "All 16 preselected Brighton players have an indicative numerical Transfermarkt value in the 2026/27 club overview; independent kit colour and shirt-number checks remain separate."
+      ]
+    },
+    {
+      "id": "fulham",
+      "pack": "FULHAM_2627_EVIDENCE_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/fulham-fc/kader/verein/931/saison_id/2026",
+      "sourceSnapshot": "2026/27 Transfermarkt indexed squad values",
+      "players": [
+        {
+          "name": "Bernd Leno",
+          "eurThousands": 6000,
+          "gbpMillions": 5.078
+        },
+        {
+          "name": "Benjamin Lecomte",
+          "eurThousands": 800,
+          "gbpMillions": 0.677
+        },
+        {
+          "name": "Kenny Tete",
+          "eurThousands": 8000,
+          "gbpMillions": 6.771
+        },
+        {
+          "name": "Calvin Bassey",
+          "eurThousands": 28000,
+          "gbpMillions": 23.697
+        },
+        {
+          "name": "Joachim Andersen",
+          "eurThousands": 20000,
+          "gbpMillions": 16.927
+        },
+        {
+          "name": "Antonee Robinson",
+          "eurThousands": 22000,
+          "gbpMillions": 18.619
+        },
+        {
+          "name": "Harrison Reed",
+          "eurThousands": 2000,
+          "gbpMillions": 1.693
+        },
+        {
+          "name": "Sander Berge",
+          "eurThousands": 25000,
+          "gbpMillions": 21.158
+        },
+        {
+          "name": "Alex Iwobi",
+          "eurThousands": 20000,
+          "gbpMillions": 16.927
+        },
+        {
+          "name": "Emile Smith Rowe",
+          "eurThousands": 20000,
+          "gbpMillions": 16.927
+        },
+        {
+          "name": "Rodrigo Muniz",
+          "eurThousands": 20000,
+          "gbpMillions": 16.927
+        },
+        {
+          "name": "Kevin",
+          "eurThousands": 25000,
+          "gbpMillions": 21.158
+        },
+        {
+          "name": "Oscar Bobb",
+          "eurThousands": 28000,
+          "gbpMillions": 23.697
+        }
+      ],
+      "squadReviews": [
+        "David Affengruber, Hugo Larsson and Gonzalo Garcia from the 16-player research pack are not verified by this Fulham 2026/27 squad listing; leave their valuations blank until independently corroborated.",
+        "Market values are not transfer fees. The 2026/27 squad source confirms 13 of the 16 selected names; do not infer anything about missing members."
+      ]
+    },
+    {
+      "id": "sunderland",
+      "pack": "SUNDERLAND_2627_EVIDENCE_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/sunderland-afc/kader/verein/289/saison_id/2026",
+      "sourceSnapshot": "2026/27 Transfermarkt indexed squad values",
+      "players": [
+        {
+          "name": "Robin Roefs",
+          "eurThousands": 28000,
+          "gbpMillions": 23.697
+        },
+        {
+          "name": "Trai Hume",
+          "eurThousands": 22000,
+          "gbpMillions": 18.619
+        },
+        {
+          "name": "Nordi Mukiele",
+          "eurThousands": 16000,
+          "gbpMillions": 13.541
+        },
+        {
+          "name": "Granit Xhaka",
+          "eurThousands": 8000,
+          "gbpMillions": 6.771
+        },
+        {
+          "name": "Enzo Le Fee",
+          "eurThousands": 28000,
+          "gbpMillions": 23.697
+        },
+        {
+          "name": "Noah Sadiki",
+          "eurThousands": 35000,
+          "gbpMillions": 29.621
+        },
+        {
+          "name": "Habib Diarra",
+          "eurThousands": 35000,
+          "gbpMillions": 29.621
+        },
+        {
+          "name": "Brian Brobbey",
+          "eurThousands": 30000,
+          "gbpMillions": 25.39
+        },
+        {
+          "name": "Nilson Angulo",
+          "eurThousands": 17000,
+          "gbpMillions": 14.388
+        },
+        {
+          "name": "Romaine Mundle",
+          "eurThousands": 7000,
+          "gbpMillions": 5.924
+        },
+        {
+          "name": "Wilson Isidor",
+          "eurThousands": 18000,
+          "gbpMillions": 15.234
+        }
+      ],
+      "squadReviews": [
+        "The transfer market source spells Enzo Le Fee as Enzo Le Fée. The source values are matched without rewriting his SWOS name.",
+        "Kevin Danso, Daniel Ballard, Thomas Meunier, Omar Alderete and Simon Moore remain without a season-matched valuation in this batch; verify separately rather than populate an estimated figure."
+      ]
+    },
+    {
+      "id": "coventry",
+      "pack": "COVENTRY_2627_EVIDENCE_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/coventry-city/kader/verein/990/saison_id/2026",
+      "sourceSnapshot": "2026/27 Transfermarkt indexed squad values",
+      "players": [
+        {
+          "name": "Bobby Thomas",
+          "eurThousands": 16000,
+          "gbpMillions": 13.541
+        },
+        {
+          "name": "Jay Dasilva",
+          "eurThousands": 9000,
+          "gbpMillions": 7.617
+        },
+        {
+          "name": "Kaine Kesler-Hayden",
+          "eurThousands": 3000,
+          "gbpMillions": 2.539
+        },
+        {
+          "name": "Milan van Ewijk",
+          "eurThousands": 22000,
+          "gbpMillions": 18.619
+        },
+        {
+          "name": "Jack Rudoni",
+          "eurThousands": 20000,
+          "gbpMillions": 16.927
+        },
+        {
+          "name": "Matt Grimes",
+          "eurThousands": 5000,
+          "gbpMillions": 4.232
+        },
+        {
+          "name": "Frank Onyeka",
+          "eurThousands": 8000,
+          "gbpMillions": 6.771
+        },
+        {
+          "name": "Josh Eccles",
+          "eurThousands": 9000,
+          "gbpMillions": 7.617
+        },
+        {
+          "name": "Tatsuhiro Sakamoto",
+          "eurThousands": 4500,
+          "gbpMillions": 3.808
+        },
+        {
+          "name": "Ellis Simms",
+          "eurThousands": 12000,
+          "gbpMillions": 10.156
+        },
+        {
+          "name": "Haji Wright",
+          "eurThousands": 16000,
+          "gbpMillions": 13.541
+        }
+      ],
+      "squadReviews": [
+        "Coventry's 2026/27 market-value source lists Jay Dasilva and Bobby Thomas; their valuations do not prove or change any 2026/27 shirt assignment.",
+        "Ben Wilson shares a name with a younger midfielder in the source; refuse the ambiguous identity match and leave his valuation missing until goalkeeper identity is verified.",
+        "Carl Rushworth, Ethan Pinnock, Gustavo Hamer and Taiwo Awoniyi need explicit season-squad verification before receiving market values in this research pack."
+      ]
+    },
+    {
+      "id": "crystal-palace",
+      "pack": "CRYSTAL_PALACE_2627_EVIDENCE_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/crystal-palace/kader/verein/873/saison_id/2026",
+      "sourceSnapshot": "2026/27 Transfermarkt indexed squad values",
+      "players": [
+        {
+          "name": "Dean Henderson",
+          "eurThousands": 28000,
+          "gbpMillions": 23.697
+        },
+        {
+          "name": "Walter Benitez",
+          "eurThousands": 4000,
+          "gbpMillions": 3.385
+        },
+        {
+          "name": "Tyrick Mitchell",
+          "eurThousands": 25000,
+          "gbpMillions": 21.158
+        },
+        {
+          "name": "Chris Richards",
+          "eurThousands": 28000,
+          "gbpMillions": 23.697
+        },
+        {
+          "name": "Jefferson Lerma",
+          "eurThousands": 8000,
+          "gbpMillions": 6.771
+        },
+        {
+          "name": "Yeremy Pino",
+          "eurThousands": 30000,
+          "gbpMillions": 25.39
+        },
+        {
+          "name": "Adam Wharton",
+          "eurThousands": 70000,
+          "gbpMillions": 59.243
+        },
+        {
+          "name": "Eddie Nketiah",
+          "eurThousands": 10000,
+          "gbpMillions": 8.463
+        },
+        {
+          "name": "Jean-Philippe Mateta",
+          "eurThousands": 30000,
+          "gbpMillions": 25.39
+        },
+        {
+          "name": "Jorgen Strand Larsen",
+          "eurThousands": 40000,
+          "gbpMillions": 33.853
+        }
+      ],
+      "squadReviews": [
+        "Transfermarkt spells Walter Benitez as Walter Benítez, Yeremy Pino as Yéremy Pino and Jorgen Strand Larsen as Jørgen Strand Larsen; preserve SWOS spelling while recording the 2026/27 source values.",
+        "Axel Disasi, Takehiro Tomiyasu, Oscar Mingueza, Quinten Timber, Dwight McNeil and Evann Guessand are not all independently confirmed in this source for the selected squad. Their valuations stay blank pending stronger evidence.",
+        "Chris Richards and Tyrick Mitchell are valued individually; conflicting season team, squad shirt or game position data must be reviewed separately."
+      ]
+    }
+  ]
+}

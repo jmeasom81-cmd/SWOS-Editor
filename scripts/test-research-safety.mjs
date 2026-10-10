@@ -98,7 +98,7 @@ assert.equal(reviewCount,8);
 assert.ok(html.includes('2026/27 squad number and membership reviews'));
 assert.ok(html.includes('data-master-review-club'));
 for (const reviewed of batchD.clubs) assert.ok(html.includes(reviewed.id));
-assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,357,'Unexpected valuations tally');
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,296,'Unexpected valuations tally');
 const l2batch=JSON.parse(fs.readFileSync('data/league-two-verified-values-batch-a-2026-10-09.json','utf8'));
 assert.equal(l2batch.clubs.length,3);
 assert.equal(l2batch.clubs.reduce((n,c)=>n+c.players.length,0),32);
@@ -120,7 +120,7 @@ const rochdaleClub=master.clubs.find(c=>c.clubId==='rochdale');
 assert.equal(Object.keys(officialRochdale.officialShirts).length,14,'Official Rochdale source should confirm 14 shirts');
 for(const [name,shirt] of Object.entries(officialRochdale.officialShirts)){const p=rochdaleClub.players.find(p=>p.player===name);assert.ok(p);assert.equal(p.shirt,shirt,'Official shirt differs '+name);assert.equal(p.shirtEvidenceUrl,officialRochdale.clubs[0].sourceUrl);assert.equal(p.seasonSquadSourceUrl,officialRochdale.clubs[0].sourceUrl);}
 for(const name of officialRochdale.notConfirmed){const p=rochdaleClub.players.find(p=>p.player===name);assert.ok(p);assert.equal(p.shirtEvidenceUrl ?? null,null,'Unconfirmed shirt must stay unverified');}
-assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,357,'Valuations tally after League Two batch C');
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,296,'Valuations tally after League Two batch C');
 console.log('Rochdale: 14 official 2026/27 numbers confirmed, 2 pending.');
 
 // Batch C: each market value is tied to a named season-squad source, not a guessed valuation.
@@ -170,3 +170,13 @@ for(const id of ['chelsea','brentford','bournemouth','nottingham-forest']){const
 assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM==null).length,357);
 assert.equal(master.clubs.find(c=>c.clubId==='rochdale').players.find(p=>p.player==='Laurence Maguire').shirtEvidenceUrl,'https://rochdaleafc.co.uk/2026-27-squad-numbers-confirmed/');
 console.log('Batch F: 52 market values, 32 official shirts, 16 nationalities; official squad evidence retained.');
+
+// Batch G is exact-match research: missing data never implies a £0 valuation.
+const plBatchG=JSON.parse(fs.readFileSync('data/premier-league-values-batch-g-2026-10-10.json','utf8'));
+assert.equal(plBatchG.clubs.length,5);assert.equal(new Set(plBatchG.clubs.map(c=>c.id)).size,5);
+assert.equal(plBatchG.clubs.reduce((n,c)=>n+c.players.length,0),61);
+for(const record of plBatchG.clubs){const club=master.clubs.find(c=>c.clubId===record.id);assert.ok(club);for(const r of record.players){const p=club.players.find(p=>p.player===r.name);assert.ok(p,'Player missing '+record.id+'/'+r.name);assert.equal(p.marketValueSourceEuroK,r.eurThousands);assert.equal(p.marketValueM,Math.round(r.eurThousands*plBatchG.referenceFxRateEurGbp)/1000);assert.equal(p.marketValueSourceUrl,record.sourceUrl);assert.equal(p.seasonSquadSourceUrl,record.sourceUrl);}}
+for(const [id,name] of [['coventry','Ben Wilson'],['fulham','Hugo Larsson'],['crystal-palace','Axel Disasi'],['sunderland','Kevin Danso']]){const p=master.clubs.find(c=>c.clubId===id).players.find(p=>p.player===name);assert.ok(p);assert.equal(p.marketValueM,null,'Uncertain value must remain unknown: '+name);}
+assert.equal(master.clubs.find(c=>c.clubId==='brighton').players.filter(p=>p.marketValueM!=null).length,16);
+assert.ok(html.includes('Ben Wilson shares a name'));
+console.log('Premier League batch G: 61 sourced valuations across 5 clubs; unknowns and identity conflicts preserved.');
