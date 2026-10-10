@@ -189,3 +189,19 @@ for(const record of plBatchH.clubs){const club=master.clubs.find(c=>c.clubId===r
 for(const [id,name] of [['leeds','James Trafford'],['hull','Konstantinos Tzolakis'],['ipswich','Exequiel Palacios']]){const p=master.clubs.find(c=>c.clubId===id).players.find(p=>p.player===name);assert.ok(p);assert.equal(p.marketValueM,null,'No guessed valuation '+id+'/'+name);}
 assert.ok(html.includes('not independently matched in the cited Ipswich'));
 console.log('Premier League batch H: 34 sourced valuations across three clubs; disputed members remain in research queue.');
+
+// 2026/27 official shirt reference never automatically changes SWOS binary-team data.
+const kitResearch=JSON.parse(fs.readFileSync('data/kit-research-2026-27.json','utf8'));
+assert.equal(kitResearch.season,'2026/27');
+assert.equal(kitResearch.clubs.length,14);
+assert.equal(new Set(kitResearch.clubs.map(c=>c.clubId)).size,14);
+assert.equal(kitResearch.swosPalette.length,10);
+assert.equal(kitResearch.swosPatterns.length,4);
+assert.equal(kitResearch.clubs.filter(c=>c.fullComponentsSourced).length,7);
+for(const c of kitResearch.clubs){const stored=master.clubs.find(x=>x.clubId===c.clubId);assert.ok(stored,'Kit research refers to unknown club '+c.clubId);assert.equal(c.homeShirtSourced,true);assert.ok(c.sourceUrl.startsWith('https://'));const h=c.home;assert.ok(Number.isInteger(h.type)&&h.type>=0&&h.type<=3);for(const n of ['shirt1','shirt2'])assert.ok(Number.isInteger(h[n])&&h[n]>=0&&h[n]<=9);for(const n of ['shorts','socks'])assert.ok(h[n]===null||(Number.isInteger(h[n])&&h[n]>=0&&h[n]<=9));assert.equal(c.fullComponentsSourced,h.shorts!==null&&h.socks!==null);}
+const checkKit=id=>kitResearch.clubs.find(c=>c.clubId===id).home;
+assert.equal(checkKit('newcastle').type,2);assert.equal(checkKit('brentford').type,2);
+assert.equal(checkKit('brighton').type,0,'Thin pinstripes cannot become heavy SWOS stripes');
+assert.equal(checkKit('man-city').shorts,null,'Unknown shorts must remain unknown');
+assert.ok(!master.clubs[0].homeKit,'Research references must never auto-edit the binary game record');
+console.log('Kit research: 14 sourced 2026/27 home shirts, 7 full component references, SWOS approximations safeguarded.');

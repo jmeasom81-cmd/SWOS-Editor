@@ -8,6 +8,17 @@ const MASTER_PATH = 'data/master-2026-27.json';
 const OUTPUT = path.join(ROOT, 'downloads');
 const html = fs.readFileSync('index.html', 'utf8');
 const baseline = JSON.parse(fs.readFileSync(MASTER_PATH, 'utf8'));
+const kitResearch = JSON.parse(fs.readFileSync('data/kit-research-2026-27.json','utf8'));
+if (kitResearch.season !== baseline.season || kitResearch.swosPalette.length !== 10 || kitResearch.swosPatterns.length !== 4) throw new Error('Invalid research kit palette or season.');
+const kitById = new Map();
+for (const kit of kitResearch.clubs) {
+  if (kitById.has(kit.clubId) || !baseline.clubs.some(club => club.clubId === kit.clubId)) throw new Error('Invalid or repeated kit club: '+kit.clubId);
+  const h=kit.home;
+  if (!Number.isInteger(h.type)||h.type<0||h.type>3 || !Number.isInteger(h.shirt1)||h.shirt1<0||h.shirt1>9 || !Number.isInteger(h.shirt2)||h.shirt2<0||h.shirt2>9 || [h.shorts,h.socks].some(v=>v!==null&&(!Number.isInteger(v)||v<0||v>9))) throw new Error('Invalid SWOS kit code for '+kit.clubId);
+  if (!kit.sourceUrl || !/^https:\/\//.test(kit.sourceUrl)) throw new Error('Missing official kit source for '+kit.clubId);
+  kitById.set(kit.clubId,kit);
+}
+
 const manifests = ['PL_2627_RESEARCH_PACKS','CHAMPIONSHIP_2627_RESEARCH_PACKS','LEAGUE_ONE_2627_RESEARCH_PACKS','LEAGUE_TWO_2627_RESEARCH_PACKS'];
 
 function sourceObject(name) {
@@ -91,7 +102,7 @@ for (const club of baseline.clubs) {
     if (!absent.length) complete++;
     rowData.push([club.division,club.club,club.clubId,p.player,p.shirt,p.nationality,p.group,p.position === null ? null : posNames[p.position] || 'Unknown',p.position,p.marketValueM,absent.length ? 'NEEDS RESEARCH':'READY',absent.map(k => k === 'marketValueM' ? 'value' : k).join(', '),club.source,club.snapshot,p.marketValueSourceUrl,p.marketValueCheckedAt,p.marketValueSourceEuroK,p.marketValueFxRate,p.shirtEvidenceUrl,p.shirtCheckedAt,p.seasonSquadSourceUrl?'SOURCE MATCHED':'NOT INDIVIDUALLY MATCHED',p.seasonSquadSourceUrl,p.seasonSquadCheckedAt]);
   }
-  clubData.push([club.division,club.club,club.players.length,complete,club.players.length-complete,gaps.shirt,gaps.nationality,gaps.position,gaps.marketValueM,'NOT VERIFIED']);
+  clubData.push([club.division,club.club,club.players.length,complete,club.players.length-complete,gaps.shirt,gaps.nationality,gaps.position,gaps.marketValueM,kitById.has(club.clubId)?(kitById.get(club.clubId).fullComponentsSourced?'HOME KIT DOCUMENTED · SWOS APPROX':'HOME SHIRT SOURCED · SWOS APPROX'):'NOT VERIFIED']);
   const d = divisionStats[club.division] ||= {clubs:0,players:0,ready:0,essentialGaps:0};
   d.clubs++; d.players += club.players.length; d.ready += complete; d.essentialGaps += Object.values(gaps).reduce((a,b) => a+b, 0);
 }
@@ -167,7 +178,9 @@ const audit = {
   swosReady:rowData.filter(r=>r[10]==='READY').length, essentialGaps:rowData.reduce((a,r)=>a+(r[11]?r[11].split(', ').length:0),0),
   divisionStats, squadReviewNotes:squadReviewRows.length, nameChangesSincePriorExport:nameChanges, qualityWarnings:integrity.length, qualityByType:integrity.reduce((o,r)=>(o[r[0]]=(o[r[0]]||0)+1,o),{}),
   seasonSquadMatched:baseline.clubs.flatMap(c=>c.players).filter(p=>p.seasonSquadSourceUrl).length,
-  kitReview:'Not verified; never mark kits complete solely from squad research'
+  kitReview:'Home-shirt research sourced separately; SWOS palette approximations never equal game file edits',
+  kitShirtsSourced:kitById.size, kitFullComponentsSourced:[...kitById.values()].filter(k=>k.fullComponentsSourced).length,
+  kitClubsOutstanding:baseline.clubs.length-kitById.size
 };
 fs.writeFileSync(path.join(ROOT, 'data/master-audit-2026-27.json'),JSON.stringify(audit,null,2)+'\n');
 
@@ -196,11 +209,18 @@ function worksheet(rows, widths, opts={}) {
     '<sheetFormatPr defaultRowHeight="16"/><cols>'+columns+'</cols><sheetData>'+full+'</sheetData>'+
     (opts.filter?'<autoFilter ref="A1:'+end+'"/>':'')+'</worksheet>';
 }
+const kitRows = baseline.clubs.map(club => {
+  const k=kitById.get(club.clubId),h=k?.home;
+  const label=i=>i==null?'':kitResearch.swosPalette[i].name;
+  return [club.division,club.club,club.clubId,k?(k.fullComponentsSourced?'HOME REFERENCE':'SHIRT REFERENCE'):'NOT RESEARCHED',k?.description||'',h?.type??null,h?kitResearch.swosPatterns[h.type].name:'',h?.shirt1??null,h?label(h.shirt1):'',h?.shirt2??null,h?label(h.shirt2):'',h?.shorts??null,h?label(h.shorts):'',h?.socks??null,h?label(h.socks):'',k?.paletteApproximation?'YES':'',k?.sourceUrl||'',k?.checkedAt||'',k?.note||''];
+});
+
 const sheets = [
   ['Players',[headers,...rowData],[20,27,23,27,10,18,17,16,14,15,19,28,52,18,60,16,16,16,60,16,24,62,17],{missingColumns:[4,5,7,8,9],statusColumn:10,filter:true}],
   ['Clubs',[clubHeaders,...clubData],[20,30,11,14,22,19,22,19,19,24],{filter:true}],
   ['Quality checks', [['Issue','Division','Club','Player','What needs checking','Next action'],...integrity],[23,20,29,30,80,55],{filter:true}],
   ['Squad reviews', [['Status','Division','Club','Player / issue','2026/27 source URL','Checked'],...squadReviewRows],[16,20,30,80,65,17],{filter:true}],
+  ['Kit colours', [['Division','Club','Club ID','Reference status','Official 2026/27 shirt','SWOS pattern code','SWOS pattern','Shirt primary code','Primary palette colour','Shirt second code','Second palette colour','Shorts code','Shorts colour','Socks code','Socks colour','Palette approximate','Official source URL','Checked','Limitations / follow-up'],...kitRows], [20,28,25,22,52,19,21,19,22,19,22,16,21,16,21,19,72,17,90], {missingColumns:[5,7,9,11,13],filter:true}],
   ['How to use',[
    ['SWOS 2026/27 MASTER TRACKER','What this workbook means'],
    ['Players','All 92 clubs, exactly 16 researched players per club'],
@@ -215,7 +235,7 @@ const sheets = [
    ['Squad reviews','The dedicated Squad reviews tab combines all reviewed research batches and flags squad assignments and shirt numbers needing confirmation before install.'],
    ['Ready status','READY means the four required data fields have values. It does not certify up-to-date squad membership or kit colours.'],
    ['Foreign exchange','October 9, 2026 EUR/GBP reference rate 0.846328; later rates must be recorded explicitly for each future batch.'],
-   ['Kit colours','Separate review, not yet confirmed in this workbook'],
+   ['Kit colours','Dedicated Kit colours sheet: 2026/27 official shirt descriptions and their closest SWOS palette mappings, with status and source per club. Full kit data only when shorts/socks sourced. No TEAM.* file is changed.'],
    ['Quality checks','This tab flags duplicate shirt numbers, player-name collisions, invalid position or value entries. Name collisions do not automatically imply a player belongs to two clubs.'],
    ['Age / goals / assists','Not included because SWOS does not need them in the current priority pass'],
    ['Source date','Each player inherits their club source/snapshot; generating the workbook does not reverify football facts'],
@@ -266,4 +286,4 @@ const anchor='<button class="btn big section-gap" id="masterCsvAll">Download ful
 if(!live.includes(anchor))throw new Error('Master tracker: cannot attach download button; existing editor layout changed.');
 live=live.replace(anchor,anchor+'<a class="btn btn-green big section-gap" href="/downloads/SWOS_Master_2026-27.xlsx" download>Download formatted Excel workbook (.xlsx)</a>');
 fs.writeFileSync(appFile,live,'utf8');
-console.log('SWOS master exports: '+baseline.clubCount+' clubs, '+baseline.playerCount+' players, '+audit.valued+' valuations, '+audit.swosReady+' SWOS-ready. Workbook and CSV generated.');
+console.log('SWOS master exports: '+baseline.clubCount+' clubs, '+baseline.playerCount+' players, '+audit.valued+' valuations, '+audit.swosReady+' SWOS-ready; '+audit.kitShirtsSourced+' kit shirts sourced. Workbook and CSV generated.');

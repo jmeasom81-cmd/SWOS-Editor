@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "checkedAt": "2026-10-10",
+  "sourcePolicy": "2026/27 club/manufacturer materials and official first-team match kit reports. Exact colours remain simplified when mapped into the original SWOS palette; research never edits TEAM.* automatically.",
+  "swosPalette": [
+    {
+      "id": 0,
+      "name": "Grey"
+    },
+    {
+      "id": 1,
+      "name": "White"
+    },
+    {
+      "id": 2,
+      "name": "Black"
+    },
+    {
+      "id": 3,
+      "name": "Orange"
+    },
+    {
+      "id": 4,
+      "name": "Red"
+    },
+    {
+      "id": 5,
+      "name": "Blue"
+    },
+    {
+      "id": 6,
+      "name": "Brown / claret"
+    },
+    {
+      "id": 7,
+      "name": "Light blue"
+    },
+    {
+      "id": 8,
+      "name": "Green"
+    },
+    {
+      "id": 9,
+      "name": "Yellow"
+    }
+  ],
+  "swosPatterns": [
+    {
+      "id": 0,
+      "name": "Plain"
+    },
+    {
+      "id": 1,
+      "name": "Contrast sleeves"
+    },
+    {
+      "id": 2,
+      "name": "Vertical stripes"
+    },
+    {
+      "id": 3,
+      "name": "Horizontal stripes"
+    }
+  ],
+  "clubs": [
+    {
+      "clubId": "arsenal",
+      "description": "Red body with white sleeves",
+      "sourceUrl": "https://www.arsenal.com/news/gallery-2627-adidas-home-kit-launches-in-the-armoury-afAJd0y8JygH",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 1,
+        "shirt1": 4,
+        "shirt2": 1,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "The official 2026/27 launch depicts the red-and-white home identity. SWOS contrast-sleeve rendering is an approximation; shorts and socks not assessed."
+    },
+    {
+      "clubId": "liverpool",
+      "description": "Deep red with geometric tonal print",
+      "sourceUrl": "https://www.liverpoolfc.com/news/lfc-and-adidas-unveil-2026-27-home-kit-inspired-iconic-title-winning-season?amp=1",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 6,
+        "shirt2": 6,
+        "shorts": 6,
+        "socks": 6
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": true,
+      "paletteApproximation": true,
+      "note": "SWOS Brown approximates deep Active Maroon; game cannot render the 1989-inspired geometric shirt motif."
+    },
+    {
+      "clubId": "aston-villa",
+      "description": "Claret shirt; glow-blue shorts and socks",
+      "sourceUrl": "https://shop.avfc.co.uk/en/x-9304",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 6,
+        "shirt2": 6,
+        "shorts": 7,
+        "socks": 7
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": true,
+      "paletteApproximation": true,
+      "note": "SWOS Brown and Light blue are nearest palette entries, not exact claret or glow blue. Shirt construction is simplified."
+    },
+    {
+      "clubId": "man-city",
+      "description": "Gradient sky-blue shirt",
+      "sourceUrl": "https://shop.mancity.com/gb/en/manchester-city-home-jersey-2026-27/701242784001807.html",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 7,
+        "shirt2": 7,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "SWOS Light blue looks different from the actual sky-blue gradient and cannot render a gradient. Shorts/socks need checking."
+    },
+    {
+      "clubId": "man-utd",
+      "description": "Red shirt with white-and-black collar details",
+      "sourceUrl": "https://m.store.manutd.com/en-gb/c/kit/home/mens",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 4,
+        "shirt2": 4,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "Official 2026/27 shop offers black and white home shorts and socks. No fixed selection without checking first-team match kit; trim is not representable."
+    },
+    {
+      "clubId": "chelsea",
+      "description": "Bright blue shirt with gold details",
+      "sourceUrl": "https://www.chelseafc.com/en/news/article/lion-takes-pride-of-place-as-new-chelsea-home-kit-set-loose",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 5,
+        "shirt2": 5,
+        "shorts": 5,
+        "socks": 1
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": true,
+      "paletteApproximation": true,
+      "note": "The club describes blue home shirt and shorts with gold details and white socks. SWOS cannot display gold accents."
+    },
+    {
+      "clubId": "newcastle",
+      "description": "Disrupted black-and-white vertical stripes",
+      "sourceUrl": "https://www.newcastleunited.com/en/news/newcastle-united-and-adidas-unveil-2026-27-home-kit",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 2,
+        "shirt1": 2,
+        "shirt2": 1,
+        "shorts": 2,
+        "socks": 2
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": true,
+      "paletteApproximation": true,
+      "note": "Black/white stripe base, black shorts and black socks sourced from the club. SWOS standard stripes cannot mimic the disrupted pattern or blue neck detail."
+    },
+    {
+      "clubId": "tottenham",
+      "description": "White shirt with navy trim; navy shorts, white socks",
+      "sourceUrl": "https://www.tottenhamhotspur.com/news/1088294/kit-colours-for-nottingham-forest-vs-spurs-confirmed",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 1,
+        "shirt2": 1,
+        "shorts": 2,
+        "socks": 1
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": true,
+      "paletteApproximation": true,
+      "note": "Official match report confirms lilywhite shirts, navy shorts and white socks. SWOS Black is only a proxy for unavailable dark navy."
+    },
+    {
+      "clubId": "everton",
+      "description": "Blue home shirt with white trim",
+      "sourceUrl": "https://castore.com/en-us/products/everton-fc-mens-26-27-home-short-sleeve-shirt",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 5,
+        "shirt2": 5,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "Official Castore 2026/27 shirt is blue; shorts and socks have not been individually verified in this pass."
+    },
+    {
+      "clubId": "bournemouth",
+      "description": "Wide red-and-black vertical stripes",
+      "sourceUrl": "https://superstore.afcb.co.uk/products/mens-home-shirt-26-27-red-black?variant=57240358715765",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 2,
+        "shirt1": 4,
+        "shirt2": 2,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "Club store describes wider 2026/27 stripes; SWOS vertical stripes simplify their spacing and crest pattern. Shorts/socks not yet verified."
+    },
+    {
+      "clubId": "brighton",
+      "description": "Royal blue shirt with fine white pinstripes",
+      "sourceUrl": "https://shop.brightonandhovealbion.com/kit/all-kits/adult/7588_BHAFC-Adult-2627-Home-Shirt.html",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 5,
+        "shirt2": 5,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "The 2026/27 Brighton shirt is predominantly royal blue with thin white pinstripes; SWOS cannot render fine pinstripes, so choose plain blue rather than broad stripes."
+    },
+    {
+      "clubId": "leeds",
+      "description": "White home shirt with accent details",
+      "sourceUrl": "https://shop.leedsunited.com/en/x-9595",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 1,
+        "shirt2": 1,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "Leeds official 2026/27 home kit is the traditional white. Shorts/socks and fine shirt detailing await explicit match evidence."
+    },
+    {
+      "clubId": "brentford",
+      "description": "Red-and-white stripes; black shorts and socks",
+      "sourceUrl": "https://www.tottenhamhotspur.com/news/1086229/kit-colours-for-brentford-vs-spurs-confirmed",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 2,
+        "shirt1": 4,
+        "shirt2": 1,
+        "shorts": 2,
+        "socks": 2
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": true,
+      "paletteApproximation": true,
+      "note": "Spurs' 20 August 2026 match report explicitly confirms the Brentford kit including shorts and socks."
+    },
+    {
+      "clubId": "nottingham-forest",
+      "description": "Red shirt; white shorts and red socks",
+      "sourceUrl": "https://www.tottenhamhotspur.com/news/1088294/kit-colours-for-nottingham-forest-vs-spurs-confirmed",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 4,
+        "shirt2": 4,
+        "shorts": 1,
+        "socks": 4
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": true,
+      "paletteApproximation": true,
+      "note": "Spurs' 3 September 2026 match report explicitly confirms Forest's home shirt, shorts and socks."
+    }
+  ]
+}
