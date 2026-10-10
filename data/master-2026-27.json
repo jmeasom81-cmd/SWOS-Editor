@@ -15435,10 +15435,17 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.169,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.com/fc-barnet/kader/verein/2804",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 200,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.com/fc-barnet/kader/verein/2804",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
         },
         {
           "player": "Nnamdi Ofoborh",
@@ -15483,10 +15490,17 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.085,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.com/fc-barnet/kader/verein/2804",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 100,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.com/fc-barnet/kader/verein/2804",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
         },
         {
           "player": "Jake Reeves",
@@ -16188,10 +16202,17 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.021,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.com/fc-chesterfield/kader/verein/1219",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 25,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.com/fc-chesterfield/kader/verein/1219",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
         },
         {
           "player": "Jack Simpson",
@@ -16236,10 +16257,17 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.212,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.com/fc-chesterfield/kader/verein/1219",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 250,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.com/fc-chesterfield/kader/verein/1219",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
         },
         {
           "player": "Tom Naylor",
@@ -16248,10 +16276,17 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.063,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.com/fc-chesterfield/kader/verein/1219",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 75,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.com/fc-chesterfield/kader/verein/1219",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
         },
         {
           "player": "Ryan Stirk",
@@ -17346,10 +17381,17 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.169,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.com/exeter-city/kader/verein/6699/saison_id/2026/plus/1",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 200,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.com/exeter-city/kader/verein/6699/saison_id/2026/plus/1",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
         },
         {
           "player": "Harry Kite",
@@ -17483,10 +17525,17 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.042,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/fleetwood-town/kader/verein/11177/saison_id/2026/plus/1",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 50,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/fleetwood-town/kader/verein/11177/saison_id/2026/plus/1",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
         },
         {
           "player": "Finley Potter",
@@ -17513,10 +17562,17 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.063,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/fleetwood-town/kader/verein/11177/saison_id/2026/plus/1",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 75,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/fleetwood-town/kader/verein/11177/saison_id/2026/plus/1",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
         },
         {
           "player": "Conor Haughey",
@@ -17549,10 +17605,17 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.233,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/fleetwood-town/kader/verein/11177/saison_id/2026/plus/1",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 275,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/fleetwood-town/kader/verein/11177/saison_id/2026/plus/1",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
         },
         {
           "player": "Andy Cannon",
@@ -17573,10 +17636,17 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.127,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/fleetwood-town/kader/verein/11177/saison_id/2026/plus/1",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 150,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/fleetwood-town/kader/verein/11177/saison_id/2026/plus/1",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
         },
         {
           "player": "Mark Helm",
@@ -17585,10 +17655,17 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.296,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/fleetwood-town/kader/verein/11177/saison_id/2026/plus/1",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 350,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/fleetwood-town/kader/verein/11177/saison_id/2026/plus/1",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
         },
         {
           "player": "Adam Murphy",
@@ -20232,10 +20309,17 @@
           "group": "Defender",
           "position": 1,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.127,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/shrewsbury-town/kader/verein/3054",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 150,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/shrewsbury-town/kader/verein/3054",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
         },
         {
           "player": "Jay Turner-Cooke",
@@ -20256,10 +20340,17 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.127,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/shrewsbury-town/kader/verein/3054",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 150,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/shrewsbury-town/kader/verein/3054",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
         },
         {
           "player": "Tom Sang",

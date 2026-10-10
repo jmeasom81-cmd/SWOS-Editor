@@ -1,0 +1,154 @@
+{
+  "season": "2026/27",
+  "checkedAt": "2026-10-10",
+  "referenceFxRateEurGbp": 0.846328,
+  "referenceFxNote": "Reused SWOS 9 October FX reference; GBP million values rounded to nearest 0.001",
+  "meaning": "Indicative Transfermarkt valuations, not in-game SWOS fees. Unknown values remain null and identity/shirt discrepancies are shown for human review.",
+  "clubs": [
+    {
+      "id": "barnet",
+      "pack": "BARNET_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.com/fc-barnet/kader/verein/2804",
+      "sourceSnapshot": "2026/27 season squad (web indexed)",
+      "players": [
+        {
+          "name": "Brandon Comley",
+          "eurThousands": 100,
+          "gbpMillions": 0.085
+        },
+        {
+          "name": "Charlie Lakin",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        }
+      ],
+      "squadReviews": [
+        "Brandon Comley and Charlie Lakin show €100k and €200k values, respectively, but unassigned shirts in the 2026/27 market-value source; retain researched numbers pending official check.",
+        "Matthew Cox, Romoney Crichlow-Noble, Jake Reeves, Tom Knowles, Jack Maskell and Damola Ajayi do not have supported estimates in this batch; do not guess."
+      ]
+    },
+    {
+      "id": "chesterfield",
+      "pack": "CHESTERFIELD_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.com/fc-chesterfield/kader/verein/1219",
+      "sourceSnapshot": "2026/27 season squad (web indexed)",
+      "players": [
+        {
+          "name": "Kyle McFadzean",
+          "eurThousands": 25,
+          "gbpMillions": 0.021
+        },
+        {
+          "name": "Lewis Gordon",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        },
+        {
+          "name": "Tom Naylor",
+          "eurThousands": 75,
+          "gbpMillions": 0.063
+        }
+      ],
+      "squadReviews": [
+        "Kyle McFadzean has a 2026/27 source shirt #6 versus the research pack #5; do not overwrite shirt number without the official club list.",
+        "Fraser Bryden has no independently confirmed 2026/27 valuation in this check; preserve blank."
+      ]
+    },
+    {
+      "id": "exeter-city",
+      "pack": "EXETER_CITY_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.com/exeter-city/kader/verein/6699/saison_id/2026/plus/1",
+      "sourceSnapshot": "2026/27 season squad (web indexed)",
+      "players": [
+        {
+          "name": "Reece Cole",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        }
+      ],
+      "squadReviews": [
+        "Reece Cole's 2026/27 source lists shirt #12 matching the research pack, with €200k indicative value.",
+        "Gwion Edwards has no published market valuation in the cited season squad; his blank value is not £0."
+      ]
+    },
+    {
+      "id": "fleetwood-town",
+      "pack": "FLEETWOOD_TOWN_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/fleetwood-town/kader/verein/11177/saison_id/2026/plus/1",
+      "sourceSnapshot": "2026/27 season squad (web indexed)",
+      "players": [
+        {
+          "name": "Rhys Bennett",
+          "eurThousands": 75,
+          "gbpMillions": 0.063
+        },
+        {
+          "name": "Danny Andrew",
+          "eurThousands": 50,
+          "gbpMillions": 0.042
+        },
+        {
+          "name": "Mark Helm",
+          "eurThousands": 350,
+          "gbpMillions": 0.296
+        },
+        {
+          "name": "Harrison Neal",
+          "eurThousands": 275,
+          "gbpMillions": 0.233
+        },
+        {
+          "name": "Kane Thompson-Sommers",
+          "eurThousands": 150,
+          "gbpMillions": 0.127
+        }
+      ],
+      "squadReviews": [
+        "Rhys Bennett source shirt #2 conflicts with SWOS research #6; Harrison Neal source shirt #20 conflicts with research #4. Verify both officially before game edits.",
+        "Danny Andrew and Kane Thompson-Sommers have unassigned shirt numbers in the source, while SWOS has provisional numbers."
+      ]
+    },
+    {
+      "id": "shrewsbury-town",
+      "pack": "SHREWSBURY_TOWN_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/shrewsbury-town/kader/verein/3054",
+      "sourceSnapshot": "2026/27 season squad (web indexed)",
+      "players": [
+        {
+          "name": "Arkell Jude-Boyd",
+          "eurThousands": 150,
+          "gbpMillions": 0.127
+        },
+        {
+          "name": "Isaac Fletcher",
+          "eurThousands": 150,
+          "gbpMillions": 0.127
+        }
+      ],
+      "squadReviews": [
+        "Arkell Jude-Boyd and Isaac Fletcher are listed with €150k market values, but no assigned shirt numbers in this season source.",
+        "Jack Price and Jay Turner-Cooke are listed without market valuations; do not turn blanks into zero."
+      ]
+    },
+    {
+      "id": "cheltenham-town",
+      "pack": "CHELTENHAM_TOWN_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/cheltenham-town/kader/verein/3371/",
+      "sourceSnapshot": "2026/27 season squad (web indexed)",
+      "players": [],
+      "squadReviews": [
+        "Cheltenham review: Wyll Stanway, Shaun McWilliams, Kirsten Otchere and Andreas Weimann do not have reliable season-matched numeric valuations in the cited overview. Leave all four blank pending further evidence."
+      ]
+    },
+    {
+      "id": "accrington-stanley",
+      "pack": "ACCRINGTON_STANLEY_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.com/accrington-stanley/kader/verein/3688",
+      "sourceSnapshot": "2026/27 season squad (web indexed)",
+      "players": [],
+      "squadReviews": [
+        "Accrington review: Louie Moulden, James Rogerson, Tom Moore and Stefan Mols are explicitly unvalued on the 2026/27 roster; retain null, not zero. Oliver Smith and Cole Stockton need a separate squad membership check before valuation."
+      ]
+    }
+  ]
+}
