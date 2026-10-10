@@ -1,0 +1,708 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "sourceUrl": "https://www.premierleague.com/en/news/4725682",
+  "sourcePublishedAt": "2026-09-22",
+  "checkedAt": "2026-10-10",
+  "purpose": "Independent manual cross-check of 160 named player numbers against official Premier League 2026/27 squad-number article. Prior batch I verified 160 players in the other 10 Premier League clubs.",
+  "aliases": [
+    {
+      "sourceName": "Gabriel Slonina",
+      "swosName": "Gaga Slonina",
+      "clubId": "chelsea"
+    }
+  ],
+  "priorVerifiedBatch": "data/premier-league-official-numbers-batch-i-2026-10-10.json",
+  "newlyVerified": [
+    {
+      "clubId": "arsenal",
+      "players": [
+        {
+          "player": "David Raya",
+          "shirt": 1
+        },
+        {
+          "player": "Kepa Arrizabalaga",
+          "shirt": 13
+        },
+        {
+          "player": "William Saliba",
+          "shirt": 2
+        },
+        {
+          "player": "Gabriel Magalhaes",
+          "shirt": 6
+        },
+        {
+          "player": "Jurrien Timber",
+          "shirt": 12
+        },
+        {
+          "player": "Riccardo Calafiori",
+          "shirt": 33
+        },
+        {
+          "player": "Piero Hincapie",
+          "shirt": 5
+        },
+        {
+          "player": "Cristhian Mosquera",
+          "shirt": 3
+        },
+        {
+          "player": "Declan Rice",
+          "shirt": 41
+        },
+        {
+          "player": "Martin Zubimendi",
+          "shirt": 36
+        },
+        {
+          "player": "Martin Odegaard",
+          "shirt": 8
+        },
+        {
+          "player": "Eberechi Eze",
+          "shirt": 10
+        },
+        {
+          "player": "Noni Madueke",
+          "shirt": 20
+        },
+        {
+          "player": "Mikel Merino",
+          "shirt": 23
+        },
+        {
+          "player": "Bukayo Saka",
+          "shirt": 7
+        },
+        {
+          "player": "Viktor Gyokeres",
+          "shirt": 14
+        }
+      ]
+    },
+    {
+      "clubId": "aston-villa",
+      "players": [
+        {
+          "player": "Zion Suzuki",
+          "shirt": 1
+        },
+        {
+          "player": "Marco Bizot",
+          "shirt": 40
+        },
+        {
+          "player": "Matty Cash",
+          "shirt": 2
+        },
+        {
+          "player": "Pau Torres",
+          "shirt": 14
+        },
+        {
+          "player": "Ian Maatsen",
+          "shirt": 22
+        },
+        {
+          "player": "Aaron Wan-Bissaka",
+          "shirt": 29
+        },
+        {
+          "player": "Matteo Ruggeri",
+          "shirt": 13
+        },
+        {
+          "player": "Boubacar Kamara",
+          "shirt": 8
+        },
+        {
+          "player": "John McGinn",
+          "shirt": 7
+        },
+        {
+          "player": "Leon Goretzka",
+          "shirt": 27
+        },
+        {
+          "player": "Joao Gomes",
+          "shirt": 35
+        },
+        {
+          "player": "Lamare Bogarde",
+          "shirt": 26
+        },
+        {
+          "player": "Emiliano Buendia",
+          "shirt": 10
+        },
+        {
+          "player": "Nicolas Jackson",
+          "shirt": 11
+        },
+        {
+          "player": "Alejandro Garnacho",
+          "shirt": 17
+        },
+        {
+          "player": "Tammy Abraham",
+          "shirt": 18
+        }
+      ]
+    },
+    {
+      "clubId": "man-city",
+      "players": [
+        {
+          "player": "Gianluigi Donnarumma",
+          "shirt": 1
+        },
+        {
+          "player": "Geronimo Rulli",
+          "shirt": 28
+        },
+        {
+          "player": "Ruben Dias",
+          "shirt": 3
+        },
+        {
+          "player": "Marc Guehi",
+          "shirt": 6
+        },
+        {
+          "player": "Rayan Ait-Nouri",
+          "shirt": 21
+        },
+        {
+          "player": "Josko Gvardiol",
+          "shirt": 24
+        },
+        {
+          "player": "Rico Lewis",
+          "shirt": 82
+        },
+        {
+          "player": "Elliot Anderson",
+          "shirt": 5
+        },
+        {
+          "player": "Enzo Fernandez",
+          "shirt": 17
+        },
+        {
+          "player": "Rayan Cherki",
+          "shirt": 10
+        },
+        {
+          "player": "Phil Foden",
+          "shirt": 47
+        },
+        {
+          "player": "Matheus Nunes",
+          "shirt": 27
+        },
+        {
+          "player": "Jeremy Doku",
+          "shirt": 11
+        },
+        {
+          "player": "Iliman Ndiaye",
+          "shirt": 7
+        },
+        {
+          "player": "Antoine Semenyo",
+          "shirt": 42
+        },
+        {
+          "player": "Erling Haaland",
+          "shirt": 9
+        }
+      ]
+    },
+    {
+      "clubId": "man-utd",
+      "players": [
+        {
+          "player": "Senne Lammens",
+          "shirt": 1
+        },
+        {
+          "player": "Karl Darlow",
+          "shirt": 12
+        },
+        {
+          "player": "Diogo Dalot",
+          "shirt": 2
+        },
+        {
+          "player": "Matthijs de Ligt",
+          "shirt": 4
+        },
+        {
+          "player": "Lisandro Martinez",
+          "shirt": 6
+        },
+        {
+          "player": "Patrick Dorgu",
+          "shirt": 13
+        },
+        {
+          "player": "Noussair Mazraoui",
+          "shirt": 3
+        },
+        {
+          "player": "Bruno Fernandes",
+          "shirt": 8
+        },
+        {
+          "player": "Youri Tielemans",
+          "shirt": 18
+        },
+        {
+          "player": "Andrey Santos",
+          "shirt": 17
+        },
+        {
+          "player": "Carlos Baleba",
+          "shirt": 20
+        },
+        {
+          "player": "Manuel Ugarte",
+          "shirt": 25
+        },
+        {
+          "player": "Bryan Mbeumo",
+          "shirt": 19
+        },
+        {
+          "player": "Matheus Cunha",
+          "shirt": 10
+        },
+        {
+          "player": "Benjamin Sesko",
+          "shirt": 30
+        },
+        {
+          "player": "Amad Diallo",
+          "shirt": 16
+        }
+      ]
+    },
+    {
+      "clubId": "tottenham",
+      "players": [
+        {
+          "player": "Antonin Kinsky",
+          "shirt": 31
+        },
+        {
+          "player": "Martin Dubravka",
+          "shirt": 39
+        },
+        {
+          "player": "Jan Paul van Hecke",
+          "shirt": 6
+        },
+        {
+          "player": "Marcos Senesi",
+          "shirt": 5
+        },
+        {
+          "player": "Destiny Udogie",
+          "shirt": 13
+        },
+        {
+          "player": "Andy Robertson",
+          "shirt": 3
+        },
+        {
+          "player": "Pedro Porro",
+          "shirt": 23
+        },
+        {
+          "player": "Sandro Tonali",
+          "shirt": 16
+        },
+        {
+          "player": "Rodrigo Bentancur",
+          "shirt": 30
+        },
+        {
+          "player": "Mateus Fernandes",
+          "shirt": 18
+        },
+        {
+          "player": "Conor Gallagher",
+          "shirt": 8
+        },
+        {
+          "player": "Xavi Simons",
+          "shirt": 7
+        },
+        {
+          "player": "Mohammed Kudus",
+          "shirt": 20
+        },
+        {
+          "player": "Dejan Kulusevski",
+          "shirt": 21
+        },
+        {
+          "player": "Wilson Odobert",
+          "shirt": 28
+        },
+        {
+          "player": "Dominic Solanke",
+          "shirt": 19
+        }
+      ]
+    },
+    {
+      "clubId": "chelsea",
+      "players": [
+        {
+          "player": "Cole Palmer",
+          "shirt": 10
+        },
+        {
+          "player": "Moises Caicedo",
+          "shirt": 25
+        },
+        {
+          "player": "Morgan Rogers",
+          "shirt": 17
+        },
+        {
+          "player": "Joao Pedro",
+          "shirt": 9
+        },
+        {
+          "player": "Pedro Neto",
+          "shirt": 7
+        },
+        {
+          "player": "Jamie Gittens",
+          "shirt": 11
+        },
+        {
+          "player": "Reece James",
+          "shirt": 24
+        },
+        {
+          "player": "Levi Colwill",
+          "shirt": 6
+        },
+        {
+          "player": "Wesley Fofana",
+          "shirt": 3
+        },
+        {
+          "player": "Malo Gusto",
+          "shirt": 27
+        },
+        {
+          "player": "Maxence Lacroix",
+          "shirt": 5
+        },
+        {
+          "player": "Valentin Barco",
+          "shirt": 4
+        },
+        {
+          "player": "Romeo Lavia",
+          "shirt": 45
+        },
+        {
+          "player": "Emmanuel Emegha",
+          "shirt": 22
+        },
+        {
+          "player": "Teddy Sharman-Lowe",
+          "shirt": 28
+        },
+        {
+          "player": "Gaga Slonina",
+          "shirt": 44
+        }
+      ]
+    },
+    {
+      "clubId": "bournemouth",
+      "players": [
+        {
+          "player": "Djordje Petrovic",
+          "shirt": 1
+        },
+        {
+          "player": "Michele Di Gregorio",
+          "shirt": 20
+        },
+        {
+          "player": "Julian Araujo",
+          "shirt": 2
+        },
+        {
+          "player": "Adrien Truffert",
+          "shirt": 3
+        },
+        {
+          "player": "Antonio Silva",
+          "shirt": 14
+        },
+        {
+          "player": "Bafode Diakite",
+          "shirt": 18
+        },
+        {
+          "player": "Juanlu Sanchez",
+          "shirt": 24
+        },
+        {
+          "player": "Lewis Cook",
+          "shirt": 4
+        },
+        {
+          "player": "David Brooks",
+          "shirt": 7
+        },
+        {
+          "player": "Alex Scott",
+          "shirt": 8
+        },
+        {
+          "player": "Ryan Christie",
+          "shirt": 10
+        },
+        {
+          "player": "Tyler Adams",
+          "shirt": 12
+        },
+        {
+          "player": "Evanilson",
+          "shirt": 9
+        },
+        {
+          "player": "Justin Kluivert",
+          "shirt": 19
+        },
+        {
+          "player": "Amine Adli",
+          "shirt": 21
+        },
+        {
+          "player": "Junior Kroupi",
+          "shirt": 22
+        }
+      ]
+    },
+    {
+      "clubId": "brentford",
+      "players": [
+        {
+          "player": "Caoimhin Kelleher",
+          "shirt": 1
+        },
+        {
+          "player": "Hakon Valdimarsson",
+          "shirt": 12
+        },
+        {
+          "player": "Aaron Hickey",
+          "shirt": 2
+        },
+        {
+          "player": "Rico Henry",
+          "shirt": 3
+        },
+        {
+          "player": "Sepp van den Berg",
+          "shirt": 4
+        },
+        {
+          "player": "Kristoffer Ajer",
+          "shirt": 20
+        },
+        {
+          "player": "Nathan Collins",
+          "shirt": 22
+        },
+        {
+          "player": "Yehor Yarmoliuk",
+          "shirt": 6
+        },
+        {
+          "player": "Mathias Jensen",
+          "shirt": 8
+        },
+        {
+          "player": "Fabio Carvalho",
+          "shirt": 14
+        },
+        {
+          "player": "Antoni Milambo",
+          "shirt": 17
+        },
+        {
+          "player": "Mikkel Damsgaard",
+          "shirt": 24
+        },
+        {
+          "player": "Kevin Schade",
+          "shirt": 7
+        },
+        {
+          "player": "Igor Thiago",
+          "shirt": 9
+        },
+        {
+          "player": "Dango Ouattara",
+          "shirt": 11
+        },
+        {
+          "player": "Callum Wilson",
+          "shirt": 13
+        }
+      ]
+    },
+    {
+      "clubId": "brighton",
+      "players": [
+        {
+          "player": "Bart Verbruggen",
+          "shirt": 1
+        },
+        {
+          "player": "Jason Steele",
+          "shirt": 23
+        },
+        {
+          "player": "Lewis Dunk",
+          "shirt": 5
+        },
+        {
+          "player": "Pascal Struijk",
+          "shirt": 4
+        },
+        {
+          "player": "Olivier Boscagli",
+          "shirt": 21
+        },
+        {
+          "player": "Maxim De Cuyper",
+          "shirt": 29
+        },
+        {
+          "player": "Ferdi Kadioglu",
+          "shirt": 24
+        },
+        {
+          "player": "Mats Wieffer",
+          "shirt": 27
+        },
+        {
+          "player": "Pascal Gross",
+          "shirt": 13
+        },
+        {
+          "player": "Diego Gomez",
+          "shirt": 25
+        },
+        {
+          "player": "Yasin Ayari",
+          "shirt": 26
+        },
+        {
+          "player": "Matt O'Riley",
+          "shirt": 33
+        },
+        {
+          "player": "Kaoru Mitoma",
+          "shirt": 7
+        },
+        {
+          "player": "Yankuba Minteh",
+          "shirt": 11
+        },
+        {
+          "player": "Georginio Rutter",
+          "shirt": 10
+        },
+        {
+          "player": "Evan Ferguson",
+          "shirt": 28
+        }
+      ]
+    },
+    {
+      "clubId": "nottingham-forest",
+      "players": [
+        {
+          "player": "Morgan Gibbs-White",
+          "shirt": 10
+        },
+        {
+          "player": "Murillo",
+          "shirt": 5
+        },
+        {
+          "player": "Neco Williams",
+          "shirt": 3
+        },
+        {
+          "player": "Nikola Milenkovic",
+          "shirt": 31
+        },
+        {
+          "player": "Ousmane Diomande",
+          "shirt": 2
+        },
+        {
+          "player": "Dan Ndoye",
+          "shirt": 14
+        },
+        {
+          "player": "Liam Delap",
+          "shirt": 19
+        },
+        {
+          "player": "Callum Hudson-Odoi",
+          "shirt": 7
+        },
+        {
+          "player": "Ibrahim Sangare",
+          "shirt": 6
+        },
+        {
+          "player": "Xaver Schlager",
+          "shirt": 21
+        },
+        {
+          "player": "Nicolas Dominguez",
+          "shirt": 8
+        },
+        {
+          "player": "Daniel Munoz",
+          "shirt": 27
+        },
+        {
+          "player": "Chris Wood",
+          "shirt": 9
+        },
+        {
+          "player": "Matz Sels",
+          "shirt": 26
+        },
+        {
+          "player": "Ola Aina",
+          "shirt": 34
+        },
+        {
+          "player": "Arnaud Kalimuendo",
+          "shirt": 15
+        }
+      ]
+    }
+  ]
+}
