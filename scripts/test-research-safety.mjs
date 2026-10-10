@@ -120,7 +120,7 @@ const rochdaleClub=master.clubs.find(c=>c.clubId==='rochdale');
 assert.equal(Object.keys(officialRochdale.officialShirts).length,14,'Official Rochdale source should confirm 14 shirts');
 for(const [name,shirt] of Object.entries(officialRochdale.officialShirts)){const p=rochdaleClub.players.find(p=>p.player===name);assert.ok(p);assert.equal(p.shirt,shirt,'Official shirt differs '+name);assert.equal(p.shirtEvidenceUrl,officialRochdale.clubs[0].sourceUrl);assert.equal(p.seasonSquadSourceUrl,officialRochdale.clubs[0].sourceUrl);}
 for(const name of officialRochdale.notConfirmed){const p=rochdaleClub.players.find(p=>p.player===name);assert.ok(p);assert.equal(p.shirtEvidenceUrl ?? null,null,'Unconfirmed shirt must stay unverified');}
-assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,262,'Valuations tally after League Two batch C');
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,261,'Current missing valuation tally after subsequent sourced batches');
 console.log('Rochdale: 14 official 2026/27 numbers confirmed, 2 pending.');
 
 // Batch C: each market value is tied to a named season-squad source, not a guessed valuation.
@@ -167,7 +167,7 @@ assert.equal(batchF.clubs.length,6);
 assert.equal(batchF.clubs.reduce((n,c)=>n+c.players.length,0),52);
 for(const c of batchF.clubs){const stored=master.clubs.find(x=>x.clubId===c.id);assert.ok(stored);for(const v of c.players){const p=stored.players.find(p=>p.player===v.name);assert.ok(p,'Missing valuation '+v.name);assert.equal(p.marketValueSourceEuroK,v.eurThousands);assert.equal(p.marketValueM,Math.round(v.eurThousands*batchF.referenceFxRateEurGbp)/1000);assert.equal(p.marketValueSourceUrl,v.valueSourceUrl);assert.equal(p.seasonSquadSourceUrl,v.squadEvidenceUrl);}for(const [name,fields] of Object.entries(c.officialPlayers)){const p=stored.players.find(p=>p.player===name);assert.ok(p);assert.equal(p.shirt,fields[0]);assert.equal(p.shirtEvidenceUrl,c.squadSourceUrl);if(fields[1])assert.equal(p.nationality,fields[1]);}}
 for(const id of ['chelsea','brentford','bournemouth','nottingham-forest']){const c=master.clubs.find(c=>c.clubId===id);assert.ok(c.players.every(p=>p.marketValueM!=null&&p.shirt!=null&&p.nationality),'Premier club must have essential SWOS data: '+id);assert.equal(new Set(c.players.map(p=>p.shirt)).size,16,'Duplicate shirt '+id);}
-assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM==null).length,262);
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM==null).length,261);
 assert.equal(master.clubs.find(c=>c.clubId==='rochdale').players.find(p=>p.player==='Laurence Maguire').shirtEvidenceUrl,'https://rochdaleafc.co.uk/2026-27-squad-numbers-confirmed/');
 console.log('Batch F: 52 market values, 32 official shirts, 16 nationalities; official squad evidence retained.');
 
