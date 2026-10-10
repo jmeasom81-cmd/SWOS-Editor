@@ -17,8 +17,9 @@ for(const c of master.clubs){
    clubId:c.clubId,club:c.club,division:c.division,player:p.player,
    shirt:p.shirt,nationality:p.nationality,position:p.position,marketValueM:p.marketValueM,
    essentialReady:essential(p),
-   squadSourceUrl:p.seasonSquadSourceUrl||null,
-   shirtSourceUrl:p.shirtEvidenceUrl||null,
+   officialPLRosterUrl:p.officialPLRosterUrl||null,officialPLSquadNumber:p.officialPLSquadNumber??null,
+   squadSourceUrl:p.officialPLRosterUrl||p.seasonSquadSourceUrl||null,
+   shirtSourceUrl:p.officialPLRosterUrl||p.shirtEvidenceUrl||null,
    valueSourceUrl:p.marketValueSourceUrl||null,
    nationalitySourceUrl:p.nationalityEvidenceUrl||null
   });
@@ -31,6 +32,7 @@ const sum=rows=>({
  players:rows.length,
  ready:rows.filter(p=>p.essentialReady).length,
  squadLinked:rows.filter(p=>p.squadSourceUrl).length,
+ officialPLLinked:rows.filter(p=>p.officialPLRosterUrl).length,
  squadUnlinked:rows.filter(p=>!p.squadSourceUrl).length,
  priced:rows.filter(p=>p.marketValueM!==null).length,
  valueLinked:rows.filter(p=>p.marketValueM!==null&&p.valueSourceUrl).length,
@@ -56,8 +58,8 @@ const csv=v=>{
  if(/^[=+\-@\t\r]/.test(s))s="'"+s;
  return /[",\r\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;
 };
-const headers=['Division','Club','Player','Shirt','Nationality','Position code','Value GBP millions','Essentials filled','Individual 2026-27 squad link','Individual market value link','Shirt evidence link','Nationality evidence link','Possible same-name clubs','Squad source URL','Value source URL','Shirt source URL','Nationality source URL'];
-const rows=[headers,...playerRows.map(p=>[p.division,p.club,p.player,p.shirt,p.nationality,p.position,p.marketValueM,p.essentialReady?'YES':'NO',p.squadSourceUrl?'LINKED':'NOT LINKED',p.valueSourceUrl?'LINKED':'NOT LINKED',p.shirtSourceUrl?'LINKED':'NOT LINKED',p.nationalitySourceUrl?'LINKED':'NOT LINKED',p.sameNameOtherClubs.join('; '),p.squadSourceUrl,p.valueSourceUrl,p.shirtSourceUrl,p.nationalitySourceUrl])];
+const headers=['Division','Club','Player','Shirt','Nationality','Position code','Value GBP millions','Essentials filled','Individual 2026-27 squad link','Individual market value link','Shirt evidence link','Nationality evidence link','Official PL squad source','Official PL shirt number','Possible same-name clubs','Squad source URL','Value source URL','Shirt source URL','Nationality source URL'];
+const rows=[headers,...playerRows.map(p=>[p.division,p.club,p.player,p.shirt,p.nationality,p.position,p.marketValueM,p.essentialReady?'YES':'NO',p.squadSourceUrl?'LINKED':'NOT LINKED',p.valueSourceUrl?'LINKED':'NOT LINKED',p.shirtSourceUrl?'LINKED':'NOT LINKED',p.nationalitySourceUrl?'LINKED':'NOT LINKED',p.officialPLRosterUrl||'',p.officialPLSquadNumber??'',p.sameNameOtherClubs.join('; '),p.squadSourceUrl,p.valueSourceUrl,p.shirtSourceUrl,p.nationalitySourceUrl])];
 fs.writeFileSync('dist/downloads/SWOS_Source_Audit_2026-27.csv','\uFEFF'+rows.map(r=>r.map(csv).join(',')).join('\r\n')+'\r\n');
 const template=fs.readFileSync('source-audit-template.html','utf8');
 const placeholder='__SWOS_SOURCE_AUDIT_DATA__';

@@ -30,3 +30,19 @@ assert.ok(gaps.includes('href="/source-audit-2026-27.html"'));
 const csv=fs.readFileSync('dist/downloads/SWOS_Source_Audit_2026-27.csv','utf8');
 assert.equal(csv.trim().split(/\r?\n/).length,1473,'Audit CSV header + 1,472 players');
 console.log('SWOS source audit checked: '+data.summary.players+' rows, '+data.summary.squadLinked+' squad links, '+data.summary.valuedWithoutIndividualSource+' valuations lacking individual evidence links.');
+
+// Official Premier League number verification preserves the independently recorded 2026/27 source.
+const verification=JSON.parse(fs.readFileSync('data/premier-league-official-verification-batch-m-2026-10-10.json','utf8'));
+assert.equal(verification.newlyVerified.length,10);
+assert.equal(verification.newlyVerified.reduce((n,c)=>n+c.players.length,0),160);
+assert.equal(data.summary.officialPLLinked,320);
+assert.equal(data.divisions.find(d=>d.division==='Premier League').officialPLLinked,320);
+for(const c of master.clubs.filter(c=>c.division==='Premier League')){
+ for(const p of c.players){
+  assert.equal(p.officialPLRosterUrl,verification.sourceUrl);
+  assert.equal(p.officialPLRosterCheckedAt,verification.checkedAt);
+  assert.equal(p.officialPLSquadNumber,p.shirt);
+ }
+}
+for(const group of verification.newlyVerified){const c=master.clubs.find(c=>c.clubId===group.clubId);for(const x of group.players){const p=c.players.find(p=>p.player===x.player);assert.equal(p.shirt,x.shirt);}}
+console.log('Official 2026/27 Premier League roster crosscheck: 320 player shirt numbers across all 20 clubs.');

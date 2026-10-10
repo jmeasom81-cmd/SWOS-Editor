@@ -25,7 +25,7 @@ p{color:#b6c7d9;line-height:1.6}.links{display:flex;gap:9px;flex-wrap:wrap;margi
 <label class="search">Player or club<input id="q" type="search" placeholder="Search name, club…" autocomplete="off"></label>
 <label>Division<select id="division"><option value="">All divisions</option><option>Premier League</option><option>Championship</option><option>League One</option><option>League Two</option></select></label>
 <label>Club<select id="club"><option value="">All clubs</option></select></label>
-<label>Source status<select id="source"><option value="">All source statuses</option><option value="squad-unlinked">Squad source not linked</option><option value="value-unlinked">Value recorded; no individual source</option><option value="linked">Squad source linked</option><option value="collision">Possible same-name match</option></select></label>
+<label>Source status<select id="source"><option value="">All source statuses</option><option value="squad-unlinked">Squad source not linked</option><option value="value-unlinked">Value recorded; no individual source</option><option value="linked">Squad source linked</option><option value="official">Official PL squad number verified</option><option value="collision">Possible same-name match</option></select></label>
 <label>Essentials<select id="essentials"><option value="">All records</option><option value="ready">All four filled</option><option value="missing">Missing essential field</option></select></label>
 </div>
 <p id="result-count" class="tiny"></p><section id="results" class="results"></section><button id="more" type="button" hidden>Show more players</button></section>
@@ -42,6 +42,7 @@ const stats=DATA.summary;
 const tiles=[
  [fmt(stats.ready)+' / '+fmt(stats.players),'Essentials filled'],
  [fmt(stats.squadLinked)+' / '+fmt(stats.players),'Individual squad source linked'],
+ [fmt(stats.officialPLLinked),'Official 2026/27 PL squad numbers verified'],
  [fmt(stats.valuedWithoutIndividualSource),'Valued players without individual value link'],
  [fmt(stats.nameCollisionRows),'Possible same-name player records']
 ];
@@ -64,6 +65,7 @@ function filteredPlayers(){
   if(status==='squad-unlinked'&&p.squadSourceUrl)return false;
   if(status==='value-unlinked'&&(p.marketValueM===null||p.valueSourceUrl))return false;
   if(status==='linked'&&!p.squadSourceUrl)return false;
+  if(status==='official'&&!p.officialPLRosterUrl)return false;
   if(status==='collision'&&!p.sameNameOtherClubs.length)return false;
   return true;
  });
@@ -76,6 +78,7 @@ function render(){
   if(!p.squadSourceUrl)notes.push('No individual squad link');
   if(p.marketValueM!==null&&!p.valueSourceUrl)notes.push('Valuation link missing');
   if(p.sameNameOtherClubs.length)notes.push('Same-name entry: '+p.sameNameOtherClubs.join(', '));
+  if(p.officialPLRosterUrl)notes.push('Official 2026/27 PL #'+p.officialPLSquadNumber+' confirmed');
   const links=[p.squadSourceUrl?'<a href="'+x(p.squadSourceUrl)+'" target="_blank" rel="noopener noreferrer">Squad source ↗</a>':'',p.valueSourceUrl?'<a href="'+x(p.valueSourceUrl)+'" target="_blank" rel="noopener noreferrer">Value source ↗</a>':''].filter(Boolean).join(' · ');
   return '<article class="person"><div><strong>'+x(p.player)+'</strong><div class="sub">'+x(p.club)+' · '+x(p.division)+' · #'+x(p.shirt??'TBD')+'</div><div class="sub">'+x(notes.length?notes.join(' · '):'No source warnings from recorded fields')+'</div>'+(links?'<div>'+links+'</div>':'')+'</div><div class="pill '+(p.essentialReady?'good':'')+'">'+(p.essentialReady?'Fields filled':'Missing data')+'</div></article>';
  }).join(''):'<div class="empty">No records match these filters.</div>';

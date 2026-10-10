@@ -305,3 +305,12 @@ for(const r of researchReviewL.reviews){
 assert.equal(researchReviewL.reviews.filter(r=>r.status==='membership_check').length,2);
 assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,243);
 console.log('SWOS research review L: 26 reviewed missing values, no assumptions made.');
+
+// Batch M: official 2026/27 Premier League shirt numbers are matched independently of market valuations.
+const officialM=JSON.parse(fs.readFileSync('data/premier-league-official-verification-batch-m-2026-10-10.json','utf8'));
+assert.equal(officialM.newlyVerified.length,10);
+assert.equal(officialM.newlyVerified.reduce((n,c)=>n+c.players.length,0),160);
+for(const batch of officialM.newlyVerified){const club=master.clubs.find(c=>c.clubId===batch.clubId);assert.ok(club);for(const r of batch.players){const p=club.players.find(p=>p.player===r.player);assert.ok(p);assert.equal(p.shirt,r.shirt);assert.equal(p.officialPLRosterUrl,officialM.sourceUrl);}}
+assert.equal(master.clubs.filter(c=>c.division==='Premier League').flatMap(c=>c.players).filter(p=>p.officialPLRosterUrl===officialM.sourceUrl).length,320);
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,243,'Official source checks must not create values');
+console.log('Premier League official batch M: 160 newly compared and 160 previously verified shirt numbers linked.');
