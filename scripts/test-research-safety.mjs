@@ -167,7 +167,7 @@ assert.equal(batchF.clubs.length,6);
 assert.equal(batchF.clubs.reduce((n,c)=>n+c.players.length,0),52);
 for(const c of batchF.clubs){const stored=master.clubs.find(x=>x.clubId===c.id);assert.ok(stored);for(const v of c.players){const p=stored.players.find(p=>p.player===v.name);assert.ok(p,'Missing valuation '+v.name);assert.equal(p.marketValueSourceEuroK,v.eurThousands);assert.equal(p.marketValueM,Math.round(v.eurThousands*batchF.referenceFxRateEurGbp)/1000);assert.equal(p.marketValueSourceUrl,v.valueSourceUrl);assert.equal(p.seasonSquadSourceUrl,v.squadEvidenceUrl);}for(const [name,fields] of Object.entries(c.officialPlayers)){const p=stored.players.find(p=>p.player===name);assert.ok(p);assert.equal(p.shirt,fields[0]);assert.equal(p.shirtEvidenceUrl,c.squadSourceUrl);if(fields[1])assert.equal(p.nationality,fields[1]);}}
 for(const id of ['chelsea','brentford','bournemouth','nottingham-forest']){const c=master.clubs.find(c=>c.clubId===id);assert.ok(c.players.every(p=>p.marketValueM!=null&&p.shirt!=null&&p.nationality),'Premier club must have essential SWOS data: '+id);assert.equal(new Set(c.players.map(p=>p.shirt)).size,16,'Duplicate shirt '+id);}
-assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM==null).length,357);
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM==null).length,296);
 assert.equal(master.clubs.find(c=>c.clubId==='rochdale').players.find(p=>p.player==='Laurence Maguire').shirtEvidenceUrl,'https://rochdaleafc.co.uk/2026-27-squad-numbers-confirmed/');
 console.log('Batch F: 52 market values, 32 official shirts, 16 nationalities; official squad evidence retained.');
 
