@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07111f"><title>SWOS 2026/27 · Squad & Source Audit</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:radial-gradient(ellipse at top,#1b304f,#07111f 65%);color:#f1f7ff;margin:0}
+main{max-width:1180px;margin:auto;padding:22px 16px 75px}
+h1{font-size:clamp(29px,5vw,47px);margin:6px 0 10px}h2{font-size:20px;margin:0 0 8px}.eyebrow{font-size:12px;font-weight:800;letter-spacing:.12em;color:#8ee1b6;text-transform:uppercase}
+p{color:#b6c7d9;line-height:1.6}.links{display:flex;gap:9px;flex-wrap:wrap;margin:18px 0}.links a{display:inline-block;text-decoration:none;color:#b0f4d1;font-weight:800;font-size:13px;border:1px solid #466784;border-radius:9px;background:#132b43;padding:10px 12px}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.stat{padding:13px;background:#14253a;border:1px solid #3f5472;border-radius:13px;min-width:0}.stat strong{font-size:clamp(24px,4vw,34px);display:block;font-variant-numeric:tabular-nums}.stat span{font-size:12px;color:#bdcede}
+.note{background:#15263c;border-left:3px solid #edc276;padding:14px 15px;border-radius:9px;font-size:13px;margin:18px 0;line-height:1.6;color:#e4edf7}.section{margin-top:30px}.controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:18px 0}.controls label{display:grid;gap:5px;color:#bfcee0;font-weight:700;font-size:12px}.controls .search{grid-column:span 2}.controls input,.controls select{border:1px solid #526c8b;background:#0b1b2f;color:#eff9ff;border-radius:9px;padding:12px;width:100%;font:inherit;min-width:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:10px}.club{background:#102138;border:1px solid #344c67;border-radius:13px;padding:14px;min-width:0}.club strong{font-size:14px}.sub{color:#b7c9de;font-size:12px;margin:4px 0}.bar{height:7px;background:#2c3d51;border-radius:7px;overflow:hidden;margin:8px 0}.bar div{height:100%;background:#73d5a4}.tiny{color:#aac0d8;font-size:12px}.club a,.person a{color:#9be6c4;font-size:12px}.results{display:grid;gap:8px}.person{background:#102138;border:1px solid #344c67;border-radius:12px;padding:13px 15px;display:flex;justify-content:space-between;gap:10px}.person strong{font-size:14px}.person .sub{margin-top:3px}.pill{color:#f4d39f;background:#3c2e23;border:1px solid #745537;padding:5px 7px;font-size:11px;font-weight:700;border-radius:8px;align-self:flex-start;text-align:center;flex-shrink:0}.good{color:#a6e3c2;background:#15362d;border-color:#365d51}
+#more{margin-top:10px;width:100%;padding:12px;background:#183752;border:1px solid #536d88;color:#fff;border-radius:9px;cursor:pointer}.empty{border:1px dashed #5b708a;border-radius:10px;color:#b4c7dc;padding:20px;text-align:center}footer{margin-top:30px;border-top:1px solid #3b5470;padding-top:18px;font-size:12px;color:#a8bdd2}
+@media(min-width:720px){.stats{grid-template-columns:repeat(4,minmax(0,1fr))}.controls{grid-template-columns:2fr 1fr 1fr 1fr 1fr}.controls .search{grid-column:span 1}}
+</style></head>
+<body><main>
+<div class="eyebrow">SWOS Studio · 2026/27</div><h1>Squad &amp; Source Audit</h1>
+<p>See which researched records have their essential SWOS fields filled and which have an individual season-specific squad or valuation source linked. Search all 1,472 players and filter the 92 clubs.</p>
+<nav class="links"><a href="/">← SWOS editor</a><a href="/gaps-2026-27.html">Data gaps ↗</a><a href="/downloads/SWOS_Master_2026-27.xlsx">Excel master ↗</a><a href="/downloads/SWOS_Source_Audit_2026-27.csv" download>Export entire audit CSV ↓</a></nav>
+<div id="stats" class="stats"></div>
+<div class="note"><b>Important:</b> “Essentials filled” is <b>not</b> proof a player currently belongs to that club. A source link means the research record points to a player/squad reference; it does not certify independent verification. A missing link does not mean the player is in the wrong team. Name matches in different clubs are review flags, <b>not automatically duplicate players</b>. Market values are estimates, not SWOS in-game fees.</div>
+<section class="section"><h2>Search the research records</h2>
+<div class="controls">
+<label class="search">Player or club<input id="q" type="search" placeholder="Search name, club…" autocomplete="off"></label>
+<label>Division<select id="division"><option value="">All divisions</option><option>Premier League</option><option>Championship</option><option>League One</option><option>League Two</option></select></label>
+<label>Club<select id="club"><option value="">All clubs</option></select></label>
+<label>Source status<select id="source"><option value="">All source statuses</option><option value="squad-unlinked">Squad source not linked</option><option value="value-unlinked">Value recorded; no individual source</option><option value="linked">Squad source linked</option><option value="collision">Possible same-name match</option></select></label>
+<label>Essentials<select id="essentials"><option value="">All records</option><option value="ready">All four filled</option><option value="missing">Missing essential field</option></select></label>
+</div>
+<p id="result-count" class="tiny"></p><section id="results" class="results"></section><button id="more" type="button" hidden>Show more players</button></section>
+<section class="section"><h2>Club-by-club completeness</h2><p class="tiny">Bars show the share of players with a linked squad source — not guaranteed squad accuracy.</p><div id="clubs" class="cards"></div></section>
+<footer>Source audit generated from SWOS Studio’s 2026/27 master at deployment time. It does not modify game files. All unconfirmed data remains available for manual review.</footer>
+</main><script>
+const DATA=__SWOS_SOURCE_AUDIT_DATA__;
+const el=id=>document.getElementById(id);
+function escapeHtml(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+const x=escapeHtml;
+const fmt=n=>Number(n).toLocaleString('en-GB');
+let limit=60;
+const stats=DATA.summary;
+const tiles=[
+ [fmt(stats.ready)+' / '+fmt(stats.players),'Essentials filled'],
+ [fmt(stats.squadLinked)+' / '+fmt(stats.players),'Individual squad source linked'],
+ [fmt(stats.valuedWithoutIndividualSource),'Valued players without individual value link'],
+ [fmt(stats.nameCollisionRows),'Possible same-name player records']
+];
+el('stats').innerHTML=tiles.map(t=>'<div class="stat"><strong>'+x(t[0])+'</strong><span>'+x(t[1])+'</span></div>').join('');
+const clubs=DATA.clubs.slice().sort((a,b)=>a.division.localeCompare(b.division)||a.club.localeCompare(b.club));
+function syncClubs(){
+ const division=el('division').value,old=el('club').value;
+ const options=clubs.filter(c=>!division||c.division===division);
+ el('club').innerHTML='<option value="">All clubs</option>'+options.map(c=>'<option value="'+x(c.clubId)+'">'+x(c.club)+'</option>').join('');
+ if(options.some(c=>c.clubId===old))el('club').value=old;
+}
+function filteredPlayers(){
+ const q=el('q').value.trim().toLowerCase(),div=el('division').value,club=el('club').value,status=el('source').value,ess=el('essentials').value;
+ return DATA.players.filter(p=>{
+  if(q&&!(p.player+' '+p.club+' '+p.division).toLowerCase().includes(q))return false;
+  if(div&&p.division!==div)return false;
+  if(club&&p.clubId!==club)return false;
+  if(ess==='ready'&&!p.essentialReady)return false;
+  if(ess==='missing'&&p.essentialReady)return false;
+  if(status==='squad-unlinked'&&p.squadSourceUrl)return false;
+  if(status==='value-unlinked'&&(p.marketValueM===null||p.valueSourceUrl))return false;
+  if(status==='linked'&&!p.squadSourceUrl)return false;
+  if(status==='collision'&&!p.sameNameOtherClubs.length)return false;
+  return true;
+ });
+}
+function render(){
+ const list=filteredPlayers();
+ el('result-count').textContent=fmt(list.length)+' players match your filters'+(list.length>limit?' · showing first '+fmt(limit):'');
+ el('results').innerHTML=list.length?list.slice(0,limit).map(p=>{
+  const notes=[];
+  if(!p.squadSourceUrl)notes.push('No individual squad link');
+  if(p.marketValueM!==null&&!p.valueSourceUrl)notes.push('Valuation link missing');
+  if(p.sameNameOtherClubs.length)notes.push('Same-name entry: '+p.sameNameOtherClubs.join(', '));
+  const links=[p.squadSourceUrl?'<a href="'+x(p.squadSourceUrl)+'" target="_blank" rel="noopener noreferrer">Squad source ↗</a>':'',p.valueSourceUrl?'<a href="'+x(p.valueSourceUrl)+'" target="_blank" rel="noopener noreferrer">Value source ↗</a>':''].filter(Boolean).join(' · ');
+  return '<article class="person"><div><strong>'+x(p.player)+'</strong><div class="sub">'+x(p.club)+' · '+x(p.division)+' · #'+x(p.shirt??'TBD')+'</div><div class="sub">'+x(notes.length?notes.join(' · '):'No source warnings from recorded fields')+'</div>'+(links?'<div>'+links+'</div>':'')+'</div><div class="pill '+(p.essentialReady?'good':'')+'">'+(p.essentialReady?'Fields filled':'Missing data')+'</div></article>';
+ }).join(''):'<div class="empty">No records match these filters.</div>';
+ el('more').hidden=list.length<=limit;
+ const q=el('q').value.trim().toLowerCase(),div=el('division').value,club=el('club').value;
+ const visibleClubs=clubs.filter(c=>(!div||c.division===div)&&(!club||c.clubId===club)&&(!q||c.club.toLowerCase().includes(q)));
+ el('clubs').innerHTML=visibleClubs.map(c=>{
+  const pct=(100*c.squadLinked/c.players).toFixed(1);
+  return '<article class="club"><strong>'+x(c.club)+'</strong><div class="sub">'+x(c.division)+'</div><div class="sub">'+c.ready+'/16 essential fields filled</div><div class="bar"><div style="width:'+pct+'%"></div></div><div class="tiny">'+c.squadLinked+'/16 have an individual squad source · '+c.valueLinked+' individual value links</div></article>';
+ }).join('')||'<div class="empty">No matching clubs.</div>';
+}
+el('more').addEventListener('click',()=>{limit+=60;render();});
+el('division').addEventListener('change',()=>{syncClubs();limit=60;render();});
+for(const id of ['q','club','source','essentials'])el(id).addEventListener(id==='q'?'input':'change',()=>{limit=60;render();});
+syncClubs();render();
+</script></body></html>
