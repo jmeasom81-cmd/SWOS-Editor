@@ -187,5 +187,5 @@ assert.equal(plBatchH.clubs.length,3);assert.equal(new Set(plBatchH.clubs.map(c=
 assert.equal(plBatchH.clubs.reduce((n,c)=>n+c.players.length,0),34);
 for(const record of plBatchH.clubs){const club=master.clubs.find(c=>c.clubId===record.id);assert.ok(club);for(const r of record.players){const p=club.players.find(p=>p.player===r.name);assert.ok(p,'Player absent '+record.id+'/'+r.name);assert.equal(p.marketValueSourceEuroK,r.eurThousands);assert.equal(p.marketValueM,Math.round(r.eurThousands*plBatchH.referenceFxRateEurGbp)/1000);assert.equal(p.marketValueSourceUrl,record.sourceUrl);assert.equal(p.seasonSquadSourceUrl,record.sourceUrl);}}
 for(const [id,name] of [['leeds','James Trafford'],['hull','Konstantinos Tzolakis'],['ipswich','Exequiel Palacios']]){const p=master.clubs.find(c=>c.clubId===id).players.find(p=>p.player===name);assert.ok(p);assert.equal(p.marketValueM,null,'No guessed valuation '+id+'/'+name);}
-assert.ok(html.includes('not confirmed in the cited Ipswich'));
+assert.ok(html.includes('not independently matched in the cited Ipswich'));
 console.log('Premier League batch H: 34 sourced valuations across three clubs; disputed members remain in research queue.');
