@@ -314,7 +314,7 @@
         {
           "player": "Jeremy Jacquet",
           "shirt": 5,
-          "nationality": null,
+          "nationality": "France",
           "group": null,
           "position": 3,
           "age": 21,
@@ -323,7 +323,9 @@
           "goals": null,
           "assists": null,
           "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
-          "shirtCheckedAt": "2026-10-10"
+          "shirtCheckedAt": "2026-10-10",
+          "nationalityEvidenceUrl": "https://www.liverpoolfc.com/teams/mens-team/jeremy-jacquet",
+          "nationalityCheckedAt": "2026-10-10"
         },
         {
           "player": "Florian Wirtz",
@@ -432,7 +434,7 @@
         {
           "player": "Federico Chiesa",
           "shirt": 14,
-          "nationality": null,
+          "nationality": "Italy",
           "group": null,
           "position": 4,
           "age": 28,
@@ -441,7 +443,9 @@
           "goals": null,
           "assists": null,
           "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
-          "shirtCheckedAt": "2026-10-10"
+          "shirtCheckedAt": "2026-10-10",
+          "nationalityEvidenceUrl": "https://www.liverpoolfc.com/teams/mens-team/federico-chiesa",
+          "nationalityCheckedAt": "2026-10-10"
         }
       ]
     },
@@ -1292,7 +1296,7 @@
         {
           "player": "Tyrique George",
           "shirt": 19,
-          "nationality": null,
+          "nationality": "England",
           "group": null,
           "position": 5,
           "age": 20,
@@ -1301,12 +1305,14 @@
           "goals": null,
           "assists": null,
           "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
-          "shirtCheckedAt": "2026-10-10"
+          "shirtCheckedAt": "2026-10-10",
+          "nationalityEvidenceUrl": "https://theanalyst.com/players/3937/tyrique-george",
+          "nationalityCheckedAt": "2026-10-10"
         },
         {
           "player": "Tyler Dibling",
           "shirt": 20,
-          "nationality": null,
+          "nationality": "England",
           "group": null,
           "position": 4,
           "age": 20,
@@ -1315,7 +1321,9 @@
           "goals": null,
           "assists": null,
           "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
-          "shirtCheckedAt": "2026-10-10"
+          "shirtCheckedAt": "2026-10-10",
+          "nationalityEvidenceUrl": "https://www.premierleague.com/en/players/496661/tyler-dibling/stats",
+          "nationalityCheckedAt": "2026-10-10"
         },
         {
           "player": "Thierno Barry",
@@ -1335,7 +1343,7 @@
         {
           "player": "Harrison Armstrong",
           "shirt": 45,
-          "nationality": null,
+          "nationality": "England",
           "group": null,
           "position": 6,
           "age": 19,
@@ -1344,7 +1352,9 @@
           "goals": null,
           "assists": null,
           "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
-          "shirtCheckedAt": "2026-10-10"
+          "shirtCheckedAt": "2026-10-10",
+          "nationalityEvidenceUrl": "https://www.laliga.com/en-GB/player/harrison-armstrong",
+          "nationalityCheckedAt": "2026-10-10"
         }
       ]
     },
@@ -5640,7 +5650,7 @@
         },
         {
           "player": "Dael Fry",
-          "shirt": null,
+          "shirt": 23,
           "nationality": "England",
           "group": "Defender",
           "position": 3,
@@ -5649,8 +5659,11 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "shirtEvidenceUrl": "https://www.transfermarkt.co.uk/birmingham-city/kader/verein/337/saison_id/2026",
-          "shirtCheckedAt": "2026-10-09"
+          "shirtEvidenceUrl": "https://www.livescore.com/en/football/team/name/2858/squad/",
+          "shirtCheckedAt": "2026-10-10",
+          "seasonSquadSourceUrl": "https://www.livescore.com/en/football/team/name/2858/squad/",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "2026/27 live named squad list"
         },
         {
           "player": "Alex Cochrane",
@@ -6086,7 +6099,7 @@
         },
         {
           "player": "Luca Stephenson",
-          "shirt": null,
+          "shirt": 27,
           "nationality": "England",
           "group": "Defender",
           "position": 1,
@@ -6095,8 +6108,11 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "shirtEvidenceUrl": "https://www.transfermarkt.co.uk/bolton-wanderers/kader/verein/355/saison_id/2026",
-          "shirtCheckedAt": "2026-10-09"
+          "shirtEvidenceUrl": "https://footballsquads.co.uk/eng/2026-2027/flcham/bolton.htm",
+          "shirtCheckedAt": "2026-10-10",
+          "seasonSquadSourceUrl": "https://footballsquads.co.uk/eng/2026-2027/flcham/bolton.htm",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "2026/27 live named squad list"
         },
         {
           "player": "Xavier Simons",
@@ -12659,7 +12675,7 @@
         },
         {
           "player": "Warren O'Hora",
-          "shirt": null,
+          "shirt": 16,
           "nationality": "Republic of Ireland",
           "group": "Defender",
           "position": 3,
@@ -12668,8 +12684,11 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "shirtEvidenceUrl": "https://www.lcfc.com/media-article/leicester-city-lcfc-men-league-one-squad-numbers",
-          "shirtCheckedAt": "2026-10-09"
+          "shirtEvidenceUrl": "https://www.lcfc.com/match-centre-lineups?gameId=2647987",
+          "shirtCheckedAt": "2026-10-10",
+          "seasonSquadSourceUrl": "https://www.lcfc.com/match-centre-lineups?gameId=2647987",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "Leicester City official current first-team match squad"
         },
         {
           "player": "Luke Thomas",
@@ -12687,7 +12706,7 @@
         },
         {
           "player": "John Lundstram",
-          "shirt": null,
+          "shirt": 6,
           "nationality": "England",
           "group": "Midfielder",
           "position": 6,
@@ -12696,8 +12715,11 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "shirtEvidenceUrl": "https://www.lcfc.com/media-article/leicester-city-lcfc-men-league-one-squad-numbers",
-          "shirtCheckedAt": "2026-10-09"
+          "shirtEvidenceUrl": "https://www.lcfc.com/match-centre-lineups?gameId=2647987",
+          "shirtCheckedAt": "2026-10-10",
+          "seasonSquadSourceUrl": "https://www.lcfc.com/match-centre-lineups?gameId=2647987",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "Leicester City official current first-team match squad"
         },
         {
           "player": "Conor Chaplin",
@@ -12715,7 +12737,7 @@
         },
         {
           "player": "Kamari Doyle",
-          "shirt": null,
+          "shirt": 27,
           "nationality": "England",
           "group": "Midfielder",
           "position": 6,
@@ -12724,8 +12746,11 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "shirtEvidenceUrl": "https://www.lcfc.com/media-article/leicester-city-lcfc-men-league-one-squad-numbers",
-          "shirtCheckedAt": "2026-10-09"
+          "shirtEvidenceUrl": "https://www.lcfc.com/match-centre-lineups?gameId=2647987",
+          "shirtCheckedAt": "2026-10-10",
+          "seasonSquadSourceUrl": "https://www.lcfc.com/match-centre-lineups?gameId=2647987",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "Leicester City official current first-team match squad"
         },
         {
           "player": "Sammy Braybrooke",
@@ -12789,7 +12814,7 @@
         },
         {
           "player": "Emil Riis",
-          "shirt": null,
+          "shirt": 17,
           "nationality": "Denmark",
           "group": "Forward",
           "position": 7,
@@ -12798,8 +12823,11 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "shirtEvidenceUrl": "https://www.lcfc.com/media-article/leicester-city-lcfc-men-league-one-squad-numbers",
-          "shirtCheckedAt": "2026-10-09"
+          "shirtEvidenceUrl": "https://www.lcfc.com/match-centre-lineups?gameId=2647987",
+          "shirtCheckedAt": "2026-10-10",
+          "seasonSquadSourceUrl": "https://www.lcfc.com/match-centre-lineups?gameId=2647987",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "Leicester City official current first-team match squad"
         },
         {
           "player": "Tom Watson",
