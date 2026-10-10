@@ -1,0 +1,567 @@
+{
+  "season": "2026/27",
+  "checkedAt": "2026-10-10",
+  "referenceFxRateEurGbp": 0.846328,
+  "referenceFxNote": "SWOS recorded 9 October 2026 EUR/GBP rate, rounded to £1,000. Indicative market values are not native SWOS game fees.",
+  "meaning": "Official 2026/27 squad membership, shirt numbers and nationality checked separately from Transfermarkt valuations, including older individual player profiles for recent transfers.",
+  "clubs": [
+    {
+      "id": "chelsea",
+      "pack": "CHELSEA_2627_EVIDENCE_PACK",
+      "division": "Premier League",
+      "sourceUrl": "https://www.transfermarkt.co.uk/fc-chelsea/kader/verein/631/saison_id/2026",
+      "squadSourceUrl": "https://www.chelseafc.com/en/news/article/chelsea-squad-numbers-confirmed-for-the-2026-27-season",
+      "players": [
+        {
+          "name": "Joao Pedro",
+          "eurThousands": 80000,
+          "gbpMillions": 67.706,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/fc-chelsea/kader/verein/631/saison_id/2026",
+          "squadEvidenceUrl": "https://www.chelseafc.com/en/news/article/chelsea-squad-numbers-confirmed-for-the-2026-27-season"
+        },
+        {
+          "name": "Pedro Neto",
+          "eurThousands": 60000,
+          "gbpMillions": 50.78,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/fc-chelsea/kader/verein/631/saison_id/2026",
+          "squadEvidenceUrl": "https://www.chelseafc.com/en/news/article/chelsea-squad-numbers-confirmed-for-the-2026-27-season"
+        },
+        {
+          "name": "Jamie Gittens",
+          "eurThousands": 30000,
+          "gbpMillions": 25.39,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/fc-chelsea/kader/verein/631/saison_id/2026",
+          "squadEvidenceUrl": "https://www.chelseafc.com/en/news/article/chelsea-squad-numbers-confirmed-for-the-2026-27-season"
+        },
+        {
+          "name": "Reece James",
+          "eurThousands": 60000,
+          "gbpMillions": 50.78,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/fc-chelsea/kader/verein/631/saison_id/2026",
+          "squadEvidenceUrl": "https://www.chelseafc.com/en/news/article/chelsea-squad-numbers-confirmed-for-the-2026-27-season"
+        },
+        {
+          "name": "Levi Colwill",
+          "eurThousands": 50000,
+          "gbpMillions": 42.316,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/fc-chelsea/kader/verein/631/saison_id/2026",
+          "squadEvidenceUrl": "https://www.chelseafc.com/en/news/article/chelsea-squad-numbers-confirmed-for-the-2026-27-season"
+        },
+        {
+          "name": "Wesley Fofana",
+          "eurThousands": 28000,
+          "gbpMillions": 23.697,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/fc-chelsea/kader/verein/631/saison_id/2026",
+          "squadEvidenceUrl": "https://www.chelseafc.com/en/news/article/chelsea-squad-numbers-confirmed-for-the-2026-27-season"
+        },
+        {
+          "name": "Malo Gusto",
+          "eurThousands": 35000,
+          "gbpMillions": 29.621,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/fc-chelsea/kader/verein/631/saison_id/2026",
+          "squadEvidenceUrl": "https://www.chelseafc.com/en/news/article/chelsea-squad-numbers-confirmed-for-the-2026-27-season"
+        },
+        {
+          "name": "Maxence Lacroix",
+          "eurThousands": 50000,
+          "gbpMillions": 42.316,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/maxence-lacroix/profil/spieler/434224",
+          "squadEvidenceUrl": "https://www.chelseafc.com/en/news/article/chelsea-squad-numbers-confirmed-for-the-2026-27-season"
+        },
+        {
+          "name": "Valentin Barco",
+          "eurThousands": 40000,
+          "gbpMillions": 33.853,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/valentin-barco/profil/spieler/849410",
+          "squadEvidenceUrl": "https://www.chelseafc.com/en/news/article/chelsea-squad-numbers-confirmed-for-the-2026-27-season"
+        },
+        {
+          "name": "Romeo Lavia",
+          "eurThousands": 22000,
+          "gbpMillions": 18.619,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/fc-chelsea/kader/verein/631/saison_id/2026",
+          "squadEvidenceUrl": "https://www.chelseafc.com/en/news/article/chelsea-squad-numbers-confirmed-for-the-2026-27-season"
+        },
+        {
+          "name": "Emmanuel Emegha",
+          "eurThousands": 25000,
+          "gbpMillions": 21.158,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/fc-chelsea/kader/verein/631/saison_id/2026",
+          "squadEvidenceUrl": "https://www.chelseafc.com/en/news/article/chelsea-squad-numbers-confirmed-for-the-2026-27-season"
+        },
+        {
+          "name": "Teddy Sharman-Lowe",
+          "eurThousands": 500,
+          "gbpMillions": 0.423,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/fc-chelsea/kader/verein/631/saison_id/2026",
+          "squadEvidenceUrl": "https://www.chelseafc.com/en/news/article/chelsea-squad-numbers-confirmed-for-the-2026-27-season"
+        },
+        {
+          "name": "Gaga Slonina",
+          "eurThousands": 3000,
+          "gbpMillions": 2.539,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/fc-chelsea/kader/verein/631/saison_id/2026",
+          "squadEvidenceUrl": "https://www.chelseafc.com/en/news/article/chelsea-squad-numbers-confirmed-for-the-2026-27-season"
+        }
+      ],
+      "officialPlayers": {},
+      "squadReviews": [
+        "Transfermarkt's Chelsea 2026/27 indexed squad excludes Maxence Lacroix and Valentin Barco, but Chelsea FC's official 19 August 2026 squad-number announcement confirms both. Their €50m and €40m market estimates come from earlier individual Transfermarkt profiles, so their price references are historical, not current Chelsea-squad valuations.",
+        "Gaga Slonina in Chelsea's official 2026/27 squad announcement is shown as Gabriel Slonina on Transfermarkt. Club and shirt #44 are confirmed; retain the SWOS display name and its sourced €3m valuation."
+      ]
+    },
+    {
+      "id": "brentford",
+      "pack": "BRENTFORD_2627_EVIDENCE_PACK",
+      "division": "Premier League",
+      "sourceUrl": "https://www.transfermarkt.co.uk/fc-brentford/kader/verein/1148/saison_id/2026",
+      "squadSourceUrl": "https://www.premierleague.com/en/news/4725682",
+      "players": [
+        {
+          "name": "Caoimhin Kelleher",
+          "eurThousands": 28000,
+          "gbpMillions": 23.697,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/fc-brentford/kader/verein/1148/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682"
+        },
+        {
+          "name": "Hakon Valdimarsson",
+          "eurThousands": 2500,
+          "gbpMillions": 2.116,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/fc-brentford/kader/verein/1148/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682"
+        },
+        {
+          "name": "Aaron Hickey",
+          "eurThousands": 16000,
+          "gbpMillions": 13.541,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/fc-brentford/kader/verein/1148/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682"
+        },
+        {
+          "name": "Rico Henry",
+          "eurThousands": 13000,
+          "gbpMillions": 11.002,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/fc-brentford/kader/verein/1148/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682"
+        },
+        {
+          "name": "Sepp van den Berg",
+          "eurThousands": 32000,
+          "gbpMillions": 27.082,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/fc-brentford/kader/verein/1148/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682"
+        },
+        {
+          "name": "Kristoffer Ajer",
+          "eurThousands": 18000,
+          "gbpMillions": 15.234,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/fc-brentford/kader/verein/1148/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682"
+        },
+        {
+          "name": "Nathan Collins",
+          "eurThousands": 30000,
+          "gbpMillions": 25.39,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/fc-brentford/kader/verein/1148/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682"
+        },
+        {
+          "name": "Yehor Yarmoliuk",
+          "eurThousands": 32000,
+          "gbpMillions": 27.082,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/fc-brentford/kader/verein/1148/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682"
+        },
+        {
+          "name": "Mathias Jensen",
+          "eurThousands": 10000,
+          "gbpMillions": 8.463,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/fc-brentford/kader/verein/1148/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682"
+        },
+        {
+          "name": "Fabio Carvalho",
+          "eurThousands": 8000,
+          "gbpMillions": 6.771,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/fc-brentford/kader/verein/1148/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682"
+        },
+        {
+          "name": "Antoni Milambo",
+          "eurThousands": 15000,
+          "gbpMillions": 12.695,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/fc-brentford/kader/verein/1148/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682"
+        },
+        {
+          "name": "Mikkel Damsgaard",
+          "eurThousands": 30000,
+          "gbpMillions": 25.39,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/fc-brentford/kader/verein/1148/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682"
+        },
+        {
+          "name": "Kevin Schade",
+          "eurThousands": 35000,
+          "gbpMillions": 29.621,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/fc-brentford/kader/verein/1148/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682"
+        },
+        {
+          "name": "Igor Thiago",
+          "eurThousands": 65000,
+          "gbpMillions": 55.011,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/fc-brentford/kader/verein/1148/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682"
+        },
+        {
+          "name": "Dango Ouattara",
+          "eurThousands": 35000,
+          "gbpMillions": 29.621,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/fc-brentford/kader/verein/1148/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682"
+        },
+        {
+          "name": "Callum Wilson",
+          "eurThousands": 4000,
+          "gbpMillions": 3.385,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/fc-brentford/kader/verein/1148/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682"
+        }
+      ],
+      "officialPlayers": {},
+      "squadReviews": [
+        "Brentford official 2026/27 squad uses Yehor Yarmoliuk, shirt #6; Transfermarkt writes Yegor Yarmolyuk and lists shirt #18. Club membership and the official #6 are kept independently of the sourced €32m market estimate.",
+        "Brentford official 2026/27 squad shirt numbers are the authority over stale Transfermarkt numbers; no market-value update changes a previously recorded shirt."
+      ]
+    },
+    {
+      "id": "bournemouth",
+      "pack": "BOURNEMOUTH_2627_EVIDENCE_PACK",
+      "division": "Premier League",
+      "sourceUrl": "https://www.transfermarkt.co.uk/afc-bournemouth/kader/verein/989/saison_id/2026",
+      "squadSourceUrl": "https://www.premierleague.com/en/clubs/91/bournemouth/squad",
+      "players": [
+        {
+          "name": "Djordje Petrovic",
+          "eurThousands": 28000,
+          "gbpMillions": 23.697,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/afc-bournemouth/kader/verein/989/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/clubs/91/bournemouth/squad"
+        },
+        {
+          "name": "Michele Di Gregorio",
+          "eurThousands": 10000,
+          "gbpMillions": 8.463,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/michele-di-gregorio/profil/spieler/301238",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/clubs/91/bournemouth/squad"
+        },
+        {
+          "name": "Julian Araujo",
+          "eurThousands": 8000,
+          "gbpMillions": 6.771,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/afc-bournemouth/kader/verein/989/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/clubs/91/bournemouth/squad"
+        },
+        {
+          "name": "Adrien Truffert",
+          "eurThousands": 30000,
+          "gbpMillions": 25.39,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/afc-bournemouth/kader/verein/989/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/clubs/91/bournemouth/squad"
+        },
+        {
+          "name": "Antonio Silva",
+          "eurThousands": 25000,
+          "gbpMillions": 21.158,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/antonio-silva/profil/spieler/650568",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/clubs/91/bournemouth/squad"
+        },
+        {
+          "name": "Bafode Diakite",
+          "eurThousands": 25000,
+          "gbpMillions": 21.158,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/afc-bournemouth/kader/verein/989/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/clubs/91/bournemouth/squad"
+        },
+        {
+          "name": "Juanlu Sanchez",
+          "eurThousands": 10000,
+          "gbpMillions": 8.463,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/juanlu-sanchez/profil/spieler/676042",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/clubs/91/bournemouth/squad"
+        },
+        {
+          "name": "Lewis Cook",
+          "eurThousands": 11000,
+          "gbpMillions": 9.31,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/afc-bournemouth/kader/verein/989/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/clubs/91/bournemouth/squad"
+        },
+        {
+          "name": "David Brooks",
+          "eurThousands": 12000,
+          "gbpMillions": 10.156,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/afc-bournemouth/kader/verein/989/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/clubs/91/bournemouth/squad"
+        },
+        {
+          "name": "Alex Scott",
+          "eurThousands": 50000,
+          "gbpMillions": 42.316,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/afc-bournemouth/kader/verein/989/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/clubs/91/bournemouth/squad"
+        },
+        {
+          "name": "Ryan Christie",
+          "eurThousands": 8000,
+          "gbpMillions": 6.771,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/afc-bournemouth/kader/verein/989/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/clubs/91/bournemouth/squad"
+        },
+        {
+          "name": "Tyler Adams",
+          "eurThousands": 25000,
+          "gbpMillions": 21.158,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/afc-bournemouth/kader/verein/989/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/clubs/91/bournemouth/squad"
+        },
+        {
+          "name": "Evanilson",
+          "eurThousands": 35000,
+          "gbpMillions": 29.621,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/afc-bournemouth/kader/verein/989/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/clubs/91/bournemouth/squad"
+        },
+        {
+          "name": "Justin Kluivert",
+          "eurThousands": 25000,
+          "gbpMillions": 21.158,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/afc-bournemouth/kader/verein/989/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/clubs/91/bournemouth/squad"
+        },
+        {
+          "name": "Amine Adli",
+          "eurThousands": 20000,
+          "gbpMillions": 16.927,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/afc-bournemouth/kader/verein/989/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/clubs/91/bournemouth/squad"
+        },
+        {
+          "name": "Junior Kroupi",
+          "eurThousands": 70000,
+          "gbpMillions": 59.243,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/afc-bournemouth/kader/verein/989/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/clubs/91/bournemouth/squad"
+        }
+      ],
+      "officialPlayers": {
+        "Djordje Petrovic": [
+          1,
+          "Serbia"
+        ],
+        "Michele Di Gregorio": [
+          20,
+          "Italy"
+        ],
+        "Julian Araujo": [
+          2,
+          "Mexico"
+        ],
+        "Adrien Truffert": [
+          3,
+          "France"
+        ],
+        "Antonio Silva": [
+          14,
+          "Portugal"
+        ],
+        "Bafode Diakite": [
+          18,
+          "France"
+        ],
+        "Juanlu Sanchez": [
+          24,
+          "Spain"
+        ],
+        "Lewis Cook": [
+          4,
+          "England"
+        ],
+        "David Brooks": [
+          7,
+          "Wales"
+        ],
+        "Alex Scott": [
+          8,
+          "England"
+        ],
+        "Ryan Christie": [
+          10,
+          "Scotland"
+        ],
+        "Tyler Adams": [
+          12,
+          "United States"
+        ],
+        "Evanilson": [
+          9,
+          "Brazil"
+        ],
+        "Justin Kluivert": [
+          19,
+          "Netherlands"
+        ],
+        "Amine Adli": [
+          21,
+          "Morocco"
+        ],
+        "Junior Kroupi": [
+          22,
+          "France"
+        ]
+      },
+      "squadReviews": [
+        "Bournemouth's Premier League 2026/27 roster confirms all 16 selected SWOS players, shirts and nationalities. The market-value site still labels Michele Di Gregorio, Antonio Silva and Juanlu Sanchez at their former clubs. Their €10m, €25m and €10m figures are older individual-profile estimates, not season-specific Bournemouth market updates."
+      ]
+    },
+    {
+      "id": "nottingham-forest",
+      "pack": "NOTTINGHAM_FOREST_2627_EVIDENCE_PACK",
+      "division": "Premier League",
+      "sourceUrl": "https://www.transfermarkt.co.uk/nottingham-forest/startseite/verein/703/saison_id/2026",
+      "squadSourceUrl": "https://www.premierleague.com/en/news/4725682",
+      "players": [
+        {
+          "name": "Daniel Munoz",
+          "eurThousands": 22000,
+          "gbpMillions": 18.619,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/daniel-munoz/profil/spieler/493003",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682"
+        },
+        {
+          "name": "Chris Wood",
+          "eurThousands": 5000,
+          "gbpMillions": 4.232,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/nottingham-forest/startseite/verein/703/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682"
+        },
+        {
+          "name": "Matz Sels",
+          "eurThousands": 3500,
+          "gbpMillions": 2.962,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/nottingham-forest/startseite/verein/703/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682"
+        },
+        {
+          "name": "Ola Aina",
+          "eurThousands": 18000,
+          "gbpMillions": 15.234,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/nottingham-forest/startseite/verein/703/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682"
+        },
+        {
+          "name": "Arnaud Kalimuendo",
+          "eurThousands": 25000,
+          "gbpMillions": 21.158,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/nottingham-forest/startseite/verein/703/saison_id/2026",
+          "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682"
+        }
+      ],
+      "officialPlayers": {
+        "Morgan Gibbs-White": [
+          10
+        ],
+        "Murillo": [
+          5
+        ],
+        "Neco Williams": [
+          3
+        ],
+        "Nikola Milenkovic": [
+          31
+        ],
+        "Ousmane Diomande": [
+          2
+        ],
+        "Dan Ndoye": [
+          14
+        ],
+        "Liam Delap": [
+          19
+        ],
+        "Callum Hudson-Odoi": [
+          7
+        ],
+        "Ibrahim Sangare": [
+          6
+        ],
+        "Xaver Schlager": [
+          21
+        ],
+        "Nicolas Dominguez": [
+          8
+        ],
+        "Daniel Munoz": [
+          27
+        ],
+        "Chris Wood": [
+          9
+        ],
+        "Matz Sels": [
+          26
+        ],
+        "Ola Aina": [
+          34
+        ],
+        "Arnaud Kalimuendo": [
+          15
+        ]
+      },
+      "squadReviews": [
+        "Nottingham Forest's official Premier League 2026/27 list confirms Daniel Munoz at shirt #27. His €22m Transfermarkt value is from an earlier player profile which still labels Crystal Palace; preserve the official current-club evidence separately."
+      ]
+    },
+    {
+      "id": "rochdale",
+      "pack": "ROCHDALE_2627_PACK",
+      "division": "League Two",
+      "sourceUrl": "https://www.transfermarkt.co.uk/afc-rochdale/kader/verein/1088/saison_id/2026",
+      "squadSourceUrl": "https://rochdaleafc.co.uk/2026-27-squad-numbers-confirmed/",
+      "players": [
+        {
+          "name": "Laurence Maguire",
+          "eurThousands": 150,
+          "gbpMillions": 0.127,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/afc-rochdale/kader/verein/1088/saison_id/2026",
+          "squadEvidenceUrl": "https://rochdaleafc.co.uk/2026-27-squad-numbers-confirmed/"
+        }
+      ],
+      "officialPlayers": {},
+      "squadReviews": [
+        "Laurence Maguire's €150k is linked to the 2026/27 Transfermarkt squad; official Rochdale shirt #5 remains separately verified. Most of the remaining squad is explicitly unvalued."
+      ]
+    },
+    {
+      "id": "york-city",
+      "pack": "YORK_CITY_2627_PACK",
+      "division": "League Two",
+      "sourceUrl": "https://www.transfermarkt.co.uk/york-city/kader/verein/1252/saison_id/2026",
+      "squadSourceUrl": "https://www.transfermarkt.co.uk/york-city/kader/verein/1252/saison_id/2026",
+      "players": [
+        {
+          "name": "Zak Johnson",
+          "eurThousands": 75,
+          "gbpMillions": 0.063,
+          "valueSourceUrl": "https://www.transfermarkt.co.uk/york-city/kader/verein/1252/saison_id/2026",
+          "squadEvidenceUrl": "https://www.transfermarkt.co.uk/york-city/kader/verein/1252/saison_id/2026"
+        }
+      ],
+      "officialPlayers": {},
+      "squadReviews": [
+        "Zak Johnson has a €75k estimate in the 2026/27 York City squad. The source does not verify the research shirt #5, so keep it provisional."
+      ]
+    }
+  ]
+}
