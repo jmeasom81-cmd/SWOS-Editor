@@ -1,0 +1,218 @@
+{
+  "season": "2026/27",
+  "checkedAt": "2026-10-10",
+  "referenceFxRateEurGbp": 0.846328,
+  "referenceFxNote": "Existing SWOS 9 Oct 2026 EUR/GBP research exchange-rate reference; converted market values rounded to £1,000.",
+  "meaning": "Indicative research market value, not SWOS encoded game cost or transfer fee. No guessed values or automatic shirt assignments.",
+  "clubs": [
+    {
+      "id": "leeds",
+      "pack": "LEEDS_2627_EVIDENCE_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/leeds-united/kader/verein/399/saison_id/2026",
+      "sourceSnapshot": "2026/27 market-value indexed squad",
+      "players": [
+        {
+          "name": "Jayden Bogle",
+          "eurThousands": 15000,
+          "gbpMillions": 12.695
+        },
+        {
+          "name": "Gabriel Gudmundsson",
+          "eurThousands": 20000,
+          "gbpMillions": 16.927
+        },
+        {
+          "name": "Joe Rodon",
+          "eurThousands": 18000,
+          "gbpMillions": 15.234
+        },
+        {
+          "name": "James Justin",
+          "eurThousands": 12000,
+          "gbpMillions": 10.156
+        },
+        {
+          "name": "Ethan Ampadu",
+          "eurThousands": 30000,
+          "gbpMillions": 25.39
+        },
+        {
+          "name": "Sean Longstaff",
+          "eurThousands": 15000,
+          "gbpMillions": 12.695
+        },
+        {
+          "name": "Anton Stach",
+          "eurThousands": 28000,
+          "gbpMillions": 23.697
+        },
+        {
+          "name": "Ao Tanaka",
+          "eurThousands": 13000,
+          "gbpMillions": 11.002
+        },
+        {
+          "name": "Brenden Aaronson",
+          "eurThousands": 22000,
+          "gbpMillions": 18.619
+        },
+        {
+          "name": "Dominic Calvert-Lewin",
+          "eurThousands": 22000,
+          "gbpMillions": 18.619
+        },
+        {
+          "name": "Harry Wilson",
+          "eurThousands": 25000,
+          "gbpMillions": 21.158
+        },
+        {
+          "name": "Lukas Nmecha",
+          "eurThousands": 10000,
+          "gbpMillions": 8.463
+        },
+        {
+          "name": "Noah Okafor",
+          "eurThousands": 25000,
+          "gbpMillions": 21.158
+        }
+      ],
+      "squadReviews": [
+        "James Trafford, Michael Zetterer and Tarik Muharemovic are not confirmed in the cited Leeds 2026/27 Transfermarkt squad; keep all three market values missing rather than reusing valuations from other clubs.",
+        "Harry Wilson is listed with no shirt in the cited Leeds 2026/27 squad even though SWOS has a research shirt. The sourced €25m value does not verify his shirt number.",
+        "The €25m value for Noah Okafor and €22m for Dominic Calvert-Lewin are market estimates, not transfer fees."
+      ]
+    },
+    {
+      "id": "hull",
+      "pack": "HULL_2627_EVIDENCE_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/hull-city/kader/verein/3008/saison_id/2026",
+      "sourceSnapshot": "2026/27 market-value indexed squad",
+      "players": [
+        {
+          "name": "Jack Butland",
+          "eurThousands": 1500,
+          "gbpMillions": 1.269
+        },
+        {
+          "name": "Charlie Hughes",
+          "eurThousands": 10000,
+          "gbpMillions": 8.463
+        },
+        {
+          "name": "Semi Ajayi",
+          "eurThousands": 700,
+          "gbpMillions": 0.592
+        },
+        {
+          "name": "Ryan Giles",
+          "eurThousands": 12000,
+          "gbpMillions": 10.156
+        },
+        {
+          "name": "Lewie Coyle",
+          "eurThousands": 1200,
+          "gbpMillions": 1.016
+        },
+        {
+          "name": "Paddy McNair",
+          "eurThousands": 1500,
+          "gbpMillions": 1.269
+        },
+        {
+          "name": "Regan Slater",
+          "eurThousands": 5500,
+          "gbpMillions": 4.655
+        },
+        {
+          "name": "Abdulkadir Omur",
+          "eurThousands": 1500,
+          "gbpMillions": 1.269
+        },
+        {
+          "name": "Matt Crooks",
+          "eurThousands": 700,
+          "gbpMillions": 0.592
+        },
+        {
+          "name": "Mohamed Belloumi",
+          "eurThousands": 6000,
+          "gbpMillions": 5.078
+        },
+        {
+          "name": "Oliver McBurnie",
+          "eurThousands": 5000,
+          "gbpMillions": 4.232
+        }
+      ],
+      "squadReviews": [
+        "Transfermarkt refers to Abdulkadir Omur as Abdülkadir Ömür and Oliver McBurnie as Oli McBurnie; these are name aliases, not a reason to change the existing SWOS player names.",
+        "Konstantinos Tzolakis, Hidemasa Morita and Mohamed-Ali Cho are not confirmed as members of the cited Hull 2026/27 season squad; hold their values. Tim Iroegbunam and Joe Gelhardt also require a separate club-specific check.",
+        "Hull's researched shirt numbers remain untouched; even matching valuations do not independently verify squad numbers."
+      ]
+    },
+    {
+      "id": "ipswich",
+      "pack": "IPSWICH_2627_EVIDENCE_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/ipswich-town/kader/verein/677/saison_id/2026",
+      "sourceSnapshot": "2026/27 market-value indexed squad",
+      "players": [
+        {
+          "name": "Alex Palmer",
+          "eurThousands": 1000,
+          "gbpMillions": 0.846
+        },
+        {
+          "name": "Christian Walton",
+          "eurThousands": 2500,
+          "gbpMillions": 2.116
+        },
+        {
+          "name": "Leif Davis",
+          "eurThousands": 20000,
+          "gbpMillions": 16.927
+        },
+        {
+          "name": "Darnell Furlong",
+          "eurThousands": 2500,
+          "gbpMillions": 2.116
+        },
+        {
+          "name": "Jacob Greaves",
+          "eurThousands": 14000,
+          "gbpMillions": 11.849
+        },
+        {
+          "name": "Dara O'Shea",
+          "eurThousands": 16000,
+          "gbpMillions": 13.541
+        },
+        {
+          "name": "Azor Matusiwa",
+          "eurThousands": 12000,
+          "gbpMillions": 10.156
+        },
+        {
+          "name": "Marcelino Nunez",
+          "eurThousands": 14000,
+          "gbpMillions": 11.849
+        },
+        {
+          "name": "Anis Mehmeti",
+          "eurThousands": 15000,
+          "gbpMillions": 12.695
+        },
+        {
+          "name": "Chuba Akpom",
+          "eurThousands": 3500,
+          "gbpMillions": 2.962
+        }
+      ],
+      "squadReviews": [
+        "Transfermarkt spells Marcelino Nunez as Marcelino Núñez. The 2026/27 market valuation is linked to that same player without rewriting the SWOS display name.",
+        "Sasa Lukic, Exequiel Palacios, Issa Diop, Julio Enciso, Abdul Fatawu and Daizen Maeda are not independently matched in the cited Ipswich 2026/27 squad; leave them blank rather than importing another club's market prices.",
+        "No existing Ipswich shirt number is overwritten; market evidence is distinct from current official squad-number evidence."
+      ]
+    }
+  ]
+}
