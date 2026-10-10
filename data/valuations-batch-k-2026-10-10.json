@@ -1,0 +1,148 @@
+{
+  "season": "2026/27",
+  "checkedAt": "2026-10-10",
+  "referenceFxRateEurGbp": 0.846328,
+  "meaning": "Third-party estimated market prices in EUR converted to GBP millions using the existing SWOS research FX reference; not transfer prices and not encoded SWOS value.",
+  "sourcePolicy": "Only exact player-name matches within named current 2026/27 club squad pages. Empty values remain null. 2026/27 squad affiliation requires later official confirmation for installation.",
+  "clubs": [
+    {
+      "id": "barnsley",
+      "sourceUrl": "https://www.transfermarkt.co.uk/barnsley-fc/kader/verein/349/saison_id/2026",
+      "players": [
+        {
+          "name": "Cieran Slicker",
+          "eurThousands": 350,
+          "gbpMillions": 0.296
+        }
+      ],
+      "reviewNote": "Other target players missing from the 26/27 source must remain blank."
+    },
+    {
+      "id": "bradford-city",
+      "sourceUrl": "https://www.playmakerstats.com/team/bradford-city/2596/market-value",
+      "players": [
+        {
+          "name": "Cameron Dawson",
+          "eurThousands": 300,
+          "gbpMillions": 0.254
+        },
+        {
+          "name": "Reece Welch",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        },
+        {
+          "name": "Hayden Matthews",
+          "eurThousands": 1200,
+          "gbpMillions": 1.016
+        },
+        {
+          "name": "Kieran Morgan",
+          "eurThousands": 1500,
+          "gbpMillions": 1.269
+        }
+      ],
+      "reviewNote": "No missing-valued squad member without an explicit published value was filled."
+    },
+    {
+      "id": "blackpool",
+      "sourceUrl": "https://www.playmakerstats.com/team/blackpool/2585",
+      "players": [
+        {
+          "name": "Luke Southwood",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        },
+        {
+          "name": "Jerry Yates",
+          "eurThousands": 1200,
+          "gbpMillions": 1.016
+        }
+      ],
+      "reviewNote": "No missing-valued squad member without an explicit published value was filled."
+    },
+    {
+      "id": "cambridge-united",
+      "sourceUrl": "https://www.playmakerstats.com/team/cambridge-united/5496?epoca_id=156",
+      "players": [
+        {
+          "name": "Sam Curtis",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        },
+        {
+          "name": "Owen Moxon",
+          "eurThousands": 500,
+          "gbpMillions": 0.423
+        }
+      ],
+      "reviewNote": "No missing-valued squad member without an explicit published value was filled."
+    },
+    {
+      "id": "notts-county",
+      "sourceUrl": "https://www.playmakerstats.com/team/notts-county/2587?epoca_id=156",
+      "players": [
+        {
+          "name": "Ollie Cooper",
+          "eurThousands": 1500,
+          "gbpMillions": 1.269
+        },
+        {
+          "name": "Dean Campbell",
+          "eurThousands": 400,
+          "gbpMillions": 0.339
+        },
+        {
+          "name": "Callum Roberts",
+          "eurThousands": 100,
+          "gbpMillions": 0.085
+        }
+      ],
+      "reviewNote": "No missing-valued squad member without an explicit published value was filled."
+    },
+    {
+      "id": "stevenage",
+      "sourceUrl": "https://www.playmakerstats.com/team/stevenage/8402?edicao_id=219852",
+      "players": [
+        {
+          "name": "Tommy Setford",
+          "eurThousands": 500,
+          "gbpMillions": 0.423
+        },
+        {
+          "name": "Daniel Barden",
+          "eurThousands": 100,
+          "gbpMillions": 0.085
+        },
+        {
+          "name": "Daniel Phillips",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        },
+        {
+          "name": "Michael Mellon",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        }
+      ],
+      "reviewNote": "No value inferred for Terence Vancooten or Oliver Sanderson."
+    },
+    {
+      "id": "crewe-alexandra",
+      "sourceUrl": "https://www.playmakerstats.com/team/crewe-alexandra/4760/market-value",
+      "players": [
+        {
+          "name": "Joe White",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        },
+        {
+          "name": "Charlie McNeill",
+          "eurThousands": 850,
+          "gbpMillions": 0.719
+        }
+      ],
+      "reviewNote": "No missing-valued squad member without an explicit published value was filled."
+    }
+  ]
+}

@@ -10714,10 +10714,17 @@
           "group": "Goalkeeper",
           "position": 0,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.296,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/barnsley-fc/kader/verein/349/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 350,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/barnsley-fc/kader/verein/349/saison_id/2026",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "2026/27 club squad market-value reference"
         },
         {
           "player": "Rogan Ravenhill",
@@ -10961,10 +10968,17 @@
           "group": "Goalkeeper",
           "position": 0,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.169,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.playmakerstats.com/team/blackpool/2585",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 200,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.playmakerstats.com/team/blackpool/2585",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "2026/27 club squad market-value reference"
         },
         {
           "player": "Andy Lyons",
@@ -11145,10 +11159,17 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 1.016,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.playmakerstats.com/team/blackpool/2585",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 1200,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.playmakerstats.com/team/blackpool/2585",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "2026/27 club squad market-value reference"
         },
         {
           "player": "Tom Bloxham",
@@ -11200,10 +11221,17 @@
           "group": "Goalkeeper",
           "position": 0,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.254,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.playmakerstats.com/team/bradford-city/2596/market-value",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 300,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.playmakerstats.com/team/bradford-city/2596/market-value",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "2026/27 club squad market-value reference"
         },
         {
           "player": "Jon McCracken",
@@ -11228,10 +11256,17 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.212,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.playmakerstats.com/team/bradford-city/2596/market-value",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 250,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.playmakerstats.com/team/bradford-city/2596/market-value",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "2026/27 club squad market-value reference"
         },
         {
           "player": "Ibou Touray",
@@ -11272,10 +11307,17 @@
           "group": "Defender",
           "position": 3,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 1.016,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.playmakerstats.com/team/bradford-city/2596/market-value",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 1200,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.playmakerstats.com/team/bradford-city/2596/market-value",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "2026/27 club squad market-value reference"
         },
         {
           "player": "Aden Baldwin",
@@ -11364,10 +11406,17 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 1.269,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.playmakerstats.com/team/bradford-city/2596/market-value",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 1500,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.playmakerstats.com/team/bradford-city/2596/market-value",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "2026/27 club squad market-value reference"
         },
         {
           "player": "Josh Neufville",
@@ -11977,10 +12026,17 @@
           "group": "Defender",
           "position": 1,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.169,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.playmakerstats.com/team/cambridge-united/5496?epoca_id=156",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 200,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.playmakerstats.com/team/cambridge-united/5496?epoca_id=156",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "2026/27 club squad market-value reference"
         },
         {
           "player": "Dominic Ball",
@@ -12053,10 +12109,17 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.423,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.playmakerstats.com/team/cambridge-united/5496?epoca_id=156",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 500,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.playmakerstats.com/team/cambridge-united/5496?epoca_id=156",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "2026/27 club squad market-value reference"
         },
         {
           "player": "Louis Appere",
@@ -13797,10 +13860,17 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 1.269,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.playmakerstats.com/team/notts-county/2587?epoca_id=156",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 1500,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.playmakerstats.com/team/notts-county/2587?epoca_id=156",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "2026/27 club squad market-value reference"
         },
         {
           "player": "Conor Grant",
@@ -13825,10 +13895,17 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.339,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.playmakerstats.com/team/notts-county/2587?epoca_id=156",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 400,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.playmakerstats.com/team/notts-county/2587?epoca_id=156",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "2026/27 club squad market-value reference"
         },
         {
           "player": "Matt Palmer",
@@ -13853,10 +13930,17 @@
           "group": "Forward",
           "position": 4,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.085,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.playmakerstats.com/team/notts-county/2587?epoca_id=156",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 100,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.playmakerstats.com/team/notts-county/2587?epoca_id=156",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "2026/27 club squad market-value reference"
         },
         {
           "player": "Daniel Kanu",
@@ -15243,10 +15327,17 @@
           "group": "Goalkeeper",
           "position": 0,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.423,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.playmakerstats.com/team/stevenage/8402?edicao_id=219852",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 500,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.playmakerstats.com/team/stevenage/8402?edicao_id=219852",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "2026/27 club squad market-value reference"
         },
         {
           "player": "Daniel Barden",
@@ -15255,10 +15346,17 @@
           "group": "Goalkeeper",
           "position": 0,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.085,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.playmakerstats.com/team/stevenage/8402?edicao_id=219852",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 100,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.playmakerstats.com/team/stevenage/8402?edicao_id=219852",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "2026/27 club squad market-value reference"
         },
         {
           "player": "Luther Wildin",
@@ -15388,10 +15486,17 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.212,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.playmakerstats.com/team/stevenage/8402?edicao_id=219852",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 250,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.playmakerstats.com/team/stevenage/8402?edicao_id=219852",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "2026/27 club squad market-value reference"
         },
         {
           "player": "Dan Kemp",
@@ -15484,10 +15589,17 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.212,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.playmakerstats.com/team/stevenage/8402?edicao_id=219852",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 250,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.playmakerstats.com/team/stevenage/8402?edicao_id=219852",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "2026/27 club squad market-value reference"
         }
       ]
     },
@@ -18381,10 +18493,17 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.169,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.playmakerstats.com/team/crewe-alexandra/4760/market-value",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 200,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.playmakerstats.com/team/crewe-alexandra/4760/market-value",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "2026/27 club squad market-value reference"
         },
         {
           "player": "Jordan Gibson",
@@ -18483,10 +18602,17 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.719,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceUrl": "https://www.playmakerstats.com/team/crewe-alexandra/4760/market-value",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 850,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.playmakerstats.com/team/crewe-alexandra/4760/market-value",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "2026/27 club squad market-value reference"
         }
       ]
     },

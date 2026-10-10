@@ -1,5 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "node scripts/test-research-safety.mjs && node patch-v133.mjs && node patch-v1331.mjs && node patch-v134.mjs && node scripts/build-master-tracker.mjs && node scripts/build-kit-guide.mjs",
+  "buildCommand": "node scripts/test-research-safety.mjs && node patch-v133.mjs && node patch-v1331.mjs && node patch-v134.mjs && node scripts/build-master-tracker.mjs && node scripts/build-kit-guide.mjs && node scripts/build-gap-review.mjs",
   "outputDirectory": "dist"
 }
