@@ -1594,6 +1594,59 @@
       "paletteApproximation": true,
       "note": "Official Swindon club store confirms 26/27 home shirt; contemporary kit documentation confirms fine white pinstripes on red and standard white shorts/red socks, with alternative red shorts possible. SWOS plain red avoids wrongly substituting thick white stripes.",
       "secondarySourceUrl": "https://www.footyheadlines.com/8637405100/swindon-town-26-27-home-kit-released.html"
+    },
+    {
+      "clubId": "tranmere-rovers",
+      "description": "Predominantly white 2026/27 Mills home shirt",
+      "sourceUrl": "https://trfcshop.co.uk/products/26-27-home-jersey-1",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 1,
+        "shirt2": 1,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "Tranmere official 2026/27 adult replica identifies home shirt colour as White. Plain SWOS white is the source-supported dominant colour; kit graphic and trim details and shorts/socks colours remain to be confirmed."
+    },
+    {
+      "clubId": "walsall",
+      "description": "Deep red home shirt with black contrasting sleeves and embossed St Matthew's motif",
+      "sourceUrl": "https://shop.saddlers.co.uk/products/home-adult-shirt-26-27",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 1,
+        "shirt1": 4,
+        "shirt2": 2,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "Walsall official 2026/27 Macron home-shirt listing corroborated by season-specific catalogue: red body, black sleeves and embossed floral/St Matthew's pattern. SWOS contrast sleeves retain overall palette but cannot render embossed motif. Shorts/socks have standalone products yet colours need independently verified match kit.",
+      "secondarySourceUrl": "https://www.footballkitarchive.com/walsall-fc-2026-27-home-kit-494992/"
+    },
+    {
+      "clubId": "york-city",
+      "description": "Red 2026/27 Hummel home shirt with subtle red pinstripes and navy collar/chevrons",
+      "sourceUrl": "https://yorkcityfootballclubstore.co.uk/product-category/kit/",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 4,
+        "shirt2": 4,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "York City's official current-season shop lists the 2026/27 home shirt and commemorative pinstripe products; season-specific 9 July 2026 kit reference describes a red base with fine vertical texture and blue collar/sleeve chevrons. SWOS plain red avoids broad false stripes. Shorts and socks not reliably verified.",
+      "secondarySourceUrl": "https://www.footballkitarchive.com/york-city-fc-2026-27-home-kit-493169/"
     }
   ]
 }

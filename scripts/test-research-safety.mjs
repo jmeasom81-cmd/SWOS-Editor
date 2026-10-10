@@ -193,7 +193,7 @@ console.log('Premier League batch H: 34 sourced valuations across three clubs; d
 // 2026/27 official shirt reference never automatically changes SWOS binary-team data.
 const kitResearch=JSON.parse(fs.readFileSync('data/kit-research-2026-27.json','utf8'));
 assert.equal(kitResearch.season,'2026/27');
-assert.ok(kitResearch.clubs.length>=89 && kitResearch.clubs.length<=92,'Sourced kit reference coverage must not shrink');
+assert.ok(kitResearch.clubs.length===92,'Sourced kit reference coverage must not shrink');
 assert.equal(new Set(kitResearch.clubs.map(c=>c.clubId)).size,kitResearch.clubs.length,'Kit clubs must be unique');
 assert.equal(kitResearch.swosPalette.length,10);
 assert.equal(kitResearch.swosPatterns.length,4);
@@ -233,6 +233,11 @@ assert.equal(checkKit('shrewsbury-town').shirt1,5,'Shrewsbury uses navy blue ann
 assert.equal(checkKit('rotherham-united').socks,4,'Rotherham official matchday kit has red socks');
 assert.equal(checkKit('crewe-alexandra').shorts,1,'Crewe club confirms white shorts');
 assert.equal(checkKit('rochdale').shirt1,5,'Rochdale current home is blue, not the pink away strip');
+assert.ok(master.clubs.every(c=>kitResearch.clubs.some(k=>k.clubId===c.clubId)),'All 92 clubs must have season-matched researched home shirt colours');
+assert.equal(checkKit('tranmere-rovers').shirt1,1,'Tranmere official 2026/27 jersey is white');
+assert.equal(checkKit('walsall').type,1,'Walsall 2026/27 kit has red body and black sleeves');
+assert.equal(checkKit('york-city').shirt1,4,'York 2026/27 home remains red, not yellow away');
+assert.equal(checkKit('walsall').shorts,null,'Do not infer 26/27 shorts colours from product existence alone');
 assert.equal(checkKit('crystal-palace').type,0,'Diagonal sash unavailable in SWOS');
 assert.equal(checkKit('ipswich').shorts,1,'Official Ipswich white shorts');
 assert.equal(checkKit('coventry').socks,5,'Official Coventry royal blue socks');
