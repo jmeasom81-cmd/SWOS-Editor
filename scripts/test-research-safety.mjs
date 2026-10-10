@@ -193,15 +193,19 @@ console.log('Premier League batch H: 34 sourced valuations across three clubs; d
 // 2026/27 official shirt reference never automatically changes SWOS binary-team data.
 const kitResearch=JSON.parse(fs.readFileSync('data/kit-research-2026-27.json','utf8'));
 assert.equal(kitResearch.season,'2026/27');
-assert.equal(kitResearch.clubs.length,14);
-assert.equal(new Set(kitResearch.clubs.map(c=>c.clubId)).size,14);
+assert.ok(kitResearch.clubs.length>=29 && kitResearch.clubs.length<=92,'Sourced kit reference coverage must not shrink');
+assert.equal(new Set(kitResearch.clubs.map(c=>c.clubId)).size,kitResearch.clubs.length,'Kit clubs must be unique');
 assert.equal(kitResearch.swosPalette.length,10);
 assert.equal(kitResearch.swosPatterns.length,4);
-assert.equal(kitResearch.clubs.filter(c=>c.fullComponentsSourced).length,7);
+assert.ok(kitResearch.clubs.filter(c=>c.fullComponentsSourced).length>=11,'At least 11 official full home kit references required');
 for(const c of kitResearch.clubs){const stored=master.clubs.find(x=>x.clubId===c.clubId);assert.ok(stored,'Kit research refers to unknown club '+c.clubId);assert.equal(c.homeShirtSourced,true);assert.ok(c.sourceUrl.startsWith('https://'));const h=c.home;assert.ok(Number.isInteger(h.type)&&h.type>=0&&h.type<=3);for(const n of ['shirt1','shirt2'])assert.ok(Number.isInteger(h[n])&&h[n]>=0&&h[n]<=9);for(const n of ['shorts','socks'])assert.ok(h[n]===null||(Number.isInteger(h[n])&&h[n]>=0&&h[n]<=9));assert.equal(c.fullComponentsSourced,h.shorts!==null&&h.socks!==null);}
 const checkKit=id=>kitResearch.clubs.find(c=>c.clubId===id).home;
 assert.equal(checkKit('newcastle').type,2);assert.equal(checkKit('brentford').type,2);
 assert.equal(checkKit('brighton').type,0,'Thin pinstripes cannot become heavy SWOS stripes');
 assert.equal(checkKit('man-city').shorts,null,'Unknown shorts must remain unknown');
 assert.ok(!master.clubs[0].homeKit,'Research references must never auto-edit the binary game record');
-console.log('Kit research: 14 sourced 2026/27 home shirts, 7 full component references, SWOS approximations safeguarded.');
+assert.ok(master.clubs.filter(c=>c.division==='Premier League').every(c=>kitResearch.clubs.some(k=>k.clubId===c.clubId)),'All 20 Premier League clubs must now have verified home shirts');
+assert.equal(checkKit('crystal-palace').type,0,'Diagonal sash unavailable in SWOS');
+assert.equal(checkKit('ipswich').shorts,1,'Official Ipswich white shorts');
+assert.equal(checkKit('coventry').socks,5,'Official Coventry royal blue socks');
+console.log('Kit research: '+kitResearch.clubs.length+' sourced 2026/27 home shirts, '+kitResearch.clubs.filter(c=>c.fullComponentsSourced).length+' full component references, SWOS approximations safeguarded.');

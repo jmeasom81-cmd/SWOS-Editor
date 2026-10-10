@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 const kits=JSON.parse(fs.readFileSync('data/kit-research-2026-27.json','utf8'));
 const master=JSON.parse(fs.readFileSync('dist/data/master-2026-27.json','utf8'));
-if(kits.season!==master.season||master.clubs.length!==92||kits.clubs.length!==14)throw new Error('Kit guide: invalid research season or coverage');
+if(kits.season!==master.season||master.clubs.length!==92||(kits.clubs.length<29||kits.clubs.length>92))throw new Error('Kit guide: invalid research season or coverage');
 const verified=new Map(kits.clubs.map(k=>[k.clubId,k]));
 const colors=['#b4b4b4','#fff','#000','#fc6c00','#fc0000','#0000fc','#6c0024','#9090fc','#249000','#fcfc00'];
 const names=kits.swosPalette.map(x=>x.name),styles=kits.swosPatterns.map(x=>x.name);

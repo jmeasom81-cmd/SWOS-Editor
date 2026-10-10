@@ -301,6 +301,261 @@
       "fullComponentsSourced": true,
       "paletteApproximation": true,
       "note": "Spurs' 3 September 2026 match report explicitly confirms Forest's home shirt, shorts and socks."
+    },
+    {
+      "clubId": "crystal-palace",
+      "description": "White shirt with red-and-blue diagonal sash",
+      "sourceUrl": "https://www.cpfc.co.uk/news/features/50-years-of-the-sash/",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 1,
+        "shirt2": 1,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "The 2026/27 sash design has a white base and red/blue diagonal band; no SWOS shirt pattern supports a diagonal sash. White is a deliberate simplified proxy; shorts/socks still need match evidence."
+    },
+    {
+      "clubId": "fulham",
+      "description": "White shirt with black and red trim",
+      "sourceUrl": "https://www.fulhamfc.com/news/2026/july/23/26-27-home-kit-revealed/",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 1,
+        "shirt2": 1,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "Official 26/27 Fulham launch confirms this season's shirt, with colour supported by current adidas home product listing; SWOS cannot reproduce collar/shoulder trim or subtle fabric graphics. Shorts and socks not verified."
+    },
+    {
+      "clubId": "coventry",
+      "description": "Deeper sky blue with fine navy-striped jacquard; navy shorts, blue socks",
+      "sourceUrl": "https://www.ccfcstore.com/kit/home-kit/kids/4379_coventry-city-baby-2627-home-kit.html",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 7,
+        "shirt2": 7,
+        "shorts": 2,
+        "socks": 5
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": true,
+      "paletteApproximation": true,
+      "note": "Official complete-kit description confirms navy shorts and royal blue socks. Light blue shirt, black-as-navy shorts and royal-blue socks approximate the palette. Fine blue-on-blue stripes and pinstripes cannot be represented."
+    },
+    {
+      "clubId": "hull",
+      "description": "Amber and black vertical stripes with white collar",
+      "sourceUrl": "https://www.tigerleisure.com/home/pre-order/pre-order/5345_PRE-ORDER-2627-Adult-Home-Shirt.html",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 2,
+        "shirt1": 3,
+        "shirt2": 2,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "Club's 2026/27 Oxen home shirt is amber and black striped; exact collar and historical HCAFC motif cannot be recreated. Full first-team shorts/socks awaiting an explicitly verified source."
+    },
+    {
+      "clubId": "ipswich",
+      "description": "Blue embossed shirt; white shorts and blue socks",
+      "sourceUrl": "https://www.itfc.co.uk/news/2026/july/03/2026-27-kits-revealed/",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 5,
+        "shirt2": 5,
+        "shorts": 1,
+        "socks": 5
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": true,
+      "paletteApproximation": true,
+      "note": "Official 3 July kit reveal confirms shirt, white home shorts and blue socks. SWOS plain blue omits the embossed Portman Road floodlight-roof motif and navy trim."
+    },
+    {
+      "clubId": "sunderland",
+      "description": "Red and white vertical stripes; 1937-inspired detail",
+      "sourceUrl": "https://www.hummel.net/sun-26-27-home-jersey-s-s-true-red-white/239275-3946.html",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 2,
+        "shirt1": 4,
+        "shirt2": 1,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "Official hummel product confirms red-white striped 2026/27 home shirt. SWOS stripes omit the trophy-inspired jacquard, polo collar and shoulder chevrons. Shorts/socks unverified."
+    },
+    {
+      "clubId": "birmingham-city",
+      "description": "Royal blue home shirt with city-inspired detail",
+      "sourceUrl": "https://www.youtube.com/watch?v=ahwhjVnLip4",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 5,
+        "shirt2": 5,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "Birmingham City's official 2026/27 home-kit launch uses the blue home identity; exact graphics and shorts/socks still need a separate manufacturer or match-day check."
+    },
+    {
+      "clubId": "blackburn-rovers",
+      "description": "Blue and white halved home shirt",
+      "sourceUrl": "https://www.youtube.com/watch?v=XzGLgOW-8SU",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 5,
+        "shirt2": 5,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "Club's official Umbro 26/27 launch confirms blue-and-white home identity. SWOS cannot create the shirt's split-halves design; plain blue is a conservative base rather than an exact representation. Shorts/socks unverified."
+    },
+    {
+      "clubId": "bolton-wanderers",
+      "description": "All-white home strip with red and navy sleeve detailing",
+      "sourceUrl": "https://www.bwfc.co.uk/news/timeless-white-202627-home-kit-launched",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 1,
+        "shirt2": 1,
+        "shorts": 1,
+        "socks": 1
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": true,
+      "paletteApproximation": true,
+      "note": "Official 29 May 2026 launch explicitly says white from collar to sock. Plain white SWOS kit cannot show the sublimated red/navy right-sleeve insert."
+    },
+    {
+      "clubId": "burnley",
+      "description": "Claret-and-blue textured home shirt",
+      "sourceUrl": "https://shop.burnleyfc.com/home-kit/homekit/adults/2596_burnley-fc-home-shirt-short-sleeve-adult-202627.html",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 6,
+        "shirt2": 6,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "Official 2026/27 kit product specifies claret and blue and textured stripe jacquard. SWOS claret/brown is a limited palette approximation. No independent shorts/socks colours confirmed."
+    },
+    {
+      "clubId": "cardiff-city",
+      "description": "Royal blue home shirt with white accents",
+      "sourceUrl": "https://www.cardiffcityfcstore.com/kit/home-kit/adult/4726_2627-home-shirt-adult.html",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 5,
+        "shirt2": 5,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "Official Castore 26/27 home shirt in club shop confirms this season's design; plain SWOS blue omits white sleeve/shoulder detailing. Shorts/socks need separate verification."
+    },
+    {
+      "clubId": "charlton-athletic",
+      "description": "Red home shirt and white home shorts",
+      "sourceUrl": "https://clubshop.cafc.co.uk/collections/home-kit-1",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 4,
+        "shirt2": 4,
+        "shorts": 1,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "Official 2026/27 club collection stocks red home shirt and white home shorts. Shirt accents and home sock colour still need a dated kit source; socks deliberately unfilled."
+    },
+    {
+      "clubId": "derby-county",
+      "description": "White shirt with six narrow greyscale stripes; black shorts, white socks",
+      "sourceUrl": "https://www.dcfc.co.uk/news/2026/05/202627-kits-home-kit-revealed",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 1,
+        "shirt2": 1,
+        "shorts": 2,
+        "socks": 1
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": true,
+      "paletteApproximation": true,
+      "note": "Official Derby County 28 May 2026 release confirms all three kit components. Six centred fine greyscale pinstripes are not reproducible as SWOS broad stripes; white shirt is intentionally simplified."
+    },
+    {
+      "clubId": "lincoln-city",
+      "description": "Red and white stripes with Lincoln Castle arch detailing",
+      "sourceUrl": "https://www.linkedin.com/posts/lincolncityfc_unmistakably-lincoln-city-our-202627-activity-7478743576768761856-9K2j",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 2,
+        "shirt1": 4,
+        "shirt2": 1,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "Club's own 2026/27 kit announcement confirms red and white stripes and black trim. SWOS cannot render Castle arches within stripes. Shorts/socks remain unverified."
+    },
+    {
+      "clubId": "middlesbrough",
+      "description": "Red 150th-anniversary shirt with gold trim",
+      "sourceUrl": "https://shop.mfc.co.uk/kits/homekit/adult/8035_26-adult-home-shirt.html",
+      "checkedAt": "2026-10-10",
+      "home": {
+        "type": 0,
+        "shirt1": 4,
+        "shirt2": 4,
+        "shorts": null,
+        "socks": null
+      },
+      "homeShirtSourced": true,
+      "fullComponentsSourced": false,
+      "paletteApproximation": true,
+      "note": "Official 2026/27 Castore 150 Years home shirt is red with gold detailing; SWOS has no gold trim. Shorts and socks await first-team match evidence."
     }
   ]
 }
