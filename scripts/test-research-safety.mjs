@@ -98,7 +98,7 @@ assert.equal(reviewCount,8);
 assert.ok(html.includes('2026/27 squad number and membership reviews'));
 assert.ok(html.includes('data-master-review-club'));
 for (const reviewed of batchD.clubs) assert.ok(html.includes(reviewed.id));
-assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,262,'Unexpected valuations tally');
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,261,'Unexpected valuations tally');
 const l2batch=JSON.parse(fs.readFileSync('data/league-two-verified-values-batch-a-2026-10-09.json','utf8'));
 assert.equal(l2batch.clubs.length,3);
 assert.equal(l2batch.clubs.reduce((n,c)=>n+c.players.length,0),32);
@@ -189,6 +189,13 @@ for(const record of plBatchH.clubs){const club=master.clubs.find(c=>c.clubId===r
 for(const [id,name] of [['leeds','James Trafford'],['hull','Konstantinos Tzolakis'],['ipswich','Exequiel Palacios']]){const p=master.clubs.find(c=>c.clubId===id).players.find(p=>p.player===name);assert.ok(p);assert.equal(p.marketValueM,null,'No guessed valuation '+id+'/'+name);}
 assert.ok(html.includes('not independently matched in the cited Ipswich'));
 console.log('Premier League batch H: 34 sourced valuations across three clubs; disputed members remain in research queue.');
+const officialI=JSON.parse(fs.readFileSync('data/premier-league-official-numbers-batch-i-2026-10-10.json','utf8'));
+assert.equal(officialI.clubs.length,10);
+assert.equal(officialI.clubs.reduce((n,c)=>n+c.verifiedAgainstOfficialList,0),160);
+for(const c of officialI.clubs){const masterClub=master.clubs.find(x=>x.clubId===c.clubId);assert.ok(masterClub);for(const item of c.changes){const p=masterClub.players.find(p=>p.player===item.name);assert.ok(p);assert.equal(p.shirt,item.officialShirt);assert.equal(p.shirtEvidenceUrl,officialI.sourceUrl);}}
+const joe=master.clubs.find(c=>c.clubId==='hull').players.find(p=>p.player==='Joe Gelhardt');
+assert.equal(joe.marketValueM,11.849);assert.equal(joe.marketValueSourceEuroK,14000);assert.equal(joe.shirt,11);
+console.log('Official 2026/27 Premier League batch I: '+officialI.clubs.reduce((n,c)=>n+c.changes.length,0)+' shirt updates; Joe Gelhardt sourced valuation.');
 
 // 2026/27 official shirt reference never automatically changes SWOS binary-team data.
 const kitResearch=JSON.parse(fs.readFileSync('data/kit-research-2026-27.json','utf8'));

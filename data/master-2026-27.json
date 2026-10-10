@@ -313,7 +313,7 @@
         },
         {
           "player": "Jeremy Jacquet",
-          "shirt": null,
+          "shirt": 5,
           "nationality": null,
           "group": null,
           "position": 3,
@@ -321,7 +321,9 @@
           "marketValueM": 55,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Florian Wirtz",
@@ -429,7 +431,7 @@
         },
         {
           "player": "Federico Chiesa",
-          "shirt": null,
+          "shirt": 14,
           "nationality": null,
           "group": null,
           "position": 4,
@@ -437,7 +439,9 @@
           "marketValueM": 13,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         }
       ]
     },
@@ -1109,7 +1113,7 @@
       "players": [
         {
           "player": "Jordan Pickford",
-          "shirt": null,
+          "shirt": 1,
           "nationality": "England",
           "group": "Goalkeeper",
           "position": 0,
@@ -1118,11 +1122,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Mark Travers",
-          "shirt": null,
+          "shirt": 12,
           "nationality": "Ireland",
           "group": "Goalkeeper",
           "position": 0,
@@ -1131,11 +1137,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Jarrad Branthwaite",
-          "shirt": null,
+          "shirt": 4,
           "nationality": "England",
           "group": "Defender",
           "position": 3,
@@ -1144,11 +1152,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "James Tarkowski",
-          "shirt": null,
+          "shirt": 6,
           "nationality": "England",
           "group": "Defender",
           "position": 3,
@@ -1157,11 +1167,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Michael Keane",
-          "shirt": null,
+          "shirt": 5,
           "nationality": "England",
           "group": "Defender",
           "position": 3,
@@ -1170,11 +1182,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Vitalii Mykolenko",
-          "shirt": null,
+          "shirt": 16,
           "nationality": "Ukraine",
           "group": "Defender",
           "position": 2,
@@ -1183,11 +1197,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Jake O'Brien",
-          "shirt": null,
+          "shirt": 15,
           "nationality": "Ireland",
           "group": "Defender",
           "position": 1,
@@ -1196,11 +1212,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "James Garner",
-          "shirt": null,
+          "shirt": 37,
           "nationality": "England",
           "group": "Midfielder",
           "position": 6,
@@ -1209,11 +1227,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Hayden Hackney",
-          "shirt": null,
+          "shirt": 30,
           "nationality": "England",
           "group": "Midfielder",
           "position": 6,
@@ -1222,11 +1242,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Kiernan Dewsbury-Hall",
-          "shirt": null,
+          "shirt": 8,
           "nationality": "England",
           "group": "Midfielder",
           "position": 6,
@@ -1235,11 +1257,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Carlos Alcaraz",
-          "shirt": null,
+          "shirt": 24,
           "nationality": "Argentina",
           "group": "Midfielder",
           "position": 6,
@@ -1248,7 +1272,9 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Merlin Rohl",
@@ -1265,7 +1291,7 @@
         },
         {
           "player": "Tyrique George",
-          "shirt": null,
+          "shirt": 19,
           "nationality": null,
           "group": null,
           "position": 5,
@@ -1273,11 +1299,13 @@
           "marketValueM": 20,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Tyler Dibling",
-          "shirt": null,
+          "shirt": 20,
           "nationality": null,
           "group": null,
           "position": 4,
@@ -1285,11 +1313,13 @@
           "marketValueM": 17,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Thierno Barry",
-          "shirt": null,
+          "shirt": 11,
           "nationality": "France",
           "group": "Forward",
           "position": 7,
@@ -1298,11 +1328,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Harrison Armstrong",
-          "shirt": null,
+          "shirt": 45,
           "nationality": null,
           "group": null,
           "position": 6,
@@ -1310,7 +1342,9 @@
           "marketValueM": 12,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         }
       ]
     },
@@ -1325,7 +1359,7 @@
       "players": [
         {
           "player": "Lukas Hornicek",
-          "shirt": null,
+          "shirt": 21,
           "nationality": "Czech Republic",
           "group": "Goalkeeper",
           "position": 0,
@@ -1334,11 +1368,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Nick Pope",
-          "shirt": null,
+          "shirt": 1,
           "nationality": "England",
           "group": "Goalkeeper",
           "position": 0,
@@ -1347,11 +1383,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Malick Thiaw",
-          "shirt": null,
+          "shirt": 12,
           "nationality": "Germany",
           "group": "Defender",
           "position": 3,
@@ -1360,11 +1398,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Sven Botman",
-          "shirt": null,
+          "shirt": 4,
           "nationality": "Netherlands",
           "group": "Defender",
           "position": 3,
@@ -1373,11 +1413,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Fabian Schar",
-          "shirt": null,
+          "shirt": 5,
           "nationality": "Switzerland",
           "group": "Defender",
           "position": 3,
@@ -1386,11 +1428,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Dan Burn",
-          "shirt": null,
+          "shirt": 33,
           "nationality": "England",
           "group": "Defender",
           "position": 3,
@@ -1399,11 +1443,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Lewis Hall",
-          "shirt": null,
+          "shirt": 3,
           "nationality": "England",
           "group": "Defender",
           "position": 2,
@@ -1412,11 +1458,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Tino Livramento",
-          "shirt": null,
+          "shirt": 2,
           "nationality": "England",
           "group": "Defender",
           "position": 1,
@@ -1425,11 +1473,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Jacob Ramsey",
-          "shirt": null,
+          "shirt": 41,
           "nationality": "England",
           "group": "Midfielder",
           "position": 6,
@@ -1438,11 +1488,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Joelinton",
-          "shirt": null,
+          "shirt": 7,
           "nationality": "Brazil",
           "group": "Midfielder",
           "position": 6,
@@ -1451,11 +1503,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Joe Willock",
-          "shirt": null,
+          "shirt": 28,
           "nationality": "England",
           "group": "Midfielder",
           "position": 6,
@@ -1464,11 +1518,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Harvey Barnes",
-          "shirt": null,
+          "shirt": 11,
           "nationality": "England",
           "group": "Forward",
           "position": 5,
@@ -1477,11 +1533,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Anthony Elanga",
-          "shirt": null,
+          "shirt": 19,
           "nationality": "Sweden",
           "group": "Forward",
           "position": 4,
@@ -1490,11 +1548,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Jacob Murphy",
-          "shirt": null,
+          "shirt": 23,
           "nationality": "England",
           "group": "Midfielder",
           "position": 4,
@@ -1503,11 +1563,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "William Osula",
-          "shirt": null,
+          "shirt": 10,
           "nationality": "Denmark",
           "group": "Forward",
           "position": 7,
@@ -1516,11 +1578,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Yoane Wissa",
-          "shirt": null,
+          "shirt": 9,
           "nationality": "DR Congo",
           "group": "Forward",
           "position": 7,
@@ -1529,7 +1593,9 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026"
+          "identitySource": "Premier League 2026/27 submitted squad 03/09/2026",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         }
       ]
     },
@@ -4296,7 +4362,7 @@
       "players": [
         {
           "player": "Jack Butland",
-          "shirt": null,
+          "shirt": 1,
           "nationality": "England",
           "group": "Goalkeeper",
           "position": 0,
@@ -4312,11 +4378,13 @@
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/hull-city/kader/verein/3008/saison_id/2026",
           "seasonSquadCheckedAt": "2026-10-10",
-          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Konstantinos Tzolakis",
-          "shirt": null,
+          "shirt": 19,
           "nationality": "Greece",
           "group": "Goalkeeper",
           "position": 0,
@@ -4325,7 +4393,9 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League submitted squad 03/09/2026 + current squad role evidence"
+          "identitySource": "Premier League submitted squad 03/09/2026 + current squad role evidence",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Charlie Hughes",
@@ -4409,7 +4479,7 @@
         },
         {
           "player": "Paddy McNair",
-          "shirt": 37,
+          "shirt": 17,
           "nationality": "Northern Ireland",
           "group": "Defender",
           "position": 3,
@@ -4425,7 +4495,9 @@
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/hull-city/kader/verein/3008/saison_id/2026",
           "seasonSquadCheckedAt": "2026-10-10",
-          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Regan Slater",
@@ -4449,7 +4521,7 @@
         },
         {
           "player": "Tim Iroegbunam",
-          "shirt": null,
+          "shirt": 42,
           "nationality": "England",
           "group": "Midfielder",
           "position": 6,
@@ -4458,11 +4530,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League submitted squad 03/09/2026 + current squad role evidence"
+          "identitySource": "Premier League submitted squad 03/09/2026 + current squad role evidence",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Hidemasa Morita",
-          "shirt": null,
+          "shirt": 5,
           "nationality": "Japan",
           "group": "Midfielder",
           "position": 6,
@@ -4471,7 +4545,9 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League submitted squad 03/09/2026 + current squad role evidence"
+          "identitySource": "Premier League submitted squad 03/09/2026 + current squad role evidence",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Abdulkadir Omur",
@@ -4548,7 +4624,7 @@
         },
         {
           "player": "Oliver McBurnie",
-          "shirt": null,
+          "shirt": 9,
           "nationality": "Scotland",
           "group": "Forward",
           "position": 7,
@@ -4564,20 +4640,31 @@
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/hull-city/kader/verein/3008/saison_id/2026",
           "seasonSquadCheckedAt": "2026-10-10",
-          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Joe Gelhardt",
-          "shirt": null,
+          "shirt": 11,
           "nationality": "England",
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 11.849,
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Premier League submitted squad 03/09/2026 + current squad role evidence"
+          "identitySource": "Premier League submitted squad 03/09/2026 + current squad role evidence",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10",
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/joe-gelhardt/profil/spieler/503980",
+          "marketValueCheckedAt": "2026-10-10",
+          "marketValueSourceEuroK": 14000,
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.premierleague.com/en/news/4725682",
+          "seasonSquadCheckedAt": "2026-10-10",
+          "seasonSquadSourceName": "Official Premier League squad-number list 2026/27"
         }
       ]
     },
@@ -4632,7 +4719,7 @@
         },
         {
           "player": "Leif Davis",
-          "shirt": null,
+          "shirt": 3,
           "nationality": "England",
           "group": "Defender",
           "position": 2,
@@ -4648,11 +4735,13 @@
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/ipswich-town/kader/verein/677/saison_id/2026",
           "seasonSquadCheckedAt": "2026-10-10",
-          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Darnell Furlong",
-          "shirt": null,
+          "shirt": 2,
           "nationality": "England",
           "group": "Defender",
           "position": 1,
@@ -4668,11 +4757,13 @@
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/ipswich-town/kader/verein/677/saison_id/2026",
           "seasonSquadCheckedAt": "2026-10-10",
-          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Jacob Greaves",
-          "shirt": null,
+          "shirt": 24,
           "nationality": "England",
           "group": "Defender",
           "position": 3,
@@ -4688,11 +4779,13 @@
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/ipswich-town/kader/verein/677/saison_id/2026",
           "seasonSquadCheckedAt": "2026-10-10",
-          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Dara O'Shea",
-          "shirt": null,
+          "shirt": 26,
           "nationality": "Ireland",
           "group": "Defender",
           "position": 3,
@@ -4708,11 +4801,13 @@
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/ipswich-town/kader/verein/677/saison_id/2026",
           "seasonSquadCheckedAt": "2026-10-10",
-          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Issa Diop",
-          "shirt": null,
+          "shirt": 6,
           "nationality": "Morocco",
           "group": "Defender",
           "position": 3,
@@ -4721,11 +4816,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Ipswich current 2026/27 first-team squad"
+          "identitySource": "Ipswich current 2026/27 first-team squad",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Sasa Lukic",
-          "shirt": null,
+          "shirt": 23,
           "nationality": "Serbia",
           "group": "Midfielder",
           "position": 6,
@@ -4734,11 +4831,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Ipswich current 2026/27 first-team squad"
+          "identitySource": "Ipswich current 2026/27 first-team squad",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Exequiel Palacios",
-          "shirt": null,
+          "shirt": 25,
           "nationality": "Argentina",
           "group": "Midfielder",
           "position": 6,
@@ -4747,11 +4846,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Ipswich current 2026/27 first-team squad"
+          "identitySource": "Ipswich current 2026/27 first-team squad",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Marcelino Nunez",
-          "shirt": null,
+          "shirt": 32,
           "nationality": "Chile",
           "group": "Midfielder",
           "position": 6,
@@ -4767,11 +4868,13 @@
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/ipswich-town/kader/verein/677/saison_id/2026",
           "seasonSquadCheckedAt": "2026-10-10",
-          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Azor Matusiwa",
-          "shirt": null,
+          "shirt": 5,
           "nationality": "Netherlands",
           "group": "Midfielder",
           "position": 6,
@@ -4787,11 +4890,13 @@
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/ipswich-town/kader/verein/677/saison_id/2026",
           "seasonSquadCheckedAt": "2026-10-10",
-          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Anis Mehmeti",
-          "shirt": null,
+          "shirt": 33,
           "nationality": "Albania",
           "group": "Midfielder",
           "position": 5,
@@ -4807,11 +4912,13 @@
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/ipswich-town/kader/verein/677/saison_id/2026",
           "seasonSquadCheckedAt": "2026-10-10",
-          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Julio Enciso",
-          "shirt": null,
+          "shirt": 10,
           "nationality": "Paraguay",
           "group": "Forward",
           "position": 7,
@@ -4820,11 +4927,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Ipswich current 2026/27 first-team squad"
+          "identitySource": "Ipswich current 2026/27 first-team squad",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Abdul Fatawu",
-          "shirt": null,
+          "shirt": 7,
           "nationality": "Ghana",
           "group": "Forward",
           "position": 4,
@@ -4833,11 +4942,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Ipswich current 2026/27 first-team squad"
+          "identitySource": "Ipswich current 2026/27 first-team squad",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Daizen Maeda",
-          "shirt": null,
+          "shirt": 38,
           "nationality": "Japan",
           "group": "Forward",
           "position": 7,
@@ -4846,11 +4957,13 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Ipswich current 2026/27 first-team squad"
+          "identitySource": "Ipswich current 2026/27 first-team squad",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Chuba Akpom",
-          "shirt": null,
+          "shirt": 29,
           "nationality": "Nigeria",
           "group": "Forward",
           "position": 7,
@@ -4866,7 +4979,9 @@
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/ipswich-town/kader/verein/677/saison_id/2026",
           "seasonSquadCheckedAt": "2026-10-10",
-          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         }
       ]
     },
@@ -4894,7 +5009,7 @@
         },
         {
           "player": "Michael Zetterer",
-          "shirt": null,
+          "shirt": 16,
           "nationality": "Germany",
           "group": "Goalkeeper",
           "position": 0,
@@ -4903,7 +5018,9 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "identitySource": "Leeds United current first-team evidence 2026/27"
+          "identitySource": "Leeds United current first-team evidence 2026/27",
+          "shirtEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+          "shirtCheckedAt": "2026-10-10"
         },
         {
           "player": "Jayden Bogle",

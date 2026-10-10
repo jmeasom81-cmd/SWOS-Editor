@@ -1,0 +1,364 @@
+{
+  "season": "2026/27",
+  "checkedAt": "2026-10-10",
+  "sourceUrl": "https://www.premierleague.com/en/news/4725682",
+  "publishedAt": "2026-09-22",
+  "sourceDescription": "Official Premier League 2026/27 squad numbers across ten researched teams. Does not update binary game files.",
+  "clubs": [
+    {
+      "clubId": "everton",
+      "club": "Everton",
+      "verifiedAgainstOfficialList": 16,
+      "changes": [
+        {
+          "name": "Jordan Pickford",
+          "oldShirt": null,
+          "officialShirt": 1
+        },
+        {
+          "name": "Mark Travers",
+          "oldShirt": null,
+          "officialShirt": 12
+        },
+        {
+          "name": "Jarrad Branthwaite",
+          "oldShirt": null,
+          "officialShirt": 4
+        },
+        {
+          "name": "James Tarkowski",
+          "oldShirt": null,
+          "officialShirt": 6
+        },
+        {
+          "name": "Michael Keane",
+          "oldShirt": null,
+          "officialShirt": 5
+        },
+        {
+          "name": "Vitalii Mykolenko",
+          "oldShirt": null,
+          "officialShirt": 16
+        },
+        {
+          "name": "Jake O'Brien",
+          "oldShirt": null,
+          "officialShirt": 15
+        },
+        {
+          "name": "James Garner",
+          "oldShirt": null,
+          "officialShirt": 37
+        },
+        {
+          "name": "Hayden Hackney",
+          "oldShirt": null,
+          "officialShirt": 30
+        },
+        {
+          "name": "Kiernan Dewsbury-Hall",
+          "oldShirt": null,
+          "officialShirt": 8
+        },
+        {
+          "name": "Carlos Alcaraz",
+          "oldShirt": null,
+          "officialShirt": 24
+        },
+        {
+          "name": "Tyrique George",
+          "oldShirt": null,
+          "officialShirt": 19
+        },
+        {
+          "name": "Tyler Dibling",
+          "oldShirt": null,
+          "officialShirt": 20
+        },
+        {
+          "name": "Thierno Barry",
+          "oldShirt": null,
+          "officialShirt": 11
+        },
+        {
+          "name": "Harrison Armstrong",
+          "oldShirt": null,
+          "officialShirt": 45
+        }
+      ]
+    },
+    {
+      "clubId": "newcastle",
+      "club": "Newcastle United",
+      "verifiedAgainstOfficialList": 16,
+      "changes": [
+        {
+          "name": "Lukas Hornicek",
+          "oldShirt": null,
+          "officialShirt": 21
+        },
+        {
+          "name": "Nick Pope",
+          "oldShirt": null,
+          "officialShirt": 1
+        },
+        {
+          "name": "Malick Thiaw",
+          "oldShirt": null,
+          "officialShirt": 12
+        },
+        {
+          "name": "Sven Botman",
+          "oldShirt": null,
+          "officialShirt": 4
+        },
+        {
+          "name": "Fabian Schar",
+          "oldShirt": null,
+          "officialShirt": 5
+        },
+        {
+          "name": "Dan Burn",
+          "oldShirt": null,
+          "officialShirt": 33
+        },
+        {
+          "name": "Lewis Hall",
+          "oldShirt": null,
+          "officialShirt": 3
+        },
+        {
+          "name": "Tino Livramento",
+          "oldShirt": null,
+          "officialShirt": 2
+        },
+        {
+          "name": "Jacob Ramsey",
+          "oldShirt": null,
+          "officialShirt": 41
+        },
+        {
+          "name": "Joelinton",
+          "oldShirt": null,
+          "officialShirt": 7
+        },
+        {
+          "name": "Joe Willock",
+          "oldShirt": null,
+          "officialShirt": 28
+        },
+        {
+          "name": "Harvey Barnes",
+          "oldShirt": null,
+          "officialShirt": 11
+        },
+        {
+          "name": "Anthony Elanga",
+          "oldShirt": null,
+          "officialShirt": 19
+        },
+        {
+          "name": "Jacob Murphy",
+          "oldShirt": null,
+          "officialShirt": 23
+        },
+        {
+          "name": "William Osula",
+          "oldShirt": null,
+          "officialShirt": 10
+        },
+        {
+          "name": "Yoane Wissa",
+          "oldShirt": null,
+          "officialShirt": 9
+        }
+      ]
+    },
+    {
+      "clubId": "liverpool",
+      "club": "Liverpool",
+      "verifiedAgainstOfficialList": 16,
+      "changes": [
+        {
+          "name": "Jeremy Jacquet",
+          "oldShirt": null,
+          "officialShirt": 5
+        },
+        {
+          "name": "Federico Chiesa",
+          "oldShirt": null,
+          "officialShirt": 14
+        }
+      ]
+    },
+    {
+      "clubId": "hull",
+      "club": "Hull City",
+      "verifiedAgainstOfficialList": 16,
+      "changes": [
+        {
+          "name": "Jack Butland",
+          "oldShirt": null,
+          "officialShirt": 1
+        },
+        {
+          "name": "Konstantinos Tzolakis",
+          "oldShirt": null,
+          "officialShirt": 19
+        },
+        {
+          "name": "Paddy McNair",
+          "oldShirt": 37,
+          "officialShirt": 17
+        },
+        {
+          "name": "Tim Iroegbunam",
+          "oldShirt": null,
+          "officialShirt": 42
+        },
+        {
+          "name": "Hidemasa Morita",
+          "oldShirt": null,
+          "officialShirt": 5
+        },
+        {
+          "name": "Oliver McBurnie",
+          "oldShirt": null,
+          "officialShirt": 9
+        },
+        {
+          "name": "Joe Gelhardt",
+          "oldShirt": null,
+          "officialShirt": 11
+        }
+      ]
+    },
+    {
+      "clubId": "ipswich",
+      "club": "Ipswich Town",
+      "verifiedAgainstOfficialList": 16,
+      "changes": [
+        {
+          "name": "Leif Davis",
+          "oldShirt": null,
+          "officialShirt": 3
+        },
+        {
+          "name": "Darnell Furlong",
+          "oldShirt": null,
+          "officialShirt": 2
+        },
+        {
+          "name": "Jacob Greaves",
+          "oldShirt": null,
+          "officialShirt": 24
+        },
+        {
+          "name": "Dara O'Shea",
+          "oldShirt": null,
+          "officialShirt": 26
+        },
+        {
+          "name": "Issa Diop",
+          "oldShirt": null,
+          "officialShirt": 6
+        },
+        {
+          "name": "Sasa Lukic",
+          "oldShirt": null,
+          "officialShirt": 23
+        },
+        {
+          "name": "Exequiel Palacios",
+          "oldShirt": null,
+          "officialShirt": 25
+        },
+        {
+          "name": "Marcelino Nunez",
+          "oldShirt": null,
+          "officialShirt": 32
+        },
+        {
+          "name": "Azor Matusiwa",
+          "oldShirt": null,
+          "officialShirt": 5
+        },
+        {
+          "name": "Anis Mehmeti",
+          "oldShirt": null,
+          "officialShirt": 33
+        },
+        {
+          "name": "Julio Enciso",
+          "oldShirt": null,
+          "officialShirt": 10
+        },
+        {
+          "name": "Abdul Fatawu",
+          "oldShirt": null,
+          "officialShirt": 7
+        },
+        {
+          "name": "Daizen Maeda",
+          "oldShirt": null,
+          "officialShirt": 38
+        },
+        {
+          "name": "Chuba Akpom",
+          "oldShirt": null,
+          "officialShirt": 29
+        }
+      ]
+    },
+    {
+      "clubId": "leeds",
+      "club": "Leeds United",
+      "verifiedAgainstOfficialList": 16,
+      "changes": [
+        {
+          "name": "Michael Zetterer",
+          "oldShirt": null,
+          "officialShirt": 16
+        }
+      ]
+    },
+    {
+      "clubId": "fulham",
+      "club": "Fulham",
+      "verifiedAgainstOfficialList": 16,
+      "changes": []
+    },
+    {
+      "clubId": "coventry",
+      "club": "Coventry City",
+      "verifiedAgainstOfficialList": 16,
+      "changes": []
+    },
+    {
+      "clubId": "crystal-palace",
+      "club": "Crystal Palace",
+      "verifiedAgainstOfficialList": 16,
+      "changes": []
+    },
+    {
+      "clubId": "sunderland",
+      "club": "Sunderland",
+      "verifiedAgainstOfficialList": 16,
+      "changes": []
+    }
+  ],
+  "valuationAdditions": [
+    {
+      "clubId": "hull",
+      "name": "Joe Gelhardt",
+      "eurThousands": 14000,
+      "gbpMillions": 11.849,
+      "referenceFxRateEurGbp": 0.846328,
+      "marketValueSourceUrl": "https://www.transfermarkt.co.uk/joe-gelhardt/profil/spieler/503980",
+      "valueLastUpdatedAt": "2026-05-28",
+      "membershipUrl": "https://www.leedsunited.com/en/news/joe-gelhardt-completes-permanent-move-to-hull-city",
+      "membershipConfirmedAt": "2026-08-15",
+      "note": "Published May 2026 estimated player market value, not an October live value and not his permanent transfer fee."
+    }
+  ]
+}
