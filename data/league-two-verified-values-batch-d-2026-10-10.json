@@ -1,0 +1,260 @@
+{
+  "season": "2026/27",
+  "checkedAt": "2026-10-10",
+  "referenceFxRateEurGbp": 0.846328,
+  "referenceFxNote": "SWOS 9 October EUR/GBP reference used for consistent historical import; values rounded to nearest GBP £1,000",
+  "meaning": "Indicative Transfermarkt market valuations, not game-native encoded fees. Shirt numbers must be separately verified. Nulls are unknown, not £0.",
+  "clubs": [
+    {
+      "id": "port-vale",
+      "pack": "PORT_VALE_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/port-vale-fc/kader/verein/1211/saison_id/2026",
+      "sourceSnapshot": "2026/27 season squad (web index)",
+      "players": [
+        {
+          "name": "Jasper Moon",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        },
+        {
+          "name": "Connor Hall",
+          "eurThousands": 125,
+          "gbpMillions": 0.106
+        },
+        {
+          "name": "Jaheim Headley",
+          "eurThousands": 550,
+          "gbpMillions": 0.465
+        },
+        {
+          "name": "Kyle John",
+          "eurThousands": 225,
+          "gbpMillions": 0.19
+        }
+      ],
+      "squadReviews": [
+        "Kyle John: source lists shirt #24, research pack uses #2. Do not rewrite without an official squad-number check.",
+        "Jasper Moon is listed in the 2026/27 squad with no shirt number. Research pack #4 is provisional."
+      ]
+    },
+    {
+      "id": "salford-city",
+      "pack": "SALFORD_CITY_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/salford-city/kader/verein/34888/saison_id/2026",
+      "sourceSnapshot": "2026/27 season squad (web index)",
+      "players": [
+        {
+          "name": "Brandon Cooper",
+          "eurThousands": 350,
+          "gbpMillions": 0.296
+        },
+        {
+          "name": "Michael Rose",
+          "eurThousands": 300,
+          "gbpMillions": 0.254
+        },
+        {
+          "name": "Will Aimson",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        },
+        {
+          "name": "Zach Awe",
+          "eurThousands": 100,
+          "gbpMillions": 0.085
+        },
+        {
+          "name": "Joe Powell",
+          "eurThousands": 800,
+          "gbpMillions": 0.677
+        }
+      ],
+      "squadReviews": [
+        "Zach Awe: source lists #28 versus SWOS research #3; retain the research number until independently confirmed.",
+        "Will Aimson and Joe Powell appear with no squad number in the cited source. Values can be researched separately from official shirt assignment."
+      ]
+    },
+    {
+      "id": "rotherham-united",
+      "pack": "ROTHERHAM_UNITED_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.com/rotherham-united/kader/verein/1194/saison_id/2026/plus/1",
+      "sourceSnapshot": "2026/27 season squad (web index)",
+      "players": [
+        {
+          "name": "Denzel Hall",
+          "eurThousands": 500,
+          "gbpMillions": 0.423
+        },
+        {
+          "name": "Joe Rafferty",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        },
+        {
+          "name": "Ossama Ashley",
+          "eurThousands": 175,
+          "gbpMillions": 0.148
+        },
+        {
+          "name": "Kian Spence",
+          "eurThousands": 300,
+          "gbpMillions": 0.254
+        },
+        {
+          "name": "Jamie Jellis",
+          "eurThousands": 175,
+          "gbpMillions": 0.148
+        }
+      ],
+      "squadReviews": [
+        "Denzel Hall: season source lists #22 versus SWOS research #12; shirt confirmation needed before applying edits.",
+        "Ossama Ashley and Jamie Jellis have no assigned number in the source snapshot; retain current research numbers provisionally."
+      ]
+    },
+    {
+      "id": "gillingham",
+      "pack": "GILLINGHAM_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.com/fc-gillingham/kader/verein/2814",
+      "sourceSnapshot": "2026/27 season squad (web index)",
+      "players": [
+        {
+          "name": "Liam Gordon",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        },
+        {
+          "name": "Andy Smith",
+          "eurThousands": 300,
+          "gbpMillions": 0.254
+        },
+        {
+          "name": "Robbie McKenzie",
+          "eurThousands": 400,
+          "gbpMillions": 0.339
+        },
+        {
+          "name": "Ethan Coleman",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        },
+        {
+          "name": "Armani Little",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        },
+        {
+          "name": "James Brophy",
+          "eurThousands": 250,
+          "gbpMillions": 0.212
+        },
+        {
+          "name": "Kadeem Harris",
+          "eurThousands": 100,
+          "gbpMillions": 0.085
+        }
+      ],
+      "squadReviews": [
+        "Liam Gordon, James Brophy and Kadeem Harris have no listed shirt number in the cited squad. Keep research shirt assignments under review.",
+        "Taite Holtam appears on the 2026/27 squad but with no published market value; a blank is not a £0 valuation."
+      ]
+    },
+    {
+      "id": "grimsby-town",
+      "pack": "GRIMSBY_TOWN_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.com/grimsby-town/kader/verein/1034",
+      "sourceSnapshot": "2026/27 season squad (web index)",
+      "players": [
+        {
+          "name": "Sam Lavelle",
+          "eurThousands": 125,
+          "gbpMillions": 0.106
+        },
+        {
+          "name": "Jayden Sweeney",
+          "eurThousands": 200,
+          "gbpMillions": 0.169
+        }
+      ],
+      "squadReviews": [
+        "Joe Foulkes has no published market valuation in the cited 2026/27 squad. Keep blank rather than treating as zero.",
+        "Geza David Turi appears as Géza Dávid Turi with €250k; leave unvalued pending accent/identity-alias verification."
+      ]
+    },
+    {
+      "id": "crawley-town",
+      "pack": "CRAWLEY_TOWN_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/crawley-town/kader/verein/3537",
+      "sourceSnapshot": "2026/27 season squad (web index)",
+      "players": [
+        {
+          "name": "Priestley Farquharson",
+          "eurThousands": 125,
+          "gbpMillions": 0.106
+        },
+        {
+          "name": "Lewis Richards",
+          "eurThousands": 150,
+          "gbpMillions": 0.127
+        }
+      ],
+      "squadReviews": [
+        "Priestley Farquharson has no shirt number in the cited listing, while SWOS research records #6; independent squad-number confirmation required.",
+        "Vito Mannone has no published market value in the cited 2026/27 squad; remain blank."
+      ]
+    },
+    {
+      "id": "crewe-alexandra",
+      "pack": "CREWE_ALEXANDRA_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/crewe-alexandra/kader/verein/1042",
+      "sourceSnapshot": "2026/27 season squad (web index)",
+      "players": [
+        {
+          "name": "Mickey Demetriou",
+          "eurThousands": 50,
+          "gbpMillions": 0.042
+        },
+        {
+          "name": "Reece Hutchinson",
+          "eurThousands": 300,
+          "gbpMillions": 0.254
+        }
+      ],
+      "squadReviews": [
+        "Lewis Billington is valued at €300k on a 2026/27 roster listing, but the displayed contract date is 30 June 2026; review ongoing membership before importing.",
+        "Joe White and Charlie McNeill need season-squad confirmation; no automatic historical valuations."
+      ]
+    },
+    {
+      "id": "northampton-town",
+      "pack": "NORTHAMPTON_TOWN_2627_PACK",
+      "sourceUrl": "https://www.transfermarkt.co.uk/northempton-taun/kader/verein/1302",
+      "sourceSnapshot": "2026/27 season squad (web index)",
+      "players": [
+        {
+          "name": "Conor McCarthy",
+          "eurThousands": 275,
+          "gbpMillions": 0.233
+        },
+        {
+          "name": "Jon Guthrie",
+          "eurThousands": 100,
+          "gbpMillions": 0.085
+        },
+        {
+          "name": "James Maxwell",
+          "eurThousands": 275,
+          "gbpMillions": 0.233
+        },
+        {
+          "name": "Joe Wormleighton",
+          "eurThousands": 125,
+          "gbpMillions": 0.106
+        }
+      ],
+      "squadReviews": [
+        "Conor McCarthy: season source shirt #3 versus SWOS research #15; do not overwrite without a separate official check.",
+        "James Maxwell has an unassigned shirt number in the cited source; retain researched #3 provisionally."
+      ]
+    }
+  ]
+}

@@ -136,7 +136,8 @@ const reviewBatchPaths = [
   'data/league-two-verified-values-batch-a-2026-10-09.json',
   'data/league-two-verified-values-batch-b-2026-10-09.json',
   'data/league-two-rochdale-official-numbers-2026-10-09.json',
-  'data/league-two-verified-values-batch-c-2026-10-09.json'
+  'data/league-two-verified-values-batch-c-2026-10-09.json',
+  'data/league-two-verified-values-batch-d-2026-10-10.json'
 ];
 const squadReviewRows = [];
 for (const reviewBatchPath of reviewBatchPaths) {
