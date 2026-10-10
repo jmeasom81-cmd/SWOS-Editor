@@ -286,3 +286,22 @@ assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null)
 assert.equal(master.clubs.find(c=>c.clubId==='burton-albion').players.find(p=>p.player==='Kamil Dudek').marketValueM,null,'Unpublished market value must remain blank');
 assert.equal(master.clubs.find(c=>c.clubId==='west-bromwich-albion').players.find(p=>p.player==='Jimmy Morgan').shirt,null,'Unconfirmed squad number cannot be invented');
 console.log('Batch K: 18 source-matched market values across 7 clubs; 243 values remain blank.');
+
+// Research review L: source review records are deliberately not valuations.
+const researchReviewL=JSON.parse(fs.readFileSync('data/gap-research-review-2026-10-10.json','utf8'));
+assert.equal(researchReviewL.season,'2026/27');
+assert.equal(researchReviewL.reviews.length,26);
+const priorReviews=new Set();
+for(const r of researchReviewL.reviews){
+ const id=r.clubId+'|'+r.player;
+ assert.ok(!priorReviews.has(id),'Repeated player review '+id);
+ priorReviews.add(id);
+ assert.ok(['value_unpublished','membership_check'].includes(r.status));
+ assert.ok(r.sourceUrl.startsWith('https://'));
+ const player=master.clubs.find(c=>c.clubId===r.clubId)?.players.find(p=>p.player===r.player);
+ assert.ok(player,'Unknown review player '+id);
+ assert.equal(player.marketValueM,null,'Unpublished value must remain null '+id);
+}
+assert.equal(researchReviewL.reviews.filter(r=>r.status==='membership_check').length,2);
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,243);
+console.log('SWOS research review L: 26 reviewed missing values, no assumptions made.');

@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "checkedAt": "2026-10-10",
+  "meaning": "Research status rather than a valuation. A dash does not mean £0, and source non-appearance does not prove a transfer. No game files edited.",
+  "reviews": [
+    {
+      "clubId": "rochdale",
+      "player": "Ryan East",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.co.uk/rochdale-afc/kader/verein/1088",
+      "checkedAt": "2026-10-10",
+      "note": "2026/27 season squad lists no numeric value. Mani also appears as Emmanuel Dieseruvwe."
+    },
+    {
+      "clubId": "rochdale",
+      "player": "Harvey Gilmour",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.co.uk/rochdale-afc/kader/verein/1088",
+      "checkedAt": "2026-10-10",
+      "note": "2026/27 season squad lists no numeric value. Mani also appears as Emmanuel Dieseruvwe."
+    },
+    {
+      "clubId": "rochdale",
+      "player": "Ed Francis",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.co.uk/rochdale-afc/kader/verein/1088",
+      "checkedAt": "2026-10-10",
+      "note": "2026/27 season squad lists no numeric value. Mani also appears as Emmanuel Dieseruvwe."
+    },
+    {
+      "clubId": "rochdale",
+      "player": "Casey Pettit",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.co.uk/rochdale-afc/kader/verein/1088",
+      "checkedAt": "2026-10-10",
+      "note": "2026/27 season squad lists no numeric value. Mani also appears as Emmanuel Dieseruvwe."
+    },
+    {
+      "clubId": "rochdale",
+      "player": "Tobi Adebayo-Rowling",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.co.uk/rochdale-afc/kader/verein/1088",
+      "checkedAt": "2026-10-10",
+      "note": "2026/27 season squad lists no numeric value. Mani also appears as Emmanuel Dieseruvwe."
+    },
+    {
+      "clubId": "rochdale",
+      "player": "Devante Rodney",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.co.uk/rochdale-afc/kader/verein/1088",
+      "checkedAt": "2026-10-10",
+      "note": "2026/27 season squad lists no numeric value. Mani also appears as Emmanuel Dieseruvwe."
+    },
+    {
+      "clubId": "rochdale",
+      "player": "Mani Dieseruvwe",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.co.uk/rochdale-afc/kader/verein/1088",
+      "checkedAt": "2026-10-10",
+      "note": "2026/27 season squad lists no numeric value. Mani also appears as Emmanuel Dieseruvwe."
+    },
+    {
+      "clubId": "york-city",
+      "player": "George Sykes-Kenworthy",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.co.uk/york-city/kader/verein/1252",
+      "checkedAt": "2026-10-10",
+      "note": "Current-season squad list shows a dash instead of a numeric market price."
+    },
+    {
+      "clubId": "york-city",
+      "player": "Ryan Fallowfield",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.co.uk/york-city/kader/verein/1252",
+      "checkedAt": "2026-10-10",
+      "note": "Current-season squad list shows a dash instead of a numeric market price."
+    },
+    {
+      "clubId": "york-city",
+      "player": "Mark Kitching",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.co.uk/york-city/kader/verein/1252",
+      "checkedAt": "2026-10-10",
+      "note": "Current-season squad list shows a dash instead of a numeric market price."
+    },
+    {
+      "clubId": "york-city",
+      "player": "Ashley Palmer",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.co.uk/york-city/kader/verein/1252",
+      "checkedAt": "2026-10-10",
+      "note": "Current-season squad list shows a dash instead of a numeric market price."
+    },
+    {
+      "clubId": "york-city",
+      "player": "Alex Hunt",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.co.uk/york-city/kader/verein/1252",
+      "checkedAt": "2026-10-10",
+      "note": "Current-season squad list shows a dash instead of a numeric market price."
+    },
+    {
+      "clubId": "york-city",
+      "player": "Hiram Boateng",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.co.uk/york-city/kader/verein/1252",
+      "checkedAt": "2026-10-10",
+      "note": "Current-season squad list shows a dash instead of a numeric market price."
+    },
+    {
+      "clubId": "york-city",
+      "player": "Oliver Banks",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.co.uk/york-city/kader/verein/1252",
+      "checkedAt": "2026-10-10",
+      "note": "Current-season squad list shows a dash instead of a numeric market price."
+    },
+    {
+      "clubId": "york-city",
+      "player": "Joe Grey",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.co.uk/york-city/kader/verein/1252",
+      "checkedAt": "2026-10-10",
+      "note": "Current-season squad list shows a dash instead of a numeric market price."
+    },
+    {
+      "clubId": "york-city",
+      "player": "Josh Stones",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.co.uk/york-city/kader/verein/1252",
+      "checkedAt": "2026-10-10",
+      "note": "Current-season squad list shows a dash instead of a numeric market price."
+    },
+    {
+      "clubId": "york-city",
+      "player": "Ollie Pearce",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.co.uk/york-city/kader/verein/1252",
+      "checkedAt": "2026-10-10",
+      "note": "Current-season squad list shows a dash instead of a numeric market price."
+    },
+    {
+      "clubId": "bromley",
+      "player": "Dillon Addai",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.co.uk/bromley-fc/kader/verein/8981",
+      "checkedAt": "2026-10-10",
+      "note": "Current-season Bromley squad lists player but no numerical value."
+    },
+    {
+      "clubId": "cambridge-united",
+      "player": "Gabriel Breeze",
+      "status": "membership_check",
+      "sourceUrl": "https://www.transfermarkt.co.uk/cambridge-united/kader/verein/986/saison_id/2026",
+      "checkedAt": "2026-10-10",
+      "note": "Not matched in the cited season squad. Verify current club membership independently; absence from one listing does not establish departure."
+    },
+    {
+      "clubId": "cambridge-united",
+      "player": "Callum Perry",
+      "status": "membership_check",
+      "sourceUrl": "https://www.transfermarkt.co.uk/cambridge-united/kader/verein/986/saison_id/2026",
+      "checkedAt": "2026-10-10",
+      "note": "Not matched in the cited season squad. Verify current club membership independently; absence from one listing does not establish departure."
+    },
+    {
+      "clubId": "accrington-stanley",
+      "player": "Louie Moulden",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.com/accrington-stanley/kader/verein/3688",
+      "checkedAt": "2026-10-10",
+      "note": "Previously reviewed in SWOS batch E as lacking published current-season valuations."
+    },
+    {
+      "clubId": "accrington-stanley",
+      "player": "James Rogerson",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.com/accrington-stanley/kader/verein/3688",
+      "checkedAt": "2026-10-10",
+      "note": "Previously reviewed in SWOS batch E as lacking published current-season valuations."
+    },
+    {
+      "clubId": "accrington-stanley",
+      "player": "Tom Moore",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.com/accrington-stanley/kader/verein/3688",
+      "checkedAt": "2026-10-10",
+      "note": "Previously reviewed in SWOS batch E as lacking published current-season valuations."
+    },
+    {
+      "clubId": "accrington-stanley",
+      "player": "Stefan Mols",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.com/accrington-stanley/kader/verein/3688",
+      "checkedAt": "2026-10-10",
+      "note": "Previously reviewed in SWOS batch E as lacking published current-season valuations."
+    },
+    {
+      "clubId": "shrewsbury-town",
+      "player": "Jack Price",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.co.uk/shrewsbury-town/kader/verein/3054",
+      "checkedAt": "2026-10-10",
+      "note": "Previously reviewed in SWOS batch E with no numerical value listed."
+    },
+    {
+      "clubId": "shrewsbury-town",
+      "player": "Jay Turner-Cooke",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.co.uk/shrewsbury-town/kader/verein/3054",
+      "checkedAt": "2026-10-10",
+      "note": "Previously reviewed in SWOS batch E with no numerical value listed."
+    }
+  ]
+}
