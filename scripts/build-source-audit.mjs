@@ -28,6 +28,46 @@ for(const c of master.clubs){
 for(const p of playerRows){
  p.sameNameOtherClubs=[...(nameOwners.get(normalizeName(p.player))||[])].filter(id=>id!==p.clubId).map(id=>master.clubs.find(c=>c.clubId===id)?.club||id);
 }
+// Keep evidence and completeness distinct. A source is a research lead, not proof of squad membership.
+const reviewPack=JSON.parse(fs.readFileSync('data/gap-research-review-2026-10-10.json','utf8'));
+if(reviewPack.season!==master.season)throw new Error('Priority queue: research season mismatch');
+const reviews=new Map();
+for(const r of reviewPack.reviews){
+ const key=r.clubId+'|'+r.player;
+ if(reviews.has(key))throw new Error('Priority queue: duplicate review '+key);
+ reviews.set(key,r);
+}
+const priorityOrder={URGENT:0,HIGH:1,MEDIUM:2,LOW:3,REVIEWED:4,CLEAR:5};
+for(const p of playerRows){
+ const review=reviews.get(p.clubId+'|'+p.player);
+ const missingCore=['shirt','nationality','position'].filter(key=>p[key]===null||p[key]===undefined||p[key]==='');
+ const missingValue=p.marketValueM===null||p.marketValueM===undefined||p.marketValueM==='';
+ const unpublished=review?.status==='value_unpublished';
+ const membership=review?.status==='membership_check';
+ const issues=[];
+ if(membership)issues.push('Squad membership needs independent check');
+ for(const f of missingCore)issues.push('Missing '+(f==='shirt'?'shirt number':f));
+ if(missingValue)issues.push(unpublished?'Market value unavailable in reviewed source':'Missing numerical market valuation');
+ if(!p.squadSourceUrl)issues.push('No individual season squad source linked');
+ if(!missingValue&&!p.valueSourceUrl)issues.push('Recorded valuation lacks individual evidence link');
+ if(p.sameNameOtherClubs.length)issues.push('Same-name player in other club: '+p.sameNameOtherClubs.join(', '));
+ p.reviewStatus=review?.status||null;
+ p.reviewSourceUrl=review?.sourceUrl||null;
+ p.researchIssues=issues;
+ p.researchPriority=membership||missingCore.length?'URGENT':
+   missingValue&&!unpublished?'HIGH':
+   !p.squadSourceUrl?'MEDIUM':
+   !missingValue&&!p.valueSourceUrl||p.sameNameOtherClubs.length?'LOW':
+   missingValue&&unpublished?'REVIEWED':'CLEAR';
+ p.nextResearchAction=membership?'Confirm 2026/27 club membership before changing the roster':
+   missingCore.length?'Find a current-season source for '+missingCore.join(', '):
+   missingValue&&!unpublished?'Find a published numerical valuation; never fill with zero':
+   !p.squadSourceUrl?'Find independent 2026/27 squad evidence':
+   !missingValue&&!p.valueSourceUrl?'Link evidence for the recorded market value':
+   p.sameNameOtherClubs.length?'Resolve identity before assuming a duplicate transfer':
+   unpublished?'No numerical value found in reviewed source; revisit only with new evidence':'No priority action identified';
+}
+for(const key of reviews.keys())if(!playerRows.some(p=>p.clubId+'|'+p.player===key))throw new Error('Priority queue: reviewed player not found '+key);
 const sum=rows=>({
  players:rows.length,
  ready:rows.filter(p=>p.essentialReady).length,
@@ -39,6 +79,12 @@ const sum=rows=>({
  valuedWithoutIndividualSource:rows.filter(p=>p.marketValueM!==null&&!p.valueSourceUrl).length,
  shirtLinked:rows.filter(p=>p.shirtSourceUrl).length,
  nationalityLinked:rows.filter(p=>p.nationalitySourceUrl).length,
+ urgent:rows.filter(p=>p.researchPriority==='URGENT').length,
+ high:rows.filter(p=>p.researchPriority==='HIGH').length,
+ medium:rows.filter(p=>p.researchPriority==='MEDIUM').length,
+ low:rows.filter(p=>p.researchPriority==='LOW').length,
+ reviewed:rows.filter(p=>p.researchPriority==='REVIEWED').length,
+ clear:rows.filter(p=>p.researchPriority==='CLEAR').length,
  nameCollisionRows:rows.filter(p=>p.sameNameOtherClubs.length).length
 });
 const summary=sum(playerRows);
@@ -61,6 +107,13 @@ const csv=v=>{
 const headers=['Division','Club','Player','Shirt','Nationality','Position code','Value GBP millions','Essentials filled','Individual 2026-27 squad link','Individual market value link','Shirt evidence link','Nationality evidence link','Official PL squad source','Official PL shirt number','Possible same-name clubs','Squad source URL','Value source URL','Shirt source URL','Nationality source URL'];
 const rows=[headers,...playerRows.map(p=>[p.division,p.club,p.player,p.shirt,p.nationality,p.position,p.marketValueM,p.essentialReady?'YES':'NO',p.squadSourceUrl?'LINKED':'NOT LINKED',p.valueSourceUrl?'LINKED':'NOT LINKED',p.shirtSourceUrl?'LINKED':'NOT LINKED',p.nationalitySourceUrl?'LINKED':'NOT LINKED',p.officialPLRosterUrl||'',p.officialPLSquadNumber??'',p.sameNameOtherClubs.join('; '),p.squadSourceUrl,p.valueSourceUrl,p.shirtSourceUrl,p.nationalitySourceUrl])];
 fs.writeFileSync('dist/downloads/SWOS_Source_Audit_2026-27.csv','\uFEFF'+rows.map(r=>r.map(csv).join(',')).join('\r\n')+'\r\n');
+const queue=playerRows.filter(p=>p.researchPriority!=='CLEAR').sort((a,b)=>
+ priorityOrder[a.researchPriority]-priorityOrder[b.researchPriority]||
+ a.division.localeCompare(b.division)||a.club.localeCompare(b.club)||a.player.localeCompare(b.player));
+const queueHeaders=['Research priority','Division','Club','Player','Shirt','Nationality','SWOS position','Value GBP millions','Recommended next action','Research issues','Research review status','Review evidence URL','Squad evidence URL','Valuation evidence URL','Same-name clubs'];
+const queueRows=[queueHeaders,...queue.map(p=>[p.researchPriority,p.division,p.club,p.player,p.shirt,p.nationality,p.position,p.marketValueM,p.nextResearchAction,p.researchIssues.join(' | '),p.reviewStatus,p.reviewSourceUrl,p.squadSourceUrl,p.valueSourceUrl,p.sameNameOtherClubs.join('; ')])];
+fs.writeFileSync('dist/downloads/SWOS_Research_Priority_2026-27.csv','\uFEFF'+queueRows.map(r=>r.map(csv).join(',')).join('\r\n')+'\r\n');
+if(queue.length!==summary.players-summary.clear)throw new Error('Priority queue: count disagrees with audit');
 const template=fs.readFileSync('source-audit-template.html','utf8');
 const placeholder='__SWOS_SOURCE_AUDIT_DATA__';
 if(template.split(placeholder).length!==2)throw new Error('Source audit: template data placeholder not unique');
