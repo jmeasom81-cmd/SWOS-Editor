@@ -21756,7 +21756,12 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "shirtEvidenceUrl": "https://rochdaleafc.co.uk/first-team-players-staff/",
+          "shirtCheckedAt": "2026-10-19",
+          "seasonSquadSourceUrl": "https://rochdaleafc.co.uk/first-team-players-staff/",
+          "seasonSquadCheckedAt": "2026-10-19",
+          "seasonSquadSourceName": "Rochdale AFC first-team roster checked 19 October 2026"
         },
         {
           "player": "Kaiden Wilson",
@@ -21908,7 +21913,12 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "shirtEvidenceUrl": "https://rochdaleafc.co.uk/first-team-players-staff/",
+          "shirtCheckedAt": "2026-10-19",
+          "seasonSquadSourceUrl": "https://rochdaleafc.co.uk/first-team-players-staff/",
+          "seasonSquadCheckedAt": "2026-10-19",
+          "seasonSquadSourceName": "Rochdale AFC first-team roster checked 19 October 2026"
         },
         {
           "player": "Cian Hayes",
