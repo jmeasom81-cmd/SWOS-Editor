@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "checkedAt": "2026-10-19",
+  "sourceUrl": "https://rochdaleafc.co.uk/first-team-players-staff/",
+  "sourceType": "Current official club first-team roster",
+  "meaning": "Direct 2026-10-19 official first-team page shows both selected players and their squad numbers. Supersedes the October 9 unconfirmed-only status for these two; does not imply any market valuation or change any game file.",
+  "confirmedShirts": [
+    {
+      "player": "Charlie Tasker",
+      "shirt": 2
+    },
+    {
+      "player": "Baba Adeeko",
+      "shirt": 17
+    }
+  ],
+  "clubs": [
+    {
+      "id": "rochdale",
+      "sourceUrl": "https://rochdaleafc.co.uk/first-team-players-staff/",
+      "squadReviews": [
+        "Current official Rochdale first-team roster checked 19 October 2026 lists Charlie Tasker #2 and Baba Adeeko #17. The older 9 October announcement did not confirm these two; their selected SWOS names and numbers can now be individually linked. No valuations inferred."
+      ]
+    }
+  ]
+}
