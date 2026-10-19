@@ -29,6 +29,18 @@ assert.ok(home.includes('href="/source-audit-2026-27.html"'));
 assert.ok(gaps.includes('href="/source-audit-2026-27.html"'));
 const csv=fs.readFileSync('dist/downloads/SWOS_Source_Audit_2026-27.csv','utf8');
 assert.equal(csv.trim().split(/\r?\n/).length,1473,'Audit CSV header + 1,472 players');
+const priorities=['URGENT','HIGH','MEDIUM','LOW','REVIEWED','CLEAR'];
+assert.equal(priorities.reduce((n,k)=>n+data.summary[k.toLowerCase()],0),1472);
+assert.ok(data.players.every(p=>priorities.includes(p.researchPriority)&&Array.isArray(p.researchIssues)&&typeof p.nextResearchAction==='string'));
+assert.equal(data.summary.urgent,data.players.filter(p=>p.researchPriority==='URGENT').length);
+assert.equal(data.summary.high,data.players.filter(p=>p.researchPriority==='HIGH').length);
+assert.ok(data.players.filter(p=>p.reviewStatus==='membership_check').every(p=>p.researchPriority==='URGENT'));
+assert.ok(data.players.filter(p=>p.researchPriority==='REVIEWED').every(p=>p.reviewStatus==='value_unpublished'&&p.marketValueM===null));
+assert.ok(page.includes('Next 15 clubs to research'));
+assert.ok(page.includes('SWOS_Research_Priority_2026-27.csv'));
+const priorityCsv=fs.readFileSync('dist/downloads/SWOS_Research_Priority_2026-27.csv','utf8');
+assert.equal(priorityCsv.trim().split(/\r?\n/).length,1473-data.summary.clear);
+console.log('SWOS priority audit: '+data.summary.urgent+' urgent, '+data.summary.high+' high, '+data.summary.medium+' squad links to research.');
 console.log('SWOS source audit checked: '+data.summary.players+' rows, '+data.summary.squadLinked+' squad links, '+data.summary.valuedWithoutIndividualSource+' valuations lacking individual evidence links.');
 
 // Official Premier League number verification preserves the independently recorded 2026/27 source.
