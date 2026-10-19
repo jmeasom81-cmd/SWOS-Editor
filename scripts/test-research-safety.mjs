@@ -119,9 +119,21 @@ const officialRochdale=JSON.parse(fs.readFileSync('data/league-two-rochdale-offi
 const rochdaleClub=master.clubs.find(c=>c.clubId==='rochdale');
 assert.equal(Object.keys(officialRochdale.officialShirts).length,14,'Official Rochdale source should confirm 14 shirts');
 for(const [name,shirt] of Object.entries(officialRochdale.officialShirts)){const p=rochdaleClub.players.find(p=>p.player===name);assert.ok(p);assert.equal(p.shirt,shirt,'Official shirt differs '+name);assert.equal(p.shirtEvidenceUrl,officialRochdale.clubs[0].sourceUrl);assert.equal(p.seasonSquadSourceUrl,officialRochdale.clubs[0].sourceUrl);}
-for(const name of officialRochdale.notConfirmed){const p=rochdaleClub.players.find(p=>p.player===name);assert.ok(p);assert.equal(p.shirtEvidenceUrl ?? null,null,'Unconfirmed shirt must stay unverified');}
+const latestRochdale=JSON.parse(fs.readFileSync('data/rochdale-first-team-current-2026-10-19.json','utf8'));
+assert.equal(latestRochdale.season,'2026/27');
+assert.equal(latestRochdale.confirmedShirts.length,2);
+assert.deepEqual(latestRochdale.confirmedShirts.map(p=>p.player).sort(),officialRochdale.notConfirmed.slice().sort());
+for(const record of latestRochdale.confirmedShirts){
+ const p=rochdaleClub.players.find(p=>p.player===record.player);
+ assert.ok(p,'Previously unconfirmed player in current roster');
+ assert.equal(p.shirt,record.shirt,'Official October 19 number must match selected SWOS record');
+ assert.equal(p.shirtEvidenceUrl,latestRochdale.sourceUrl);
+ assert.equal(p.seasonSquadSourceUrl,latestRochdale.sourceUrl);
+ assert.equal(p.shirtCheckedAt,latestRochdale.checkedAt);
+ assert.equal(p.seasonSquadCheckedAt,latestRochdale.checkedAt);
+}
 assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,243,'Current missing valuation tally after subsequent sourced batches');
-console.log('Rochdale: 14 official 2026/27 numbers confirmed, 2 pending.');
+console.log('Rochdale: 14 original official shirt numbers + 2 current first-team entries now linked (16/16).');
 
 // Batch C: each market value is tied to a named season-squad source, not a guessed valuation.
 const batchC=JSON.parse(fs.readFileSync('data/league-two-verified-values-batch-c-2026-10-09.json','utf8'));
