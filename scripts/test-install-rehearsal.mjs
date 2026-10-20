@@ -10,7 +10,7 @@ assert.ok(html.includes('id="exportRehearsalOriginal"'));
 assert.ok(html.includes('id="exportRehearsalReport"'));
 assert.ok(!html.includes('id="installSeasonUpdate"'),'Unsafe live install button must remain absent.');
 assert.ok(html.includes('candidate.binarySafetyAudit=auditEnglandRehearsal('));
-assert.ok(html.includes('original file stays untouched'));
+assert.ok(html.includes('original TEAM file stays untouched'));
 const TEAM_RECORD_SIZE=684,PLAYER_RECORD_SIZE=38,PLAYERS_PER_TEAM=16,HEADER_SIZE=2;
 const T={name:5,nameLength:19,tactic:24,division:25,homeKit:26,awayKit:31,order:60,players:76};
 const P={nationality:0,shirt:2,name:3,nameLength:23,multi:26,passing:28,shootHead:29,value:32};
