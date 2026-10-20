@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "leicester-city",
+  "club": "Leicester City",
+  "division": "League One",
+  "checkedAt": "2026-10-20",
+  "meaning": "Official Leicester City 2026/27 first team squad numbers and dated lineups, not transfer market valuations. August list is a dated snapshot and later signings wear numbers that supersede or supplement it. No career or TEAM.* binary files are modified.",
+  "nameFix": {
+    "from": "Tom Watson",
+    "to": "Tommy Watson",
+    "oldShirt": 20,
+    "verifiedShirt": 23,
+    "explanation": "Published club sheets place Harry Howell at #20 and Tommy Watson at #23; identity and assignment now corrected for researched squad."
+  },
+  "players": [
+    {
+      "player": "Jakub Stolarczyk",
+      "shirt": 1,
+      "sourceUrl": "https://www.lcfc.com/media-article/team-news-ipswich-town-vs-leicester-city-carabao-cup",
+      "sourceDate": "2026-08-25",
+      "sourceKind": "official_match_lineup",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Franco Ravizzoli",
+      "shirt": 21,
+      "sourceUrl": "https://www.lcfc.com/media-article/team-news-stevenage-vs-leicester-city-jersey-mikes-trophy",
+      "sourceDate": "2026-10-06",
+      "sourceKind": "official_match_lineup",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Wout Faes",
+      "shirt": 3,
+      "sourceUrl": "https://www.lcfc.com/media-article/barnsley-leicester-city-lcfc-league-one-team-news",
+      "sourceDate": "2026-09-19",
+      "sourceKind": "official_match_lineup",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Ben Nelson",
+      "shirt": 4,
+      "sourceUrl": "https://www.lcfc.com/media-article/leicester-city-lcfc-men-league-one-squad-numbers",
+      "sourceDate": "2026-08-14",
+      "sourceKind": "official_season_numbers",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Caleb Okoli",
+      "shirt": 5,
+      "sourceUrl": "https://www.lcfc.com/media-article/team-news-leicester-city-vs-doncaster-rovers-sky-bet-league-one",
+      "sourceDate": "2026-10-17",
+      "sourceKind": "official_match_lineup",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Warren O'Hora",
+      "shirt": 16,
+      "sourceUrl": "https://www.lcfc.com/media-article/team-news-leicester-city-vs-doncaster-rovers-sky-bet-league-one",
+      "sourceDate": "2026-10-17",
+      "sourceKind": "official_match_lineup",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Luke Thomas",
+      "shirt": 33,
+      "sourceUrl": "https://www.lcfc.com/media-article/team-news-leicester-city-vs-doncaster-rovers-sky-bet-league-one",
+      "sourceDate": "2026-10-17",
+      "sourceKind": "official_match_lineup",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "John Lundstram",
+      "shirt": 6,
+      "sourceUrl": "https://www.lcfc.com/media-article/team-news-leicester-city-vs-doncaster-rovers-sky-bet-league-one",
+      "sourceDate": "2026-10-17",
+      "sourceKind": "official_match_lineup",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Conor Chaplin",
+      "shirt": 8,
+      "sourceUrl": "https://www.lcfc.com/media-article/team-news-leicester-city-vs-doncaster-rovers-sky-bet-league-one",
+      "sourceDate": "2026-10-17",
+      "sourceKind": "official_match_lineup",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Kamari Doyle",
+      "shirt": 27,
+      "sourceUrl": "https://www.lcfc.com/media-article/team-news-leicester-city-vs-doncaster-rovers-sky-bet-league-one",
+      "sourceDate": "2026-10-17",
+      "sourceKind": "official_match_lineup",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Sammy Braybrooke",
+      "shirt": 36,
+      "sourceUrl": "https://www.lcfc.com/media-article/team-news-leicester-city-vs-doncaster-rovers-sky-bet-league-one",
+      "sourceDate": "2026-10-17",
+      "sourceKind": "official_match_lineup",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Will Alves",
+      "shirt": 37,
+      "sourceUrl": "https://www.lcfc.com/media-article/team-news-leicester-city-vs-doncaster-rovers-sky-bet-league-one",
+      "sourceDate": "2026-10-17",
+      "sourceKind": "official_match_lineup",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Admir Bristric",
+      "shirt": 9,
+      "sourceUrl": "https://www.lcfc.com/media-article/team-news-stevenage-vs-leicester-city-jersey-mikes-trophy",
+      "sourceDate": "2026-10-06",
+      "sourceKind": "official_match_lineup",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Liam Cullen",
+      "shirt": 11,
+      "sourceUrl": "https://www.lcfc.com/media-article/team-news-leicester-city-vs-doncaster-rovers-sky-bet-league-one",
+      "sourceDate": "2026-10-17",
+      "sourceKind": "official_match_lineup",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Emil Riis",
+      "shirt": 17,
+      "sourceUrl": "https://www.lcfc.com/media-article/team-news-leicester-city-vs-doncaster-rovers-sky-bet-league-one",
+      "sourceDate": "2026-10-17",
+      "sourceKind": "official_match_lineup",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Tommy Watson",
+      "shirt": 23,
+      "sourceUrl": "https://www.lcfc.com/media-article/team-news-stevenage-vs-leicester-city-jersey-mikes-trophy",
+      "sourceDate": "2026-10-06",
+      "sourceKind": "official_match_lineup",
+      "checkedAt": "2026-10-20"
+    }
+  ],
+  "cautions": [
+    "Sourced match squad participation is strong evidence at its published date, not a perpetual membership guarantee.",
+    "Market values remain unchanged; no invented player transfer fees.",
+    "Official August list and later match squads differ due to September arrivals. Newer source wins when it explicitly identifies the player and number."
+  ]
+}
