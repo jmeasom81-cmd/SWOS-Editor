@@ -106,6 +106,9 @@ for (const club of baseline.clubs) {
   const d = divisionStats[club.division] ||= {clubs:0,players:0,ready:0,essentialGaps:0};
   d.clubs++; d.players += club.players.length; d.ready += complete; d.essentialGaps += Object.values(gaps).reduce((a,b) => a+b, 0);
 }
+// Batch O adds sourced value evidence and unresolved shirt mismatches to the existing Excel quality checks.
+const valuationO=JSON.parse(fs.readFileSync('data/valuation-verification-batch-o-2026-10-20.json','utf8'));
+if(valuationO.season!==baseline.season)throw new Error('Batch O season mismatch');
 // Flag integrity risks without silently rewriting any verified game record.
 const integrity = [];
 const clubKeys = new Set();
@@ -129,6 +132,12 @@ for (const club of baseline.clubs) {
     if (!byPlayerName.has(nameKey)) byPlayerName.set(nameKey, []);
     byPlayerName.get(nameKey).push({club:club.club,division:club.division,player:p.player});
   }
+}
+for (const issue of valuationO.discrepancyFlags){
+ const club=baseline.clubs.find(c=>c.clubId===issue.clubId);
+ const player=club?.players.find(p=>p.player===issue.player);
+ if(!player||player[issue.field]!==issue.stored)throw new Error('Batch O shirt difference drift: '+issue.player);
+ integrity.push(['SOURCE SHIRT MISMATCH',club.division,club.club,issue.player,issue.note,'Verify official 2026/27 kit/squad number; do not auto-apply '+issue.sourceValue]);
 }
 for (const duplicate of byPlayerName.values()) {
   if (duplicate.length <= 1) continue;
@@ -243,6 +252,7 @@ const sheets = [
    ['Age / goals / assists','Not included because SWOS does not need them in the current priority pass'],
    ['Source date','Each player inherits their club source/snapshot; generating the workbook does not reverify football facts'],
    ['Source of truth','Generated automatically from the same embedded research packs used by SWOS Studio'],
+   ['20 Oct valuation review','Batch O adds five 2026/27 player valuations linked to individually named squad profiles, five missing numeric values recorded as unpublished, and three number mismatches in Quality checks. Currency uses a 9 Oct comparison rate.'],
    ['20 October verification','West Brom Jimmy Morgan #11 and Mikey Johnston #10; Cambridge Gabriel Breeze #13 and Callum Perry #3. All four have individual source links. Existing market values remain unchanged.'],
    ['Version','2026/27 master; regeneration on each Vercel build']
   ],[35,100],{}]
