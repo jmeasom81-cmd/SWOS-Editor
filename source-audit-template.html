@@ -26,10 +26,11 @@ p{color:#b6c7d9;line-height:1.6}.links{display:flex;gap:9px;flex-wrap:wrap;margi
 <label class="search">Player or club<input id="q" type="search" placeholder="Search name, club…" autocomplete="off"></label>
 <label>Division<select id="division"><option value="">All divisions</option><option>Premier League</option><option>Championship</option><option>League One</option><option>League Two</option></select></label>
 <label>Club<select id="club"><option value="">All clubs</option></select></label>
-<label>Source status<select id="source"><option value="">All source statuses</option><option value="squad-unlinked">Squad source not linked</option><option value="value-unlinked">Value recorded; no individual source</option><option value="linked">Squad source linked</option><option value="official">Official PL squad number verified</option><option value="collision">Possible same-name match</option></select></label>
+<label>Source status<select id="source"><option value="">All source statuses</option><option value="squad-unlinked">Squad source not linked</option><option value="value-unlinked">Value recorded; no individual source</option><option value="linked">Squad source linked</option><option value="official">Official PL squad number verified</option><option value="officialclub">Official club roster or lineup verified</option><option value="collision">Possible same-name match</option></select></label>
 <label>Essentials<select id="essentials"><option value="">All records</option><option value="ready">All four filled</option><option value="missing">Missing essential field</option></select></label><label>Research priority<select id="priority"><option value="">All priority levels</option><option value="URGENT">Urgent: shirt, position, nationality or squad check</option><option value="HIGH">High: numerical market value missing</option><option value="MEDIUM">Medium: season squad evidence needed</option><option value="LOW">Low: individual value link or identity review</option><option value="REVIEWED">Reviewed: no published numerical value</option><option value="CLEAR">No outstanding research flags</option></select></label>
 </div>
 <p id="result-count" class="tiny"></p><section id="results" class="results"></section><button id="more" type="button" hidden>Show more players</button></section>
+<section class="section"><h2>Verified identity corrections</h2><p class="tiny">Changes made only where a named player and shirt number can be confirmed in dated official club evidence.</p><div id="identity-corrections" class="results"></div></section>
 <section class="section"><h2>Player shirt-number discrepancies</h2><p class="tiny">Newly researched source numbers that differ from SWOS's provisional numbers. These are flagged for manual verification, not automatically changed.</p><div id="shirt-discrepancies" class="results"></div></section>
 <section class="section"><h2>Club-by-club completeness</h2><p class="tiny">Bars show the share of players with a linked squad source — not guaranteed squad accuracy.</p><div id="clubs" class="cards"></div></section>
 <footer>Source audit generated from SWOS Studio’s 2026/27 master at deployment time. It does not modify game files. All unconfirmed data remains available for manual review.</footer>
@@ -47,11 +48,13 @@ const tiles=[
  [fmt(stats.ready)+' / '+fmt(stats.players),'Essentials filled'],
  [fmt(stats.squadLinked)+' / '+fmt(stats.players),'Individual squad source linked'],
  [fmt(stats.officialPLLinked),'Official 2026/27 PL squad numbers verified'],
+ [fmt(stats.officialClubLinked),'Official club 2026/27 shirt numbers verified'],
  [fmt(stats.valuedWithoutIndividualSource),'Valued players without individual value link'],
  [fmt(stats.nameCollisionRows),'Possible same-name player records']
 ];
 el('stats').innerHTML=tiles.map(t=>'<div class="stat"><strong>'+x(t[0])+'</strong><span>'+x(t[1])+'</span></div>').join('');
 const clubs=DATA.clubs.slice().sort((a,b)=>a.division.localeCompare(b.division)||a.club.localeCompare(b.club));
+el('identity-corrections').innerHTML=DATA.verifiedNameCorrections.map(v=>'<article class="person"><div><strong>'+x(v.club)+': '+x(v.to)+' #'+x(v.verifiedShirt)+'</strong><div class="sub">Previous research: '+x(v.from)+' #'+x(v.oldShirt)+'</div><div class="sub">'+x(v.explanation)+'</div><a href="'+x(v.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Official correction source ↗</a></div><div class="pill good">Resolved</div></article>').join('');
 el('shirt-discrepancies').innerHTML=DATA.valuationReviewFlags.map(v=>'<article class="person"><div><strong>'+x(v.player)+'</strong><div class="sub">'+x(clubs.find(c=>c.clubId===v.clubId)?.club||v.clubId)+'</div><div class="sub">SWOS research: #'+x(v.stored)+' · external source: '+x(v.sourceValue??'Unassigned')+'</div><div class="sub">'+x(v.note)+'</div></div><div class="pill">Check number</div></article>').join('')||'<div class="empty">No known number mismatches.</div>';
 el('priority-totals').innerHTML=[
  [stats.urgent,'Urgent: missing core essentials or membership check'],
@@ -94,6 +97,7 @@ function filteredPlayers(){
   if(status==='value-unlinked'&&(p.marketValueM===null||p.valueSourceUrl))return false;
   if(status==='linked'&&!p.squadSourceUrl)return false;
   if(status==='official'&&!p.officialPLRosterUrl)return false;
+  if(status==='officialclub'&&!p.officialClubSourceUrl)return false;
   if(status==='collision'&&!p.sameNameOtherClubs.length)return false;
   return true;
  });
@@ -107,6 +111,7 @@ function render(){
   if(p.marketValueM!==null&&!p.valueSourceUrl)notes.push('Valuation link missing');
   if(p.sameNameOtherClubs.length)notes.push('Same-name entry: '+p.sameNameOtherClubs.join(', '));
   if(p.officialPLRosterUrl)notes.push('Official 2026/27 PL #'+p.officialPLSquadNumber+' confirmed');
+  if(p.officialClubSourceUrl)notes.push('Official club #'+p.officialClubShirtNumber+' verified in '+p.officialClubSourceDate+' '+p.officialClubSourceKind.replaceAll('_',' '));
   if(p.researchPriority!=='CLEAR')notes.push('Next: '+p.nextResearchAction);
   const links=[p.squadSourceUrl?'<a href="'+x(p.squadSourceUrl)+'" target="_blank" rel="noopener noreferrer">Squad source ↗</a>':'',p.valueSourceUrl?'<a href="'+x(p.valueSourceUrl)+'" target="_blank" rel="noopener noreferrer">Value source ↗</a>':''].filter(Boolean).join(' · ');
   return '<article class="person"><div><strong>'+x(p.player)+'</strong><div class="sub">'+x(p.club)+' · '+x(p.division)+' · #'+x(p.shirt??'TBD')+'</div><div class="sub">'+x(notes.length?notes.join(' · '):'No source warnings from recorded fields')+'</div>'+(links?'<div>'+links+'</div>':'')+'</div><div class="pill '+(p.essentialReady?'good':'')+'">'+x(p.researchPriority)+' · '+(p.essentialReady?'Fields filled':'Missing data')+'</div></article>';
