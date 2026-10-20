@@ -469,3 +469,41 @@ assert.equal(externalCount,16);
 assert.equal(merchCount,2);
 assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM==null).length,238,'Verifying club membership cannot manufacture valuations');
 console.log('Batch R safety: 32 season-player references, 16 first-party; 2 genuine club merchandise references.');
+
+// Batch S: preserve player identities and prior market evidence while linking 32 independent 2026/27 rosters.
+const batchS=JSON.parse(fs.readFileSync('data/northampton-rotherham-batch-s-2026-10-20.json','utf8'));
+assert.equal(batchS.season,'2026/27');
+assert.equal(batchS.checkedAt,'2026-10-20');
+assert.equal(batchS.clubs.length,2);
+assert.equal(batchS.clubs.reduce((n,c)=>n+c.players.length,0),32);
+const sourceCounts={newlySeasonLinked:0,stillMissing:0};
+for(const researched of batchS.clubs){
+ const existing=master.clubs.find(c=>c.clubId===researched.clubId);
+ assert.ok(existing);
+ assert.equal(existing.players.length,16);
+ assert.equal(new Set(existing.players.map(p=>p.player)).size,16);
+ assert.equal(new Set(existing.players.map(p=>p.shirt)).size,16);
+ for(const evidence of researched.players){
+  const p=existing.players.find(x=>x.player===evidence.player);
+  assert.ok(p,'Batch S exact player not found '+evidence.player);
+  assert.equal(p.shirt,evidence.shirt);
+  assert.equal(p.nationality,evidence.nationality);
+  assert.equal(p.position,evidence.swosPosition);
+  assert.equal(p.independentSeasonRosterUrl,researched.sourceUrl);
+  assert.equal(p.independentSeasonRosterCheckedAt,batchS.checkedAt);
+  assert.equal(p.independentSeasonRosterNumber,evidence.shirt);
+  assert.equal(p.seasonRosterCrossCheckUrl,evidence.corroboratingSourceUrl);
+  assert.equal(p.seasonRosterCrossCheckType,evidence.crossCheckType);
+  if(!p.seasonSquadSourceUrl)sourceCounts.stillMissing++;
+ }
+}
+assert.equal(sourceCounts.stillMissing,0);
+const north=master.clubs.find(c=>c.clubId==='northampton-town');
+assert.equal(north.players.find(p=>p.player==='Joseph O\'Brien-Whitmarsh').nationality,'Republic of Ireland');
+assert.equal(north.players.find(p=>p.player==='Tyrese Fornah').nationality,'Sierra Leone');
+const disputed=batchS.discrepancyFlags.find(x=>x.player==='Klaidi Lolos');
+assert.ok(disputed);
+assert.equal(master.clubs.find(c=>c.clubId==='rotherham-united').players.find(p=>p.player==='Klaidi Lolos').shirt,20);
+assert.equal(disputed.sourceNumber,25);
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,238);
+console.log('Batch S research safety: 32 individual roster entries, 0 made-up prices or silent shirt changes.');
