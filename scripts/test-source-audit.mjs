@@ -36,9 +36,9 @@ assert.equal(data.summary.urgent,data.players.filter(p=>p.researchPriority==='UR
 assert.equal(data.summary.high,data.players.filter(p=>p.researchPriority==='HIGH').length);
 assert.equal(data.players.filter(p=>p.reviewStatus==='membership_check').length,0);
 assert.equal(data.players.filter(p=>p.reviewStatus==='membership_source_matched').length,2);
-assert.equal(data.summary.urgent,0);
+assert.equal(data.summary.urgent,5);
 assert.equal(data.summary.ready,1234);
-assert.equal(data.summary.squadLinked,729);
+assert.equal(data.summary.squadLinked,764);
 assert.ok(data.players.filter(p=>p.researchPriority==='REVIEWED').every(p=>p.reviewStatus==='value_unpublished'&&p.marketValueM===null));
 assert.ok(page.includes('Next 15 clubs to research'));
 assert.ok(page.includes('SWOS_Research_Priority_2026-27.csv'));
@@ -73,7 +73,7 @@ assert.ok(page.includes('Player shirt-number discrepancies'));
 // Batch P: new first-party club evidence must not be mistaken for a valuation.
 const clubBatch=JSON.parse(fs.readFileSync('data/leicester-official-16-player-audit-2026-10-20.json','utf8'));
 assert.equal(clubBatch.players.length,16);
-assert.equal(data.summary.officialClubLinked,34);
+assert.equal(data.summary.officialClubLinked,50);
 assert.equal(data.clubs.find(c=>c.clubId===clubBatch.clubId).officialClubLinked,16);
 assert.equal(data.verifiedNameCorrections.length,1);
 assert.equal(data.verifiedNameCorrections[0].to,'Tommy Watson');
@@ -98,8 +98,8 @@ assert.equal(barnBatch.season,'2026/27');
 assert.equal(barnBatch.players.length,16);
 assert.equal(data.summary.independentMatchLinked,16);
 assert.equal(data.clubs.find(c=>c.clubId===barnBatch.clubId).independentMatchLinked,16);
-assert.equal(data.summary.officialClubLinked,34,'Independent match sheets cannot inflate first-party club verification');
-assert.equal(data.summary.squadLinked,729);
+assert.equal(data.summary.officialClubLinked,50,'Independent match sheets cannot inflate first-party club verification');
+assert.equal(data.summary.squadLinked,764);
 for(const e of barnBatch.players){
  const p=data.players.find(p=>p.clubId==='barnsley'&&p.player===e.player);
  assert.ok(p,'Missing Barnsley player '+e.player);
@@ -120,11 +120,11 @@ const batchR=JSON.parse(fs.readFileSync('data/bromley-wigan-squad-evidence-batch
 assert.equal(batchR.season,'2026/27');
 assert.equal(batchR.clubs.length,2);
 assert.equal(batchR.clubs.reduce((n,c)=>n+c.players.length,0),32);
-assert.equal(data.summary.independentSeasonRosterLinked,16);
+assert.equal(data.summary.independentSeasonRosterLinked,75);
 assert.equal(data.clubs.find(c=>c.clubId==='bromley').officialClubLinked,16);
 assert.equal(data.clubs.find(c=>c.clubId==='wigan-athletic').independentSeasonRosterLinked,16);
 assert.equal(data.clubs.find(c=>c.clubId==='wigan-athletic').officialClubLinked,2);
-assert.equal(data.summary.officialClubLinked,34);
+assert.equal(data.summary.officialClubLinked,50);
 for(const c of batchR.clubs){
  const actual=data.players.filter(p=>p.clubId===c.clubId);
  assert.equal(actual.length,16);
@@ -150,3 +150,45 @@ assert.ok(csv.includes('Independent season roster URL'));
 assert.equal(data.summary.ready,1234);
 assert.equal(data.summary.priced,1234);
 console.log('Batch R: 16 first-party Bromley shirt references, 16 independent Wigan season records, 2 official merch cross-checks.');
+
+// Batch S: 75 named current-season squad matches across five League Two clubs; five Exeter source gaps stay unresolved.
+const batchS=JSON.parse(fs.readFileSync('data/league-two-squad-verification-batch-s-2026-10-20.json','utf8'));
+assert.equal(batchS.season,'2026/27');
+assert.equal(batchS.clubs.length,5);
+assert.equal(batchS.summary.sourceMatched,75);
+assert.equal(batchS.summary.officialClubMatched,16);
+assert.equal(batchS.summary.independentSourceMatched,59);
+assert.equal(data.membershipReviewFlags.length,5);
+assert.equal(data.summary.membershipReviewCount,5);
+assert.equal(data.summary.officialClubLinked,50);
+assert.equal(data.summary.independentSeasonRosterLinked,75);
+assert.equal(data.summary.squadLinked,764);
+assert.equal(data.summary.urgent,5);
+for(const c of batchS.clubs){
+ const local=data.players.filter(p=>p.clubId===c.clubId);
+ assert.equal(local.length,16);
+ for(const v of c.players){
+  const p=local.find(p=>p.player===v.player);
+  assert.ok(p,'Missing season squad player '+c.clubId+' '+v.player);
+  assert.equal(p.shirt,v.shirt);
+  assert.equal(p.squadSourceUrl,c.sourceUrl);
+  if(c.classification==='official_current_club_first_team_page'){
+   assert.equal(p.officialClubSourceUrl,c.sourceUrl);
+   assert.equal(p.officialClubShirtNumber,v.shirt);
+  }else{
+   assert.equal(p.independentSeasonRosterUrl,c.sourceUrl);
+   assert.equal(p.independentSeasonRosterNumber,v.shirt);
+  }
+ }
+ for(const f of c.flags){
+  const p=local.find(p=>p.player===f.player);
+  assert.ok(p,'Missing flagged record '+f.player);
+  assert.equal(p.membershipReviewStatus,f.reviewStatus);
+  assert.equal(p.squadSourceUrl,null);
+  assert.equal(p.researchPriority,'URGENT');
+ }
+}
+assert.ok(page.includes('Unconfirmed 2026/27 squad membership'));
+assert.ok(page.includes('Current squad membership needs review'));
+assert.ok(csv.includes('Independent season roster URL'));
+console.log('Batch S: 75 sourced League Two player records and 5 unresolved Exeter membership checks, no invented valuations.');
