@@ -372,3 +372,29 @@ for(const issue of batchO.discrepancyFlags){
 }
 assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,238);
 console.log('Batch O: 5 individually sourced market values, 5 unpublished values documented, 3 shirt disputes preserved for review.');
+
+// Batch P: dated club sources supersede old pre-transfer squad number snapshots.
+const officialLeicester=JSON.parse(fs.readFileSync('data/leicester-official-16-player-audit-2026-10-20.json','utf8'));
+assert.equal(officialLeicester.season,'2026/27');
+assert.equal(officialLeicester.players.length,16);
+const leicester=master.clubs.find(c=>c.clubId===officialLeicester.clubId);
+assert.ok(leicester);
+assert.equal(leicester.players.length,16);
+assert.equal(new Set(leicester.players.map(p=>p.shirt)).size,16);
+assert.equal(new Set(leicester.players.map(p=>p.player)).size,16);
+assert.equal(leicester.players.filter(p=>p.officialClubSourceUrl).length,16);
+assert.ok(!leicester.players.some(p=>p.player==='Tom Watson'||p.shirt===20));
+for(const x of officialLeicester.players){
+ const p=leicester.players.find(p=>p.player===x.player);
+ assert.ok(p,'Unmatched Leicester official player '+x.player);
+ assert.equal(p.shirt,x.shirt,'Club shirt number mismatch '+x.player);
+ assert.equal(p.officialClubSourceUrl,x.sourceUrl);
+ assert.equal(p.officialClubShirtNumber,x.shirt);
+ assert.equal(p.officialClubSourceDate,x.sourceDate);
+ assert.equal(p.officialClubSourceKind,x.sourceKind);
+ assert.equal(p.seasonSquadSourceUrl,x.sourceUrl);
+ assert.equal(p.shirtEvidenceUrl,x.sourceUrl);
+}
+assert.equal(leicester.players.find(p=>p.player==='Tommy Watson').shirt,23);
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,238,'Verification must not invent valuations');
+console.log('Leicester official squad audit: 16/16 independently evidenced, Watson name and number resolved; no fake fees.');
