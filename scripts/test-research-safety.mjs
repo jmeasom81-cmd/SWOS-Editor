@@ -429,3 +429,43 @@ for(const e of q.players){
 assert.equal(barn.players.filter(p=>p.marketValueM===null).length,8,'No market values invented');
 assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,238);
 console.log('Barnsley independent lineup evidence: 16 numbered players matched to dated 2026/27 matches.');
+
+// Batch R: 2026-27 Bromley club roster and Wigan heritage season squad evidence.
+const batchR=JSON.parse(fs.readFileSync('data/bromley-wigan-squad-evidence-batch-r-2026-10-20.json','utf8'));
+assert.equal(batchR.season,'2026/27');
+assert.equal(batchR.clubs.length,2);
+assert.equal(batchR.clubs.reduce((n,c)=>n+c.players.length,0),32);
+let firstPartyCount=0,externalCount=0,merchCount=0;
+for(const c of batchR.clubs){
+ const actual=master.clubs.find(x=>x.clubId===c.clubId);
+ assert.ok(actual);
+ assert.equal(actual.players.length,16);
+ assert.equal(new Set(actual.players.map(p=>p.shirt)).size,16);
+ assert.equal(new Set(actual.players.map(p=>p.player)).size,16);
+ for(const v of c.players){
+  const p=actual.players.find(x=>x.player===v.player);
+  assert.ok(p,'Unmatched 2026/27 squad member '+c.clubId+' '+v.player);
+  assert.equal(p.shirt,v.shirt);
+  assert.equal(p.seasonSquadSourceUrl,c.sourceUrl);
+  assert.equal(p.seasonSquadCheckedAt,batchR.checkedAt);
+  if(c.classification==='official_current_club_first_team_page'){
+   firstPartyCount++;
+   assert.equal(p.officialClubSourceUrl,c.sourceUrl);
+   assert.equal(p.officialClubShirtNumber,v.shirt);
+   assert.equal(p.officialClubSourceKind,c.classification);
+   assert.equal(p.independentSeasonRosterUrl??null,null);
+  }else{
+   externalCount++;
+   assert.equal(p.independentSeasonRosterUrl,c.sourceUrl);
+   assert.equal(p.independentSeasonRosterNumber,v.shirt);
+   assert.equal(p.independentSeasonRosterClassification,c.classification);
+   assert.equal(p.officialClubSourceUrl??null,v.officialShirtSourceUrl||null);
+   if(v.officialShirtSourceUrl){merchCount++;assert.equal(p.shirtEvidenceUrl,v.officialShirtSourceUrl);}
+  }
+ }
+}
+assert.equal(firstPartyCount,16);
+assert.equal(externalCount,16);
+assert.equal(merchCount,2);
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM==null).length,238,'Verifying club membership cannot manufacture valuations');
+console.log('Batch R safety: 32 season-player references, 16 first-party; 2 genuine club merchandise references.');
