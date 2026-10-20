@@ -91,3 +91,26 @@ assert.ok(page.includes('Verified identity corrections'));
 assert.ok(page.includes('Official club roster or lineup verified'));
 assert.ok(csv.includes('Official club squad evidence URL'));
 console.log('Leicester official club audit: 16/16 shirt and squad evidence sources; Tommy Watson #23 corrected.');
+
+// Batch Q: independent Sky Sports match sheets must remain distinct from official club-issued sources.
+const barnBatch=JSON.parse(fs.readFileSync('data/barnsley-lineup-verification-batch-q-2026-10-20.json','utf8'));
+assert.equal(barnBatch.season,'2026/27');
+assert.equal(barnBatch.players.length,16);
+assert.equal(data.summary.independentMatchLinked,16);
+assert.equal(data.clubs.find(c=>c.clubId===barnBatch.clubId).independentMatchLinked,16);
+assert.equal(data.summary.officialClubLinked,16,'Independent match sheets cannot inflate first-party club verification');
+assert.equal(data.summary.squadLinked,706);
+for(const e of barnBatch.players){
+ const p=data.players.find(p=>p.clubId==='barnsley'&&p.player===e.player);
+ assert.ok(p,'Missing Barnsley player '+e.player);
+ assert.equal(p.shirt,e.shirt);
+ assert.equal(p.matchLineupSourceUrl,e.sourceUrl);
+ assert.equal(p.matchLineupShirtNumber,e.shirt);
+ assert.equal(p.matchLineupSourceDate,e.matchDate);
+ assert.equal(p.matchLineupRole,e.lineupRole);
+ assert.equal(p.squadSourceUrl,e.sourceUrl);
+ assert.equal(p.officialClubSourceUrl,null);
+}
+assert.ok(page.includes('2026/27 independent match sheet verified'));
+assert.ok(csv.includes('Independent match evidence URL'));
+console.log('Barnsley match-sheet audit: 16 dated squad sources, no change to valuation totals.');
