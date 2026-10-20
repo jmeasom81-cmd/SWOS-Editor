@@ -243,6 +243,7 @@ const sheets = [
    ['Age / goals / assists','Not included because SWOS does not need them in the current priority pass'],
    ['Source date','Each player inherits their club source/snapshot; generating the workbook does not reverify football facts'],
    ['Source of truth','Generated automatically from the same embedded research packs used by SWOS Studio'],
+   ['20 October verification','West Brom Jimmy Morgan #11 and Mikey Johnston #10; Cambridge Gabriel Breeze #13 and Callum Perry #3. All four have individual source links. Existing market values remain unchanged.'],
    ['Version','2026/27 master; regeneration on each Vercel build']
   ],[35,100],{}]
 ];
