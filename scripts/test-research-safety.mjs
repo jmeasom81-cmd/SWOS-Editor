@@ -365,7 +365,8 @@ for(const v of batchO.valued){
  assert.equal(p.marketValueSourceEuroK,v.sourceEuroK);
  assert.equal(p.marketValueFxRate,batchO.referenceFxRateEurGbp);
  assert.equal(p.marketValueM,Math.round(v.sourceEuroK*batchO.referenceFxRateEurGbp)/1000);
- assert.equal(p.seasonSquadSourceUrl,v.sourceUrl);
+ if(v.clubId==='leicester-city')assert.equal(p.seasonSquadSourceUrl,p.officialClubSourceUrl,'Newer official club evidence should supersede commercial squad evidence');
+ else assert.equal(p.seasonSquadSourceUrl,v.sourceUrl);
 }
 for(const v of batchO.noPublishedValue){
  const p=master.clubs.find(c=>c.clubId===v.clubId)?.players.find(p=>p.player===v.player);
