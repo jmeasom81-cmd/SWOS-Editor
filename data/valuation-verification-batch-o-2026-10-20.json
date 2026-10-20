@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "checkedAt": "2026-10-20",
+  "referenceFxRateEurGbp": 0.846328,
+  "fxRateReferenceDate": "2026-10-09",
+  "meaning": "Individual 2026/27 named-player and club checks. £m values use the explicitly stored 9 October EUR/GBP comparison rate; not fresh exchange rates, SWOS transfer fees, or inferred prices. Source dashes remain null. No game files are changed.",
+  "valued": [
+    {
+      "clubId": "leicester-city",
+      "player": "Luke Thomas",
+      "sourceDisplayName": "Luke Thomas",
+      "sourceEuroK": 5000,
+      "sourceUrl": "https://www.transfermarkt.co.uk/leicester-city/kader/verein/1003/saison_id/2026",
+      "confidence": "season-and-player-match",
+      "note": "Leicester 2026/27 roster lists Luke Thomas #33 and €5.00m.",
+      "convertedGbpM": 4.232
+    },
+    {
+      "clubId": "newport-county",
+      "player": "Matt Smith",
+      "sourceDisplayName": "Matthew Smith",
+      "sourceEuroK": 150,
+      "sourceUrl": "https://www.transfermarkt.co.uk/newport-county/kader/verein/3716/saison_id/2026",
+      "confidence": "named-alias-matched",
+      "aliasEvidenceUrl": "https://www.newport-county.co.uk/news/newport-county-2025-26-retained-released-list",
+      "note": "Newport 2026/27 squad lists Matthew Smith #8 and €150k, research name Matt Smith. Club says available for transfer; verify again before final game install.",
+      "convertedGbpM": 0.127
+    },
+    {
+      "clubId": "newport-county",
+      "player": "James Crole",
+      "sourceDisplayName": "James Crole",
+      "sourceEuroK": 100,
+      "sourceUrl": "https://www.transfermarkt.co.uk/newport-county/kader/verein/3716/saison_id/2026",
+      "confidence": "season-and-player-match",
+      "note": "Newport 2026/27 squad lists James Crole €100k, though sourced shirt is #16 versus provisional SWOS #11. Shirt discrepancy flagged separately.",
+      "convertedGbpM": 0.085
+    },
+    {
+      "clubId": "newport-county",
+      "player": "Ged Garner",
+      "sourceDisplayName": "Gerard Garner",
+      "sourceEuroK": 100,
+      "sourceUrl": "https://www.transfermarkt.co.uk/newport-county/kader/verein/3716/saison_id/2026",
+      "confidence": "official-alias-matched",
+      "aliasEvidenceUrl": "https://www.newport-county.co.uk/player/171",
+      "note": "Newport official player biography uses Gerard Garner and picture caption Ged Garner, 2026/27 transfermarkt roster shows €100k #19. Available for transfer per Newport club announcement.",
+      "convertedGbpM": 0.085
+    },
+    {
+      "clubId": "grimsby-town",
+      "player": "Geza David Turi",
+      "sourceDisplayName": "Géza Dávid Turi",
+      "sourceEuroK": 250,
+      "sourceUrl": "https://www.transfermarkt.co.uk/geza-david-turi/profil/spieler/692906",
+      "confidence": "accent-normalized-identity-match",
+      "note": "Current-season Grimsby Town midfielder #15, €250k, name accents normalized for SWOS.",
+      "convertedGbpM": 0.212
+    }
+  ],
+  "noPublishedValue": [
+    {
+      "clubId": "exeter-city",
+      "player": "Frankie Phillips",
+      "sourceUrl": "https://www.transfermarkt.co.uk/exeter-city/kader/verein/6699/saison_id/2026",
+      "note": "Named in Exeter 2026/27 list, monetary market value shown as a dash; research remains blank."
+    },
+    {
+      "clubId": "exeter-city",
+      "player": "Gwion Edwards",
+      "sourceUrl": "https://www.transfermarkt.co.uk/exeter-city/kader/verein/6699/saison_id/2026",
+      "note": "Named in Exeter 2026/27 list, monetary market value shown as a dash; research remains blank."
+    },
+    {
+      "clubId": "newport-county",
+      "player": "Kieron Evans",
+      "sourceUrl": "https://www.transfermarkt.co.uk/newport-county/kader/verein/3716/saison_id/2026",
+      "note": "Named Newport 2026/27 player #7, monetary market value shown as a dash."
+    },
+    {
+      "clubId": "newport-county",
+      "player": "Christian Doidge",
+      "sourceUrl": "https://www.transfermarkt.co.uk/newport-county/kader/verein/3716/saison_id/2026",
+      "note": "Named Newport 2026/27 player, monetary market value shown as a dash; squad number is not independently confirmed."
+    },
+    {
+      "clubId": "grimsby-town",
+      "player": "Joe Foulkes",
+      "sourceUrl": "https://www.transfermarkt.co.uk/grimsby-town/kader/verein/1034/saison_id/2026",
+      "note": "Named Grimsby Town 2026/27 player, monetary market value shown as a dash."
+    }
+  ],
+  "discrepancyFlags": [
+    {
+      "clubId": "newport-county",
+      "player": "James Crole",
+      "field": "shirt",
+      "stored": 11,
+      "sourceValue": 16,
+      "severity": "review",
+      "note": "Do not silently replace: master research and 2026/27 squad listing disagree on shirt number. Review official Newport player page and current official squad allocation."
+    },
+    {
+      "clubId": "exeter-city",
+      "player": "Frankie Phillips",
+      "field": "shirt",
+      "stored": 22,
+      "sourceValue": 32,
+      "severity": "review",
+      "note": "2026/27 detailed squad shows #32, research has #22; needs official corroboration before game install."
+    },
+    {
+      "clubId": "grimsby-town",
+      "player": "Joe Foulkes",
+      "field": "shirt",
+      "stored": 12,
+      "sourceValue": null,
+      "severity": "review",
+      "note": "2026/27 Transfermarkt roster shows unassigned shirt. Research #12 must not be automatically overwritten."
+    }
+  ]
+}
