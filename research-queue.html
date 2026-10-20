@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>SWOS | 2026/27 Research Queue</title>
+<style>
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#07111b;color:#e5edf5;--line:#27394a;--muted:#9eb1c2;--accent:#aaf06c}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at top right,#163a33 0%,transparent 38%),#07111b}
+a{color:#aaf06c}button,select,input{font:inherit}button,select,input{border:1px solid #355065;background:#142637;color:#eff5f9;border-radius:9px;padding:11px}
+button{cursor:pointer}button:hover{border-color:var(--accent)}button:disabled{opacity:.5;cursor:not-allowed}
+input{min-width:0}select:focus,input:focus,button:focus{outline:2px solid #aaf06c;outline-offset:2px}
+main{max-width:1380px;margin:auto;padding:25px 18px 90px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}.brand{font-weight:900;letter-spacing:2px;color:var(--accent);font-size:16px}
+.back{display:inline-flex;gap:8px;align-items:center;text-decoration:none;border:1px solid #3b5965;padding:10px 14px;border-radius:10px}
+h1{font-size:clamp(28px,4vw,46px);letter-spacing:-1.5px;margin:28px 0 6px}
+.subtitle{color:var(--muted);max-width:800px;line-height:1.5;margin:0 0 20px}
+.readonly{font-size:12px;font-weight:700;border-radius:20px;background:#294133;color:#d2f7b4;padding:7px 11px;margin-left:8px;vertical-align:middle;letter-spacing:0}
+.metrics{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:22px 0}
+.metric{background:#122334;border:1px solid var(--line);border-radius:13px;padding:16px}
+.metric .n{font-size:clamp(22px,3vw,32px);font-weight:850;font-variant-numeric:tabular-nums}
+.metric .label{font-size:13px;color:var(--muted);margin-top:4px}
+.panel{background:#101f2e;border:1px solid var(--line);border-radius:14px;padding:16px}
+.controls{display:grid;grid-template-columns:minmax(190px,2fr) repeat(3,minmax(130px,1fr)) auto;gap:10px;align-items:end}
+.field{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:700;color:#b6c9d7}
+.field input,.field select{width:100%;height:43px;font-weight:450}
+label{cursor:pointer}.sectiontitle{font-size:18px;font-weight:800;letter-spacing:-.4px;margin:0 0 10px}
+.two{display:grid;grid-template-columns:minmax(250px,320px) minmax(0,1fr);gap:12px;margin-top:12px;align-items:start}
+.clublist{max-height:620px;overflow:auto;padding:0;list-style:none;margin:0}
+.clublist button{width:100%;border:0;border-bottom:1px solid #243746;border-radius:0;background:none;text-align:left;display:flex;justify-content:space-between;gap:8px;padding:12px 7px}
+.clublist button.current{background:#203a34;color:#e7ffd3}.clublist strong{color:#afc1d0;font-size:12px}
+.chips{display:flex;flex-wrap:wrap;gap:5px;min-width:150px}
+.chip{border:1px solid #42617a;border-radius:6px;padding:3px 6px;font-size:11px;white-space:nowrap;color:#e1ebf5}
+.chip.membership{border-color:#e3ad63;color:#ffce91}.chip.number{border-color:#e18a9c;color:#ffb8c7}
+.chip.value{border-color:#6fa986;color:#b9efbd}
+.subrow{display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap;margin:0 0 13px}
+.small{font-size:12px;color:var(--muted)}.notice{font-size:13px;color:#fbd6a1;background:#4a34204a;border:1px solid #795636;padding:12px;border-radius:10px;margin-bottom:12px}
+.overflow{overflow:auto;width:100%}table{border-collapse:collapse;width:100%;min-width:800px}th{text-align:left;color:#aac0d3;font-size:12px;white-space:nowrap}
+th,td{padding:12px 10px;border-bottom:1px solid #273c4c;vertical-align:top}td{font-size:13px}tbody tr:hover{background:#152b39}
+.player{font-weight:800;font-size:14px}.nowrap{white-space:nowrap}.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.links a{font-size:11px;text-decoration:none;border-bottom:1px solid #678e72}
+.empty{padding:35px 12px;text-align:center;color:#a9bcc9}.pages{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:15px}
+.info{padding:12px 0;font-size:13px;color:var(--muted)}.sr{position:absolute;left:-10000px}
+footer{margin-top:18px;color:#9bafc0;font-size:12px;line-height:1.7}
+@media(max-width:990px){.metrics{grid-template-columns:repeat(3,minmax(0,1fr))}.controls{grid-template-columns:repeat(2,minmax(0,1fr))}.controls .field:first-child{grid-column:span 2}.two{grid-template-columns:1fr}.clublist{max-height:220px}}
+@media(max-width:560px){main{padding:16px 12px 50px}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.metric{padding:11px}.controls{grid-template-columns:1fr}.controls .field:first-child{grid-column:auto}.readonly{display:inline-block;margin-top:5px}h1{font-size:30px}}
+</style>
+</head>
+<body>
+<main>
+<div class="top"><div class="brand">SWOS EDITOR / DATA QUALITY</div><a class="back" href="./">← Back to editor</a></div>
+<h1>2026/27 research queue <span class="readonly">READ ONLY</span></h1>
+<p class="subtitle">Work through player research gaps by club. Missing market values stay unknown: this screen does not invent valuations, change squad numbers, or modify the original game files.</p>
+<div id="status" role="status" aria-live="polite" class="small">Loading current master and review notes…</div>
+<section class="metrics" aria-label="Data quality summary">
+<div class="metric"><div class="n" id="clubCount">—</div><div class="label">Clubs</div></div>
+<div class="metric"><div class="n" id="playerCount">—</div><div class="label">Players</div></div>
+<div class="metric"><div class="n" id="missingValueCount">—</div><div class="label">Missing valuations</div></div>
+<div class="metric"><div class="n" id="squadMissingCount">—</div><div class="label">No squad source</div></div>
+<div class="metric"><div class="n" id="membershipCount">—</div><div class="label">Membership reviews</div></div>
+</section>
+<section class="panel">
+<div class="controls">
+<label class="field">Search players or teams<input id="search" type="search" placeholder="Player name, team, or shirt number…" autocomplete="off"></label>
+<label class="field">Division<select id="division"><option value="">All divisions</option></select></label>
+<label class="field">Research task<select id="gap">
+<option value="">All outstanding tasks</option>
+<option value="membership">Squad membership review</option>
+<option value="duplicate">Duplicate shirt number</option>
+<option value="squad">Missing squad evidence</option>
+<option value="shirt">Missing shirt number</option>
+<option value="value">Missing market value</option>
+<option value="provenance">Missing value source</option>
+<option value="nationality">Missing nationality</option>
+</select></label>
+<label class="field">Sort<select id="sort"><option value="priority">Highest priority first</option><option value="club">Club name</option><option value="player">Player name</option></select></label>
+<button id="export" type="button">Export CSV ↓</button>
+</div>
+</section>
+<div class="two">
+<section class="panel">
+<div class="subrow"><h2 class="sectiontitle">Club workload</h2><span class="small" id="clubHint"></span></div>
+<ul id="clubList" class="clublist"><li class="empty">Loading…</li></ul>
+<button id="clearClub" type="button" style="width:100%;margin-top:14px" disabled>Show every club</button>
+</section>
+<section class="panel">
+<div class="subrow"><div><h2 class="sectiontitle">Outstanding player research</h2><span class="small" id="visibleCount"></span></div><button id="reset" type="button">Reset filters</button></div>
+<div class="notice" id="warning" hidden></div>
+<div class="overflow"><table>
+<thead><tr><th>Player / club</th><th>Number</th><th>Value</th><th>Research needed and existing sources</th></tr></thead>
+<tbody id="rows"><tr><td colspan="4" class="empty">Loading…</td></tr></tbody>
+</table></div>
+<div class="pages"><button id="previous" type="button">← Previous</button><span class="small" id="pageInfo"></span><button id="next" type="button">Next →</button></div>
+</section></div>
+<footer>Source of truth: <code>data/master-2026-27.json</code>, plus the latest York/Crawley/Exeter integration review. A missing source link is not proof that a player has left. Club membership disputes are research alerts, never automatic replacements. Only published evidence should be used to change the master data.</footer>
+</main>
+<script>
+(function(){
+'use strict';
+var state={players:[],clubs:[],club:'',page:1,pageSize:60};
+var q=function(id){return document.getElementById(id)};
+var esc=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
+var safeUrl=function(url){return /^https?:\/\/[^\s<>"']+$/i.test(String(url||''))?url:null};
+var lower=function(s){return String(s||'').toLocaleLowerCase()};
+var gapNames={membership:'Squad membership unconfirmed',duplicate:'Duplicate shirt number',squad:'No 2026/27 squad evidence',shirt:'Shirt number missing',value:'No published valuation',provenance:'Valuation source missing',nationality:'Nationality missing'};
+var priority={membership:0,duplicate:1,squad:2,shirt:3,value:4,provenance:5,nationality:6};
+function count(id,value){q(id).textContent=Number(value).toLocaleString('en-GB')}
+function rowsForClub(club,flagMap){
+ var numberCounts={};
+ (club.players||[]).forEach(function(p){if(p.shirt!==null&&p.shirt!==undefined&&p.shirt!==''){var k=String(p.shirt);numberCounts[k]=(numberCounts[k]||0)+1}});
+ return (club.players||[]).map(function(p){
+  var key=club.clubId+'::'+p.player;
+  var issues=[],notes=[];
+  if(flagMap[key]){issues.push('membership');notes.push(flagMap[key].reason||'Current club squad membership is not confirmed by the checked source')}
+  if(p.shirt!==null&&p.shirt!==undefined&&p.shirt!==''&&numberCounts[String(p.shirt)]>1)issues.push('duplicate');
+  if(!p.seasonSquadSourceUrl)issues.push('squad');
+  if(p.shirt===null||p.shirt===undefined||p.shirt==='')issues.push('shirt');
+  if(p.marketValueM===null||p.marketValueM===undefined||p.marketValueM==='')issues.push('value');
+  else if(!p.marketValueSourceUrl)issues.push('provenance');
+  if(!p.nationality)issues.push('nationality');
+  var links=[];
+  [['Club source',p.officialClubSourceUrl],['Season squad',p.seasonSquadSourceUrl],
+  ['Shirt number',p.shirtEvidenceUrl],['Independent roster',p.independentSeasonRosterUrl],
+  ['Value evidence',p.marketValueSourceUrl],['Review source',flagMap[key]&&flagMap[key].sourceUrl]]
+  .forEach(function(pair){var u=safeUrl(pair[1]);if(u&&!links.some(function(x){return x.url===u}))links.push({label:pair[0],url:u})});
+  return {player:p.player,club:club.club||club.clubName||club.name||club.clubId,
+   clubId:club.clubId,division:club.division,shirt:p.shirt,value:p.marketValueM,
+   issues:issues,notes:notes,links:links,priority:Math.min.apply(null,issues.map(function(x){return priority[x]}))};
+ }).filter(function(r){return r.issues.length});
+}
+function selected(){
+ var search=lower(q('search').value.trim()),division=q('division').value,gap=q('gap').value;
+ var result=state.players.filter(function(p){
+  if(division&&p.division!==division)return false;
+  if(state.club&&p.clubId!==state.club)return false;
+  if(gap&&p.issues.indexOf(gap)<0)return false;
+  return !search||lower(p.player+' '+p.club+' '+p.division+' '+(p.shirt==null?'':p.shirt)).indexOf(search)>=0;
+ });
+ var sort=q('sort').value;
+ result.sort(function(a,b){
+  if(sort==='club')return a.club.localeCompare(b.club)||a.priority-b.priority||a.player.localeCompare(b.player);
+  if(sort==='player')return a.player.localeCompare(b.player)||a.club.localeCompare(b.club);
+  return a.priority-b.priority||a.club.localeCompare(b.club)||a.player.localeCompare(b.player);
+ });
+ return result;
+}
+function renderClubList(){
+ var search=lower(q('search').value.trim()),division=q('division').value,gap=q('gap').value;
+ var grouped=new Map;
+ state.players.forEach(function(p){
+  if(division&&p.division!==division)return;
+  if(gap&&p.issues.indexOf(gap)<0)return;
+  if(search&&lower(p.player+' '+p.club+' '+p.division+' '+(p.shirt==null?'':p.shirt)).indexOf(search)<0)return;
+  if(!grouped.has(p.clubId))grouped.set(p.clubId,{clubId:p.clubId,name:p.club,count:0});
+  grouped.get(p.clubId).count++;
+ });
+ var clubs=Array.from(grouped.values()).sort(function(a,b){return b.count-a.count||a.name.localeCompare(b.name)});
+ q('clubHint').textContent=clubs.length+' clubs';
+ q('clubList').innerHTML=clubs.length?clubs.map(function(c){
+  return '<li><button type="button" class="'+(state.club===c.clubId?'current':'')+'" data-club="'+esc(c.clubId)+'"><span>'+esc(c.name)+'</span><strong>'+c.count+' players</strong></button></li>';
+ }).join(''):'<li class="empty">No clubs match these filters.</li>';
+ q('clearClub').disabled=!state.club;
+}
+function researchCell(p){
+ var chips='<div class="chips">'+p.issues.map(function(x){return '<span class="chip '+(x==='membership'?'membership':x==='duplicate'||x==='shirt'?'number':x==='value'?'value':'')+'">'+esc(gapNames[x])+'</span>'}).join('')+'</div>';
+ var notes=p.notes.length?'<p class="small">'+p.notes.map(esc).join('; ')+'</p>':'';
+ var links=p.links.length?'<div class="links">'+p.links.map(function(a){return '<a target="_blank" rel="noopener noreferrer" href="'+esc(a.url)+'">'+esc(a.label)+' ↗</a>'}).join('')+'</div>':'<div class="small" style="margin-top:6px">No source URL recorded</div>';
+ return chips+notes+links;
+}
+function render(){
+ var arr=selected(),totalPages=Math.max(1,Math.ceil(arr.length/state.pageSize));
+ state.page=Math.min(state.page,totalPages);
+ var start=(state.page-1)*state.pageSize,page=arr.slice(start,start+state.pageSize);
+ q('visibleCount').textContent=arr.length.toLocaleString('en-GB')+' outstanding player records'+(state.club?' for selected club':'');
+ q('rows').innerHTML=page.length?page.map(function(p){
+  var v=(p.value===null||p.value===undefined||p.value==='')?'Unknown':'£'+Number(p.value).toFixed(3)+'m';
+  return '<tr><td><div class="player">'+esc(p.player)+'</div><div class="small">'+esc(p.club)+' · '+esc(p.division)+'</div></td><td class="nowrap">'+esc(p.shirt==null?'—':p.shirt)+'</td><td class="nowrap">'+esc(v)+'</td><td>'+researchCell(p)+'</td></tr>';
+ }).join(''):'<tr><td colspan="4" class="empty">No research gaps match these filters.</td></tr>';
+ q('previous').disabled=state.page<=1;q('next').disabled=state.page>=totalPages;
+ q('pageInfo').textContent='Page '+state.page+' of '+totalPages;
+ var m=arr.filter(function(p){return p.issues.includes('membership')});
+ q('warning').hidden=!m.length;
+ q('warning').textContent=m.length?'There are '+m.length+' unconfirmed squad-membership record(s) in this view. Do not remove or transfer a player just because a checked squad source omits them.':'';
+ renderClubList();
+}
+function csvCell(value){var s=String(value==null?'':value);return '"'+s.replace(/"/g,'""')+'"'}
+function exportCsv(){
+ var records=selected(),head=['division','club','player','shirt','marketValueM','researchTasks','researchNotes','sourceUrls'];
+ var lines=[head.map(csvCell).join(',')].concat(records.map(function(p){
+  return [p.division,p.club,p.player,p.shirt,p.value,p.issues.map(function(g){return gapNames[g]}).join('; '),p.notes.join('; '),p.links.map(function(a){return a.label+': '+a.url}).join('; ')].map(csvCell).join(',');
+ }));
+ var blob=new Blob(['\uFEFF'+lines.join('\r\n')],{type:'text/csv;charset=utf-8;'});
+ var url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='swos-2026-27-research-queue.csv';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
+}
+function reset(){
+ q('search').value='';q('division').value='';q('gap').value='';q('sort').value='priority';state.club='';state.page=1;render();
+}
+function wire(){
+ ['search','division','gap','sort'].forEach(function(id){q(id).addEventListener(id==='search'?'input':'change',function(){state.page=1;render()})});
+ q('reset').addEventListener('click',reset);
+ q('export').addEventListener('click',exportCsv);
+ q('previous').addEventListener('click',function(){state.page--;render()});
+ q('next').addEventListener('click',function(){state.page++;render()});
+ q('clearClub').addEventListener('click',function(){state.club='';state.page=1;render()});
+ q('clubList').addEventListener('click',function(e){var b=e.target.closest('button[data-club]');if(b){state.club=b.getAttribute('data-club');state.page=1;render()}});
+}
+Promise.all([
+ fetch('./data/master-2026-27.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw Error('Master data HTTP '+r.status);return r.json()}),
+ fetch('./data/york-crawley-exeter-integration-t-2026-10-20.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw Error('Review data HTTP '+r.status);return r.json()}).catch(function(){return {clubs:[]}})
+]).then(function(result){
+ var master=result[0],review=result[1];
+ if(!Array.isArray(master.clubs))throw Error('Invalid master data: no clubs array');
+ var flagMap={};(review.clubs||[]).forEach(function(c){(c.flags||[]).forEach(function(f){flagMap[c.clubId+'::'+f.player]=f})});
+ state.clubs=master.clubs;state.players=master.clubs.flatMap(function(c){return rowsForClub(c,flagMap)});
+ var all=master.clubs.flatMap(function(c){return c.players||[]});
+ count('clubCount',master.clubs.length);count('playerCount',all.length);
+ count('missingValueCount',all.filter(function(p){return p.marketValueM===null||p.marketValueM===undefined||p.marketValueM===''}).length);
+ count('squadMissingCount',all.filter(function(p){return !p.seasonSquadSourceUrl}).length);
+ count('membershipCount',Object.keys(flagMap).length);
+ q('division').innerHTML='<option value="">All divisions</option>'+Array.from(new Set(master.clubs.map(function(c){return c.division}))).map(function(d){return '<option value="'+esc(d)+'">'+esc(d)+'</option>'}).join('');
+ wire();render();
+ q('status').textContent='Loaded '+all.length.toLocaleString('en-GB')+' players from current master. Research view only; nothing in the source data has been changed.';
+}).catch(function(err){
+ q('status').textContent='Unable to load the current research database: '+err.message;
+ q('rows').innerHTML='<tr><td colspan="4" class="empty">The master JSON file was not available. The editor and source data have not been changed.</td></tr>';
+});
+})();
+</script>
+</body>
+</html>
