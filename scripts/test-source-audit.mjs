@@ -38,7 +38,7 @@ assert.equal(data.players.filter(p=>p.reviewStatus==='membership_check').length,
 assert.equal(data.players.filter(p=>p.reviewStatus==='membership_source_matched').length,2);
 assert.equal(data.summary.urgent,0);
 assert.equal(data.summary.ready,1234);
-assert.equal(data.summary.squadLinked,729);
+assert.equal(data.summary.squadLinked,743);
 assert.ok(data.players.filter(p=>p.researchPriority==='REVIEWED').every(p=>p.reviewStatus==='value_unpublished'&&p.marketValueM===null));
 assert.ok(page.includes('Next 15 clubs to research'));
 assert.ok(page.includes('SWOS_Research_Priority_2026-27.csv'));
@@ -64,8 +64,8 @@ for(const group of verification.newlyVerified){const c=master.clubs.find(c=>c.cl
 console.log('Official 2026/27 Premier League roster crosscheck: 320 player shirt numbers across all 20 clubs.');
 
 const batchO=JSON.parse(fs.readFileSync('data/valuation-verification-batch-o-2026-10-20.json','utf8'));
-assert.equal(data.valuationReviewFlags.length,batchO.discrepancyFlags.length);
-assert.equal(new Set(data.valuationReviewFlags.map(v=>v.clubId+'|'+v.player)).size,3);
+assert.equal(data.valuationReviewFlags.length,batchO.discrepancyFlags.length+1);
+assert.equal(new Set(data.valuationReviewFlags.map(v=>v.clubId+'|'+v.player)).size,4);
 for(const v of batchO.valued){const p=data.players.find(p=>p.clubId===v.clubId&&p.player===v.player);assert.ok(p);assert.equal(p.marketValueM,v.convertedGbpM);assert.equal(p.valueSourceUrl,v.sourceUrl);}
 for(const v of batchO.noPublishedValue){const p=data.players.find(p=>p.clubId===v.clubId&&p.player===v.player);assert.ok(p);assert.equal(p.marketValueM,null);assert.equal(p.reviewStatus,'value_unpublished');}
 assert.ok(page.includes('Player shirt-number discrepancies'));
@@ -99,7 +99,7 @@ assert.equal(barnBatch.players.length,16);
 assert.equal(data.summary.independentMatchLinked,16);
 assert.equal(data.clubs.find(c=>c.clubId===barnBatch.clubId).independentMatchLinked,16);
 assert.equal(data.summary.officialClubLinked,34,'Independent match sheets cannot inflate first-party club verification');
-assert.equal(data.summary.squadLinked,729);
+assert.equal(data.summary.squadLinked,743);
 for(const e of barnBatch.players){
  const p=data.players.find(p=>p.clubId==='barnsley'&&p.player===e.player);
  assert.ok(p,'Missing Barnsley player '+e.player);
@@ -120,7 +120,7 @@ const batchR=JSON.parse(fs.readFileSync('data/bromley-wigan-squad-evidence-batch
 assert.equal(batchR.season,'2026/27');
 assert.equal(batchR.clubs.length,2);
 assert.equal(batchR.clubs.reduce((n,c)=>n+c.players.length,0),32);
-assert.equal(data.summary.independentSeasonRosterLinked,16);
+assert.equal(data.summary.independentSeasonRosterLinked,48);
 assert.equal(data.clubs.find(c=>c.clubId==='bromley').officialClubLinked,16);
 assert.equal(data.clubs.find(c=>c.clubId==='wigan-athletic').independentSeasonRosterLinked,16);
 assert.equal(data.clubs.find(c=>c.clubId==='wigan-athletic').officialClubLinked,2);
@@ -150,3 +150,37 @@ assert.ok(csv.includes('Independent season roster URL'));
 assert.equal(data.summary.ready,1234);
 assert.equal(data.summary.priced,1234);
 console.log('Batch R: 16 first-party Bromley shirt references, 16 independent Wigan season records, 2 official merch cross-checks.');
+
+// Batch S: 32 checked Northampton/Rotherham player-season entries; prices stay untouched.
+const batchS=JSON.parse(fs.readFileSync('data/northampton-rotherham-batch-s-2026-10-20.json','utf8'));
+assert.equal(batchS.season,'2026/27');
+assert.equal(batchS.clubs.length,2);
+assert.equal(batchS.clubs.reduce((n,c)=>n+c.players.length,0),32);
+assert.equal(data.summary.independentSeasonRosterLinked,48);
+assert.equal(data.summary.squadLinked,743);
+assert.equal(data.summary.officialClubLinked,34);
+assert.equal(data.summary.priced,1234);
+for(const c of batchS.clubs){
+ const cdata=data.clubs.find(r=>r.clubId===c.clubId);
+ assert.equal(cdata.independentSeasonRosterLinked,16);
+ const rows=data.players.filter(p=>p.clubId===c.clubId);
+ assert.equal(rows.length,16);
+ for(const evidence of c.players){
+  const p=rows.find(p=>p.player===evidence.player);
+  assert.ok(p,'Batch S missing '+evidence.player);
+  assert.equal(p.shirt,evidence.shirt);
+  assert.equal(p.nationality,evidence.nationality);
+  assert.equal(p.independentSeasonRosterUrl,c.sourceUrl);
+  assert.equal(p.independentSeasonRosterNumber,evidence.shirt);
+  assert.equal(p.seasonRosterCrossCheckUrl,evidence.corroboratingSourceUrl);
+  assert.equal(p.seasonRosterCrossCheckType,evidence.crossCheckType);
+ }
+}
+const unresolved=batchS.discrepancyFlags[0];
+const flagged=data.valuationReviewFlags.find(f=>f.clubId===unresolved.clubId&&f.player===unresolved.player);
+assert.ok(flagged,'Klaidi Lolos disputed #20/#25 must show in the audit');
+assert.equal(flagged.stored,20);
+assert.equal(flagged.sourceValue,25);
+assert.ok(page.includes('Player shirt-number discrepancies'));
+assert.ok(csv.includes('Roster corroborating URL'));
+console.log('Batch S: 32 roster sources; 14 new squad links; conflicting Lolos #20/#25 visibly flagged.');
