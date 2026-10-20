@@ -14,6 +14,7 @@ function replaceOnce(a,b,label){
  html=html.replace(a,b);
 }
 replaceOnce('<title>SWOS Studio v1.34.0</title>','<title>SWOS Studio v1.35.0</title>','version');
+replaceOnce("document.title='SWOS Studio v1.34.0';","document.title='SWOS Studio v1.35.0';",'runtime version');
 replaceOnce('function installerPreviewHtml(){',client+'\n\n  function installerPreviewHtml(){','inject audit code');
 replaceOnce('seasonUpdateState.installPreview=buildPremierInstallPreview()',
  'const candidate=buildPremierInstallPreview();\n      candidate.binarySafetyAudit=auditEnglandRehearsal(seasonUpdateState.english.bytes,candidate.previewBytes);\n      seasonUpdateState.installPreview=candidate',
