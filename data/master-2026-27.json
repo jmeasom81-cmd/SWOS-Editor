@@ -11690,9 +11690,17 @@
           "marketValueCheckedAt": "2026-10-10",
           "marketValueSourceEuroK": 350,
           "marketValueFxRate": 0.846328,
-          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/barnsley-fc/kader/verein/349/saison_id/2026",
-          "seasonSquadCheckedAt": "2026-10-10",
-          "seasonSquadSourceName": "2026/27 club squad market-value reference"
+          "seasonSquadSourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Sky Sports 2026/27 dated match sheet",
+          "matchLineupSourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "matchLineupSourceDate": "2026-10-17",
+          "matchLineupShirtNumber": 1,
+          "matchLineupCheckedAt": "2026-10-20",
+          "matchLineupSourceName": "Sky Sports 2026/27 dated match sheet",
+          "matchLineupRole": "substitute",
+          "shirtEvidenceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Rogan Ravenhill",
@@ -11704,7 +11712,18 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "matchLineupSourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "matchLineupSourceDate": "2026-10-17",
+          "matchLineupShirtNumber": 25,
+          "matchLineupCheckedAt": "2026-10-20",
+          "matchLineupSourceName": "Sky Sports 2026/27 dated match sheet",
+          "matchLineupRole": "starter",
+          "seasonSquadSourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Sky Sports 2026/27 dated match sheet",
+          "shirtEvidenceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Ziyad Larkeche",
@@ -11716,7 +11735,18 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "matchLineupSourceUrl": "https://www.skysports.com/football/barnsley-vs-stevenage/teams/561650",
+          "matchLineupSourceDate": "2026-09-05",
+          "matchLineupShirtNumber": 3,
+          "matchLineupCheckedAt": "2026-10-20",
+          "matchLineupSourceName": "Sky Sports 2026/27 dated match sheet",
+          "matchLineupRole": "starter",
+          "seasonSquadSourceUrl": "https://www.skysports.com/football/barnsley-vs-stevenage/teams/561650",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Sky Sports 2026/27 dated match sheet",
+          "shirtEvidenceUrl": "https://www.skysports.com/football/barnsley-vs-stevenage/teams/561650",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Sam Gale",
@@ -11728,7 +11758,18 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "matchLineupSourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "matchLineupSourceDate": "2026-10-17",
+          "matchLineupShirtNumber": 4,
+          "matchLineupCheckedAt": "2026-10-20",
+          "matchLineupSourceName": "Sky Sports 2026/27 dated match sheet",
+          "matchLineupRole": "substitute",
+          "seasonSquadSourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Sky Sports 2026/27 dated match sheet",
+          "shirtEvidenceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Jack Shepherd",
@@ -11744,7 +11785,18 @@
           "marketValueSourceUrl": "https://www.transfermarkt.co.uk/barnsley-fc/kader/verein/349/saison_id/2026",
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 300,
-          "marketValueFxRate": 0.846328
+          "marketValueFxRate": 0.846328,
+          "matchLineupSourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "matchLineupSourceDate": "2026-10-17",
+          "matchLineupShirtNumber": 5,
+          "matchLineupCheckedAt": "2026-10-20",
+          "matchLineupSourceName": "Sky Sports 2026/27 dated match sheet",
+          "matchLineupRole": "starter",
+          "seasonSquadSourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Sky Sports 2026/27 dated match sheet",
+          "shirtEvidenceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Connor O'Riordan",
@@ -11756,7 +11808,18 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "matchLineupSourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "matchLineupSourceDate": "2026-10-17",
+          "matchLineupShirtNumber": 6,
+          "matchLineupCheckedAt": "2026-10-20",
+          "matchLineupSourceName": "Sky Sports 2026/27 dated match sheet",
+          "matchLineupRole": "starter",
+          "seasonSquadSourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Sky Sports 2026/27 dated match sheet",
+          "shirtEvidenceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Jubril Okedina",
@@ -11768,7 +11831,18 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "matchLineupSourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "matchLineupSourceDate": "2026-10-17",
+          "matchLineupShirtNumber": 12,
+          "matchLineupCheckedAt": "2026-10-20",
+          "matchLineupSourceName": "Sky Sports 2026/27 dated match sheet",
+          "matchLineupRole": "substitute",
+          "seasonSquadSourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Sky Sports 2026/27 dated match sheet",
+          "shirtEvidenceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Cameron McGeehan",
@@ -11784,7 +11858,18 @@
           "marketValueSourceUrl": "https://www.transfermarkt.co.uk/barnsley-fc/kader/verein/349/saison_id/2026",
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 250,
-          "marketValueFxRate": 0.846328
+          "marketValueFxRate": 0.846328,
+          "matchLineupSourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "matchLineupSourceDate": "2026-10-17",
+          "matchLineupShirtNumber": 8,
+          "matchLineupCheckedAt": "2026-10-20",
+          "matchLineupSourceName": "Sky Sports 2026/27 dated match sheet",
+          "matchLineupRole": "starter",
+          "seasonSquadSourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Sky Sports 2026/27 dated match sheet",
+          "shirtEvidenceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Tyrese Noslin",
@@ -11800,7 +11885,18 @@
           "marketValueSourceUrl": "https://www.transfermarkt.co.uk/tyrese-noslin/profil/spieler/708005",
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 750,
-          "marketValueFxRate": 0.846328
+          "marketValueFxRate": 0.846328,
+          "matchLineupSourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "matchLineupSourceDate": "2026-10-17",
+          "matchLineupShirtNumber": 11,
+          "matchLineupCheckedAt": "2026-10-20",
+          "matchLineupSourceName": "Sky Sports 2026/27 dated match sheet",
+          "matchLineupRole": "starter",
+          "seasonSquadSourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Sky Sports 2026/27 dated match sheet",
+          "shirtEvidenceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Clayton Taylor",
@@ -11816,7 +11912,18 @@
           "marketValueSourceUrl": "https://www.transfermarkt.co.uk/barnsley-fc/kader/verein/349/saison_id/2026",
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 650,
-          "marketValueFxRate": 0.846328
+          "marketValueFxRate": 0.846328,
+          "matchLineupSourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "matchLineupSourceDate": "2026-10-17",
+          "matchLineupShirtNumber": 13,
+          "matchLineupCheckedAt": "2026-10-20",
+          "matchLineupSourceName": "Sky Sports 2026/27 dated match sheet",
+          "matchLineupRole": "substitute",
+          "seasonSquadSourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Sky Sports 2026/27 dated match sheet",
+          "shirtEvidenceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Patrick Kelly",
@@ -11832,7 +11939,18 @@
           "marketValueSourceUrl": "https://www.transfermarkt.co.uk/barnsley-fc/kader/verein/349/saison_id/2026",
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 350,
-          "marketValueFxRate": 0.846328
+          "marketValueFxRate": 0.846328,
+          "matchLineupSourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "matchLineupSourceDate": "2026-10-17",
+          "matchLineupShirtNumber": 22,
+          "matchLineupCheckedAt": "2026-10-20",
+          "matchLineupSourceName": "Sky Sports 2026/27 dated match sheet",
+          "matchLineupRole": "starter",
+          "seasonSquadSourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Sky Sports 2026/27 dated match sheet",
+          "shirtEvidenceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Luca Connell",
@@ -11848,7 +11966,18 @@
           "marketValueSourceUrl": "https://www.transfermarkt.co.uk/barnsley-fc/kader/verein/349/saison_id/2026",
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 800,
-          "marketValueFxRate": 0.846328
+          "marketValueFxRate": 0.846328,
+          "matchLineupSourceUrl": "https://www.skysports.com/football/barnsley-vs-leicester-city/teams/561675",
+          "matchLineupSourceDate": "2026-09-19",
+          "matchLineupShirtNumber": 48,
+          "matchLineupCheckedAt": "2026-10-20",
+          "matchLineupSourceName": "Sky Sports 2026/27 dated match sheet",
+          "matchLineupRole": "starter",
+          "seasonSquadSourceUrl": "https://www.skysports.com/football/barnsley-vs-leicester-city/teams/561675",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Sky Sports 2026/27 dated match sheet",
+          "shirtEvidenceUrl": "https://www.skysports.com/football/barnsley-vs-leicester-city/teams/561675",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Makenzie Kirk",
@@ -11860,7 +11989,18 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "matchLineupSourceUrl": "https://www.skysports.com/football/barnsley-vs-leicester-city/teams/561675",
+          "matchLineupSourceDate": "2026-09-19",
+          "matchLineupShirtNumber": 9,
+          "matchLineupCheckedAt": "2026-10-20",
+          "matchLineupSourceName": "Sky Sports 2026/27 dated match sheet",
+          "matchLineupRole": "substitute",
+          "seasonSquadSourceUrl": "https://www.skysports.com/football/barnsley-vs-leicester-city/teams/561675",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Sky Sports 2026/27 dated match sheet",
+          "shirtEvidenceUrl": "https://www.skysports.com/football/barnsley-vs-leicester-city/teams/561675",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Ben Hamed Toure",
@@ -11872,7 +12012,18 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "matchLineupSourceUrl": "https://www.skysports.com/football/barnsley-vs-leicester-city/teams/561675",
+          "matchLineupSourceDate": "2026-09-19",
+          "matchLineupShirtNumber": 10,
+          "matchLineupCheckedAt": "2026-10-20",
+          "matchLineupSourceName": "Sky Sports 2026/27 dated match sheet",
+          "matchLineupRole": "starter",
+          "seasonSquadSourceUrl": "https://www.skysports.com/football/barnsley-vs-leicester-city/teams/561675",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Sky Sports 2026/27 dated match sheet",
+          "shirtEvidenceUrl": "https://www.skysports.com/football/barnsley-vs-leicester-city/teams/561675",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Amani Richards",
@@ -11884,7 +12035,18 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "matchLineupSourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "matchLineupSourceDate": "2026-10-17",
+          "matchLineupShirtNumber": 17,
+          "matchLineupCheckedAt": "2026-10-20",
+          "matchLineupSourceName": "Sky Sports 2026/27 dated match sheet",
+          "matchLineupRole": "substitute",
+          "seasonSquadSourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Sky Sports 2026/27 dated match sheet",
+          "shirtEvidenceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Reyes Cleary",
@@ -11900,7 +12062,18 @@
           "marketValueSourceUrl": "https://www.transfermarkt.co.uk/barnsley-fc/kader/verein/349/saison_id/2026",
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 250,
-          "marketValueFxRate": 0.846328
+          "marketValueFxRate": 0.846328,
+          "matchLineupSourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "matchLineupSourceDate": "2026-10-17",
+          "matchLineupShirtNumber": 19,
+          "matchLineupCheckedAt": "2026-10-20",
+          "matchLineupSourceName": "Sky Sports 2026/27 dated match sheet",
+          "matchLineupRole": "starter",
+          "seasonSquadSourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Sky Sports 2026/27 dated match sheet",
+          "shirtEvidenceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+          "shirtCheckedAt": "2026-10-20"
         }
       ]
     },
