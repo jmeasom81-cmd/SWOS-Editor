@@ -1,0 +1,722 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "checkedAt": "2026-10-20",
+  "purpose": "Match named 2026/27 club-season roster players to the existing SWOS 16-player set, while separately identifying records absent from a reviewed squad snapshot; do not infer transfers or valuations.",
+  "clubs": [
+    {
+      "clubId": "york-city",
+      "club": "York City",
+      "classification": "official_current_club_first_team_page",
+      "sourceUrl": "https://www.yorkcityfootballclub.co.uk/teams/",
+      "sourceName": "York City FC official 2026/27 men's first team listing",
+      "corroborationUrl": null,
+      "players": [
+        {
+          "player": "Alfie McNally",
+          "sourceDisplayedName": "Alfie McNally",
+          "shirt": 1,
+          "sourceUrl": "https://www.yorkcityfootballclub.co.uk/teams/",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "official_current_club_first_team_page"
+        },
+        {
+          "player": "George Sykes-Kenworthy",
+          "sourceDisplayedName": "George Sykes-Kenworthy",
+          "shirt": 31,
+          "sourceUrl": "https://www.yorkcityfootballclub.co.uk/teams/",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "official_current_club_first_team_page"
+        },
+        {
+          "player": "Ryan Fallowfield",
+          "sourceDisplayedName": "Ryan Fallowfield",
+          "shirt": 2,
+          "sourceUrl": "https://www.yorkcityfootballclub.co.uk/teams/",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "official_current_club_first_team_page"
+        },
+        {
+          "player": "Mark Kitching",
+          "sourceDisplayedName": "Mark Kitching",
+          "shirt": 3,
+          "sourceUrl": "https://www.yorkcityfootballclub.co.uk/teams/",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "official_current_club_first_team_page"
+        },
+        {
+          "player": "Zech Medley",
+          "sourceDisplayedName": "Zech Medley",
+          "shirt": 4,
+          "sourceUrl": "https://www.yorkcityfootballclub.co.uk/teams/",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "official_current_club_first_team_page"
+        },
+        {
+          "player": "Zak Johnson",
+          "sourceDisplayedName": "Zak Johnson",
+          "shirt": 5,
+          "sourceUrl": "https://www.yorkcityfootballclub.co.uk/teams/",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "official_current_club_first_team_page"
+        },
+        {
+          "player": "Ashley Palmer",
+          "sourceDisplayedName": "Ashley Palmer",
+          "shirt": 6,
+          "sourceUrl": "https://www.yorkcityfootballclub.co.uk/teams/",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "official_current_club_first_team_page"
+        },
+        {
+          "player": "Alex Hunt",
+          "sourceDisplayedName": "Alex Hunt",
+          "shirt": 8,
+          "sourceUrl": "https://www.yorkcityfootballclub.co.uk/teams/",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "official_current_club_first_team_page"
+        },
+        {
+          "player": "Frankie Maguire",
+          "sourceDisplayedName": "Frankie Maguire",
+          "shirt": 11,
+          "sourceUrl": "https://www.yorkcityfootballclub.co.uk/teams/",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "official_current_club_first_team_page"
+        },
+        {
+          "player": "Arthur Read",
+          "sourceDisplayedName": "Arthur Read",
+          "shirt": 16,
+          "sourceUrl": "https://www.yorkcityfootballclub.co.uk/teams/",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "official_current_club_first_team_page"
+        },
+        {
+          "player": "Hiram Boateng",
+          "sourceDisplayedName": "Hiram Boateng",
+          "shirt": 21,
+          "sourceUrl": "https://www.yorkcityfootballclub.co.uk/teams/",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "official_current_club_first_team_page"
+        },
+        {
+          "player": "Oliver Banks",
+          "sourceDisplayedName": "Ollie Banks",
+          "shirt": 28,
+          "sourceUrl": "https://www.yorkcityfootballclub.co.uk/teams/",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "official_current_club_first_team_page"
+        },
+        {
+          "player": "Joe Grey",
+          "sourceDisplayedName": "Joe Grey",
+          "shirt": 7,
+          "sourceUrl": "https://www.yorkcityfootballclub.co.uk/teams/",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "official_current_club_first_team_page"
+        },
+        {
+          "player": "Josh Stones",
+          "sourceDisplayedName": "Josh Stones",
+          "shirt": 9,
+          "sourceUrl": "https://www.yorkcityfootballclub.co.uk/teams/",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "official_current_club_first_team_page"
+        },
+        {
+          "player": "Ollie Pearce",
+          "sourceDisplayedName": "Ollie Pearce",
+          "shirt": 10,
+          "sourceUrl": "https://www.yorkcityfootballclub.co.uk/teams/",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "official_current_club_first_team_page"
+        },
+        {
+          "player": "Dipo Akinyemi",
+          "sourceDisplayedName": "Dipo Akinyemi",
+          "shirt": 20,
+          "sourceUrl": "https://www.yorkcityfootballclub.co.uk/teams/",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "official_current_club_first_team_page"
+        }
+      ],
+      "flags": []
+    },
+    {
+      "clubId": "crawley-town",
+      "club": "Crawley Town",
+      "classification": "independent_season_squad_archive",
+      "sourceUrl": "https://footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+      "sourceName": "FootballSquads 2026/27 Crawley Town",
+      "corroborationUrl": null,
+      "players": [
+        {
+          "player": "Vito Mannone",
+          "sourceDisplayedName": "Vito Mannone",
+          "shirt": 1,
+          "sourceUrl": "https://footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Nicholas Michalski",
+          "sourceDisplayedName": "Nicholas Michalski",
+          "shirt": 13,
+          "sourceUrl": "https://footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Kellan Gordon",
+          "sourceDisplayedName": "Kellan Gordon",
+          "shirt": 2,
+          "sourceUrl": "https://footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Pele Arganese-McDermott",
+          "sourceDisplayedName": "Pele Arganese-McDermott",
+          "shirt": 4,
+          "sourceUrl": "https://footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Charlie Barker",
+          "sourceDisplayedName": "Charlie Barker",
+          "shirt": 5,
+          "sourceUrl": "https://footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Priestley Farquharson",
+          "sourceDisplayedName": "Priestley Farquharson",
+          "shirt": 6,
+          "sourceUrl": "https://footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Lewis Richards",
+          "sourceDisplayedName": "Lewis Richards",
+          "shirt": 12,
+          "sourceUrl": "https://footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Louie Watson",
+          "sourceDisplayedName": "Louie Watson",
+          "shirt": 8,
+          "sourceUrl": "https://footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Stephen Duke-McKenna",
+          "sourceDisplayedName": "Stephen Duke-McKenna",
+          "shirt": 10,
+          "sourceUrl": "https://footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Dion Pereira",
+          "sourceDisplayedName": "Dion Pereira",
+          "shirt": 19,
+          "sourceUrl": "https://footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Jude Arthurs",
+          "sourceDisplayedName": "Jude Arthurs",
+          "shirt": 20,
+          "sourceUrl": "https://footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Justin Ferizaj",
+          "sourceDisplayedName": "Justin Ferizaj",
+          "shirt": 21,
+          "sourceUrl": "https://footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Danilo Orsi-Dadomo",
+          "sourceDisplayedName": "Danilo Orsi-Dadomo",
+          "shirt": 9,
+          "sourceUrl": "https://footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Pemi Aderoju",
+          "sourceDisplayedName": "Pemi Aderoju",
+          "shirt": 11,
+          "sourceUrl": "https://footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Gianmarco Di Biase",
+          "sourceDisplayedName": "Gianmarco Di Biase",
+          "shirt": 14,
+          "sourceUrl": "https://footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Malcolm Ebiowei",
+          "sourceDisplayedName": "Malcolm Ebiowei",
+          "shirt": 7,
+          "sourceUrl": "https://footballsquads.co.uk/eng/2026-2027/fltwo/crawley.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        }
+      ],
+      "flags": []
+    },
+    {
+      "clubId": "northampton-town",
+      "club": "Northampton Town",
+      "classification": "independent_season_squad_archive",
+      "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+      "sourceName": "FootballSquads 2026/27 Northampton Town",
+      "corroborationUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+      "players": [
+        {
+          "player": "Zach Jeacock",
+          "sourceDisplayedName": "Zach Jeacock",
+          "shirt": 1,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "James Dadge",
+          "sourceDisplayedName": "James Dadge",
+          "shirt": 31,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "James Maxwell",
+          "sourceDisplayedName": "James Maxwell",
+          "shirt": 3,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Jon Guthrie",
+          "sourceDisplayedName": "Jon Guthrie",
+          "shirt": 5,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Elliott Moore",
+          "sourceDisplayedName": "Elliott Moore",
+          "shirt": 6,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Conor McCarthy",
+          "sourceDisplayedName": "Conor McCarthy",
+          "shirt": 15,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Joe Wormleighton",
+          "sourceDisplayedName": "Joe Wormleighton",
+          "shirt": 16,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Joseph O'Brien-Whitmarsh",
+          "sourceDisplayedName": "Joe O'Brien-Whitmarsh",
+          "shirt": 4,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Lee Evans",
+          "sourceDisplayedName": "Lee Evans",
+          "shirt": 8,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Tyrese Fornah",
+          "sourceDisplayedName": "Tyrese Fornah",
+          "shirt": 14,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Owen Dale",
+          "sourceDisplayedName": "Owen Dale",
+          "shirt": 19,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Jack Perkins",
+          "sourceDisplayedName": "Jack Perkins",
+          "shirt": 21,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Sam Hoskins",
+          "sourceDisplayedName": "Sam Hoskins",
+          "shirt": 7,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Matty Warhurst",
+          "sourceDisplayedName": "Matty Warhurst",
+          "shirt": 9,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Elliott List",
+          "sourceDisplayedName": "Elliott List",
+          "shirt": 10,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Kamarai Simon-Swyer",
+          "sourceDisplayedName": "Kamarai Swyer",
+          "shirt": 11,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        }
+      ],
+      "flags": []
+    },
+    {
+      "clubId": "rotherham-united",
+      "club": "Rotherham United",
+      "classification": "independent_season_squad_archive",
+      "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+      "sourceName": "FootballSquads 2026/27 Rotherham United",
+      "corroborationUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+      "players": [
+        {
+          "player": "Ted Cann",
+          "sourceDisplayedName": "Ted Cann",
+          "shirt": 1,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Julian Eyestone",
+          "sourceDisplayedName": "Julian Eyestone",
+          "shirt": 13,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Joe Rafferty",
+          "sourceDisplayedName": "Joe Rafferty",
+          "shirt": 2,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Ewan Otoo",
+          "sourceDisplayedName": "Ewan Otoo",
+          "shirt": 3,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Kieran Ngwenya",
+          "sourceDisplayedName": "Kieran Ngwenya",
+          "shirt": 5,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Denzel Hall",
+          "sourceDisplayedName": "Denzel Hall",
+          "shirt": 12,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Emmanuel Adegboyega",
+          "sourceDisplayedName": "Emmanuel Adegboyega",
+          "shirt": 16,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Josh Austerfield",
+          "sourceDisplayedName": "Josh Austerfield",
+          "shirt": 4,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Ossama Ashley",
+          "sourceDisplayedName": "Ossama Ashley",
+          "shirt": 6,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Kian Spence",
+          "sourceDisplayedName": "Kian Spence",
+          "shirt": 8,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Jamie Jellis",
+          "sourceDisplayedName": "Jamie Jellis",
+          "shirt": 22,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Aaron Nemane",
+          "sourceDisplayedName": "Aaron Nemane",
+          "shirt": 23,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Fabio Tavares",
+          "sourceDisplayedName": "Fabio Tavares",
+          "shirt": 7,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Tom Bradshaw",
+          "sourceDisplayedName": "Tom Bradshaw",
+          "shirt": 9,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Paul Mullin",
+          "sourceDisplayedName": "Paul Mullin",
+          "shirt": 10,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Klaidi Lolos",
+          "sourceDisplayedName": "Klaidi Lolos",
+          "shirt": 20,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        }
+      ],
+      "flags": []
+    },
+    {
+      "clubId": "exeter-city",
+      "club": "Exeter City",
+      "classification": "independent_season_squad_archive",
+      "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm",
+      "sourceName": "FootballSquads 2026/27 Exeter City",
+      "corroborationUrl": null,
+      "players": [
+        {
+          "player": "Jack Bycroft",
+          "sourceDisplayedName": "Jack Bycroft",
+          "shirt": 1,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Frankie Phillips",
+          "sourceDisplayedName": "Frankie Phillips",
+          "shirt": 22,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Luca Woodhouse",
+          "sourceDisplayedName": "Luca Woodhouse",
+          "shirt": 3,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Ed Turns",
+          "sourceDisplayedName": "Ed Turns",
+          "shirt": 4,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Jack Fitzwater",
+          "sourceDisplayedName": "Jack Fitzwater",
+          "shirt": 5,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Gwion Edwards",
+          "sourceDisplayedName": "Gwion Edwards",
+          "shirt": 7,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Taylor Perry",
+          "sourceDisplayedName": "Taylor Perry",
+          "shirt": 8,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Reece Cole",
+          "sourceDisplayedName": "Reece Cole",
+          "shirt": 12,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Charlie Cummins",
+          "sourceDisplayedName": "Charlie Cummins",
+          "shirt": 16,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Josh Gordon",
+          "sourceDisplayedName": "Josh Gordon",
+          "shirt": 10,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        },
+        {
+          "player": "Kieran Wilson",
+          "sourceDisplayedName": "Kieran Wilson",
+          "shirt": 37,
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm",
+          "checkedAt": "2026-10-20",
+          "sourceClass": "independent_season_squad_archive"
+        }
+      ],
+      "flags": [
+        {
+          "clubId": "exeter-city",
+          "player": "Lakyle Samuel",
+          "shirt": 2,
+          "reviewStatus": "membership_not_confirmed_in_checked_source",
+          "reason": "Not located in the 2026/27 detailed squad snapshot reviewed for this club; absence alone does not prove a move or establish a replacement.",
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm",
+          "checkedAt": "2026-10-20"
+        },
+        {
+          "clubId": "exeter-city",
+          "player": "Jack Taylor",
+          "shirt": 6,
+          "reviewStatus": "membership_not_confirmed_in_checked_source",
+          "reason": "Not located in the 2026/27 detailed squad snapshot reviewed for this club; absence alone does not prove a move or establish a replacement.",
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm",
+          "checkedAt": "2026-10-20"
+        },
+        {
+          "clubId": "exeter-city",
+          "player": "Harry Kite",
+          "shirt": 14,
+          "reviewStatus": "membership_not_confirmed_in_checked_source",
+          "reason": "Not located in the 2026/27 detailed squad snapshot reviewed for this club; absence alone does not prove a move or establish a replacement.",
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm",
+          "checkedAt": "2026-10-20"
+        },
+        {
+          "clubId": "exeter-city",
+          "player": "Ajay Matthews",
+          "shirt": 15,
+          "reviewStatus": "membership_not_confirmed_in_checked_source",
+          "reason": "Not located in the 2026/27 detailed squad snapshot reviewed for this club; absence alone does not prove a move or establish a replacement.",
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm",
+          "checkedAt": "2026-10-20"
+        },
+        {
+          "clubId": "exeter-city",
+          "player": "George Williams",
+          "shirt": 44,
+          "reviewStatus": "membership_not_confirmed_in_checked_source",
+          "reason": "Not located in the 2026/27 detailed squad snapshot reviewed for this club; absence alone does not prove a move or establish a replacement.",
+          "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/exeter.htm",
+          "checkedAt": "2026-10-20"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "selectedClubs": 5,
+    "sourceMatched": 75,
+    "needsClubMembershipCheck": 5,
+    "officialClubMatched": 16,
+    "independentSourceMatched": 59
+  },
+  "cautions": [
+    "York City is a first-party currently published squad roster; other four are third-party season-specific player listings. They must remain separately classified.",
+    "A player may have left after the checked snapshot; do not infer later membership without corroboration.",
+    "Exeter player absences are unresolved research alerts, not verified transfers, and do not trigger automatic player replacement.",
+    "No change to transfer values, SWOS game files, skills, or careers."
+  ]
+}
