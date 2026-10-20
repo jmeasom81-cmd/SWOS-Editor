@@ -37,8 +37,8 @@ assert.equal(data.summary.high,data.players.filter(p=>p.researchPriority==='HIGH
 assert.equal(data.players.filter(p=>p.reviewStatus==='membership_check').length,0);
 assert.equal(data.players.filter(p=>p.reviewStatus==='membership_source_matched').length,2);
 assert.equal(data.summary.urgent,0);
-assert.equal(data.summary.ready,1229);
-assert.equal(data.summary.squadLinked,670);
+assert.equal(data.summary.ready,1234);
+assert.equal(data.summary.squadLinked,680);
 assert.ok(data.players.filter(p=>p.researchPriority==='REVIEWED').every(p=>p.reviewStatus==='value_unpublished'&&p.marketValueM===null));
 assert.ok(page.includes('Next 15 clubs to research'));
 assert.ok(page.includes('SWOS_Research_Priority_2026-27.csv'));
@@ -62,3 +62,10 @@ for(const c of master.clubs.filter(c=>c.division==='Premier League')){
 }
 for(const group of verification.newlyVerified){const c=master.clubs.find(c=>c.clubId===group.clubId);for(const x of group.players){const p=c.players.find(p=>p.player===x.player);assert.equal(p.shirt,x.shirt);}}
 console.log('Official 2026/27 Premier League roster crosscheck: 320 player shirt numbers across all 20 clubs.');
+
+const batchO=JSON.parse(fs.readFileSync('data/valuation-verification-batch-o-2026-10-20.json','utf8'));
+assert.equal(data.valuationReviewFlags.length,batchO.discrepancyFlags.length);
+assert.equal(new Set(data.valuationReviewFlags.map(v=>v.clubId+'|'+v.player)).size,3);
+for(const v of batchO.valued){const p=data.players.find(p=>p.clubId===v.clubId&&p.player===v.player);assert.ok(p);assert.equal(p.marketValueM,v.convertedGbpM);assert.equal(p.valueSourceUrl,v.sourceUrl);}
+for(const v of batchO.noPublishedValue){const p=data.players.find(p=>p.clubId===v.clubId&&p.player===v.player);assert.ok(p);assert.equal(p.marketValueM,null);assert.equal(p.reviewStatus,'value_unpublished');}
+assert.ok(page.includes('Player shirt-number discrepancies'));
