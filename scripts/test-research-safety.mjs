@@ -272,8 +272,14 @@ for(const item of essentialJ.changes){
  const p=club.players.find(p=>p.player===item.player);
  assert.ok(p,'Essential evidence player missing '+item.clubId+'/'+item.player);
  assert.equal(p[item.field],item.verifiedValue,'Essential field conflict '+item.player);
- assert.equal(p[item.field==='shirt'?'shirtEvidenceUrl':'nationalityEvidenceUrl'],item.sourceUrl,'Evidence URL must be retained '+item.player);
- assert.equal(p[item.field==='shirt'?'shirtCheckedAt':'nationalityCheckedAt'],essentialJ.checkedAt,'Evidence date must be retained '+item.player);
+ if(item.field==='shirt'&&item.clubId==='leicester-city'){
+  assert.ok(p.officialClubSourceUrl?.startsWith('https://www.lcfc.com/'),'Newer official Leicester source should supersede older evidence '+item.player);
+  assert.equal(p.shirtEvidenceUrl,p.officialClubSourceUrl);
+  assert.equal(p.shirtCheckedAt,'2026-10-20');
+ }else{
+  assert.equal(p[item.field==='shirt'?'shirtEvidenceUrl':'nationalityEvidenceUrl'],item.sourceUrl,'Evidence URL must be retained '+item.player);
+  assert.equal(p[item.field==='shirt'?'shirtCheckedAt':'nationalityCheckedAt'],essentialJ.checkedAt,'Evidence date must be retained '+item.player);
+ }
 }
 assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.nationality===null).length,0,'All 1,472 researched players now have nationality');
 assert.equal(master.clubs.find(c=>c.clubId==='west-bromwich-albion').players.find(p=>p.player==='Jimmy Morgan').shirt,11,'Batch N verified West Brom shirt with 2026/27 evidence');
