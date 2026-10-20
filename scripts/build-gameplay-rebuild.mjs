@@ -5,7 +5,7 @@ const source=fs.readFileSync('scripts/gameplay-rebuild-client.js','utf8');
 const master=JSON.parse(fs.readFileSync('data/master-2026-27.json','utf8'));
 if(!html0.includes('<title>SWOS Studio v1.35.0</title>'))throw Error('v1.36 requires v1.35 first');
 if(master.season!=='2026/27'||master.clubs.length!==92||master.clubs.some(c=>c.players.length!==16))throw Error('Unexpected gameplay dataset count');
-const gameData=Object.fromEntries(master.clubs.map(c=>[c.clubId,c.players.map(p=>[p.player,p.position,p.marketValueM,p.minutes,p.goals,p.assists,p.age])]));
+const gameData=Object.fromEntries(master.clubs.map(c=>[c.clubId,c.players.map(p=>[p.player,p.position,p.marketValueM,p.minutes,p.goals,p.assists,p.age,p.marketValueSourceUrl])]));
 const valueCount=master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM!=null).length;
 if(valueCount!==1234)throw Error('Expected 1,234 researched valuations; abort if master changed');
 if(master.clubs.reduce((n,c)=>n+c.players.length,0)!==1472)throw Error('Exactly 1,472 players required');
@@ -39,4 +39,4 @@ const scripts=html.split('<script>').slice(1).map(part=>part.split('</script>')[
 if(scripts.length!==1)throw Error('Cannot identify single built application');
 new vm.Script(scripts[0],{filename:path});
 fs.writeFileSync(path,html,'utf8');
-console.log('SWOS v1.36: embedded '+master.clubs.length+' clubs / 1,472 deterministic player profiles; 238 explicitly provisional game-value placeholders; skills byte-audited; direct installation locked.');
+console.log('SWOS v1.36: embedded '+master.clubs.length+' clubs / 1,472 deterministic player profiles; 238 explicitly provisional game-value placeholders and 635 unlinked master valuations; skills byte-audited; direct installation locked.');
