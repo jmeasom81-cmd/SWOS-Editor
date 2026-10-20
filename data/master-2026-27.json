@@ -10796,7 +10796,7 @@
         },
         {
           "player": "Mikey Johnston",
-          "shirt": 11,
+          "shirt": 10,
           "nationality": "Republic of Ireland",
           "group": "Forward",
           "position": 5,
@@ -10804,7 +10804,12 @@
           "marketValueM": 4,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "shirtEvidenceUrl": "https://www.goal.com/en-gb/team/west-bromwich-albion/squad/d1lhefp805y0rcbjqkpu4fq0n",
+          "shirtCheckedAt": "2026-10-20",
+          "seasonSquadSourceUrl": "https://www.goal.com/en-gb/team/west-bromwich-albion/squad/d1lhefp805y0rcbjqkpu4fq0n",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Goal.com West Brom 2026/27 squad"
         },
         {
           "player": "Aune Heggebo",
@@ -10820,7 +10825,7 @@
         },
         {
           "player": "Jimmy Morgan",
-          "shirt": null,
+          "shirt": 11,
           "nationality": "England",
           "group": "Forward",
           "position": 7,
@@ -10829,8 +10834,11 @@
           "minutes": null,
           "goals": null,
           "assists": null,
-          "shirtEvidenceUrl": "https://www.transfermarkt.co.uk/west-bromwich-albion/kadernaechstesaison/verein/984/saison_id/2026",
-          "shirtCheckedAt": "2026-10-09"
+          "shirtEvidenceUrl": "https://www.goal.com/en-gb/team/west-bromwich-albion/squad/d1lhefp805y0rcbjqkpu4fq0n",
+          "shirtCheckedAt": "2026-10-20",
+          "seasonSquadSourceUrl": "https://www.goal.com/en-gb/team/west-bromwich-albion/squad/d1lhefp805y0rcbjqkpu4fq0n",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Goal.com 2026/27 squad; FBref Jimmy Jay Morgan name cross-check"
         },
         {
           "player": "Josh Maja",
@@ -12917,7 +12925,12 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "shirtEvidenceUrl": "https://cdn.sporx.com/cambridge-united-mac-kadrosu",
+          "shirtCheckedAt": "2026-10-20",
+          "seasonSquadSourceUrl": "https://cdn.sporx.com/cambridge-united-mac-kadrosu",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Sporx Cambridge 2026/27 roster"
         },
         {
           "player": "Liam Bennett",
@@ -12945,7 +12958,12 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "shirtEvidenceUrl": "https://cdn.sporx.com/cambridge-united-mac-kadrosu",
+          "shirtCheckedAt": "2026-10-20",
+          "seasonSquadSourceUrl": "https://cdn.sporx.com/cambridge-united-mac-kadrosu",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Sporx Cambridge 2026/27 roster; Goal.com cross-check"
         },
         {
           "player": "Patrick Bauer",
