@@ -84,7 +84,8 @@ function gameDataSlotMatches(modelName,actualName){
   if(!a||!b)return false;
   // Truncated SWOS names are permitted only where the shorter string is >= 12 chars
   // and shares an exact beginning. No fuzzy cross-player substitutions.
-  return a===b||(b.length>=12&&a.startsWith(b));
+  const rendered=gameplayNorm(swosSafeName(modelName));
+  return a===b||rendered===b||(b.length>=12&&a.startsWith(b));
 }
 function applyEnglandGameplayRebuild(preview){
   const source=seasonUpdateState.english;
