@@ -276,9 +276,9 @@ for(const item of essentialJ.changes){
  assert.equal(p[item.field==='shirt'?'shirtCheckedAt':'nationalityCheckedAt'],essentialJ.checkedAt,'Evidence date must be retained '+item.player);
 }
 assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.nationality===null).length,0,'All 1,472 researched players now have nationality');
-assert.equal(master.clubs.find(c=>c.clubId==='west-bromwich-albion').players.find(p=>p.player==='Jimmy Morgan').shirt,null,'Do not guess West Brom shirt');
-assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.shirt===null).length,1,'Only unconfirmed West Brom shirt remains');
-console.log('Essential batch J: 5 nationalities + 6 shirts sourced; 1 unconfirmed shirt safely blank.');
+assert.equal(master.clubs.find(c=>c.clubId==='west-bromwich-albion').players.find(p=>p.player==='Jimmy Morgan').shirt,11,'Batch N verified West Brom shirt with 2026/27 evidence');
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.shirt===null).length,0,'Batch N resolved the last previously unconfirmed shirt number');
+console.log('Essential batch J: 5 nationalities + 6 shirts researched; final unconfirmed shirt sourced in batch N.');
 
 // Batch K: name+club matched 2026/27 valuations, never treat blank values as zero.
 const batchK=JSON.parse(fs.readFileSync('data/valuations-batch-k-2026-10-10.json','utf8'));
@@ -296,7 +296,7 @@ for(const c of batchK.clubs){
 }
 assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,243,'Batch K valuation count');
 assert.equal(master.clubs.find(c=>c.clubId==='burton-albion').players.find(p=>p.player==='Kamil Dudek').marketValueM,null,'Unpublished market value must remain blank');
-assert.equal(master.clubs.find(c=>c.clubId==='west-bromwich-albion').players.find(p=>p.player==='Jimmy Morgan').shirt,null,'Unconfirmed squad number cannot be invented');
+assert.equal(master.clubs.find(c=>c.clubId==='west-bromwich-albion').players.find(p=>p.player==='Jimmy Morgan').shirtEvidenceUrl,'https://www.goal.com/en-gb/team/west-bromwich-albion/squad/d1lhefp805y0rcbjqkpu4fq0n','Last formerly unconfirmed shirt now requires season evidence');
 console.log('Batch K: 18 source-matched market values across 7 clubs; 243 values remain blank.');
 
 // Research review L: source review records are deliberately not valuations.
