@@ -101,4 +101,4 @@ const baseline=ctx.gameplayRatings(['Forward',7,5,1400,0,0,24],1,7);
 assert.ok(boosted.levels[6]>=baseline.levels[6],'Goal impact should be non-negative');
 assert.ok(boosted.levels[0]>=baseline.levels[0],'Assists impact should be non-negative');
 assert.equal(ctx.gameplayRatings(['Unnamed',7,null,null,null,null,null],2,7).valueStatus,'gameplay_placeholder');
-console.log('SWOS v1.36 full game rehearsal: deterministic 1,472/1,472 skills, 1,234 sourced values, 238 labelled gameplay placeholders, no inherited player ratings or fees; bytes and mapping regression tests passed.');
+console.log('SWOS v1.36 full game rehearsal: deterministic 1,472/1,472 skills, 1,234 recorded valuations (599 with direct URLs, 635 without), 238 labelled gameplay placeholders, no inherited player ratings or fees; bytes and mapping regression tests passed.');
