@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "clubId": "barnsley",
+  "club": "Barnsley",
+  "division": "League One",
+  "checkedAt": "2026-10-20",
+  "evidenceClassification": "independent_dated_match_sheet",
+  "documentation": "Every selected player is explicitly named with matching shirt number on an individually identified 2026/27 Sky Sports match sheet; substitutions and starters both count as dated squad evidence. This is not an official club-issued player profile, nor an independently verified market valuation, nor confirmation of permanent current membership. Market value fields are intentionally unchanged.",
+  "contextOfficialClubUrl": "https://www.barnsleyfc.co.uk/news/2026/october/10/reds-team-news-from-stockport/",
+  "rosterResearchCaution": "One older 2026/27 transfer-market club roster omits some players named in newer match sheets. Do not infer a transfer from a missing older snapshot.",
+  "players": [
+    {
+      "player": "Cieran Slicker",
+      "shirt": 1,
+      "sourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+      "matchDate": "2026-10-17",
+      "lineupRole": "substitute",
+      "sourceName": "Sky Sports 2026/27 dated match sheet",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Rogan Ravenhill",
+      "shirt": 25,
+      "sourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+      "matchDate": "2026-10-17",
+      "lineupRole": "starter",
+      "sourceName": "Sky Sports 2026/27 dated match sheet",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Ziyad Larkeche",
+      "shirt": 3,
+      "sourceUrl": "https://www.skysports.com/football/barnsley-vs-stevenage/teams/561650",
+      "matchDate": "2026-09-05",
+      "lineupRole": "starter",
+      "sourceName": "Sky Sports 2026/27 dated match sheet",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Sam Gale",
+      "shirt": 4,
+      "sourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+      "matchDate": "2026-10-17",
+      "lineupRole": "substitute",
+      "sourceName": "Sky Sports 2026/27 dated match sheet",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Jack Shepherd",
+      "shirt": 5,
+      "sourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+      "matchDate": "2026-10-17",
+      "lineupRole": "starter",
+      "sourceName": "Sky Sports 2026/27 dated match sheet",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Connor O'Riordan",
+      "shirt": 6,
+      "sourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+      "matchDate": "2026-10-17",
+      "lineupRole": "starter",
+      "sourceName": "Sky Sports 2026/27 dated match sheet",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Jubril Okedina",
+      "shirt": 12,
+      "sourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+      "matchDate": "2026-10-17",
+      "lineupRole": "substitute",
+      "sourceName": "Sky Sports 2026/27 dated match sheet",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Cameron McGeehan",
+      "shirt": 8,
+      "sourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+      "matchDate": "2026-10-17",
+      "lineupRole": "starter",
+      "sourceName": "Sky Sports 2026/27 dated match sheet",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Tyrese Noslin",
+      "shirt": 11,
+      "sourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+      "matchDate": "2026-10-17",
+      "lineupRole": "starter",
+      "sourceName": "Sky Sports 2026/27 dated match sheet",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Clayton Taylor",
+      "shirt": 13,
+      "sourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+      "matchDate": "2026-10-17",
+      "lineupRole": "substitute",
+      "sourceName": "Sky Sports 2026/27 dated match sheet",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Patrick Kelly",
+      "shirt": 22,
+      "sourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+      "matchDate": "2026-10-17",
+      "lineupRole": "starter",
+      "sourceName": "Sky Sports 2026/27 dated match sheet",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Luca Connell",
+      "shirt": 48,
+      "sourceUrl": "https://www.skysports.com/football/barnsley-vs-leicester-city/teams/561675",
+      "matchDate": "2026-09-19",
+      "lineupRole": "starter",
+      "sourceName": "Sky Sports 2026/27 dated match sheet",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Makenzie Kirk",
+      "shirt": 9,
+      "sourceUrl": "https://www.skysports.com/football/barnsley-vs-leicester-city/teams/561675",
+      "matchDate": "2026-09-19",
+      "lineupRole": "substitute",
+      "sourceName": "Sky Sports 2026/27 dated match sheet",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Ben Hamed Toure",
+      "shirt": 10,
+      "sourceUrl": "https://www.skysports.com/football/barnsley-vs-leicester-city/teams/561675",
+      "matchDate": "2026-09-19",
+      "lineupRole": "starter",
+      "sourceName": "Sky Sports 2026/27 dated match sheet",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Amani Richards",
+      "shirt": 17,
+      "sourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+      "matchDate": "2026-10-17",
+      "lineupRole": "substitute",
+      "sourceName": "Sky Sports 2026/27 dated match sheet",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "player": "Reyes Cleary",
+      "shirt": 19,
+      "sourceUrl": "https://www.skysports.com/football/barnsley-vs-cambridge-united/teams/561722",
+      "matchDate": "2026-10-17",
+      "lineupRole": "starter",
+      "sourceName": "Sky Sports 2026/27 dated match sheet",
+      "checkedAt": "2026-10-20"
+    }
+  ]
+}
