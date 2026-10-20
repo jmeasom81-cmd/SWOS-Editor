@@ -1,0 +1,33 @@
+name: SWOS build verification
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout SWOS Editor
+        uses: actions/checkout@v4
+      - name: Set up Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Run all production safety and gameplay tests
+        run: node scripts/build-production.mjs
+      - name: Assert v1.37 test package controls exist
+        run: |
+          node --input-type=module -e "import fs from 'node:fs';const html=fs.readFileSync('dist/index.html','utf8');if(!html.includes('SWOS Studio v1.37.0')||!html.includes('id=\"exportSwosTestZip\"')||html.includes('id=\"installSeasonUpdate\"'))process.exit(1);"
+      - name: Archive verified website build
+        uses: actions/upload-artifact@v4
+        with:
+          name: swos-v137-tested-static-build
+          path: dist/
+          if-no-files-found: error
+          retention-days: 7
