@@ -44,14 +44,17 @@ for(const p of playerRows){
  const missingValue=p.marketValueM===null||p.marketValueM===undefined||p.marketValueM==='';
  const unpublished=review?.status==='value_unpublished';
  const membership=review?.status==='membership_check';
+ const membershipMatched=review?.status==='membership_source_matched';
  const issues=[];
  if(membership)issues.push('Squad membership needs independent check');
+ if(membershipMatched)issues.push('Squad membership source-matched; no official club confirmation recorded');
  for(const f of missingCore)issues.push('Missing '+(f==='shirt'?'shirt number':f));
  if(missingValue)issues.push(unpublished?'Market value unavailable in reviewed source':'Missing numerical market valuation');
  if(!p.squadSourceUrl)issues.push('No individual season squad source linked');
  if(!missingValue&&!p.valueSourceUrl)issues.push('Recorded valuation lacks individual evidence link');
  if(p.sameNameOtherClubs.length)issues.push('Same-name player in other club: '+p.sameNameOtherClubs.join(', '));
  p.reviewStatus=review?.status||null;
+ p.reviewCheckedAt=review?.checkedAt||null;
  p.reviewSourceUrl=review?.sourceUrl||null;
  p.researchIssues=issues;
  p.researchPriority=membership||missingCore.length?'URGENT':
