@@ -405,3 +405,27 @@ for(const x of officialLeicester.players){
 assert.equal(leicester.players.find(p=>p.player==='Tommy Watson').shirt,23);
 assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,238,'Verification must not invent valuations');
 console.log('Leicester official squad audit: 16/16 independently evidenced, Watson name and number resolved; no fake fees.');
+
+// Batch Q: dated independent lineups, no market fees inferred.
+const q=JSON.parse(fs.readFileSync('data/barnsley-lineup-verification-batch-q-2026-10-20.json','utf8'));
+assert.equal(q.season,'2026/27');
+assert.equal(q.players.length,16);
+const barn=master.clubs.find(c=>c.clubId==='barnsley');
+assert.equal(barn.players.length,16);
+assert.equal(new Set(barn.players.map(p=>p.player)).size,16);
+assert.equal(new Set(barn.players.map(p=>p.shirt)).size,16);
+assert.equal(barn.players.filter(p=>p.matchLineupSourceUrl).length,16);
+for(const e of q.players){
+ const p=barn.players.find(p=>p.player===e.player);
+ assert.ok(p,'Missing Barnsley player '+e.player);
+ assert.equal(p.shirt,e.shirt);
+ assert.equal(p.matchLineupSourceUrl,e.sourceUrl);
+ assert.equal(p.matchLineupSourceDate,e.matchDate);
+ assert.equal(p.matchLineupShirtNumber,e.shirt);
+ assert.equal(p.matchLineupRole,e.lineupRole);
+ assert.equal(p.seasonSquadSourceUrl,e.sourceUrl);
+ assert.equal(p.officialClubSourceUrl??null,null);
+}
+assert.equal(barn.players.filter(p=>p.marketValueM===null).length,8,'No market values invented');
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,238);
+console.log('Barnsley independent lineup evidence: 16 numbered players matched to dated 2026/27 matches.');
