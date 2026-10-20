@@ -149,6 +149,13 @@ function applyEnglandGameplayRebuild(preview){
     warning:'Skill profiles are deterministic position/division heuristics, not independent scouting grades. Missing published valuations are replaced by clearly tagged GAMEPLAY PLACEHOLDERS (not financial estimates). This candidate is NOT approved for live installation or match accuracy.',
     clubs:summaries,players:records
   };
+  // The pre-existing TEAM builder counted bytes before player abilities were rebuilt.
+  // Recompute the final diff, otherwise the safe export freshness guard rejects every valid v1.36 candidate.
+  let finalChanged=0;
+  if(after.length!==source.bytes.length)throw Error('Gameplay rebuild changed TEAM file length');
+  for(let i=0;i<after.length;i++)if(after[i]!==source.bytes[i])finalChanged++;
+  if(!finalChanged)throw Error('Gameplay rebuild produced no TEAM changes');
+  preview.changedBytes=finalChanged;
   preview.gameplayReport=result;
   preview.skillsPreserved=0;preview.valuesPreserved=0;
   preview.skillsRebuilt=expected;preview.placeholderValues=placeholderValueCount;
