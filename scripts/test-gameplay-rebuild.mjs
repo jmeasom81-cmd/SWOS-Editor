@@ -12,7 +12,7 @@ assert.ok(!html.includes('id="installSeasonUpdate"'),'Direct installer must rema
 const players=master.clubs.flatMap(c=>c.players);
 assert.equal(master.clubs.length,92);assert.equal(players.length,1472);
 assert.equal(players.filter(p=>p.marketValueM===null).length,238);
-const data=Object.fromEntries(master.clubs.map(c=>[c.clubId,c.players.map(p=>[p.player,p.position,p.marketValueM,p.minutes,p.goals,p.assists,p.age])]));
+const data=Object.fromEntries(master.clubs.map(c=>[c.clubId,c.players.map(p=>[p.player,p.position,p.marketValueM,p.minutes,p.goals,p.assists,p.age,p.marketValueSourceUrl])]));
 const T={name:5,nameLength:19,division:25,order:60,players:76};
 const P={nationality:0,shirt:2,name:3,nameLength:23,multi:26,passing:28,shootHead:29,tackleControl:30,speedFinish:31,value:32};
 const HEADER_SIZE=2,TEAM_RECORD_SIZE=684,PLAYER_RECORD_SIZE=38,PLAYERS_PER_TEAM=16;
@@ -58,12 +58,15 @@ assert.equal(res.oldPlayerValuesReused,0);
 assert.ok(Number.isInteger(preview.changedBytes)&&preview.changedBytes>0);
 assert.equal(preview.changedBytes,preview.previewBytes.reduce((n,v,i)=>n+(v!==original[i]?1:0),0),'Export diff guard needs the FINAL number of changed bytes');
 assert.equal(res.sourceValueCount,1234);
+assert.equal(res.linkedValueCount,599);
+assert.equal(res.unlinkedValueCount,635);
 assert.equal(res.placeholderValueCount,238);
 assert.equal(res.players.length,1472);
 assert.equal(Object.keys(res.clubs).length,92);
 assert.ok(res.players.every(p=>p.ratings.every(x=>Number.isInteger(x)&&x>=0&&x<=7)));
 assert.ok(res.players.filter(p=>p.valueSource==='gameplay_placeholder').every(p=>p.marketValueM===null));
-assert.ok(res.players.find(p=>p.player==='Declan Rice')?.valueSource==='published_source');
+assert.ok(res.players.find(p=>p.player==='Declan Rice')?.valueSource==='linked_master_value');
+assert.equal(res.players.filter(p=>p.valueSource==='master_value_unlinked').length,635);
 assert.ok(res.players.find(p=>p.player==='Alfie McNally')?.valueSource==='gameplay_placeholder');
 assert.deepEqual(original,bytes,'The input original must remain byte-identical after model');
 for(let i=0;i<master.clubs.length;i++){
