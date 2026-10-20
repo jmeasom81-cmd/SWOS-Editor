@@ -308,13 +308,14 @@ for(const r of researchReviewL.reviews){
  const id=r.clubId+'|'+r.player;
  assert.ok(!priorReviews.has(id),'Repeated player review '+id);
  priorReviews.add(id);
- assert.ok(['value_unpublished','membership_check'].includes(r.status));
+ assert.ok(['value_unpublished','membership_check','membership_source_matched'].includes(r.status));
  assert.ok(r.sourceUrl.startsWith('https://'));
  const player=master.clubs.find(c=>c.clubId===r.clubId)?.players.find(p=>p.player===r.player);
  assert.ok(player,'Unknown review player '+id);
  assert.equal(player.marketValueM,null,'Unpublished value must remain null '+id);
 }
-assert.equal(researchReviewL.reviews.filter(r=>r.status==='membership_check').length,2);
+assert.equal(researchReviewL.reviews.filter(r=>r.status==='membership_check').length,0);
+assert.equal(researchReviewL.reviews.filter(r=>r.status==='membership_source_matched').length,2);
 assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,243);
 console.log('SWOS research review L: 26 reviewed missing values, no assumptions made.');
 
@@ -326,3 +327,21 @@ for(const batch of officialM.newlyVerified){const club=master.clubs.find(c=>c.cl
 assert.equal(master.clubs.filter(c=>c.division==='Premier League').flatMap(c=>c.players).filter(p=>p.officialPLRosterUrl===officialM.sourceUrl).length,320);
 assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,243,'Official source checks must not create values');
 console.log('Premier League official batch M: 160 newly compared and 160 previously verified shirt numbers linked.');
+
+const batchN=JSON.parse(fs.readFileSync('data/essentials-verification-batch-n-2026-10-20.json','utf8'));
+assert.equal(batchN.season,'2026/27');
+assert.equal(batchN.verifications.length,4);
+for(const e of batchN.verifications){
+ const p=master.clubs.find(c=>c.clubId===e.clubId)?.players.find(p=>p.player===e.player);
+ assert.ok(p,'Batch N player not present: '+e.player);
+ assert.equal(p.shirt,e.shirt);
+ assert.equal(p.shirtEvidenceUrl,e.shirtSource||e.squadSource);
+ assert.equal(p.seasonSquadSourceUrl,e.shirtSource||e.squadSource);
+ assert.equal(p.shirtCheckedAt,batchN.checkedAt);
+}
+const west=master.clubs.find(c=>c.clubId==='west-bromwich-albion');
+const westNumbers=west.players.filter(p=>p.shirt!==null).map(p=>p.shirt);
+assert.equal(new Set(westNumbers).size,westNumbers.length,'West Brom #10/#11 must not collide');
+for(const name of ['Gabriel Breeze','Callum Perry'])assert.equal(master.clubs.find(c=>c.clubId==='cambridge-united').players.find(p=>p.player===name).marketValueM,null);
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.shirt===null).length,0,'No essential shirt number remains missing');
+console.log('Batch N: 4 current-season shirts/squad source matches; urgent list cleared, no invented valuations.');
