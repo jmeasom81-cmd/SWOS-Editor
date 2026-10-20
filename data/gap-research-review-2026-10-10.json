@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026/27",
-  "checkedAt": "2026-10-10",
+  "checkedAt": "2026-10-20",
   "meaning": "Research status rather than a valuation. A dash does not mean £0, and source non-appearance does not prove a transfer. No game files edited.",
   "reviews": [
     {
@@ -151,18 +151,20 @@
     {
       "clubId": "cambridge-united",
       "player": "Gabriel Breeze",
-      "status": "membership_check",
-      "sourceUrl": "https://www.transfermarkt.co.uk/cambridge-united/kader/verein/986/saison_id/2026",
-      "checkedAt": "2026-10-10",
-      "note": "Not matched in the cited season squad. Verify current club membership independently; absence from one listing does not establish departure."
+      "status": "membership_source_matched",
+      "sourceUrl": "https://cdn.sporx.com/cambridge-united-mac-kadrosu",
+      "checkedAt": "2026-10-20",
+      "note": "Current 2026/27 Cambridge squad sources list this player with the researched squad number. This resolves the former missing-source flag, but is not official-club confirmation. Numeric market value remains unavailable or unchecked.",
+      "corroboratingSourceUrl": "https://cambridgeunitednews.co.uk/squad"
     },
     {
       "clubId": "cambridge-united",
       "player": "Callum Perry",
-      "status": "membership_check",
-      "sourceUrl": "https://www.transfermarkt.co.uk/cambridge-united/kader/verein/986/saison_id/2026",
-      "checkedAt": "2026-10-10",
-      "note": "Not matched in the cited season squad. Verify current club membership independently; absence from one listing does not establish departure."
+      "status": "membership_source_matched",
+      "sourceUrl": "https://cdn.sporx.com/cambridge-united-mac-kadrosu",
+      "checkedAt": "2026-10-20",
+      "note": "Current 2026/27 Cambridge squad sources list this player with the researched squad number. This resolves the former missing-source flag, but is not official-club confirmation. Numeric market value remains unavailable or unchecked.",
+      "corroboratingSourceUrl": "https://www.goal.com/en-gb/team/cambridge-u/squad/dmz37633qbsvl7gncq5s51yjw"
     },
     {
       "clubId": "accrington-stanley",
