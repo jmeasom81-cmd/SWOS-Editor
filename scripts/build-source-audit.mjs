@@ -18,6 +18,8 @@ for(const c of master.clubs){
    shirt:p.shirt,nationality:p.nationality,position:p.position,marketValueM:p.marketValueM,
    essentialReady:essential(p),
    officialPLRosterUrl:p.officialPLRosterUrl||null,officialPLSquadNumber:p.officialPLSquadNumber??null,
+   officialClubSourceUrl:p.officialClubSourceUrl||null,officialClubShirtNumber:p.officialClubShirtNumber??null,officialClubSourceDate:p.officialClubSourceDate||null,officialClubSourceKind:p.officialClubSourceKind||null,
+
    squadSourceUrl:p.officialPLRosterUrl||p.seasonSquadSourceUrl||null,
    shirtSourceUrl:p.officialPLRosterUrl||p.shirtEvidenceUrl||null,
    valueSourceUrl:p.marketValueSourceUrl||null,
@@ -76,6 +78,7 @@ const sum=rows=>({
  ready:rows.filter(p=>p.essentialReady).length,
  squadLinked:rows.filter(p=>p.squadSourceUrl).length,
  officialPLLinked:rows.filter(p=>p.officialPLRosterUrl).length,
+ officialClubLinked:rows.filter(p=>p.officialClubSourceUrl).length,
  squadUnlinked:rows.filter(p=>!p.squadSourceUrl).length,
  priced:rows.filter(p=>p.marketValueM!==null).length,
  valueLinked:rows.filter(p=>p.marketValueM!==null&&p.valueSourceUrl).length,
@@ -103,7 +106,9 @@ for(const issue of batchO.discrepancyFlags){
  const source=master.clubs.find(c=>c.clubId===issue.clubId)?.players.find(p=>p.player===issue.player);
  if(!source||source[issue.field]!==issue.stored)throw new Error('Source audit: unresolved shirt difference changed '+issue.player);
 }
-const data={season:master.season,generatedAt:master.generatedAt,summary,divisions,clubs,valuationReviewFlags:batchO.discrepancyFlags,players:playerRows};
+const officialClubBatch=JSON.parse(fs.readFileSync('data/leicester-official-16-player-audit-2026-10-20.json','utf8'));
+if(officialClubBatch.season!==master.season||officialClubBatch.players.length!==16)throw new Error('Official club verification batch invalid');
+const data={season:master.season,generatedAt:master.generatedAt,summary,divisions,clubs,valuationReviewFlags:batchO.discrepancyFlags,verifiedNameCorrections:[{club:officialClubBatch.club,...officialClubBatch.nameFix,sourceUrl:officialClubBatch.players.find(p=>p.player===officialClubBatch.nameFix.to)?.sourceUrl}],players:playerRows};
 fs.mkdirSync('dist/data',{recursive:true});
 fs.mkdirSync('dist/downloads',{recursive:true});
 fs.writeFileSync('dist/data/source-audit-2026-27.json',JSON.stringify(data,null,2)+'\n');
@@ -112,14 +117,14 @@ const csv=v=>{
  if(/^[=+\-@\t\r]/.test(s))s="'"+s;
  return /[",\r\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;
 };
-const headers=['Division','Club','Player','Shirt','Nationality','Position code','Value GBP millions','Essentials filled','Individual 2026-27 squad link','Individual market value link','Shirt evidence link','Nationality evidence link','Official PL squad source','Official PL shirt number','Possible same-name clubs','Squad source URL','Value source URL','Shirt source URL','Nationality source URL'];
-const rows=[headers,...playerRows.map(p=>[p.division,p.club,p.player,p.shirt,p.nationality,p.position,p.marketValueM,p.essentialReady?'YES':'NO',p.squadSourceUrl?'LINKED':'NOT LINKED',p.valueSourceUrl?'LINKED':'NOT LINKED',p.shirtSourceUrl?'LINKED':'NOT LINKED',p.nationalitySourceUrl?'LINKED':'NOT LINKED',p.officialPLRosterUrl||'',p.officialPLSquadNumber??'',p.sameNameOtherClubs.join('; '),p.squadSourceUrl,p.valueSourceUrl,p.shirtSourceUrl,p.nationalitySourceUrl])];
+const headers=['Division','Club','Player','Shirt','Nationality','Position code','Value GBP millions','Essentials filled','Individual 2026-27 squad link','Individual market value link','Shirt evidence link','Nationality evidence link','Official PL squad source','Official PL shirt number','Official club squad evidence URL','Official club shirt number','Official club published date','Official club evidence type','Possible same-name clubs','Squad source URL','Value source URL','Shirt source URL','Nationality source URL'];
+const rows=[headers,...playerRows.map(p=>[p.division,p.club,p.player,p.shirt,p.nationality,p.position,p.marketValueM,p.essentialReady?'YES':'NO',p.squadSourceUrl?'LINKED':'NOT LINKED',p.valueSourceUrl?'LINKED':'NOT LINKED',p.shirtSourceUrl?'LINKED':'NOT LINKED',p.nationalitySourceUrl?'LINKED':'NOT LINKED',p.officialPLRosterUrl||'',p.officialPLSquadNumber??'',p.officialClubSourceUrl||'',p.officialClubShirtNumber??'',p.officialClubSourceDate||'',p.officialClubSourceKind||'',p.sameNameOtherClubs.join('; '),p.squadSourceUrl,p.valueSourceUrl,p.shirtSourceUrl,p.nationalitySourceUrl])];
 fs.writeFileSync('dist/downloads/SWOS_Source_Audit_2026-27.csv','\uFEFF'+rows.map(r=>r.map(csv).join(',')).join('\r\n')+'\r\n');
 const queue=playerRows.filter(p=>p.researchPriority!=='CLEAR').sort((a,b)=>
  priorityOrder[a.researchPriority]-priorityOrder[b.researchPriority]||
  a.division.localeCompare(b.division)||a.club.localeCompare(b.club)||a.player.localeCompare(b.player));
-const queueHeaders=['Research priority','Division','Club','Player','Shirt','Nationality','SWOS position','Value GBP millions','Recommended next action','Research issues','Research review status','Review evidence URL','Squad evidence URL','Valuation evidence URL','Same-name clubs'];
-const queueRows=[queueHeaders,...queue.map(p=>[p.researchPriority,p.division,p.club,p.player,p.shirt,p.nationality,p.position,p.marketValueM,p.nextResearchAction,p.researchIssues.join(' | '),p.reviewStatus,p.reviewSourceUrl,p.squadSourceUrl,p.valueSourceUrl,p.sameNameOtherClubs.join('; ')])];
+const queueHeaders=['Research priority','Division','Club','Player','Shirt','Nationality','SWOS position','Value GBP millions','Recommended next action','Research issues','Research review status','Review evidence URL','Squad evidence URL','Valuation evidence URL','Official club evidence URL','Same-name clubs'];
+const queueRows=[queueHeaders,...queue.map(p=>[p.researchPriority,p.division,p.club,p.player,p.shirt,p.nationality,p.position,p.marketValueM,p.nextResearchAction,p.researchIssues.join(' | '),p.reviewStatus,p.reviewSourceUrl,p.squadSourceUrl,p.valueSourceUrl,p.officialClubSourceUrl,p.sameNameOtherClubs.join('; ')])];
 fs.writeFileSync('dist/downloads/SWOS_Research_Priority_2026-27.csv','\uFEFF'+queueRows.map(r=>r.map(csv).join(',')).join('\r\n')+'\r\n');
 if(queue.length!==summary.players-summary.clear)throw new Error('Priority queue: count disagrees with audit');
 const template=fs.readFileSync('source-audit-template.html','utf8');
