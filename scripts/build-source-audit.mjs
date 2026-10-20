@@ -98,7 +98,12 @@ const clubs=master.clubs.map(c=>{
 });
 const divisions=['Premier League','Championship','League One','League Two'].map(division=>({division,...sum(playerRows.filter(p=>p.division===division))}));
 if(summary.players!==1472||clubs.length!==92||summary.ready!==master.clubs.flatMap(c=>c.players).filter(essential).length)throw new Error('Source audit: source-of-truth count mismatch');
-const data={season:master.season,generatedAt:master.generatedAt,summary,divisions,clubs,players:playerRows};
+const batchO=JSON.parse(fs.readFileSync('data/valuation-verification-batch-o-2026-10-20.json','utf8'));
+for(const issue of batchO.discrepancyFlags){
+ const source=master.clubs.find(c=>c.clubId===issue.clubId)?.players.find(p=>p.player===issue.player);
+ if(!source||source[issue.field]!==issue.stored)throw new Error('Source audit: unresolved shirt difference changed '+issue.player);
+}
+const data={season:master.season,generatedAt:master.generatedAt,summary,divisions,clubs,valuationReviewFlags:batchO.discrepancyFlags,players:playerRows};
 fs.mkdirSync('dist/data',{recursive:true});
 fs.mkdirSync('dist/downloads',{recursive:true});
 fs.writeFileSync('dist/data/source-audit-2026-27.json',JSON.stringify(data,null,2)+'\n');
