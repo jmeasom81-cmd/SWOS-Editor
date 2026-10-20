@@ -12648,7 +12648,17 @@
           "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bromley-fc/kader/verein/8981",
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 100,
-          "marketValueFxRate": 0.846328
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialClubSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "officialClubShirtNumber": 1,
+          "officialClubSourceDate": null,
+          "officialClubCheckedAt": "2026-10-20",
+          "officialClubSourceKind": "official_current_club_first_team_page",
+          "shirtEvidenceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Dillon Addai",
@@ -12660,7 +12670,17 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialClubSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "officialClubShirtNumber": 23,
+          "officialClubSourceDate": null,
+          "officialClubCheckedAt": "2026-10-20",
+          "officialClubSourceKind": "official_current_club_first_team_page",
+          "shirtEvidenceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Chanse Headman",
@@ -12676,7 +12696,17 @@
           "marketValueSourceUrl": "https://www.transfermarkt.co.uk/fc-bromley/kader/verein/8981",
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 75,
-          "marketValueFxRate": 0.846328
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialClubSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "officialClubShirtNumber": 2,
+          "officialClubSourceDate": null,
+          "officialClubCheckedAt": "2026-10-20",
+          "officialClubSourceKind": "official_current_club_first_team_page",
+          "shirtEvidenceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Richard Taylor",
@@ -12688,7 +12718,17 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialClubSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "officialClubShirtNumber": 3,
+          "officialClubSourceDate": null,
+          "officialClubCheckedAt": "2026-10-20",
+          "officialClubSourceKind": "official_current_club_first_team_page",
+          "shirtEvidenceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Omar Sowunmi",
@@ -12704,7 +12744,17 @@
           "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bromley-fc/kader/verein/8981",
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 500,
-          "marketValueFxRate": 0.846328
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialClubSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "officialClubShirtNumber": 5,
+          "officialClubSourceDate": null,
+          "officialClubCheckedAt": "2026-10-20",
+          "officialClubSourceKind": "official_current_club_first_team_page",
+          "shirtEvidenceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Deon Woodman",
@@ -12716,7 +12766,17 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialClubSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "officialClubShirtNumber": 15,
+          "officialClubSourceDate": null,
+          "officialClubCheckedAt": "2026-10-20",
+          "officialClubSourceKind": "official_current_club_first_team_page",
+          "shirtEvidenceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Jacob Mendy",
@@ -12728,7 +12788,17 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialClubSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "officialClubShirtNumber": 17,
+          "officialClubSourceDate": null,
+          "officialClubCheckedAt": "2026-10-20",
+          "officialClubSourceKind": "official_current_club_first_team_page",
+          "shirtEvidenceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Ashley Charles",
@@ -12740,7 +12810,17 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialClubSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "officialClubShirtNumber": 4,
+          "officialClubSourceDate": null,
+          "officialClubCheckedAt": "2026-10-20",
+          "officialClubSourceKind": "official_current_club_first_team_page",
+          "shirtEvidenceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "George Saville",
@@ -12752,7 +12832,17 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialClubSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "officialClubShirtNumber": 6,
+          "officialClubSourceDate": null,
+          "officialClubCheckedAt": "2026-10-20",
+          "officialClubSourceKind": "official_current_club_first_team_page",
+          "shirtEvidenceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Ethon Archer",
@@ -12764,7 +12854,17 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialClubSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "officialClubShirtNumber": 7,
+          "officialClubSourceDate": null,
+          "officialClubCheckedAt": "2026-10-20",
+          "officialClubSourceKind": "official_current_club_first_team_page",
+          "shirtEvidenceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Ben Thompson",
@@ -12780,7 +12880,17 @@
           "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bromley-fc/kader/verein/8981",
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 200,
-          "marketValueFxRate": 0.846328
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialClubSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "officialClubShirtNumber": 8,
+          "officialClubSourceDate": null,
+          "officialClubCheckedAt": "2026-10-20",
+          "officialClubSourceKind": "official_current_club_first_team_page",
+          "shirtEvidenceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Mitch Pinnock",
@@ -12796,7 +12906,17 @@
           "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bromley-fc/kader/verein/8981",
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 200,
-          "marketValueFxRate": 0.846328
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialClubSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "officialClubShirtNumber": 11,
+          "officialClubSourceDate": null,
+          "officialClubCheckedAt": "2026-10-20",
+          "officialClubSourceKind": "official_current_club_first_team_page",
+          "shirtEvidenceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Michael Cheek",
@@ -12812,7 +12932,17 @@
           "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bromley-fc/kader/verein/8981",
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 100,
-          "marketValueFxRate": 0.846328
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialClubSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "officialClubShirtNumber": 9,
+          "officialClubSourceDate": null,
+          "officialClubCheckedAt": "2026-10-20",
+          "officialClubSourceKind": "official_current_club_first_team_page",
+          "shirtEvidenceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Nicke Kabamba",
@@ -12828,7 +12958,17 @@
           "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bromley-fc/kader/verein/8981",
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 50,
-          "marketValueFxRate": 0.846328
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialClubSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "officialClubShirtNumber": 14,
+          "officialClubSourceDate": null,
+          "officialClubCheckedAt": "2026-10-20",
+          "officialClubSourceKind": "official_current_club_first_team_page",
+          "shirtEvidenceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Corey Whitely",
@@ -12844,7 +12984,17 @@
           "marketValueSourceUrl": "https://www.transfermarkt.co.uk/bromley-fc/kader/verein/8981",
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 50,
-          "marketValueFxRate": 0.846328
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialClubSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "officialClubShirtNumber": 18,
+          "officialClubSourceDate": null,
+          "officialClubCheckedAt": "2026-10-20",
+          "officialClubSourceKind": "official_current_club_first_team_page",
+          "shirtEvidenceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Victor Adeboyejo",
@@ -12856,7 +13006,17 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialClubSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "officialClubShirtNumber": 20,
+          "officialClubSourceDate": null,
+          "officialClubCheckedAt": "2026-10-20",
+          "officialClubSourceKind": "official_current_club_first_team_page",
+          "shirtEvidenceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "shirtCheckedAt": "2026-10-20"
         }
       ]
     },
@@ -17162,8 +17322,16 @@
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 1500,
           "marketValueFxRate": 0.846328,
-          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/wigan-athletic/kader/verein/1071/saison_id/2026",
-          "seasonSquadCheckedAt": "2026-10-09"
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterNumber": 1,
+          "independentSeasonRosterClassification": "independent_season_squad_archive",
+          "shirtEvidenceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Joe Whitworth",
@@ -17175,7 +17343,22 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterNumber": 41,
+          "independentSeasonRosterClassification": "independent_season_squad_archive",
+          "shirtEvidenceUrl": "https://store.wiganathletic.com/shop-by-player/41_whitworth/1299_2627-adult-green-gk-shirt/331_whitworth-41.html",
+          "shirtCheckedAt": "2026-10-20",
+          "officialClubSourceUrl": "https://store.wiganathletic.com/shop-by-player/41_whitworth/1299_2627-adult-green-gk-shirt/331_whitworth-41.html",
+          "officialClubShirtNumber": 41,
+          "officialClubSourceDate": null,
+          "officialClubCheckedAt": "2026-10-20",
+          "officialClubSourceKind": "official_2026_27_club_merchandise"
         },
         {
           "player": "Connor Barrett",
@@ -17192,8 +17375,16 @@
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 400,
           "marketValueFxRate": 0.846328,
-          "seasonSquadSourceUrl": "https://www.transfermarkt.com/wigan-athletic/startseite/verein/1071/saison_id/2026",
-          "seasonSquadCheckedAt": "2026-10-09"
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterNumber": 2,
+          "independentSeasonRosterClassification": "independent_season_squad_archive",
+          "shirtEvidenceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Morgan Fox",
@@ -17210,8 +17401,16 @@
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 325,
           "marketValueFxRate": 0.846328,
-          "seasonSquadSourceUrl": "https://www.transfermarkt.com/wigan-athletic/startseite/verein/1071/saison_id/2026",
-          "seasonSquadCheckedAt": "2026-10-09"
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterNumber": 3,
+          "independentSeasonRosterClassification": "independent_season_squad_archive",
+          "shirtEvidenceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Jeremiah Chilokoa-Mullen",
@@ -17228,8 +17427,16 @@
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 250,
           "marketValueFxRate": 0.846328,
-          "seasonSquadSourceUrl": "https://www.transfermarkt.com/wigan-athletic/startseite/verein/1071/saison_id/2026",
-          "seasonSquadCheckedAt": "2026-10-09"
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterNumber": 4,
+          "independentSeasonRosterClassification": "independent_season_squad_archive",
+          "shirtEvidenceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Finley Burns",
@@ -17241,7 +17448,17 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterNumber": 5,
+          "independentSeasonRosterClassification": "independent_season_squad_archive",
+          "shirtEvidenceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Sam Bolland",
@@ -17253,7 +17470,17 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterNumber": 53,
+          "independentSeasonRosterClassification": "independent_season_squad_archive",
+          "shirtEvidenceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Jensen Weir",
@@ -17270,8 +17497,16 @@
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 450,
           "marketValueFxRate": 0.846328,
-          "seasonSquadSourceUrl": "https://www.transfermarkt.com/wigan-athletic/startseite/verein/1071/saison_id/2026",
-          "seasonSquadCheckedAt": "2026-10-09"
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterNumber": 6,
+          "independentSeasonRosterClassification": "independent_season_squad_archive",
+          "shirtEvidenceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Fraser Murray",
@@ -17288,8 +17523,16 @@
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 600,
           "marketValueFxRate": 0.846328,
-          "seasonSquadSourceUrl": "https://www.transfermarkt.com/wigan-athletic/startseite/verein/1071/saison_id/2026",
-          "seasonSquadCheckedAt": "2026-10-09"
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterNumber": 7,
+          "independentSeasonRosterClassification": "independent_season_squad_archive",
+          "shirtEvidenceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Max Power",
@@ -17306,8 +17549,16 @@
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 200,
           "marketValueFxRate": 0.846328,
-          "seasonSquadSourceUrl": "https://www.transfermarkt.com/wigan-athletic/startseite/verein/1071/saison_id/2026",
-          "seasonSquadCheckedAt": "2026-10-09"
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterNumber": 8,
+          "independentSeasonRosterClassification": "independent_season_squad_archive",
+          "shirtEvidenceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Joe Adams",
@@ -17319,7 +17570,17 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterNumber": 26,
+          "independentSeasonRosterClassification": "independent_season_squad_archive",
+          "shirtEvidenceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Bradley Burrowes",
@@ -17331,7 +17592,22 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterNumber": 27,
+          "independentSeasonRosterClassification": "independent_season_squad_archive",
+          "shirtEvidenceUrl": "https://store.wiganathletic.com/shop-by-player/27_burrowes/1263_2627-adult-away-shirt/241_burrowes-27.html",
+          "shirtCheckedAt": "2026-10-20",
+          "officialClubSourceUrl": "https://store.wiganathletic.com/shop-by-player/27_burrowes/1263_2627-adult-away-shirt/241_burrowes-27.html",
+          "officialClubShirtNumber": 27,
+          "officialClubSourceDate": null,
+          "officialClubCheckedAt": "2026-10-20",
+          "officialClubSourceKind": "official_2026_27_club_merchandise"
         },
         {
           "player": "Sonny Perkins",
@@ -17348,8 +17624,16 @@
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 600,
           "marketValueFxRate": 0.846328,
-          "seasonSquadSourceUrl": "https://www.transfermarkt.com/wigan-athletic/startseite/verein/1071/saison_id/2026",
-          "seasonSquadCheckedAt": "2026-10-09"
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterNumber": 9,
+          "independentSeasonRosterClassification": "independent_season_squad_archive",
+          "shirtEvidenceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Scott Hogan",
@@ -17361,7 +17645,17 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterNumber": 25,
+          "independentSeasonRosterClassification": "independent_season_squad_archive",
+          "shirtEvidenceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Christian Saydee",
@@ -17378,8 +17672,16 @@
           "marketValueCheckedAt": "2026-10-09",
           "marketValueSourceEuroK": 400,
           "marketValueFxRate": 0.846328,
-          "seasonSquadSourceUrl": "https://www.transfermarkt.com/wigan-athletic/startseite/verein/1071/saison_id/2026",
-          "seasonSquadCheckedAt": "2026-10-09"
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterNumber": 38,
+          "independentSeasonRosterClassification": "independent_season_squad_archive",
+          "shirtEvidenceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Adam Moseley",
@@ -17391,7 +17693,17 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "independentSeasonRosterNumber": 24,
+          "independentSeasonRosterClassification": "independent_season_squad_archive",
+          "shirtEvidenceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "shirtCheckedAt": "2026-10-20"
         }
       ]
     },
