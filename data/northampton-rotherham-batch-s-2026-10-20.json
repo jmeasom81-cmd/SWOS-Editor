@@ -1,0 +1,339 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "checkedAt": "2026-10-20",
+  "researchStatus": "source_matched_club_season_and_shirt",
+  "description": "Named player matched on contemporary 2026/27 FootballSquads club roster, corroborated with September EFL squad reporting or current Northampton squad and published August numbers. These are independent, not club-issued, sources. No values estimated.",
+  "clubs": [
+    {
+      "clubId": "northampton-town",
+      "club": "Northampton Town",
+      "division": "League Two",
+      "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+      "sourceName": "FootballSquads 2026/27 club squad list",
+      "sourceClass": "independent_2026_27_season_roster",
+      "corroborationUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+      "corroborationKind": "Dated 6 Aug local squad number announcement; more recent roster when later signings are added",
+      "players": [
+        {
+          "player": "Zach Jeacock",
+          "shirt": 1,
+          "nationality": "England",
+          "swosPosition": 0,
+          "corroboratingSourceUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+          "crossCheckType": "dated_initial_shirt_numbers",
+          "note": null
+        },
+        {
+          "player": "James Dadge",
+          "shirt": 31,
+          "nationality": "England",
+          "swosPosition": 0,
+          "corroboratingSourceUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+          "crossCheckType": "dated_initial_shirt_numbers",
+          "note": null
+        },
+        {
+          "player": "James Maxwell",
+          "shirt": 3,
+          "nationality": "Scotland",
+          "swosPosition": 3,
+          "corroboratingSourceUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+          "crossCheckType": "dated_initial_shirt_numbers",
+          "note": null
+        },
+        {
+          "player": "Jon Guthrie",
+          "shirt": 5,
+          "nationality": "England",
+          "swosPosition": 3,
+          "corroboratingSourceUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+          "crossCheckType": "dated_initial_shirt_numbers",
+          "note": null
+        },
+        {
+          "player": "Elliott Moore",
+          "shirt": 6,
+          "nationality": "England",
+          "swosPosition": 3,
+          "corroboratingSourceUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+          "crossCheckType": "dated_initial_shirt_numbers",
+          "note": null
+        },
+        {
+          "player": "Conor McCarthy",
+          "shirt": 15,
+          "nationality": "Republic of Ireland",
+          "swosPosition": 3,
+          "corroboratingSourceUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+          "crossCheckType": "dated_initial_shirt_numbers",
+          "note": null
+        },
+        {
+          "player": "Joe Wormleighton",
+          "shirt": 16,
+          "nationality": "England",
+          "swosPosition": 3,
+          "corroboratingSourceUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+          "crossCheckType": "dated_initial_shirt_numbers",
+          "note": null
+        },
+        {
+          "player": "Joseph O'Brien-Whitmarsh",
+          "shirt": 4,
+          "nationality": "Republic of Ireland",
+          "swosPosition": 6,
+          "corroboratingSourceUrl": "https://www.livescore.com/en/football/team/northampton/2998/squad/",
+          "crossCheckType": "current_squad_list",
+          "note": "Listed as Joe O'Brien-Whitmarsh in LiveScore; Republic of Ireland already correct in SWOS"
+        },
+        {
+          "player": "Lee Evans",
+          "shirt": 8,
+          "nationality": "Wales",
+          "swosPosition": 6,
+          "corroboratingSourceUrl": "https://www.livescore.com/en/football/team/northampton/2998/squad/",
+          "crossCheckType": "current_squad_list",
+          "note": null
+        },
+        {
+          "player": "Tyrese Fornah",
+          "shirt": 14,
+          "nationality": "Sierra Leone",
+          "swosPosition": 6,
+          "corroboratingSourceUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+          "crossCheckType": "dated_initial_shirt_numbers",
+          "note": "Listed as Sierra Leone in LiveScore; already correct in SWOS"
+        },
+        {
+          "player": "Owen Dale",
+          "shirt": 19,
+          "nationality": "England",
+          "swosPosition": 6,
+          "corroboratingSourceUrl": "https://www.livescore.com/en/football/team/northampton/2998/squad/",
+          "crossCheckType": "current_squad_list",
+          "note": null
+        },
+        {
+          "player": "Jack Perkins",
+          "shirt": 21,
+          "nationality": "England",
+          "swosPosition": 6,
+          "corroboratingSourceUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+          "crossCheckType": "dated_initial_shirt_numbers",
+          "note": null
+        },
+        {
+          "player": "Sam Hoskins",
+          "shirt": 7,
+          "nationality": "England",
+          "swosPosition": 7,
+          "corroboratingSourceUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+          "crossCheckType": "dated_initial_shirt_numbers",
+          "note": null
+        },
+        {
+          "player": "Matty Warhurst",
+          "shirt": 9,
+          "nationality": "England",
+          "swosPosition": 7,
+          "corroboratingSourceUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+          "crossCheckType": "dated_initial_shirt_numbers",
+          "note": null
+        },
+        {
+          "player": "Elliott List",
+          "shirt": 10,
+          "nationality": "England",
+          "swosPosition": 7,
+          "corroboratingSourceUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+          "crossCheckType": "dated_initial_shirt_numbers",
+          "note": null
+        },
+        {
+          "player": "Kamarai Simon-Swyer",
+          "shirt": 11,
+          "nationality": "England",
+          "swosPosition": 7,
+          "corroboratingSourceUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+          "crossCheckType": "dated_initial_shirt_numbers",
+          "note": null
+        }
+      ]
+    },
+    {
+      "clubId": "rotherham-united",
+      "club": "Rotherham United",
+      "division": "League Two",
+      "sourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+      "sourceName": "FootballSquads 2026/27 club squad list",
+      "sourceClass": "independent_2026_27_season_roster",
+      "corroborationUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+      "corroborationKind": "8 Sep local reporting of submitted EFL list; goalkeeper exemption and U21 players identified",
+      "players": [
+        {
+          "player": "Ted Cann",
+          "shirt": 1,
+          "nationality": "England",
+          "swosPosition": 0,
+          "corroboratingSourceUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "crossCheckType": "reported_efl_registration",
+          "note": null
+        },
+        {
+          "player": "Julian Eyestone",
+          "shirt": 13,
+          "nationality": "U.S.A.",
+          "swosPosition": 0,
+          "corroboratingSourceUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "crossCheckType": "reported_efl_registration",
+          "note": null
+        },
+        {
+          "player": "Joe Rafferty",
+          "shirt": 2,
+          "nationality": "Republic of Ireland",
+          "swosPosition": 1,
+          "corroboratingSourceUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "crossCheckType": "reported_efl_registration",
+          "note": null
+        },
+        {
+          "player": "Ewan Otoo",
+          "shirt": 3,
+          "nationality": "Scotland",
+          "swosPosition": 3,
+          "corroboratingSourceUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "crossCheckType": "reported_efl_registration",
+          "note": null
+        },
+        {
+          "player": "Kieran Ngwenya",
+          "shirt": 5,
+          "nationality": "Scotland",
+          "swosPosition": 2,
+          "corroboratingSourceUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "crossCheckType": "reported_efl_registration",
+          "note": null
+        },
+        {
+          "player": "Denzel Hall",
+          "shirt": 12,
+          "nationality": "Holland",
+          "swosPosition": 3,
+          "corroboratingSourceUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "crossCheckType": "reported_efl_registration",
+          "note": null
+        },
+        {
+          "player": "Emmanuel Adegboyega",
+          "shirt": 16,
+          "nationality": "Republic of Ireland",
+          "swosPosition": 3,
+          "corroboratingSourceUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "crossCheckType": "reported_efl_registration",
+          "note": null
+        },
+        {
+          "player": "Josh Austerfield",
+          "shirt": 4,
+          "nationality": "England",
+          "swosPosition": 6,
+          "corroboratingSourceUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "crossCheckType": "reported_efl_registration",
+          "note": null
+        },
+        {
+          "player": "Ossama Ashley",
+          "shirt": 6,
+          "nationality": "England",
+          "swosPosition": 6,
+          "corroboratingSourceUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "crossCheckType": "reported_efl_registration",
+          "note": null
+        },
+        {
+          "player": "Kian Spence",
+          "shirt": 8,
+          "nationality": "England",
+          "swosPosition": 6,
+          "corroboratingSourceUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "crossCheckType": "reported_efl_registration",
+          "note": null
+        },
+        {
+          "player": "Jamie Jellis",
+          "shirt": 22,
+          "nationality": "England",
+          "swosPosition": 6,
+          "corroboratingSourceUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "crossCheckType": "reported_efl_registration",
+          "note": null
+        },
+        {
+          "player": "Aaron Nemane",
+          "shirt": 23,
+          "nationality": "France",
+          "swosPosition": 4,
+          "corroboratingSourceUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "crossCheckType": "reported_efl_registration",
+          "note": null
+        },
+        {
+          "player": "Fabio Tavares",
+          "shirt": 7,
+          "nationality": "England",
+          "swosPosition": 7,
+          "corroboratingSourceUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "crossCheckType": "reported_efl_registration",
+          "note": null
+        },
+        {
+          "player": "Tom Bradshaw",
+          "shirt": 9,
+          "nationality": "Wales",
+          "swosPosition": 7,
+          "corroboratingSourceUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "crossCheckType": "reported_efl_registration",
+          "note": null
+        },
+        {
+          "player": "Paul Mullin",
+          "shirt": 10,
+          "nationality": "England",
+          "swosPosition": 7,
+          "corroboratingSourceUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "crossCheckType": "reported_efl_registration",
+          "note": null
+        },
+        {
+          "player": "Klaidi Lolos",
+          "shirt": 20,
+          "nationality": "Greece",
+          "swosPosition": 7,
+          "corroboratingSourceUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "crossCheckType": "reported_efl_registration",
+          "note": "FootballSquads displays #20, Sporx displays #25; keep SWOS #20 while checking a dated official match lineup"
+        }
+      ]
+    }
+  ],
+  "discrepancyFlags": [
+    {
+      "clubId": "rotherham-united",
+      "player": "Klaidi Lolos",
+      "field": "shirt",
+      "stored": 20,
+      "sourceNumber": 25,
+      "sourceUrl": "https://m.sporx.com/rotherham-united-mac-kadrosu",
+      "conflictingSourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+      "note": "2026/27 FootballSquads lists Lolos #20, while Sporx lists #25. Do not overwrite or claim confirmed official number before finding club-issued shirt evidence."
+    }
+  ],
+  "safeguards": [
+    "No transfer fee or market value inferred from presence on roster",
+    "Nationality and SWOS position fields preserved; already sourced Republic of Ireland and Sierra Leone for Northampton",
+    "Season roster evidence is third-party and clearly separated from official club source data",
+    "No binary TEAM or CAR file edits"
+  ]
+}
