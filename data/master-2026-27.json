@@ -13738,12 +13738,19 @@
           "group": "Defender",
           "position": 2,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 4.232,
           "minutes": null,
           "goals": null,
           "assists": null,
           "shirtEvidenceUrl": "https://www.lcfc.com/media-article/leicester-city-lcfc-men-league-one-squad-numbers",
-          "shirtCheckedAt": "2026-10-09"
+          "shirtCheckedAt": "2026-10-09",
+          "marketValueSourceEuroK": 5000,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/leicester-city/kader/verein/1003/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-20",
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/leicester-city/kader/verein/1003/saison_id/2026",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Transfermarkt 2026/27 verified name/club"
         },
         {
           "player": "John Lundstram",
@@ -19631,7 +19638,10 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/exeter-city/kader/verein/6699/saison_id/2026",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Transfermarkt 2026/27 squad, valuation not published"
         },
         {
           "player": "Lakyle Samuel",
@@ -19721,7 +19731,10 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/exeter-city/kader/verein/6699/saison_id/2026",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Transfermarkt 2026/27 squad, valuation not published"
         },
         {
           "player": "Taylor Perry",
@@ -20513,7 +20526,10 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/grimsby-town/kader/verein/1034/saison_id/2026",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Transfermarkt 2026/27 squad, valuation not published"
         },
         {
           "player": "Kieran Green",
@@ -20582,10 +20598,17 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.212,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceEuroK": 250,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/geza-david-turi/profil/spieler/692906",
+          "marketValueCheckedAt": "2026-10-20",
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/geza-david-turi/profil/spieler/692906",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Transfermarkt 2026/27 verified name/club"
         },
         {
           "player": "Iwan Morgan",
@@ -20794,7 +20817,10 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/newport-county/kader/verein/3716/saison_id/2026",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Transfermarkt 2026/27 squad, valuation not published"
         },
         {
           "player": "Matt Smith",
@@ -20803,10 +20829,17 @@
           "group": "Midfielder",
           "position": 6,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.127,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceEuroK": 150,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/newport-county/kader/verein/3716/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-20",
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/newport-county/kader/verein/3716/saison_id/2026",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Transfermarkt 2026/27 verified name/club"
         },
         {
           "player": "Harrison Biggins",
@@ -20870,10 +20903,17 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.085,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceEuroK": 100,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/newport-county/kader/verein/3716/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-20",
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/newport-county/kader/verein/3716/saison_id/2026",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Transfermarkt 2026/27 verified name/club"
         },
         {
           "player": "Ged Garner",
@@ -20882,10 +20922,17 @@
           "group": "Forward",
           "position": 7,
           "age": null,
-          "marketValueM": null,
+          "marketValueM": 0.085,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "marketValueSourceEuroK": 100,
+          "marketValueSourceUrl": "https://www.transfermarkt.co.uk/newport-county/kader/verein/3716/saison_id/2026",
+          "marketValueCheckedAt": "2026-10-20",
+          "marketValueFxRate": 0.846328,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/newport-county/kader/verein/3716/saison_id/2026",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Transfermarkt 2026/27 verified name/club"
         },
         {
           "player": "Christian Doidge",
@@ -20897,7 +20944,10 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/newport-county/kader/verein/3716/saison_id/2026",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "Transfermarkt 2026/27 squad, valuation not published"
         }
       ]
     },
