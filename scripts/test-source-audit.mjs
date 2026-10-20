@@ -38,7 +38,7 @@ assert.equal(data.players.filter(p=>p.reviewStatus==='membership_check').length,
 assert.equal(data.players.filter(p=>p.reviewStatus==='membership_source_matched').length,2);
 assert.equal(data.summary.urgent,0);
 assert.equal(data.summary.ready,1234);
-assert.equal(data.summary.squadLinked,691);
+assert.equal(data.summary.squadLinked,706);
 assert.ok(data.players.filter(p=>p.researchPriority==='REVIEWED').every(p=>p.reviewStatus==='value_unpublished'&&p.marketValueM===null));
 assert.ok(page.includes('Next 15 clubs to research'));
 assert.ok(page.includes('SWOS_Research_Priority_2026-27.csv'));
