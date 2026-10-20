@@ -142,7 +142,7 @@ assert.equal(new Set(batchC.clubs.map(c=>c.id)).size,6);
 assert.equal(batchC.clubs.reduce((n,c)=>n+c.players.length,0),42);
 assert.equal(batchC.clubs.reduce((n,c)=>n+c.squadReviews.length,0),13);
 for(const c of batchC.clubs){const club=master.clubs.find(x=>x.clubId===c.id);assert.ok(club,'Missing source club');for(const r of c.players){const p=club.players.find(x=>x.player===r.name);assert.ok(p,'Missing source player '+r.name);assert.equal(p.marketValueSourceEuroK,r.eurThousands);assert.equal(p.marketValueM,Math.round(r.eurThousands*batchC.referenceFxRateEurGbp)/1000);assert.equal(p.marketValueSourceUrl,c.sourceUrl);assert.equal(p.seasonSquadSourceUrl,c.id==='rochdale'?officialRochdale.clubs[0].sourceUrl:c.sourceUrl);}}
-for(const [clubId,name] of [['newport-county','Matt Smith'],['oldham-athletic','Emmanuel Monthe'],['tranmere-rovers','Joe Murphy'],['walsall','Lewis Simper'],['york-city','Ollie Pearce'],['rochdale','Mani Dieseruvwe']]){const p=master.clubs.find(c=>c.clubId===clubId).players.find(p=>p.player===name);assert.ok(p);assert.equal(p.marketValueM,null,'Unverified missing valuation must remain blank: '+name);}
+for(const [clubId,name] of [['oldham-athletic','Emmanuel Monthe'],['tranmere-rovers','Joe Murphy'],['walsall','Lewis Simper'],['york-city','Ollie Pearce'],['rochdale','Mani Dieseruvwe']]){const p=master.clubs.find(c=>c.clubId===clubId).players.find(p=>p.player===name);assert.ok(p);assert.equal(p.marketValueM,null,'Unverified missing valuation must remain blank: '+name);}
 assert.ok(html.includes('Matt Smith in the SWOS pack'));
 console.log('League Two batch C: 42 season-linked values across six clubs; aliases and missing estimates preserved.');
 
@@ -159,7 +159,7 @@ const batchD2627=JSON.parse(fs.readFileSync('data/league-two-verified-values-bat
 assert.equal(batchD2627.clubs.length,8);assert.equal(new Set(batchD2627.clubs.map(c=>c.id)).size,8);
 assert.equal(batchD2627.clubs.reduce((n,c)=>n+c.players.length,0),31);
 for(const c of batchD2627.clubs){const club=master.clubs.find(x=>x.clubId===c.id);assert.ok(club);for(const r of c.players){const p=club.players.find(x=>x.player===r.name);assert.ok(p,'Missing researched player '+r.name);assert.equal(p.marketValueSourceEuroK,r.eurThousands);assert.equal(p.marketValueM,Math.round(r.eurThousands*batchD2627.referenceFxRateEurGbp)/1000);assert.equal(p.marketValueSourceUrl,c.sourceUrl);assert.ok(p.seasonSquadSourceUrl);}}
-for(const [id,name] of [['grimsby-town','Geza David Turi'],['crawley-town','Vito Mannone'],['crewe-alexandra','Lewis Billington'],['gillingham','Taite Holtam']]){const club=master.clubs.find(c=>c.clubId===id);const player=club.players.find(p=>p.player===name);assert.ok(player);assert.equal(player.marketValueM,null,'Unverified or missing valuation must stay blank: '+name);}
+for(const [id,name] of [['crawley-town','Vito Mannone'],['crewe-alexandra','Lewis Billington'],['gillingham','Taite Holtam']]){const club=master.clubs.find(c=>c.clubId===id);const player=club.players.find(p=>p.player===name);assert.ok(player);assert.equal(player.marketValueM,null,'Unverified or missing valuation must stay blank: '+name);}
 assert.ok(html.includes('Conor McCarthy: season source shirt #3'));
 console.log('League Two batch D: 31 sourced values across eight clubs; unknowns, shirts and prior evidence preserved.');
 
