@@ -89,5 +89,5 @@ for(const x of clubBatch.players){
 }
 assert.ok(page.includes('Verified identity corrections'));
 assert.ok(page.includes('Official club roster or lineup verified'));
-assert.ok(csv.includes('Official club evidence URL'));
+assert.ok(csv.includes('Official club squad evidence URL'));
 console.log('Leicester official club audit: 16/16 shirt and squad evidence sources; Tommy Watson #23 corrected.');
