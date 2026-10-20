@@ -110,6 +110,8 @@ for (const club of baseline.clubs) {
 const valuationO=JSON.parse(fs.readFileSync('data/valuation-verification-batch-o-2026-10-20.json','utf8'));
 if(valuationO.season!==baseline.season)throw new Error('Batch O season mismatch');
 // Flag integrity risks without silently rewriting any verified game record.
+const leagueTwoS=JSON.parse(fs.readFileSync('data/league-two-squad-verification-batch-s-2026-10-20.json','utf8'));
+if(leagueTwoS.season!==baseline.season||leagueTwoS.clubs.length!==5)throw new Error('League Two batch S season/club mismatch');
 const integrity = [];
 const clubKeys = new Set();
 const byPlayerName = new Map();
@@ -138,6 +140,15 @@ for (const issue of valuationO.discrepancyFlags){
  const player=club?.players.find(p=>p.player===issue.player);
  if(!player||player[issue.field]!==issue.stored)throw new Error('Batch O shirt difference drift: '+issue.player);
  integrity.push(['SOURCE SHIRT MISMATCH',club.division,club.club,issue.player,issue.note,'Verify official 2026/27 kit/squad number; do not auto-apply '+issue.sourceValue]);
+}
+for(const c of leagueTwoS.clubs){
+ const local=baseline.clubs.find(x=>x.clubId===c.clubId);
+ if(!local)throw new Error('Batch S unknown club '+c.clubId);
+ for(const flag of c.flags){
+  const p=local.players.find(x=>x.player===flag.player);
+  if(!p||p.shirt!==flag.shirt)throw new Error('Batch S missing flagged player '+flag.player);
+  integrity.push(['UNCONFIRMED 26/27 MEMBERSHIP',local.division,local.club,flag.player,'Not found in checked season squad snapshot; absence alone does not establish departure. '+flag.sourceUrl,'Seek newer club-issued confirmation before replacing or transferring']);
+ }
 }
 for (const duplicate of byPlayerName.values()) {
   if (duplicate.length <= 1) continue;
@@ -234,6 +245,7 @@ const sheets = [
   ['Season roster checks',[['Division','Club','Player','Shirt number','Research URL','Checked','Research publisher','Confidence class','Meaning'],...independentSeasonRosterRows],[21,30,30,18,82,18,43,43,52],{filter:true}],
   ['Official club checks',[['Division','Club','Player','Official shirt #','Club evidence URL','Source published','Checked','Evidence type','Status'],...officialClubRows],[20,28,30,18,80,21,21,25,37],{filter:true}],
   ['Clubs',[clubHeaders,...clubData],[20,30,11,14,22,19,22,19,19,24],{filter:true}],
+  ['Membership review', [['Division','Club','Player','Current researched shirt','Evidence checked','Checked at','Review status','Next step'],...leagueTwoS.clubs.flatMap(c=>c.flags.map(f=>[baseline.clubs.find(x=>x.clubId===c.clubId)?.division,c.club,f.player,f.shirt,f.sourceUrl,f.checkedAt,f.reviewStatus,'Confirm with official club listing before modifying SWOS selection']))]],[20,29,29,22,78,19,41,61],{filter:true}],
   ['Quality checks', [['Issue','Division','Club','Player','What needs checking','Next action'],...integrity],[23,20,29,30,80,55],{filter:true}],
   ['Squad reviews', [['Status','Division','Club','Player / issue','2026/27 source URL','Checked'],...squadReviewRows],[16,20,30,80,65,17],{filter:true}],
   ['Kit colours', [['Division','Club','Club ID','Reference status','Official 2026/27 shirt','SWOS pattern code','SWOS pattern','Shirt primary code','Primary palette colour','Shirt second code','Second palette colour','Shorts code','Shorts colour','Socks code','Socks colour','Palette approximate','Kit evidence URL','Design cross-check URL','Checked','Limitations / follow-up'],...kitRows], [20,28,25,22,52,19,21,19,22,19,22,16,21,16,21,19,72,72,17,90], {missingColumns:[5,7,9,11,13],filter:true}],
@@ -258,6 +270,7 @@ const sheets = [
    ['Official club checks','Individual dated club announcements or match lineups verify the selected players and shirt numbers. The Leicester set of 16 is checked; the August list is superseded where newer match lineups identify later signings. A verification is point-in-time, not a permanent guarantee.'],
    ['Independent match sheets','Dated third-party lineup evidence, not official club-issued data. Barnsley has 16 selected players matched to numbered September/October lineups. This is point-in-time squad evidence, not market values.'],
    ['Bromley and Wigan checks','Bromley 16/16 selected players linked to the official first-team page; Wigan 16/16 linked to a separately classified independently maintained 2026/27 season archive. Wigan 2 extra official 26/27 shirt-store cross checks. No valuations changed.'],
+   ['League Two batch S','York City, Crawley Town, Northampton Town and Rotherham United 16/16 matched against 2026/27 squad sources; Exeter 11 matched plus 5 missing from checked squad snapshot, held in Membership review. No values or game career files changed.'],
    ['Season roster checks','Independent season-wide roster pages are not official football club sources. Separate sheet, source attribution and snapshot date prevent them being mistaken for club announcements.'],
    ['Leicester Watson correction','Tom Watson #20 (old research) corrected to Tommy Watson #23, as officially shown in October match lineups. Harry Howell wears #20. All player valuations untouched.'],
    ['Age / goals / assists','Not included because SWOS does not need them in the current priority pass'],
