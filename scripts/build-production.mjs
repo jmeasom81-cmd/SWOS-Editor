@@ -13,7 +13,9 @@ const steps = [
   "scripts/build-install-rehearsal.mjs",
   "scripts/test-install-rehearsal.mjs",
   "scripts/build-gameplay-rebuild.mjs",
-  "scripts/test-gameplay-rebuild.mjs"
+  "scripts/test-gameplay-rebuild.mjs",
+  "scripts/build-test-pack.mjs",
+  "scripts/test-test-pack.mjs"
 ];
 for (const file of steps) {
  console.log('[SWOS build] '+file);
