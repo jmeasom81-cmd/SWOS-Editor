@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "checkedAt": "2026-10-20",
+  "purpose": "Source-checked core fields and membership evidence. No transfer fees inferred, no career or TEAM.* files modified.",
+  "verifications": [
+    {
+      "clubId": "west-bromwich-albion",
+      "player": "Jimmy Morgan",
+      "aliases": [
+        "Jimmy-Jay Morgan",
+        "Jimmy Jay Morgan"
+      ],
+      "shirt": 11,
+      "shirtSource": "https://www.goal.com/en-gb/team/west-bromwich-albion/squad/d1lhefp805y0rcbjqkpu4fq0n",
+      "otherEvidence": "https://fbref.com/en/players/f9d409a1/matchlogs/2026-2027/Jimmy-Morgan-Match-Logs",
+      "finding": "Goal 2026/27 squad shows J Morgan #11 and FBref identifies Jimmy Morgan as Jimmy Jay Morgan for West Brom; preserve alias and existing market value."
+    },
+    {
+      "clubId": "west-bromwich-albion",
+      "player": "Mikey Johnston",
+      "shirt": 10,
+      "shirtSource": "https://www.goal.com/en-gb/team/west-bromwich-albion/squad/d1lhefp805y0rcbjqkpu4fq0n",
+      "otherEvidence": "https://en.wikipedia.org/wiki/2026%E2%80%9327_West_Bromwich_Albion_F.C._season",
+      "finding": "Goal current-season squad lists Mikey Johnston #10, resolving collision with Jimmy Morgan #11. 2025/26 site lists #11; do not reuse last season's shirt."
+    },
+    {
+      "clubId": "cambridge-united",
+      "player": "Gabriel Breeze",
+      "shirt": 13,
+      "squadSource": "https://cdn.sporx.com/cambridge-united-mac-kadrosu",
+      "otherEvidence": "https://cambridgeunitednews.co.uk/squad",
+      "finding": "2026/27 Cambridge roster lists Gabriel Breeze as goalkeeper #13. Membership source-matched, not independently certified by official club."
+    },
+    {
+      "clubId": "cambridge-united",
+      "player": "Callum Perry",
+      "shirt": 3,
+      "squadSource": "https://cdn.sporx.com/cambridge-united-mac-kadrosu",
+      "otherEvidence": "https://www.goal.com/en-gb/team/cambridge-u/squad/dmz37633qbsvl7gncq5s51yjw",
+      "finding": "2026/27 Cambridge roster and Goal list Callum Perry #3. Membership source-matched, not independently certified by official club."
+    }
+  ],
+  "excludedChanges": [
+    "Cambridge numerical player valuations remain blank pending a published individual estimate.",
+    "West Brom player selection still requires broader first-team membership audit; absent players are not removed.",
+    "No game file is automatically edited."
+  ]
+}
