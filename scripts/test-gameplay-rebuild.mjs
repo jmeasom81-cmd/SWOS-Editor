@@ -55,6 +55,8 @@ const res=ctx.applyEnglandGameplayRebuild(preview);
 assert.equal(res.skillsRebuilt,1472);
 assert.equal(res.oldPlayerSkillsReused,0);
 assert.equal(res.oldPlayerValuesReused,0);
+assert.ok(Number.isInteger(preview.changedBytes)&&preview.changedBytes>0);
+assert.equal(preview.changedBytes,preview.previewBytes.reduce((n,v,i)=>n+(v!==original[i]?1:0),0),'Export diff guard needs the FINAL number of changed bytes');
 assert.equal(res.sourceValueCount,1234);
 assert.equal(res.placeholderValueCount,238);
 assert.equal(res.players.length,1472);
