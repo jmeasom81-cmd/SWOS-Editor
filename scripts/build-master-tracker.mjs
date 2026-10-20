@@ -68,7 +68,7 @@ for (const club of baseline.clubs) {
     return {
       player, shirt: field('shirt'), nationality: field('nationality'), nationalityEvidenceUrl: field('nationalityEvidenceUrl'), nationalityCheckedAt: field('nationalityCheckedAt'),
       group: field('group'), position: field('position'), age: field('age'),
-      marketValueM: field('marketValueM'), officialPLRosterUrl: field('officialPLRosterUrl'), officialPLRosterCheckedAt: field('officialPLRosterCheckedAt'), officialPLSquadNumber: field('officialPLSquadNumber'), marketValueSourceUrl: field('marketValueSourceUrl'), marketValueCheckedAt: field('marketValueCheckedAt'), marketValueSourceEuroK: field('marketValueSourceEuroK'), marketValueFxRate: field('marketValueFxRate'), seasonSquadSourceUrl: field('seasonSquadSourceUrl'), seasonSquadCheckedAt: field('seasonSquadCheckedAt'), seasonSquadSourceName: field('seasonSquadSourceName'), shirtEvidenceUrl: field('shirtEvidenceUrl'), shirtCheckedAt: field('shirtCheckedAt'), minutes: field('minutes'),
+      marketValueM: field('marketValueM'), officialPLRosterUrl: field('officialPLRosterUrl'), officialPLRosterCheckedAt: field('officialPLRosterCheckedAt'), officialPLSquadNumber: field('officialPLSquadNumber'), officialClubSourceUrl: field('officialClubSourceUrl'), officialClubShirtNumber: field('officialClubShirtNumber'), officialClubSourceDate: field('officialClubSourceDate'), officialClubCheckedAt: field('officialClubCheckedAt'), officialClubSourceKind: field('officialClubSourceKind'), marketValueSourceUrl: field('marketValueSourceUrl'), marketValueCheckedAt: field('marketValueCheckedAt'), marketValueSourceEuroK: field('marketValueSourceEuroK'), marketValueFxRate: field('marketValueFxRate'), seasonSquadSourceUrl: field('seasonSquadSourceUrl'), seasonSquadCheckedAt: field('seasonSquadCheckedAt'), seasonSquadSourceName: field('seasonSquadSourceName'), shirtEvidenceUrl: field('shirtEvidenceUrl'), shirtCheckedAt: field('shirtCheckedAt'), minutes: field('minutes'),
       goals: field('goals'), assists: field('assists'),
       ...(previous.identitySource ? {identitySource: previous.identitySource} : {})
     };
@@ -100,7 +100,7 @@ for (const club of baseline.clubs) {
     const absent = missing(p);
     for (const k of absent) gaps[k]++;
     if (!absent.length) complete++;
-    rowData.push([club.division,club.club,club.clubId,p.player,p.shirt,p.nationality,p.group,p.position === null ? null : posNames[p.position] || 'Unknown',p.position,p.marketValueM,absent.length ? 'NEEDS RESEARCH':'READY',absent.map(k => k === 'marketValueM' ? 'value' : k).join(', '),club.source,club.snapshot,p.marketValueSourceUrl,p.marketValueCheckedAt,p.marketValueSourceEuroK,p.marketValueFxRate,p.shirtEvidenceUrl,p.shirtCheckedAt,p.seasonSquadSourceUrl?'SOURCE MATCHED':'NOT INDIVIDUALLY MATCHED',p.seasonSquadSourceUrl,p.seasonSquadCheckedAt,p.nationalityEvidenceUrl,p.nationalityCheckedAt,p.officialPLRosterUrl,p.officialPLSquadNumber,p.officialPLRosterCheckedAt]);
+    rowData.push([club.division,club.club,club.clubId,p.player,p.shirt,p.nationality,p.group,p.position === null ? null : posNames[p.position] || 'Unknown',p.position,p.marketValueM,absent.length ? 'NEEDS RESEARCH':'READY',absent.map(k => k === 'marketValueM' ? 'value' : k).join(', '),club.source,club.snapshot,p.marketValueSourceUrl,p.marketValueCheckedAt,p.marketValueSourceEuroK,p.marketValueFxRate,p.shirtEvidenceUrl,p.shirtCheckedAt,p.seasonSquadSourceUrl?'SOURCE MATCHED':'NOT INDIVIDUALLY MATCHED',p.seasonSquadSourceUrl,p.seasonSquadCheckedAt,p.nationalityEvidenceUrl,p.nationalityCheckedAt,p.officialPLRosterUrl,p.officialPLSquadNumber,p.officialPLRosterCheckedAt,p.officialClubSourceUrl,p.officialClubShirtNumber,p.officialClubSourceDate,p.officialClubCheckedAt,p.officialClubSourceKind]);
   }
   clubData.push([club.division,club.club,club.players.length,complete,club.players.length-complete,gaps.shirt,gaps.nationality,gaps.position,gaps.marketValueM,kitById.has(club.clubId)?(kitById.get(club.clubId).fullComponentsSourced?'HOME KIT DOCUMENTED · SWOS APPROX':'HOME SHIRT SOURCED · SWOS APPROX'):'NOT VERIFIED']);
   const d = divisionStats[club.division] ||= {clubs:0,players:0,ready:0,essentialGaps:0};
@@ -177,7 +177,7 @@ for (const reviewBatchPath of reviewBatchPaths) {
     }
   }
 }
-const headers = ['Division','Club','Club ID','Player','Shirt #','Nationality','Position group','SWOS position','Position code','Value (£m)','SWOS status','Missing essentials','Research source','Research snapshot','Value evidence URL','Value checked','Reference EUR k','EUR-GBP rate','Shirt evidence URL','Shirt checked','26/27 squad match','Squad source URL','Squad checked','Nationality evidence URL','Nationality checked','Official PL 2026/27 evidence','Official PL shirt #','Official PL checked'];
+const headers = ['Division','Club','Club ID','Player','Shirt #','Nationality','Position group','SWOS position','Position code','Value (£m)','SWOS status','Missing essentials','Research source','Research snapshot','Value evidence URL','Value checked','Reference EUR k','EUR-GBP rate','Shirt evidence URL','Shirt checked','26/27 squad match','Squad source URL','Squad checked','Nationality evidence URL','Nationality checked','Official PL 2026/27 evidence','Official PL shirt #','Official PL checked','Official club match/squad URL','Official club shirt #','Official club source date','Official club checked','Official club source type'];
 const clubHeaders = ['Division','Club','Players','SWOS ready','Players needing work','Missing shirts','Missing nationality','Missing position','Missing value','Kit colours checked'];
 const csvCell = v => { const s = String(v ?? ''); return /[",\r\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
 fs.writeFileSync(path.join(OUTPUT, 'SWOS_Master_2026-27.csv'),
@@ -225,8 +225,10 @@ const kitRows = baseline.clubs.map(club => {
   return [club.division,club.club,club.clubId,k?(k.fullComponentsSourced?'HOME REFERENCE':'SHIRT REFERENCE'):'NOT RESEARCHED',k?.description||'',h?.type??null,h?kitResearch.swosPatterns[h.type].name:'',h?.shirt1??null,h?label(h.shirt1):'',h?.shirt2??null,h?label(h.shirt2):'',h?.shorts??null,h?label(h.shorts):'',h?.socks??null,h?label(h.socks):'',k?.paletteApproximation?'YES':'',k?.sourceUrl||'',k?.secondarySourceUrl||'',k?.checkedAt||'',k?.note||''];
 });
 
+const officialClubRows=baseline.clubs.flatMap(c=>c.players.filter(p=>p.officialClubSourceUrl).map(p=>[c.division,c.club,p.player,p.officialClubShirtNumber,p.officialClubSourceUrl,p.officialClubSourceDate,p.officialClubCheckedAt,p.officialClubSourceKind,'MATCHED TO OFFICIAL CLUB SOURCE']));
 const sheets = [
-  ['Players',[headers,...rowData],[20,27,23,27,10,18,17,16,14,15,19,28,52,18,60,16,16,16,60,16,24,62,17,65,18,65,18,17],{missingColumns:[4,5,7,8,9],statusColumn:10,filter:true}],
+  ['Players',[headers,...rowData],[20,27,23,27,10,18,17,16,14,15,19,28,52,18,60,16,16,16,60,16,24,62,17,65,18,65,18,17,70,18,17,17,22],{missingColumns:[4,5,7,8,9],statusColumn:10,filter:true}],
+  ['Official club checks',[['Division','Club','Player','Official shirt #','Club evidence URL','Source published','Checked','Evidence type','Status'],...officialClubRows],[20,28,30,18,80,21,21,25,37],{filter:true}],
   ['Clubs',[clubHeaders,...clubData],[20,30,11,14,22,19,22,19,19,24],{filter:true}],
   ['Quality checks', [['Issue','Division','Club','Player','What needs checking','Next action'],...integrity],[23,20,29,30,80,55],{filter:true}],
   ['Squad reviews', [['Status','Division','Club','Player / issue','2026/27 source URL','Checked'],...squadReviewRows],[16,20,30,80,65,17],{filter:true}],
@@ -249,6 +251,8 @@ const sheets = [
    ['Quality checks','This tab flags duplicate shirt numbers, player-name collisions, invalid position or value entries. Name collisions do not automatically imply a player belongs to two clubs.'],
    ['Nationality evidence','The Players sheet records a primary URL and checked date for newly verified nationality fields; do not treat absent evidence as proof.'],
    ['Official PL 2026/27 evidence','Premier League club, player and shirt number matched to the 22 Sep 2026 official list for all 320 selected PL players; does not independently verify valuation or skills.'],
+   ['Official club checks','Individual dated club announcements or match lineups verify the selected players and shirt numbers. The Leicester set of 16 is checked; the August list is superseded where newer match lineups identify later signings. A verification is point-in-time, not a permanent guarantee.'],
+   ['Leicester Watson correction','Tom Watson #20 (old research) corrected to Tommy Watson #23, as officially shown in October match lineups. Harry Howell wears #20. All player valuations untouched.'],
    ['Age / goals / assists','Not included because SWOS does not need them in the current priority pass'],
    ['Source date','Each player inherits their club source/snapshot; generating the workbook does not reverify football facts'],
    ['Source of truth','Generated automatically from the same embedded research packs used by SWOS Studio'],
