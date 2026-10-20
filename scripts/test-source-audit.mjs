@@ -38,7 +38,7 @@ assert.equal(data.players.filter(p=>p.reviewStatus==='membership_check').length,
 assert.equal(data.players.filter(p=>p.reviewStatus==='membership_source_matched').length,2);
 assert.equal(data.summary.urgent,0);
 assert.equal(data.summary.ready,1234);
-assert.equal(data.summary.squadLinked,706);
+assert.equal(data.summary.squadLinked,729);
 assert.ok(data.players.filter(p=>p.researchPriority==='REVIEWED').every(p=>p.reviewStatus==='value_unpublished'&&p.marketValueM===null));
 assert.ok(page.includes('Next 15 clubs to research'));
 assert.ok(page.includes('SWOS_Research_Priority_2026-27.csv'));
@@ -73,7 +73,7 @@ assert.ok(page.includes('Player shirt-number discrepancies'));
 // Batch P: new first-party club evidence must not be mistaken for a valuation.
 const clubBatch=JSON.parse(fs.readFileSync('data/leicester-official-16-player-audit-2026-10-20.json','utf8'));
 assert.equal(clubBatch.players.length,16);
-assert.equal(data.summary.officialClubLinked,16);
+assert.equal(data.summary.officialClubLinked,34);
 assert.equal(data.clubs.find(c=>c.clubId===clubBatch.clubId).officialClubLinked,16);
 assert.equal(data.verifiedNameCorrections.length,1);
 assert.equal(data.verifiedNameCorrections[0].to,'Tommy Watson');
@@ -98,8 +98,8 @@ assert.equal(barnBatch.season,'2026/27');
 assert.equal(barnBatch.players.length,16);
 assert.equal(data.summary.independentMatchLinked,16);
 assert.equal(data.clubs.find(c=>c.clubId===barnBatch.clubId).independentMatchLinked,16);
-assert.equal(data.summary.officialClubLinked,16,'Independent match sheets cannot inflate first-party club verification');
-assert.equal(data.summary.squadLinked,706);
+assert.equal(data.summary.officialClubLinked,34,'Independent match sheets cannot inflate first-party club verification');
+assert.equal(data.summary.squadLinked,729);
 for(const e of barnBatch.players){
  const p=data.players.find(p=>p.clubId==='barnsley'&&p.player===e.player);
  assert.ok(p,'Missing Barnsley player '+e.player);
@@ -114,3 +114,39 @@ for(const e of barnBatch.players){
 assert.ok(page.includes('2026/27 independent match sheet verified'));
 assert.ok(csv.includes('Independent match evidence URL'));
 console.log('Barnsley match-sheet audit: 16 dated squad sources, no change to valuation totals.');
+
+// Batch R: source-classification, 2026/27 matched names/numbers, and price integrity.
+const batchR=JSON.parse(fs.readFileSync('data/bromley-wigan-squad-evidence-batch-r-2026-10-20.json','utf8'));
+assert.equal(batchR.season,'2026/27');
+assert.equal(batchR.clubs.length,2);
+assert.equal(batchR.clubs.reduce((n,c)=>n+c.players.length,0),32);
+assert.equal(data.summary.independentSeasonRosterLinked,16);
+assert.equal(data.clubs.find(c=>c.clubId==='bromley').officialClubLinked,16);
+assert.equal(data.clubs.find(c=>c.clubId==='wigan-athletic').independentSeasonRosterLinked,16);
+assert.equal(data.clubs.find(c=>c.clubId==='wigan-athletic').officialClubLinked,2);
+assert.equal(data.summary.officialClubLinked,34);
+for(const c of batchR.clubs){
+ const actual=data.players.filter(p=>p.clubId===c.clubId);
+ assert.equal(actual.length,16);
+ for(const v of c.players){
+  const p=actual.find(p=>p.player===v.player);
+  assert.ok(p,'Batch R missing player '+v.player);
+  assert.equal(p.shirt,v.shirt);
+  assert.equal(p.squadSourceUrl,v.officialShirtSourceUrl||c.sourceUrl);
+  if(c.clubId==='bromley'){
+   assert.equal(p.officialClubSourceUrl,c.sourceUrl);
+   assert.equal(p.officialClubShirtNumber,v.shirt);
+   assert.equal(p.independentSeasonRosterUrl,null);
+  }else{
+   assert.equal(p.independentSeasonRosterUrl,c.sourceUrl);
+   assert.equal(p.independentSeasonRosterNumber,v.shirt);
+   assert.equal(p.independentSeasonRosterClassification,c.classification);
+   assert.equal(p.officialClubSourceUrl,v.officialShirtSourceUrl||null);
+  }
+ }
+}
+assert.ok(page.includes('Independent 2026/27 season roster linked'));
+assert.ok(csv.includes('Independent season roster URL'));
+assert.equal(data.summary.ready,1234);
+assert.equal(data.summary.priced,1234);
+console.log('Batch R: 16 first-party Bromley shirt references, 16 independent Wigan season records, 2 official merch cross-checks.');
