@@ -19,9 +19,10 @@ for(const c of master.clubs){
    essentialReady:essential(p),
    officialPLRosterUrl:p.officialPLRosterUrl||null,officialPLSquadNumber:p.officialPLSquadNumber??null,
    officialClubSourceUrl:p.officialClubSourceUrl||null,officialClubShirtNumber:p.officialClubShirtNumber??null,officialClubSourceDate:p.officialClubSourceDate||null,officialClubSourceKind:p.officialClubSourceKind||null,
+   matchLineupSourceUrl:p.matchLineupSourceUrl||null,matchLineupSourceDate:p.matchLineupSourceDate||null,matchLineupShirtNumber:p.matchLineupShirtNumber??null,matchLineupRole:p.matchLineupRole||null,
 
-   squadSourceUrl:p.officialPLRosterUrl||p.seasonSquadSourceUrl||null,
-   shirtSourceUrl:p.officialPLRosterUrl||p.shirtEvidenceUrl||null,
+   squadSourceUrl:p.officialPLRosterUrl||p.officialClubSourceUrl||p.matchLineupSourceUrl||p.seasonSquadSourceUrl||null,
+   shirtSourceUrl:p.officialPLRosterUrl||p.officialClubSourceUrl||p.matchLineupSourceUrl||p.shirtEvidenceUrl||null,
    valueSourceUrl:p.marketValueSourceUrl||null,
    nationalitySourceUrl:p.nationalityEvidenceUrl||null
   });
@@ -79,6 +80,7 @@ const sum=rows=>({
  squadLinked:rows.filter(p=>p.squadSourceUrl).length,
  officialPLLinked:rows.filter(p=>p.officialPLRosterUrl).length,
  officialClubLinked:rows.filter(p=>p.officialClubSourceUrl).length,
+ independentMatchLinked:rows.filter(p=>p.matchLineupSourceUrl).length,
  squadUnlinked:rows.filter(p=>!p.squadSourceUrl).length,
  priced:rows.filter(p=>p.marketValueM!==null).length,
  valueLinked:rows.filter(p=>p.marketValueM!==null&&p.valueSourceUrl).length,
@@ -117,14 +119,14 @@ const csv=v=>{
  if(/^[=+\-@\t\r]/.test(s))s="'"+s;
  return /[",\r\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;
 };
-const headers=['Division','Club','Player','Shirt','Nationality','Position code','Value GBP millions','Essentials filled','Individual 2026-27 squad link','Individual market value link','Shirt evidence link','Nationality evidence link','Official PL squad source','Official PL shirt number','Official club squad evidence URL','Official club shirt number','Official club published date','Official club evidence type','Possible same-name clubs','Squad source URL','Value source URL','Shirt source URL','Nationality source URL'];
-const rows=[headers,...playerRows.map(p=>[p.division,p.club,p.player,p.shirt,p.nationality,p.position,p.marketValueM,p.essentialReady?'YES':'NO',p.squadSourceUrl?'LINKED':'NOT LINKED',p.valueSourceUrl?'LINKED':'NOT LINKED',p.shirtSourceUrl?'LINKED':'NOT LINKED',p.nationalitySourceUrl?'LINKED':'NOT LINKED',p.officialPLRosterUrl||'',p.officialPLSquadNumber??'',p.officialClubSourceUrl||'',p.officialClubShirtNumber??'',p.officialClubSourceDate||'',p.officialClubSourceKind||'',p.sameNameOtherClubs.join('; '),p.squadSourceUrl,p.valueSourceUrl,p.shirtSourceUrl,p.nationalitySourceUrl])];
+const headers=['Division','Club','Player','Shirt','Nationality','Position code','Value GBP millions','Essentials filled','Individual 2026-27 squad link','Individual market value link','Shirt evidence link','Nationality evidence link','Official PL squad source','Official PL shirt number','Official club squad evidence URL','Official club shirt number','Official club published date','Official club evidence type','Independent match evidence URL','Match evidence date','Match evidence shirt number','Match role','Possible same-name clubs','Squad source URL','Value source URL','Shirt source URL','Nationality source URL'];
+const rows=[headers,...playerRows.map(p=>[p.division,p.club,p.player,p.shirt,p.nationality,p.position,p.marketValueM,p.essentialReady?'YES':'NO',p.squadSourceUrl?'LINKED':'NOT LINKED',p.valueSourceUrl?'LINKED':'NOT LINKED',p.shirtSourceUrl?'LINKED':'NOT LINKED',p.nationalitySourceUrl?'LINKED':'NOT LINKED',p.officialPLRosterUrl||'',p.officialPLSquadNumber??'',p.officialClubSourceUrl||'',p.officialClubShirtNumber??'',p.officialClubSourceDate||'',p.officialClubSourceKind||'',p.matchLineupSourceUrl||'',p.matchLineupSourceDate||'',p.matchLineupShirtNumber??'',p.matchLineupRole||'',p.sameNameOtherClubs.join('; '),p.squadSourceUrl,p.valueSourceUrl,p.shirtSourceUrl,p.nationalitySourceUrl])];
 fs.writeFileSync('dist/downloads/SWOS_Source_Audit_2026-27.csv','\uFEFF'+rows.map(r=>r.map(csv).join(',')).join('\r\n')+'\r\n');
 const queue=playerRows.filter(p=>p.researchPriority!=='CLEAR').sort((a,b)=>
  priorityOrder[a.researchPriority]-priorityOrder[b.researchPriority]||
  a.division.localeCompare(b.division)||a.club.localeCompare(b.club)||a.player.localeCompare(b.player));
-const queueHeaders=['Research priority','Division','Club','Player','Shirt','Nationality','SWOS position','Value GBP millions','Recommended next action','Research issues','Research review status','Review evidence URL','Squad evidence URL','Valuation evidence URL','Official club evidence URL','Same-name clubs'];
-const queueRows=[queueHeaders,...queue.map(p=>[p.researchPriority,p.division,p.club,p.player,p.shirt,p.nationality,p.position,p.marketValueM,p.nextResearchAction,p.researchIssues.join(' | '),p.reviewStatus,p.reviewSourceUrl,p.squadSourceUrl,p.valueSourceUrl,p.officialClubSourceUrl,p.sameNameOtherClubs.join('; ')])];
+const queueHeaders=['Research priority','Division','Club','Player','Shirt','Nationality','SWOS position','Value GBP millions','Recommended next action','Research issues','Research review status','Review evidence URL','Squad evidence URL','Valuation evidence URL','Official club evidence URL','Match-sheet evidence URL','Same-name clubs'];
+const queueRows=[queueHeaders,...queue.map(p=>[p.researchPriority,p.division,p.club,p.player,p.shirt,p.nationality,p.position,p.marketValueM,p.nextResearchAction,p.researchIssues.join(' | '),p.reviewStatus,p.reviewSourceUrl,p.squadSourceUrl,p.valueSourceUrl,p.officialClubSourceUrl,p.matchLineupSourceUrl,p.sameNameOtherClubs.join('; ')])];
 fs.writeFileSync('dist/downloads/SWOS_Research_Priority_2026-27.csv','\uFEFF'+queueRows.map(r=>r.map(csv).join(',')).join('\r\n')+'\r\n');
 if(queue.length!==summary.players-summary.clear)throw new Error('Priority queue: count disagrees with audit');
 const template=fs.readFileSync('source-audit-template.html','utf8');
