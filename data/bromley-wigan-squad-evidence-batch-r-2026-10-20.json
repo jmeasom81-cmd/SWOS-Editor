@@ -1,0 +1,386 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "checkedAt": "2026-10-20",
+  "objective": "Current-season first-team selection and shirt evidence, not estimates of player transfer value or skill",
+  "clubs": [
+    {
+      "clubId": "bromley",
+      "classification": "official_current_club_first_team_page",
+      "sourceUrl": "https://www.bromleyfc.co.uk/teams/",
+      "sourceName": "Bromley FC official men's first team list",
+      "players": [
+        {
+          "player": "Grant Smith",
+          "shirt": 1,
+          "nationality": "England",
+          "swosPosition": 0,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Grant Smith",
+          "reviewNote": null
+        },
+        {
+          "player": "Dillon Addai",
+          "shirt": 23,
+          "nationality": "England",
+          "swosPosition": 0,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Dillon Addai",
+          "reviewNote": "The official club first team lists Addai #23; third-party current match squad lists can omit non-playing squad members."
+        },
+        {
+          "player": "Chanse Headman",
+          "shirt": 2,
+          "nationality": "England",
+          "swosPosition": 1,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Chanse Headman",
+          "reviewNote": null
+        },
+        {
+          "player": "Richard Taylor",
+          "shirt": 3,
+          "nationality": "Nigeria",
+          "swosPosition": 3,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Richard Taylor",
+          "reviewNote": null
+        },
+        {
+          "player": "Omar Sowunmi",
+          "shirt": 5,
+          "nationality": "England",
+          "swosPosition": 3,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Omar Sowunmi",
+          "reviewNote": null
+        },
+        {
+          "player": "Deon Woodman",
+          "shirt": 15,
+          "nationality": "Kenya",
+          "swosPosition": 3,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Deon Woodman",
+          "reviewNote": null
+        },
+        {
+          "player": "Jacob Mendy",
+          "shirt": 17,
+          "nationality": "Gambia",
+          "swosPosition": 2,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Jacob Mendy",
+          "reviewNote": null
+        },
+        {
+          "player": "Ashley Charles",
+          "shirt": 4,
+          "nationality": "Grenada",
+          "swosPosition": 6,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Ashley Charles",
+          "reviewNote": null
+        },
+        {
+          "player": "George Saville",
+          "shirt": 6,
+          "nationality": "Northern Ireland",
+          "swosPosition": 6,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "George Saville",
+          "reviewNote": null
+        },
+        {
+          "player": "Ethon Archer",
+          "shirt": 7,
+          "nationality": "England",
+          "swosPosition": 4,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Ethon Archer",
+          "reviewNote": null
+        },
+        {
+          "player": "Ben Thompson",
+          "shirt": 8,
+          "nationality": "England",
+          "swosPosition": 6,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Ben Thompson",
+          "reviewNote": null
+        },
+        {
+          "player": "Mitch Pinnock",
+          "shirt": 11,
+          "nationality": "England",
+          "swosPosition": 5,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Mitch Pinnock",
+          "reviewNote": null
+        },
+        {
+          "player": "Michael Cheek",
+          "shirt": 9,
+          "nationality": "England",
+          "swosPosition": 7,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Michael Cheek",
+          "reviewNote": null
+        },
+        {
+          "player": "Nicke Kabamba",
+          "shirt": 14,
+          "nationality": "England",
+          "swosPosition": 7,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Nicke Kabamba",
+          "reviewNote": null
+        },
+        {
+          "player": "Corey Whitely",
+          "shirt": 18,
+          "nationality": "England",
+          "swosPosition": 5,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Corey Whitely",
+          "reviewNote": null
+        },
+        {
+          "player": "Victor Adeboyejo",
+          "shirt": 20,
+          "nationality": "England",
+          "swosPosition": 7,
+          "seasonSquadSourceUrl": "https://www.bromleyfc.co.uk/teams/",
+          "seasonSquadSourceName": "Bromley FC official men's first team list",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Victor Adeboyejo",
+          "reviewNote": null
+        }
+      ],
+      "club": "Bromley"
+    },
+    {
+      "clubId": "wigan-athletic",
+      "classification": "independent_season_squad_archive",
+      "sourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+      "sourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+      "players": [
+        {
+          "player": "Joe Walsh",
+          "shirt": 1,
+          "nationality": "England",
+          "swosPosition": 0,
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Joe Walsh",
+          "reviewNote": null
+        },
+        {
+          "player": "Joe Whitworth",
+          "shirt": 41,
+          "nationality": "England",
+          "swosPosition": 0,
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "officialShirtSourceUrl": "https://store.wiganathletic.com/shop-by-player/41_whitworth/1299_2627-adult-green-gk-shirt/331_whitworth-41.html",
+          "sourceIdentityName": "Joe Whitworth",
+          "reviewNote": null
+        },
+        {
+          "player": "Connor Barrett",
+          "shirt": 2,
+          "nationality": "England",
+          "swosPosition": 1,
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Connor Barrett",
+          "reviewNote": null
+        },
+        {
+          "player": "Morgan Fox",
+          "shirt": 3,
+          "nationality": "Wales",
+          "swosPosition": 2,
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Morgan Fox",
+          "reviewNote": null
+        },
+        {
+          "player": "Jeremiah Chilokoa-Mullen",
+          "shirt": 4,
+          "nationality": "Scotland",
+          "swosPosition": 3,
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Jeremiah Chilokoa-Mullen",
+          "reviewNote": null
+        },
+        {
+          "player": "Finley Burns",
+          "shirt": 5,
+          "nationality": "England",
+          "swosPosition": 3,
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Finley Burns",
+          "reviewNote": null
+        },
+        {
+          "player": "Sam Bolland",
+          "shirt": 53,
+          "nationality": "England",
+          "swosPosition": 3,
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Sam Bolland",
+          "reviewNote": null
+        },
+        {
+          "player": "Jensen Weir",
+          "shirt": 6,
+          "nationality": "England",
+          "swosPosition": 6,
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Jensen Weir",
+          "reviewNote": null
+        },
+        {
+          "player": "Fraser Murray",
+          "shirt": 7,
+          "nationality": "Scotland",
+          "swosPosition": 5,
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Fraser Murray",
+          "reviewNote": null
+        },
+        {
+          "player": "Max Power",
+          "shirt": 8,
+          "nationality": "England",
+          "swosPosition": 6,
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Max Power",
+          "reviewNote": null
+        },
+        {
+          "player": "Joe Adams",
+          "shirt": 26,
+          "nationality": "England",
+          "swosPosition": 6,
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Joe Adams",
+          "reviewNote": null
+        },
+        {
+          "player": "Bradley Burrowes",
+          "shirt": 27,
+          "nationality": "England",
+          "swosPosition": 6,
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "officialShirtSourceUrl": "https://store.wiganathletic.com/shop-by-player/27_burrowes/1263_2627-adult-away-shirt/241_burrowes-27.html",
+          "sourceIdentityName": "Brad Burrowes",
+          "reviewNote": "The historical site names him Brad Burrowes; SWOS uses Bradley Burrowes. Official 2026/27 Wigan store confirms BURROWES 27."
+        },
+        {
+          "player": "Sonny Perkins",
+          "shirt": 9,
+          "nationality": "England",
+          "swosPosition": 7,
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Sonny Perkins",
+          "reviewNote": null
+        },
+        {
+          "player": "Scott Hogan",
+          "shirt": 25,
+          "nationality": "Republic of Ireland",
+          "swosPosition": 7,
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Scott Hogan",
+          "reviewNote": null
+        },
+        {
+          "player": "Christian Saydee",
+          "shirt": 38,
+          "nationality": "England",
+          "swosPosition": 7,
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Christian Saydee",
+          "reviewNote": null
+        },
+        {
+          "player": "Adam Moseley",
+          "shirt": 24,
+          "nationality": "England",
+          "swosPosition": 7,
+          "seasonSquadSourceUrl": "https://www.wiganathleticheritage.co.uk/squad/2026-2027",
+          "seasonSquadSourceName": "Wigan Athletic Heritage 2026–27 squad archive",
+          "officialShirtSourceUrl": null,
+          "sourceIdentityName": "Adam Moseley",
+          "reviewNote": null
+        }
+      ],
+      "club": "Wigan Athletic"
+    }
+  ],
+  "cautions": [
+    "Bromley: first-party current men's first team roster. Snapshot checked 20 Oct 2026, source may change.",
+    "Wigan: independent Wigan Athletic Heritage 2026/27 squad archive, NOT the official football club website; 2 club merch shirt links corroborate their numbers.",
+    "This batch is 32/32 selected players verified against their relevant club-season list, not 32 new valuations.",
+    "Named player overlap and absence from a single snapshot must not cause automatic transfers or deletion.",
+    "The Wigan heritage listing also has another number 27 on its longer roster; official 26/27 club shop specifically supports Burrowes 27, so no change to SWOS.",
+    "Careers and original game TEAM files must not be modified."
+  ]
+}
