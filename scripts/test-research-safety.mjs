@@ -469,3 +469,44 @@ assert.equal(externalCount,16);
 assert.equal(merchCount,2);
 assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM==null).length,238,'Verifying club membership cannot manufacture valuations');
 console.log('Batch R safety: 32 season-player references, 16 first-party; 2 genuine club merchandise references.');
+
+// Batch S: research provenance is separately classified and incomplete squads remain unresolved.
+const squadS=JSON.parse(fs.readFileSync('data/league-two-squad-verification-batch-s-2026-10-20.json','utf8'));
+assert.equal(squadS.season,'2026/27');
+assert.equal(squadS.clubs.length,5);
+assert.equal(squadS.summary.sourceMatched,75);
+assert.equal(squadS.summary.needsClubMembershipCheck,5);
+let matchedS=0,independentS=0,officialS=0;
+for(const c of squadS.clubs){
+ const local=master.clubs.find(x=>x.clubId===c.clubId);
+ assert.ok(local);
+ assert.equal(local.players.length,16);
+ assert.equal(c.players.length+c.flags.length,16);
+ for(const v of c.players){
+  const p=local.players.find(p=>p.player===v.player);
+  assert.ok(p,'Batch S player not found: '+v.player);
+  assert.equal(p.shirt,v.shirt);
+  assert.equal(p.seasonSquadSourceUrl,c.sourceUrl);
+  assert.equal(p.shirtEvidenceUrl,c.sourceUrl);
+  if(c.classification==='official_current_club_first_team_page'){
+   officialS++;
+   assert.equal(p.officialClubSourceUrl,c.sourceUrl);
+   assert.equal(p.officialClubShirtNumber,p.shirt);
+  }else{
+   independentS++;
+   assert.equal(p.independentSeasonRosterUrl,c.sourceUrl);
+   assert.equal(p.independentSeasonRosterNumber,p.shirt);
+  }
+  matchedS++;
+ }
+ for(const f of c.flags){
+  const p=local.players.find(p=>p.player===f.player);
+  assert.ok(p&&p.shirt===f.shirt,'Invalid unconfirmed membership '+f.player);
+  assert.equal(p.seasonSquadSourceUrl??null,null,'One unverified squad snapshot cannot create membership evidence '+f.player);
+ }
+}
+assert.equal(matchedS,75);
+assert.equal(officialS,16);
+assert.equal(independentS,59);
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,238,'Checking squads must not create transfer valuations');
+console.log('Batch S: 75 named current-season squad sources recorded, five unresolved Exeter player names held for follow-up.');
