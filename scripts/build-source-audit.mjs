@@ -75,6 +75,20 @@ for(const p of playerRows){
    unpublished?'No numerical value found in reviewed source; revisit only with new evidence':'No priority action identified';
 }
 for(const key of reviews.keys())if(!playerRows.some(p=>p.clubId+'|'+p.player===key))throw new Error('Priority queue: reviewed player not found '+key);
+// Membership alerts are based on one checked season snapshot, not evidence of a transfer or a deletion.
+const leagueTwoS=JSON.parse(fs.readFileSync('data/league-two-squad-verification-batch-s-2026-10-20.json','utf8'));
+if(leagueTwoS.season!==master.season||leagueTwoS.summary.sourceMatched!==75||leagueTwoS.clubs.length!==5)throw new Error('Squad audit: invalid batch S');
+const membershipReviewFlags=leagueTwoS.clubs.flatMap(c=>c.flags);
+for(const f of membershipReviewFlags){
+ const p=playerRows.find(x=>x.clubId===f.clubId&&x.player===f.player);
+ if(!p||p.shirt!==f.shirt||p.squadSourceUrl)throw new Error('Unexpected unresolved squad membership '+f.player);
+ p.membershipReviewStatus=f.reviewStatus;
+ p.membershipReviewSourceUrl=f.sourceUrl;
+ p.researchIssues.push('Not found in checked 2026/27 squad source; may still belong to team');
+ p.researchPriority='URGENT';
+ p.nextResearchAction='Confirm club membership from a newer, ideally official source; do not automatically delete or transfer';
+}
+
 const sum=rows=>({
  players:rows.length,
  ready:rows.filter(p=>p.essentialReady).length,
@@ -95,7 +109,8 @@ const sum=rows=>({
  low:rows.filter(p=>p.researchPriority==='LOW').length,
  reviewed:rows.filter(p=>p.researchPriority==='REVIEWED').length,
  clear:rows.filter(p=>p.researchPriority==='CLEAR').length,
- nameCollisionRows:rows.filter(p=>p.sameNameOtherClubs.length).length
+ nameCollisionRows:rows.filter(p=>p.sameNameOtherClubs.length).length,
+ membershipReviewCount:rows.filter(p=>p.membershipReviewStatus).length
 });
 const summary=sum(playerRows);
 const clubs=master.clubs.map(c=>{
@@ -112,7 +127,7 @@ for(const issue of batchO.discrepancyFlags){
 }
 const officialClubBatch=JSON.parse(fs.readFileSync('data/leicester-official-16-player-audit-2026-10-20.json','utf8'));
 if(officialClubBatch.season!==master.season||officialClubBatch.players.length!==16)throw new Error('Official club verification batch invalid');
-const data={season:master.season,generatedAt:master.generatedAt,summary,divisions,clubs,valuationReviewFlags:batchO.discrepancyFlags,verifiedNameCorrections:[{club:officialClubBatch.club,...officialClubBatch.nameFix,sourceUrl:officialClubBatch.players.find(p=>p.player===officialClubBatch.nameFix.to)?.sourceUrl}],players:playerRows};
+const data={season:master.season,generatedAt:master.generatedAt,summary,divisions,clubs,valuationReviewFlags:batchO.discrepancyFlags,membershipReviewFlags,verifiedNameCorrections:[{club:officialClubBatch.club,...officialClubBatch.nameFix,sourceUrl:officialClubBatch.players.find(p=>p.player===officialClubBatch.nameFix.to)?.sourceUrl}],players:playerRows};
 fs.mkdirSync('dist/data',{recursive:true});
 fs.mkdirSync('dist/downloads',{recursive:true});
 fs.writeFileSync('dist/data/source-audit-2026-27.json',JSON.stringify(data,null,2)+'\n');
