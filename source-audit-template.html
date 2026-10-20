@@ -19,14 +19,14 @@ p{color:#b6c7d9;line-height:1.6}.links{display:flex;gap:9px;flex-wrap:wrap;margi
 <p>See which researched records have their essential SWOS fields filled and which have an individual season-specific squad or valuation source linked. Search all 1,472 players and filter the 92 clubs.</p>
 <nav class="links"><a href="/">← SWOS editor</a><a href="/gaps-2026-27.html">Data gaps ↗</a><a href="/downloads/SWOS_Master_2026-27.xlsx">Excel master ↗</a><a href="/downloads/SWOS_Source_Audit_2026-27.csv" download>Export entire audit CSV ↓</a><a href="/downloads/SWOS_Research_Priority_2026-27.csv" download>Download prioritised research queue ↓</a></nav>
 <div id="stats" class="stats"></div>
-<div class="note"><b>Source confidence:</b> Official club evidence and independent numbered match sheets are tracked separately. A dated match-sheet selection verifies that player's club and shirt at that match, not permanent membership or market value.<p></p><b>Important:</b> “Essentials filled” is <b>not</b> proof a player currently belongs to that club. A source link means the research record points to a player/squad reference; it does not certify independent verification. A missing link does not mean the player is in the wrong team. Name matches in different clubs are review flags, <b>not automatically duplicate players</b>. Market values are estimates, not SWOS in-game fees.</div>
+<div class="note"><b>Source confidence:</b> Official club evidence, independent season squad listings and numbered match sheets are tracked separately. None of these alone establishes a transfer fee, or guarantees permanent squad membership. An independent roster is NOT a club-issued verification.<p></p><b>Important:</b> “Essentials filled” is <b>not</b> proof a player currently belongs to that club. A source link means the research record points to a player/squad reference; it does not certify independent verification. A missing link does not mean the player is in the wrong team. Name matches in different clubs are review flags, <b>not automatically duplicate players</b>. Market values are estimates, not SWOS in-game fees.</div>
 <section class="section"><h2>Next 15 clubs to research</h2><p class="tiny">Prioritised by missing essential data and recorded evidence gaps. This is a research queue, not a claim that a squad or player is wrong. Select a club to inspect its 16 players.</p><div id="priority-totals" class="stats"></div><div id="priority-clubs" class="cards"></div><button id="next-clubs" type="button">Show next 15 clubs</button></section>
 <section class="section"><h2>Search the research records</h2>
 <div class="controls">
 <label class="search">Player or club<input id="q" type="search" placeholder="Search name, club…" autocomplete="off"></label>
 <label>Division<select id="division"><option value="">All divisions</option><option>Premier League</option><option>Championship</option><option>League One</option><option>League Two</option></select></label>
 <label>Club<select id="club"><option value="">All clubs</option></select></label>
-<label>Source status<select id="source"><option value="">All source statuses</option><option value="squad-unlinked">Squad source not linked</option><option value="value-unlinked">Value recorded; no individual source</option><option value="linked">Squad source linked</option><option value="official">Official PL squad number verified</option><option value="officialclub">Official club roster or lineup verified</option><option value="matchlineup">2026/27 independent match sheet verified</option><option value="collision">Possible same-name match</option></select></label>
+<label>Source status<select id="source"><option value="">All source statuses</option><option value="squad-unlinked">Squad source not linked</option><option value="value-unlinked">Value recorded; no individual source</option><option value="linked">Squad source linked</option><option value="official">Official PL squad number verified</option><option value="officialclub">Official club roster or lineup verified</option><option value="matchlineup">2026/27 independent match sheet verified</option><option value="seasonroster">Independent 2026/27 season roster linked</option><option value="collision">Possible same-name match</option></select></label>
 <label>Essentials<select id="essentials"><option value="">All records</option><option value="ready">All four filled</option><option value="missing">Missing essential field</option></select></label><label>Research priority<select id="priority"><option value="">All priority levels</option><option value="URGENT">Urgent: shirt, position, nationality or squad check</option><option value="HIGH">High: numerical market value missing</option><option value="MEDIUM">Medium: season squad evidence needed</option><option value="LOW">Low: individual value link or identity review</option><option value="REVIEWED">Reviewed: no published numerical value</option><option value="CLEAR">No outstanding research flags</option></select></label>
 </div>
 <p id="result-count" class="tiny"></p><section id="results" class="results"></section><button id="more" type="button" hidden>Show more players</button></section>
@@ -50,6 +50,7 @@ const tiles=[
  [fmt(stats.officialPLLinked),'Official 2026/27 PL squad numbers verified'],
  [fmt(stats.officialClubLinked),'Official club 2026/27 shirt numbers verified'],
  [fmt(stats.independentMatchLinked),'Independent match-sheet numbers verified'],
+ [fmt(stats.independentSeasonRosterLinked),'Independent season-roster numbers linked'],
  [fmt(stats.valuedWithoutIndividualSource),'Valued players without individual value link'],
  [fmt(stats.nameCollisionRows),'Possible same-name player records']
 ];
@@ -100,6 +101,7 @@ function filteredPlayers(){
   if(status==='official'&&!p.officialPLRosterUrl)return false;
   if(status==='officialclub'&&!p.officialClubSourceUrl)return false;
   if(status==='matchlineup'&&!p.matchLineupSourceUrl)return false;
+  if(status==='seasonroster'&&!p.independentSeasonRosterUrl)return false;
   if(status==='collision'&&!p.sameNameOtherClubs.length)return false;
   return true;
  });
@@ -113,7 +115,8 @@ function render(){
   if(p.marketValueM!==null&&!p.valueSourceUrl)notes.push('Valuation link missing');
   if(p.sameNameOtherClubs.length)notes.push('Same-name entry: '+p.sameNameOtherClubs.join(', '));
   if(p.officialPLRosterUrl)notes.push('Official 2026/27 PL #'+p.officialPLSquadNumber+' confirmed');
-  if(p.officialClubSourceUrl)notes.push('Official club #'+p.officialClubShirtNumber+' verified in '+p.officialClubSourceDate+' '+p.officialClubSourceKind.replaceAll('_',' '));
+  if(p.officialClubSourceUrl)notes.push('Official club #'+p.officialClubShirtNumber+' · '+(p.officialClubSourceDate||'checked '+p.officialClubCheckedAt)+' · '+p.officialClubSourceKind.replaceAll('_',' '));
+  if(p.independentSeasonRosterUrl)notes.push('Independent 2026/27 season roster #'+p.independentSeasonRosterNumber+' · checked '+p.independentSeasonRosterCheckedAt);
   if(p.matchLineupSourceUrl)notes.push('Independent dated match sheet #'+p.matchLineupShirtNumber+' · '+p.matchLineupSourceDate+' · '+p.matchLineupRole);
   if(p.researchPriority!=='CLEAR')notes.push('Next: '+p.nextResearchAction);
   const links=[p.squadSourceUrl?'<a href="'+x(p.squadSourceUrl)+'" target="_blank" rel="noopener noreferrer">Squad source ↗</a>':'',p.valueSourceUrl?'<a href="'+x(p.valueSourceUrl)+'" target="_blank" rel="noopener noreferrer">Value source ↗</a>':''].filter(Boolean).join(' · ');
