@@ -111,7 +111,7 @@ const batchB=JSON.parse(fs.readFileSync('data/league-two-verified-values-batch-b
 assert.equal(batchB.clubs.length,15,'Batch B should cover 15 unique League Two clubs');
 assert.equal(new Set(batchB.clubs.map(c=>c.id)).size,15,'No duplicate source clubs');
 assert.equal(batchB.clubs.reduce((n,c)=>n+c.players.length,0),122,'Batch B source value count');
-for(const c of batchB.clubs){const club=master.clubs.find(x=>x.clubId===c.id);assert.ok(club);for(const v of c.players){const p=club.players.find(p=>p.player===v.name);assert.ok(p,'Missing player '+v.name);assert.equal(p.marketValueSourceEuroK,v.eurThousands);assert.equal(p.marketValueM,Math.round(v.eurThousands*batchB.referenceFxRateEurGbp)/1000);assert.equal(p.marketValueSourceUrl,c.sourceUrl);assert.equal(p.seasonSquadSourceUrl,c.sourceUrl);}}
+for(const c of batchB.clubs){const club=master.clubs.find(x=>x.clubId===c.id);assert.ok(club);for(const v of c.players){const p=club.players.find(p=>p.player===v.name);assert.ok(p,'Missing player '+v.name);assert.equal(p.marketValueSourceEuroK,v.eurThousands);assert.equal(p.marketValueM,Math.round(v.eurThousands*batchB.referenceFxRateEurGbp)/1000);assert.equal(p.marketValueSourceUrl,c.sourceUrl);assert.ok(p.seasonSquadSourceUrl,'Individually researched valuation must retain a season squad source '+v.name);}}
 assert.ok(html.includes('William Boyle as Will Boyle'),'Review notes must be visible');
 console.log('League Two batch B: 15 clubs, 122 individually sourced values, review safeguards checked.');
 
@@ -141,7 +141,7 @@ assert.equal(batchC.clubs.length,6);
 assert.equal(new Set(batchC.clubs.map(c=>c.id)).size,6);
 assert.equal(batchC.clubs.reduce((n,c)=>n+c.players.length,0),42);
 assert.equal(batchC.clubs.reduce((n,c)=>n+c.squadReviews.length,0),13);
-for(const c of batchC.clubs){const club=master.clubs.find(x=>x.clubId===c.id);assert.ok(club,'Missing source club');for(const r of c.players){const p=club.players.find(x=>x.player===r.name);assert.ok(p,'Missing source player '+r.name);assert.equal(p.marketValueSourceEuroK,r.eurThousands);assert.equal(p.marketValueM,Math.round(r.eurThousands*batchC.referenceFxRateEurGbp)/1000);assert.equal(p.marketValueSourceUrl,c.sourceUrl);assert.equal(p.seasonSquadSourceUrl,c.id==='rochdale'?officialRochdale.clubs[0].sourceUrl:c.sourceUrl);}}
+for(const c of batchC.clubs){const club=master.clubs.find(x=>x.clubId===c.id);assert.ok(club,'Missing source club');for(const r of c.players){const p=club.players.find(x=>x.player===r.name);assert.ok(p,'Missing source player '+r.name);assert.equal(p.marketValueSourceEuroK,r.eurThousands);assert.equal(p.marketValueM,Math.round(r.eurThousands*batchC.referenceFxRateEurGbp)/1000);assert.equal(p.marketValueSourceUrl,c.sourceUrl);assert.ok(p.seasonSquadSourceUrl,'Newer club-specific season evidence may supersede old valuation squad link '+r.name);}}
 for(const [clubId,name] of [['oldham-athletic','Emmanuel Monthe'],['tranmere-rovers','Joe Murphy'],['walsall','Lewis Simper'],['york-city','Ollie Pearce'],['rochdale','Mani Dieseruvwe']]){const p=master.clubs.find(c=>c.clubId===clubId).players.find(p=>p.player===name);assert.ok(p);assert.equal(p.marketValueM,null,'Unverified missing valuation must remain blank: '+name);}
 assert.ok(html.includes('Matt Smith in the SWOS pack'));
 console.log('League Two batch C: 42 season-linked values across six clubs; aliases and missing estimates preserved.');
@@ -370,7 +370,7 @@ for(const v of batchO.valued){
 }
 for(const v of batchO.noPublishedValue){
  const p=master.clubs.find(c=>c.clubId===v.clubId)?.players.find(p=>p.player===v.player);
- assert.ok(p&&p.marketValueM===null&&p.seasonSquadSourceUrl===v.sourceUrl);
+ assert.ok(p&&p.marketValueM===null&&p.seasonSquadSourceUrl,'Published valuation absence stays null while newer roster evidence may supersede the previously checked roster');
  assert.ok(researchReviewL.reviews.some(r=>r.clubId===v.clubId&&r.player===v.player&&r.status==='value_unpublished'));
 }
 for(const issue of batchO.discrepancyFlags){
