@@ -26,6 +26,7 @@ const d='$'+'{';
 replaceOnce('<div class="audit-item"><small>Unverified values preserved</small><strong>'+d+'p.valuesPreserved}</strong></div>',
  '<div class="audit-item"><small>Unpublished values: gameplay placeholders</small><strong>'+d+'p.gameplayReport?.placeholderValueCount??0}</strong></div>\n          <div class="audit-item"><small>All player skills rebuilt</small><strong>'+d+'p.gameplayReport?.skillsRebuilt??0}/1472</strong></div>\n          <div class="audit-item"><small>Original player skills reused</small><strong>'+d+'p.gameplayReport?.oldPlayerSkillsReused??"?"}</strong></div>',
  'preview counters');
+replaceOnce('Verified values written','Recorded master values','honest preview valuation label');
 replaceOnce('Direct installation remains locked in v1.35.','Direct installation remains locked in v1.36.','lock release');
 replaceOnce('Real players currently inherit old SWOS skill bytes and unpublished values can inherit an unrelated player\\u0027s previous valuation.',
  'Player abilities now use provisional role/division profiles with market-value evidence where available; unpublished values receive explicitly tagged gameplay placeholders. These are NOT verified scouting grades or transfer estimates.',
