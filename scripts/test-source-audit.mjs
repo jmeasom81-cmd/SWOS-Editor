@@ -38,7 +38,7 @@ assert.equal(data.players.filter(p=>p.reviewStatus==='membership_check').length,
 assert.equal(data.players.filter(p=>p.reviewStatus==='membership_source_matched').length,2);
 assert.equal(data.summary.urgent,0);
 assert.equal(data.summary.ready,1234);
-assert.equal(data.summary.squadLinked,680);
+assert.equal(data.summary.squadLinked,691);
 assert.ok(data.players.filter(p=>p.researchPriority==='REVIEWED').every(p=>p.reviewStatus==='value_unpublished'&&p.marketValueM===null));
 assert.ok(page.includes('Next 15 clubs to research'));
 assert.ok(page.includes('SWOS_Research_Priority_2026-27.csv'));
@@ -69,3 +69,25 @@ assert.equal(new Set(data.valuationReviewFlags.map(v=>v.clubId+'|'+v.player)).si
 for(const v of batchO.valued){const p=data.players.find(p=>p.clubId===v.clubId&&p.player===v.player);assert.ok(p);assert.equal(p.marketValueM,v.convertedGbpM);assert.equal(p.valueSourceUrl,v.sourceUrl);}
 for(const v of batchO.noPublishedValue){const p=data.players.find(p=>p.clubId===v.clubId&&p.player===v.player);assert.ok(p);assert.equal(p.marketValueM,null);assert.equal(p.reviewStatus,'value_unpublished');}
 assert.ok(page.includes('Player shirt-number discrepancies'));
+
+// Batch P: new first-party club evidence must not be mistaken for a valuation.
+const clubBatch=JSON.parse(fs.readFileSync('data/leicester-official-16-player-audit-2026-10-20.json','utf8'));
+assert.equal(clubBatch.players.length,16);
+assert.equal(data.summary.officialClubLinked,16);
+assert.equal(data.clubs.find(c=>c.clubId===clubBatch.clubId).officialClubLinked,16);
+assert.equal(data.verifiedNameCorrections.length,1);
+assert.equal(data.verifiedNameCorrections[0].to,'Tommy Watson');
+assert.ok(!data.players.some(p=>p.clubId==='leicester-city'&&p.player==='Tom Watson'));
+for(const x of clubBatch.players){
+ const p=data.players.find(p=>p.clubId===clubBatch.clubId&&p.player===x.player);
+ assert.ok(p,'Official club player missing '+x.player);
+ assert.equal(p.shirt,x.shirt);
+ assert.equal(p.officialClubSourceUrl,x.sourceUrl);
+ assert.equal(p.officialClubShirtNumber,x.shirt);
+ assert.equal(p.officialClubSourceDate,x.sourceDate);
+ assert.equal(p.squadSourceUrl,x.sourceUrl);
+}
+assert.ok(page.includes('Verified identity corrections'));
+assert.ok(page.includes('Official club roster or lineup verified'));
+assert.ok(csv.includes('Official club evidence URL'));
+console.log('Leicester official club audit: 16/16 shirt and squad evidence sources; Tommy Watson #23 corrected.');
