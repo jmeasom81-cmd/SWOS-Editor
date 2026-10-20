@@ -69,7 +69,7 @@ const exact=await ctx.swosCheckTestCopyFile(picked('TEAM.005',candidate));
 assert.equal(exact.status,'EXACT_CANDIDATE');
 assert.equal(exact.actualSha256,await digest(candidate));
 assert.equal(exact.topFourClubs,92);
-assert.deepEqual(exact.divisionCounts,[20,24,24,24]);
+assert.equal(exact.divisionCounts.join(','),'20,24,24,24');
 const old=await ctx.swosCheckTestCopyFile(picked('TEAM.005',original));
 assert.equal(old.status,'ORIGINAL_UNCHANGED');
 assert.equal((await ctx.swosCheckTestCopyFile(picked('TEAM.009',candidate))).status,'WRONG_FILE');
