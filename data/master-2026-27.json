@@ -21574,7 +21574,16 @@
           "marketValueSourceEuroK": 100,
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/northampton-town/kader/verein/1302/saison_id/2026",
-          "seasonSquadCheckedAt": "2026-10-09"
+          "seasonSquadCheckedAt": "2026-10-09",
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "independentSeasonRosterNumber": 1,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+          "seasonRosterCrossCheckType": "dated_initial_shirt_numbers",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "James Dadge",
@@ -21586,7 +21595,19 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "independentSeasonRosterNumber": 31,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+          "seasonRosterCrossCheckType": "dated_initial_shirt_numbers",
+          "seasonSquadSourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "FootballSquads 2026/27 club squad list",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "James Maxwell",
@@ -21605,7 +21626,16 @@
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/northempton-taun/kader/verein/1302",
           "seasonSquadCheckedAt": "2026-10-10",
-          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad",
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "independentSeasonRosterNumber": 3,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+          "seasonRosterCrossCheckType": "dated_initial_shirt_numbers",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Jon Guthrie",
@@ -21624,7 +21654,16 @@
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/northempton-taun/kader/verein/1302",
           "seasonSquadCheckedAt": "2026-10-10",
-          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad",
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "independentSeasonRosterNumber": 5,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+          "seasonRosterCrossCheckType": "dated_initial_shirt_numbers",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Elliott Moore",
@@ -21642,7 +21681,16 @@
           "marketValueSourceEuroK": 400,
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/northampton-town/kader/verein/1302/saison_id/2026",
-          "seasonSquadCheckedAt": "2026-10-09"
+          "seasonSquadCheckedAt": "2026-10-09",
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "independentSeasonRosterNumber": 6,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+          "seasonRosterCrossCheckType": "dated_initial_shirt_numbers",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Conor McCarthy",
@@ -21661,7 +21709,16 @@
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/northempton-taun/kader/verein/1302",
           "seasonSquadCheckedAt": "2026-10-10",
-          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad",
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "independentSeasonRosterNumber": 15,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+          "seasonRosterCrossCheckType": "dated_initial_shirt_numbers",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Joe Wormleighton",
@@ -21680,7 +21737,16 @@
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/northempton-taun/kader/verein/1302",
           "seasonSquadCheckedAt": "2026-10-10",
-          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad",
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "independentSeasonRosterNumber": 16,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+          "seasonRosterCrossCheckType": "dated_initial_shirt_numbers",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Joseph O'Brien-Whitmarsh",
@@ -21692,7 +21758,19 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "independentSeasonRosterNumber": 4,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.livescore.com/en/football/team/northampton/2998/squad/",
+          "seasonRosterCrossCheckType": "current_squad_list",
+          "seasonSquadSourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "FootballSquads 2026/27 club squad list",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Lee Evans",
@@ -21704,7 +21782,19 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "independentSeasonRosterNumber": 8,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.livescore.com/en/football/team/northampton/2998/squad/",
+          "seasonRosterCrossCheckType": "current_squad_list",
+          "seasonSquadSourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "FootballSquads 2026/27 club squad list",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Tyrese Fornah",
@@ -21716,7 +21806,19 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "independentSeasonRosterNumber": 14,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+          "seasonRosterCrossCheckType": "dated_initial_shirt_numbers",
+          "seasonSquadSourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "FootballSquads 2026/27 club squad list",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Owen Dale",
@@ -21728,7 +21830,19 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "independentSeasonRosterNumber": 19,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.livescore.com/en/football/team/northampton/2998/squad/",
+          "seasonRosterCrossCheckType": "current_squad_list",
+          "seasonSquadSourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "FootballSquads 2026/27 club squad list",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Jack Perkins",
@@ -21746,7 +21860,16 @@
           "marketValueSourceEuroK": 175,
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/northampton-town/kader/verein/1302/saison_id/2026",
-          "seasonSquadCheckedAt": "2026-10-09"
+          "seasonSquadCheckedAt": "2026-10-09",
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "independentSeasonRosterNumber": 21,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+          "seasonRosterCrossCheckType": "dated_initial_shirt_numbers",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Sam Hoskins",
@@ -21764,7 +21887,16 @@
           "marketValueSourceEuroK": 125,
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/northampton-town/kader/verein/1302/saison_id/2026",
-          "seasonSquadCheckedAt": "2026-10-09"
+          "seasonSquadCheckedAt": "2026-10-09",
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "independentSeasonRosterNumber": 7,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+          "seasonRosterCrossCheckType": "dated_initial_shirt_numbers",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Matty Warhurst",
@@ -21776,7 +21908,19 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "independentSeasonRosterNumber": 9,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+          "seasonRosterCrossCheckType": "dated_initial_shirt_numbers",
+          "seasonSquadSourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "FootballSquads 2026/27 club squad list",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Elliott List",
@@ -21794,7 +21938,16 @@
           "marketValueSourceEuroK": 100,
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/northampton-town/kader/verein/1302/saison_id/2026",
-          "seasonSquadCheckedAt": "2026-10-09"
+          "seasonSquadCheckedAt": "2026-10-09",
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "independentSeasonRosterNumber": 10,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+          "seasonRosterCrossCheckType": "dated_initial_shirt_numbers",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Kamarai Simon-Swyer",
@@ -21806,7 +21959,19 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "independentSeasonRosterNumber": 11,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.northamptonchron.co.uk/sport/football/cobblers-confirm-squad-numbers-for-202627-season-8843365",
+          "seasonRosterCrossCheckType": "dated_initial_shirt_numbers",
+          "seasonSquadSourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "FootballSquads 2026/27 club squad list",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/northam.htm",
+          "shirtCheckedAt": "2026-10-20"
         }
       ]
     },
@@ -22685,7 +22850,16 @@
           "marketValueSourceEuroK": 150,
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/rotherham-united/kader/verein/1194/saison_id/2026",
-          "seasonSquadCheckedAt": "2026-10-09"
+          "seasonSquadCheckedAt": "2026-10-09",
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "independentSeasonRosterNumber": 1,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "seasonRosterCrossCheckType": "reported_efl_registration",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Julian Eyestone",
@@ -22697,7 +22871,19 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "independentSeasonRosterNumber": 13,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "seasonRosterCrossCheckType": "reported_efl_registration",
+          "seasonSquadSourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "FootballSquads 2026/27 club squad list",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Joe Rafferty",
@@ -22716,7 +22902,16 @@
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.com/rotherham-united/kader/verein/1194/saison_id/2026/plus/1",
           "seasonSquadCheckedAt": "2026-10-10",
-          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad",
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "independentSeasonRosterNumber": 2,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "seasonRosterCrossCheckType": "reported_efl_registration",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Ewan Otoo",
@@ -22728,7 +22923,19 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "independentSeasonRosterNumber": 3,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "seasonRosterCrossCheckType": "reported_efl_registration",
+          "seasonSquadSourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "FootballSquads 2026/27 club squad list",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Kieran Ngwenya",
@@ -22740,7 +22947,19 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "independentSeasonRosterNumber": 5,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "seasonRosterCrossCheckType": "reported_efl_registration",
+          "seasonSquadSourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "FootballSquads 2026/27 club squad list",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Denzel Hall",
@@ -22759,7 +22978,16 @@
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.com/rotherham-united/kader/verein/1194/saison_id/2026/plus/1",
           "seasonSquadCheckedAt": "2026-10-10",
-          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad",
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "independentSeasonRosterNumber": 12,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "seasonRosterCrossCheckType": "reported_efl_registration",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Emmanuel Adegboyega",
@@ -22777,7 +23005,16 @@
           "marketValueSourceEuroK": 350,
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/rotherham-united/kader/verein/1194/saison_id/2026",
-          "seasonSquadCheckedAt": "2026-10-09"
+          "seasonSquadCheckedAt": "2026-10-09",
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "independentSeasonRosterNumber": 16,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "seasonRosterCrossCheckType": "reported_efl_registration",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Josh Austerfield",
@@ -22789,7 +23026,19 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "independentSeasonRosterNumber": 4,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "seasonRosterCrossCheckType": "reported_efl_registration",
+          "seasonSquadSourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "FootballSquads 2026/27 club squad list",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Ossama Ashley",
@@ -22808,7 +23057,16 @@
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.com/rotherham-united/kader/verein/1194/saison_id/2026/plus/1",
           "seasonSquadCheckedAt": "2026-10-10",
-          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad",
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "independentSeasonRosterNumber": 6,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "seasonRosterCrossCheckType": "reported_efl_registration",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Kian Spence",
@@ -22827,7 +23085,16 @@
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.com/rotherham-united/kader/verein/1194/saison_id/2026/plus/1",
           "seasonSquadCheckedAt": "2026-10-10",
-          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad",
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "independentSeasonRosterNumber": 8,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "seasonRosterCrossCheckType": "reported_efl_registration",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Jamie Jellis",
@@ -22846,7 +23113,16 @@
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.com/rotherham-united/kader/verein/1194/saison_id/2026/plus/1",
           "seasonSquadCheckedAt": "2026-10-10",
-          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad"
+          "seasonSquadSourceName": "Transfermarkt 2026/27 season squad",
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "independentSeasonRosterNumber": 22,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "seasonRosterCrossCheckType": "reported_efl_registration",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Aaron Nemane",
@@ -22864,7 +23140,16 @@
           "marketValueSourceEuroK": 300,
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/rotherham-united/kader/verein/1194/saison_id/2026",
-          "seasonSquadCheckedAt": "2026-10-09"
+          "seasonSquadCheckedAt": "2026-10-09",
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "independentSeasonRosterNumber": 23,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "seasonRosterCrossCheckType": "reported_efl_registration",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Fabio Tavares",
@@ -22882,7 +23167,16 @@
           "marketValueSourceEuroK": 225,
           "marketValueFxRate": 0.846328,
           "seasonSquadSourceUrl": "https://www.transfermarkt.co.uk/rotherham-united/kader/verein/1194/saison_id/2026",
-          "seasonSquadCheckedAt": "2026-10-09"
+          "seasonSquadCheckedAt": "2026-10-09",
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "independentSeasonRosterNumber": 7,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "seasonRosterCrossCheckType": "reported_efl_registration",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Tom Bradshaw",
@@ -22894,7 +23188,19 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "independentSeasonRosterNumber": 9,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "seasonRosterCrossCheckType": "reported_efl_registration",
+          "seasonSquadSourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "FootballSquads 2026/27 club squad list",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Paul Mullin",
@@ -22906,7 +23212,19 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "independentSeasonRosterNumber": 10,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "seasonRosterCrossCheckType": "reported_efl_registration",
+          "seasonSquadSourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "FootballSquads 2026/27 club squad list",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "shirtCheckedAt": "2026-10-20"
         },
         {
           "player": "Klaidi Lolos",
@@ -22918,7 +23236,19 @@
           "marketValueM": null,
           "minutes": null,
           "goals": null,
-          "assists": null
+          "assists": null,
+          "independentSeasonRosterUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "independentSeasonRosterNumber": 20,
+          "independentSeasonRosterCheckedAt": "2026-10-20",
+          "independentSeasonRosterSourceName": "FootballSquads 2026/27 club squad list",
+          "independentSeasonRosterClassification": "independent_2026_27_season_roster",
+          "seasonRosterCrossCheckUrl": "https://www.rotherhamadvertiser.co.uk/sport/football/rotherham-united/rotherham-united-confirm-squad-list-with-efl-8994233",
+          "seasonRosterCrossCheckType": "reported_efl_registration",
+          "seasonSquadSourceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "seasonSquadCheckedAt": "2026-10-20",
+          "seasonSquadSourceName": "FootballSquads 2026/27 club squad list",
+          "shirtEvidenceUrl": "https://www.footballsquads.co.uk/eng/2026-2027/fltwo/rother.htm",
+          "shirtCheckedAt": "2026-10-20"
         }
       ]
     },
