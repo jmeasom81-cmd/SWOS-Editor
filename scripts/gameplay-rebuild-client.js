@@ -21,7 +21,7 @@ function gameplayTemplate(position){
 function gameplayRatings(profile,division,position){
   if(!Number.isInteger(position)||position<0||position>7)throw Error('Unsupported player position');
   if(![0,1,2,3].includes(division))throw Error('Unsupported English division');
-  const [name,sourcePosition,value,minutes,goals,assists,age]=profile;
+  const [name,sourcePosition,value,minutes,goals,assists,age,sourceUrl]=profile;
   const base=gameplayTemplate(position);
   const divisionOffset=[1.0,0,-0.55,-0.85][division];
   const medians=[25,2.5,0.6,0.25];
@@ -51,7 +51,7 @@ function gameplayRatings(profile,division,position){
   if(!Array.isArray(levels)||levels.length!==7||levels.some(v=>!Number.isInteger(v)||v<0||v>7))
     throw Error('Invalid gameplay skill levels for '+name);
   return{
-    levels,valueIndex,valueStatus:hasValue?'published_source':'gameplay_placeholder',
+    levels,valueIndex,valueStatus:hasValue?(sourceUrl?'linked_master_value':'master_value_unlinked'):'gameplay_placeholder',
     skillsStatus:hasValue?'role_division_and_value_model':'role_division_template',
     goalsUsed:gameplayPresent(minutes)&&minutes>=900&&gameplayPresent(goals),
     assistsUsed:gameplayPresent(minutes)&&minutes>=900&&gameplayPresent(assists),
@@ -99,7 +99,7 @@ function applyEnglandGameplayRebuild(preview){
   const clubMap=new Map(preview.clubChanges.map(c=>[c.name,c]));
   if(clubMap.size!==92)throw Error('Duplicate club names in preview');
   const used=new Set(),records=[],summaries={};
-  let sourceValueCount=0,placeholderValueCount=0,evidenceSupportedSkills=0,positionOnlySkills=0;
+  let sourceValueCount=0,placeholderValueCount=0,linkedValueCount=0,unlinkedValueCount=0,evidenceSupportedSkills=0,positionOnlySkills=0;
   for(const p of preview.playerChanges){
     const c=clubMap.get(p.club);
     if(!c||!Number.isInteger(c.slot)||c.slot<0)throw Error('Unmapped gameplay club '+p.club);
@@ -125,11 +125,14 @@ function applyEnglandGameplayRebuild(preview){
       throw Error('SWOS gameplay encoding verification failed at '+slotKey);
     if(!summaries[c.clubId])summaries[c.clubId]={club:p.club,division:c.division,players:0,publishedValues:0,gameplayPlaceholders:0};
     summaries[c.clubId].players++;
-    if(result.valueStatus==='published_source'){sourceValueCount++;summaries[c.clubId].publishedValues++;evidenceSupportedSkills++}
+    if(result.valueStatus!=='gameplay_placeholder'){
+      sourceValueCount++;summaries[c.clubId].publishedValues++;evidenceSupportedSkills++;
+      if(result.valueStatus==='linked_master_value')linkedValueCount++;else unlinkedValueCount++;
+    }
     else{placeholderValueCount++;summaries[c.clubId].gameplayPlaceholders++;positionOnlySkills++}
     records.push({
       clubId:c.clubId,club:p.club,slot:p.slot,player:profile[0],position,
-      valueSource:result.valueStatus,marketValueM:result.marketValueM,
+      valueSource:result.valueStatus,individualValueSourceUrl:profile[7]||null,marketValueM:result.marketValueM,
       valueIndex:result.valueIndex,ratings:result.levels,
       ratingsMethod:result.skillsStatus,ageUsed:result.ageUsed,
       goalsUsed:result.goalsUsed,assistsUsed:result.assistsUsed
@@ -143,10 +146,10 @@ function applyEnglandGameplayRebuild(preview){
     schemaVersion:1,model:'SWOS v1.36 experimental division/role balance',
     notIndividuallyScouted:true,sourcePlayerCount:expected,
     skillsRebuilt:expected,evidenceSupportedSkills,positionOnlySkills,
-    valuesWritten:expected,sourceValueCount,placeholderValueCount,
+    valuesWritten:expected,sourceValueCount,linkedValueCount,unlinkedValueCount,placeholderValueCount,
     oldPlayerSkillsReused:0,oldPlayerValuesReused:0,
     sourceData:'2026/27 maintained SWOS master with raw playing statistics where available',
-    warning:'Skill profiles are deterministic position/division heuristics, not independent scouting grades. Missing published valuations are replaced by clearly tagged GAMEPLAY PLACEHOLDERS (not financial estimates). This candidate is NOT approved for live installation or match accuracy.',
+    warning:'Skill profiles are deterministic position/division heuristics, not independent scouting grades. Of 1,234 recorded master valuations, individual evidence links are missing for many entries; these are labelled separately. Blank valuations use GAMEPLAY PLACEHOLDERS, not financial estimates. This candidate is NOT approved for live installation or match accuracy.',
     clubs:summaries,players:records
   };
   // The pre-existing TEAM builder counted bytes before player abilities were rebuilt.
