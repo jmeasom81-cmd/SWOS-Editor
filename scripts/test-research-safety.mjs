@@ -98,7 +98,7 @@ assert.equal(reviewCount,8);
 assert.ok(html.includes('2026/27 squad number and membership reviews'));
 assert.ok(html.includes('data-master-review-club'));
 for (const reviewed of batchD.clubs) assert.ok(html.includes(reviewed.id));
-assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,243,'Unexpected valuations tally');
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,238,'Unexpected valuations tally');
 const l2batch=JSON.parse(fs.readFileSync('data/league-two-verified-values-batch-a-2026-10-09.json','utf8'));
 assert.equal(l2batch.clubs.length,3);
 assert.equal(l2batch.clubs.reduce((n,c)=>n+c.players.length,0),32);
@@ -132,7 +132,7 @@ for(const record of latestRochdale.confirmedShirts){
  assert.equal(p.shirtCheckedAt,latestRochdale.checkedAt);
  assert.equal(p.seasonSquadCheckedAt,latestRochdale.checkedAt);
 }
-assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,243,'Current missing valuation tally after subsequent sourced batches');
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,238,'Current missing valuation tally after subsequent sourced batches');
 console.log('Rochdale: 14 original official shirt numbers + 2 current first-team entries now linked (16/16).');
 
 // Batch C: each market value is tied to a named season-squad source, not a guessed valuation.
@@ -179,7 +179,7 @@ assert.equal(batchF.clubs.length,6);
 assert.equal(batchF.clubs.reduce((n,c)=>n+c.players.length,0),52);
 for(const c of batchF.clubs){const stored=master.clubs.find(x=>x.clubId===c.id);assert.ok(stored);for(const v of c.players){const p=stored.players.find(p=>p.player===v.name);assert.ok(p,'Missing valuation '+v.name);assert.equal(p.marketValueSourceEuroK,v.eurThousands);assert.equal(p.marketValueM,Math.round(v.eurThousands*batchF.referenceFxRateEurGbp)/1000);assert.equal(p.marketValueSourceUrl,v.valueSourceUrl);assert.equal(p.seasonSquadSourceUrl,v.squadEvidenceUrl);}for(const [name,fields] of Object.entries(c.officialPlayers)){const p=stored.players.find(p=>p.player===name);assert.ok(p);assert.equal(p.shirt,fields[0]);assert.equal(p.shirtEvidenceUrl,c.squadSourceUrl);if(fields[1])assert.equal(p.nationality,fields[1]);}}
 for(const id of ['chelsea','brentford','bournemouth','nottingham-forest']){const c=master.clubs.find(c=>c.clubId===id);assert.ok(c.players.every(p=>p.marketValueM!=null&&p.shirt!=null&&p.nationality),'Premier club must have essential SWOS data: '+id);assert.equal(new Set(c.players.map(p=>p.shirt)).size,16,'Duplicate shirt '+id);}
-assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM==null).length,243);
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM==null).length,238);
 assert.equal(master.clubs.find(c=>c.clubId==='rochdale').players.find(p=>p.player==='Laurence Maguire').shirtEvidenceUrl,'https://rochdaleafc.co.uk/2026-27-squad-numbers-confirmed/');
 console.log('Batch F: 52 market values, 32 official shirts, 16 nationalities; official squad evidence retained.');
 
@@ -294,15 +294,15 @@ for(const c of batchK.clubs){
   assert.equal(p.marketValueM,Math.round(item.eurThousands*batchK.referenceFxRateEurGbp)/1000);
  }
 }
-assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,243,'Batch K valuation count');
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,238,'Batch K valuation count');
 assert.equal(master.clubs.find(c=>c.clubId==='burton-albion').players.find(p=>p.player==='Kamil Dudek').marketValueM,null,'Unpublished market value must remain blank');
 assert.equal(master.clubs.find(c=>c.clubId==='west-bromwich-albion').players.find(p=>p.player==='Jimmy Morgan').shirtEvidenceUrl,'https://www.goal.com/en-gb/team/west-bromwich-albion/squad/d1lhefp805y0rcbjqkpu4fq0n','Last formerly unconfirmed shirt now requires season evidence');
-console.log('Batch K: 18 source-matched market values across 7 clubs; 243 values remain blank.');
+console.log('Batch K source values preserved; 238 still blank after batch O source checks.');
 
 // Research review L: source review records are deliberately not valuations.
 const researchReviewL=JSON.parse(fs.readFileSync('data/gap-research-review-2026-10-10.json','utf8'));
 assert.equal(researchReviewL.season,'2026/27');
-assert.equal(researchReviewL.reviews.length,26);
+assert.equal(researchReviewL.reviews.length,31);
 const priorReviews=new Set();
 for(const r of researchReviewL.reviews){
  const id=r.clubId+'|'+r.player;
@@ -316,8 +316,8 @@ for(const r of researchReviewL.reviews){
 }
 assert.equal(researchReviewL.reviews.filter(r=>r.status==='membership_check').length,0);
 assert.equal(researchReviewL.reviews.filter(r=>r.status==='membership_source_matched').length,2);
-assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,243);
-console.log('SWOS research review L: 26 reviewed missing values, no assumptions made.');
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,238);
+console.log('SWOS research review: 31 source-reviewed missing valuations (including five current-season dash entries).');
 
 // Batch M: official 2026/27 Premier League shirt numbers are matched independently of market valuations.
 const officialM=JSON.parse(fs.readFileSync('data/premier-league-official-verification-batch-m-2026-10-10.json','utf8'));
@@ -325,7 +325,7 @@ assert.equal(officialM.newlyVerified.length,10);
 assert.equal(officialM.newlyVerified.reduce((n,c)=>n+c.players.length,0),160);
 for(const batch of officialM.newlyVerified){const club=master.clubs.find(c=>c.clubId===batch.clubId);assert.ok(club);for(const r of batch.players){const p=club.players.find(p=>p.player===r.player);assert.ok(p);assert.equal(p.shirt,r.shirt);assert.equal(p.officialPLRosterUrl,officialM.sourceUrl);}}
 assert.equal(master.clubs.filter(c=>c.division==='Premier League').flatMap(c=>c.players).filter(p=>p.officialPLRosterUrl===officialM.sourceUrl).length,320);
-assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,243,'Official source checks must not create values');
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,238,'Official source checks must not create values');
 console.log('Premier League official batch M: 160 newly compared and 160 previously verified shirt numbers linked.');
 
 const batchN=JSON.parse(fs.readFileSync('data/essentials-verification-batch-n-2026-10-20.json','utf8'));
@@ -345,3 +345,30 @@ assert.equal(new Set(westNumbers).size,westNumbers.length,'West Brom #10/#11 mus
 for(const name of ['Gabriel Breeze','Callum Perry'])assert.equal(master.clubs.find(c=>c.clubId==='cambridge-united').players.find(p=>p.player===name).marketValueM,null);
 assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.shirt===null).length,0,'No essential shirt number remains missing');
 console.log('Batch N: 4 current-season shirts/squad source matches; urgent list cleared, no invented valuations.');
+
+// Batch O: compare precisely sourced 2026/27 market prices, never infer absent numeric values.
+const batchO=JSON.parse(fs.readFileSync('data/valuation-verification-batch-o-2026-10-20.json','utf8'));
+assert.equal(batchO.season,'2026/27');
+assert.equal(batchO.valued.length,5);
+assert.equal(batchO.noPublishedValue.length,5);
+assert.equal(batchO.discrepancyFlags.length,3);
+for(const v of batchO.valued){
+ const p=master.clubs.find(c=>c.clubId===v.clubId)?.players.find(p=>p.player===v.player);
+ assert.ok(p,'Unknown Batch O player '+v.player);
+ assert.equal(p.marketValueSourceUrl,v.sourceUrl);
+ assert.equal(p.marketValueSourceEuroK,v.sourceEuroK);
+ assert.equal(p.marketValueFxRate,batchO.referenceFxRateEurGbp);
+ assert.equal(p.marketValueM,Math.round(v.sourceEuroK*batchO.referenceFxRateEurGbp)/1000);
+ assert.equal(p.seasonSquadSourceUrl,v.sourceUrl);
+}
+for(const v of batchO.noPublishedValue){
+ const p=master.clubs.find(c=>c.clubId===v.clubId)?.players.find(p=>p.player===v.player);
+ assert.ok(p&&p.marketValueM===null&&p.seasonSquadSourceUrl===v.sourceUrl);
+ assert.ok(researchReviewL.reviews.some(r=>r.clubId===v.clubId&&r.player===v.player&&r.status==='value_unpublished'));
+}
+for(const issue of batchO.discrepancyFlags){
+ const p=master.clubs.find(c=>c.clubId===issue.clubId)?.players.find(p=>p.player===issue.player);
+ assert.equal(p.shirt,issue.stored,'A researched number dispute must not auto-change game data');
+}
+assert.equal(master.clubs.flatMap(c=>c.players).filter(p=>p.marketValueM===null).length,238);
+console.log('Batch O: 5 individually sourced market values, 5 unpublished values documented, 3 shirt disputes preserved for review.');
