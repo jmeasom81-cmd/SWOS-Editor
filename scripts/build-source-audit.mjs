@@ -76,6 +76,19 @@ for(const p of playerRows){
    unpublished?'No numerical value found in reviewed source; revisit only with new evidence':'No priority action identified';
 }
 for(const key of reviews.keys())if(!playerRows.some(p=>p.clubId+'|'+p.player===key))throw new Error('Priority queue: reviewed player not found '+key);
+const integrationT=JSON.parse(fs.readFileSync('data/york-crawley-exeter-integration-t-2026-10-20.json','utf8'));
+if(integrationT.season!==master.season||integrationT.clubs.length!==3||integrationT.summary.sourceMatched!==43)throw new Error('Invalid League Two integration pack');
+const membershipReviewFlags=integrationT.clubs.flatMap(c=>c.flags);
+for(const f of membershipReviewFlags){
+ const p=playerRows.find(x=>x.clubId===f.clubId&&x.player===f.player);
+ if(!p||p.shirt!==f.shirt||p.squadSourceUrl)throw new Error('Unmatched membership alert '+f.player);
+ p.membershipReviewStatus=f.reviewStatus;
+ p.membershipReviewSourceUrl=f.sourceUrl;
+ p.researchIssues.push('Not present in checked 2026/27 roster; absence is NOT evidence of departure');
+ p.researchPriority='URGENT';
+ p.nextResearchAction='Confirm 2026/27 team from a newer official source before changing SWOS membership';
+}
+
 const sum=rows=>({
  players:rows.length,
  ready:rows.filter(p=>p.essentialReady).length,
@@ -96,7 +109,8 @@ const sum=rows=>({
  low:rows.filter(p=>p.researchPriority==='LOW').length,
  reviewed:rows.filter(p=>p.researchPriority==='REVIEWED').length,
  clear:rows.filter(p=>p.researchPriority==='CLEAR').length,
- nameCollisionRows:rows.filter(p=>p.sameNameOtherClubs.length).length
+ nameCollisionRows:rows.filter(p=>p.sameNameOtherClubs.length).length,
+ membershipReviewCount:rows.filter(p=>p.membershipReviewStatus).length
 });
 const summary=sum(playerRows);
 const clubs=master.clubs.map(c=>{
@@ -116,7 +130,7 @@ if(officialClubBatch.season!==master.season||officialClubBatch.players.length!==
 const batchS=JSON.parse(fs.readFileSync('data/northampton-rotherham-batch-s-2026-10-20.json','utf8'));
 if(batchS.season!==master.season||batchS.clubs.length!==2)throw new Error('Batch S season mismatch');
 for(const issue of batchS.discrepancyFlags){const source=master.clubs.find(c=>c.clubId===issue.clubId)?.players.find(p=>p.player===issue.player);if(!source||source[issue.field]!==issue.stored)throw new Error('Unresolved shirt conflict altered: '+issue.player);}
-const data={season:master.season,generatedAt:master.generatedAt,summary,divisions,clubs,valuationReviewFlags:[...batchO.discrepancyFlags,...batchS.discrepancyFlags.map(x=>({...x,sourceValue:x.sourceNumber}))],verifiedNameCorrections:[{club:officialClubBatch.club,...officialClubBatch.nameFix,sourceUrl:officialClubBatch.players.find(p=>p.player===officialClubBatch.nameFix.to)?.sourceUrl}],players:playerRows};
+const data={season:master.season,generatedAt:master.generatedAt,summary,divisions,clubs,valuationReviewFlags:[...batchO.discrepancyFlags,...batchS.discrepancyFlags.map(x=>({...x,sourceValue:x.sourceNumber}))],membershipReviewFlags,verifiedNameCorrections:[{club:officialClubBatch.club,...officialClubBatch.nameFix,sourceUrl:officialClubBatch.players.find(p=>p.player===officialClubBatch.nameFix.to)?.sourceUrl}],players:playerRows};
 fs.mkdirSync('dist/data',{recursive:true});
 fs.mkdirSync('dist/downloads',{recursive:true});
 fs.writeFileSync('dist/data/source-audit-2026-27.json',JSON.stringify(data,null,2)+'\n');
