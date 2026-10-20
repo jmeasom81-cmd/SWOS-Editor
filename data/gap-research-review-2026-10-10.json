@@ -213,6 +213,46 @@
       "sourceUrl": "https://www.transfermarkt.co.uk/shrewsbury-town/kader/verein/3054",
       "checkedAt": "2026-10-10",
       "note": "Previously reviewed in SWOS batch E with no numerical value listed."
+    },
+    {
+      "clubId": "exeter-city",
+      "player": "Frankie Phillips",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.co.uk/exeter-city/kader/verein/6699/saison_id/2026",
+      "checkedAt": "2026-10-20",
+      "note": "Named in Exeter 2026/27 list, monetary market value shown as a dash; research remains blank."
+    },
+    {
+      "clubId": "exeter-city",
+      "player": "Gwion Edwards",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.co.uk/exeter-city/kader/verein/6699/saison_id/2026",
+      "checkedAt": "2026-10-20",
+      "note": "Named in Exeter 2026/27 list, monetary market value shown as a dash; research remains blank."
+    },
+    {
+      "clubId": "newport-county",
+      "player": "Kieron Evans",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.co.uk/newport-county/kader/verein/3716/saison_id/2026",
+      "checkedAt": "2026-10-20",
+      "note": "Named Newport 2026/27 player #7, monetary market value shown as a dash."
+    },
+    {
+      "clubId": "newport-county",
+      "player": "Christian Doidge",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.co.uk/newport-county/kader/verein/3716/saison_id/2026",
+      "checkedAt": "2026-10-20",
+      "note": "Named Newport 2026/27 player, monetary market value shown as a dash; squad number is not independently confirmed."
+    },
+    {
+      "clubId": "grimsby-town",
+      "player": "Joe Foulkes",
+      "status": "value_unpublished",
+      "sourceUrl": "https://www.transfermarkt.co.uk/grimsby-town/kader/verein/1034/saison_id/2026",
+      "checkedAt": "2026-10-20",
+      "note": "Named Grimsby Town 2026/27 player, monetary market value shown as a dash."
     }
   ]
 }
