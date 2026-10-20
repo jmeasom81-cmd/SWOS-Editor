@@ -40,11 +40,11 @@ function parseTeamFileBytes(bytes){
   return{index,name,division:bytes[off+T.division]};
  })};
 }
-const structure={clubs:Array.from({length:92},(_,i)=>({id:'club'+i,name:'Club '+i}))};
+const structure={clubs:Array.from({length:92},(_,i)=>({id:'club'+i,name:i===0?'XLUB000':'CLUB'+String(i).padStart(3,'0'),aliases:i===0?['CLUB000']:[]}))};
 const mapping=Object.fromEntries(structure.clubs.map((c,i)=>[c.id,{teamIndex:i,method:i===0?'reused':'exact'}]));
 const sandbox={Uint8Array,Map,Set,Math,Number,String,Array,Error,console,
  HEADER_SIZE,TEAM_RECORD_SIZE,PLAYER_RECORD_SIZE,PLAYERS_PER_TEAM,T,P,
- validateTeam,parseTeamFileBytes,normalizeClubName:s=>String(s).trim().toUpperCase(),
+ validateTeam,parseTeamFileBytes,normalizeClubName:s=>String(s).trim().toUpperCase(),safeModernClubName:c=>c.name,
  ENGLAND_2627_STRUCTURE:structure,seasonUpdateState:{mapping,english:{fileName:'TEAM.005'}}};
 vm.runInNewContext(source,sandbox,{timeout:1500});
 const audit=sandbox.auditEnglandRehearsal;
@@ -81,6 +81,7 @@ shouldBlock('away kit corruption',head+T.awayKit,5);
 shouldBlock('unmapped team player edited',head+99*TEAM_RECORD_SIZE+T.players+P.name,77);
 shouldBlock('player low-bit corruption',head+T.players+P.multi,33);
 shouldBlock('unexpected club rename',head+TEAM_RECORD_SIZE+T.name,66);
+shouldBlock('reused legacy club replaced by wrong modern identity',head+T.name,89);
 const doubled={...mapping,club1:{teamIndex:0,method:'exact'}};
 sandbox.seasonUpdateState.mapping=doubled;
 assert.throws(()=>audit(before,after),/same TEAM slot/);
