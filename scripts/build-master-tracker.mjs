@@ -112,6 +112,8 @@ if(valuationO.season!==baseline.season)throw new Error('Batch O season mismatch'
 // Flag integrity risks without silently rewriting any verified game record.
 const batchS=JSON.parse(fs.readFileSync('data/northampton-rotherham-batch-s-2026-10-20.json','utf8'));
 if(batchS.season!==baseline.season||batchS.clubs.length!==2)throw new Error('Northampton/Rotherham review season mismatch');
+const integrationT=JSON.parse(fs.readFileSync('data/york-crawley-exeter-integration-t-2026-10-20.json','utf8'));
+if(integrationT.season!==baseline.season||integrationT.clubs.length!==3)throw new Error('Integration T season mismatch');
 const integrity = [];
 const clubKeys = new Set();
 const byPlayerName = new Map();
@@ -146,6 +148,15 @@ for (const issue of valuationO.discrepancyFlags){
  const player=club?.players.find(p=>p.player===issue.player);
  if(!player||player[issue.field]!==issue.stored)throw new Error('Batch O shirt difference drift: '+issue.player);
  integrity.push(['SOURCE SHIRT MISMATCH',club.division,club.club,issue.player,issue.note,'Verify official 2026/27 kit/squad number; do not auto-apply '+issue.sourceValue]);
+}
+for(const c of integrationT.clubs){
+ const local=baseline.clubs.find(x=>x.clubId===c.clubId);
+ if(!local)throw new Error('Missing integration club '+c.clubId);
+ for(const f of c.flags){
+  const p=local.players.find(x=>x.player===f.player);
+  if(!p||p.shirt!==f.shirt)throw new Error('Bad Exeter membership flag '+f.player);
+  integrity.push(['UNCONFIRMED 2026/27 SQUAD',local.division,local.club,f.player,'Not found in checked independent roster. Source: '+f.sourceUrl,'Confirm with current official club source; do not automatically delete or transfer']);
+ }
 }
 for (const duplicate of byPlayerName.values()) {
   if (duplicate.length <= 1) continue;
@@ -236,12 +247,14 @@ const kitRows = baseline.clubs.map(club => {
 const officialClubRows=baseline.clubs.flatMap(c=>c.players.filter(p=>p.officialClubSourceUrl).map(p=>[c.division,c.club,p.player,p.officialClubShirtNumber,p.officialClubSourceUrl,p.officialClubSourceDate,p.officialClubCheckedAt,p.officialClubSourceKind,'MATCHED TO OFFICIAL CLUB SOURCE']));
 const independentMatchRows=baseline.clubs.flatMap(c=>c.players.filter(p=>p.matchLineupSourceUrl).map(p=>[c.division,c.club,p.player,p.matchLineupShirtNumber,p.matchLineupSourceUrl,p.matchLineupSourceDate,p.matchLineupCheckedAt,p.matchLineupRole,p.matchLineupSourceName,'INDEPENDENT MATCH SHEET · NOT OFFICIAL CLUB']));
 const independentSeasonRosterRows=baseline.clubs.flatMap(c=>c.players.filter(p=>p.independentSeasonRosterUrl).map(p=>[c.division,c.club,p.player,p.independentSeasonRosterNumber,p.independentSeasonRosterUrl,p.independentSeasonRosterCheckedAt,p.independentSeasonRosterSourceName,p.independentSeasonRosterClassification,p.seasonRosterCrossCheckUrl,p.seasonRosterCrossCheckType,'NAMED SEASON SQUAD SOURCE; NOT CLUB-ISSUED']));
+const membershipReviewRowsT=integrationT.clubs.flatMap(c=>c.flags.map(f=>[baseline.clubs.find(x=>x.clubId===c.clubId)?.division,c.club,f.player,f.shirt,f.sourceUrl,f.checkedAt,f.reviewStatus,'Await later club-issued membership confirmation; do not assume departure']));
 const sheets = [
   ['Players',[headers,...rowData],[20,27,23,27,10,18,17,16,14,15,19,28,52,18,60,16,16,16,60,16,24,62,17,65,18,65,18,17,70,18,17,17,22,75,17,18,17,35,20,76,19,18,38,37,78,35],{missingColumns:[4,5,7,8,9],statusColumn:10,filter:true}],
   ['Match-sheet checks',[['Division','Club','Player','Shirt #','Match evidence URL','Match date','Evidence checked','Starter/Bench','Evidence publisher','Classification'],...independentMatchRows],[20,30,30,15,80,18,20,19,38,42],{filter:true}],
   ['Season roster checks',[['Division','Club','Player','Shirt number','Research URL','Checked','Research publisher','Confidence class','Cross-check URL','Cross-check category','Meaning'],...independentSeasonRosterRows],[21,30,30,18,82,18,43,43,80,40,52],{filter:true}],
   ['Official club checks',[['Division','Club','Player','Official shirt #','Club evidence URL','Source published','Checked','Evidence type','Status'],...officialClubRows],[20,28,30,18,80,21,21,25,37],{filter:true}],
   ['Clubs',[clubHeaders,...clubData],[20,30,11,14,22,19,22,19,19,24],{filter:true}],
+  ['Membership review',[['Division','Club','Player','Researched shirt','Checked squad source','Checked at','Status','Action'],...membershipReviewRowsT],[20,30,29,20,80,18,43,68],{filter:true}],
   ['Quality checks', [['Issue','Division','Club','Player','What needs checking','Next action'],...integrity],[23,20,29,30,80,55],{filter:true}],
   ['Squad reviews', [['Status','Division','Club','Player / issue','2026/27 source URL','Checked'],...squadReviewRows],[16,20,30,80,65,17],{filter:true}],
   ['Kit colours', [['Division','Club','Club ID','Reference status','Official 2026/27 shirt','SWOS pattern code','SWOS pattern','Shirt primary code','Primary palette colour','Shirt second code','Second palette colour','Shorts code','Shorts colour','Socks code','Socks colour','Palette approximate','Kit evidence URL','Design cross-check URL','Checked','Limitations / follow-up'],...kitRows], [20,28,25,22,52,19,21,19,22,19,22,16,21,16,21,19,72,72,17,90], {missingColumns:[5,7,9,11,13],filter:true}],
@@ -266,6 +279,7 @@ const sheets = [
    ['Official club checks','Individual dated club announcements or match lineups verify the selected players and shirt numbers. The Leicester set of 16 is checked; the August list is superseded where newer match lineups identify later signings. A verification is point-in-time, not a permanent guarantee.'],
    ['Independent match sheets','Dated third-party lineup evidence, not official club-issued data. Barnsley has 16 selected players matched to numbered September/October lineups. This is point-in-time squad evidence, not market values.'],
    ['Bromley and Wigan checks','Bromley 16/16 selected players linked to the official first-team page; Wigan 16/16 linked to a separately classified independently maintained 2026/27 season archive. Wigan 2 extra official 26/27 shirt-store cross checks. No valuations changed.'],
+   ['York Crawley Exeter review','43 additional named 2026/27 player squad records researched; York first-party, Crawley and Exeter independent. Five Exeter names absent from checked roster are held in Membership review, without guessing transfers or values.'],
    ['Season roster checks','Independent season-wide roster pages are not official football club sources. Separate sheet, source attribution and snapshot date prevent them being mistaken for club announcements.'],
    ['Northampton & Rotherham 20 Oct','32 more player-and-shirt links, sources and cross-checks, 14 previously unlinked squad records. Existing £ values, nationality, position, game/career files remain unchanged.'],
    ['Klaidi Lolos shirt discrepancy','FootballSquads reports #20; Sporx says #25. Research #20 remains in SWOS until stronger club-issued evidence. Quality checks tab makes this disagreement visible.'],
