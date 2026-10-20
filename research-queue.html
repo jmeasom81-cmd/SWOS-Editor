@@ -184,7 +184,7 @@ function render(){
  q('warning').textContent=m.length?'There are '+m.length+' unconfirmed squad-membership record(s) in this view. Do not remove or transfer a player just because a checked squad source omits them.':'';
  renderClubList();
 }
-function csvCell(value){var s=String(value==null?'':value);return '"'+s.replace(/"/g,'""')+'"'}
+function csvCell(value){var s=String(value==null?'':value);if(/^[=+\-@\t\r]/.test(s))s="'"+s;return '"'+s.replace(/"/g,'""')+'"'}
 function exportCsv(){
  var records=selected(),head=['division','club','player','shirt','marketValueM','researchTasks','researchNotes','sourceUrls'];
  var lines=[head.map(csvCell).join(',')].concat(records.map(function(p){
