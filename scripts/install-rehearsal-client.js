@@ -54,6 +54,12 @@ function auditEnglandRehearsal(before,after){
   const unique=new Set(selected.map(t=>normalizeClubName(t.name)));
   if(selected.length!==92||unique.size!==92||counts.join(",")!=="20,24,24,24")
     throw new Error("Candidate did not reopen with 92 unique teams in the expected four divisions.");
+  for(const club of clubs){
+    const actual=reopened.teams[seasonUpdateState.mapping[club.id].teamIndex]?.name||"";
+    const expected=[club.name,...(club.aliases||[]),safeModernClubName(club)].map(normalizeClubName);
+    if(!expected.includes(normalizeClubName(actual)))
+      throw new Error("Club identity still mismatched at "+club.name+": TEAM slot contains "+actual+". Fix mapping before exporting.");
+  }
   return{changedBytes,categories:cats,topFourClubs:selected.length,uniqueClubNames:unique.size,divisionCounts:counts,sourceLength:before.length,candidateLength:after.length,allowedSlots:slots.size};
 }
 async function checkedEnglandRehearsal(){
