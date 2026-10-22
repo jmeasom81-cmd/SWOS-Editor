@@ -33,6 +33,12 @@ Make a stable browser-based SWOS/SWAS editor and a trustworthy 2026/27 English f
 7. Production Vercel may lag GitHub main when quota or build failures occur; only claim deployment when the matching commit is READY.
 8. Update checks/test assertions when a genuinely sourced change alters known counts; never weaken safety assertions merely to force a green build.
 
+## Visitor analytics (pending Vercel dashboard activation)
+- The production pipeline now injects Vercel's cookie-free Web Analytics script into every generated HTML page and tests that it is present once.
+- Enable the standard **Web Analytics** feature in Vercel's SWOS project dashboard, then redeploy after enabling. This requires project-owner action; the available connector cannot toggle the project-level Analytics service.
+- See WEB-ANALYTICS-SETUP.md for exact activation and verification instructions. Do not claim recorded visitors until the Vercel analytics API returns real counts.
+- Historical visitors from before activation are not recoverable.
+
 ## Next useful milestones
 - Source-check remaining League One/League Two roster identities and missing player valuation evidence. Determine current outstanding totals from the latest audit rather than this prose.
 - Validate 2026/27 shirt numbers and conflicting player identities without guesswork.
