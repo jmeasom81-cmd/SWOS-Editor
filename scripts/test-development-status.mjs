@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import vm from 'node:vm';
+const page=fs.readFileSync('dist/development-status.html','utf8');
+const app=fs.readFileSync('dist/index.html','utf8');
+const audit=JSON.parse(fs.readFileSync('dist/data/source-audit-2026-27.json','utf8'));
+assert.equal(audit.summary.players,1472);
+assert.equal((page.match(/<tr data-division=/g)||[]).length,92,'All clubs must appear');
+assert.ok(page.includes(audit.summary.ready.toLocaleString('en-GB')),'Totals must come from live audit');
+for(const marker of ['Club research priorities','Magic DOSBox','Direct installation','SWOS_Research_Priority_2026-27.csv'])assert.ok(page.includes(marker),'Missing '+marker);
+assert.ok(app.includes('href="/development-status.html"'),'No editor link');
+assert.ok(app.includes('id="exportSwosTestZip"')&&!app.includes('id="installSeasonUpdate"'),'Game installer unexpectedly enabled');
+const match=page.match(/<script>([\s\S]*?)<\/script>/);
+assert.ok(match);assert.doesNotThrow(()=>new vm.Script(match[1]));
+console.log('SWOS development handover verified: all 92 clubs, matching audit data, safe game test gate.');
