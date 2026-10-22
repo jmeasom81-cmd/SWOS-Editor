@@ -8,7 +8,6 @@ const output='dist';
 const expected=['index.html','research-queue.html','source-audit-2026-27.html','development-status.html'];
 for(const file of expected)if(!fs.existsSync(path.join(output,file)))throw Error('Analytics: expected page missing '+file);
 const snippet='<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>\n<script defer src="/_vercel/insights/script.js"></script>';
-const signature='/_vercel/insights/script.js';
 const list=[];
 function traverse(directory){
  for(const entry of fs.readdirSync(directory,{withFileTypes:true})){
@@ -22,15 +21,17 @@ if(list.length<expected.length)throw Error('Analytics: not all pages discovered'
 let inserted=0;
 for(const file of list){
  const original=fs.readFileSync(file,'utf8');
- const found=original.split(signature).length-1;
- if(found>1)throw Error('Analytics: duplicate snippets already present in '+file);
- if(found===1){
-  if(!original.includes('window.va=window.va||function()'))throw Error('Analytics: existing snippet incomplete in '+file);
-  continue;
- }
  const headEnd=/<\/head\s*>/i.exec(original);
  if(!headEnd||!/<head(?:\s[^>]*)?>/i.test(original.slice(0,headEnd.index)))throw Error('Analytics: no HTML head in '+file);
- const updated=original.slice(0,headEnd.index)+snippet+'\n'+original.slice(headEnd.index);
+ const head=original.slice(0,headEnd.index);
+ // The editor embeds source text that can mention the analytics URL. Count only
+ // actual script elements within the document head, never arbitrary strings.
+ const scripts=head.match(/<script\b[^>]*\bsrc\s*=\s*["']\/_vercel\/insights\/script\.js["'][^>]*>\s*<\/script>/gi)||[];
+ if(scripts.length>1)throw Error('Analytics: duplicate tracking elements in '+file);
+ const hasStub=head.includes('window.va=window.va||function()');
+ if(scripts.length===1&&hasStub)continue;
+ const missing=hasStub?'<script defer src="/_vercel/insights/script.js"></script>':scripts.length?'<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>':snippet;
+ const updated=head+missing+'\n'+original.slice(headEnd.index);
  fs.writeFileSync(file,updated);
  inserted++;
 }

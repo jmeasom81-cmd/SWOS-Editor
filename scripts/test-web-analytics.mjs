@@ -7,10 +7,12 @@ scan('dist');
 assert.ok(all.length>=4,'Expected at least 4 published site pages');
 for(const file of all){
  const html=fs.readFileSync(file,'utf8');
- assert.equal(html.split('src="/_vercel/insights/script.js"').length-1,1,'Missing/duplicate analytics script in '+file);
- assert.equal(html.split('window.va=window.va||function()').length-1,1,'Missing/duplicate Vercel snippet bootstrap in '+file);
  const headEnd=html.search(/<\/head\s*>/i);
- assert.ok(html.indexOf('src="/_vercel/insights/script.js"')<headEnd,'Analytics tag should be in head: '+file);
+ assert.ok(headEnd>0,'Missing head in '+file);
+ const head=html.slice(0,headEnd);
+ const realTags=head.match(/<script\b[^>]*\bsrc\s*=\s*["']\/_vercel\/insights\/script\.js["'][^>]*>\s*<\/script>/gi)||[];
+ assert.equal(realTags.length,1,'Expected one real analytics script in document head: '+file);
+ assert.ok(head.includes('window.va=window.va||function()'),'Missing analytics bootstrap in head: '+file);
 }
 const app=fs.readFileSync('dist/index.html','utf8');
 assert.ok(app.includes('SWOS Studio v1.37.0'),'Do not remove game test suite');
