@@ -1,0 +1,42 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#091624"><title>SWOS Studio | Development Progress</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,Segoe UI,sans-serif}*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at top,#1a344d,#091624 65%);color:#f4f8ff}
+main{max-width:1160px;margin:auto;padding:22px 16px 70px}h1{font-size:clamp(29px,5vw,45px);margin:8px 0}h2{font-size:21px;margin:0 0 12px}
+p{color:#c0d0df;line-height:1.6}.eyebrow{color:#9ce7b6;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin:19px 0}nav a{padding:10px 12px;border:1px solid #53728b;border-radius:9px;color:#a6ebbe;text-decoration:none;background:#132c40;font-size:13px;font-weight:700}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.metric,.stage,.division{display:flex;flex-direction:column;gap:5px;padding:15px;border:1px solid #37536a;background:#14283c;border-radius:12px}
+.metric strong{font-size:clamp(24px,4vw,34px)}.metric b{font-size:13px}.metric small{color:#aac3d6;font-size:12px;line-height:1.45}
+.section{margin-top:32px}.stages,.divisions{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.stage h3{margin:4px 0;font-size:16px}.stage p{font-size:13px;margin:0}.tag{color:#a2eec4;text-transform:uppercase;font-size:11px;font-weight:800}.tag.wait{color:#ffcf9c}
+.division strong{font-size:14px}.division span{font-size:12px;color:#b5cbdc}
+.controls{display:flex;flex-wrap:wrap;gap:9px;margin:15px 0}.controls input,.controls select{flex:1;min-width:180px;padding:12px;border:1px solid #6b8397;border-radius:9px;background:#0c1f30;color:#fff;font:inherit}
+.tablewrap{overflow:auto;border:1px solid #3e5b73;border-radius:10px}table{width:100%;min-width:850px;border-collapse:collapse}th,td{text-align:left;padding:11px 10px;border-bottom:1px solid #31485b;font-size:12px}
+th{background:#173145;color:#d3e1eb}td b,td small{display:block}td small{color:#aec4d1}tr[hidden]{display:none}
+.notice{background:#222d37;border-left:3px solid #f2b977;border-radius:8px;padding:14px;font-size:13px;line-height:1.65}
+.meta,footer{font-size:12px;color:#a8bfd2}footer{margin-top:32px;border-top:1px solid #3b586d;padding-top:15px}footer a{color:#a9ebbf}
+@media(min-width:850px){.stats{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style></head><body><main>
+<div class="eyebrow">SWOS Studio · Permanent build handover</div><h1>Development progress</h1>
+<p>What works, what is still under construction and which club data needs attention. These numbers are regenerated from the published source audit whenever we build, not remembered from a conversation.</p>
+<nav><a href="/">← Editor</a><a href="/research-queue.html">Research worklist</a><a href="/source-audit-2026-27.html">Squad & source audit</a><a href="/downloads/SWOS_Master_2026-27.xlsx">Excel master ↓</a><a href="/downloads/SWOS_Research_Priority_2026-27.csv">Research CSV ↓</a></nav>
+<div class="stats">__STATS__</div><p class="meta">Data snapshot __DATA_DATE__ · Site built __BUILD_DATE__ · SWOS Studio v1.37 · Season 2026/27</p>
+<section class="section"><h2>Release stages</h2><div class="stages">
+<article class="stage"><span class="tag">Available</span><h3>Current editor & career tools</h3><p>Existing file editors are retained; the research tools do not rewrite source game files.</p></article>
+<article class="stage"><span class="tag">Available for manual testing</span><h3>Copy-only game ZIP</h3><p>Magic DOSBox test package, copied TEAM checksum check and six-item manual QA report. Real game compatibility is not yet confirmed.</p></article>
+<article class="stage"><span class="tag wait">Research continues</span><h3>2026/27 players & kit colours</h3><p>All 92 clubs present; verify roster membership, individual valuations, numbers and full home kits.</p></article>
+<article class="stage"><span class="tag wait">Safety locked</span><h3>Direct installation</h3><p>No automated overwrite. Retain original TEAM files and careers until in-game checks pass.</p></article>
+</div></section>
+<section class="section"><h2>By division</h2><div class="divisions">__DIVISIONS__</div></section>
+<section class="section"><h2>Club research priorities</h2><p>All 92 clubs, biggest research workloads first. An evidence link alone does not prove permanent squad membership.</p>
+<div class="controls"><input type="search" id="find" placeholder="Find a club…" aria-label="Search club"><select id="division" aria-label="Division"><option value="">All divisions</option><option>Premier League</option><option>Championship</option><option>League One</option><option>League Two</option></select></div>
+<p id="count" class="meta" role="status"></p>
+<div class="tablewrap"><table><thead><tr><th>Club</th><th>Essentials</th><th>Squad links</th><th>Missing values</th><th>Values lacking source</th><th>Full home kit</th><th>Urgent / High</th></tr></thead><tbody id="clubRows">__ROWS__</tbody></table></div></section>
+<section class="section"><div class="notice"><strong>Protect the original game:</strong> provisional SWOS skill profiles are not verified scouting ratings. Unknown valuations must never be turned into zero or fabricated prices; shirt-number conflicts stay flagged until independently checked. Direct installation is locked until the copy-only game candidate has passed manual Magic DOSBox testing.</div></section>
+<footer>Development continuity is stored in the <a href="https://github.com/jmeasom81-cmd/SWOS-Editor/blob/main/DEVELOPMENT-HANDOFF.md">GitHub project handover</a>. Use the latest repository commit and deployment when beginning a new chat.</footer>
+</main><script>
+(function(){const s=document.getElementById('find'),d=document.getElementById('division'),rows=[...document.querySelectorAll('#clubRows tr')];
+function draw(){const term=s.value.trim().toLocaleLowerCase(),division=d.value;let count=0;for(const row of rows){const ok=(!term||row.dataset.club.includes(term))&&(!division||row.dataset.division===division);row.hidden=!ok;if(ok)count++}document.getElementById('count').textContent=count+' of '+rows.length+' clubs';}
+s.addEventListener('input',draw);d.addEventListener('change',draw);draw()})();
+</script></body></html>
