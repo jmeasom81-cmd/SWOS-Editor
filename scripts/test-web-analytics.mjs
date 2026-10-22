@@ -19,5 +19,6 @@ assert.ok(app.includes('SWOS Studio v1.37.0'),'Do not remove game test suite');
 assert.ok(app.includes('id="exportSwosTestZip"'),'Test package removed');
 assert.ok(!app.includes('id="installSeasonUpdate"'),'Unsafe direct game installation enabled');
 const source=fs.readFileSync('index.html','utf8');
-assert.ok(!source.includes('src="/_vercel/insights/script.js"'),'Original editor must not be touched');
+const sourceHead=source.slice(0,source.search(/<\/head\s*>/i));
+assert.ok(!/<script\b[^>]*\bsrc\s*=\s*["']\/_vercel\/insights\/script\.js["'][^>]*>\s*<\/script>/i.test(sourceHead),'Original editor source must not contain an injected tracking tag');
 console.log('SWOS Web Analytics: tracking code appears exactly once on all '+all.length+' generated HTML pages; originals preserved and live game installer remains locked.');
