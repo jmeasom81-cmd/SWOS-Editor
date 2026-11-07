@@ -51,13 +51,13 @@ footer{margin-top:18px;color:#9bafc0;font-size:12px;line-height:1.7}
 <main>
 <div class="top"><div class="brand">SWOS EDITOR / DATA QUALITY</div><a class="back" href="./">← Back to editor</a></div>
 <h1>2026/27 research queue <span class="readonly">READ ONLY</span></h1>
-<p class="subtitle">Work through player research gaps by club. Missing market values stay unknown: this screen does not invent valuations, change squad numbers, or modify the original game files.</p>
+<p class="subtitle">Work through player research gaps by club. Squad evidence includes official league/club references, independent season rosters and dated match sheets; a source link alone does not prove membership. Missing market values stay unknown. This view never changes game files.</p>
 <div id="status" role="status" aria-live="polite" class="small">Loading current master and review notes…</div>
 <section class="metrics" aria-label="Data quality summary">
 <div class="metric"><div class="n" id="clubCount">—</div><div class="label">Clubs</div></div>
 <div class="metric"><div class="n" id="playerCount">—</div><div class="label">Players</div></div>
 <div class="metric"><div class="n" id="missingValueCount">—</div><div class="label">Missing valuations</div></div>
-<div class="metric"><div class="n" id="squadMissingCount">—</div><div class="label">No squad source</div></div>
+<div class="metric"><div class="n" id="squadMissingCount">—</div><div class="label">No individual squad evidence</div></div>
 <div class="metric"><div class="n" id="membershipCount">—</div><div class="label">Membership reviews</div></div>
 </section>
 <section class="panel">
@@ -93,7 +93,7 @@ footer{margin-top:18px;color:#9bafc0;font-size:12px;line-height:1.7}
 </table></div>
 <div class="pages"><button id="previous" type="button">← Previous</button><span class="small" id="pageInfo"></span><button id="next" type="button">Next →</button></div>
 </section></div>
-<footer>Source of truth: <code>data/master-2026-27.json</code>, plus the latest York/Crawley/Exeter integration review. A missing source link is not proof that a player has left. Club membership disputes are research alerts, never automatic replacements. Only published evidence should be used to change the master data.</footer>
+<footer>Source of truth: <code>data/master-2026-27.json</code>, using the same squad-source precedence as the published source audit, plus the York/Crawley/Exeter integration review. A missing source link is not proof that a player has left. Club membership disputes are research alerts, never automatic replacements. Only published evidence should be used to change the master data.</footer>
 </main>
 <script>
 (function(){
@@ -105,6 +105,9 @@ var safeUrl=function(url){return /^https?:\/\/[^\s<>"']+$/i.test(String(url||'')
 var lower=function(s){return String(s||'').toLocaleLowerCase()};
 var gapNames={membership:'Squad membership unconfirmed',duplicate:'Duplicate shirt number',squad:'No 2026/27 squad evidence',shirt:'Shirt number missing',value:'No published valuation',provenance:'Valuation source missing',nationality:'Nationality missing'};
 var priority={membership:0,duplicate:1,squad:2,shirt:3,value:4,provenance:5,nationality:6};
+// Match the squad-source precedence used by scripts/build-source-audit.mjs.
+// A linked source is evidence to review, not proof of current club membership.
+function squadEvidenceUrl(p){return p.officialPLRosterUrl||p.officialClubSourceUrl||p.matchLineupSourceUrl||p.independentSeasonRosterUrl||p.seasonSquadSourceUrl||null;}
 function count(id,value){q(id).textContent=Number(value).toLocaleString('en-GB')}
 function rowsForClub(club,flagMap){
  var numberCounts={};
@@ -114,14 +117,15 @@ function rowsForClub(club,flagMap){
   var issues=[],notes=[];
   if(flagMap[key]){issues.push('membership');notes.push(flagMap[key].reason||'Current club squad membership is not confirmed by the checked source')}
   if(p.shirt!==null&&p.shirt!==undefined&&p.shirt!==''&&numberCounts[String(p.shirt)]>1)issues.push('duplicate');
-  if(!p.seasonSquadSourceUrl)issues.push('squad');
+  if(!squadEvidenceUrl(p))issues.push('squad');
   if(p.shirt===null||p.shirt===undefined||p.shirt==='')issues.push('shirt');
   if(p.marketValueM===null||p.marketValueM===undefined||p.marketValueM==='')issues.push('value');
   else if(!p.marketValueSourceUrl)issues.push('provenance');
   if(!p.nationality)issues.push('nationality');
   var links=[];
-  [['Club source',p.officialClubSourceUrl],['Season squad',p.seasonSquadSourceUrl],
-  ['Shirt number',p.shirtEvidenceUrl],['Independent roster',p.independentSeasonRosterUrl],
+  [['Official league roster',p.officialPLRosterUrl],['Official club',p.officialClubSourceUrl],
+  ['Match sheet',p.matchLineupSourceUrl],['Independent roster',p.independentSeasonRosterUrl],
+  ['Season squad',p.seasonSquadSourceUrl],['Shirt number',p.shirtEvidenceUrl],
   ['Value evidence',p.marketValueSourceUrl],['Review source',flagMap[key]&&flagMap[key].sourceUrl]]
   .forEach(function(pair){var u=safeUrl(pair[1]);if(u&&!links.some(function(x){return x.url===u}))links.push({label:pair[0],url:u})});
   return {player:p.player,club:club.club||club.clubName||club.name||club.clubId,
@@ -216,7 +220,7 @@ Promise.all([
  var all=master.clubs.flatMap(function(c){return c.players||[]});
  count('clubCount',master.clubs.length);count('playerCount',all.length);
  count('missingValueCount',all.filter(function(p){return p.marketValueM===null||p.marketValueM===undefined||p.marketValueM===''}).length);
- count('squadMissingCount',all.filter(function(p){return !p.seasonSquadSourceUrl}).length);
+ count('squadMissingCount',all.filter(function(p){return !squadEvidenceUrl(p)}).length);
  count('membershipCount',Object.keys(flagMap).length);
  q('division').innerHTML='<option value="">All divisions</option>'+Array.from(new Set(master.clubs.map(function(c){return c.division}))).map(function(d){return '<option value="'+esc(d)+'">'+esc(d)+'</option>'}).join('');
  wire();render();

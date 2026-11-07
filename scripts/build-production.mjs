@@ -10,6 +10,7 @@ const steps = [
   "scripts/build-source-audit.mjs",
   "scripts/test-source-audit.mjs",
   "scripts/build-research-queue.mjs",
+  "scripts/test-research-queue.mjs",
   "scripts/build-install-rehearsal.mjs",
   "scripts/test-install-rehearsal.mjs",
   "scripts/build-gameplay-rebuild.mjs",
