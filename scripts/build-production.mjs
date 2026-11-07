@@ -18,6 +18,8 @@ const steps = [
   "scripts/build-test-pack.mjs",
   "scripts/test-test-pack.mjs",
   "scripts/build-development-status.mjs",
+  "scripts/build-club-dossier.mjs",
+  "scripts/test-club-dossier.mjs",
   "scripts/test-development-status.mjs",
   "scripts/build-web-analytics.mjs",
   "scripts/test-web-analytics.mjs"

@@ -39,6 +39,11 @@ Make a stable browser-based SWOS/SWAS editor and a trustworthy 2026/27 English f
 - See WEB-ANALYTICS-SETUP.md for exact activation and verification instructions. Do not claim recorded visitors until the Vercel analytics API returns real counts.
 - Historical visitors from before activation are not recoverable.
 
+## November 2026 club dossiers
+- Generated read-only `club-dossier.html` uses `dist/data/source-audit-2026-27.json` as its sole data source and displays all 92 clubs / 16 player slots each, per-player evidence, prioritised actions, kit evidence, CSV export, and a print/PDF layout. The page is linked from the editor, progress dashboard, and research worklist.
+- This is not evidence that football research is fully current; linked sources still require review. No editor binary, career save, installation, or original TEAM data was changed.
+- The dossier is built and regression tested during the ordinary production build, before Web Analytics injection.
+
 ## Next useful milestones
 - Source-check remaining League One/League Two roster identities and missing player valuation evidence. Determine current outstanding totals from the latest audit rather than this prose.
 - Validate 2026/27 shirt numbers and conflicting player identities without guesswork.

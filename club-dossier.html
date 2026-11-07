@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#081622">
+<title>SWOS Studio | Club Research Dossier 2026/27</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--bg:#081622;--panel:#122739;--edge:#375369;--ink:#f1f7fd;--muted:#b9ccdc;--mint:#a3ebbf}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top right,#1d433c,var(--bg) 48%);color:var(--ink)}
+main{max-width:1220px;margin:auto;padding:24px 16px 72px}h1{font-size:clamp(29px,5vw,46px);margin:6px 0 10px;letter-spacing:-.04em}
+h2{font-size:21px;margin:0 0 12px}.eyebrow{font-size:12px;letter-spacing:.1em;color:var(--mint);text-transform:uppercase;font-weight:800}
+p{line-height:1.55;color:var(--muted)}nav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 24px}
+nav a{color:var(--mint);text-decoration:none;border:1px solid var(--edge);background:var(--panel);padding:10px 12px;border-radius:9px;font-size:13px;font-weight:700}
+.panel,.metric,.person{border:1px solid var(--edge);border-radius:13px;background:var(--panel)}
+.controls{display:grid;grid-template-columns:1fr 2fr 1fr;gap:12px;padding:16px}
+label{font-size:12px;font-weight:750;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+select,button{border:1px solid #64829b;background:#0a1d2e;color:var(--ink);padding:11px;border-radius:9px;font:inherit;min-height:44px}
+button{cursor:pointer}button:hover{border-color:var(--mint)}button:focus-visible,select:focus-visible,a:focus-visible{outline:2px solid var(--mint);outline-offset:2px}
+.check{display:flex;flex-direction:row;align-items:center;gap:9px;padding:10px 0;cursor:pointer}.check input{accent-color:var(--mint);width:19px;height:19px}
+.actions{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin-top:14px}.actions button{font-size:13px;font-weight:800}.actions .small{margin-left:auto}
+.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:18px 0}.metric{padding:15px}.metric strong{display:block;font-size:clamp(24px,4vw,33px)}.metric span{display:block;color:var(--muted);font-size:12px;line-height:1.4}
+.notice{border-left:3px solid #efc181;background:#2b2f34;color:#f3ddbf;border-radius:8px;padding:13px;font-size:13px;line-height:1.55;margin:16px 0}
+.clubhead{display:flex;gap:12px;flex-wrap:wrap;justify-content:space-between;align-items:start;margin-top:28px}
+.clubhead p{margin:0}.kit{font-size:13px;color:var(--muted)}.kit a{color:var(--mint)}
+.statusline{font-size:12px;color:var(--muted);margin:10px 0}
+.people{display:grid;gap:10px}.person{padding:14px 15px;break-inside:avoid}
+.person-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.name{font-size:16px;font-weight:850}.meta{font-size:12px;color:var(--muted);margin-top:5px}
+.pill{font-size:10px;font-weight:850;letter-spacing:.04em;border:1px solid #637586;border-radius:7px;padding:5px 7px}
+.pill.URGENT{border-color:#eb8d89;color:#ffd0cb}.pill.HIGH{border-color:#e7ae6d;color:#ffdaad}.pill.MEDIUM{border-color:#b3b9ee;color:#dadcf7}
+.pill.LOW{border-color:#88afca;color:#b5dcea}.pill.REVIEWED,.pill.CLEAR{border-color:#71b693;color:#b4e9c6}
+.issues{margin:11px 0 6px;display:flex;gap:6px;flex-wrap:wrap}.issue{font-size:11px;background:#263648;border:1px solid #41546a;border-radius:6px;padding:5px 7px;color:#e5edf5}
+.next{font-size:12px;color:#d9e6f2;margin-top:9px;line-height:1.5}.next b{color:var(--mint)}
+.sources{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}.sources a{border-bottom:1px solid #67947e;color:var(--mint);font-size:11px;text-decoration:none;padding:3px 0}
+.empty{border:1px dashed #52738a;border-radius:10px;padding:26px;text-align:center;color:var(--muted)}
+.footer{font-size:12px;color:var(--muted);border-top:1px solid var(--edge);margin-top:28px;padding-top:14px}
+@media(max-width:700px){main{padding:16px 12px 55px}.controls{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.actions .small{width:100%;margin:0}.person{padding:12px}}
+@media print{
+:root{color-scheme:light;--bg:#fff;--panel:#fff;--edge:#aaa;--ink:#111;--muted:#444;--mint:#154e37}
+body{background:white;color:black}main{max-width:none;padding:0}nav,.controls,.actions,.print-hide{display:none!important}
+.person,.metric{background:white;border-color:#aaa;color:black}.notice{background:white;color:black;border-color:#666}
+.pill,.issue{color:#111!important;background:white;border-color:#999!important}.sources a{color:#111;text-decoration:underline}
+}
+</style>
+</head>
+<body>
+<main>
+<div class="eyebrow">SWOS Studio · 2026/27 · Read-only research</div>
+<h1>Club research dossier</h1>
+<p>One printable view for all 92 clubs: 16 SWOS player slots, missing evidence, shirt numbers, valuations and next research steps. Figures are taken from the published source audit—not inferred from browsing or generated on the fly.</p>
+<nav><a href="/">← Editor</a><a href="/development-status.html">Development progress</a><a href="/research-queue.html">Research worklist</a><a href="/source-audit-2026-27.html">Source audit</a></nav>
+<section class="panel controls" aria-label="Select club">
+<label>Division<select id="division"><option value="">All four divisions</option></select></label>
+<label>Club<select id="club"><option value="">Loading clubs…</option></select></label>
+<label>Player order<select id="order"><option value="priority">Research priority first</option><option value="shirt">Shirt number</option><option value="name">Player name</option></select></label>
+<label class="check"><input id="onlyOpen" type="checkbox"> Show outstanding research only</label>
+</section>
+<div class="actions">
+<button id="previous" type="button">← Previous club</button>
+<button id="next" type="button">Next club →</button>
+<button id="csv" type="button">Export club CSV ↓</button>
+<button id="print" type="button">Print / save PDF</button>
+<span class="small" id="loaded" role="status" aria-live="polite">Loading source audit…</span>
+</div>
+<section id="metrics" class="metrics" aria-label="Club data quality"></section>
+<div class="notice"><b>Evidence ≠ confirmed membership.</b> An official or independent link is a research reference and must be checked for date, identity and season. Unknown market valuations remain unknown, never £0. This page does not change original SWOS game files or activate direct installation.</div>
+<div class="clubhead"><div><h2 id="clubName">Choose a club</h2><p id="clubInfo"></p></div><div class="kit" id="kitInfo"></div></div>
+<p id="count" class="statusline"></p>
+<section id="people" class="people" aria-label="Squad research details"><div class="empty">Loading player records…</div></section>
+<div class="footer">Data: <span id="snapshot">—</span> · Season 2026/27 · Stored research snapshot, not a live transfer feed. The six-step in-game QA gate remains mandatory before game installation.</div>
+</main>
+<script>
+(function(){
+'use strict';
+var data=null,selected='';
+var $=function(id){return document.getElementById(id)};
+var esc=function(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c]})};
+var n=function(v){return Number(v).toLocaleString('en-GB')};
+var missing=function(v){return v===null||v===undefined||v===''};
+var url=function(v){return /^https?:\/\/[^\s<>"']+$/i.test(String(v||''))?String(v):null};
+var order={URGENT:0,HIGH:1,MEDIUM:2,LOW:3,REVIEWED:4,CLEAR:5};
+function exportCell(v){var s=String(v==null?'':v);if(/^[=+\-@\t\r]/.test(s))s="'"+s;return '"'+s.replace(/"/g,'""')+'"'}
+function sourceLinks(p){
+ var pairs=[['Official league squad',p.officialPLRosterUrl],['Official club',p.officialClubSourceUrl],
+ ['Dated match sheet',p.matchLineupSourceUrl],['Season roster',p.independentSeasonRosterUrl],
+ ['Squad evidence',p.squadSourceUrl],['Shirt number',p.shirtSourceUrl],
+ ['Market value',p.valueSourceUrl],['Nationality',p.nationalitySourceUrl],['Research review',p.reviewSourceUrl],
+ ['Membership check',p.membershipReviewSourceUrl]];
+ var seen=new Set;
+ return pairs.filter(function(x){var u=url(x[1]);if(!u||seen.has(u))return false;seen.add(u);x[1]=u;return true});
+}
+function getClubs(){return data.clubs.filter(function(c){return !$('division').value||c.division===$('division').value}).slice().sort(function(a,b){return a.club.localeCompare(b.club)})}
+function currentClub(){return data.clubs.find(function(c){return c.clubId===selected})}
+function clubPlayers(){return data.players.filter(function(p){return p.clubId===selected})}
+function allSorted(){
+ var players=clubPlayers().filter(function(p){return !$('onlyOpen').checked||p.researchPriority!=='CLEAR'});
+ var mode=$('order').value;
+ return players.sort(function(a,b){
+  if(mode==='shirt')return (missing(a.shirt)?999:Number(a.shirt))-(missing(b.shirt)?999:Number(b.shirt))||a.player.localeCompare(b.player);
+  if(mode==='name')return a.player.localeCompare(b.player);
+  return (order[a.researchPriority]??99)-(order[b.researchPriority]??99)||a.player.localeCompare(b.player);
+ });
+}
+function metric(value,label){return '<article class="metric"><strong>'+n(value)+'</strong><span>'+esc(label)+'</span></article>'}
+function person(p){
+ var value=missing(p.marketValueM)?'Unknown':'£'+Number(p.marketValueM).toFixed(3)+'m';
+ var source=sourceLinks(p);
+ var issues=Array.isArray(p.researchIssues)?p.researchIssues:[];
+ return '<article class="person"><div class="person-top"><div><div class="name">'+esc(p.player)+'</div>'+
+ '<div class="meta">#'+esc(missing(p.shirt)?'—':p.shirt)+' · Position '+esc(p.position||'Unknown')+
+ ' · '+esc(p.nationality||'Nationality unknown')+' · Value '+esc(value)+'</div></div>'+
+ '<span class="pill '+esc(p.researchPriority)+'">'+esc(p.researchPriority)+'</span></div>'+
+ (issues.length?'<div class="issues">'+issues.map(function(i){return '<span class="issue">'+esc(i)+'</span>'}).join('')+'</div>':
+ '<div class="meta">No outstanding research flags in this snapshot</div>')+
+ (p.nextResearchAction&&p.researchPriority!=='CLEAR'?'<div class="next"><b>Next:</b> '+esc(p.nextResearchAction)+'</div>':'')+
+ (source.length?'<div class="sources">'+source.map(function(s){return '<a href="'+esc(s[1])+'" target="_blank" rel="noopener noreferrer">'+esc(s[0])+' ↗</a>'}).join('')+'</div>':
+ '<div class="meta">No individual source URL recorded</div>')+'</article>';
+}
+function render(){
+ if(!data)return;
+ var club=currentClub();if(!club)return;
+ var players=allSorted(),kit=url(club.homeShirtSourceUrl);
+ $('clubName').textContent=club.club;
+ $('clubInfo').textContent=club.division+' · 16 research slots · '+club.urgent+' urgent · '+club.high+' high · '+club.medium+' medium';
+ $('kitInfo').innerHTML=(club.fullHomeKit?'Full home kit sourced':'Full home kit not yet sourced')+
+ (kit?' · <a href="'+esc(kit)+'" target="_blank" rel="noopener noreferrer">Kit evidence ↗</a>':'');
+ $('metrics').innerHTML=metric(club.ready,'All four essentials filled / 16')+metric(club.squadLinked,'Players with squad evidence / 16')+
+ metric(club.squadUnlinked,'Players without squad evidence')+metric(club.valuedWithoutIndividualSource,'Recorded values without direct URLs')+
+ metric(16-club.priced,'Unknown numerical valuations')+metric(club.membershipReviewCount,'Unresolved membership checks')+
+ metric(club.officialClubLinked,'Official club references')+metric(club.independentMatchLinked,'Dated independent match sheets');
+ $('people').innerHTML=players.length?players.map(person).join(''):'<div class="empty">No outstanding research flags for this club.</div>';
+ $('count').textContent='Showing '+players.length+' of 16 players'+($('onlyOpen').checked?' with outstanding work':'')+'. Snapshot: '+(data.generatedAt||'undated')+'.';
+ $('loaded').textContent=club.club+' loaded';
+ var clubs=getClubs(),ix=clubs.findIndex(function(c){return c.clubId===selected});
+ $('previous').disabled=ix<=0;$('next').disabled=ix<0||ix===clubs.length-1;
+}
+function setClub(id){
+ if(!data.clubs.some(function(c){return c.clubId===id}))return;
+ selected=id;$('club').value=id;
+ var loc=new URL(location.href);loc.searchParams.set('club',id);history.replaceState(null,'',loc.pathname+loc.search);
+ render();
+}
+function refreshOptions(){
+ var clubs=getClubs();
+ $('club').innerHTML=clubs.map(function(c){return '<option value="'+esc(c.clubId)+'">'+esc(c.club)+'</option>'}).join('');
+ if(!clubs.some(function(c){return c.clubId===selected}))selected=clubs[0]&&clubs[0].clubId||'';
+ if(selected)setClub(selected);
+}
+function exportCsv(){
+ if(!data||!selected)return;
+ var head=['Division','Club','Player','Shirt','Position','Nationality','Value GBP millions','Priority','Research issues','Next research action','Squad evidence URL','Value evidence URL'];
+ var rows=[head].concat(allSorted().map(function(p){return [p.division,p.club,p.player,p.shirt,p.position,p.nationality,p.marketValueM,p.researchPriority,(p.researchIssues||[]).join(' | '),p.nextResearchAction,p.squadSourceUrl,p.valueSourceUrl]}));
+ var blob=new Blob(['\uFEFF'+rows.map(function(r){return r.map(exportCell).join(',')}).join('\r\n')+'\r\n'],{type:'text/csv;charset=utf-8'});
+ var uri=URL.createObjectURL(blob),a=document.createElement('a');a.href=uri;a.download='swos-dossier-'+selected+'-2026-27.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(uri)},3000);
+}
+function move(dir){
+ var clubs=getClubs(),ix=clubs.findIndex(function(c){return c.clubId===selected});var target=clubs[ix+dir];
+ if(target)setClub(target.clubId);
+}
+function wire(){
+ $('division').addEventListener('change',refreshOptions);
+ $('club').addEventListener('change',function(){setClub(this.value)});
+ $('order').addEventListener('change',render);$('onlyOpen').addEventListener('change',render);
+ $('previous').addEventListener('click',function(){move(-1)});
+ $('next').addEventListener('click',function(){move(1)});
+ $('csv').addEventListener('click',exportCsv);
+ $('print').addEventListener('click',function(){window.print()});
+}
+fetch('/data/source-audit-2026-27.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw Error('Audit HTTP '+r.status);return r.json()}).then(function(a){
+ if(a.season!=='2026/27'||!Array.isArray(a.clubs)||a.clubs.length!==92||!Array.isArray(a.players)||a.players.length!==1472)
+  throw Error('Unexpected audit season or squad count');
+ if(a.clubs.some(function(c){return a.players.filter(function(p){return p.clubId===c.clubId}).length!==16}))throw Error('One or more squads do not have 16 players');
+ data=a;$('snapshot').textContent=a.generatedAt||'No snapshot date';
+ $('division').innerHTML='<option value="">All four divisions</option>'+a.divisions.map(function(d){return '<option value="'+esc(d.division)+'">'+esc(d.division)+'</option>'}).join('');
+ var asked=new URLSearchParams(location.search).get('club');
+ selected=a.clubs.some(function(c){return c.clubId===asked})?asked:a.clubs[0].clubId;
+ wire();refreshOptions();
+}).catch(function(err){$('loaded').textContent='Dossier unavailable: '+err.message;$('people').innerHTML='<div class="empty">Source audit could not be loaded. No game or research data has been changed.</div>'});
+})();
+</script></body></html>
