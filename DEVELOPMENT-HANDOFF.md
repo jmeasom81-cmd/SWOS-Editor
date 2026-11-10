@@ -60,6 +60,13 @@ Make a stable browser-based SWOS/SWAS editor and a trustworthy 2026/27 English f
 - Diagonal sashes, tonal patterns, hooped socks and multi-colour trim remain SWOS palette approximations; availability of an alternative kit colour does not replace the chosen standard home pairing.
 - `scripts/test-kit-component-evidence-b.mjs` runs in production before the later full editor, checksum and installation-lock safety checks. No TEAM game files, careers or player lists were changed.
 
+## 10 November 2026 — kit research batch C
+- Completed eight further 2026/27 home-kit shorts/socks references from club product listings and season-specific kit coverage: Norwich, Charlton, Stoke, Leicester, Blackburn Rovers, QPR, Middlesbrough and Hull.
+- Total sourced full home kit pairings now 47/92, leaving 45. Source URLs and SWOS approximations recorded in `data/kit-component-evidence-2026-11-10-batch-c.json`. Existing shorts values for Charlton and QPR were preserved.
+- Regression tests for earlier batches now validate their own evidence while computing page totals from the live master, rather than requiring repeated hard-coded global totals.
+- Hull's amber/black hooped socks are approximated with SWOS Orange (single colour); this is a limitation, not an assertion that the real socks are plain orange.
+- No original SWOS files, game saves or direct-installer permissions have been modified.
+
 ## Next useful milestones
 - Source-check remaining League One/League Two roster identities and missing player valuation evidence. Determine current outstanding totals from the latest audit rather than this prose.
 - Validate 2026/27 shirt numbers and conflicting player identities without guesswork.

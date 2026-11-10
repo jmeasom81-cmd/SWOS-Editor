@@ -399,18 +399,23 @@
       "clubId": "hull",
       "description": "Amber and black vertical stripes with white collar",
       "sourceUrl": "https://www.tigerleisure.com/home/pre-order/pre-order/5345_PRE-ORDER-2627-Adult-Home-Shirt.html",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-11-10",
       "home": {
         "type": 2,
         "shirt1": 3,
         "shirt2": 2,
-        "shorts": null,
-        "socks": null
+        "shorts": 1,
+        "socks": 3
       },
       "homeShirtSourced": true,
-      "fullComponentsSourced": false,
+      "fullComponentsSourced": true,
       "paletteApproximation": true,
-      "note": "Club's 2026/27 Oxen home shirt is amber and black striped; exact collar and historical HCAFC motif cannot be recreated. Full first-team shorts/socks awaiting an explicitly verified source."
+      "note": "Hull City's 26/27 home kit pairs white shorts with evenly amber-and-black hooped socks. SWOS cannot render hooped socks; Orange is a deliberate amber approximation rather than a claim that the socks are plain orange.",
+      "componentSources": {
+        "shorts": "https://www.footballshirtculture.com/new-kits/hull-city-jersey-26-27-home-oxen.html",
+        "socks": "https://www.footballshirtculture.com/new-kits/hull-city-jersey-26-27-home-oxen.html"
+      },
+      "secondarySourceUrl": "https://www.footyheadlines.com/9961893249/oxen-hull-city-26-27-premier-league-home-kit-released-no-more-kappa.html"
     },
     {
       "clubId": "ipswich",
@@ -472,18 +477,22 @@
       "clubId": "blackburn-rovers",
       "description": "Blue and white halved home shirt",
       "sourceUrl": "https://www.youtube.com/watch?v=XzGLgOW-8SU",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-11-10",
       "home": {
         "type": 0,
         "shirt1": 5,
         "shirt2": 5,
-        "shorts": null,
-        "socks": null
+        "shorts": 5,
+        "socks": 5
       },
       "homeShirtSourced": true,
-      "fullComponentsSourced": false,
+      "fullComponentsSourced": true,
       "paletteApproximation": true,
-      "note": "Club's official Umbro 26/27 launch confirms blue-and-white home identity. SWOS cannot create the shirt's split-halves design; plain blue is a conservative base rather than an exact representation. Shorts/socks unverified."
+      "note": "Blackburn Rovers 26/27 authentic home shorts are blue with white side panels; the official home socks have a blue base and red Umbro logo. SWOS records the dominant blue.",
+      "componentSources": {
+        "shorts": "https://www.roverstore.co.uk/new-trending/new-trending/clothing/4744_blackburn-rovers-authentic-home-shorts-2627.html",
+        "socks": "https://www.roverstore.co.uk/kit/2627-home-kit/adults/4767_blackburn-rovers-authentic-home-socks-2627.html"
+      }
     },
     {
       "clubId": "bolton-wanderers",
@@ -545,18 +554,22 @@
       "clubId": "charlton-athletic",
       "description": "Red home shirt and white home shorts",
       "sourceUrl": "https://clubshop.cafc.co.uk/collections/home-kit-1",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-11-10",
       "home": {
         "type": 0,
         "shirt1": 4,
         "shirt2": 4,
         "shorts": 1,
-        "socks": null
+        "socks": 4
       },
       "homeShirtSourced": true,
-      "fullComponentsSourced": false,
+      "fullComponentsSourced": true,
       "paletteApproximation": true,
-      "note": "Official 2026/27 club collection stocks red home shirt and white home shorts. Shirt accents and home sock colour still need a dated kit source; socks deliberately unfilled."
+      "note": "The current Charlton Athletic 2026/27 home shorts are white, and the Reebok home sock is predominantly red with a white logo, per the official club shop. Existing white shorts code preserved.",
+      "componentSources": {
+        "shorts": "https://clubshop.cafc.co.uk/collections/home-kit-adult",
+        "socks": "https://clubshop.cafc.co.uk/products/2026-27-charlton-athletic-home-sock-red"
+      }
     },
     {
       "clubId": "derby-county",
@@ -596,18 +609,23 @@
       "clubId": "middlesbrough",
       "description": "Red 150th-anniversary shirt with gold trim",
       "sourceUrl": "https://shop.mfc.co.uk/kits/homekit/adult/8035_26-adult-home-shirt.html",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-11-10",
       "home": {
         "type": 0,
         "shirt1": 4,
         "shirt2": 4,
-        "shorts": null,
-        "socks": null
+        "shorts": 4,
+        "socks": 4
       },
       "homeShirtSourced": true,
-      "fullComponentsSourced": false,
+      "fullComponentsSourced": true,
       "paletteApproximation": true,
-      "note": "Official 2026/27 Castore 150 Years home shirt is red with gold detailing; SWOS has no gold trim. Shorts and socks await first-team match evidence."
+      "note": "For the standard Middlesbrough 150th season red home strip, red shorts and red socks with gold detailing are documented. SWOS cannot represent gold trim.",
+      "componentSources": {
+        "shorts": "https://www.footballshirtculture.com/new-kits/middlesbrough-150-years-jersey-home-castore.html",
+        "socks": "https://shop.mfc.co.uk/home/homekit/adult/8069_26-home-socks.html"
+      },
+      "secondarySourceUrl": "https://shop.mfc.co.uk/kits/homekit/adult/8037_26-adult-home-short.html"
     },
     {
       "clubId": "bristol-city",
@@ -647,18 +665,23 @@
       "clubId": "norwich-city",
       "description": "Yellow marble-effect shirt with green and yellow sleeves",
       "sourceUrl": "https://shop.canaries.co.uk/kit/home-kit/adults/9118_202627-adult-home-shirt.html",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-11-10",
       "home": {
         "type": 0,
         "shirt1": 9,
         "shirt2": 9,
-        "shorts": null,
-        "socks": null
+        "shorts": 8,
+        "socks": 9
       },
       "homeShirtSourced": true,
-      "fullComponentsSourced": false,
+      "fullComponentsSourced": true,
       "paletteApproximation": true,
-      "note": "Official Joma 2026/27 product describes a tonal yellow marble shirt, green/yellow marble sleeves, green rear panel and trim. A plain yellow SWOS shirt is the closest non-misleading base; shorts and socks need separate evidence."
+      "note": "The 2026/27 Norwich strip has green shorts with yellow detailing and yellow socks with green Joma markings. SWOS solid colours omit the marbled shirt and sock effect.",
+      "componentSources": {
+        "shorts": "https://www.footballshirtculture.com/new-kits/norwich-city-jersey-26-27-home-joma.html",
+        "socks": "https://www.footballshirtculture.com/new-kits/norwich-city-jersey-26-27-home-joma.html"
+      },
+      "secondarySourceUrl": "https://www.footyheadlines.com/7746931249/norwich-city-26-27-home-kit-released.html"
     },
     {
       "clubId": "portsmouth",
@@ -698,18 +721,23 @@
       "clubId": "queens-park-rangers",
       "description": "Royal blue and white horizontal hoops, pale orange collar detail; white shorts",
       "sourceUrl": "https://shop.qpr.co.uk/products/26-27-adult-home-shirt",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-11-10",
       "home": {
         "type": 3,
         "shirt1": 5,
         "shirt2": 1,
         "shorts": 1,
-        "socks": null
+        "socks": 1
       },
       "homeShirtSourced": true,
-      "fullComponentsSourced": false,
+      "fullComponentsSourced": true,
       "paletteApproximation": true,
-      "note": "The official 26/27 home shirt is royal-blue-and-white hooped with pale orange trim. Club home shorts are white; colour of matching home socks not confirmed in this pass."
+      "note": "Queens Park Rangers' 2026/27 home strip has white shorts and white socks with blue and amber detailing. The white shorts already recorded are preserved. 2025/26 socks are not used as a substitute.",
+      "componentSources": {
+        "shorts": "https://shop.qpr.co.uk/collections/home-kit",
+        "socks": "https://footballshirtculture.com/new-kits/qpr-jersey-26-27-home-errea.html"
+      },
+      "secondarySourceUrl": "https://www.thekitman.co.uk/queens-park-rangers-unveil-classic-2026-27-errea-home-kit/"
     },
     {
       "clubId": "sheffield-united",
@@ -749,18 +777,23 @@
       "clubId": "stoke-city",
       "description": "Red and white vertically striped home shirt with white collar",
       "sourceUrl": "https://store.stokecityfc.com/kit/home/accessories/4155_2627-home-kit-football.html",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-11-10",
       "home": {
         "type": 2,
         "shirt1": 4,
         "shirt2": 1,
-        "shorts": null,
-        "socks": null
+        "shorts": 1,
+        "socks": 4
       },
       "homeShirtSourced": true,
-      "fullComponentsSourced": false,
+      "fullComponentsSourced": true,
       "paletteApproximation": true,
-      "note": "Stoke City's official 2026/27 home-kit football and club shop shirt confirm signature red-white stripes and white collar; exact 3D jacquard and red trim are not reproducible. No sourced shorts/socks in this batch."
+      "note": "The 2026/27 Stoke City red-and-white striped shirt is paired with white shorts with red side stripes and red socks with a white turnover. SWOS cannot reproduce fine trim.",
+      "componentSources": {
+        "shorts": "https://www.footballshirtculture.com/new-kits/stoke-city-jersey-26-27-home-macron.html",
+        "socks": "https://www.footballshirtculture.com/new-kits/stoke-city-jersey-26-27-home-macron.html"
+      },
+      "secondarySourceUrl": "https://www.footballkitarchive.com/stoke-city-2026-27-home-kit-490787/"
     },
     {
       "clubId": "swansea-city",
@@ -1021,18 +1054,23 @@
       "clubId": "leicester-city",
       "description": "Royal blue shirt with white adidas trim and tonal wyvern motif",
       "sourceUrl": "https://www.lcfc.com/media-article/leicester-city-lcfc-adidas-home-kit-shirt-2026-2027-sale-buy-shop",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-11-10",
       "home": {
         "type": 0,
         "shirt1": 5,
         "shirt2": 5,
-        "shorts": null,
-        "socks": null
+        "shorts": 5,
+        "socks": 5
       },
       "homeShirtSourced": true,
-      "fullComponentsSourced": false,
+      "fullComponentsSourced": true,
       "paletteApproximation": true,
-      "note": "Leicester City's official 3 July 2026 kit launch confirms the blue shirt and white detailing. SWOS cannot render tonal wyvern/cinquefoil print. Shorts and socks not independently colour-verified."
+      "note": "Leicester City 2026/27 home kit uses blue shorts with white side panels and blue socks with white LCFC and adidas detailing. SWOS blue is a single-colour simplification.",
+      "componentSources": {
+        "shorts": "https://www.footballshirtculture.com/new-kits/leicester-city-jersey-26-27-home-adidas.html",
+        "socks": "https://www.footballshirtculture.com/new-kits/leicester-city-jersey-26-27-home-adidas.html"
+      },
+      "secondarySourceUrl": "https://shop.lcfc.com/en/leicester-city-men-s-home-shirt-2026-27-adults"
     },
     {
       "clubId": "leyton-orient",
