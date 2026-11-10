@@ -6,6 +6,7 @@ const steps = [
   "patch-v134.mjs",
   "scripts/build-master-tracker.mjs",
   "scripts/build-kit-guide.mjs",
+  "scripts/test-kit-component-evidence.mjs",
   "scripts/build-gap-review.mjs",
   "scripts/build-source-audit.mjs",
   "scripts/test-source-audit.mjs",

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "checkedAt": "2026-11-10",
+  "summary": "2026/27 component evidence for Arsenal, Fulham and Manchester City. Fixed SWOS palette is approximate. No original game files changed.",
+  "entries": [
+    {
+      "clubId": "arsenal",
+      "homeShorts": 1,
+      "homeSocks": 4,
+      "componentSources": {
+        "shorts": "https://www.adidas.co.uk/arsenal-fc-26-27-home-authentic-shorts/JZ3167.html",
+        "socks": "https://www.adidas.ae/en/arsenal-fc-26-27-home-socks/JZ4646.html"
+      },
+      "secondarySourceUrl": "https://www.footballshirtculture.com/new-kits/arsenal-jersey-26-27-home-adidas.html?ml=1",
+      "note": "The standard Arsenal 26/27 home pairing is white shorts and red socks (current-season independent kit coverage, official adidas component pages). Red alternate shorts exist. SWOS omits the shirt's detailed pattern and burgundy trim."
+    },
+    {
+      "clubId": "fulham",
+      "homeShorts": 2,
+      "homeSocks": 1,
+      "componentSources": {
+        "shorts": "https://www.fulhamfc.com/news/2026/july/23/26-27-home-kit-revealed/",
+        "socks": "https://www.fulhamfc.com/news/2026/july/23/26-27-home-kit-revealed/"
+      },
+      "secondarySourceUrl": null,
+      "note": "Fulham's official 26/27 launch specifies black home shorts and white socks with black/red accent trim. SWOS cannot reproduce subtle shirt patterns or small trims."
+    },
+    {
+      "clubId": "man-city",
+      "homeShorts": 7,
+      "homeSocks": 7,
+      "componentSources": {
+        "shorts": "https://uk.puma.com/uk/en/sports/football/club-teams/manchester-city/home-kit",
+        "socks": "https://uk.puma.com/uk/en/sports/football/club-teams/manchester-city/home-kit"
+      },
+      "secondarySourceUrl": "https://www.mancity.com/news/club/manchester-city-202627-home-kit-launched-63914816?hl=en-GB",
+      "note": "PUMA's 26/27 home range contains Icy Blue-Team Light Blue shorts and socks. SWOS Light Blue approximates icy/sky blue; gradient cannot be modelled. Multiple accessory colour options exist; this is the matching icy-blue pairing."
+    }
+  ]
+}

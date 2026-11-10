@@ -49,6 +49,11 @@ Make a stable browser-based SWOS/SWAS editor and a trustworthy 2026/27 English f
 - ZIP identity checks **do not** establish that the game runs, that a career can be saved, or that roster research is accurate. Only actual game observation can answer those questions. All manual checks remain unverified until performed by the user.
 - Production build includes `scripts/test-game-qa.mjs` with negative tests for unsafe/invalid packs and incorrectly reported success.
 
+## 10 November 2026 — verified home-kit components
+- Three additional 2026/27 kits now have shorts and socks evidence: Arsenal, Fulham and Manchester City. 31 of 92 have complete home-kit colour evidence, 61 outstanding.
+- Official manufacturer/club links and current-season independent corroboration are recorded in `data/kit-component-evidence-2026-11-10.json`. Distinct component sources are visible in the kit guide and CSV.
+- SWOS palette approximations are not faithful reproductions; the original game TEAM files remain untouched.
+
 ## Next useful milestones
 - Source-check remaining League One/League Two roster identities and missing player valuation evidence. Determine current outstanding totals from the latest audit rather than this prose.
 - Validate 2026/27 shirt numbers and conflicting player identities without guesswork.
