@@ -216,7 +216,7 @@ assert.ok(kitResearch.clubs.length===92,'Sourced kit reference coverage must not
 assert.equal(new Set(kitResearch.clubs.map(c=>c.clubId)).size,kitResearch.clubs.length,'Kit clubs must be unique');
 assert.equal(kitResearch.swosPalette.length,10);
 assert.equal(kitResearch.swosPatterns.length,4);
-assert.ok(kitResearch.clubs.filter(c=>c.fullComponentsSourced).length>=31,'At least 31 full home-kit component references required');
+assert.ok(kitResearch.clubs.filter(c=>c.fullComponentsSourced).length>=39,'At least 39 full home-kit component references required');
 for(const c of kitResearch.clubs){const stored=master.clubs.find(x=>x.clubId===c.clubId);assert.ok(stored,'Kit research refers to unknown club '+c.clubId);assert.equal(c.homeShirtSourced,true);assert.ok(c.sourceUrl.startsWith('https://'));const h=c.home;assert.ok(Number.isInteger(h.type)&&h.type>=0&&h.type<=3);for(const n of ['shirt1','shirt2'])assert.ok(Number.isInteger(h[n])&&h[n]>=0&&h[n]<=9);for(const n of ['shorts','socks'])assert.ok(h[n]===null||(Number.isInteger(h[n])&&h[n]>=0&&h[n]<=9));assert.equal(c.fullComponentsSourced,h.shorts!==null&&h.socks!==null);}
 const checkKit=id=>kitResearch.clubs.find(c=>c.clubId===id).home;
 assert.equal(checkKit('newcastle').type,2);assert.equal(checkKit('brentford').type,2);

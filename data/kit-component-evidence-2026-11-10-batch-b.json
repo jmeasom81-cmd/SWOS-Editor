@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "checkedAt": "2026-11-10",
+  "purpose": "Eight dated 2026/27 complete home kit component references. An SWOS palette code is a simplification, not faithful kit recreation.",
+  "previousComplete": 31,
+  "newlyComplete": 8,
+  "totalComplete": 39,
+  "entries": [
+    {
+      "clubId": "man-utd",
+      "home": {
+        "shorts": 1,
+        "socks": 2
+      },
+      "sourceUrls": {
+        "shorts": "https://store.manutd.com/en-gb/p/manchester-united-2627-home-jersey-5743",
+        "socks": "https://store.manutd.com/en-gb/p/manchester-united-2627-home-jersey-5743",
+        "secondary": "https://www.manutd.com.es/en/news/united-and-adidas-launch-new-home-kit-for-202627-season"
+      },
+      "sourceClassification": "club launch describing standard home pairing + official club merchandise",
+      "notes": "2026/27 standard home strip is red shirt, white shorts, black socks. Club shop also sells black shorts and white socks as alternatives; this is the launch pairing. Trim and collar design are not reproducible in SWOS."
+    },
+    {
+      "clubId": "everton",
+      "home": {
+        "shorts": 1,
+        "socks": 5
+      },
+      "sourceUrls": {
+        "shorts": "https://www.footballshirtculture.com/new-kits/everton-jersey-26-27-home-castore.html?jpage=10",
+        "socks": "https://www.footballshirtculture.com/new-kits/everton-jersey-26-27-home-castore.html?jpage=10",
+        "secondary": "https://store.evertonfc.com/en/everton-castore-home-shorts-2026-27/p-356681275556794862%2Bz-8-4285633946"
+      },
+      "sourceClassification": "2026/27 kit release with official club shop corroboration",
+      "notes": "Everton 2026/27 royal-blue shirt is paired with white shorts and royal-blue socks with white and amber detail. SWOS blue represents the dominant sock colour and omits turnover trim."
+    },
+    {
+      "clubId": "bournemouth",
+      "home": {
+        "shorts": 2,
+        "socks": 2
+      },
+      "sourceUrls": {
+        "shorts": "https://superstore.afcb.co.uk/collections/home-kit?page=1",
+        "socks": "https://superstore.afcb.co.uk/collections/home-kit?page=1",
+        "secondary": null
+      },
+      "sourceClassification": "club's 2026/27 home kit product list",
+      "notes": "AFC Bournemouth official 2026/27 club store names black men's home shorts and black adult home socks. Red/black shirt stripes remain a SWOS approximation."
+    },
+    {
+      "clubId": "leeds",
+      "home": {
+        "shorts": 1,
+        "socks": 1
+      },
+      "sourceUrls": {
+        "shorts": "https://shop.leedsunited.com/en/x-9595",
+        "socks": "https://shop.leedsunited.com/en/x-9595",
+        "secondary": null
+      },
+      "sourceClassification": "club 2026/27 home-kit launch and matching products",
+      "notes": "Leeds United's official 2026/27 home-kit description explicitly pairs the white shirt with classic white shorts and socks. The fine blue/yellow horizontal pinstripes cannot be reproduced accurately in SWOS."
+    },
+    {
+      "clubId": "sunderland",
+      "home": {
+        "shorts": 2,
+        "socks": 2
+      },
+      "sourceUrls": {
+        "shorts": "https://footballshirtculture.com/new-kits/sunderland-jersey-26-27-home.html",
+        "socks": "https://footballshirtculture.com/new-kits/sunderland-jersey-26-27-home.html",
+        "secondary": "https://www.safcstore.com/en/sunderland/26/27-home-kit/t-53093164%2Bc-2488241010%2Bz-8-1943926910"
+      },
+      "sourceClassification": "dated 2026/27 full-kit coverage and club store 26/27 collection",
+      "notes": "2026/27 Sunderland red/white striped shirt paired with black shorts and black socks bearing a wide red band. This is season-specific; older 25/26 red-sock references must not be substituted."
+    },
+    {
+      "clubId": "brighton",
+      "home": {
+        "shorts": 5,
+        "socks": 5
+      },
+      "sourceUrls": {
+        "shorts": "https://shop.brightonandhovealbion.com/new-in/new/new-in/7595_BHAFC-Adult-2627-Home-Shorts.html",
+        "socks": "https://shop.brightonandhovealbion.com/kit/home-kit/adult/7598_bhafc-2627-royal-home-socks.html",
+        "secondary": "https://www.brightonandhovealbion.com/media-article/a-nod-to-1983-for-2026-27"
+      },
+      "sourceClassification": "club store individually lists Royal Blue 26/27 shorts and Royal Blue & White 26/27 socks",
+      "notes": "Brighton 2026/27 official kit has royal-blue shorts and predominantly royal-blue socks with white edging. Fine white pinstripes on the shirt are omitted in SWOS; primary sock colour mapped to Blue."
+    },
+    {
+      "clubId": "crystal-palace",
+      "home": {
+        "shorts": 1,
+        "socks": 1
+      },
+      "sourceUrls": {
+        "shorts": "https://about.macron.com/en/news/kit-launches/crystal-palace-eagle-sash-kit-2026-27/",
+        "socks": "https://about.macron.com/en/news/kit-launches/crystal-palace-eagle-sash-kit-2026-27/",
+        "secondary": "https://www.cpfc.co.uk/news/announcement/crystal-palace-2026-2027-sash-home-kit-on-sale/"
+      },
+      "sourceClassification": "2026/27 kit manufacturer states white shorts and white socks",
+      "notes": "Crystal Palace's 2026/27 Eagle Sash white-based home kit has white shorts and socks. SWOS lacks a diagonal sash shirt pattern; white is an explicit approximation, not a reproduction."
+    },
+    {
+      "clubId": "burnley",
+      "home": {
+        "shorts": 1,
+        "socks": 6
+      },
+      "sourceUrls": {
+        "shorts": "https://www.footballshirtculture.com/new-kits/burnley-jersey-26-27-home-castore.html?ml=1",
+        "socks": "https://shop.burnleyfc.com/home-kit/homekit/adults/2565_BURNLEY-FC-HOME-SOCK-ADULT-202627.html",
+        "secondary": "https://www.footyheadlines.com/9857356065/burnley-26-27-home-kit-released.html"
+      },
+      "sourceClassification": "dated 2026/27 full-kit release and club store socks page",
+      "notes": "Burnley 2026/27 men's standard home kit pairs white shorts with claret socks carrying sky-blue hoops; SWOS Brown/claret represents the main sock colour and cannot render fine hoops."
+    }
+  ]
+}

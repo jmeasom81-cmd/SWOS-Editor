@@ -54,6 +54,12 @@ Make a stable browser-based SWOS/SWAS editor and a trustworthy 2026/27 English f
 - Official manufacturer/club links and current-season independent corroboration are recorded in `data/kit-component-evidence-2026-11-10.json`. Distinct component sources are visible in the kit guide and CSV.
 - SWOS palette approximations are not faithful reproductions; the original game TEAM files remain untouched.
 
+## 10 November 2026 — additional verified 2026/27 kit components (batch B)
+- Eight additional full home-kit references checked against 2026/27 club, manufacturer and independent release coverage: Manchester United, Everton, Bournemouth, Leeds, Sunderland, Brighton, Crystal Palace and Burnley.
+- Home kits with sourced shorts and socks increased from 31 to **39 of 92**, leaving 53 without complete component evidence. Stored in `data/kit-component-evidence-2026-11-10-batch-b.json`; the kit guide and CSV use the existing source URL columns.
+- Diagonal sashes, tonal patterns, hooped socks and multi-colour trim remain SWOS palette approximations; availability of an alternative kit colour does not replace the chosen standard home pairing.
+- `scripts/test-kit-component-evidence-b.mjs` runs in production before the later full editor, checksum and installation-lock safety checks. No TEAM game files, careers or player lists were changed.
+
 ## Next useful milestones
 - Source-check remaining League One/League Two roster identities and missing player valuation evidence. Determine current outstanding totals from the latest audit rather than this prose.
 - Validate 2026/27 shirt numbers and conflicting player identities without guesswork.

@@ -7,6 +7,7 @@ const steps = [
   "scripts/build-master-tracker.mjs",
   "scripts/build-kit-guide.mjs",
   "scripts/test-kit-component-evidence.mjs",
+  "scripts/test-kit-component-evidence-b.mjs",
   "scripts/build-gap-review.mjs",
   "scripts/build-source-audit.mjs",
   "scripts/test-source-audit.mjs",
