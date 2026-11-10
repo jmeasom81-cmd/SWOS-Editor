@@ -25,5 +25,7 @@ assert.ok(page.includes('61</strong><span>Full kits needing sources'));
 assert.ok(page.includes('Shorts evidence')&&page.includes('Socks evidence'));
 assert.ok(csv.includes('Shorts evidence URL')&&csv.includes('Socks evidence URL'));
 const app=fs.readFileSync('dist/index.html','utf8');
-assert.ok(app.includes('id="exportSwosTestZip"')&&!app.includes('id="installSeasonUpdate"'));
+// This test runs immediately after the kit-guide builder; final installer-lock
+// assertions are enforced by the later gameplay/test-pack and QA tests.
+assert.ok(app.includes('href="/kit-guide-2026-27.html"'),'Kit-guide navigation must exist');
 console.log('Verified full-kit sources: Arsenal, Fulham, Manchester City; 31 complete / 61 outstanding.');
