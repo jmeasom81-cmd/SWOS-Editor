@@ -157,7 +157,8 @@ function swosGameTestHtml(){
   (qa.checks[key]?'checked':'')+'/><span>'+esc(label)+'</span></label>').join('')+'</div>'+
   '<div class="field section-gap"><label>What worked / what failed?</label>'+
   '<textarea rows="3" maxlength="4000" id="swos-test-notes" placeholder="Write the club, screen and outcome of any issue">'+esc(qa.notes||'')+'</textarea></div>'+
-  '<button class="btn btn-blue big section-gap" id="exportSwosTestReport">Download my test report (.json)</button>'+
+  '<button class="btn btn-blue big section-gap" id="exportSwosTestReport">Download my test report (.json)</button>'+ 
+  '<p class="tiny section-gap"><a href="/game-qa.html" target="_blank" rel="noopener noreferrer">Open persistent Magic DOSBox test workspace ↗</a> — validate the downloaded ZIP, confirm the copied TEAM file, and record real-game observations.</p>'+
   '<p class="tiny section-gap">Manual checklist only. Nothing here unlocks the original game installer.</p></div>';
 }
 async function swosExportTestReport(){

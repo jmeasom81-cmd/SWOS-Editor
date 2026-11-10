@@ -1,0 +1,185 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#081b25"><title>SWOS Studio | Real Game Test Workspace</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;--bg:#071723;--panel:#10293a;--line:#426075;--ink:#f1f8ff;--muted:#b7cbd9;--accent:#b3edc8}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#18394d,#071723 65%);color:var(--ink)}
+main{max-width:1050px;margin:auto;padding:20px 15px 75px}
+h1{font-size:clamp(29px,5vw,43px);letter-spacing:-.04em;margin:8px 0}h2{font-size:20px;margin:0 0 9px}h3{font-size:15px;margin:0 0 7px}
+p{color:var(--muted);line-height:1.6}.eyebrow{font-size:12px;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;font-weight:850}
+nav{display:flex;gap:9px;flex-wrap:wrap;margin:19px 0 25px}
+a{color:var(--accent)}nav a{border:1px solid var(--line);padding:9px 12px;border-radius:9px;background:var(--panel);text-decoration:none;font-size:13px;font-weight:750}
+.card{border:1px solid var(--line);background:var(--panel);border-radius:14px;padding:18px;margin:14px 0}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:9px;margin:12px 0}
+.step{background:#1a3443;border:1px solid #436073;border-radius:9px;padding:13px;font-size:13px;line-height:1.55}
+.step b{color:var(--accent)}.hint{font-size:12px;color:var(--muted)}.muted{color:var(--muted)}
+input[type=file],input[type=text],textarea,select,button{font:inherit;border:1px solid #6c8799;color:var(--ink);background:#09202e;padding:10px;border-radius:8px;max-width:100%;width:100%}
+input[type=file]{font-size:13px}textarea{resize:vertical;min-height:68px}
+button{cursor:pointer;font-weight:800;background:#215242;border-color:#479477;min-height:44px}button:disabled{cursor:not-allowed;opacity:.5}
+button:hover{border-color:#a4e7bd}button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid #b3edc8;outline-offset:2px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.row{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.verified{color:#abedc2}.warning{color:#ffce9d}.error{color:#ffb3af}
+.status{margin:10px 0 0;padding:11px;background:#152b36;border-radius:8px;font-size:13px;line-height:1.55;overflow-wrap:anywhere}
+.qa{display:grid;grid-template-columns:1fr 180px;gap:12px;align-items:start;border-top:1px solid #36566b;padding:15px 0}
+.qa:first-child{border:0}.qa label{display:block;font-size:14px;font-weight:750}.qa small{display:block;font-size:12px;color:var(--muted);line-height:1.55;margin-top:5px}
+.qa textarea{grid-column:1/-1;min-height:52px}.summary{padding:14px;border-left:4px solid #eabb72;background:#332d28;border-radius:9px;margin:10px 0}
+.summary.passed{background:#1a3930;border-color:#80d6a8}.summary strong{display:block;margin-bottom:7px}
+.summary li{margin:6px 0;font-size:12px}.actions{display:flex;gap:10px;flex-wrap:wrap}.actions button{width:auto;min-width:190px}
+footer{border-top:1px solid #3b5268;padding:18px 0;margin-top:24px;color:var(--muted);font-size:12px;line-height:1.6}
+@media(max-width:650px){.grid,.qa{grid-template-columns:1fr}.card{padding:14px}.actions button{width:100%}}
+@media print{body{background:#fff;color:#000}.card,.step{background:#fff;color:#000;border-color:#bbb}.qa small,p,footer{color:#333}nav,input,button,.actions{display:none!important}}
+</style></head><body><main>
+<div class="eyebrow">SWOS Studio · 2026/27 · Copy-only trial</div><h1>Real-game test workspace</h1>
+<p>Work through the practical Magic DOSBox checks needed before a SWOS update can be considered usable. This workspace reads local files in your browser; it never uploads them or writes into your SWOS folders.</p>
+<nav><a href="/">← SWOS Editor</a><a href="/development-status.html">Build progress</a><a href="/club-dossier.html">Club research</a></nav>
+<div class="card"><h2>How to test safely</h2><div class="steps">
+<div class="step"><b>1. Back up</b> the entire working SWOS GAME folder. Preserve old careers and TEAM files.</div>
+<div class="step"><b>2. Build</b> the 2026/27 test ZIP inside the SWOS Editor after opening your England TEAM file.</div>
+<div class="step"><b>3. Copy only</b> the new TEAM file from the ZIP into the <em>duplicated</em> GAME/DATA folder.</div>
+<div class="step"><b>4. Test</b> the duplicated game using a separate Magic DOSBox profile, then record the six checks below.</div>
+</div><p class="hint"><strong>Never replace your original TEAM file or use an existing career save for testing.</strong> A correct checksum does not prove that a match or career works.</p></div>
+<div class="grid">
+<section class="card"><h2>1 · Import the generated test ZIP</h2><p class="hint">Choose SWOS-2026-27-TEST-COPY-ONLY.zip. Your browser will inspect its manifest and both TEAM files locally. You may also read a standalone manifest, but only the full ZIP counts as package verified.</p>
+<input id="pack" type="file" accept=".zip,.json,application/zip,application/json" aria-label="Import generated SWOS test ZIP">
+<div id="packStatus" class="status" role="status" aria-live="polite">No test pack loaded.</div>
+</section>
+<section class="card"><h2>2 · Verify copied TEAM file</h2><p class="hint">Select TEAM.nnn from the <strong>duplicated</strong> GAME/DATA folder. We compare its SHA-256, filename, size and English divisions against your test candidate.</p>
+<input id="team" type="file" aria-label="Check TEAM file from duplicated game">
+<div id="teamStatus" class="status" role="status" aria-live="polite">Import the test ZIP first.</div>
+</section>
+</div>
+<div class="card"><h2>3 · Real Magic DOSBox checklist</h2>
+<p class="hint">These are user-observed tests, not automated game simulations. Your answers are saved only in this browser (by candidate hash), including when you return later. Changing the candidate starts a separate checklist.</p>
+<div id="checklist"></div>
+<label for="device">Device / Magic DOSBox setup (optional)</label><input id="device" type="text" maxlength="160" placeholder="e.g. Android, Magic DOSBox profile 'SWOS Test'">
+<label for="notes">General notes or problems</label><textarea id="notes" maxlength="4000" placeholder="Document any crashes, incorrect clubs, match bugs, missing data, or career problems."></textarea>
+</div>
+<div class="card"><h2>4 · Test result and evidence</h2>
+<div id="result" class="summary" role="status" aria-live="polite"><strong>Not ready</strong> Import your test ZIP, verify the copied TEAM file and complete six real-game checks.</div>
+<div class="actions"><button type="button" id="export" disabled>Export test evidence (.json)</button><button type="button" id="print" onclick="window.print()">Print test record</button><button type="button" id="reset">Clear this candidate's saved answers</button></div>
+<p class="hint">A completed report means <strong>all six checks were reported passed and the copied file matched this candidate in this browser session</strong>. It does not certify hardware compatibility, transfer data accuracy or permission to install over your original game. Direct installation remains locked.</p>
+</div>
+<footer>All checks and hashes run in your browser. The site does not store the content of your game files or transmit them. Local answers can be deleted by clearing this browser's site data or using Reset. No claim of a successful real-game test is made until you complete and export the evidence yourself.</footer>
+</main>
+<script src="/game-qa-core.js"></script>
+<script>
+(function(){
+'use strict';
+const byId=id=>document.getElementById(id),steps=SwosQaCore.CHECKS;
+let manifest=null,packValid=false,fileCheck=null,answers={},key='',busy=false;
+const enc=new TextEncoder();
+const isHex=v=>/^[0-9a-f]{64}$/i.test(v||'');
+const sha=async bytes=>{
+ if(!crypto?.subtle)throw Error('Secure SHA-256 is unavailable. Open SWOS Studio over HTTPS.');
+ const dig=await crypto.subtle.digest('SHA-256',bytes);
+ return [...new Uint8Array(dig)].map(x=>x.toString(16).padStart(2,'0')).join('');
+};
+const safe=v=>String(v==null?'':v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c]));
+function storageKey(){return 'swos-qa-session-v1:'+manifest.candidate.sha256.toLowerCase()}
+function defaultAnswers(){return {checks:{},notes:{},general:'',device:''}}
+function loadAnswers(){
+ answers=defaultAnswers();
+ if(!manifest)return;
+ key=storageKey();
+ try{const stored=JSON.parse(localStorage.getItem(key)||'null');if(stored&&typeof stored==='object'){
+  for(const t of steps){
+   if(['PASS','FAIL','NOT_TESTED'].includes(stored.checks?.[t.key]))answers.checks[t.key]=stored.checks[t.key];
+   if(typeof stored.notes?.[t.key]==='string')answers.notes[t.key]=stored.notes[t.key].slice(0,1000);
+  }
+  answers.general=String(stored.general||'').slice(0,4000);
+  answers.device=String(stored.device||'').slice(0,160);
+ }}catch{}
+ byId('notes').value=answers.general;byId('device').value=answers.device;
+}
+function saveAnswers(){if(!manifest)return;try{localStorage.setItem(key,JSON.stringify(answers))}catch{}}
+function drawChecks(){
+ byId('checklist').innerHTML=steps.map((s,i)=>'<div class="qa"><div><label for="status-'+safe(s.key)+'">'+(i+1)+'. '+safe(s.label)+'</label><small>'+safe(s.help)+'</small></div>'+
+ '<select data-result="'+safe(s.key)+'" id="status-'+safe(s.key)+'"><option value="NOT_TESTED">Not tested</option><option value="PASS">Passed in game</option><option value="FAIL">Failed / problem found</option></select>'+
+ '<textarea data-note="'+safe(s.key)+'" maxlength="1000" aria-label="Notes for '+safe(s.label)+'" placeholder="Optional observation, club names or problem details"></textarea></div>').join('');
+ for(const s of steps){
+  byId('status-'+s.key).value=answers.checks[s.key]||'NOT_TESTED';
+  byId('checklist').querySelector('[data-note="'+s.key+'"]').value=answers.notes[s.key]||'';
+ }
+ byId('checklist').querySelectorAll('[data-result]').forEach(e=>e.addEventListener('change',()=>{answers.checks[e.dataset.result]=e.value;saveAnswers();drawResult()}));
+ byId('checklist').querySelectorAll('[data-note]').forEach(e=>e.addEventListener('input',()=>{answers.notes[e.dataset.note]=e.value;saveAnswers()}));
+}
+function drawResult(){
+ const result=SwosQaCore.assess(manifest,fileCheck,answers.checks,packValid);
+ const div=byId('result');div.classList.toggle('passed',result.userReportedComplete);
+ div.innerHTML='<strong>'+(result.userReportedComplete?'User-reported game QA complete — evidence ready':'Not yet complete — do not install over the original')+'</strong>'+
+ (result.blockers.length?'<ul>'+result.blockers.map(x=>'<li>'+safe(x)+'</li>').join('')+'</ul>':
+ '<div>Copied TEAM file matches candidate, all four divisions have correct counts, and all six checks were marked passed by you. Export the evidence; independent compatibility is not automatically certified.</div>');
+ byId('export').disabled=!manifest||busy;
+}
+async function loadPackage(file){
+ manifest=null;packValid=false;fileCheck=null;key='';answers=defaultAnswers();drawChecks();drawResult();
+ if(!file)return;
+ byId('packStatus').textContent='Inspecting test pack...';
+ const buffer=await file.arrayBuffer();
+ const zip=/\.zip$/i.test(file.name),json=/\.json$/i.test(file.name);
+ if(!zip&&!json)throw Error('Choose the SWOS test ZIP or its manifest.json');
+ let parsed;
+ if(zip){
+  parsed=SwosQaCore.parseZip(new Uint8Array(buffer));
+  const candidateHash=await sha(parsed.candidate),originalHash=await sha(parsed.original);
+  if(candidateHash!==parsed.manifest.candidate.sha256.toLowerCase()||originalHash!==parsed.manifest.original.sha256.toLowerCase())throw Error('ZIP TEAM SHA-256 does not agree with manifest');
+  SwosQaCore.inspectTeam(parsed.candidate);
+  manifest=parsed.manifest;packValid=true;
+ }else{
+  manifest=SwosQaCore.validateManifest(JSON.parse(new TextDecoder().decode(buffer)));
+ }
+ loadAnswers();drawChecks();
+ byId('packStatus').innerHTML='<span class="'+(packValid?'verified':'warning')+'">'+(packValid?'✓ Full ZIP validated locally':'⚠ Manifest-only: full ZIP not verified')+'</span><br>'+
+ safe(manifest.filename)+' · '+manifest.players+' players · SHA-256 '+safe(manifest.candidate.sha256.slice(0,16))+'…';
+ byId('teamStatus').textContent='Now choose the TEAM file from your duplicated GAME/DATA folder.';
+ drawResult();
+}
+async function loadCopied(file){
+ if(!manifest)throw Error('Import a test ZIP first');
+ if(!file)return;
+ fileCheck=null;byId('teamStatus').textContent='Calculating SHA-256 of copied TEAM file...';drawResult();
+ const bytes=new Uint8Array(await file.arrayBuffer());
+ const actual=await sha(bytes);
+ const filenameOK=file.name.toUpperCase()===manifest.filename.toUpperCase();
+ const hashOK=isHex(actual)&&actual===manifest.candidate.sha256.toLowerCase();
+ const sizeOK=bytes.length===manifest.candidate.size;
+ let structure=null,structureError='';
+ try{structure=SwosQaCore.inspectTeam(bytes)}catch(e){structureError=e.message}
+ const good=filenameOK&&hashOK&&sizeOK&&!!structure;
+ fileCheck={status:good?'EXACT_CANDIDATE':'MISMATCH',filename:file.name,
+  filenameOK,hashOK,sizeOK,actualSha256:actual,expectedSha256:manifest.candidate.sha256,
+  size:bytes.length,structure,error:structureError};
+ byId('teamStatus').innerHTML='<span class="'+(good?'verified':'error')+'">'+(good?'✓ Exact candidate verified in the copied file':'✕ This is NOT the expected candidate TEAM file')+'</span><br>'+
+ 'Filename '+safe(file.name)+' · '+bytes.length+' bytes · SHA-256 '+safe(actual.slice(0,16))+'…'+
+ (structure?'<br>Divisions: '+structure.divisionCounts.join(' / '):'<br>'+safe(structureError||'Mismatch with test manifest'));
+ drawResult();
+}
+function exportRecord(){
+ const verdict=SwosQaCore.assess(manifest,fileCheck,answers.checks,packValid);
+ const record={kind:'SWOS_2026_27_MAGIC_DOSBOX_LOCAL_TEST_EVIDENCE',schemaVersion:1,
+ generatedAt:new Date().toISOString(),
+ candidateSha256:manifest.candidate.sha256,originalSha256:manifest.original.sha256,teamFilename:manifest.filename,
+ packVerifiedLocally:packValid,copiedTeamFile:fileCheck,
+ steps:steps.map(s=>({key:s.key,label:s.label,result:answers.checks[s.key]||'NOT_TESTED',notes:answers.notes[s.key]||''})),
+ device:answers.device,generalNotes:answers.general,
+ userReportedComplete:verdict.userReportedComplete,blockers:verdict.blockers,
+ limitations:'User-entered in-game observations; hash proves byte identity only. The live game installer stays locked.'
+ };
+ const blob=new Blob([JSON.stringify(record,null,2)],{type:'application/json'});
+ const url=URL.createObjectURL(blob),a=document.createElement('a');
+ a.href=url;a.download='SWOS-2026-27-game-test-'+manifest.candidate.sha256.slice(0,10)+'.json';document.body.appendChild(a);a.click();a.remove();
+ setTimeout(()=>URL.revokeObjectURL(url),3000);
+}
+byId('pack').addEventListener('change',async e=>{try{busy=true;drawResult();await loadPackage(e.target.files[0]);}catch(err){
+ manifest=null;packValid=false;fileCheck=null;byId('packStatus').textContent='Package rejected: '+err.message;
+ byId('teamStatus').textContent='Import a valid package before checking a TEAM file.';drawResult();
+}finally{busy=false;drawResult()}});
+byId('team').addEventListener('change',async e=>{try{busy=true;drawResult();await loadCopied(e.target.files[0]);}catch(err){fileCheck=null;byId('teamStatus').textContent='File rejected: '+err.message;drawResult()}finally{busy=false;drawResult()}});
+byId('notes').addEventListener('input',e=>{answers.general=e.target.value;saveAnswers()});
+byId('device').addEventListener('input',e=>{answers.device=e.target.value;saveAnswers()});
+byId('export').addEventListener('click',exportRecord);
+byId('reset').addEventListener('click',()=>{if(!manifest)return;if(!confirm('Clear saved answers for this candidate? This does not modify game files.'))return;
+ try{localStorage.removeItem(key)}catch{}answers=defaultAnswers();byId('notes').value='';byId('device').value='';drawChecks();drawResult()});
+drawChecks();drawResult();
+})();
+</script></body></html>

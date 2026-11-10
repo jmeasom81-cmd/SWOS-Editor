@@ -21,6 +21,8 @@ const steps = [
   "scripts/build-club-dossier.mjs",
   "scripts/test-club-dossier.mjs",
   "scripts/test-development-status.mjs",
+  "scripts/build-game-qa.mjs",
+  "scripts/test-game-qa.mjs",
   "scripts/build-web-analytics.mjs",
   "scripts/test-web-analytics.mjs"
 ];

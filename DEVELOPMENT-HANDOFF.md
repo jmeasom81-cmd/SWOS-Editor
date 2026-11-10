@@ -44,6 +44,11 @@ Make a stable browser-based SWOS/SWAS editor and a trustworthy 2026/27 English f
 - This is not evidence that football research is fully current; linked sources still require review. No editor binary, career save, installation, or original TEAM data was changed.
 - The dossier is built and regression tested during the ordinary production build, before Web Analytics injection.
 
+## November 2026 real-game QA workspace
+- Published `/game-qa.html` accepts the existing test ZIP or manifest, checks both ZIP TEAM hashes, verifies the chosen duplicate-game TEAM file by SHA-256 and binary league counts, and stores six user-observed Magic DOSBox checks locally per candidate SHA. It exports a report and never uploads any game file or unlocks installation.
+- ZIP identity checks **do not** establish that the game runs, that a career can be saved, or that roster research is accurate. Only actual game observation can answer those questions. All manual checks remain unverified until performed by the user.
+- Production build includes `scripts/test-game-qa.mjs` with negative tests for unsafe/invalid packs and incorrectly reported success.
+
 ## Next useful milestones
 - Source-check remaining League One/League Two roster identities and missing player valuation evidence. Determine current outstanding totals from the latest audit rather than this prose.
 - Validate 2026/27 shirt numbers and conflicting player identities without guesswork.
