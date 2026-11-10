@@ -38,5 +38,5 @@ for(const item of pack.entries){
 }
 const exportFile=fs.readFileSync('dist/downloads/SWOS_Kits_2026-27.csv','utf8');
 assert.ok(exportFile.includes('Shorts evidence URL')&&exportFile.includes('Socks evidence URL'));
- true); // The finished game editor is checked by later release-stage tests.
+// Direct installation and editor integrity are checked later in the full production pipeline.
 console.log('SWOS verified kit component batch B: 8 updated clubs, 39 complete, 53 pending; sources and palette codes validated.');
