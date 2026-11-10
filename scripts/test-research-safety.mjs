@@ -216,12 +216,22 @@ assert.ok(kitResearch.clubs.length===92,'Sourced kit reference coverage must not
 assert.equal(new Set(kitResearch.clubs.map(c=>c.clubId)).size,kitResearch.clubs.length,'Kit clubs must be unique');
 assert.equal(kitResearch.swosPalette.length,10);
 assert.equal(kitResearch.swosPatterns.length,4);
-assert.ok(kitResearch.clubs.filter(c=>c.fullComponentsSourced).length>=28,'At least 11 official full home kit references required');
+assert.ok(kitResearch.clubs.filter(c=>c.fullComponentsSourced).length>=31,'At least 31 full home-kit component references required');
 for(const c of kitResearch.clubs){const stored=master.clubs.find(x=>x.clubId===c.clubId);assert.ok(stored,'Kit research refers to unknown club '+c.clubId);assert.equal(c.homeShirtSourced,true);assert.ok(c.sourceUrl.startsWith('https://'));const h=c.home;assert.ok(Number.isInteger(h.type)&&h.type>=0&&h.type<=3);for(const n of ['shirt1','shirt2'])assert.ok(Number.isInteger(h[n])&&h[n]>=0&&h[n]<=9);for(const n of ['shorts','socks'])assert.ok(h[n]===null||(Number.isInteger(h[n])&&h[n]>=0&&h[n]<=9));assert.equal(c.fullComponentsSourced,h.shorts!==null&&h.socks!==null);}
 const checkKit=id=>kitResearch.clubs.find(c=>c.clubId===id).home;
 assert.equal(checkKit('newcastle').type,2);assert.equal(checkKit('brentford').type,2);
 assert.equal(checkKit('brighton').type,0,'Thin pinstripes cannot become heavy SWOS stripes');
-assert.equal(checkKit('man-city').shorts,null,'Unknown shorts must remain unknown');
+assert.equal(checkKit('arsenal').shorts,1,'Sourced standard Arsenal white shorts');
+assert.equal(checkKit('arsenal').socks,4,'Sourced Arsenal red socks');
+assert.equal(checkKit('fulham').shorts,2,'Fulham official black shorts');
+assert.equal(checkKit('fulham').socks,1,'Fulham official white socks');
+assert.equal(checkKit('man-city').shorts,7,'PUMA icy-blue home shorts approx SWOS light blue');
+assert.equal(checkKit('man-city').socks,7,'PUMA icy-blue home socks approx SWOS light blue');
+for(const id of ['arsenal','fulham','man-city']){
+ const k=kitResearch.clubs.find(c=>c.clubId===id);
+ assert.equal(k.checkedAt,'2026-11-10');
+ assert.ok(k.fullComponentsSourced&&k.componentSources?.shorts?.startsWith('https://')&&k.componentSources?.socks?.startsWith('https://'),'Kit completion requires dated component evidence: '+id);
+}
 assert.ok(!master.clubs[0].homeKit,'Research references must never auto-edit the binary game record');
 assert.ok(master.clubs.filter(c=>c.division==='Premier League').every(c=>kitResearch.clubs.some(k=>k.clubId===c.clubId)),'All 20 Premier League clubs must now have verified home shirts');
 assert.ok(master.clubs.filter(c=>c.division==='Championship').every(c=>kitResearch.clubs.some(k=>k.clubId===c.clubId)),'All 24 Championship clubs must now have sourced home shirts');
