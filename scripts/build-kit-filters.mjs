@@ -13,6 +13,13 @@ html=html.replace(/<article class="card" id="([^"]+)">/g,(full,id)=>{
  return '<article class="card" id="'+id+'" data-kit-name="'+esc(c.club)+'" data-kit-division="'+esc(c.division)+'" data-kit-status="'+(k.fullComponentsSourced?'complete':'pending')+'">';
 });
 if(marked!==92)throw Error('Kit filters require 92 cards');
+for(const k of kits.clubs.filter(k=>k.componentResearchLead)){
+ const anchor='id="'+k.clubId+'" data-kit-name=';
+ const i=html.indexOf(anchor);if(i<0)throw Error('Missing lead card '+k.clubId);
+ const end=html.indexOf('</article>',i);if(end<0)throw Error('Missing card closing tag');
+ const link='<p><a class="source" href="'+esc(k.componentResearchLead)+'" target="_blank" rel="noopener noreferrer">Product lead — colour not verified ↗</a></p>';
+ html=html.slice(0,end)+link+html.slice(end);
+}
 const controls='<div class="kit-filters"><label>Search club<input id="kit-search" type="search" placeholder="Club name"></label><label>Division<select id="kit-division"><option value="">All divisions</option>'+['Premier League','Championship','League One','League Two'].map(d=>'<option>'+d+'</option>').join('')+'</select></label><label>Research status<select id="kit-status"><option value="">All kits</option><option value="pending">Needs evidence</option><option value="complete">Complete references</option></select></label><button id="kit-reset" type="button">Reset</button><a href="/downloads/SWOS_Kits_Pending_2026-27.csv">Download pending kit worklist</a><p id="kit-count" aria-live="polite">92 of 92 clubs shown</p></div>';
 if(!html.includes('<section class="division"'))throw Error('No kit division section');
 html=html.replace('<section class="division"',controls+'<section class="division"');
@@ -21,8 +28,8 @@ const script="function matchesKit(record, query, division, status) {\n  return (
 new vm.Script(script);
 html=html.replace('</body>','<script>'+script+'</script></body>');
 fs.writeFileSync(page,html);
-const rows=[['Division','Club','Missing shorts','Missing socks','Shirt reference','Research note']];
-for(const c of master.clubs){const k=lookup.get(c.clubId);if(!k.fullComponentsSourced)rows.push([c.division,c.club,k.home.shorts===null?'YES':'',k.home.socks===null?'YES':'',k.sourceUrl,k.note]);}
+const rows=[['Division','Club','Missing shorts','Missing socks','Shirt reference','Research note','Unverified product lead']];
+for(const c of master.clubs){const k=lookup.get(c.clubId);if(!k.fullComponentsSourced)rows.push([c.division,c.club,k.home.shorts===null?'YES':'',k.home.socks===null?'YES':'',k.sourceUrl,k.note,k.componentResearchLead||'']);}
 const csv=v=>'"'+String(v??'').replace(/"/g,'""')+'"';
 fs.writeFileSync('dist/downloads/SWOS_Kits_Pending_2026-27.csv','\uFEFF'+rows.map(row=>row.map(csv).join(',')).join('\r\n')+'\r\n');
 console.log('Kit worklist: searchable 92-club guide, '+(rows.length-1)+' pending rows exported.');

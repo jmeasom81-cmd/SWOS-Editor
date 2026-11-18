@@ -11,6 +11,7 @@ const steps = [
   "scripts/test-kit-component-evidence-c.mjs",
   "scripts/test-kit-component-evidence-d.mjs",
   "scripts/test-kit-component-evidence-e.mjs",
+  "scripts/test-kit-component-evidence-f.mjs",
   "scripts/build-kit-filters.mjs",
   "scripts/test-kit-filters.mjs",
   "scripts/build-gap-review.mjs",

@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "checkedAt": "2026-11-18",
+  "purpose": "Five complete references, two partial components, one conflicting shirt identity and eleven product leads; no game file writes",
+  "previousComplete": 64,
+  "newComplete": 69,
+  "newlyComplete": 5,
+  "entries": [
+    {
+      "clubId": "wolverhampton-wanderers",
+      "homeShorts": 3,
+      "homeSocks": 3,
+      "componentSources": {
+        "shorts": "https://www.footyheadlines.com/2026/05/wolves-26-27-home-kit.html",
+        "socks": "https://www.footyheadlines.com/2026/05/wolves-26-27-home-kit.html"
+      },
+      "secondarySourceUrl": "https://www.bnppre.net/new-kits/wolverhampton-wanderers-jersey-26-27-home-sudu.html",
+      "sourceClassification": "Two contemporary 150th-anniversary SUDU kit reports",
+      "note": "The published 150th-anniversary home combination is old-gold shorts and socks. Orange approximates old gold; alternate match combinations and black detailing are not encoded."
+    },
+    {
+      "clubId": "tranmere-rovers",
+      "homeShorts": 1,
+      "homeSocks": 1,
+      "componentSources": {
+        "shorts": "https://www.birkenhead.news/tranmere-reveals-new-home-kit/",
+        "socks": "https://www.birkenhead.news/tranmere-reveals-new-home-kit/"
+      },
+      "secondarySourceUrl": "https://trfcshop.co.uk/products/26-27-home-jersey-1",
+      "sourceClassification": "Local dated 2026/27 full-strip report and official jersey",
+      "note": "The published Tranmere home strip uses white shorts and white socks. SWOS plain white omits shirt topography and its narrow central blue-green detail."
+    },
+    {
+      "clubId": "northampton-town",
+      "homeShorts": 6,
+      "homeSocks": 6,
+      "componentSources": {
+        "shorts": "https://www.thekitman.co.uk/northampton-town-unveil-the-2026-27-puma-home-kit/",
+        "socks": "https://www.thekitman.co.uk/northampton-town-unveil-the-2026-27-puma-home-kit/"
+      },
+      "secondarySourceUrl": "https://www.footballkitarchive.com/northampton-town-2026-27-home-kit-496272/",
+      "sourceClassification": "Dated 2026/27 Puma full-strip report and shirt archive",
+      "note": "The current Northampton home strip pairs claret shorts and socks with the claret jersey; brown/claret is the SWOS approximation, with the white turnover omitted."
+    },
+    {
+      "clubId": "accrington-stanley",
+      "homeShorts": 4,
+      "homeSocks": 4,
+      "componentSources": {
+        "shorts": "https://asfcstore.com/collections/accrington-stanley-replica-shirts",
+        "socks": "https://asfcstore.com/collections/accrington-stanley-replica-shirts"
+      },
+      "secondarySourceUrl": "https://www.footballkitarchive.com/accrington-stanley-2026-27-home-kit-510831/",
+      "sourceClassification": "Official current club store explicitly names red components plus carry-over shirt archive",
+      "note": "The current official shop labels both home shorts and socks red and includes the 26/27 third kit. The season catalogue confirms the home shirt is a carry-over; not a new jersey."
+    },
+    {
+      "clubId": "chesterfield",
+      "homeShorts": 1,
+      "homeSocks": 5,
+      "componentSources": {
+        "shorts": "https://www.footyheadlines.com/0458037603/chesterfield-fc-26-27-home-and-away-kits-released.html",
+        "socks": "https://www.footyheadlines.com/0458037603/chesterfield-fc-26-27-home-and-away-kits-released.html"
+      },
+      "secondarySourceUrl": "https://chesterfield-fc.co.uk/news/2026-27-kits-on-sale-now",
+      "sourceClassification": "Season-specific Puma full-kit coverage and official club announcement",
+      "note": "White shorts and royal blue socks complete Chesterfield's first-choice home strip. Gold anniversary branding and collar details are beyond SWOS's palette."
+    }
+  ],
+  "partial": [
+    {
+      "clubId": "luton-town",
+      "component": "shorts",
+      "value": 2,
+      "url": "https://shop.lutontown.co.uk/kit/kit/allkit/1249_2526-home-jun-shorts.html",
+      "note": "Official 25/27 product confirms navy shorts with orange panels. Navy uses the dark SWOS black approximation; current matching socks still unverified."
+    },
+    {
+      "clubId": "barnsley",
+      "component": "socks",
+      "value": 4,
+      "url": "https://www.linkedin.com/posts/barnsley-football-club_barnsley-fcs-new-oxen-sports-202627-home-activity-7481271376373436416-DNgh",
+      "note": "Club's own 2026/27 launch describes red-and-white hooped socks. SWOS red approximates the equal-colour hoops; shorts still require colour evidence."
+    }
+  ],
+  "conflict": {
+    "clubId": "bromley",
+    "sources": [
+      "https://www.footballkitarchive.com/bromley-fc-2026-27-home-kit-480007/",
+      "https://www.footyheadlines.com/2026/05/new-bromley-26-27-league-one-home-away-kits.html",
+      "https://kitgeek.co.uk/2026/09/08/efl-2026-27-kit-round-up-vol-1/"
+    ],
+    "note": "REVIEW: Football Kit Archive identifies the white pinstriped shirt as home, while Footy Headlines describes the red-black striped shirt as home; dated Kit Geek match report calls red-black the away shirt and white shorts/socks home components. Do not treat the existing shirt mapping as resolved. Preserve the existing shirt codes pending official confirmation and leave shorts/socks unfilled until the pairing is settled."
+  },
+  "leads": [
+    {
+      "clubId": "afc-wimbledon",
+      "url": "https://shopping.afcwimbledon.co.uk/collections/home-kit",
+      "note": "Current-season product listing found; colour remains unverified. Inspect component-specific photographs or written colour descriptions before completing."
+    },
+    {
+      "clubId": "bristol-city",
+      "url": "https://shop.bristol-sport.co.uk/bcfc/kit/home-kit/",
+      "note": "Current-season product listing found; colour remains unverified. Inspect component-specific photographs or written colour descriptions before completing."
+    },
+    {
+      "clubId": "leyton-orient",
+      "url": "https://shop.leytonorient.com/collections/home-kit-26-27",
+      "note": "Current-season product listing found; colour remains unverified. Inspect component-specific photographs or written colour descriptions before completing."
+    },
+    {
+      "clubId": "stevenage",
+      "url": "https://stevenagefcshop.com/collections/home-kit",
+      "note": "Current-season product listing found; colour remains unverified. Inspect component-specific photographs or written colour descriptions before completing."
+    },
+    {
+      "clubId": "bristol-rovers",
+      "url": "https://brfcdirect.co.uk/collections/home-kit",
+      "note": "Current-season product listing found; colour remains unverified. Inspect component-specific photographs or written colour descriptions before completing."
+    },
+    {
+      "clubId": "stockport-county",
+      "url": "https://www.stockportcounty.com/?p=73199",
+      "note": "Current-season product listing found; colour remains unverified. Inspect component-specific photographs or written colour descriptions before completing."
+    },
+    {
+      "clubId": "fleetwood-town",
+      "url": "https://ftfcshop.com/collections/all",
+      "note": "Current-season product listing found; colour remains unverified. Inspect component-specific photographs or written colour descriptions before completing."
+    },
+    {
+      "clubId": "notts-county",
+      "url": "https://shop.nottscountyfc.co.uk/kit/home-kit/adult/1044_notts-adult-home-shorts-2026-27.html",
+      "note": "Current-season product listing found; colour remains unverified. Inspect component-specific photographs or written colour descriptions before completing."
+    },
+    {
+      "clubId": "colchester-united",
+      "url": "https://www.cufcretail.com/cgi-bin/live/ecommerce.pl?dept_id=02&site=theclubshop_cufc&state=products&sub_dept_id=03",
+      "note": "Current-season product listing found; colour remains unverified. Inspect component-specific photographs or written colour descriptions before completing."
+    },
+    {
+      "clubId": "gillingham",
+      "url": "https://retail.gillinghamfootballclub.com/kit/home-kit/infant/1576_baby-home-kit-2627.html",
+      "note": "Current-season product listing found; colour remains unverified. Inspect component-specific photographs or written colour descriptions before completing."
+    },
+    {
+      "clubId": "walsall",
+      "url": "https://shop.saddlers.co.uk/",
+      "note": "Current-season product listing found; colour remains unverified. Inspect component-specific photographs or written colour descriptions before completing."
+    }
+  ]
+}

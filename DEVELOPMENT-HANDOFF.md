@@ -78,6 +78,12 @@ Make a stable browser-based SWOS/SWAS editor and a trustworthy 2026/27 English f
 - The generated kit guide now supports club search, division and research-status filters; a separate pending-only CSV lists the remaining component gaps. Both features have build-time tests.
 - No game binaries, player values, saves or direct installation permissions changed. Existing player evidence gaps remain.
 
+## 18 November 2026 — kit batch F
+- Five further complete references (Wolves, Tranmere, Northampton, Accrington, Chesterfield), giving 69/92, plus Luton shorts and Barnsley socks sourced separately. 23 full kits still pending.
+- Bromley shirt identification conflicts across season references; existing shirt codes remain flagged for review instead of being certified by guesswork.
+- Eleven further official product leads are exposed in the kit guide and pending-only CSV for follow-up. These are not verified colour evidence.
+- Sources and distinctions are stored in `data/kit-component-evidence-2026-11-18-batch-f.json`; new regression checks run at build time. Original TEAM files, player information and installation lock unchanged.
+
 ## Next useful milestones
 - Source-check remaining League One/League Two roster identities and missing player valuation evidence. Determine current outstanding totals from the latest audit rather than this prose.
 - Validate 2026/27 shirt numbers and conflicting player identities without guesswork.
