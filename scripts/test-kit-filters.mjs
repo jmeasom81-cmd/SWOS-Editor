@@ -22,5 +22,5 @@ const csv=fs.readFileSync('dist/downloads/SWOS_Kits_Pending_2026-27.csv','utf8')
 assert.equal(csv.trimEnd().split('\r\n').length,pending+1);
 console.log('Kit filters: status, case-insensitive search, division, reset, empty section and pending CSV verified.');
 
-for(const k of kits.clubs.filter(c=>c.componentResearchLead)){assert.ok(html.includes('href="'+k.componentResearchLead+'"'));assert.ok(csv.includes(k.componentResearchLead));}
+for(const k of kits.clubs.filter(c=>c.componentResearchLead)){assert.ok(html.includes('href="'+k.componentResearchLead.replace(/&/g,'&amp;')+'"'));assert.ok(csv.includes(k.componentResearchLead));}
 assert.ok(csv.includes('Unverified product lead'));
