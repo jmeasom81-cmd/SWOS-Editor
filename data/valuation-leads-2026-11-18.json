@@ -1,0 +1,275 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "checkedAt": "2026-11-18",
+  "classification": "Read-only published valuation leads, not independently confirmed Transfermarkt values; never auto-applied.",
+  "entries": [
+    {
+      "clubId": "crystal-palace",
+      "player": "Axel Disasi",
+      "storedShirt": 5,
+      "eurThousands": 15000,
+      "sourceUrl": "https://matchchase.com/team/cry-palace/squad",
+      "sourceType": "Independent squad market-value estimate",
+      "alternatives": [],
+      "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+      "status": "needs_corroboration",
+      "note": "Reported estimate only; publication/valuation date not independently established."
+    },
+    {
+      "clubId": "crystal-palace",
+      "player": "Takehiro Tomiyasu",
+      "storedShirt": 17,
+      "eurThousands": 5000,
+      "sourceUrl": "https://matchchase.com/team/cry-palace/squad",
+      "sourceType": "Independent squad market-value estimate",
+      "alternatives": [],
+      "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+      "status": "needs_corroboration",
+      "note": "Reported estimate only; publication/valuation date not independently established."
+    },
+    {
+      "clubId": "crystal-palace",
+      "player": "Oscar Mingueza",
+      "storedShirt": 30,
+      "eurThousands": 15000,
+      "sourceUrl": "https://matchchase.com/team/cry-palace/squad",
+      "sourceType": "Independent squad market-value estimate",
+      "alternatives": [],
+      "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+      "status": "needs_corroboration",
+      "note": "Reported estimate only; publication/valuation date not independently established."
+    },
+    {
+      "clubId": "crystal-palace",
+      "player": "Quinten Timber",
+      "storedShirt": 23,
+      "eurThousands": 25000,
+      "sourceUrl": "https://matchchase.com/team/cry-palace/squad",
+      "sourceType": "Independent squad market-value estimate",
+      "alternatives": [],
+      "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+      "status": "needs_corroboration",
+      "note": "Reported estimate only; publication/valuation date not independently established."
+    },
+    {
+      "clubId": "crystal-palace",
+      "player": "Dwight McNeil",
+      "storedShirt": 11,
+      "eurThousands": 22000,
+      "sourceUrl": "https://matchchase.com/team/cry-palace/squad",
+      "sourceType": "Independent squad market-value estimate",
+      "alternatives": [],
+      "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+      "status": "needs_corroboration",
+      "note": "Reported estimate only; publication/valuation date not independently established."
+    },
+    {
+      "clubId": "crystal-palace",
+      "player": "Evann Guessand",
+      "storedShirt": 29,
+      "eurThousands": 20000,
+      "sourceUrl": "https://matchchase.com/team/cry-palace/squad",
+      "sourceType": "Independent squad market-value estimate",
+      "alternatives": [],
+      "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+      "status": "needs_corroboration",
+      "note": "Reported estimate only; publication/valuation date not independently established."
+    },
+    {
+      "clubId": "ipswich",
+      "player": "Issa Diop",
+      "storedShirt": 6,
+      "eurThousands": 10000,
+      "sourceUrl": "https://matchchase.com/team/ipswich/squad",
+      "sourceType": "Independent squad market-value estimate",
+      "alternatives": [
+        {
+          "eurThousands": 8000,
+          "sourceUrl": "https://fmag.tr/en/kulup/ipswich-town_Njc3"
+        }
+      ],
+      "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+      "status": "conflicting_estimates",
+      "note": "Reported estimate only; publication/valuation date not independently established."
+    },
+    {
+      "clubId": "ipswich",
+      "player": "Sasa Lukic",
+      "storedShirt": 23,
+      "eurThousands": 10000,
+      "sourceUrl": "https://fmag.tr/en/kulup/ipswich-town_Njc3",
+      "sourceType": "Agent-directory published estimate",
+      "alternatives": [
+        {
+          "eurThousands": 10500,
+          "sourceUrl": "https://ballvalue.com/en/clasament/club/ipswich-town/1"
+        }
+      ],
+      "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+      "status": "conflicting_estimates",
+      "note": "Reported estimate only; publication/valuation date not independently established."
+    },
+    {
+      "clubId": "ipswich",
+      "player": "Exequiel Palacios",
+      "storedShirt": 25,
+      "eurThousands": 25000,
+      "sourceUrl": "https://matchchase.com/team/ipswich/squad",
+      "sourceType": "Independent squad market-value estimate",
+      "alternatives": [
+        {
+          "eurThousands": 22500,
+          "sourceUrl": "https://ballvalue.com/en/clasament/club/ipswich-town/1"
+        }
+      ],
+      "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+      "status": "conflicting_estimates",
+      "note": "Reported estimate only; publication/valuation date not independently established."
+    },
+    {
+      "clubId": "ipswich",
+      "player": "Julio Enciso",
+      "storedShirt": 10,
+      "eurThousands": 30000,
+      "sourceUrl": "https://matchchase.com/team/ipswich/squad",
+      "sourceType": "Independent squad market-value estimate",
+      "alternatives": [],
+      "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+      "status": "needs_corroboration",
+      "note": "Reported estimate only; publication/valuation date not independently established."
+    },
+    {
+      "clubId": "ipswich",
+      "player": "Abdul Fatawu",
+      "storedShirt": 7,
+      "eurThousands": 23000,
+      "sourceUrl": "https://matchchase.com/team/ipswich/squad",
+      "sourceType": "Independent squad market-value estimate",
+      "alternatives": [],
+      "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+      "status": "needs_corroboration",
+      "note": "Reported estimate only; publication/valuation date not independently established."
+    },
+    {
+      "clubId": "ipswich",
+      "player": "Daizen Maeda",
+      "storedShirt": 38,
+      "eurThousands": 13000,
+      "sourceUrl": "https://matchchase.com/team/ipswich/squad",
+      "sourceType": "Independent squad market-value estimate",
+      "alternatives": [],
+      "squadEvidenceUrl": "https://www.premierleague.com/en/news/4725682",
+      "status": "needs_corroboration",
+      "note": "Reported estimate only; publication/valuation date not independently established."
+    },
+    {
+      "clubId": "leicester-city",
+      "player": "Franco Ravizzoli",
+      "storedShirt": 21,
+      "eurThousands": 225,
+      "sourceUrl": "https://fmag.tr/en/kulup/leicester-city_MTAwMw",
+      "sourceType": "Agent-directory published estimate",
+      "alternatives": [],
+      "squadEvidenceUrl": "https://www.lcfc.com/media-article/team-news-stevenage-vs-leicester-city-jersey-mikes-trophy",
+      "status": "needs_corroboration",
+      "note": "Reported estimate only; publication/valuation date not independently established."
+    },
+    {
+      "clubId": "leicester-city",
+      "player": "John Lundstram",
+      "storedShirt": 6,
+      "eurThousands": 1300,
+      "sourceUrl": "https://fmag.tr/en/kulup/leicester-city_MTAwMw",
+      "sourceType": "Agent-directory published estimate",
+      "alternatives": [],
+      "squadEvidenceUrl": "https://www.lcfc.com/media-article/team-news-leicester-city-vs-doncaster-rovers-sky-bet-league-one",
+      "status": "needs_corroboration",
+      "note": "Reported estimate only; publication/valuation date not independently established."
+    },
+    {
+      "clubId": "leicester-city",
+      "player": "Conor Chaplin",
+      "storedShirt": 8,
+      "eurThousands": 2200,
+      "sourceUrl": "https://fmag.tr/en/kulup/leicester-city_MTAwMw",
+      "sourceType": "Agent-directory published estimate",
+      "alternatives": [],
+      "squadEvidenceUrl": "https://www.lcfc.com/media-article/team-news-leicester-city-vs-doncaster-rovers-sky-bet-league-one",
+      "status": "needs_corroboration",
+      "note": "Reported estimate only; publication/valuation date not independently established."
+    },
+    {
+      "clubId": "leicester-city",
+      "player": "Kamari Doyle",
+      "storedShirt": 27,
+      "eurThousands": 500,
+      "sourceUrl": "https://fmag.tr/en/kulup/leicester-city_MTAwMw",
+      "sourceType": "Agent-directory published estimate",
+      "alternatives": [],
+      "squadEvidenceUrl": "https://www.lcfc.com/media-article/team-news-leicester-city-vs-doncaster-rovers-sky-bet-league-one",
+      "status": "needs_corroboration",
+      "note": "Reported estimate only; publication/valuation date not independently established."
+    },
+    {
+      "clubId": "leicester-city",
+      "player": "Sammy Braybrooke",
+      "storedShirt": 36,
+      "eurThousands": 400,
+      "sourceUrl": "https://fmag.tr/en/kulup/leicester-city_MTAwMw",
+      "sourceType": "Agent-directory published estimate",
+      "alternatives": [],
+      "squadEvidenceUrl": "https://www.lcfc.com/media-article/team-news-leicester-city-vs-doncaster-rovers-sky-bet-league-one",
+      "status": "needs_corroboration",
+      "note": "Reported estimate only; publication/valuation date not independently established."
+    },
+    {
+      "clubId": "leicester-city",
+      "player": "Liam Cullen",
+      "storedShirt": 11,
+      "eurThousands": 3200,
+      "sourceUrl": "https://fmag.tr/en/kulup/leicester-city_MTAwMw",
+      "sourceType": "Agent-directory published estimate",
+      "alternatives": [],
+      "squadEvidenceUrl": "https://www.lcfc.com/media-article/team-news-leicester-city-vs-doncaster-rovers-sky-bet-league-one",
+      "status": "needs_corroboration",
+      "note": "Reported estimate only; publication/valuation date not independently established."
+    },
+    {
+      "clubId": "leicester-city",
+      "player": "Emil Riis",
+      "storedShirt": 17,
+      "eurThousands": 6000,
+      "sourceUrl": "https://fmag.tr/en/kulup/leicester-city_MTAwMw",
+      "sourceType": "Agent-directory published estimate",
+      "alternatives": [],
+      "squadEvidenceUrl": "https://www.lcfc.com/media-article/team-news-leicester-city-vs-doncaster-rovers-sky-bet-league-one",
+      "status": "needs_corroboration",
+      "note": "Reported estimate only; publication/valuation date not independently established."
+    },
+    {
+      "clubId": "leicester-city",
+      "player": "Tommy Watson",
+      "storedShirt": 23,
+      "eurThousands": 7000,
+      "sourceUrl": "https://fmag.tr/en/kulup/leicester-city_MTAwMw",
+      "sourceType": "Agent-directory published estimate",
+      "alternatives": [],
+      "squadEvidenceUrl": "https://www.lcfc.com/media-article/team-news-stevenage-vs-leicester-city-jersey-mikes-trophy",
+      "status": "needs_corroboration",
+      "note": "Club pre-season squad-number announcement lists #20; later match evidence in the master lists #23. Do not alter shirt automatically."
+    }
+  ],
+  "unresolved": [
+    {
+      "clubId": "leicester-city",
+      "player": "Warren O'Hora",
+      "reason": "No comparable valuation source verified; model and game values excluded."
+    },
+    {
+      "clubId": "leicester-city",
+      "player": "Admir Bristric",
+      "reason": "No comparable valuation source verified; video-game database values excluded."
+    }
+  ]
+}

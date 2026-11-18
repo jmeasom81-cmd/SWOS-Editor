@@ -84,6 +84,11 @@ Make a stable browser-based SWOS/SWAS editor and a trustworthy 2026/27 English f
 - Eleven further official product leads are exposed in the kit guide and pending-only CSV for follow-up. These are not verified colour evidence.
 - Sources and distinctions are stored in `data/kit-component-evidence-2026-11-18-batch-f.json`; new regression checks run at build time. Original TEAM files, player information and installation lock unchanged.
 
+## 18 November 2026 — valuation review workspace
+- 20 newly located provider estimates for currently unpriced Crystal Palace, Ipswich and Leicester players, kept separate from the confirmed master; three have conflicting estimates and two additional Leicester players lack comparable sources.
+- Data: `data/valuation-leads-2026-11-18.json`. New `/valuation-review.html` and CSV show reported EUR estimates, evidence URLs, competing values and identity notes. Provider estimates are not transfer fees and have not been promoted. No gameplay values, kits, or original TEAM files changed.
+- Current production tests intentionally retain the 238 unknown master values; future promotions must update the embedded research packs and baseline consistently and retain provenance.
+
 ## Next useful milestones
 - Source-check remaining League One/League Two roster identities and missing player valuation evidence. Determine current outstanding totals from the latest audit rather than this prose.
 - Validate 2026/27 shirt numbers and conflicting player identities without guesswork.
