@@ -72,6 +72,12 @@ Make a stable browser-based SWOS/SWAS editor and a trustworthy 2026/27 English f
 - Evidence stored in `data/kit-component-evidence-2026-11-18-batch-d.json`; added batch D guide and CSV regression checks to production. Existing shirt palette choices, player data and original TEAM files are unchanged.
 - West Brom and Wolves have competing shorts options; retain their unresolved status rather than infer a unique choice. Birmingham, Lincoln and Bristol City still need clearer component evidence.
 
+## 18 November 2026 — larger kit batch E and filtered worklist
+- Eleven more completed references: Cambridge, Grimsby, Wigan, Shrewsbury, Huddersfield, Sheffield Wednesday, MK Dons, Newport, Exeter, Peterborough and Rochdale. Full home references now 64/92; 28 pending.
+- Dated sources are in `data/kit-component-evidence-2026-11-18-batch-e.json`. Huddersfield's former missing shorts assertion is replaced with the documented white shorts; earlier black socks remain unchanged. Grimsby socks are white in the current Lotto kit, not assumed from last season.
+- The generated kit guide now supports club search, division and research-status filters; a separate pending-only CSV lists the remaining component gaps. Both features have build-time tests.
+- No game binaries, player values, saves or direct installation permissions changed. Existing player evidence gaps remain.
+
 ## Next useful milestones
 - Source-check remaining League One/League Two roster identities and missing player valuation evidence. Determine current outstanding totals from the latest audit rather than this prose.
 - Validate 2026/27 shirt numbers and conflicting player identities without guesswork.

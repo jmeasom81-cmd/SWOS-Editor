@@ -1032,18 +1032,22 @@
       "clubId": "cambridge-united",
       "description": "Plain amber shirt with black neckline and cuffs",
       "sourceUrl": "https://www.linkedin.com/posts/cambridge-united-football-club_the-cambridge-united-202627-home-kit-is-activity-7472974778358927361-wUCd",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-11-18",
       "home": {
         "type": 0,
         "shirt1": 3,
         "shirt2": 3,
-        "shorts": null,
-        "socks": null
+        "shorts": 2,
+        "socks": 2
       },
       "homeShirtSourced": true,
-      "fullComponentsSourced": false,
+      "fullComponentsSourced": true,
       "paletteApproximation": true,
-      "note": "Cambridge United's official 2026/27 announcement explicitly describes the all-amber 1970s-inspired return. SWOS orange is brighter; the black collar/cuff trim is omitted. Shorts and socks unverified."
+      "note": "Black shorts with amber inserts and black socks with amber branding complete the published strip. Plain amber shirt mapping is retained.",
+      "componentSources": {
+        "shorts": "https://footballshirtculture.com/new-kits/cambridge-united-jersey-26-27-home-umbro.html",
+        "socks": "https://footballshirtculture.com/new-kits/cambridge-united-jersey-26-27-home-umbro.html"
+      }
     },
     {
       "clubId": "doncaster-rovers",
@@ -1066,18 +1070,22 @@
       "clubId": "huddersfield-town",
       "description": "Blue and white vertical stripes with thin red lines; black home socks",
       "sourceUrl": "https://shop.htafc.com/kit/home-kit/adult/5210_202627-adult-home-shirt.html",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-11-18",
       "home": {
         "type": 2,
         "shirt1": 5,
         "shirt2": 1,
-        "shorts": null,
+        "shorts": 1,
         "socks": 2
       },
       "homeShirtSourced": true,
-      "fullComponentsSourced": false,
+      "fullComponentsSourced": true,
       "paletteApproximation": true,
-      "note": "The club's 2026/27 Castore shirt confirms blue-white stripes with thin flame-scarlet pinstripes; its separate official home sock product confirms black socks with red-blue tops. Shorts are unconfirmed and deliberately blank."
+      "note": "White shorts with red and blue detail complete the kit; previously verified black socks with blue and red trim are preserved.",
+      "componentSources": {
+        "shorts": "https://www.footballshirtculture.com/new-kits/huddersfield-town-jersey-26-27-home-castore.html?jpage=3",
+        "socks": "https://www.footballshirtculture.com/new-kits/huddersfield-town-jersey-26-27-home-castore.html?jpage=3"
+      }
     },
     {
       "clubId": "leicester-city",
@@ -1156,18 +1164,23 @@
       "clubId": "milton-keynes-dons",
       "description": "White 2026/27 home shirt",
       "sourceUrl": "https://shop.mkdons.com/HOMEJRSY2627M",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-11-18",
       "home": {
         "type": 0,
         "shirt1": 1,
         "shirt2": 1,
-        "shorts": null,
-        "socks": null
+        "shorts": 1,
+        "socks": 1
       },
       "homeShirtSourced": true,
-      "fullComponentsSourced": false,
+      "fullComponentsSourced": true,
       "paletteApproximation": true,
-      "note": "Official MK Dons 2026/27 current home shirt product is listed as white. Shorts and socks are sold separately but colours have not been independently established; plain white is a deliberate conservative SWOS mapping."
+      "note": "White shorts and white socks accompany the white home shirt. Gold crest and Reebok markings are omitted from the SWOS palette.",
+      "componentSources": {
+        "shorts": "https://www.bnppre.net/new-kits/milton-keynes-dons-jersey-26-27-home-reebok.html?ml=1",
+        "socks": "https://www.bnppre.net/new-kits/milton-keynes-dons-jersey-26-27-home-reebok.html?ml=1"
+      },
+      "secondarySourceUrl": "https://shop.mkdons.com/HOME-KIT"
     },
     {
       "clubId": "notts-county",
@@ -1207,18 +1220,23 @@
       "clubId": "peterborough-united",
       "description": "Traditional Posh blue Puma home shirt with crossover crew collar",
       "sourceUrl": "https://www.theposh.com/news/new-era-kit",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-11-18",
       "home": {
         "type": 0,
         "shirt1": 5,
         "shirt2": 5,
-        "shorts": null,
-        "socks": null
+        "shorts": 5,
+        "socks": 5
       },
       "homeShirtSourced": true,
-      "fullComponentsSourced": false,
+      "fullComponentsSourced": true,
       "paletteApproximation": true,
-      "note": "Peterborough's official 1 June 2026 launch confirms a blue 2026/27 Puma shirt with its new crest and crossover ribbed crew collar. SWOS cannot render collar or branding, and team shorts/socks colours require first-team confirmation."
+      "note": "The club's official link collection lists royal blue 26/27 home shorts and socks; the local launch report corroborates the season.",
+      "componentSources": {
+        "shorts": "https://linktr.ee/theposhofficial",
+        "socks": "https://linktr.ee/theposhofficial"
+      },
+      "secondarySourceUrl": "https://www.peterboroughtoday.co.uk/sport/football/peterborough-united/peterborough-united-have-launched-their-2026-27-home-kit-the-first-to-include-the-controversial-new-club-crest-8652571"
     },
     {
       "clubId": "plymouth-argyle",
@@ -1259,18 +1277,23 @@
       "clubId": "sheffield-wednesday",
       "description": "Classic blue and white vertical stripes with collared neckline and yellow crest details",
       "sourceUrl": "https://shop.swfc.co.uk/products/sheffield-wednesday-mens-2026-27-home-short-sleeve-shirt",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-11-18",
       "home": {
         "type": 2,
         "shirt1": 5,
         "shirt2": 1,
-        "shorts": null,
-        "socks": null
+        "shorts": 2,
+        "socks": 5
       },
       "homeShirtSourced": true,
-      "fullComponentsSourced": false,
+      "fullComponentsSourced": true,
       "paletteApproximation": true,
-      "note": "The official Umbro 2026/27 shirt explicitly describes royal blue and white vertical stripes and yellow emblem details. SWOS cannot model yellow crest embroidery or ribbed collar. Shorts/socks still need independent colour verification."
+      "note": "Black shorts and royal blue socks complete the home strip, with white sock turnovers and yellow details simplified in SWOS.",
+      "componentSources": {
+        "shorts": "https://www.footballshirtculture.com/new-kits/sheffield-wednesday-jersey-26-27-home-umbro.html?ml=1",
+        "socks": "https://www.footballshirtculture.com/new-kits/sheffield-wednesday-jersey-26-27-home-umbro.html?ml=1"
+      },
+      "secondarySourceUrl": "https://www.thestar.co.uk/sport/football/sheffield-wednesday/sheffield-wednesday-news-kit-shirt-8786481"
     },
     {
       "clubId": "stevenage",
@@ -1312,19 +1335,23 @@
       "clubId": "wigan-athletic",
       "description": "Predominantly blue O'Neills shirt with subtle tonal vertical stripes and white accents",
       "sourceUrl": "https://store.wiganathletic.com/",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-11-18",
       "home": {
         "type": 0,
         "shirt1": 5,
         "shirt2": 5,
-        "shorts": null,
-        "socks": null
+        "shorts": 5,
+        "socks": 5
       },
       "homeShirtSourced": true,
-      "fullComponentsSourced": false,
+      "fullComponentsSourced": true,
       "paletteApproximation": true,
-      "note": "Official 26/27 home collection and season-specific O'Neills design reporting confirm tonal blue-on-blue vertical stripes, white V-neck trim and blue dominant body. SWOS plain blue avoids incorrectly rendering broad contrasting stripes. Shorts/socks need more direct confirmation.",
-      "secondarySourceUrl": "https://www.footballkitarchive.com/wigan-athletic-2026-27-home-kit-492442/"
+      "note": "Blue shorts and blue socks with white foot detail complete Wigan's home kit. SWOS cannot reproduce the white foot detail.",
+      "secondarySourceUrl": "https://www.footyheadlines.com/2026/07/wigan-26-27-home-kit.html",
+      "componentSources": {
+        "shorts": "https://www.footballshirtculture.com/new-kits/wigan-athletic-jersey-26-27-home-oneills.html",
+        "socks": "https://www.footballshirtculture.com/new-kits/wigan-athletic-jersey-26-27-home-oneills.html"
+      }
     },
     {
       "clubId": "wycombe-wanderers",
@@ -1488,19 +1515,23 @@
       "clubId": "exeter-city",
       "description": "Red shirt with fine white vertical pinstripes, white sleeves and black Adidas shoulder stripes",
       "sourceUrl": "https://shop.exetercityfc.com/products/exeter-city-2026-27-home-shirt-adults",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-11-18",
       "home": {
         "type": 1,
         "shirt1": 4,
         "shirt2": 1,
-        "shorts": null,
-        "socks": null
+        "shorts": 2,
+        "socks": 1
       },
       "homeShirtSourced": true,
-      "fullComponentsSourced": false,
+      "fullComponentsSourced": true,
       "paletteApproximation": true,
-      "note": "Official 2026/27 Exeter store listing combined with dated independent kit research confirms a red body, thin white pinstripes and white sleeves for the 125th-anniversary season. SWOS contrast-sleeve pattern retains dominant appearance but omits pinstripes. Shorts and socks colour not inferred from previous season.",
-      "secondarySourceUrl": "https://www.footballkitarchive.com/exeter-city-2026-27-home-kit-492823/"
+      "note": "Black shorts and white socks complete the red-and-white home strip. Thin pinstripes and shoulder markings are omitted in SWOS.",
+      "secondarySourceUrl": "https://shop.exetercityfc.com/collections/25-26-home-kit",
+      "componentSources": {
+        "shorts": "https://www.footyheadlines.com/5962178349/exeter-city-26-27-home-away-kits-released.html",
+        "socks": "https://www.footyheadlines.com/5962178349/exeter-city-26-27-home-away-kits-released.html"
+      }
     },
     {
       "clubId": "fleetwood-town",
@@ -1542,36 +1573,44 @@
       "clubId": "grimsby-town",
       "description": "Black and white vertical stripes with red crest piping inspired by 1996–98",
       "sourceUrl": "https://gtfc.co.uk/back-in-town-introducing-our-2026-27-home-shirt/",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-11-18",
       "home": {
         "type": 2,
         "shirt1": 2,
         "shirt2": 1,
-        "shorts": null,
-        "socks": null
+        "shorts": 2,
+        "socks": 1
       },
       "homeShirtSourced": true,
-      "fullComponentsSourced": false,
+      "fullComponentsSourced": true,
       "paletteApproximation": true,
-      "note": "Grimsby Town's official June 30 release explicitly confirms black-white stripes and subtle retro details. SWOS can show the stripes but not red piping or retro collar detail; shorts and socks colours not independently documented."
+      "note": "Black shorts with white accents and white socks with black turnovers are documented for 2026/27, rather than the prior year's black socks.",
+      "componentSources": {
+        "shorts": "https://www.footballshirtculture.com/new-kits/grimsby-town-jersey-26-27-home-lotto.html?ml=1",
+        "socks": "https://www.footballshirtculture.com/new-kits/grimsby-town-jersey-26-27-home-lotto.html?ml=1"
+      }
     },
     {
       "clubId": "newport-county",
       "description": "Amber shirt with black trim and woven Hall of Fame names",
       "sourceUrl": "https://shop.newport-county.co.uk/collections/newport-county-afc-2026-27-home-kit-collection",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-11-18",
       "home": {
         "type": 0,
         "shirt1": 3,
         "shirt2": 3,
-        "shorts": null,
-        "socks": null
+        "shorts": 3,
+        "socks": 3
       },
       "homeShirtSourced": true,
-      "fullComponentsSourced": false,
+      "fullComponentsSourced": true,
       "paletteApproximation": true,
-      "note": "Official VX3 2026/27 Newport kit collection includes current shirt, shorts and socks. Contemporary kit release describes amber base with black details and woven names; SWOS orange approximates amber. Separate product listings do not alone establish shorts or socks colours.",
-      "secondarySourceUrl": "https://www.footyheadlines.com/1948367331/newport-county-26-27-home-kit-released.html"
+      "note": "Amber shorts and amber socks complete the published home pairing. SWOS orange approximates amber without the shirt's fine detail.",
+      "secondarySourceUrl": "https://shop.newport-county.co.uk/collections/newport-county-afc-2026-27-home-kit-collection",
+      "componentSources": {
+        "shorts": "https://www.aol.com/articles/newport-launch-kit-featuring-hall-130306000.html",
+        "socks": "https://www.aol.com/articles/newport-launch-kit-featuring-hall-130306000.html"
+      }
     },
     {
       "clubId": "northampton-town",
@@ -1630,18 +1669,23 @@
       "clubId": "rochdale",
       "description": "Royal-blue home shirt with tonal chevron texture and white polo collar",
       "sourceUrl": "https://www.rafcshop.co.uk/products/home-adult-shirt-26-27",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-11-18",
       "home": {
         "type": 0,
         "shirt1": 5,
         "shirt2": 5,
-        "shorts": null,
-        "socks": null
+        "shorts": 5,
+        "socks": 5
       },
       "homeShirtSourced": true,
-      "fullComponentsSourced": false,
+      "fullComponentsSourced": true,
       "paletteApproximation": true,
-      "note": "Rochdale's official O'Neills home product confirms blue with tone-on-tone chevrons, white collar and red-white-black cuff trim. SWOS plain blue cannot reproduce the chevron; unlike last season, shorts/socks need fresh corroboration."
+      "note": "November's kit-usage report distinguishes the normal all-blue home kit from a match-specific switch to away shorts and socks. Plain SWOS blue preserves the dominant colour.",
+      "componentSources": {
+        "shorts": "https://kitgeek.co.uk/category/kit-news/",
+        "socks": "https://kitgeek.co.uk/category/kit-news/"
+      },
+      "secondarySourceUrl": "https://www.rafcshop.co.uk/products/home-adult-shirt-26-27"
     },
     {
       "clubId": "rotherham-united",
@@ -1683,18 +1727,22 @@
       "clubId": "shrewsbury-town",
       "description": "140th-anniversary deep navy home shirt with heritage crest",
       "sourceUrl": "https://www.shrewsburytown.com/news/new-post-mq9dk8vw",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-11-18",
       "home": {
         "type": 0,
         "shirt1": 5,
         "shirt2": 5,
-        "shorts": null,
-        "socks": null
+        "shorts": 1,
+        "socks": 2
       },
       "homeShirtSourced": true,
-      "fullComponentsSourced": false,
+      "fullComponentsSourced": true,
       "paletteApproximation": true,
-      "note": "Shrewsbury's official 2026/27 launch confirms historical deep navy-and-white identity in place of traditional blue/amber. SWOS blue approximates navy (black would be too dark for the shirt); 140-year crest artwork is omitted. Shorts/socks not yet confirmed."
+      "note": "White shorts and navy socks accompany the anniversary shirt. Black is used as the available nearby dark navy sock colour in SWOS.",
+      "componentSources": {
+        "shorts": "https://www.footballshirtculture.com/new-kits/shrewsbury-town-jersey-26-27-home-oxen.html?ml=1",
+        "socks": "https://www.footballshirtculture.com/new-kits/shrewsbury-town-jersey-26-27-home-oxen.html?ml=1"
+      }
     },
     {
       "clubId": "swindon-town",

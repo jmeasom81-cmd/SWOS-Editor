@@ -243,7 +243,7 @@ assert.equal(checkKit('bradford-city').shorts,2,'Bradford City official black sh
 assert.equal(checkKit('blackpool').socks,3,'Blackpool official tangerine socks');
 assert.equal(checkKit('burton-albion').type,2,'2026/27 Burton has returned to amber-black stripes');
 assert.equal(checkKit('burton-albion').socks,3,'Admiral verifies Burton orange socks');
-assert.equal(checkKit('huddersfield-town').shorts,null,'Huddersfield shorts still need colour evidence');
+assert.equal(checkKit('huddersfield-town').shorts,1,'2026/27 Castore full-strip report documents white shorts');
 assert.equal(checkKit('cambridge-united').type,0,'2026/27 Cambridge home shirt is plain amber, not 2025/26 stripes');
 assert.ok(master.clubs.filter(c=>c.division==='League One').every(c=>kitResearch.clubs.some(k=>k.clubId===c.clubId)),'All League One clubs need sourced 2026/27 shirts');
 assert.ok(master.clubs.filter(c=>c.division==='League Two').slice(0,6).every(c=>kitResearch.clubs.some(k=>k.clubId===c.clubId)),'First six League Two clubs need sourced 2026/27 shirt references');
