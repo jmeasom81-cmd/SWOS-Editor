@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "checkedAt": "2026-11-18",
+  "purpose": "Six further complete home-kit component references; existing shirt design and game binaries unchanged",
+  "previousComplete": 47,
+  "newComplete": 53,
+  "newlyComplete": 6,
+  "entries": [
+    {
+      "clubId": "cardiff-city",
+      "homeShorts": 1,
+      "homeSocks": 5,
+      "componentSources": {
+        "shorts": "https://www.thekitman.co.uk/cardiff-city-unveil-new-2026-27-castore-home-kit-a-fresh-era-for-the-bluebirds/",
+        "socks": "https://www.thekitman.co.uk/cardiff-city-unveil-new-2026-27-castore-home-kit-a-fresh-era-for-the-bluebirds/"
+      },
+      "secondarySourceUrl": null,
+      "sourceClassification": "Season-specific Castore home-kit release report",
+      "note": "White shorts and blue socks complete Cardiff’s published 2026/27 home strip; SWOS plain blue omits shirt detailing."
+    },
+    {
+      "clubId": "sheffield-united",
+      "homeShorts": 2,
+      "homeSocks": 4,
+      "componentSources": {
+        "shorts": "https://www.footballshirtculture.com/new-kits/sheffield-united-jersey-26-27-home-adidas.html",
+        "socks": "https://www.footballshirtculture.com/new-kits/sheffield-united-jersey-26-27-home-adidas.html"
+      },
+      "secondarySourceUrl": "https://store.sufc.co.uk/en/c-16449",
+      "sourceClassification": "Dated full Adidas kit coverage and official club shop",
+      "note": "Black shorts and red socks accompany the 2026/27 red-and-white striped home shirt; SWOS omits lettering and narrow black separators."
+    },
+    {
+      "clubId": "southampton",
+      "homeShorts": 2,
+      "homeSocks": 2,
+      "componentSources": {
+        "shorts": "https://www.thekitman.co.uk/southampton-2026-27-puma-home-kit-unveiled/",
+        "socks": "https://www.thekitman.co.uk/southampton-2026-27-puma-home-kit-unveiled/"
+      },
+      "secondarySourceUrl": "https://www.footballshirtculture.com/new-kits/southampton-jersey-26-27-home-puma.html",
+      "sourceClassification": "Two independent current-season Puma home-strip reports",
+      "note": "Black shorts and black socks are the published men's home pairing; red and white sock hoops are simplified to solid black."
+    },
+    {
+      "clubId": "swansea-city",
+      "homeShorts": 1,
+      "homeSocks": 1,
+      "componentSources": {
+        "shorts": "https://www.footballshirtculture.com/new-kits/swansea-city-jersey-26-27-home-joma.html",
+        "socks": "https://www.footballshirtculture.com/new-kits/swansea-city-jersey-26-27-home-joma.html"
+      },
+      "secondarySourceUrl": "https://www.footyheadlines.com/1866678880/swansea-city-26-27-home-kit-released.html",
+      "sourceClassification": "Two dated Joma complete-kit release reports",
+      "note": "White shorts and white socks accompany the white home shirt; copper bands and black logos cannot be represented in the palette."
+    },
+    {
+      "clubId": "west-ham-united",
+      "homeShorts": 1,
+      "homeSocks": 1,
+      "componentSources": {
+        "shorts": "https://www.footballshirtculture.com/new-kits/west-ham-united-jersey-26-27-home-new-balance.html?ml=1",
+        "socks": "https://www.footballshirtculture.com/new-kits/west-ham-united-jersey-26-27-home-new-balance.html?ml=1"
+      },
+      "secondarySourceUrl": "https://www.kumb.com/story.php/docs/story.php?id=140151",
+      "sourceClassification": "New Balance release report plus contemporary fan-site coverage",
+      "note": "White shorts and white socks accompany the claret and blue home shirt. Existing shirt approximation is unchanged; trim is not rendered."
+    },
+    {
+      "clubId": "wrexham",
+      "homeShorts": 1,
+      "homeSocks": 1,
+      "componentSources": {
+        "shorts": "https://mail.footballshirtculture.com/new-kits/wrexham-jersey-26-27-home-macron.html?ml=1",
+        "socks": "https://mail.footballshirtculture.com/new-kits/wrexham-jersey-26-27-home-macron.html?ml=1"
+      },
+      "secondarySourceUrl": "https://shop.wrexhamafc.co.uk/en-eu/products/26-27-home-shorts-wht",
+      "sourceClassification": "Dated full Macron kit report and official shorts product",
+      "note": "White shorts with red side bands and white socks with red cuffs complete the 2026/27 home strip. SWOS omits the finer markings."
+    }
+  ]
+}

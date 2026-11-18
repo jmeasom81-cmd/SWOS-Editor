@@ -9,6 +9,7 @@ const steps = [
   "scripts/test-kit-component-evidence.mjs",
   "scripts/test-kit-component-evidence-b.mjs",
   "scripts/test-kit-component-evidence-c.mjs",
+  "scripts/test-kit-component-evidence-d.mjs",
   "scripts/build-gap-review.mjs",
   "scripts/build-source-audit.mjs",
   "scripts/test-source-audit.mjs",

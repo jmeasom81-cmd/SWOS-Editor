@@ -537,18 +537,22 @@
       "clubId": "cardiff-city",
       "description": "Royal blue home shirt with white accents",
       "sourceUrl": "https://www.cardiffcityfcstore.com/kit/home-kit/adult/4726_2627-home-shirt-adult.html",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-11-18",
       "home": {
         "type": 0,
         "shirt1": 5,
         "shirt2": 5,
-        "shorts": null,
-        "socks": null
+        "shorts": 1,
+        "socks": 5
       },
       "homeShirtSourced": true,
-      "fullComponentsSourced": false,
+      "fullComponentsSourced": true,
       "paletteApproximation": true,
-      "note": "Official Castore 26/27 home shirt in club shop confirms this season's design; plain SWOS blue omits white sleeve/shoulder detailing. Shorts/socks need separate verification."
+      "note": "White shorts and blue socks complete Cardiff’s published 2026/27 home strip; SWOS plain blue omits shirt detailing.",
+      "componentSources": {
+        "shorts": "https://www.thekitman.co.uk/cardiff-city-unveil-new-2026-27-castore-home-kit-a-fresh-era-for-the-bluebirds/",
+        "socks": "https://www.thekitman.co.uk/cardiff-city-unveil-new-2026-27-castore-home-kit-a-fresh-era-for-the-bluebirds/"
+      }
     },
     {
       "clubId": "charlton-athletic",
@@ -743,35 +747,45 @@
       "clubId": "sheffield-united",
       "description": "Red and white vertical stripes separated by thin black lines",
       "sourceUrl": "https://store.sufc.co.uk/en/sheffield-united-adidas-home-shirt-2026-27/p-910059053459844299%2Bz-8-1904347927",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-11-18",
       "home": {
         "type": 2,
         "shirt1": 4,
         "shirt2": 1,
-        "shorts": null,
-        "socks": null
+        "shorts": 2,
+        "socks": 4
       },
       "homeShirtSourced": true,
-      "fullComponentsSourced": false,
+      "fullComponentsSourced": true,
       "paletteApproximation": true,
-      "note": "Adidas 2026/27 official club shop shirt, with vertical red/white stripes and fine black dividing lines corroborated by contemporary kit reporting. SWOS broad stripes omit black separators; full-component official evidence pending."
+      "note": "Black shorts and red socks accompany the 2026/27 red-and-white striped home shirt; SWOS omits lettering and narrow black separators.",
+      "componentSources": {
+        "shorts": "https://www.footballshirtculture.com/new-kits/sheffield-united-jersey-26-27-home-adidas.html",
+        "socks": "https://www.footballshirtculture.com/new-kits/sheffield-united-jersey-26-27-home-adidas.html"
+      },
+      "secondarySourceUrl": "https://store.sufc.co.uk/en/c-16449"
     },
     {
       "clubId": "southampton",
       "description": "Red and white home shirt design",
       "sourceUrl": "https://store.southamptonfc.com/kit/homekit/mens/4350_home-shirt-2627-adult.html",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-11-18",
       "home": {
         "type": 2,
         "shirt1": 4,
         "shirt2": 1,
-        "shorts": null,
-        "socks": null
+        "shorts": 2,
+        "socks": 2
       },
       "homeShirtSourced": true,
-      "fullComponentsSourced": false,
+      "fullComponentsSourced": true,
       "paletteApproximation": true,
-      "note": "Official 2026/27 men's Puma home shirt lists Red/White. SWOS vertical stripes are a simplified traditional interpretation pending direct confirmation of exact striped layout; shorts and socks not researched. Women's bespoke diagonal-stripe home shirt is a separate design and is not used."
+      "note": "Black shorts and black socks are the published men's home pairing; red and white sock hoops are simplified to solid black.",
+      "componentSources": {
+        "shorts": "https://www.thekitman.co.uk/southampton-2026-27-puma-home-kit-unveiled/",
+        "socks": "https://www.thekitman.co.uk/southampton-2026-27-puma-home-kit-unveiled/"
+      },
+      "secondarySourceUrl": "https://www.footballshirtculture.com/new-kits/southampton-jersey-26-27-home-puma.html"
     },
     {
       "clubId": "stoke-city",
@@ -799,18 +813,23 @@
       "clubId": "swansea-city",
       "description": "White 2026/27 home shirt",
       "sourceUrl": "https://store.swanseacity.com/products/baby-home-mini-kit-2026-27",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-11-18",
       "home": {
         "type": 0,
         "shirt1": 1,
         "shirt2": 1,
-        "shorts": null,
-        "socks": null
+        "shorts": 1,
+        "socks": 1
       },
       "homeShirtSourced": true,
-      "fullComponentsSourced": false,
+      "fullComponentsSourced": true,
       "paletteApproximation": true,
-      "note": "Swansea official Joma 2026/27 home mini-kit description explicitly confirms iconic white shirt. Full kit products exist but colours for shorts/socks were not independently confirmed as text, so left blank."
+      "note": "White shorts and white socks accompany the white home shirt; copper bands and black logos cannot be represented in the palette.",
+      "componentSources": {
+        "shorts": "https://www.footballshirtculture.com/new-kits/swansea-city-jersey-26-27-home-joma.html",
+        "socks": "https://www.footballshirtculture.com/new-kits/swansea-city-jersey-26-27-home-joma.html"
+      },
+      "secondarySourceUrl": "https://www.footyheadlines.com/1866678880/swansea-city-26-27-home-kit-released.html"
     },
     {
       "clubId": "watford",
@@ -850,18 +869,23 @@
       "clubId": "west-ham-united",
       "description": "Claret and blue 2026/27 New Balance home shirt",
       "sourceUrl": "https://shop.whufc.com/kits/home-kit/adult/15330_west-ham-2627-home-shirt.html",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-11-18",
       "home": {
         "type": 0,
         "shirt1": 6,
         "shirt2": 6,
-        "shorts": null,
-        "socks": null
+        "shorts": 1,
+        "socks": 1
       },
       "homeShirtSourced": true,
-      "fullComponentsSourced": false,
+      "fullComponentsSourced": true,
       "paletteApproximation": true,
-      "note": "New Balance official 2026/27 home product confirms claret/blue identity. SWOS brown substitutes for claret; the shirt's blue design portions cannot be reliably mapped without a precise shirt-panel reference. Shorts/socks not independently sourced."
+      "note": "White shorts and white socks accompany the claret and blue home shirt. Existing shirt approximation is unchanged; trim is not rendered.",
+      "componentSources": {
+        "shorts": "https://www.footballshirtculture.com/new-kits/west-ham-united-jersey-26-27-home-new-balance.html?ml=1",
+        "socks": "https://www.footballshirtculture.com/new-kits/west-ham-united-jersey-26-27-home-new-balance.html?ml=1"
+      },
+      "secondarySourceUrl": "https://www.kumb.com/story.php/docs/story.php?id=140151"
     },
     {
       "clubId": "wolverhampton-wanderers",
@@ -884,18 +908,23 @@
       "clubId": "wrexham",
       "description": "Red 2026/27 Macron home shirt with embossed old Kop barrier pattern",
       "sourceUrl": "https://shop.wrexhamafc.co.uk/collections/26-27-home-kit",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-11-18",
       "home": {
         "type": 0,
         "shirt1": 4,
         "shirt2": 4,
-        "shorts": null,
-        "socks": null
+        "shorts": 1,
+        "socks": 1
       },
       "homeShirtSourced": true,
-      "fullComponentsSourced": false,
+      "fullComponentsSourced": true,
       "paletteApproximation": true,
-      "note": "Official 2026/27 Wrexham home collection and Macron product describe terrace-barrier embossed pattern; solid SWOS red is an approximation. Team shorts/socks colours not explicitly established from sourced text."
+      "note": "White shorts with red side bands and white socks with red cuffs complete the 2026/27 home strip. SWOS omits the finer markings.",
+      "componentSources": {
+        "shorts": "https://mail.footballshirtculture.com/new-kits/wrexham-jersey-26-27-home-macron.html?ml=1",
+        "socks": "https://mail.footballshirtculture.com/new-kits/wrexham-jersey-26-27-home-macron.html?ml=1"
+      },
+      "secondarySourceUrl": "https://shop.wrexhamafc.co.uk/en-eu/products/26-27-home-shorts-wht"
     },
     {
       "clubId": "afc-wimbledon",

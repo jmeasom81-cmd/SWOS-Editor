@@ -67,6 +67,11 @@ Make a stable browser-based SWOS/SWAS editor and a trustworthy 2026/27 English f
 - Hull's amber/black hooped socks are approximated with SWOS Orange (single colour); this is a limitation, not an assertion that the real socks are plain orange.
 - No original SWOS files, game saves or direct-installer permissions have been modified.
 
+## 18 November 2026 — kit research batch D
+- Six further full home kits sourced: Cardiff, Sheffield United, Southampton, Swansea, West Ham and Wrexham. 53/92 complete, 39 pending.
+- Evidence stored in `data/kit-component-evidence-2026-11-18-batch-d.json`; added batch D guide and CSV regression checks to production. Existing shirt palette choices, player data and original TEAM files are unchanged.
+- West Brom and Wolves have competing shorts options; retain their unresolved status rather than infer a unique choice. Birmingham, Lincoln and Bristol City still need clearer component evidence.
+
 ## Next useful milestones
 - Source-check remaining League One/League Two roster identities and missing player valuation evidence. Determine current outstanding totals from the latest audit rather than this prose.
 - Validate 2026/27 shirt numbers and conflicting player identities without guesswork.
