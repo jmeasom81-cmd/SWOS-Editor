@@ -77,6 +77,22 @@ for (const club of baseline.clubs) {
   club.snapshot = meta.snapshot || club.snapshot;
   club.kind = meta.kind || club.kind;
 }
+// Integration U: evidence-only supplemental pack; no stored shirts, skills or values are overwritten.
+const rosterU=JSON.parse(fs.readFileSync('data/championship-reconciliation-u-2026-11-18.json','utf8'));
+if(rosterU.season!==baseline.season)throw Error('Roster U season mismatch');
+let addedRosterU=0;
+for(const c of rosterU.clubs){
+ const club=baseline.clubs.find(x=>x.clubId===c.clubId);if(!club)throw Error('Roster U club missing '+c.clubId);
+ for(const e of c.players){
+  const p=club.players.find(x=>x.player===e.player);if(!p||p.shirt!==e.shirt)throw Error('Roster U identity/number mismatch '+e.player);
+  const source=p.officialPLRosterUrl||p.officialClubSourceUrl||p.matchLineupSourceUrl||p.independentSeasonRosterUrl||p.seasonSquadSourceUrl;
+  if(e.alreadyLinked){if(!source)throw Error('Roster U would erase existing evidence '+e.player);continue;}
+  if(source)throw Error('Roster U expected a previously unlinked player '+e.player);
+  Object.assign(p,{independentSeasonRosterUrl:c.sourceUrl,independentSeasonRosterNumber:e.shirt,independentSeasonRosterCheckedAt:rosterU.checkedAt,independentSeasonRosterSourceName:'Sport on Earth (ESPN mirror)',independentSeasonRosterClassification:c.classification});
+  addedRosterU++;
+ }
+}
+if(addedRosterU!==rosterU.summary.newLinks)throw Error('Roster U link count mismatch');
 baseline.clubCount = baseline.clubs.length;
 baseline.playerCount = baseline.clubs.reduce((n, c) => n + c.players.length, 0);
 baseline.generatedAt = new Date().toISOString().slice(0, 10);
@@ -115,6 +131,7 @@ if(batchS.season!==baseline.season||batchS.clubs.length!==2)throw new Error('Nor
 const integrationT=JSON.parse(fs.readFileSync('data/york-crawley-exeter-integration-t-2026-10-20.json','utf8'));
 if(integrationT.season!==baseline.season||integrationT.clubs.length!==3)throw new Error('Integration T season mismatch');
 const integrity = [];
+for(const c of rosterU.clubs){for(const f of c.discrepancies)integrity.push(['CONFLICTING SHIRT SOURCES','Championship',c.club,f.player,f.note,'Verify a club-issued 2026/27 squad list; '+f.sourceUrl]);for(const f of c.membership)integrity.push(['CONFIRMED LOAN — REVIEW SWOS SLOT','Championship',c.club,f.player,f.reason,f.sourceUrl]);}
 const clubKeys = new Set();
 const byPlayerName = new Map();
 const expectedDivisions = {'Premier League':20,'Championship':24,'League One':24,'League Two':24};

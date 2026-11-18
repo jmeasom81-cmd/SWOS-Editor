@@ -1,0 +1,358 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "checkedAt": "2026-11-18",
+  "classification": "Named season roster evidence from Sport on Earth, which identifies ESPN as its underlying data provider; independent, not club-issued. Source-listed names and numbers reconciled against the selected 16 player slots only.",
+  "clubs": [
+    {
+      "clubId": "birmingham-city",
+      "club": "Birmingham City",
+      "sourceUrl": "https://www.sportonearth.com/sports/football/championship/birmingham-city/",
+      "snapshotDate": "2026-11-16",
+      "classification": "independent_espn_roster_mirror",
+      "players": [
+        {
+          "player": "Ryan Allsop",
+          "sourceName": "Ryan Allsop",
+          "shirt": 21,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Christoph Klarer",
+          "sourceName": "Christoph Klarer",
+          "shirt": 4,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Dael Fry",
+          "sourceName": "Dael Fry",
+          "shirt": 23,
+          "alreadyLinked": true
+        },
+        {
+          "player": "Alex Cochrane",
+          "sourceName": "Alex Cochrane",
+          "shirt": 20,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Bright Osayi-Samuel",
+          "sourceName": "Bright Osayi-Samuel",
+          "shirt": 26,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Ethan Laird",
+          "sourceName": "Ethan Laird",
+          "shirt": 2,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Tomoki Iwata",
+          "sourceName": "Tomoki Iwata",
+          "shirt": 24,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Jhon Solis",
+          "sourceName": "Jhon Solis",
+          "shirt": 14,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Marc Leonard",
+          "sourceName": "Marc Leonard",
+          "shirt": 12,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Seung-ho Paik",
+          "sourceName": "Paik Seung-Ho",
+          "shirt": 8,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Demarai Gray",
+          "sourceName": "Demarai Gray",
+          "shirt": 10,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Jay Stansfield",
+          "sourceName": "Jay Stansfield",
+          "shirt": 28,
+          "alreadyLinked": false
+        }
+      ],
+      "discrepancies": [
+        {
+          "clubId": "birmingham-city",
+          "player": "Bradley Mayo",
+          "field": "shirt",
+          "stored": 48,
+          "sourceValue": 30,
+          "sourceUrl": "https://www.sportonearth.com/sports/football/championship/birmingham-city/",
+          "conflictingSourceUrl": "https://www.livescore.com/en/football/team/name/2858/squad/",
+          "note": "November independent squad listing reports #30; retain the stored #48 pending first-party confirmation and a duplicate-number check."
+        },
+        {
+          "clubId": "birmingham-city",
+          "player": "Carlos Vicente",
+          "field": "shirt",
+          "stored": 23,
+          "sourceValue": 7,
+          "sourceUrl": "https://www.sportonearth.com/sports/football/championship/birmingham-city/",
+          "conflictingSourceUrl": "https://www.livescore.com/en/football/team/name/2858/squad/",
+          "note": "November independent squad listing reports #7; retain the stored #23 pending first-party confirmation and a duplicate-number check."
+        },
+        {
+          "clubId": "birmingham-city",
+          "player": "August Priske",
+          "field": "shirt",
+          "stored": 29,
+          "sourceValue": 9,
+          "sourceUrl": "https://www.sportonearth.com/sports/football/championship/birmingham-city/",
+          "conflictingSourceUrl": "https://www.livescore.com/en/football/team/name/2858/squad/",
+          "note": "November independent squad listing reports #9; retain the stored #29 pending first-party confirmation and a duplicate-number check."
+        }
+      ],
+      "membership": [
+        {
+          "clubId": "birmingham-city",
+          "player": "Kanya Fujimoto",
+          "shirt": 27,
+          "checkedAt": "2026-11-18",
+          "sourceUrl": "https://www.jleague.jp/en/news/article/34949/?navicode=j1",
+          "reviewStatus": "loan_away_review",
+          "reason": "J.League confirms Tokyo Verdy loan from Birmingham in September 2026; do not automatically replace the existing 16-player slot."
+        }
+      ]
+    },
+    {
+      "clubId": "bristol-city",
+      "club": "Bristol City",
+      "sourceUrl": "https://www.sportonearth.com/sports/football/championship/bristol-city/",
+      "snapshotDate": "2026-11-16",
+      "classification": "independent_espn_roster_mirror",
+      "players": [
+        {
+          "player": "Sam Tickle",
+          "sourceName": "Sam Tickle",
+          "shirt": 1,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Bradley Collins",
+          "sourceName": "Bradley Collins",
+          "shirt": 40,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Noah Eile",
+          "sourceName": "Noah Eile",
+          "shirt": 38,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Rob Atkinson",
+          "sourceName": "Robert Atkinson",
+          "shirt": 5,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Luke McNally",
+          "sourceName": "Luke McNally",
+          "shirt": 15,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Cameron Pring",
+          "sourceName": "Cameron Pring",
+          "shirt": 3,
+          "alreadyLinked": false
+        },
+        {
+          "player": "George Tanner",
+          "sourceName": "George Tanner",
+          "shirt": 19,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Adam Randell",
+          "sourceName": "Adam Randell",
+          "shirt": 4,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Jason Knight",
+          "sourceName": "Jason Knight",
+          "shirt": 12,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Brian De Keersmaecker",
+          "sourceName": "Brian De Keersmaecker",
+          "shirt": 6,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Tomi Horvat",
+          "sourceName": "Tomi Horvat",
+          "shirt": 14,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Scott Twine",
+          "sourceName": "Scott Twine",
+          "shirt": 10,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Yu Hirakawa",
+          "sourceName": "Yu Hirakawa",
+          "shirt": 7,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Lorent Tolaj",
+          "sourceName": "Lorent Tolaj",
+          "shirt": 9,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Elijah Adebayo",
+          "sourceName": "Elijah Adebayo",
+          "shirt": 45,
+          "alreadyLinked": false
+        }
+      ],
+      "discrepancies": [
+        {
+          "clubId": "bristol-city",
+          "player": "Sam Bell",
+          "field": "shirt",
+          "stored": 20,
+          "sourceValue": 11,
+          "sourceUrl": "https://www.sportonearth.com/sports/football/championship/bristol-city/",
+          "conflictingSourceUrl": "https://www.livescore.com/en/football/team/bristol-city/3016/squad/",
+          "note": "November independent squad listing reports #11; retain the stored #20 pending first-party confirmation and a duplicate-number check."
+        }
+      ],
+      "membership": []
+    },
+    {
+      "clubId": "lincoln-city",
+      "club": "Lincoln City",
+      "sourceUrl": "https://sportonearth.com/sports/football/championship/pack-1/",
+      "snapshotDate": "2026-11-17",
+      "classification": "independent_espn_roster_mirror",
+      "players": [
+        {
+          "player": "George Wickens",
+          "sourceName": "George Wickens",
+          "shirt": 1,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Joe Gauci",
+          "sourceName": "Joe Gauci",
+          "shirt": 46,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Tendayi Darikwa",
+          "sourceName": "Tendayi Darikwa",
+          "shirt": 2,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Adam Reach",
+          "sourceName": "Adam Reach",
+          "shirt": 3,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Ryley Towler",
+          "sourceName": "Ryley Towler",
+          "shirt": 6,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Sonny Bradley",
+          "sourceName": "Sonny Bradley",
+          "shirt": 15,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Josh Honohan",
+          "sourceName": "Joshua Honohan",
+          "shirt": 23,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Tom Bayliss",
+          "sourceName": "Tom Bayliss",
+          "shirt": 8,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Yunus Konak",
+          "sourceName": "Yunus Konak",
+          "shirt": 26,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Conor McGrandles",
+          "sourceName": "Conor McGrandles",
+          "shirt": 14,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Ivan Varfolomeev",
+          "sourceName": "Ivan Varfolomeev",
+          "shirt": 24,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Dom Jefferies",
+          "sourceName": "Dom Jefferies",
+          "shirt": 16,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Reeco Hackett",
+          "sourceName": "Recco Hackett-Fairchild",
+          "shirt": 7,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Chiedozie Ogbene",
+          "sourceName": "Chiedozie Ogbene",
+          "shirt": 27,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Rob Street",
+          "sourceName": "Robert Street",
+          "shirt": 17,
+          "alreadyLinked": false
+        },
+        {
+          "player": "Ben House",
+          "sourceName": "Ben House",
+          "shirt": 18,
+          "alreadyLinked": false
+        }
+      ],
+      "discrepancies": [],
+      "membership": []
+    }
+  ],
+  "summary": {
+    "checked": 48,
+    "matched": 43,
+    "newLinks": 42,
+    "shirtDiscrepancies": 4,
+    "loanReviews": 1
+  }
+}

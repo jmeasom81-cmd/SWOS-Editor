@@ -89,6 +89,12 @@ Make a stable browser-based SWOS/SWAS editor and a trustworthy 2026/27 English f
 - Data: `data/valuation-leads-2026-11-18.json`. New `/valuation-review.html` and CSV show reported EUR estimates, evidence URLs, competing values and identity notes. Provider estimates are not transfer fees and have not been promoted. No gameplay values, kits, or original TEAM files changed.
 - Current production tests intentionally retain the 238 unknown master values; future promotions must update the embedded research packs and baseline consistently and retain provenance.
 
+## 18 November 2026 — Championship roster reconciliation U
+- Checked 48 selected Birmingham, Bristol City and Lincoln slots against November 16–17 independently published ESPN-derived squad snapshots. Added 42 previously absent named season roster links through the master tracker overlay. One earlier link retained; 43 matching shirt/name records in total.
+- Four conflicting shirt numbers remain unchanged: Bradley Mayo 48 vs 30, Carlos Vicente 23 vs 7, August Priske 29 vs 9 and Sam Bell 20 vs 11. Kanya Fujimoto's Tokyo Verdy loan is independently flagged from the official J.League notice. No player is deleted or replaced automatically.
+- Audit counts: 806/1472 squad links, 666 unlinked; 117 independent season roster links, 10 urgent review rows. All valuations stay unchanged. The new evidence pack is `data/championship-reconciliation-u-2026-11-18.json`; generated Excel quality checks and the source audit include the discrepancies.
+- These are not official club registrations; source confidence is explicitly independent. No game files, original embedded player data or installer changes.
+
 ## Next useful milestones
 - Source-check remaining League One/League Two roster identities and missing player valuation evidence. Determine current outstanding totals from the latest audit rather than this prose.
 - Validate 2026/27 shirt numbers and conflicting player identities without guesswork.

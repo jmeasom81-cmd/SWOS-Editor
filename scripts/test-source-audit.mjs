@@ -36,9 +36,9 @@ assert.equal(data.summary.urgent,data.players.filter(p=>p.researchPriority==='UR
 assert.equal(data.summary.high,data.players.filter(p=>p.researchPriority==='HIGH').length);
 assert.equal(data.players.filter(p=>p.reviewStatus==='membership_check').length,0);
 assert.equal(data.players.filter(p=>p.reviewStatus==='membership_source_matched').length,2);
-assert.equal(data.summary.urgent,5);
+assert.equal(data.summary.urgent,10);
 assert.equal(data.summary.ready,1234);
-assert.equal(data.summary.squadLinked,764);
+assert.equal(data.summary.squadLinked,806);
 assert.ok(data.players.filter(p=>p.researchPriority==='REVIEWED').every(p=>p.reviewStatus==='value_unpublished'&&p.marketValueM===null));
 assert.ok(page.includes('Next 15 clubs to research'));
 assert.ok(page.includes('SWOS_Research_Priority_2026-27.csv'));
@@ -64,8 +64,8 @@ for(const group of verification.newlyVerified){const c=master.clubs.find(c=>c.cl
 console.log('Official 2026/27 Premier League roster crosscheck: 320 player shirt numbers across all 20 clubs.');
 
 const batchO=JSON.parse(fs.readFileSync('data/valuation-verification-batch-o-2026-10-20.json','utf8'));
-assert.equal(data.valuationReviewFlags.length,batchO.discrepancyFlags.length+1);
-assert.equal(new Set(data.valuationReviewFlags.map(v=>v.clubId+'|'+v.player)).size,4);
+assert.equal(data.valuationReviewFlags.length,batchO.discrepancyFlags.length+1+4);
+assert.equal(new Set(data.valuationReviewFlags.map(v=>v.clubId+'|'+v.player)).size,8);
 for(const v of batchO.valued){const p=data.players.find(p=>p.clubId===v.clubId&&p.player===v.player);assert.ok(p);assert.equal(p.marketValueM,v.convertedGbpM);assert.equal(p.valueSourceUrl,v.sourceUrl);}
 for(const v of batchO.noPublishedValue){const p=data.players.find(p=>p.clubId===v.clubId&&p.player===v.player);assert.ok(p);assert.equal(p.marketValueM,null);assert.equal(p.reviewStatus,'value_unpublished');}
 assert.ok(page.includes('Player shirt-number discrepancies'));
@@ -99,7 +99,7 @@ assert.equal(barnBatch.players.length,16);
 assert.equal(data.summary.independentMatchLinked,16);
 assert.equal(data.clubs.find(c=>c.clubId===barnBatch.clubId).independentMatchLinked,16);
 assert.equal(data.summary.officialClubLinked,50,'Independent match sheets cannot inflate first-party club verification');
-assert.equal(data.summary.squadLinked,764);
+assert.equal(data.summary.squadLinked,806);
 for(const e of barnBatch.players){
  const p=data.players.find(p=>p.clubId==='barnsley'&&p.player===e.player);
  assert.ok(p,'Missing Barnsley player '+e.player);
@@ -120,7 +120,7 @@ const batchR=JSON.parse(fs.readFileSync('data/bromley-wigan-squad-evidence-batch
 assert.equal(batchR.season,'2026/27');
 assert.equal(batchR.clubs.length,2);
 assert.equal(batchR.clubs.reduce((n,c)=>n+c.players.length,0),32);
-assert.equal(data.summary.independentSeasonRosterLinked,75);
+assert.equal(data.summary.independentSeasonRosterLinked,117);
 assert.equal(data.clubs.find(c=>c.clubId==='bromley').officialClubLinked,16);
 assert.equal(data.clubs.find(c=>c.clubId==='wigan-athletic').independentSeasonRosterLinked,16);
 assert.equal(data.clubs.find(c=>c.clubId==='wigan-athletic').officialClubLinked,2);
@@ -156,8 +156,8 @@ const batchS=JSON.parse(fs.readFileSync('data/northampton-rotherham-batch-s-2026
 assert.equal(batchS.season,'2026/27');
 assert.equal(batchS.clubs.length,2);
 assert.equal(batchS.clubs.reduce((n,c)=>n+c.players.length,0),32);
-assert.equal(data.summary.independentSeasonRosterLinked,75);
-assert.equal(data.summary.squadLinked,764);
+assert.equal(data.summary.independentSeasonRosterLinked,117);
+assert.equal(data.summary.squadLinked,806);
 assert.equal(data.summary.officialClubLinked,50);
 assert.equal(data.summary.priced,1234);
 for(const c of batchS.clubs){
@@ -190,12 +190,12 @@ const integrationT=JSON.parse(fs.readFileSync('data/york-crawley-exeter-integrat
 assert.equal(integrationT.clubs.length,3);
 assert.equal(integrationT.summary.sourceMatched,43);
 assert.equal(integrationT.summary.needsClubMembershipCheck,5);
-assert.equal(data.summary.squadLinked,764);
+assert.equal(data.summary.squadLinked,806);
 assert.equal(data.summary.officialClubLinked,50);
-assert.equal(data.summary.independentSeasonRosterLinked,75);
-assert.equal(data.summary.membershipReviewCount,5);
-assert.equal(data.summary.urgent,5);
-assert.equal(data.membershipReviewFlags.length,5);
+assert.equal(data.summary.independentSeasonRosterLinked,117);
+assert.equal(data.summary.membershipReviewCount,6);
+assert.equal(data.summary.urgent,10);
+assert.equal(data.membershipReviewFlags.length,6);
 for(const c of integrationT.clubs){
  const players=data.players.filter(p=>p.clubId===c.clubId);
  assert.equal(players.length,16);

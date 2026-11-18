@@ -17,6 +17,7 @@ const steps = [
   "scripts/build-gap-review.mjs",
   "scripts/build-source-audit.mjs",
   "scripts/test-source-audit.mjs",
+  "scripts/test-championship-reconciliation-u.mjs",
   "scripts/build-research-queue.mjs",
   "scripts/test-research-queue.mjs",
   "scripts/build-valuation-review.mjs",

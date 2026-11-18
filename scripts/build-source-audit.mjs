@@ -89,6 +89,22 @@ for(const f of membershipReviewFlags){
  p.nextResearchAction='Confirm 2026/27 team from a newer official source before changing SWOS membership';
 }
 
+const rosterU=JSON.parse(fs.readFileSync('data/championship-reconciliation-u-2026-11-18.json','utf8'));
+if(rosterU.season!==master.season)throw Error('Roster U audit season mismatch');
+const rosterUShirtFlags=rosterU.clubs.flatMap(c=>c.discrepancies);
+for(const f of rosterUShirtFlags){
+ const p=playerRows.find(p=>p.clubId===f.clubId&&p.player===f.player);
+ if(!p||p.shirt!==f.stored)throw Error('Roster U unresolved number altered '+f.player);
+ p.researchIssues.push('Independent November roster lists #'+f.sourceValue+' rather than stored #'+f.stored);
+ p.researchPriority='URGENT';p.nextResearchAction='Resolve conflicting shirt number from a club-issued source before editing';
+}
+for(const f of rosterU.clubs.flatMap(c=>c.membership)){
+ const p=playerRows.find(p=>p.clubId===f.clubId&&p.player===f.player);
+ if(!p||p.shirt!==f.shirt)throw Error('Roster U loan slot altered '+f.player);
+ p.membershipReviewStatus=f.reviewStatus;p.membershipReviewSourceUrl=f.sourceUrl;
+ p.researchIssues.push(f.reason);p.researchPriority='URGENT';p.nextResearchAction='Review confirmed loan and choose a replacement slot only with evidence';
+ membershipReviewFlags.push(f);
+}
 const sum=rows=>({
  players:rows.length,
  ready:rows.filter(p=>p.essentialReady).length,
@@ -130,7 +146,7 @@ if(officialClubBatch.season!==master.season||officialClubBatch.players.length!==
 const batchS=JSON.parse(fs.readFileSync('data/northampton-rotherham-batch-s-2026-10-20.json','utf8'));
 if(batchS.season!==master.season||batchS.clubs.length!==2)throw new Error('Batch S season mismatch');
 for(const issue of batchS.discrepancyFlags){const source=master.clubs.find(c=>c.clubId===issue.clubId)?.players.find(p=>p.player===issue.player);if(!source||source[issue.field]!==issue.stored)throw new Error('Unresolved shirt conflict altered: '+issue.player);}
-const data={season:master.season,generatedAt:master.generatedAt,summary,divisions,clubs,valuationReviewFlags:[...batchO.discrepancyFlags,...batchS.discrepancyFlags.map(x=>({...x,sourceValue:x.sourceNumber}))],membershipReviewFlags,verifiedNameCorrections:[{club:officialClubBatch.club,...officialClubBatch.nameFix,sourceUrl:officialClubBatch.players.find(p=>p.player===officialClubBatch.nameFix.to)?.sourceUrl}],players:playerRows};
+const data={season:master.season,generatedAt:master.generatedAt,summary,divisions,clubs,valuationReviewFlags:[...batchO.discrepancyFlags,...batchS.discrepancyFlags.map(x=>({...x,sourceValue:x.sourceNumber})),...rosterUShirtFlags],membershipReviewFlags,verifiedNameCorrections:[{club:officialClubBatch.club,...officialClubBatch.nameFix,sourceUrl:officialClubBatch.players.find(p=>p.player===officialClubBatch.nameFix.to)?.sourceUrl}],players:playerRows};
 fs.mkdirSync('dist/data',{recursive:true});
 fs.mkdirSync('dist/downloads',{recursive:true});
 fs.writeFileSync('dist/data/source-audit-2026-27.json',JSON.stringify(data,null,2)+'\n');
