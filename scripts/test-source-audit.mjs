@@ -38,7 +38,7 @@ assert.equal(data.players.filter(p=>p.reviewStatus==='membership_check').length,
 assert.equal(data.players.filter(p=>p.reviewStatus==='membership_source_matched').length,2);
 assert.equal(data.summary.urgent,10);
 assert.equal(data.summary.ready,1234);
-assert.equal(data.summary.squadLinked,806);
+assert.equal(data.summary.squadLinked,868);
 assert.ok(data.players.filter(p=>p.researchPriority==='REVIEWED').every(p=>p.reviewStatus==='value_unpublished'&&p.marketValueM===null));
 assert.ok(page.includes('Next 15 clubs to research'));
 assert.ok(page.includes('SWOS_Research_Priority_2026-27.csv'));
@@ -73,7 +73,7 @@ assert.ok(page.includes('Player shirt-number discrepancies'));
 // Batch P: new first-party club evidence must not be mistaken for a valuation.
 const clubBatch=JSON.parse(fs.readFileSync('data/leicester-official-16-player-audit-2026-10-20.json','utf8'));
 assert.equal(clubBatch.players.length,16);
-assert.equal(data.summary.officialClubLinked,50);
+assert.equal(data.summary.officialClubLinked,65);
 assert.equal(data.clubs.find(c=>c.clubId===clubBatch.clubId).officialClubLinked,16);
 assert.equal(data.verifiedNameCorrections.length,1);
 assert.equal(data.verifiedNameCorrections[0].to,'Tommy Watson');
@@ -98,8 +98,8 @@ assert.equal(barnBatch.season,'2026/27');
 assert.equal(barnBatch.players.length,16);
 assert.equal(data.summary.independentMatchLinked,16);
 assert.equal(data.clubs.find(c=>c.clubId===barnBatch.clubId).independentMatchLinked,16);
-assert.equal(data.summary.officialClubLinked,50,'Independent match sheets cannot inflate first-party club verification');
-assert.equal(data.summary.squadLinked,806);
+assert.equal(data.summary.officialClubLinked,65,'Independent match sheets cannot inflate first-party club verification');
+assert.equal(data.summary.squadLinked,868);
 for(const e of barnBatch.players){
  const p=data.players.find(p=>p.clubId==='barnsley'&&p.player===e.player);
  assert.ok(p,'Missing Barnsley player '+e.player);
@@ -120,11 +120,11 @@ const batchR=JSON.parse(fs.readFileSync('data/bromley-wigan-squad-evidence-batch
 assert.equal(batchR.season,'2026/27');
 assert.equal(batchR.clubs.length,2);
 assert.equal(batchR.clubs.reduce((n,c)=>n+c.players.length,0),32);
-assert.equal(data.summary.independentSeasonRosterLinked,117);
+assert.equal(data.summary.independentSeasonRosterLinked,164);
 assert.equal(data.clubs.find(c=>c.clubId==='bromley').officialClubLinked,16);
 assert.equal(data.clubs.find(c=>c.clubId==='wigan-athletic').independentSeasonRosterLinked,16);
 assert.equal(data.clubs.find(c=>c.clubId==='wigan-athletic').officialClubLinked,2);
-assert.equal(data.summary.officialClubLinked,50);
+assert.equal(data.summary.officialClubLinked,65);
 for(const c of batchR.clubs){
  const actual=data.players.filter(p=>p.clubId===c.clubId);
  assert.equal(actual.length,16);
@@ -156,9 +156,9 @@ const batchS=JSON.parse(fs.readFileSync('data/northampton-rotherham-batch-s-2026
 assert.equal(batchS.season,'2026/27');
 assert.equal(batchS.clubs.length,2);
 assert.equal(batchS.clubs.reduce((n,c)=>n+c.players.length,0),32);
-assert.equal(data.summary.independentSeasonRosterLinked,117);
-assert.equal(data.summary.squadLinked,806);
-assert.equal(data.summary.officialClubLinked,50);
+assert.equal(data.summary.independentSeasonRosterLinked,164);
+assert.equal(data.summary.squadLinked,868);
+assert.equal(data.summary.officialClubLinked,65);
 assert.equal(data.summary.priced,1234);
 for(const c of batchS.clubs){
  const cdata=data.clubs.find(r=>r.clubId===c.clubId);
@@ -190,9 +190,9 @@ const integrationT=JSON.parse(fs.readFileSync('data/york-crawley-exeter-integrat
 assert.equal(integrationT.clubs.length,3);
 assert.equal(integrationT.summary.sourceMatched,43);
 assert.equal(integrationT.summary.needsClubMembershipCheck,5);
-assert.equal(data.summary.squadLinked,806);
-assert.equal(data.summary.officialClubLinked,50);
-assert.equal(data.summary.independentSeasonRosterLinked,117);
+assert.equal(data.summary.squadLinked,868);
+assert.equal(data.summary.officialClubLinked,65);
+assert.equal(data.summary.independentSeasonRosterLinked,164);
 assert.equal(data.summary.membershipReviewCount,6);
 assert.equal(data.summary.urgent,10);
 assert.equal(data.membershipReviewFlags.length,6);

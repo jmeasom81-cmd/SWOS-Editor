@@ -95,6 +95,11 @@ Make a stable browser-based SWOS/SWAS editor and a trustworthy 2026/27 English f
 - Audit counts: 806/1472 squad links, 666 unlinked; 117 independent season roster links, 10 urgent review rows. All valuations stay unchanged. The new evidence pack is `data/championship-reconciliation-u-2026-11-18.json`; generated Excel quality checks and the source audit include the discrepancies.
 - These are not official club registrations; source confidence is explicitly independent. No game files, original embedded player data or installer changes.
 
+## 19 November 2026 — Championship roster reconciliation V
+- 64 Cardiff, Sheffield United, Southampton and Swansea player slots reviewed. 62 new links: 15 from Southampton's official 15 August squad-number announcement and 47 independent season/current profile sources. 868/1472 squad links total, 604 still missing.
+- Leo Walta loan indication and Joseph Opoku spelling discrepancy retained as unresolved in the research pack and Excel quality checks. No old shirt conflicts resolved without first-party evidence. No numbers, values, skills or original game files changed.
+- Evidence pack: `data/championship-reconciliation-v-2026-11-19.json`; new regression checks, production status to be checked against commit.
+
 ## Next useful milestones
 - Source-check remaining League One/League Two roster identities and missing player valuation evidence. Determine current outstanding totals from the latest audit rather than this prose.
 - Validate 2026/27 shirt numbers and conflicting player identities without guesswork.

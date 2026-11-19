@@ -93,6 +93,21 @@ for(const c of rosterU.clubs){
  }
 }
 if(addedRosterU!==rosterU.summary.newLinks)throw Error('Roster U link count mismatch');
+// Integration V: add evidence only; current gameplay fields stay unchanged.
+const rosterV=JSON.parse(fs.readFileSync('data/championship-reconciliation-v-2026-11-19.json','utf8'));
+if(rosterV.season!==baseline.season)throw Error('Roster V season mismatch');
+const rosterVSeen=new Set();
+for(const e of rosterV.entries){
+ const key=e.clubId+'|'+e.player;
+ const p=baseline.clubs.find(c=>c.clubId===e.clubId)?.players.find(p=>p.player===e.player);
+ if(!p||p.shirt!==e.shirt||rosterVSeen.has(key)||!e.sourceUrl.startsWith('https://'))throw Error('Roster V invalid identity '+key);
+ rosterVSeen.add(key);
+ if(p.officialPLRosterUrl||p.officialClubSourceUrl||p.matchLineupSourceUrl||p.independentSeasonRosterUrl||p.seasonSquadSourceUrl)throw Error('Roster V would overwrite existing evidence '+key);
+ if(e.kind==='official')Object.assign(p,{officialClubSourceUrl:e.sourceUrl,officialClubShirtNumber:e.shirt,officialClubSourceDate:e.sourceDate,officialClubCheckedAt:rosterV.checkedAt,officialClubSourceKind:e.classification});
+ else if(e.kind==='independent')Object.assign(p,{independentSeasonRosterUrl:e.sourceUrl,independentSeasonRosterNumber:e.shirt,independentSeasonRosterCheckedAt:rosterV.checkedAt,independentSeasonRosterSourceName:e.sourceName,independentSeasonRosterClassification:e.classification});
+ else throw Error('Roster V unknown source class '+key);
+}
+if(rosterVSeen.size!==rosterV.summary.newLinks)throw Error('Roster V link count mismatch');
 baseline.clubCount = baseline.clubs.length;
 baseline.playerCount = baseline.clubs.reduce((n, c) => n + c.players.length, 0);
 baseline.generatedAt = new Date().toISOString().slice(0, 10);
@@ -131,6 +146,7 @@ if(batchS.season!==baseline.season||batchS.clubs.length!==2)throw new Error('Nor
 const integrationT=JSON.parse(fs.readFileSync('data/york-crawley-exeter-integration-t-2026-10-20.json','utf8'));
 if(integrationT.season!==baseline.season||integrationT.clubs.length!==3)throw new Error('Integration T season mismatch');
 const integrity = [];
+for(const f of rosterV.unresolved){const club=baseline.clubs.find(c=>c.clubId===f.clubId);integrity.push(['SQUAD REVIEW','Championship',club.club,f.player,f.reason,f.sourceUrl]);}
 for(const c of rosterU.clubs){for(const f of c.discrepancies)integrity.push(['CONFLICTING SHIRT SOURCES','Championship',c.club,f.player,f.note,'Verify a club-issued 2026/27 squad list; '+f.sourceUrl]);for(const f of c.membership)integrity.push(['CONFIRMED LOAN — REVIEW SWOS SLOT','Championship',c.club,f.player,f.reason,f.sourceUrl]);}
 const clubKeys = new Set();
 const byPlayerName = new Map();

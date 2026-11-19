@@ -1,0 +1,654 @@
+{
+  "schemaVersion": 1,
+  "season": "2026/27",
+  "checkedAt": "2026-11-19",
+  "summary": {
+    "reviewed": 64,
+    "newLinks": 62,
+    "official": 15,
+    "independent": 47,
+    "unresolved": 2
+  },
+  "entries": [
+    {
+      "clubId": "cardiff-city",
+      "player": "Nathan Trott",
+      "shirt": 1,
+      "kind": "independent",
+      "sourceUrl": "https://www.livescore.com/en/football/team/cardiff/3916/squad/",
+      "sourceName": "LiveScore",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "cardiff-city",
+      "player": "Harry Tyrer",
+      "shirt": 30,
+      "kind": "independent",
+      "sourceUrl": "https://www.livescore.com/en/football/team/cardiff/3916/squad/",
+      "sourceName": "LiveScore",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "cardiff-city",
+      "player": "Gabriel Osho",
+      "shirt": 4,
+      "kind": "independent",
+      "sourceUrl": "https://www.livescore.com/en/football/team/cardiff/3916/squad/",
+      "sourceName": "LiveScore",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "cardiff-city",
+      "player": "Will Fish",
+      "shirt": 2,
+      "kind": "independent",
+      "sourceUrl": "https://www.livescore.com/en/football/team/cardiff/3916/squad/",
+      "sourceName": "LiveScore",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "cardiff-city",
+      "player": "Joel Bagan",
+      "shirt": 3,
+      "kind": "independent",
+      "sourceUrl": "https://www.livescore.com/en/football/team/cardiff/3916/squad/",
+      "sourceName": "LiveScore",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "cardiff-city",
+      "player": "Perry Ng",
+      "shirt": 38,
+      "kind": "independent",
+      "sourceUrl": "https://www.livescore.com/en/football/team/cardiff/3916/squad/",
+      "sourceName": "LiveScore",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "cardiff-city",
+      "player": "Dylan Lawlor",
+      "shirt": 48,
+      "kind": "independent",
+      "sourceUrl": "https://www.livescore.com/en/football/team/cardiff/3916/squad/",
+      "sourceName": "LiveScore",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "cardiff-city",
+      "player": "David Turnbull",
+      "shirt": 14,
+      "kind": "independent",
+      "sourceUrl": "https://www.livescore.com/en/football/team/cardiff/3916/squad/",
+      "sourceName": "LiveScore",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "cardiff-city",
+      "player": "Alex Robertson",
+      "shirt": 18,
+      "kind": "independent",
+      "sourceUrl": "https://www.livescore.com/en/football/team/cardiff/3916/squad/",
+      "sourceName": "LiveScore",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "cardiff-city",
+      "player": "Rubin Colwill",
+      "shirt": 10,
+      "kind": "independent",
+      "sourceUrl": "https://www.livescore.com/en/football/team/cardiff/3916/squad/",
+      "sourceName": "LiveScore",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "cardiff-city",
+      "player": "Joel Colwill",
+      "shirt": 27,
+      "kind": "independent",
+      "sourceUrl": "https://www.livescore.com/en/football/team/cardiff/3916/squad/",
+      "sourceName": "LiveScore",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "cardiff-city",
+      "player": "Jack Moylan",
+      "shirt": 8,
+      "kind": "independent",
+      "sourceUrl": "https://www.livescore.com/en/football/team/cardiff/3916/squad/",
+      "sourceName": "LiveScore",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "cardiff-city",
+      "player": "Ollie Tanner",
+      "shirt": 11,
+      "kind": "independent",
+      "sourceUrl": "https://www.livescore.com/en/football/team/cardiff/3916/squad/",
+      "sourceName": "LiveScore",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "cardiff-city",
+      "player": "Chris Willock",
+      "shirt": 16,
+      "kind": "independent",
+      "sourceUrl": "https://www.livescore.com/en/football/team/cardiff/3916/squad/",
+      "sourceName": "LiveScore",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "cardiff-city",
+      "player": "Yousef Salech",
+      "shirt": 9,
+      "kind": "independent",
+      "sourceUrl": "https://www.livescore.com/en/football/team/cardiff/3916/squad/",
+      "sourceName": "LiveScore",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "cardiff-city",
+      "player": "Isaak Davies",
+      "shirt": 39,
+      "kind": "independent",
+      "sourceUrl": "https://www.livescore.com/en/football/team/cardiff/3916/squad/",
+      "sourceName": "LiveScore",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "sheffield-united",
+      "player": "Michael Cooper",
+      "shirt": 1,
+      "kind": "independent",
+      "sourceUrl": "https://www.footballshirtandprint.co.uk/shirt-archive/sheffield-united/2026-27-home/",
+      "sourceName": "Football Shirt & Print season archive",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "sheffield-united",
+      "player": "Adam Davies",
+      "shirt": 17,
+      "kind": "independent",
+      "sourceUrl": "https://www.footballshirtandprint.co.uk/shirt-archive/sheffield-united/2026-27-home/",
+      "sourceName": "Football Shirt & Print season archive",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "sheffield-united",
+      "player": "Japhet Tanganga",
+      "shirt": 5,
+      "kind": "independent",
+      "sourceUrl": "https://www.footballshirtandprint.co.uk/shirt-archive/sheffield-united/2026-27-home/",
+      "sourceName": "Football Shirt & Print season archive",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "sheffield-united",
+      "player": "Harrison Burrows",
+      "shirt": 14,
+      "kind": "independent",
+      "sourceUrl": "https://www.footballshirtandprint.co.uk/shirt-archive/sheffield-united/2026-27-home/",
+      "sourceName": "Football Shirt & Print season archive",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "sheffield-united",
+      "player": "Liam Kitching",
+      "shirt": 15,
+      "kind": "independent",
+      "sourceUrl": "https://www.footballshirtandprint.co.uk/shirt-archive/sheffield-united/2026-27-home/",
+      "sourceName": "Football Shirt & Print season archive",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "sheffield-united",
+      "player": "Matt Doherty",
+      "shirt": 2,
+      "kind": "independent",
+      "sourceUrl": "https://www.footballshirtandprint.co.uk/shirt-archive/sheffield-united/2026-27-home/",
+      "sourceName": "Football Shirt & Print season archive",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "sheffield-united",
+      "player": "Sam McCallum",
+      "shirt": 3,
+      "kind": "independent",
+      "sourceUrl": "https://www.footballshirtandprint.co.uk/shirt-archive/sheffield-united/2026-27-home/",
+      "sourceName": "Football Shirt & Print season archive",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "sheffield-united",
+      "player": "Ollie Arblaster",
+      "shirt": 4,
+      "kind": "independent",
+      "sourceUrl": "https://www.footballshirtandprint.co.uk/shirt-archive/sheffield-united/2026-27-home/",
+      "sourceName": "Football Shirt & Print season archive",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "sheffield-united",
+      "player": "Joe Rothwell",
+      "shirt": 7,
+      "kind": "independent",
+      "sourceUrl": "https://www.footballshirtandprint.co.uk/shirt-archive/sheffield-united/2026-27-home/",
+      "sourceName": "Football Shirt & Print season archive",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "sheffield-united",
+      "player": "Kalvin Phillips",
+      "shirt": 27,
+      "kind": "independent",
+      "sourceUrl": "https://www.footballshirtandprint.co.uk/shirt-archive/sheffield-united/2026-27-home/",
+      "sourceName": "Football Shirt & Print season archive",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "sheffield-united",
+      "player": "Sydie Peck",
+      "shirt": 42,
+      "kind": "independent",
+      "sourceUrl": "https://www.footballshirtandprint.co.uk/shirt-archive/sheffield-united/2026-27-home/",
+      "sourceName": "Football Shirt & Print season archive",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "sheffield-united",
+      "player": "Jamie Shackleton",
+      "shirt": 16,
+      "kind": "independent",
+      "sourceUrl": "https://www.footballshirtandprint.co.uk/shirt-archive/sheffield-united/2026-27-home/",
+      "sourceName": "Football Shirt & Print season archive",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "sheffield-united",
+      "player": "Tyrese Campbell",
+      "shirt": 23,
+      "kind": "independent",
+      "sourceUrl": "https://www.footballshirtandprint.co.uk/shirt-archive/sheffield-united/2026-27-home/",
+      "sourceName": "Football Shirt & Print season archive",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "sheffield-united",
+      "player": "Patrick Bamford",
+      "shirt": 45,
+      "kind": "independent",
+      "sourceUrl": "https://www.footballshirtandprint.co.uk/shirt-archive/sheffield-united/2026-27-home/",
+      "sourceName": "Football Shirt & Print season archive",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "sheffield-united",
+      "player": "Tom Cannon",
+      "shirt": 9,
+      "kind": "independent",
+      "sourceUrl": "https://www.footballshirtandprint.co.uk/shirt-archive/sheffield-united/2026-27-home/",
+      "sourceName": "Football Shirt & Print season archive",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "sheffield-united",
+      "player": "Jordan Ayew",
+      "shirt": 10,
+      "kind": "independent",
+      "sourceUrl": "https://www.footballshirtandprint.co.uk/shirt-archive/sheffield-united/2026-27-home/",
+      "sourceName": "Football Shirt & Print season archive",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "southampton",
+      "player": "Daniel Peretz",
+      "shirt": 1,
+      "kind": "official",
+      "sourceUrl": "https://www.southamptonfc.com/en/news/article/mens-squad-numbers-confirmed-for-2026-27",
+      "sourceName": "Southampton FC",
+      "sourceDate": "2026-08-15",
+      "classification": "official_club_squad_number_announcement"
+    },
+    {
+      "clubId": "southampton",
+      "player": "Aaron Ramsdale",
+      "shirt": 32,
+      "kind": "official",
+      "sourceUrl": "https://www.southamptonfc.com/en/news/article/mens-squad-numbers-confirmed-for-2026-27",
+      "sourceName": "Southampton FC",
+      "sourceDate": "2026-08-15",
+      "classification": "official_club_squad_number_announcement"
+    },
+    {
+      "clubId": "southampton",
+      "player": "Mads Roerslev",
+      "shirt": 2,
+      "kind": "official",
+      "sourceUrl": "https://www.southamptonfc.com/en/news/article/mens-squad-numbers-confirmed-for-2026-27",
+      "sourceName": "Southampton FC",
+      "sourceDate": "2026-08-15",
+      "classification": "official_club_squad_number_announcement"
+    },
+    {
+      "clubId": "southampton",
+      "player": "Ryan Manning",
+      "shirt": 3,
+      "kind": "official",
+      "sourceUrl": "https://www.southamptonfc.com/en/news/article/mens-squad-numbers-confirmed-for-2026-27",
+      "sourceName": "Southampton FC",
+      "sourceDate": "2026-08-15",
+      "classification": "official_club_squad_number_announcement"
+    },
+    {
+      "clubId": "southampton",
+      "player": "Taylor Harwood-Bellis",
+      "shirt": 6,
+      "kind": "official",
+      "sourceUrl": "https://www.southamptonfc.com/en/news/article/mens-squad-numbers-confirmed-for-2026-27",
+      "sourceName": "Southampton FC",
+      "sourceDate": "2026-08-15",
+      "classification": "official_club_squad_number_announcement"
+    },
+    {
+      "clubId": "southampton",
+      "player": "Nathan Wood",
+      "shirt": 15,
+      "kind": "official",
+      "sourceUrl": "https://www.southamptonfc.com/en/news/article/mens-squad-numbers-confirmed-for-2026-27",
+      "sourceName": "Southampton FC",
+      "sourceDate": "2026-08-15",
+      "classification": "official_club_squad_number_announcement"
+    },
+    {
+      "clubId": "southampton",
+      "player": "Flynn Downes",
+      "shirt": 4,
+      "kind": "official",
+      "sourceUrl": "https://www.southamptonfc.com/en/news/article/mens-squad-numbers-confirmed-for-2026-27",
+      "sourceName": "Southampton FC",
+      "sourceDate": "2026-08-15",
+      "classification": "official_club_squad_number_announcement"
+    },
+    {
+      "clubId": "southampton",
+      "player": "Leo Scienza",
+      "shirt": 7,
+      "kind": "official",
+      "sourceUrl": "https://www.southamptonfc.com/en/news/article/mens-squad-numbers-confirmed-for-2026-27",
+      "sourceName": "Southampton FC",
+      "sourceDate": "2026-08-15",
+      "classification": "official_club_squad_number_announcement"
+    },
+    {
+      "clubId": "southampton",
+      "player": "Caspar Jander",
+      "shirt": 8,
+      "kind": "official",
+      "sourceUrl": "https://www.southamptonfc.com/en/news/article/mens-squad-numbers-confirmed-for-2026-27",
+      "sourceName": "Southampton FC",
+      "sourceDate": "2026-08-15",
+      "classification": "official_club_squad_number_announcement"
+    },
+    {
+      "clubId": "southampton",
+      "player": "Finn Azaz",
+      "shirt": 10,
+      "kind": "official",
+      "sourceUrl": "https://www.southamptonfc.com/en/news/article/mens-squad-numbers-confirmed-for-2026-27",
+      "sourceName": "Southampton FC",
+      "sourceDate": "2026-08-15",
+      "classification": "official_club_squad_number_announcement"
+    },
+    {
+      "clubId": "southampton",
+      "player": "Tom Fellows",
+      "shirt": 18,
+      "kind": "official",
+      "sourceUrl": "https://www.southamptonfc.com/en/news/article/mens-squad-numbers-confirmed-for-2026-27",
+      "sourceName": "Southampton FC",
+      "sourceDate": "2026-08-15",
+      "classification": "official_club_squad_number_announcement"
+    },
+    {
+      "clubId": "southampton",
+      "player": "Cyle Larin",
+      "shirt": 9,
+      "kind": "official",
+      "sourceUrl": "https://www.southamptonfc.com/en/news/article/mens-squad-numbers-confirmed-for-2026-27",
+      "sourceName": "Southampton FC",
+      "sourceDate": "2026-08-15",
+      "classification": "official_club_squad_number_announcement"
+    },
+    {
+      "clubId": "southampton",
+      "player": "Lewis Dobbin",
+      "shirt": 11,
+      "kind": "official",
+      "sourceUrl": "https://www.southamptonfc.com/en/news/article/mens-squad-numbers-confirmed-for-2026-27",
+      "sourceName": "Southampton FC",
+      "sourceDate": "2026-08-15",
+      "classification": "official_club_squad_number_announcement"
+    },
+    {
+      "clubId": "southampton",
+      "player": "Cameron Archer",
+      "shirt": 19,
+      "kind": "official",
+      "sourceUrl": "https://www.southamptonfc.com/en/news/article/mens-squad-numbers-confirmed-for-2026-27",
+      "sourceName": "Southampton FC",
+      "sourceDate": "2026-08-15",
+      "classification": "official_club_squad_number_announcement"
+    },
+    {
+      "clubId": "southampton",
+      "player": "Divin Mubama",
+      "shirt": 28,
+      "kind": "official",
+      "sourceUrl": "https://www.southamptonfc.com/en/news/article/mens-squad-numbers-confirmed-for-2026-27",
+      "sourceName": "Southampton FC",
+      "sourceDate": "2026-08-15",
+      "classification": "official_club_squad_number_announcement"
+    },
+    {
+      "clubId": "swansea-city",
+      "player": "Lawrence Vigouroux",
+      "shirt": 22,
+      "kind": "independent",
+      "sourceUrl": "https://swanseacitynews.co.uk/squad",
+      "sourceName": "Swansea Fans Daily 18 November snapshot",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "swansea-city",
+      "player": "Andy Fisher",
+      "shirt": 1,
+      "kind": "independent",
+      "sourceUrl": "https://swanseacitynews.co.uk/squad",
+      "sourceName": "Swansea Fans Daily 18 November snapshot",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "swansea-city",
+      "player": "Josh Key",
+      "shirt": 2,
+      "kind": "independent",
+      "sourceUrl": "https://swanseacitynews.co.uk/squad",
+      "sourceName": "Swansea Fans Daily 18 November snapshot",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "swansea-city",
+      "player": "Ben Cabango",
+      "shirt": 5,
+      "kind": "independent",
+      "sourceUrl": "https://swanseacitynews.co.uk/squad",
+      "sourceName": "Swansea Fans Daily 18 November snapshot",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "swansea-city",
+      "player": "Cameron Burgess",
+      "shirt": 15,
+      "kind": "independent",
+      "sourceUrl": "https://swanseacitynews.co.uk/squad",
+      "sourceName": "Swansea Fans Daily 18 November snapshot",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "swansea-city",
+      "player": "Josh Tymon",
+      "shirt": 14,
+      "kind": "independent",
+      "sourceUrl": "https://swanseacitynews.co.uk/squad",
+      "sourceName": "Swansea Fans Daily 18 November snapshot",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "swansea-city",
+      "player": "Stephen Welsh",
+      "shirt": 23,
+      "kind": "independent",
+      "sourceUrl": "https://swanseacitynews.co.uk/squad",
+      "sourceName": "Swansea Fans Daily 18 November snapshot",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "swansea-city",
+      "player": "Marko Stamenic",
+      "shirt": 6,
+      "kind": "independent",
+      "sourceUrl": "https://swanseacitynews.co.uk/squad",
+      "sourceName": "Swansea Fans Daily 18 November snapshot",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "swansea-city",
+      "player": "Stephen Eustaquio",
+      "shirt": 46,
+      "kind": "independent",
+      "sourceUrl": "https://swanseacitynews.co.uk/squad",
+      "sourceName": "Swansea Fans Daily 18 November snapshot",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "swansea-city",
+      "player": "Melker Widell",
+      "shirt": 7,
+      "kind": "independent",
+      "sourceUrl": "https://swanseacitynews.co.uk/squad",
+      "sourceName": "Swansea Fans Daily 18 November snapshot",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "swansea-city",
+      "player": "Eom Ji-Sung",
+      "shirt": 10,
+      "kind": "independent",
+      "sourceUrl": "https://swanseacitynews.co.uk/squad",
+      "sourceName": "Swansea Fans Daily 18 November snapshot",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "swansea-city",
+      "player": "Adam Idah",
+      "shirt": 33,
+      "kind": "independent",
+      "sourceUrl": "https://swanseacitynews.co.uk/squad",
+      "sourceName": "Swansea Fans Daily 18 November snapshot",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "swansea-city",
+      "player": "Zan Vipotnik",
+      "shirt": 9,
+      "kind": "independent",
+      "sourceUrl": "https://swanseacitynews.co.uk/squad",
+      "sourceName": "Swansea Fans Daily 18 November snapshot",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "swansea-city",
+      "player": "Ross Stewart",
+      "shirt": 31,
+      "kind": "independent",
+      "sourceUrl": "https://swanseacitynews.co.uk/squad",
+      "sourceName": "Swansea Fans Daily 18 November snapshot",
+      "sourceDate": null,
+      "classification": "independent_season_roster"
+    },
+    {
+      "clubId": "southampton",
+      "player": "Keven Schlotterbeck",
+      "shirt": 13,
+      "kind": "independent",
+      "sourceUrl": "https://www.sofascore.com/football/player/keven-schlotterbeck/891651",
+      "sourceName": "Sofascore",
+      "sourceDate": null,
+      "classification": "independent_current_player_profile"
+    }
+  ],
+  "unresolved": [
+    {
+      "clubId": "swansea-city",
+      "player": "Leo Walta",
+      "reason": "Season records show #21 but GOAL's current squad listing marks him on loan at Los Angeles FC. Check current registration before linking as an active Swansea slot.",
+      "sourceUrl": "https://www.goal.com/en-gb/team/swansea/squad/410jti6axb01yhvbc0axsp8li"
+    },
+    {
+      "clubId": "swansea-city",
+      "player": "Joseph Opoku",
+      "reason": "November squad listing spells the name Okopu, while BBC signing report spells Opoku. Preserve existing identity and seek direct club or match confirmation.",
+      "sourceUrl": "https://swanseacitynews.co.uk/squad",
+      "crossCheck": "https://bbc.com.im/sport/football/articles/cqjxvgl1g10o"
+    }
+  ],
+  "notes": [
+    "Southampton official announcement is dated 15 August; no claim of current registration beyond its date. Schlotterbeck added separately using a November player profile.",
+    "Sheffield United season archive is independently published; current squad reporting corroborates the number set. Cardiff independent listing is not club-issued.",
+    "Swansea source is the dated search snapshot; the fetched page may vary as the season changes."
+  ]
+}
